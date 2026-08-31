@@ -1,0 +1,48 @@
+---
+/**
+ * How one field's value came to be known (ADR-0028, fixture x-05).
+ *
+ * **Violet is reserved, across the entire site, for machine inference.** That
+ * exclusivity is the whole point: "the model guessed this" has to be
+ * recognisable at a glance, and being honest about which metadata is inferred
+ * is the difference between a credible catalogue and one that gets dismissed
+ * the first time someone spots a confidently wrong abstract.
+ *
+ * The badge carries text, not colour alone, and the model and confidence are in
+ * the accessible name rather than in a tooltip only.
+ */
+import Badge from './Badge.astro';
+import type { Provenance } from '../lib/record';
+
+interface Props {
+  field?: string;
+  provenance: Provenance;
+}
+const { field, provenance } = Astro.props;
+const method = provenance.extraction_method;
+
+const TONE = { api: 'api', pattern: 'pattern', llm: 'llm' } as const;
+const ICON = { api: '⟐', pattern: '⌗', llm: '◈' } as const;
+const LABEL = { api: 'from API', pattern: 'pattern-matched', llm: 'machine-inferred' } as const;
+
+const percent = provenance.confidence === undefined
+  ? undefined
+  : `${Math.round(provenance.confidence * 100)}%`;
+
+const detail = [
+  provenance.source_system && `source: ${provenance.source_system}`,
+  method === 'llm' && provenance.model && `model: ${provenance.model}`,
+  method === 'llm' && provenance.prompt_version && `prompt: ${provenance.prompt_version}`,
+  percent && `confidence: ${percent}`,
+  provenance.pinned && 'pinned by a curator',
+]
+  .filter(Boolean)
+  .join(' · ');
+---
+
+<Badge tone={TONE[method]} icon={ICON[method]} title={detail}>
+  {field ? `${field}: ` : ''}{LABEL[method]}{
+    method === 'llm' && percent ? ` (${percent})` : ''
+  }
+  <span class="visually-hidden">{detail ? ` — ${detail}` : ''}</span>
+</Badge>

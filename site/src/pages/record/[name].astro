@@ -1,0 +1,44 @@
+---
+/**
+ * `/record/<slug>/` — the citable URL.
+ *
+ * The slug is `package.name`, which is derived from the identity key and
+ * nothing else, so it survives a retitle upstream (harvest/CONTRACT.md §4).
+ * That is the promise the plan makes about stable, citable record URLs, and it
+ * is why nothing on this page may derive the URL from the title.
+ */
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import RecordDetail from '../../components/RecordDetail.astro';
+import { catalogue } from '../../lib/catalogue';
+import { readEvents } from '../../lib/state';
+import { datasetJsonLd } from '../../lib/jsonld';
+import { plainText, truncate, isWithdrawn, type CkanPackage } from '../../lib/record';
+import type { EventLine } from '../../lib/catalogue';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const entries = await catalogue();
+  return entries.map((entry) => ({
+    params: { name: entry.pkg.name },
+    props: { pkg: entry.pkg, fixtureEvents: entry.events },
+  }));
+};
+
+const { pkg, fixtureEvents } = Astro.props as { pkg: CkanPackage; fixtureEvents: EventLine[] };
+
+// `events/` is the source of truth; a fixture's hand-written log only stands in
+// when the real log has not been written yet.
+const logged = readEvents(pkg.name);
+const events = (logged.length > 0 ? logged : fixtureEvents) as EventLine[];
+
+const canonical = new URL(`record/${pkg.name}/`, Astro.site).href;
+const description = truncate(plainText(pkg.notes), 160) || pkg.title;
+---
+
+<Base
+  title={`${truncate(pkg.title, 90)} — IEA Wind Data Catalogue`}
+  description={description}
+  jsonLd={datasetJsonLd(pkg, canonical)}
+>
+  <RecordDetail pkg={pkg} events={events} headingLevel="h1" />
+</Base>

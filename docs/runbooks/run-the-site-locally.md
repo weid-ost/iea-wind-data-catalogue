@@ -20,10 +20,9 @@ the `/dev/components` gallery.
 
 ## 0. Status
 
-> **`SPEC — not yet implemented`.** `site/` does not exist in this checkout. The
-> commands below are the interface the site track must provide; they are taken
-> from the `Makefile` and `harvest/CONTRACT.md` §§11–12 and are binding on that
-> track.
+**Implemented.** `site/` exists and every command below was executed on
+2026-09-01. Node is pinned to **22.21.1** (`site/.nvmrc`, and `engines` in
+`site/package.json`).
 
 ## 1. Build
 
@@ -42,8 +41,22 @@ cd site && npm ci && npm run build
 ([[adr-0034-toolchain-pinning-and-no-auto-updates]]). The Node version is
 pinned; check `site/.nvmrc` or the `engines` field and match it.
 
-`npm run build` must run `astro build` **and then** Pagefind over `dist/`, so
-one command produces a complete, searchable site.
+`npm run build` runs, in order: the token compile
+(`design/build-css.mjs` + the font sync), `astro build`, **Pagefind over
+`dist/`**, the token-discipline grep, the proof that the Zod gate still
+refuses fixture `x-08-ckan-invalid`, and the URL check
+(`scripts/check-urls.mjs`). One command produces a complete, searchable,
+checked site.
+
+The URL check exists because the base path is the one thing on a project-site
+deployment that nothing else notices when it is wrong: `Astro.site` already
+contains `/iea-wind-data-catalogue`, so resolving a pathname against it with the
+leading slash stripped emits the prefix **twice**. That shipped once — every
+`<link rel="canonical">` pointed at a 404 — and neither the a11y gate, nor
+Pagefind, nor the test suite caught it, because nothing on the site follows its
+own canonical link. The check now asserts that no built URL repeats the base
+segment and that every page's canonical is absolute and matches that page's own
+path.
 
 Output: `site/dist/`.
 
@@ -56,7 +69,12 @@ npm run preview    # serve the built dist/ exactly as Pages will
 ```
 
 Use `preview` whenever search matters: the Pagefind index is a **build**
-artifact, so it does not exist under `dev`.
+artifact, so it does not exist under `dev`. The island degrades to the
+server-rendered list there rather than erroring.
+
+`npm run preview` is `scripts/serve.mjs`, a twenty-line static server, **not**
+`astro preview` — Astro 7's preview is a daemon that outlives the process that
+started it, which is the wrong lifecycle for the a11y gate to drive.
 
 ## 3. What to look at
 
@@ -64,11 +82,21 @@ artifact, so it does not exist under `dev`.
 |---|---|
 | `/` | the freshness banner from `state/last-run.json` → `finished_at`; the pending backlog beside it |
 | `/record/<slug>/` | a canonical record: provenance badges, task chips, source links, JSON-LD |
-| `/search/` (or the home search island) | Pagefind, and its filters |
+| `/search/` (or the home search island) | Pagefind, and its six filters |
+| `/browse/` | the static, paginated, no-JavaScript path |
 | `/dev/components` | **the gallery** — every component in every fixture state |
+| `/catalog.jsonld`, `/sitemap.xml` | the machine-readable exports |
+
+Note the base path: the site deploys to a GitHub Pages *project* site, so the
+local URLs are `http://localhost:4321/iea-wind-data-catalogue/…`. A custom
+domain is `SITE_BASE=/ SITE_URL=https://your.domain/ npm run build`.
 
 Records are loaded by **glob from `../records/*.json`**, so if the site shows
 nothing, run `make materialize` first ([[materialize-and-validate]]).
+
+**Before the first harvest** `records/` is empty, and rather than build an empty
+site the catalogue falls back to `fixtures/rendering/` and says so on the
+homepage. One real record and the fixtures disappear.
 
 ## 4. Requirements the site build must satisfy
 
@@ -135,12 +163,36 @@ make gates
 ```
 
 which runs `make test`, `make validate`, `make build-tokens`, and then
-`cd site && npm run gates`. `npm run gates` must include, at minimum, the
-token-discipline grep and `pa11y-ci` in both themes
-([[adr-0039-design-system]] §§7–8).
+`cd site && npm run gates`. `npm run gates` is the token-discipline grep, the
+`x-08` gate proof, the URL check, and `pa11y-ci` over the URL list in both
+themes ([[adr-0039-design-system]] §§7–8). It audits `dist/`, so **build
+first**.
 
 ---
 
-**Last executed:** never — `site/` does not exist yet. `make site` and
-`make gates` are declared in the `Makefile` and will fail until the site track
-lands.
+**Last executed:** 2026-09-01 — `make site` from a clean tree (`node_modules/`,
+`dist/`, `.astro/` and the generated `tokens.css` all deleted first):
+`npm ci` + `npm run build` green, 19 pages built, 14 indexed, 6 filters.
+`npm run gates` green: 14/14 URLs, both themes, 0 errors.
+
+Verified in a headless browser against the built index, not merely built:
+search returns hits and narrows, the facets are real checkboxes and filter,
+filter state round-trips through the query string, a result links to a real
+page, the zero-results state (`r-07`) is announced through the polite live
+region, `?theme=` forces both themes and they render differently, the toggle
+cycles auto → light → dark with `aria-pressed` and `localStorage`, the stored
+choice is applied before first paint, and `prefers-reduced-motion` leaves zero
+animated elements.
+
+Two things this run changed. The canonical-URL doubling described in §1 was
+found and fixed, and `scripts/check-urls.mjs` now guards it. And the gallery
+had been hand-reproducing the search island's empty state instead of rendering
+the island; it now renders the **real** `<SearchIsland>`, so `r-07` comes out of
+the component's own template and cannot drift from it.
+
+**Known limitation:** the copy-citation button's success path cannot be
+exercised headlessly — Chrome denies `navigator.clipboard.writeText` outright
+(`NotAllowedError`, even with permissions overridden and the page focused), so
+what the smoke test verifies is the *fallback*: the button stays a real button
+and announces "Could not copy — select the text and copy it manually" through
+its live region. The success path is one of the manual passes.

@@ -1,0 +1,172 @@
+---
+/**
+ * Every token from `design-tokens.json`, rendered.
+ *
+ * This is the point of putting the swatch section in the gallery: the a11y gate
+ * audits this page, so **the gate is auditing the palette itself**, and a token
+ * change that breaks contrast fails CI before anyone ships it
+ * (design-system.md §9).
+ *
+ * The tokens are read from the DTCG source rather than from the compiled CSS,
+ * so a token that failed to compile shows up as a missing swatch.
+ */
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { repoRoot } from '../repo-root.mjs';
+
+const tokens = JSON.parse(readFileSync(join(repoRoot, 'design', 'design-tokens.json'), 'utf8'));
+
+interface Token {
+  path: string;
+  type: string;
+  custom: string;
+}
+
+const flat: Token[] = [];
+(function walk(node: Record<string, any>, path: string[]) {
+  for (const [key, value] of Object.entries(node)) {
+    if (key.startsWith('$') || !value || typeof value !== 'object') continue;
+    if ('$value' in value) flat.push({ path: [...path, key].join('.'), type: value.$type, custom: '' });
+    else walk(value, [...path, key]);
+  }
+})(tokens, []);
+
+// Same naming rule as design/build-css.mjs.
+const custom = (p: string) =>
+  '--' +
+  p
+    .replace(/^theme\.(light|dark)\./, '')
+    .replace(/^component\./, '')
+    .replace(/[-.](light|dark)$/, '')
+    .replace(/\./g, '-');
+
+for (const token of flat) token.custom = custom(token.path);
+
+const isDarkOnly = (p: string) => /^theme\.dark\./.test(p) || /[-.]dark$/.test(p);
+const unique = new Map<string, Token>();
+for (const token of flat) if (!isDarkOnly(token.path)) unique.set(token.custom, token);
+
+const colours = [...unique.values()].filter((t) => t.type === 'color');
+const others = [...unique.values()].filter((t) => t.type !== 'color');
+
+const groups = [
+  ['Primitives — green', colours.filter((t) => t.path.startsWith('color.green'))],
+  ['Primitives — neutral', colours.filter((t) => t.path.startsWith('color.neutral'))],
+  ['Primitives — status', colours.filter((t) => /^color\.(info|warning|danger|violet)/.test(t.path))],
+  ['Semantic — surface and text', colours.filter((t) => /^theme\.light\.(surface|text)/.test(t.path))],
+  ['Semantic — action and border', colours.filter((t) => /^theme\.light\.(action|border)/.test(t.path))],
+  ['Component — badges and bars', colours.filter((t) => t.path.startsWith('component.'))],
+] as const;
+---
+
+<div class="swatches stack-6">
+  {groups.map(([label, list]) => (
+    <section>
+      <h3>{label}</h3>
+      <ul class="swatches__grid">
+        {list.map((token) => (
+          <li class="swatch">
+            <span class="swatch__chip" style={`background: var(${token.custom})`} aria-hidden="true"></span>
+            <span class="swatch__name meta">{token.custom}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  <section>
+    <h3>Type, space, shape and motion</h3>
+    <ul class="swatches__list">
+      {others.map((token) => (
+        <li class="token">
+          <span class="token__name meta">{token.custom}</span>
+          {token.type === 'dimension' && token.path.startsWith('space') && (
+            <span class="token__bar" style={`inline-size: var(${token.custom})`} aria-hidden="true"></span>
+          )}
+          {token.type === 'dimension' && token.path.startsWith('font.size') && (
+            <span style={`font-size: var(${token.custom})`}>Aa wind energy</span>
+          )}
+          {token.type === 'fontFamily' && (
+            <span style={`font-family: var(${token.custom})`}>Søren Ø. Müller · 10.5281/zenodo.1</span>
+          )}
+          {token.type === 'number' && token.path.startsWith('font.weight') && (
+            <span style={`font-weight: var(${token.custom})`}>Aa wind energy</span>
+          )}
+          {token.type === 'dimension' && token.path.startsWith('radius') && (
+            <span class="token__shape" style={`border-radius: var(${token.custom})`} aria-hidden="true"></span>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+</div>
+
+<style>
+  .swatches h3 {
+    font-size: var(--font-size-body);
+  }
+
+  .swatches__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .swatch {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--surface-raised);
+  }
+
+  .swatch__chip {
+    flex: none;
+    inline-size: var(--space-6);
+    block-size: var(--space-6);
+    border: var(--border-width-hairline) solid var(--border-strong);
+    border-radius: var(--radius-sm);
+  }
+
+  .swatch__name {
+    font-size: var(--font-size-caption);
+    overflow-wrap: anywhere;
+  }
+
+  .swatches__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .token {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding-block: var(--space-2);
+    border-bottom: var(--border-width-hairline) solid var(--border-subtle);
+  }
+
+  .token__name {
+    flex: none;
+    inline-size: 14rem;
+    font-size: var(--font-size-caption);
+  }
+
+  .token__bar {
+    block-size: var(--space-3);
+    background: var(--action-primary);
+  }
+
+  .token__shape {
+    inline-size: var(--space-8);
+    block-size: var(--space-6);
+    border: var(--border-width-hairline) solid var(--border-strong);
+    background: var(--surface-sunken);
+  }
+</style>

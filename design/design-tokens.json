@@ -315,22 +315,22 @@
         },
         "link": {
           "$type": "color",
-          "$value": "#558A6A"
+          "$value": "#5B9070"
         }
       },
       "action": {
         "primary": {
           "$type": "color",
-          "$value": "#558A6A",
-          "$description": "solved: 4.64:1 on page AND 4.78:1 under near-black label"
+          "$value": "#5B9070",
+          "$description": "Rev 3: re-solved against surface.raised, which is the lightest surface a link actually lands on (cards, the header, source badges) — 4.56:1 there, 4.96:1 on page, 4.75:1 on the panel background, and 5.11:1 under the near-black label. The Rev 2 value (#558A6A) was solved against surface.page only and failed at 4.27:1 inside a card."
         },
         "hover": {
           "$type": "color",
-          "$value": "#649979"
+          "$value": "#6A9F7E"
         },
         "active": {
           "$type": "color",
-          "$value": "#558A6A"
+          "$value": "#5B9070"
         },
         "disabled-bg": {
           "$type": "color",
@@ -371,7 +371,7 @@
         },
         "dark": {
           "$type": "color",
-          "$value": "#558A6A"
+          "$value": "#5B9070"
         }
       },
       "provenance-pattern": {
@@ -437,11 +437,13 @@
       },
       "bg-light": {
         "$type": "color",
-        "$value": "{color.neutral.50}"
+        "$value": "{color.neutral.0}",
+        "$description": "Rev 3: was {color.neutral.50}, on which every status text colour measured 4.37-4.40:1. The status hues were solved against white/page, so the panel that carries them has to be a page-weight surface; the hairline border and the 3px bar are what make it read as a panel, not a tint."
       },
       "bg-dark": {
         "$type": "color",
-        "$value": "{color.neutral.950}"
+        "$value": "{color.neutral.950}",
+        "$description": "Verified against every colour that lands on it: status text 4.83-4.89:1, action 4.75:1."
       },
       "accent": {
         "bar-light": {
@@ -450,7 +452,7 @@
         },
         "bar-dark": {
           "$type": "color",
-          "$value": "#558A6A"
+          "$value": "#5B9070"
         }
       },
       "info": {
@@ -470,7 +472,7 @@
         },
         "bar-dark": {
           "$type": "color",
-          "$value": "#558A6A"
+          "$value": "#5B9070"
         }
       },
       "warning": {

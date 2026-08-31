@@ -1,0 +1,70 @@
+---
+/**
+ * "Last updated", from `state/last-run.json` (plan §3.3.3).
+ *
+ * Past 45 days it becomes a warning (fixture r-08). This is deliberately on the
+ * front page rather than in the Actions tab: nobody checks a CI dashboard for a
+ * dormant project, and a stale banner is seen by whoever next visits —
+ * including the person who could restart the cron. It doubles as honest
+ * provenance: this is when the catalogue last looked.
+ *
+ * The pending-extraction backlog sits beside it, because "some Tier-3 records
+ * are waiting for someone to run `make extract`" is the same kind of fact.
+ */
+import Panel from './Panel.astro';
+import { formatDate } from '../lib/record';
+import { sourceLabel } from '../lib/record';
+import type { Freshness } from '../lib/state';
+
+interface Props {
+  freshness: Freshness;
+}
+const { freshness } = Astro.props;
+const { stale, ageDays, finishedAt, pending, unreachable, neverRun } = freshness;
+const tone = neverRun ? 'info' : stale ? 'warning' : 'success';
+const icon = neverRun ? 'ℹ' : stale ? '⚠' : '✓';
+---
+
+<Panel tone={tone} icon={icon} class="freshness">
+  {neverRun ? (
+    <p>
+      No harvest has run in this checkout yet. Run <code>make harvest</code> to
+      populate <code>records/</code>.
+    </p>
+  ) : (
+    <p>
+      <strong>Last updated {formatDate(finishedAt)}</strong>
+      <span class="secondary">
+        {' '}— {ageDays === 0 ? 'today' : `${ageDays} day${ageDays === 1 ? '' : 's'} ago`}.
+      </span>
+      {stale && (
+        <>
+          {' '}The catalogue has not been refreshed for more than 45 days, so
+          some entries may be out of date. The harvest runs weekly; a gap this
+          long usually means the scheduled workflow needs restarting.
+        </>
+      )}
+    </p>
+  )}
+
+  {pending > 0 && (
+    <p class="secondary">
+      {pending} page{pending === 1 ? '' : 's'} waiting on Tier-3 extraction — Tier-1
+      sources are unaffected.
+    </p>
+  )}
+
+  {unreachable.length > 0 && (
+    <p class="secondary">
+      Unreachable at the last run: {unreachable.map(sourceLabel).join(', ')}. Existing
+      records from {unreachable.length === 1 ? 'that source' : 'those sources'} are
+      retained unchanged.
+    </p>
+  )}
+</Panel>
+
+<style>
+  .freshness :global(p) {
+    margin-bottom: var(--space-1);
+  }
+</style>

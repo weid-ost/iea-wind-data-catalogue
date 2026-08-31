@@ -1,0 +1,91 @@
+---
+/**
+ * A citation, with a copy button.
+ *
+ * The citation text is in the built HTML: the button is progressive
+ * enhancement over content that already exists, so a JS failure leaves a
+ * perfectly usable page you can select and copy by hand (ADR-0036).
+ */
+import { citationFor, type CkanPackage } from '../lib/record';
+
+interface Props {
+  pkg: CkanPackage;
+  /** Scopes the heading id — the gallery puts many of these on one page. */
+  id?: string;
+}
+const { pkg, id = pkg.name } = Astro.props;
+const citation = citationFor(pkg);
+const headingId = `${id}-citation-heading`;
+---
+
+<section class="citation" aria-labelledby={headingId}>
+  <h2 id={headingId}>Cite this</h2>
+  <copy-citation>
+    <p class="citation__text meta" data-citation>{citation}</p>
+    <button class="citation__button" type="button" data-copy hidden>
+      Copy citation
+    </button>
+    <span class="visually-hidden" role="status" data-copy-status></span>
+  </copy-citation>
+</section>
+
+<script>
+  // Vanilla custom element, no framework — a platform standard has no version
+  // to migrate (ADR-0036). It reveals its own button, so the button never
+  // appears in a browser that cannot use it.
+  class CopyCitation extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector('[data-copy]');
+      const text = this.querySelector('[data-citation]')?.textContent?.trim() ?? '';
+      const status = this.querySelector('[data-copy-status]');
+      if (!button || !navigator.clipboard) return;
+      button.hidden = false;
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(text);
+          button.textContent = 'Copied';
+          if (status) status.textContent = 'Citation copied to the clipboard.';
+        } catch {
+          if (status) status.textContent = 'Could not copy — select the text and copy it manually.';
+        }
+        window.setTimeout(() => {
+          button.textContent = 'Copy citation';
+        }, 2000);
+      });
+    }
+  }
+  if (!customElements.get('copy-citation')) customElements.define('copy-citation', CopyCitation);
+</script>
+
+<style>
+  .citation__text {
+    margin: 0 0 var(--space-3);
+    padding: var(--space-3);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--surface-sunken);
+    line-height: var(--font-line-height-body);
+  }
+
+  .citation__button {
+    min-height: var(--space-8);
+    padding: var(--space-2) var(--space-4);
+    border: var(--border-width-hairline) solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--surface-raised);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+  }
+
+  .citation__button:hover {
+    border-color: var(--action-primary);
+    color: var(--action-primary);
+  }
+
+  .citation__button:active {
+    background: var(--surface-sunken);
+  }
+</style>

@@ -1,0 +1,217 @@
+/* Global type, layout and state rules. Everything here consumes tokens; the
+   only raw values permitted are unitless numbers and 0 (check-tokens.mjs).
+
+   Character (design-system.md §1): borders over shadows, colour never fills a
+   surface, type does the hierarchy, metadata in the mono face. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--surface-page);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
+  font-synthesis-weight: none;
+}
+
+/* --- type ---------------------------------------------------------------- */
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--space-3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  text-wrap: balance;
+  /* r-01: a 300-character title with a 47-character hyphenated token must wrap
+     rather than push the page sideways. */
+  overflow-wrap: anywhere;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+
+p { margin: 0 0 var(--space-4); }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--text-link);
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.15em;
+}
+
+a:hover { color: var(--action-hover); }
+a:active { color: var(--action-active); }
+
+small { font-size: var(--font-size-small); }
+
+code,
+kbd,
+samp,
+pre,
+.mono {
+  font-family: var(--font-family-mono);
+  font-size: 0.9em;
+}
+
+/* Metadata is typographically distinct: DOIs, identifiers, version strings and
+   source keys are set in the mono face (design-system.md §1). */
+.meta {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-small);
+  overflow-wrap: anywhere;
+}
+
+.secondary { color: var(--text-secondary); }
+
+.prose { max-width: var(--font-measure-prose); }
+
+/* --- focus, the same everywhere ------------------------------------------ */
+
+:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: var(--border-width-focus);
+  border-radius: var(--radius-sm);
+}
+
+/* --- skip link ----------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: var(--space-2);
+  z-index: 10;
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface-raised);
+  border: var(--border-width-hairline) solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  transform: translateY(-200%);
+  transition: transform var(--duration-fast) var(--easing-standard);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* --- page frame ---------------------------------------------------------- */
+
+.shell {
+  width: 100%;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-inline: var(--space-4);
+}
+
+.site-header {
+  border-bottom: var(--border-width-hairline) solid var(--border-subtle);
+  background: var(--surface-raised);
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+}
+
+.site-header__title {
+  margin: 0;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+}
+
+.site-header__title a { color: var(--text-primary); text-decoration: none; }
+.site-header__title a:hover { text-decoration: underline; }
+
+.site-nav {
+  margin-inline-start: auto;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a[aria-current='page'] {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+main {
+  display: block;
+  padding-block: var(--space-8) var(--space-12);
+}
+
+.site-footer {
+  border-top: var(--border-width-hairline) solid var(--border-subtle);
+  padding-block: var(--space-6);
+  color: var(--text-secondary);
+  font-size: var(--font-size-small);
+}
+
+/* --- stacks -------------------------------------------------------------- */
+
+.stack > * + * { margin-block-start: var(--space-4); }
+.stack-6 > * + * { margin-block-start: var(--space-6); }
+.stack-8 > * + * { margin-block-start: var(--space-8); }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Decorative glyphs are drawn by a pseudo-element rather than sitting in the
+   DOM as text. Two reasons, and the second is why it is a rule rather than a
+   preference: a glyph is not content (badges always carry a text label, per
+   design §2.3), and an element whose only child is a symbol character cannot be
+   evaluated by axe's contrast rule — it returns "incomplete", which the a11y
+   gate treats as a failure. No glyph in the text layer, no ambiguity. */
+.icon::before {
+  content: attr(data-icon);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: var(--border-width-hairline);
+  height: var(--border-width-hairline);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Wide content scrolls inside its own box; the page body never does. */
+.scroll-x { overflow-x: auto; }
+
+/* --- motion -------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

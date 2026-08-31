@@ -1,0 +1,126 @@
+{
+  "fixture_id": "rep-03-github-software",
+  "fixture_kind": "record",
+  "case": "Software: a GitHub repository joined to its Zenodo deposit by the README badge — two source systems, two 'view at source' links",
+  "note": "The join key is the Zenodo DOI badge in the README (fixture gh-02), which is why the identity is a DOI even though the primary source is GitHub.",
+  "record": {
+    "name": "doi-10-5281-zenodo-5793288",
+    "title": "digital-wra-data-standard: the IEA Wind Task 43 WRA Data Model",
+    "notes": "<p>A JSON-schema data model for wind resource assessment measurement campaigns, with validation tooling.</p>",
+    "license_id": "mit",
+    "tags": [
+      {
+        "name": "data-standard"
+      },
+      {
+        "name": "json-schema"
+      },
+      {
+        "name": "task-43"
+      },
+      {
+        "name": "wra"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Clifton, Andrew\"},{\"name\":\"Barber, Sarah\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.5793288"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-05-09T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.5793288"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-43\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "MIT"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2024-02-19"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "software"
+      },
+      {
+        "key": "source_id",
+        "value": "IEA-Task-43/digital-wra-data-standard"
+      },
+      {
+        "key": "source_key",
+        "value": "a41f0c9-v1.3.0-6d2b8e1f"
+      },
+      {
+        "key": "source_system",
+        "value": "github"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"github\",\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://github.com/IEA-Task-43/digital-wra-data-standard"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://github.com/IEA-Task-43/digital-wra-data-standard\",\"https://zenodo.org/records/5793288\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [],
+    "groups": [
+      {
+        "name": "task-43"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "url": "https://github.com/IEA-Task-43/digital-wra-data-standard",
+    "version": "1.3.0"
+  }
+}

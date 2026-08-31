@@ -101,12 +101,19 @@ Dsunken = oklch_hex(0.150, 0.010, H)
 dtext1  = oklch_hex(0.930, 0.008, H)
 d2 = [L for L in [x/400 for x in range(60,400)] if contrast(oklch_hex(L,0.012,H),Draised)>=4.6]
 dtext2  = oklch_hex(min(d2), 0.012, H)
-# dark action: must be >=4.6 vs Dsurf AND its on-color (near-black) >=4.6 vs it
+# Dark action. Rev 3: solved against Draised, NOT Dsurf.
+#
+# Rev 2 solved this against the page surface and shipped #558A6A, which measures
+# 4.64:1 on the page and 4.27:1 inside a card — and links live inside cards, in
+# the header, and in source badges. `raised` is the lightest surface an action
+# colour actually lands on, so it is the one that binds. The near-black label
+# constraint is unaffected (a lighter green only improves it).
 cands=[]
 for i in range(200):
     L=0.55+i*0.002
     c=oklch_hex(L,0.075,H)
-    if contrast(c,Dsurf)>=4.6 and contrast(c,neutral[1000])>=4.6: cands.append((L,c))
+    if (contrast(c,Draised)>=4.55 and contrast(c,Dsurf)>=4.6
+            and contrast(c,neutral[1000])>=4.6): cands.append((L,c))
 dact_L, daction = cands[0]
 dact_hov = oklch_hex(dact_L+0.05,0.075,H)
 dfocus   = oklch_hex(min(0.9,dact_L+0.12),0.10,H)
@@ -146,6 +153,92 @@ checks = [
 print("\nWCAG verification (AA needs 4.5 text / 3.0 UI):")
 for n,v in checks: print(f"  {n:38s} {v:5.2f}  {'PASS' if v>=3.0 else 'FAIL'}")
 
+# ---------------------------------------------------------------------------
+# The verification that matters: the SHIPPED tokens, against every surface they
+# actually land on.
+#
+# The block above verifies the values this script derives, each against the one
+# surface it was solved for. That is not the same question. `design-tokens.json`
+# is what the site compiles, and a colour solved against white will happily be
+# rendered on a panel, a card or a sunken block — which is exactly how Rev 2
+# shipped an action colour at 4.27:1 inside a card and four status colours at
+# 4.37:1 on a callout. Every pair below is a pair the site really produces; if
+# one fails, the token is wrong, not the page.
+# ---------------------------------------------------------------------------
+import os
+
+TOKENS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'design-tokens.json')
+tokens = json.load(open(TOKENS))
+
+def token(path):
+    node = tokens
+    for part in path.split('.'):
+        node = node[part]
+    value = node['$value']
+    while isinstance(value, str) and value.startswith('{'):
+        value = token(value[1:-1])
+    return value
+
+def surfaces(mode):
+    return {
+        'page':   token(f'theme.{mode}.surface.page'),
+        'raised': token(f'theme.{mode}.surface.raised'),
+        'sunken': token(f'theme.{mode}.surface.sunken'),
+        'panel':  token('component.panel.bg-light' if mode == 'light' else 'component.panel.bg-dark'),
+    }
+
+# (token path, which surfaces it may land on, minimum ratio)
+TEXT_ON = ['page', 'raised', 'panel']          # sunken carries body text only
+SHIPPED = [
+    ('text.primary',   'theme.{m}.text.primary',                 TEXT_ON + ['sunken'], 4.5),
+    ('text.secondary', 'theme.{m}.text.secondary',               TEXT_ON + ['sunken'], 4.5),
+    ('text.link',      'theme.{m}.text.link',                    TEXT_ON, 4.5),
+    ('action.primary', 'theme.{m}.action.primary',               TEXT_ON, 4.5),
+    ('action.hover',   'theme.{m}.action.hover',                 TEXT_ON, 4.5),
+    ('badge api',      'component.badge.provenance-api.{m}',     TEXT_ON, 4.5),
+    ('badge pattern',  'component.badge.provenance-pattern.{m}', TEXT_ON, 4.5),
+    ('badge llm',      'component.badge.provenance-llm.{m}',     TEXT_ON, 4.5),
+    ('badge restrict', 'component.badge.availability-restricted.{m}', TEXT_ON, 4.5),
+    ('badge embargo',  'component.badge.availability-embargoed.{m}',  TEXT_ON, 4.5),
+    ('badge withdrawn','component.badge.lifecycle-withdrawn.{m}', TEXT_ON, 4.5),
+    ('panel info bar', 'component.panel.info.bar-{m}',           TEXT_ON, 4.5),
+    ('panel warn bar', 'component.panel.warning.bar-{m}',        TEXT_ON, 4.5),
+    ('panel danger',   'component.panel.danger.bar-{m}',         TEXT_ON, 4.5),
+    ('panel violet',   'component.panel.violet.bar-{m}',         TEXT_ON, 4.5),
+    ('panel accent',   'component.panel.accent.bar-{m}',         TEXT_ON, 4.5),
+    ('border.focus',   'theme.{m}.border.focus',                 TEXT_ON, 3.0),   # non-text
+    ('border.input',   'theme.{m}.border.input',                 TEXT_ON, 3.0),   # non-text
+    ('border.strong',  'theme.{m}.border.strong',                TEXT_ON, 1.0),   # decorative
+]
+
+print("\nShipped-token verification — every colour against every surface it lands on:")
+failures = 0
+for mode in ('light', 'dark'):
+    surface = surfaces(mode)
+    print(f"  [{mode}]")
+    for label, path, allowed, minimum in SHIPPED:
+        try:
+            colour = token(path.format(m=mode))
+        except KeyError:
+            continue
+        row, bad = [], False
+        for name in allowed:
+            ratio = contrast(colour, surface[name])
+            row.append(f"{name} {ratio:5.2f}")
+            if ratio < minimum:
+                bad = True
+        failures += bad
+        print(f"    {label:16s} {colour}  " + '  '.join(row) + ('   FAIL' if bad else ''))
+
+# The one pair that runs the other way: the label sits ON the action colour.
+for mode in ('light', 'dark'):
+    ratio = contrast(token(f'theme.{mode}.text.on-action'), token(f'theme.{mode}.action.primary'))
+    bad = ratio < 4.5
+    failures += bad
+    print(f"  [{mode}] label on action        {ratio:5.2f}" + ('   FAIL' if bad else ''))
+
+print(f"\n{'ALL PAIRS PASS' if failures == 0 else f'{failures} FAILING PAIR(S) — fix the token, not the page'}")
+
 out = dict(green=green, neutral=neutral,
   light=dict(surface=Lsurf,raised=Lraised,sunken=Lsunken,text1=text1,text2=text2,
              action=action,action_hover=act_hov,action_active=act_act,focus=focus,
@@ -154,7 +247,9 @@ out = dict(green=green, neutral=neutral,
             action=daction,action_hover=dact_hov,focus=dfocus,
             border=oklch_hex(0.30,0.012,H),border_strong=oklch_hex(0.38,0.012,H)),
   status=dict(info=info,warning=warn,danger=danger,success=success,llm=violet))
-json.dump(out, open('palette.json','w'), indent=1)
+# Written next to this script, not into the working directory: `make build-tokens`
+# runs it from the repository root and used to drop a stray palette.json there.
+json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'palette.json'), 'w'), indent=1)
 print("\nGREEN RAMP:", {k:v for k,v in green.items()})
 print("NEUTRALS:", {k:v for k,v in list(neutral.items())})
 print("LIGHT:", out['light']); print("DARK:", out['dark'])

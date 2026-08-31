@@ -1,0 +1,126 @@
+{
+  "fixture_id": "rep-05-llm-inferred",
+  "fixture_kind": "record",
+  "case": "A Tier-3 record whose resource kind, task attribution and description were inferred by a model — every such field carries the violet machine-inferred badge",
+  "note": "The DOI came from a regex sweep and was resolved against DataCite before the record existed — the model never supplies an identifier. `resource_kind` at 0.41 confidence is the low-confidence case (x-05); `iea_task` is a pinned extraction (x-09). The licence is free text the register does not recognise (zen-08 / dc-09): it maps to `notspecified` with `license_mapped: false`, and the page must say the licence was not recognised rather than imply openness.",
+  "record": {
+    "name": "doi-10-2172-1900456",
+    "title": "Cold climate wind power: instrumentation guidance for icing detection",
+    "notes": "<p>Guidance on instrumentation and measurement practice for detecting and quantifying blade icing in cold climate wind farms.</p>",
+    "license_id": "notspecified",
+    "tags": [
+      {
+        "name": "cold-climate"
+      },
+      {
+        "name": "icing"
+      },
+      {
+        "name": "instrumentation"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Lehtomäki, Ville\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.2172/1900456"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-07-30T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.2172/1900456"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-54\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "false"
+      },
+      {
+        "key": "license_raw",
+        "value": "Free for academic use, contact the author"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "pinned",
+        "value": "true"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"confidence\":0.62,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"pinned\":true,\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"notes\":{\"confidence\":0.81,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"confidence\":0.41,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2023-02-01"
+      },
+      {
+        "key": "publisher",
+        "value": "VTT Technical Research Centre of Finland"
+      },
+      {
+        "key": "resource_kind",
+        "value": "report"
+      },
+      {
+        "key": "source_id",
+        "value": "task54-publications"
+      },
+      {
+        "key": "source_key",
+        "value": "8f2c1d0e4b7a9351"
+      },
+      {
+        "key": "source_system",
+        "value": "ieawind"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"ieawind\",\"datacite\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://iea-wind.org/task54/"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://iea-wind.org/task54/\",\"https://doi.org/10.2172/1900456\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [],
+    "groups": [
+      {
+        "name": "task-54"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "url": "https://iea-wind.org/task54/"
+  }
+}

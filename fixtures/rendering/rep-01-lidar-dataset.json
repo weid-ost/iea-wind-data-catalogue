@@ -1,0 +1,154 @@
+{
+  "fixture_id": "rep-01-lidar-dataset",
+  "fixture_kind": "record",
+  "case": "The ordinary case: a Zenodo dataset with a DOI, ORCID'd creators, a licence and files — what most of the catalogue looks like",
+  "note": "The same artifact as fixtures/zenodo/zen-01-canonical, materialised. If the record page looks wrong here it is wrong everywhere.",
+  "record": {
+    "name": "doi-10-5281-zenodo-1234566",
+    "title": "Lidar measurements from the Østerild campaign, 2021",
+    "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021. Includes horizontal wind speed, direction and turbulence intensity at eleven measurement heights.</p>",
+    "license_id": "cc-by",
+    "tags": [
+      {
+        "name": "lidar"
+      },
+      {
+        "name": "osterild"
+      },
+      {
+        "name": "remote-sensing"
+      },
+      {
+        "name": "wind-energy"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Müller, Søren Ø.\",\"orcid\":\"0000-0002-1825-0097\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Okafor, Chidi\",\"orcid\":\"0000-0001-5109-3700\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.1234566"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.1234566"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-43\",\"task-49\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-28T09:00:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2024-06-01"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "related_identifiers",
+        "value": "[{\"identifier\":\"10.5281/zenodo.1234566\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "1234567"
+      },
+      {
+        "key": "source_key",
+        "value": "3"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/1234567"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/1234567\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv",
+        "name": "osterild-lidar-2021.csv",
+        "format": "csv"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-43"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "owner_org": "dtu",
+    "url": "https://zenodo.org/records/1234567",
+    "version": "2.0"
+  },
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.1234566",
+      "source_system": "zenodo",
+      "source_key": "3",
+      "actor": "harvest/zenodo"
+    },
+    {
+      "observed_at": "2026-08-28T09:00:00Z",
+      "event_type": "annotated",
+      "identity_key": "10.5281/zenodo.1234566",
+      "actor": "curator:tom",
+      "note": "Task 49 attribution from the IDEA workshop list"
+    }
+  ]
+}

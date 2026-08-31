@@ -1,0 +1,145 @@
+{
+  "fixture_id": "r-03-five-tasks",
+  "fixture_kind": "record",
+  "case": "A record attributed to five IEA Wind Tasks at once — task-chip overflow",
+  "note": "Five chips must wrap rather than scroll, and the card must not grow a second line of chrome to fit them.",
+  "raw": "raw/r-03-five-tasks.json",
+  "record": {
+    "name": "doi-10-5281-zenodo-8112233",
+    "title": "Open benchmark of probabilistic wind power forecasts for offshore floating arrays",
+    "notes": "<p>A cross-task benchmark dataset combining lidar-derived inflow, forecast ensembles and floating-array power output.</p>",
+    "license_id": "cc-by",
+    "tags": [
+      {
+        "name": "benchmark"
+      },
+      {
+        "name": "floating-wind"
+      },
+      {
+        "name": "forecasting"
+      },
+      {
+        "name": "lidar"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Jónsdóttir, Guðrún\"},{\"name\":\"Bakker, Jeroen\"},{\"name\":\"Zhang, Wei\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.8112233"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-02-11T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.8112233"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-32\",\"task-43\",\"task-49\",\"task-51\",\"task-52\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2025-03-14"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "8112233"
+      },
+      {
+        "key": "source_key",
+        "value": "2"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\",\"ieawind\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/8112233"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/8112233\",\"https://iea-wind.org/task43/\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/8112233/files/benchmark.zip",
+        "name": "benchmark.zip",
+        "format": "zip"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-32"
+      },
+      {
+        "name": "task-43"
+      },
+      {
+        "name": "task-49"
+      },
+      {
+        "name": "task-51"
+      },
+      {
+        "name": "task-52"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "owner_org": "dtu",
+    "url": "https://zenodo.org/records/8112233"
+  }
+}

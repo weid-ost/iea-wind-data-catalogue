@@ -1,0 +1,30 @@
+{
+  "id": 3376526,
+  "doi": "10.5281/zenodo.3376526",
+  "conceptdoi": "10.5281/zenodo.3376526",
+  "revision": 3,
+  "links": {
+    "self_html": "https://zenodo.org/records/3376526"
+  },
+  "metadata": {
+    "title": "Turbine loads database from the OC6 Phase III validation campaign",
+    "description": "<p>Simulated and measured loads for the OC6 Phase III rotor.</p>",
+    "publication_date": "2021-09-02",
+    "resource_type": {
+      "type": "dataset"
+    },
+    "access_right": "closed",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "creators": [
+      {
+        "name": "Robertson, Amy"
+      },
+      {
+        "name": "Bergua, Roger"
+      }
+    ]
+  },
+  "removal_reason": "record withdrawn by the depositor"
+}

@@ -1,0 +1,133 @@
+{
+  "fixture_id": "r-05-cjk-and-diacritics",
+  "fixture_kind": "record",
+  "case": "Mixed scripts in the title and in author names — CJK, Cyrillic and Latin diacritics",
+  "note": "Diacritics are preserved in display and transliterated only in the slug (`choshi`, not `chōshi`). The Plex subsets do not cover CJK, so the fallback stack must carry 山田 太郎 without a tofu box or a font-size jump.",
+  "raw": "raw/r-05-cjk-and-diacritics.json",
+  "record": {
+    "name": "doi-10-5281-zenodo-6650123",
+    "title": "洋上風力発電所の後流計測 — Offshore wind farm wake measurements at Chōshi",
+    "notes": "<p>Scanning-lidar wake measurements from the Chōshi offshore demonstration site, with metadata in Japanese and English.</p>",
+    "license_id": "cc-by",
+    "tags": [
+      {
+        "name": "choshi"
+      },
+      {
+        "name": "lidar"
+      },
+      {
+        "name": "offshore"
+      },
+      {
+        "name": "wake"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"affiliation\":\"東京大学\",\"name\":\"山田 太郎\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Müller, Søren Ø.\"},{\"name\":\"Кузнецова, Анна\"},{\"name\":\"Þórsdóttir, Ægir\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.6650123"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-03-05T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.6650123"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-32\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2023-11-20"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "6650123"
+      },
+      {
+        "key": "source_key",
+        "value": "1"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/6650123"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/6650123\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/6650123/files/choshi-wake.nc",
+        "name": "choshi-wake.nc",
+        "format": "netcdf"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-32"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "owner_org": "dtu",
+    "url": "https://zenodo.org/records/6650123"
+  }
+}

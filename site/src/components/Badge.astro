@@ -1,0 +1,56 @@
+---
+/**
+ * The outline badge primitive: 1px coloured border, coloured text, transparent
+ * background. Colour never fills a surface (design-system.md §2.3), and a badge
+ * is always icon + text label — never colour alone, which is both the WCAG
+ * rule and the reason a screen reader gets the same information as an eye.
+ *
+ * `tone` selects a token, nothing more. There is no per-tone CSS below.
+ */
+interface Props {
+  tone?: 'neutral' | 'api' | 'pattern' | 'llm' | 'restricted' | 'embargoed' | 'withdrawn';
+  icon?: string;
+  title?: string;
+  class?: string;
+}
+const { tone = 'neutral', icon, title, class: className } = Astro.props;
+const TONE_VAR: Record<string, string> = {
+  neutral: 'var(--text-secondary)',
+  api: 'var(--badge-provenance-api)',
+  pattern: 'var(--badge-provenance-pattern)',
+  llm: 'var(--badge-provenance-llm)',
+  restricted: 'var(--badge-availability-restricted)',
+  embargoed: 'var(--badge-availability-embargoed)',
+  withdrawn: 'var(--badge-lifecycle-withdrawn)',
+};
+---
+
+<span class:list={['badge', className]} style={`--badge-colour: ${TONE_VAR[tone]}`} title={title}>
+  {icon && <span class="icon badge__icon" aria-hidden="true" data-icon={icon}></span>}
+  <span class="badge__label"><slot /></span>
+</span>
+
+<style>
+  .badge {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-1);
+    padding: 0 var(--space-2);
+    border: var(--border-width-hairline) solid var(--badge-colour);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--badge-colour);
+    font-size: var(--font-size-caption);
+    line-height: var(--font-line-height-loose);
+    white-space: nowrap;
+  }
+
+  .badge__icon {
+    font-size: 0.9em;
+    line-height: var(--font-line-height-tight);
+  }
+
+  .badge__label {
+    white-space: normal;
+  }
+</style>

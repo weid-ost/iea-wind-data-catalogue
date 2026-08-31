@@ -1,0 +1,452 @@
+---
+/**
+ * `/dev/components` — the gallery, and the living styleguide layer of the
+ * design system (ADR-0036, design-system.md §8).
+ *
+ * It renders **every** component in **every** state against the fixture set,
+ * including the deliberately pathological records, plus a swatch of every
+ * token. That makes it the a11y gate's most efficient target: one URL audits
+ * the whole component inventory *and* the palette, in both themes, so a token
+ * change that breaks contrast fails CI before anyone ships it.
+ *
+ * `noindex` and `data-pagefind-ignore` are mandatory (ADR-0036).
+ */
+import Base from '../../layouts/Base.astro';
+import AvailabilityBadge from '../../components/AvailabilityBadge.astro';
+import Badge from '../../components/Badge.astro';
+import Button from '../../components/Button.astro';
+import CitationBlock from '../../components/CitationBlock.astro';
+import EventHistory from '../../components/EventHistory.astro';
+import FacetGroup from '../../components/FacetGroup.astro';
+import FreshnessBanner from '../../components/FreshnessBanner.astro';
+import MetadataList from '../../components/MetadataList.astro';
+import Pagination from '../../components/Pagination.astro';
+import Panel from '../../components/Panel.astro';
+import ProvenanceBadge from '../../components/ProvenanceBadge.astro';
+import RecordCard from '../../components/RecordCard.astro';
+import RecordDetail from '../../components/RecordDetail.astro';
+import RetractionFlag from '../../components/RetractionFlag.astro';
+import SearchIsland from '../../components/SearchIsland.astro';
+import SourceBadge from '../../components/SourceBadge.astro';
+import TaskChip from '../../components/TaskChip.astro';
+import TextInput from '../../components/TextInput.astro';
+import ThemeToggle from '../../components/ThemeToggle.astro';
+import WithdrawnBanner from '../../components/WithdrawnBanner.astro';
+import Swatches from '../../components/Swatches.astro';
+
+import { catalogue, fixtures } from '../../lib/catalogue';
+import { facetsFor } from '../../lib/facets';
+import { freshness, uiFixture, type LastRun } from '../../lib/state';
+import { provenanceOf, curatorNotesOf, retractionOf, extra } from '../../lib/record';
+
+// The gallery renders real records from `records/` when they exist, plus the
+// pathological fixtures always. Storybook stories use synthetic args; this
+// exercises the actual data shape, which is where the bugs will be.
+const fixtureEntries = await fixtures();
+const real = (await catalogue()).filter((entry) => entry.origin === 'records');
+const byId = new Map(fixtureEntries.map((entry) => [entry.fixtureId!, entry]));
+const pick = (id: string) => byId.get(id)!;
+
+const facets = facetsFor(fixtureEntries);
+
+const stale = uiFixture<{ last_run: LastRun; case: string }>('r-08-stale-banner');
+const empty = uiFixture<{ query: string; expected_announcement: string; case: string }>(
+  'r-07-empty-search'
+);
+
+const llm = pick('rep-05-llm-inferred');
+const llmProvenance = provenanceOf(llm.pkg);
+const curated = pick('rep-07-curator-note');
+---
+
+<Base
+  title="Component gallery — IEA Wind Data Catalogue"
+  description="Every component in every state, rendered against the fixture set."
+  noindex
+>
+  <div data-pagefind-ignore class="gallery stack-8">
+    <header>
+      <h1>Component gallery</h1>
+      <p class="prose">
+        Every component, in every state, rendered against
+        <code>fixtures/rendering/</code> — the deliberately awkward records, not
+        synthetic args. {real.length > 0 && `${real.length} real record${real.length === 1 ? '' : 's'} from records/ are included below.`}
+        This page is <code>noindex</code> and <code>data-pagefind-ignore</code>.
+      </p>
+      <p class="prose secondary">
+        Add <code>?theme=light</code> or <code>?theme=dark</code> to force a
+        theme — that is what the a11y gate does when it runs the URL list twice.
+      </p>
+    </header>
+
+    <!-- ================================================== tokens -->
+    <section aria-labelledby="g-tokens">
+      <h2 id="g-tokens">1 · Tokens</h2>
+      <p class="secondary prose">
+        Every token from <code>design-tokens.json</code>. Because the a11y gate
+        audits this page, it is auditing the palette itself.
+      </p>
+      <Swatches />
+    </section>
+
+    <!-- ================================================== primitives -->
+    <section aria-labelledby="g-primitives" class="stack-6">
+      <h2 id="g-primitives">2 · Primitives, with all their states</h2>
+      <p class="secondary prose">
+        A primitive without its states is not done. Hover and active are shown
+        live; focus is shown by tabbing (the ring is 2px with 2px offset).
+      </p>
+
+      <div class="case">
+        <h3>Button — primary</h3>
+        <div class="row">
+          <Button variant="primary">Default</Button>
+          <Button variant="primary" class="is-hover">Hover</Button>
+          <Button variant="primary" class="is-active">Active</Button>
+          <Button variant="primary" class="is-focus">Focus</Button>
+          <Button variant="primary" disabled>Disabled</Button>
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Button — secondary</h3>
+        <div class="row">
+          <Button>Default</Button>
+          <Button class="is-hover">Hover</Button>
+          <Button class="is-active">Active</Button>
+          <Button class="is-focus">Focus</Button>
+          <Button disabled>Disabled</Button>
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Link</h3>
+        <p>
+          A <a href="#g-primitives">default link</a>, a
+          <a href="#g-primitives" class="is-hover">hovered link</a>, an
+          <a href="#g-primitives" class="is-active">active link</a> and a
+          <a href="#g-primitives" class="is-focus">focused link</a>.
+        </p>
+      </div>
+
+      <div class="case">
+        <h3>Input</h3>
+        <div class="grid-3">
+          <TextInput id="demo-default" label="Default" placeholder="lidar" />
+          <TextInput id="demo-hint" label="With hint" hint="Case-insensitive; try a DOI." />
+          <TextInput id="demo-disabled" label="Disabled" value="unavailable" disabled />
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Badge — every tone</h3>
+        <div class="row">
+          <Badge icon="▤">Neutral</Badge>
+          <Badge tone="api" icon="⟐">From API</Badge>
+          <Badge tone="pattern" icon="⌗">Pattern-matched</Badge>
+          <Badge tone="llm" icon="◈">Machine-inferred</Badge>
+          <Badge tone="restricted" icon="◑">Restricted</Badge>
+          <Badge tone="embargoed" icon="◐">Embargoed</Badge>
+          <Badge tone="withdrawn" icon="⊘">Withdrawn</Badge>
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Panel — every bar colour</h3>
+        <div class="stack">
+          <Panel tone="accent" icon="●" heading="Accent">A neutral panel with a 3px accent bar.</Panel>
+          <Panel tone="info" icon="ℹ" heading="Info">Square corners: a bar against a rounded panel mismatches at the joins.</Panel>
+          <Panel tone="success" icon="✓" heading="Success">Colour never fills the surface.</Panel>
+          <Panel tone="warning" icon="⚠" heading="Warning">The freshness banner past 45 days.</Panel>
+          <Panel tone="danger" icon="⊘" heading="Danger">The withdrawn banner, and the retraction flag.</Panel>
+          <Panel tone="violet" icon="◈" heading="Violet">Reserved, site-wide, for machine inference.</Panel>
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Theme toggle — auto, light, dark</h3>
+        <p class="secondary">
+          One live control; it cycles auto → light → dark and persists the choice.
+        </p>
+        <ThemeToggle />
+      </div>
+    </section>
+
+    <!-- ================================================== catalogue components -->
+    <section aria-labelledby="g-catalogue" class="stack-6">
+      <h2 id="g-catalogue">3 · Catalogue components</h2>
+
+      <div class="case">
+        <h3>Provenance badge — the three extraction methods</h3>
+        <div class="row">
+          <ProvenanceBadge provenance={{ extraction_method: 'api', source_system: 'zenodo' }} />
+          <ProvenanceBadge provenance={{ extraction_method: 'pattern', source_system: 'ieawind' }} />
+          <ProvenanceBadge field="resource_kind" provenance={llmProvenance.resource_kind} />
+          <ProvenanceBadge field="notes" provenance={llmProvenance.notes} />
+          <ProvenanceBadge field="iea_task" provenance={llmProvenance.iea_task} />
+        </div>
+        <p class="secondary">
+          Fixture <code>x-05</code>: the violet badge is the only place violet is
+          used, and it always carries the model and the confidence.
+        </p>
+      </div>
+
+      <div class="case">
+        <h3>Source badge</h3>
+        <div class="row">
+          <SourceBadge system="zenodo" url="https://zenodo.org/records/1234567" reportUrl="https://zenodo.org/records/1234567" />
+          <SourceBadge system="github" url="https://github.com/IEA-Task-43/digital-wra-data-standard" reportUrl="https://github.com/IEA-Task-43/digital-wra-data-standard/issues" />
+          <SourceBadge system="ieawind" url="https://iea-wind.org/task43/" />
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Availability badge — every access status</h3>
+        <div class="row">
+          <AvailabilityBadge status="open" />
+          <AvailabilityBadge status="restricted" />
+          <AvailabilityBadge status="registration-required" />
+          <AvailabilityBadge status="embargoed" embargoDate="2027-03-01" />
+          <AvailabilityBadge status="metadata-only" />
+          <AvailabilityBadge status="unknown" />
+          <AvailabilityBadge />
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Task chip — one, and five (fixture r-03)</h3>
+        <div class="row"><TaskChip task="task-43" /></div>
+        <div class="row">
+          {['task-32', 'task-43', 'task-49', 'task-51', 'task-52'].map((task) => (
+            <TaskChip task={task} />
+          ))}
+        </div>
+        <p class="secondary">A chip that merely labels is text, not a link:</p>
+        <div class="row"><TaskChip task="task-49" href={null} /></div>
+      </div>
+
+      <div class="case">
+        <h3>Freshness banner — fresh, stale (r-08), never run</h3>
+        <div class="stack">
+          <FreshnessBanner freshness={freshness()} />
+          <FreshnessBanner freshness={freshness(stale.last_run, new Date('2026-08-31T00:00:00Z'))} />
+          <FreshnessBanner freshness={freshness(undefined)} />
+        </div>
+        <p class="secondary">{stale.case}</p>
+      </div>
+
+      <div class="case">
+        <h3>Withdrawn banner (r-04) and retraction flag (rep-06)</h3>
+        <div class="stack">
+          <WithdrawnBanner
+            withdrawnAt={extra(pick('r-04-withdrawn').pkg, 'withdrawn_at')}
+            sourceUrl={extra(pick('r-04-withdrawn').pkg, 'source_url')}
+          />
+          <RetractionFlag
+            identifier={retractionOf(pick('rep-06-retracted-publication').pkg)?.identifier}
+            identifierType="DOI"
+          />
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Metadata list, with a curator note beside the value it annotates</h3>
+        <MetadataList
+          rows={[
+            { field: 'doi', label: 'DOI', value: extra(curated.pkg, 'doi'), mono: true },
+            { field: 'license_id', label: 'Licence', value: 'Creative Commons Non-Commercial (Any)' },
+            { field: 'publisher', label: 'Publisher', value: extra(curated.pkg, 'publisher') },
+            { label: 'Absent field', value: undefined },
+          ]}
+          provenance={provenanceOf(curated.pkg)}
+          notes={curatorNotesOf(curated.pkg)}
+        />
+        <p class="secondary">
+          Fixture <code>x-10</code>: the upstream value is shown verbatim; the
+          note sits beside it. Rows with no value are omitted entirely — an
+          absent field and an empty one say different things.
+        </p>
+      </div>
+
+      <div class="case">
+        <h3>Event history — populated, and empty</h3>
+        <div class="grid-2">
+          <EventHistory id="gallery-history-full" events={pick('r-04-withdrawn').events} />
+          <EventHistory
+            id="gallery-history-empty"
+            events={[]}
+            firstSeen="2026-08-24T03:11:07Z"
+            lastSeen="2026-08-28T09:00:00Z"
+          />
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Citation block, with the copy button</h3>
+        <CitationBlock id="gallery-citation" pkg={pick('rep-01-lidar-dataset').pkg} />
+      </div>
+
+      <div class="case">
+        <h3>Pagination — first, middle, last</h3>
+        <div class="stack">
+          <Pagination page={1} pageCount={7} />
+          <Pagination page={4} pageCount={7} />
+          <Pagination page={7} pageCount={7} />
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Facet UI</h3>
+        <div class="grid-3">
+          {facets.map((facet) => (
+            <FacetGroup name={`gallery-${facet.name}`} legend={facet.legend} values={facet.values} limit={4} />
+          ))}
+        </div>
+      </div>
+
+      <div class="case">
+        <h3>Search island — the real component, live</h3>
+        <p class="secondary">
+          The island itself, not a reproduction of it: Pagefind is a build
+          artifact under <span class="meta">/pagefind/</span>, so on the built
+          gallery this searches the real index. Type to exercise the live count,
+          the filters and the zero-results state in place.
+        </p>
+        <SearchIsland facets={facets} initial={fixtureEntries.slice(0, 3).map((e) => e.pkg)} total={fixtureEntries.length} />
+      </div>
+
+      <div class="case">
+        <h3>Empty search state (r-07)</h3>
+        <p class="secondary">{empty.case}</p>
+        <p class="secondary">
+          Rendered by the island above from its own
+          <span class="meta">&lt;template data-search-empty&gt;</span> — searching
+          for <span class="meta">{empty.query}</span> produces it. The gallery
+          deliberately does not copy that markup: a hand-made replica is exactly
+          the drift the gallery exists to catch.
+        </p>
+        <p class="secondary">
+          Announced through the polite live region as:
+          <span class="meta">{empty.expected_announcement}</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================================== record cards -->
+    <section aria-labelledby="g-cards" class="stack-6">
+      <h2 id="g-cards">4 · Record card — every fixture</h2>
+      {fixtureEntries.map((entry) => (
+        <div class="case">
+          <h3><code>{entry.fixtureId}</code></h3>
+          <p class="secondary">{entry.fixtureCase}</p>
+          <RecordCard pkg={entry.pkg} headingLevel="h4" />
+        </div>
+      ))}
+      {real.length > 0 && (
+        <div class="case">
+          <h3>Real records from <code>records/</code></h3>
+          <div class="stack">
+            {real.slice(0, 3).map((entry) => <RecordCard pkg={entry.pkg} headingLevel="h4" />)}
+          </div>
+        </div>
+      )}
+      <div class="case">
+        <h3>Single result (r-06)</h3>
+        <p class="secondary" role="status">1 result for “performance prediction benchmark”.</p>
+        <RecordCard pkg={pick('r-06-single-result').pkg} headingLevel="h4" />
+      </div>
+    </section>
+
+    <!-- ================================================== record detail -->
+    <section aria-labelledby="g-detail" class="stack-8">
+      <h2 id="g-detail">5 · Record detail — every fixture</h2>
+      <p class="secondary prose">
+        The whole record body, exactly as a visitor sees it. The headings drop to
+        h3 here because the gallery owns the h1.
+      </p>
+      {fixtureEntries.map((entry) => (
+        <div class="case case--detail">
+          <h3><code>{entry.fixtureId}</code></h3>
+          <p class="secondary prose">{entry.fixtureCase}</p>
+          {entry.fixtureNote && <p class="secondary prose">{entry.fixtureNote}</p>}
+          <RecordDetail pkg={entry.pkg} events={entry.events} headingLevel="h2" indexable={false} />
+        </div>
+      ))}
+    </section>
+  </div>
+</Base>
+
+<style>
+  .gallery h2 {
+    padding-block-end: var(--space-2);
+    border-bottom: var(--border-width-hairline) solid var(--border-strong);
+  }
+
+  .case {
+    padding: var(--space-4);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--surface-page);
+  }
+
+  .case > h3 {
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-body);
+  }
+
+  .case > p {
+    margin-bottom: var(--space-4);
+  }
+
+  .case--detail {
+    background: var(--surface-raised);
+  }
+
+  .grid-2,
+  .grid-3 {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  @media (min-width: 40rem) {
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
+  /* Forced states, so every primitive shows its full set in one screenshot.
+     These mirror the real :hover/:active/:focus-visible rules rather than
+     inventing new values. */
+  .is-hover,
+  .is-active,
+  .is-focus {
+    position: relative;
+  }
+
+  .is-focus {
+    outline: var(--border-width-focus) solid var(--border-focus);
+    outline-offset: var(--border-width-focus);
+    border-radius: var(--radius-sm);
+  }
+
+  a.is-hover { color: var(--action-hover); text-decoration: underline; }
+  a.is-active { color: var(--action-active); }
+
+  :global(.button--primary.is-hover) {
+    background: var(--action-hover);
+    border-color: var(--action-hover);
+  }
+
+  :global(.button--primary.is-active) {
+    background: var(--action-active);
+    border-color: var(--action-active);
+  }
+
+  :global(.button--secondary.is-hover) {
+    border-color: var(--action-primary);
+    color: var(--action-primary);
+  }
+
+  :global(.button--secondary.is-active) {
+    background: var(--surface-sunken);
+  }
+</style>

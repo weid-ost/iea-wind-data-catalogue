@@ -1,0 +1,78 @@
+---
+/**
+ * The input primitive. Always labelled — `border.input` (not `border.subtle`)
+ * because a boundary that *means* something is held to the 3:1 non-text rule
+ * (design-system.md §2.2).
+ */
+interface Props {
+  id: string;
+  label: string;
+  name?: string;
+  type?: string;
+  value?: string;
+  placeholder?: string;
+  disabled?: boolean;
+  describedBy?: string;
+  hint?: string;
+  [key: string]: unknown;
+}
+const { id, label, name, type = 'text', value, placeholder, disabled, describedBy, hint, ...rest } =
+  Astro.props;
+const hintId = hint ? `${id}-hint` : undefined;
+const described = [describedBy, hintId].filter(Boolean).join(' ') || undefined;
+---
+
+<div class="field">
+  <label class="field__label" for={id}>{label}</label>
+  <input
+    class="field__input"
+    id={id}
+    name={name ?? id}
+    type={type}
+    value={value}
+    placeholder={placeholder}
+    disabled={disabled}
+    aria-describedby={described}
+    {...rest}
+  />
+  {hint && <p class="field__hint" id={hintId}>{hint}</p>}
+</div>
+
+<style>
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .field__label {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .field__input {
+    min-height: var(--space-8);
+    padding: var(--space-2) var(--space-3);
+    border: var(--border-width-hairline) solid var(--border-input);
+    border-radius: var(--radius-sm);
+    background: var(--surface-raised);
+    color: var(--text-primary);
+    font: inherit;
+  }
+
+  .field__input:hover:not(:disabled) {
+    border-color: var(--action-primary);
+  }
+
+  .field__input:disabled {
+    background: var(--action-disabled-bg);
+    color: var(--action-disabled-text);
+    cursor: not-allowed;
+  }
+
+  .field__hint {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-caption);
+  }
+</style>

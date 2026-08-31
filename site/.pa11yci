@@ -1,0 +1,32 @@
+{
+  "//": "The accessibility gate (design-system.md §7, runbook run-the-a11y-gate). Paths are site-relative; scripts/a11y.mjs prefixes the base, doubles the list with ?theme=light and ?theme=dark, and serves dist/ before running. WCAG 2.1 AA via the axe-core runner; WCAG 2.2's focus-appearance and target-size criteria are design requirements checked in review, because axe does not test them reliably.",
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe"],
+    "timeout": 60000,
+    "wait": 250,
+    "//concurrency": "One at a time. Concurrent pa11y workers share a Chrome instance and lose targets ('Protocol error (Target.closeTarget)'), which reports as 'Failed to run' rather than as a pass or a fail — a gate that silently skips pages is worse than a slow one.",
+    "concurrency": 1,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-dev-shm-usage"]
+    }
+  },
+  "paths": [
+    "/",
+    "/search/",
+    "/browse/",
+    "/record/doi-10-5281-zenodo-1234566/",
+    "/record/doi-10-5281-zenodo-7702209/",
+    "/record/doi-10-5281-zenodo-3376526/",
+    "/dev/components/"
+  ],
+  "why": {
+    "/": "the homepage, and the freshness banner",
+    "/search/": "the page a screen-reader user lives on",
+    "/browse/": "the no-JavaScript path, and pagination",
+    "/record/doi-10-5281-zenodo-1234566/": "rep-01: the canonical record",
+    "/record/doi-10-5281-zenodo-7702209/": "r-01: the 300-character title",
+    "/record/doi-10-5281-zenodo-3376526/": "r-04: the withdrawn record and its banner",
+    "/dev/components/": "the gallery — every component in every fixture state, plus the token swatches, so one URL audits the whole inventory AND the palette"
+  }
+}

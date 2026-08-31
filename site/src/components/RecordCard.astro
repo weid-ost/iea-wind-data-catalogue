@@ -1,0 +1,118 @@
+---
+/**
+ * One record in a list.
+ *
+ * Design §6: **the card's title is the link, not the whole card** — wrapping
+ * nested interactive elements (task chips, source links) inside one big anchor
+ * is invalid HTML and unusable with a keyboard.
+ *
+ * A plain card: 6px radius, hairline border, no accent bar (bars belong to
+ * barred panels, and a bar against a rounded panel mismatches at the joins).
+ */
+import TaskChip from './TaskChip.astro';
+import Badge from './Badge.astro';
+import AvailabilityBadge from './AvailabilityBadge.astro';
+import {
+  authorSummary,
+  authorsOf,
+  extra,
+  isWithdrawn,
+  inferredFields,
+  plainText,
+  tasksOf,
+  truncate,
+  yearOf,
+  RESOURCE_KIND_LABELS,
+  type CkanPackage,
+} from '../lib/record';
+import { recordPath } from '../lib/url';
+
+interface Props {
+  pkg: CkanPackage;
+  headingLevel?: 'h2' | 'h3';
+}
+const { pkg, headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+
+const kind = extra(pkg, 'resource_kind');
+const summary = truncate(plainText(pkg.notes), 220);
+const authors = authorSummary(authorsOf(pkg));
+const year = yearOf(pkg);
+const doi = extra(pkg, 'doi');
+const withdrawn = isWithdrawn(pkg);
+const inferred = inferredFields(pkg);
+---
+
+<article class="card">
+  <Heading class="card__title">
+    <a href={recordPath(pkg.name)}>{pkg.title}</a>
+  </Heading>
+
+  <p class="card__byline secondary">
+    {authors && <span>{authors}</span>}
+    {authors && year && <span class="icon" aria-hidden="true" data-icon=" · "></span>}
+    {year && <span>{year}</span>}
+  </p>
+
+  {summary && <p class="card__summary">{summary}</p>}
+
+  <div class="row card__meta">
+    {kind && <Badge icon="▤">{RESOURCE_KIND_LABELS[kind] ?? kind}</Badge>}
+    <AvailabilityBadge status={extra(pkg, 'access_status')} embargoDate={extra(pkg, 'embargo_date')} />
+    {withdrawn && <Badge tone="withdrawn" icon="⊘">Withdrawn upstream</Badge>}
+    {inferred.length > 0 && (
+      <Badge tone="llm" icon="◈">
+        {inferred.length} machine-inferred field{inferred.length === 1 ? '' : 's'}
+      </Badge>
+    )}
+    {tasksOf(pkg).map((task) => <TaskChip task={task} />)}
+  </div>
+
+  {doi && <p class="card__doi meta secondary">{doi}</p>}
+</article>
+
+<style>
+  .card {
+    padding: var(--space-4);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--surface-raised);
+  }
+
+  .card__title {
+    margin-bottom: var(--space-1);
+    font-size: var(--font-size-h3);
+  }
+
+  .card__title a {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .card__title a:hover {
+    color: var(--text-link);
+    text-decoration: underline;
+  }
+
+  .card__byline {
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-small);
+  }
+
+  .card__byline:empty {
+    display: none;
+  }
+
+  .card__summary {
+    margin-bottom: var(--space-3);
+    max-width: var(--font-measure-prose);
+  }
+
+  .card__meta {
+    gap: var(--space-2);
+  }
+
+  .card__doi {
+    margin: var(--space-3) 0 0;
+  }
+</style>

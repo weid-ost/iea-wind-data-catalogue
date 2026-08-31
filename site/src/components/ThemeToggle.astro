@@ -1,0 +1,92 @@
+---
+/**
+ * The theme toggle (design-system.md §5).
+ *
+ * Cycles auto → light → dark, persists to `localStorage`, and is a real
+ * `<button>` with a visible label and `aria-pressed` — not an icon that means
+ * something only to whoever wrote it.
+ *
+ * The default follows `prefers-color-scheme`; the stored choice is applied by
+ * an inline `<head>` script *before first paint* (see Base.astro), which is the
+ * only way to avoid the flash of the wrong theme.
+ *
+ * `?theme=light` / `?theme=dark` force the theme without persisting it, because
+ * the a11y gate runs the whole URL list twice, once per theme.
+ */
+---
+
+<theme-toggle class="theme-toggle">
+  <button type="button" data-theme-button aria-pressed="false">
+    <span class="icon" aria-hidden="true" data-icon="◐" data-theme-icon></span>
+    <span class="theme-toggle__label">Theme: <span data-theme-label>auto</span></span>
+  </button>
+</theme-toggle>
+
+<script>
+  // Vanilla custom element (ADR-0036): a platform standard with no version to
+  // migrate. Enhancement only — without it the page renders in the theme the
+  // head script already applied.
+  const ORDER = ['auto', 'light', 'dark'];
+  const ICON = { auto: '◐', light: '☀', dark: '☾' };
+
+  class ThemeToggle extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector('[data-theme-button]');
+      const label = this.querySelector('[data-theme-label]');
+      const icon = this.querySelector('[data-theme-icon]');
+      if (!button) return;
+
+      const forced = new URLSearchParams(window.location.search).get('theme');
+      let mode = forced && ORDER.includes(forced) ? forced : localStorage.getItem('theme') ?? 'auto';
+
+      const apply = () => {
+        if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+        else document.documentElement.setAttribute('data-theme', mode);
+        if (label) label.textContent = mode;
+        if (icon) icon.dataset.icon = ICON[mode];
+        // aria-pressed is a two-state control's state: "am I overriding the
+        // system?" — announced as text too, since 'auto' is a third state.
+        button.setAttribute('aria-pressed', String(mode !== 'auto'));
+      };
+
+      apply();
+      button.addEventListener('click', () => {
+        mode = ORDER[(ORDER.indexOf(mode) + 1) % ORDER.length];
+        if (mode === 'auto') localStorage.removeItem('theme');
+        else localStorage.setItem('theme', mode);
+        apply();
+      });
+    }
+  }
+  if (!customElements.get('theme-toggle')) customElements.define('theme-toggle', ThemeToggle);
+</script>
+
+<style>
+  .theme-toggle button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--space-6);
+    padding: var(--space-1) var(--space-3);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--surface-raised);
+    color: var(--text-secondary);
+    font: inherit;
+    font-size: var(--font-size-small);
+    cursor: pointer;
+  }
+
+  .theme-toggle button:hover {
+    border-color: var(--action-primary);
+    color: var(--action-primary);
+  }
+
+  .theme-toggle button:active {
+    background: var(--surface-sunken);
+  }
+
+  .theme-toggle__label {
+    font-variant-numeric: tabular-nums;
+  }
+</style>

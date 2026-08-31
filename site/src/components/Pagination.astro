@@ -1,0 +1,94 @@
+---
+/**
+ * Pagination for the browse list. A labelled `<nav>` with real links, current
+ * page marked with `aria-current="page"` — not a widget, just navigation.
+ */
+import { withBase } from '../lib/url';
+
+interface Props {
+  page: number;
+  pageCount: number;
+  hrefFor?: (page: number) => string;
+  label?: string;
+}
+const {
+  page,
+  pageCount,
+  hrefFor = (n: number) => withBase(n === 1 ? '/browse/' : `/browse/${n}/`),
+  label = 'Catalogue pages',
+} = Astro.props;
+
+const numbers = Array.from({ length: pageCount }, (_, index) => index + 1).filter(
+  (n) => n === 1 || n === pageCount || Math.abs(n - page) <= 1
+);
+---
+
+{pageCount > 1 && (
+  <nav class="pagination" aria-label={label}>
+    <ul class="pagination__list">
+      {/* No greyed-out arrows: a disabled-looking control that is not a control
+          is noise for everyone and a contrast failure for some. */}
+      {page > 1 && (
+        <li><a class="pagination__link" href={hrefFor(page - 1)} rel="prev">← Previous</a></li>
+      )}
+      {numbers.map((n, index) => (
+        <>
+          {index > 0 && n - numbers[index - 1] > 1 && (
+            <li class="icon pagination__gap" aria-hidden="true" data-icon="…"></li>
+          )}
+          <li>
+            <a
+              class="pagination__link"
+              href={hrefFor(n)}
+              aria-current={n === page ? 'page' : undefined}
+            >
+              <span class="visually-hidden">Page </span>{n}
+            </a>
+          </li>
+        </>
+      ))}
+      {page < pageCount && (
+        <li><a class="pagination__link" href={hrefFor(page + 1)} rel="next">Next →</a></li>
+      )}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .pagination__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pagination__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--space-8);
+    padding: var(--space-1) var(--space-3);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--surface-raised);
+    color: var(--text-link);
+    font-size: var(--font-size-small);
+    text-decoration: none;
+  }
+
+  .pagination__link:hover {
+    border-color: var(--action-primary);
+  }
+
+  .pagination__link[aria-current='page'] {
+    border-color: var(--action-primary);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .pagination__gap {
+    color: var(--text-secondary);
+  }
+</style>

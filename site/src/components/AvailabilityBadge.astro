@@ -1,0 +1,42 @@
+---
+/**
+ * Availability, stated honestly. **Never imply a download that requires an
+ * account or is embargoed** — that is the one thing a catalogue must not get
+ * wrong, because a user who clicks through and hits a login wall stops trusting
+ * every other field on the page (fixtures zen-05, zen-06, wdh-06).
+ *
+ * Open is green, restricted is amber, embargoed is neutral (design §2.3).
+ */
+import Badge from './Badge.astro';
+import { ACCESS_LABELS, formatDate } from '../lib/record';
+
+interface Props {
+  status?: string;
+  embargoDate?: string;
+}
+const { status, embargoDate } = Astro.props;
+const known = status && ACCESS_LABELS[status] ? status : 'unknown';
+
+const TONE: Record<string, 'api' | 'restricted' | 'embargoed'> = {
+  open: 'api',
+  restricted: 'restricted',
+  'registration-required': 'restricted',
+  embargoed: 'embargoed',
+  'metadata-only': 'embargoed',
+  unknown: 'embargoed',
+};
+const ICON: Record<string, string> = {
+  open: '○',
+  restricted: '◑',
+  'registration-required': '◑',
+  embargoed: '◐',
+  'metadata-only': '◐',
+  unknown: '?',
+};
+---
+
+<Badge tone={TONE[known]} icon={ICON[known]}>
+  {ACCESS_LABELS[known]}{
+    known === 'embargoed' && embargoDate ? ` until ${formatDate(embargoDate)}` : ''
+  }
+</Badge>

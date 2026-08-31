@@ -1,0 +1,119 @@
+{
+  "fixture_id": "rep-04-restricted-access",
+  "fixture_kind": "record",
+  "case": "Metadata is public, the files are not — the availability badge must never imply a download",
+  "note": "No `resources` at all: the catalogue links to metadata it can honestly link to and never fabricates a download URL behind an auth wall (wdh-06).",
+  "record": {
+    "name": "wdh-buoy-lidar-2019",
+    "title": "Offshore buoy-mounted lidar deployment, New York Bight (2019–2021)",
+    "notes": "<p>Two floating lidar buoys deployed in the New York Bight; wind speed, direction, wave and met data. Download requires a Wind Data Hub account.</p>",
+    "license_id": "other-closed",
+    "tags": [
+      {
+        "name": "buoy"
+      },
+      {
+        "name": "floating-lidar"
+      },
+      {
+        "name": "offshore"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "registration-required"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Pacific Northwest National Laboratory\"}]"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-04-19T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "wdh|buoy/lidar.z04.b0"
+      },
+      {
+        "key": "identity_kind",
+        "value": "source"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-52\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "restricted"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"wdh\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"wdh\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"wdh\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"wdh\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2021-12-01"
+      },
+      {
+        "key": "publisher",
+        "value": "Wind Data Hub"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "buoy/lidar.z04.b0"
+      },
+      {
+        "key": "source_key",
+        "value": "2023-06-30T00:00:00Z"
+      },
+      {
+        "key": "source_system",
+        "value": "wdh"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"wdh\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://wdh.energy.gov/projects/buoy"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://wdh.energy.gov/projects/buoy\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [],
+    "groups": [
+      {
+        "name": "task-52"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "owner_org": "pnnl",
+    "url": "https://wdh.energy.gov/projects/buoy"
+  }
+}

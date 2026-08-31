@@ -1,0 +1,159 @@
+---
+import Base from '../layouts/Base.astro';
+import Panel from '../components/Panel.astro';
+import { withBase } from '../lib/url';
+import { readLastRun, freshness } from '../lib/state';
+import { sourceLabel } from '../lib/record';
+
+const lastRun = readLastRun();
+const fresh = freshness(lastRun);
+const sources = Object.entries(lastRun?.sources ?? {});
+---
+
+<Base
+  title="About — IEA Wind Data Catalogue"
+  description="How the IEA Wind Data Catalogue is built: aggregation only, provenance on every field, and no registration."
+>
+  <div class="prose stack-6">
+    <h1>How this works</h1>
+
+    <p>
+      Nobody who has already described a dataset on Zenodo is going to log into a
+      second system and describe it again. So this catalogue does not ask them
+      to. It watches the places IEA Wind people already publish and reflects what
+      it finds.
+    </p>
+
+    <h2>What it does</h2>
+    <p>
+      A scheduled job reads seven sources — Zenodo, DataCite, Crossref, GitHub,
+      OSTI, the Wind Data Hub and iea-wind.org — and writes what it finds into an
+      append-only event log. The records you see are derived from that log and
+      regenerated from it; delete them and they come back byte for byte.
+    </p>
+
+    <h2>What it will not do</h2>
+    <ul>
+      <li>
+        <strong>It never edits a source.</strong> If a Zenodo record has a typo'd
+        title, then a typo'd title is what Zenodo says, and the fix belongs at
+        Zenodo — where the author can make it and every other consumer benefits.
+        Every record carries a link to report an issue at its source.
+      </li>
+      <li>
+        <strong>It never accepts an identifier from a model.</strong> Where a
+        page has to be read by a language model, identifiers are extracted by
+        pattern and resolved against DataCite or Crossref before the record
+        exists. A DOI that does not resolve is dropped and logged.
+      </li>
+      <li>
+        <strong>It never mirrors a file.</strong> Metadata and links only. The
+        availability badge on each record says plainly whether the files are open,
+        restricted, embargoed or behind a registration wall.
+      </li>
+      <li>
+        <strong>It never deletes a record.</strong> When something vanishes
+        upstream the page stays, with a notice, so existing citations keep
+        resolving. Link rot is the failure mode a catalogue exists to fight.
+      </li>
+    </ul>
+
+    <h2>Provenance</h2>
+    <p>
+      Every field records how it was known: read from an API, matched by pattern,
+      or inferred by a model. Machine-inferred fields carry a violet badge with
+      the model and its confidence, everywhere on the site. Being honest about
+      which metadata is inferred is the difference between a catalogue people
+      trust and one that gets dismissed the first time somebody spots a
+      confidently wrong abstract.
+    </p>
+
+    <h2>Corrections</h2>
+    <p>
+      Corrections are additive and local: a curator can attach a note, add a Task
+      attribution, or link a related record, but the upstream value keeps being
+      displayed verbatim beside the note. Both truths on the page.
+    </p>
+
+    <h2>Machine access</h2>
+    <p>
+      Every record page carries schema.org <code>Dataset</code> JSON-LD, so the
+      catalogue is indexable by Google Dataset Search. The whole catalogue is
+      also published as <a href={withBase('/catalog.jsonld')}>DCAT</a>, and the
+      underlying records are CKAN <code>package</code> dicts — the format a CKAN
+      instance would ingest unmodified, should there ever be a reason to run one.
+    </p>
+
+    <h2>The last run</h2>
+    {fresh.neverRun ? (
+      <Panel tone="info" icon="ℹ">
+        <p>No run report in this checkout yet.</p>
+      </Panel>
+    ) : (
+      <>
+        <p>
+          Harvest {lastRun?.harvest_version} finished {fresh.finishedAt}, wrote{' '}
+          {lastRun?.records?.written ?? 0} record
+          {lastRun?.records?.written === 1 ? '' : 's'} and appended{' '}
+          {lastRun?.events_appended ?? 0} event
+          {lastRun?.events_appended === 1 ? '' : 's'}.
+        </p>
+        {sources.length > 0 && (
+          <table class="sources scroll-x">
+            <caption class="visually-hidden">Per-source result of the last harvest</caption>
+            <thead>
+              <tr><th scope="col">Source</th><th scope="col">Seen</th><th scope="col">Changed</th><th scope="col">State</th></tr>
+            </thead>
+            <tbody>
+              {sources.map(([name, result]) => (
+                <tr>
+                  <th scope="row">{sourceLabel(name)}</th>
+                  <td>{String(result.seen ?? 0)}</td>
+                  <td>{String(result.changed ?? 0)}</td>
+                  <td>
+                    {result.implemented === false
+                      ? 'not implemented'
+                      : result.reachable === false
+                        ? 'unreachable'
+                        : 'ok'}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </>
+    )}
+  </div>
+</Base>
+
+<style>
+  .sources {
+    display: block;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-small);
+  }
+
+  .sources th,
+  .sources td {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: var(--border-width-hairline) solid var(--border-subtle);
+    text-align: start;
+  }
+
+  .sources thead th {
+    color: var(--text-secondary);
+    font-size: var(--font-size-caption);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  ul {
+    padding-inline-start: var(--space-4);
+  }
+
+  li + li {
+    margin-block-start: var(--space-3);
+  }
+</style>

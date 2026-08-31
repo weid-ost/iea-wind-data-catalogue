@@ -1,0 +1,33 @@
+---
+/**
+ * A retraction is a fact the *source* states, via an `IsRetractedBy` related
+ * identifier (fixture cr-07). It is emphatically not withdrawal: the work is
+ * still at the publisher, and the two banners must read differently or a reader
+ * will conflate "we lost it" with "it was wrong".
+ */
+import Panel from './Panel.astro';
+
+interface Props {
+  identifier?: string;
+  identifierType?: string;
+}
+const { identifier, identifierType } = Astro.props;
+const href =
+  identifier && (identifierType ?? 'DOI').toUpperCase() === 'DOI'
+    ? `https://doi.org/${identifier}`
+    : identifier;
+---
+
+<Panel tone="danger" icon="⚠" role="status" heading="Retracted" headingLevel="p">
+  <p>
+    The source states that this work has been retracted. Read the retraction
+    notice before citing it.
+    {href && (
+      <>
+        {' '}
+        <a href={href} rel="noopener external">Retraction notice</a>{' '}
+        <span class="meta secondary">{identifier}</span>
+      </>
+    )}
+  </p>
+</Panel>

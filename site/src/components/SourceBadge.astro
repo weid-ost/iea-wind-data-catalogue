@@ -1,0 +1,53 @@
+---
+/**
+ * "Where this came from", with the link that matters: **report an issue at the
+ * source**. The catalogue is an aggregator, not an authority — a typo'd title
+ * is what Zenodo says, and the fix belongs at Zenodo, where the author can make
+ * it and every other consumer benefits (plan §4.2).
+ *
+ * The link text says where it goes; "report an issue" alone would not.
+ */
+import { sourceLabel } from '../lib/record';
+
+interface Props {
+  system: string;
+  url?: string;
+  reportUrl?: string;
+}
+const { system, url, reportUrl } = Astro.props;
+const label = sourceLabel(system);
+---
+
+<span class="source">
+  <span class="source__name">{label}</span>
+  {url && (
+    <a class="source__link" href={url} rel="noopener external">
+      view at {label}
+    </a>
+  )}
+  {reportUrl && (
+    <a class="source__link" href={reportUrl} rel="noopener external">
+      report an issue at {label}
+    </a>
+  )}
+</span>
+
+<style>
+  .source {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-3);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--surface-raised);
+    font-size: var(--font-size-small);
+  }
+
+  .source__name {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-caption);
+    color: var(--text-secondary);
+  }
+</style>

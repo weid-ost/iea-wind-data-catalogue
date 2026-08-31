@@ -46,9 +46,9 @@
   "sunken": "#080C09",
   "text1": "#E4E9E6",
   "text2": "#7F8782",
-  "action": "#558A6A",
-  "action_hover": "#649979",
-  "focus": "#68B387",
+  "action": "#5B9070",
+  "action_hover": "#6A9F7E",
+  "focus": "#6EBA8D",
   "border": "#29302B",
   "border_strong": "#3D4440"
  },
@@ -81,7 +81,7 @@
    "text": "#587D66",
    "bg": "#E3F6E9",
    "border": "#A4C8B1",
-   "dark_text": "#558A6A",
+   "dark_text": "#5B9070",
    "dark_bg": "#18281E",
    "dark_border": "#355542"
   },

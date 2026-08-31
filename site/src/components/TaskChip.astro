@@ -1,0 +1,47 @@
+---
+/**
+ * An IEA Wind Task attribution.
+ *
+ * Design §6: "task chips that filter are buttons, task chips that merely label
+ * are text". A chip here navigates to the filtered search, so it is a link —
+ * the accessible name says which task, and the full title is the tooltip
+ * because five chips at full length would be unreadable (fixture r-03).
+ */
+import { taskShort, taskTitle } from '../lib/registers';
+import { withBase } from '../lib/url';
+
+interface Props {
+  task: string;
+  href?: string | null;
+}
+const { task, href } = Astro.props;
+const label = taskShort(task);
+const title = taskTitle(task);
+const target = href === null ? undefined : (href ?? withBase(`/search/?task=${encodeURIComponent(task)}`));
+const Tag = target ? 'a' : 'span';
+---
+
+<Tag class="chip" href={target} title={title === label ? undefined : title}>
+  <span class="visually-hidden">IEA Wind </span>{label}
+</Tag>
+
+<style>
+  .chip {
+    display: inline-block;
+    padding: 0 var(--space-2);
+    border: var(--border-width-hairline) solid var(--border-strong);
+    border-radius: var(--radius-pill);
+    background: var(--surface-raised);
+    color: var(--text-secondary);
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-caption);
+    line-height: var(--font-line-height-loose);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  a.chip:hover {
+    border-color: var(--action-primary);
+    color: var(--action-primary);
+  }
+</style>

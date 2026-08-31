@@ -1,0 +1,57 @@
+{
+  "id": 6650123,
+  "doi": "10.5281/zenodo.6650123",
+  "conceptdoi": "10.5281/zenodo.6650123",
+  "revision": 1,
+  "links": {
+    "self_html": "https://zenodo.org/records/6650123"
+  },
+  "metadata": {
+    "title": "洋上風力発電所の後流計測 — Offshore wind farm wake measurements at Chōshi",
+    "description": "<p>Scanning-lidar wake measurements from the Chōshi offshore demonstration site, with metadata in Japanese and English.</p>",
+    "publication_date": "2023-11-20",
+    "resource_type": {
+      "type": "dataset"
+    },
+    "access_right": "open",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "keywords": [
+      "wake",
+      "offshore",
+      "lidar",
+      "Chōshi"
+    ],
+    "creators": [
+      {
+        "name": "山田 太郎",
+        "affiliation": "東京大学"
+      },
+      {
+        "name": "Müller, Søren Ø.",
+        "affiliation": "Technical University of Denmark"
+      },
+      {
+        "name": "Кузнецова, Анна"
+      },
+      {
+        "name": "Þórsdóttir, Ægir"
+      }
+    ],
+    "communities": [
+      {
+        "id": "ieawindtask32"
+      }
+    ]
+  },
+  "files": [
+    {
+      "key": "choshi-wake.nc",
+      "type": "nc",
+      "links": {
+        "self": "https://zenodo.org/records/6650123/files/choshi-wake.nc"
+      }
+    }
+  ]
+}

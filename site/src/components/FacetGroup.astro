@@ -1,0 +1,142 @@
+---
+/**
+ * One facet, as a `<fieldset>` of real checkboxes with a legend.
+ *
+ * Design §6 and the a11y runbook: "filters are real `<button>`s or checkboxes
+ * with `aria-pressed`/checked state, never clickable `<div>`s". They are
+ * rendered server-side from the record set, so the facet list exists in the
+ * built HTML and the a11y gate audits real markup rather than something the
+ * island happened to construct.
+ *
+ * The count beside each value is filled in at runtime from Pagefind's filter
+ * counts; before that it shows the build-time count, which is honest.
+ */
+import type { FacetValue } from '../lib/facets';
+
+interface Props {
+  name: string;
+  legend: string;
+  values: FacetValue[];
+  selected?: string[];
+  limit?: number;
+}
+const { name, legend, values, selected = [], limit = 8 } = Astro.props;
+const shown = values.slice(0, limit);
+const hidden = values.slice(limit);
+---
+
+{values.length > 0 && (
+  <fieldset class="facet" data-facet={name}>
+    <legend class="facet__legend">{legend}</legend>
+    <ul class="facet__list">
+      {shown.map((value) => (
+        <li>
+          <label class="facet__label">
+            <input
+              class="facet__input"
+              type="checkbox"
+              name={name}
+              value={value.value}
+              checked={selected.includes(value.value)}
+            />
+            <span class="facet__text">{value.label}</span>
+            <span class="facet__count meta" data-facet-count={`${name}:${value.value}`}>
+              {value.count}
+            </span>
+          </label>
+        </li>
+      ))}
+    </ul>
+    {hidden.length > 0 && (
+      <details class="facet__more">
+        <summary>{hidden.length} more {legend.toLowerCase()}</summary>
+        <ul class="facet__list">
+          {hidden.map((value) => (
+            <li>
+              <label class="facet__label">
+                <input
+                  class="facet__input"
+                  type="checkbox"
+                  name={name}
+                  value={value.value}
+                  checked={selected.includes(value.value)}
+                />
+                <span class="facet__text">{value.label}</span>
+                <span class="facet__count meta" data-facet-count={`${name}:${value.value}`}>
+                  {value.count}
+                </span>
+              </label>
+            </li>
+          ))}
+        </ul>
+      </details>
+    )}
+  </fieldset>
+)}
+
+<style>
+  .facet {
+    margin: 0;
+    padding: var(--space-3) 0 0;
+    border: 0;
+    border-top: var(--border-width-hairline) solid var(--border-subtle);
+  }
+
+  .facet__legend {
+    padding: 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .facet__list {
+    margin: var(--space-2) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .facet__label {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    /* WCAG 2.2 target size: the whole row is the hit area, >= 24px tall. */
+    min-height: var(--space-6);
+    padding-block: var(--space-1);
+    font-size: var(--font-size-small);
+    cursor: pointer;
+  }
+
+  .facet__label:hover {
+    color: var(--action-primary);
+  }
+
+  .facet__input {
+    accent-color: var(--action-primary);
+    margin: 0;
+  }
+
+  .facet__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .facet__count {
+    color: var(--text-secondary);
+    font-size: var(--font-size-caption);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Long facets fold into a <details>: platform behaviour, no script. */
+  .facet__more {
+    font-size: var(--font-size-small);
+  }
+
+  .facet__more summary {
+    min-height: var(--space-6);
+    padding-block: var(--space-1);
+    color: var(--text-link);
+    cursor: pointer;
+  }
+</style>

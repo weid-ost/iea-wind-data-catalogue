@@ -1,0 +1,155 @@
+{
+  "fixture_id": "r-04-withdrawn",
+  "fixture_kind": "record",
+  "case": "A withdrawn record: the artifact vanished upstream, the page and the URL are kept",
+  "note": "CKAN `state` stays 'active' (ADR-0027): withdrawal lives in extras.lifecycle_state / withdrawn / withdrawn_at. The banner is role=status at the top of <main>, and the citation stays resolvable.",
+  "raw": "raw/r-04-withdrawn.json",
+  "record": {
+    "name": "doi-10-5281-zenodo-3376526",
+    "title": "Turbine loads database from the OC6 Phase III validation campaign",
+    "notes": "<p>Simulated and measured loads for the OC6 Phase III rotor.</p>",
+    "license_id": "cc-by",
+    "tags": [
+      {
+        "name": "loads"
+      },
+      {
+        "name": "oc6"
+      },
+      {
+        "name": "validation"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "metadata-only"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Robertson, Amy\"},{\"name\":\"Bergua, Roger\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.3376526"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-01-18T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.3376526"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-30\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "withdrawn"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2021-09-02"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "3376526"
+      },
+      {
+        "key": "source_key",
+        "value": "3"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/3376526"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/3376526\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "true"
+      },
+      {
+        "key": "withdrawn_at",
+        "value": "2026-08-24T03:11:07Z"
+      }
+    ],
+    "resources": [],
+    "groups": [
+      {
+        "name": "task-30"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "owner_org": "nrel",
+    "url": "https://zenodo.org/records/3376526"
+  },
+  "events": [
+    {
+      "observed_at": "2026-01-18T02:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.3376526",
+      "source_system": "zenodo",
+      "source_key": "2",
+      "actor": "harvest/zenodo"
+    },
+    {
+      "observed_at": "2026-05-02T02:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.3376526",
+      "source_system": "zenodo",
+      "source_key": "3",
+      "actor": "harvest/zenodo",
+      "note": "licence changed at source"
+    },
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "withdrawn",
+      "identity_key": "10.5281/zenodo.3376526",
+      "source_system": "zenodo",
+      "actor": "harvest/zenodo",
+      "note": "DOI resolves to a Zenodo tombstone page"
+    }
+  ]
+}

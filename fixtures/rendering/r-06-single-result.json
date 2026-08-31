@@ -1,0 +1,124 @@
+{
+  "fixture_id": "r-06-single-result",
+  "fixture_kind": "record",
+  "case": "The record a search returns when it matches exactly one thing — the '1 result' state of the result list and its live region",
+  "note": "Identity falls back to source_system|source_id because OSTI records need not carry a DOI — note the slug has no `doi-` prefix.",
+  "raw": "raw/r-06-single-result.json",
+  "record": {
+    "name": "osti-1854723",
+    "title": "Wind plant performance prediction benchmark: final report",
+    "notes": "<p>Final report of the WP3 benchmark, comparing eleven wind plant performance models against operational data.</p>",
+    "license_id": "other-pd",
+    "tags": [
+      {
+        "name": "benchmark"
+      },
+      {
+        "name": "report"
+      },
+      {
+        "name": "wake-modelling"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Fields, Jason\"},{\"name\":\"Optis, Mike\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.2172/1854723"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-06-01T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "osti|1854723"
+      },
+      {
+        "key": "identity_kind",
+        "value": "source"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-31\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "Public Domain (USGov)"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2022-04-01"
+      },
+      {
+        "key": "publisher",
+        "value": "National Renewable Energy Laboratory"
+      },
+      {
+        "key": "resource_kind",
+        "value": "report"
+      },
+      {
+        "key": "source_id",
+        "value": "1854723"
+      },
+      {
+        "key": "source_key",
+        "value": "2022-04-11T00:00:00Z"
+      },
+      {
+        "key": "source_system",
+        "value": "osti"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"osti\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://www.osti.gov/biblio/1854723"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://www.osti.gov/biblio/1854723\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [],
+    "groups": [
+      {
+        "name": "task-31"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "owner_org": "nrel",
+    "url": "https://www.osti.gov/biblio/1854723"
+  }
+}

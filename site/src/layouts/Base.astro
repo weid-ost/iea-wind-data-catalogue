@@ -1,0 +1,119 @@
+---
+/**
+ * The page frame. One `<main>`, a labelled `<nav>`, a skip link as the first
+ * focusable element, a unique `<title>` (design §6).
+ *
+ * Zero JS by default: the only scripts on a page are the pre-paint theme
+ * script, the theme toggle, and — on the search page — the island.
+ */
+import '../styles/tokens.css';
+import '../styles/fonts.css';
+import '../styles/global.css';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import { withBase } from '../lib/url';
+
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+  /** Raw JSON-LD, rendered into the built HTML — never injected by script,
+   *  because Google Dataset Search is the point (ADR-0023). */
+  jsonLd?: unknown;
+  lang?: string;
+}
+const { title, description, noindex, jsonLd, lang = 'en' } = Astro.props;
+
+// `Astro.url.pathname` already carries `base`, and `Astro.site` already carries
+// it too (the site URL *is* the deployment root, base included). Stripping the
+// leading slash therefore resolved the path *relative to* the base and emitted
+// it twice — `…/iea-wind-data-catalogue/iea-wind-data-catalogue/record/x/`.
+// Keeping the leading slash resolves against the origin, which is right in both
+// deployments: project site (base `/iea-wind-data-catalogue`) and custom domain
+// (base `/`). `scripts/check-urls.mjs` fails the build if this ever regresses.
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const NAV = [
+  { href: withBase('/'), label: 'Home' },
+  { href: withBase('/search/'), label: 'Search' },
+  { href: withBase('/browse/'), label: 'Browse' },
+  { href: withBase('/about/'), label: 'About' },
+];
+const here = Astro.url.pathname.replace(/\/$/, '');
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical.href} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="alternate" type="application/ld+json" href={withBase('/catalog.jsonld')} title="DCAT catalogue" />
+    <link rel="sitemap" type="application/xml" href={withBase('/sitemap.xml')} />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={withBase('/fonts/ibm-plex-sans-latin-400-normal.woff2')}
+      crossorigin
+    />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    <script is:inline>
+      // Applied before first paint so the stored choice never flashes. Two
+      // lines, inline, deliberately not bundled (design-system.md §5).
+      (() => {
+        const forced = new URLSearchParams(location.search).get('theme');
+        const mode = forced || localStorage.getItem('theme');
+        if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode;
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <p class="site-header__title">
+          <a href={withBase('/')}>IEA Wind Data Catalogue</a>
+        </p>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            {NAV.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  aria-current={here === item.href.replace(/\/$/, '') ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <ThemeToggle />
+      </div>
+    </header>
+
+    <main id="main" class="shell">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p>
+          An aggregation-only catalogue: it reflects what IEA Wind Tasks already
+          publish and asks nothing of anyone. Metadata belongs to its sources —
+          corrections belong there too.
+        </p>
+        <p>
+          <a href={withBase('/catalog.jsonld')}>DCAT export</a> ·
+          <a href={withBase('/about/')}>How this works</a> ·
+          <a href="https://github.com/thclark/iea-wind-data-catalogue" rel="noopener external">
+            Source on GitHub
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

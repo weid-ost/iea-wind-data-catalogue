@@ -1,0 +1,77 @@
+{
+  "fixture_id": "r-02-no-description",
+  "fixture_kind": "record",
+  "case": "A record with a title and a DOI and nothing else — no description, no authors, no licence, no tasks",
+  "note": "Every optional block on the record page must collapse without leaving an empty heading, an empty <dl> or a dangling 'and N others'. Note the licence reads 'not specified' — never 'open'.",
+  "raw": "raw/r-02-no-description.json",
+  "record": {
+    "name": "doi-10-5281-zenodo-4419169",
+    "title": "Reference wind farm layout, Anholt",
+    "notes": "",
+    "license_id": "notspecified",
+    "tags": [],
+    "extras": [
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.4419169"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.4419169"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "source_id",
+        "value": "4419169"
+      },
+      {
+        "key": "source_key",
+        "value": "1"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/4419169"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/4419169\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [],
+    "groups": [],
+    "state": "active",
+    "private": false,
+    "url": "https://zenodo.org/records/4419169"
+  }
+}

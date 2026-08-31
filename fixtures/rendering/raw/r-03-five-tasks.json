@@ -1,0 +1,58 @@
+{
+  "id": 8112233,
+  "doi": "10.5281/zenodo.8112233",
+  "conceptdoi": "10.5281/zenodo.8112233",
+  "revision": 2,
+  "links": {
+    "self_html": "https://zenodo.org/records/8112233"
+  },
+  "metadata": {
+    "title": "Open benchmark of probabilistic wind power forecasts for offshore floating arrays",
+    "description": "<p>A cross-task benchmark dataset combining lidar-derived inflow, forecast ensembles and floating-array power output.</p>",
+    "publication_date": "2025-03-14",
+    "resource_type": {
+      "type": "dataset"
+    },
+    "access_right": "open",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "keywords": [
+      "forecasting",
+      "floating wind",
+      "lidar",
+      "benchmark"
+    ],
+    "creators": [
+      {
+        "name": "Jónsdóttir, Guðrún"
+      },
+      {
+        "name": "Bakker, Jeroen"
+      },
+      {
+        "name": "Zhang, Wei"
+      }
+    ],
+    "communities": [
+      {
+        "id": "iea_wind_task_43"
+      },
+      {
+        "id": "ieawindtask52"
+      },
+      {
+        "id": "ieawindtask32"
+      }
+    ]
+  },
+  "files": [
+    {
+      "key": "benchmark.zip",
+      "type": "zip",
+      "links": {
+        "self": "https://zenodo.org/records/8112233/files/benchmark.zip"
+      }
+    }
+  ]
+}

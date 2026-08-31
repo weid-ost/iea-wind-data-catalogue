@@ -1,0 +1,58 @@
+{
+  "id": 7702210,
+  "doi": "10.5281/zenodo.7702210",
+  "conceptdoi": "10.5281/zenodo.7702209",
+  "conceptrecid": "7702209",
+  "revision": 4,
+  "links": {
+    "self_html": "https://zenodo.org/records/7702210"
+  },
+  "metadata": {
+    "title": "Ten-minute aggregated nacelle-mounted-lidar and met-mast reference measurements for the wake-steering-controller validation campaign conducted at the Oesterild-National-Test-Centre-for-Large-Wind-Turbines during the 2021-2023 measurement period, including quality-flagged turbulence-intensity values.",
+    "description": "<p>Aggregated ten-minute statistics from the nacelle lidar and the reference met mast, quality-flagged and gap-filled.</p>",
+    "publication_date": "2024-06-01",
+    "version": "1.2",
+    "resource_type": {
+      "type": "dataset"
+    },
+    "access_right": "open",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "keywords": [
+      "lidar",
+      "wake steering",
+      "wind energy",
+      "Østerild"
+    ],
+    "creators": [
+      {
+        "name": "Müller, Søren Ø.",
+        "orcid": "0000-0002-1825-0097",
+        "affiliation": "Technical University of Denmark"
+      },
+      {
+        "name": "Okafor, Chidi",
+        "orcid": "0000-0001-5109-3700",
+        "affiliation": "National Renewable Energy Laboratory"
+      }
+    ],
+    "communities": [
+      {
+        "id": "iea_wind_task_43"
+      },
+      {
+        "id": "ieawindtask52"
+      }
+    ]
+  },
+  "files": [
+    {
+      "key": "osterild-lidar-2021-2023.csv",
+      "type": "csv",
+      "links": {
+        "self": "https://zenodo.org/records/7702210/files/osterild-lidar-2021-2023.csv"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fixture_id": "r-08-stale-banner",
+  "fixture_kind": "ui_state",
+  "case": "state/last-run.json older than 45 days — the freshness banner in its warning state, with the pending-extraction backlog beside it",
+  "note": "A state/last-run.json payload, not a record. Plan §3.3.3: staleness is surfaced on the front page, not in the Actions tab.",
+  "threshold_days": 45,
+  "last_run": {
+    "ok": true,
+    "harvest_version": "0.1.0",
+    "started_at": "2026-06-14T03:00:00Z",
+    "finished_at": "2026-06-14T03:04:19Z",
+    "limit": 5,
+    "events_appended": 3,
+    "pending_extraction": 7,
+    "unreachable_sources": [
+      "wdh"
+    ],
+    "dropped_dois": [
+      "10.5281/zenodo.999999999"
+    ],
+    "unmapped_licenses": [
+      {
+        "identity_key": "10.5281/zenodo.4302010",
+        "name": "doi-10-5281-zenodo-4302010",
+        "license_raw": "Free for academic use, contact the author"
+      }
+    ],
+    "notices": [
+      {
+        "type": "displacement",
+        "identity_key": "10.5281/zenodo.1234566",
+        "field": "resource_kind",
+        "local": "report",
+        "source": "dataset"
+      }
+    ],
+    "cache": {
+      "hits": 41,
+      "misses": 7,
+      "hit_rate": 0.854
+    },
+    "records": {
+      "total": 14,
+      "written": 3,
+      "unchanged": 11,
+      "pruned": 0
+    },
+    "validation_violations": [],
+    "sources": {}
+  }
+}

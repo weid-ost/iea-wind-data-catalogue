@@ -1,0 +1,131 @@
+{
+  "fixture_id": "rep-07-curator-note",
+  "fixture_kind": "record",
+  "case": "Upstream states a licence the curator believes is wrong — the wrong value is shown verbatim with the note beside it (both truths on the page)",
+  "note": "Plan §4.3: the catalogue never overrides a source. The note is rendered beside the value it annotates, and the value itself is untouched (x-10).",
+  "record": {
+    "name": "doi-10-5281-zenodo-4302010",
+    "title": "Reference offshore wind farm SCADA extract, 2018",
+    "notes": "<p>Anonymised ten-minute SCADA for a 100-turbine offshore wind farm.</p>",
+    "license_id": "cc-nc",
+    "tags": [
+      {
+        "name": "offshore"
+      },
+      {
+        "name": "reference-data"
+      },
+      {
+        "name": "scada"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"de Vries, Wouter\"}]"
+      },
+      {
+        "key": "curator_notes",
+        "value": "[{\"added_at\":\"2026-08-28T09:00:00Z\",\"field\":\"license_id\",\"note\":\"OST note: the licence stated at source appears incorrect; the LICENCE file in the archive is CC-BY-4.0. Reported upstream on 2026-08-28.\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.4302010"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-02-02T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.4302010"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-43\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-nc-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "local_links",
+        "value": "[{\"label\":\"Upstream licence query\",\"url\":\"https://github.com/IEA-Task-43/digital-wra-data-standard/issues/412\"}]"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2020-11-30"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "4302010"
+      },
+      {
+        "key": "source_key",
+        "value": "2"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/4302010"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/4302010\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [],
+    "groups": [
+      {
+        "name": "task-43"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "owner_org": "tno",
+    "url": "https://zenodo.org/records/4302010"
+  }
+}

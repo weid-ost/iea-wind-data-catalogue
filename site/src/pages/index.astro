@@ -1,0 +1,141 @@
+---
+import Base from '../layouts/Base.astro';
+import FreshnessBanner from '../components/FreshnessBanner.astro';
+import Panel from '../components/Panel.astro';
+import RecordCard from '../components/RecordCard.astro';
+import TaskChip from '../components/TaskChip.astro';
+import TextInput from '../components/TextInput.astro';
+import Button from '../components/Button.astro';
+import { catalogue, usingFixtures } from '../lib/catalogue';
+import { freshness } from '../lib/state';
+import { tasksOf, extra } from '../lib/record';
+import { withBase } from '../lib/url';
+
+const entries = await catalogue();
+const sample = await usingFixtures();
+const fresh = freshness();
+const recent = entries.slice(0, 6);
+
+const tasks = [...new Set(entries.flatMap((entry) => tasksOf(entry.pkg)))].sort();
+const kinds = new Map<string, number>();
+for (const entry of entries) {
+  const kind = extra(entry.pkg, 'resource_kind') ?? 'other';
+  kinds.set(kind, (kinds.get(kind) ?? 0) + 1);
+}
+---
+
+<Base
+  title="IEA Wind Data Catalogue"
+  description="Datasets, publications and software from the IEA Wind Tasks, harvested from where they are already published."
+>
+  <div class="stack-8">
+    <section class="hero">
+      <h1>Datasets, publications and software from the IEA&nbsp;Wind Tasks</h1>
+      <p class="hero__lead prose">
+        This catalogue asks nothing of anyone. It watches the places IEA Wind
+        people already publish — Zenodo, DataCite, Crossref, GitHub, OSTI, the
+        Wind Data Hub and the Task sites — and reflects what it finds, verbatim,
+        with the provenance of every field on show.
+      </p>
+
+      <form class="hero__search" role="search" action={withBase('/search/')} method="get">
+        <TextInput
+          id="home-q"
+          name="q"
+          type="search"
+          label="Search the catalogue"
+          placeholder="lidar, wake, Task 43, an author, a DOI…"
+        />
+        <Button variant="primary" type="submit">Search</Button>
+      </form>
+
+      <p class="secondary">
+        {entries.length} record{entries.length === 1 ? '' : 's'} ·{' '}
+        {[...kinds.entries()]
+          .sort((a, b) => b[1] - a[1])
+          .map(([kind, n]) => `${n} ${kind}${n === 1 ? '' : 's'}`)
+          .join(' · ')}
+      </p>
+    </section>
+
+    <FreshnessBanner freshness={fresh} />
+
+    {sample && (
+      <Panel tone="info" icon="ℹ" heading="Showing sample records" headingLevel="h2">
+        <p>
+          <code>records/</code> is empty in this checkout, so the site is
+          rendering the <code>fixtures/rendering/</code> set instead — including
+          the deliberately awkward ones. Run <code>make harvest</code> and these
+          disappear the moment a real record exists.
+        </p>
+      </Panel>
+    )}
+
+    {tasks.length > 0 && (
+      <section aria-labelledby="tasks-heading">
+        <h2 id="tasks-heading">By Task</h2>
+        <div class="row">
+          {tasks.map((task) => <TaskChip task={task} />)}
+        </div>
+      </section>
+    )}
+
+    <section aria-labelledby="recent-heading">
+      <h2 id="recent-heading">Recently updated</h2>
+      <ul class="cards">
+        {recent.map((entry) => (
+          <li><RecordCard pkg={entry.pkg} headingLevel="h3" /></li>
+        ))}
+      </ul>
+      <p class="cards__more">
+        <a href={withBase('/browse/')}>Browse all {entries.length} records →</a>
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  /* The hero is a neutral surface with a left accent bar — colour never fills a
+     surface, so the "hero band" is a bar and type, not a green block. */
+  .hero {
+    padding: var(--space-6) var(--space-6);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-inline-start: var(--panel-bar-width) solid var(--panel-accent-bar);
+    border-radius: var(--panel-radius);
+    background: var(--surface-raised);
+  }
+
+  .hero h1 {
+    max-width: var(--font-measure-prose);
+    font-size: var(--font-size-display);
+  }
+
+  .hero__lead {
+    font-size: var(--font-size-lead);
+  }
+
+  .hero__search {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-3);
+    max-width: var(--font-measure-prose);
+    margin-block: var(--space-6) var(--space-4);
+  }
+
+  .hero__search :global(.field) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cards {
+    display: grid;
+    gap: var(--space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cards__more {
+    margin-block-start: var(--space-4);
+  }
+</style>

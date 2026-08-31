@@ -1,0 +1,34 @@
+---
+/**
+ * ADR-0027: withdrawn records are retained, never deleted. The artifact
+ * vanished upstream; the page, the URL and the citation survive, because link
+ * rot is the failure mode a catalogue exists to fight.
+ *
+ * `role="status"` at the top of `<main>` (design §6). Note this is *not* CKAN's
+ * `state: deleted` — the package stays `active` and withdrawal lives in
+ * `extras.lifecycle_state` (fixture r-04).
+ */
+import Panel from './Panel.astro';
+import { formatDate } from '../lib/record';
+
+interface Props {
+  withdrawnAt?: string;
+  sourceUrl?: string;
+}
+const { withdrawnAt, sourceUrl } = Astro.props;
+---
+
+<Panel tone="danger" icon="⊘" role="status" heading="Withdrawn upstream" headingLevel="p">
+  <p>
+    This artifact is no longer available from its source{
+      withdrawnAt ? `, as of ${formatDate(withdrawnAt)}` : ''
+    }. The record and its URL are kept so existing citations keep resolving, and
+    the metadata below is what the source last stated.
+    {sourceUrl && (
+      <>
+        {' '}
+        <a href={sourceUrl} rel="noopener external">Check the source page</a>.
+      </>
+    )}
+  </p>
+</Panel>

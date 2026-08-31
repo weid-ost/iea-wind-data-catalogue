@@ -1,0 +1,370 @@
+---
+/**
+ * The one island on the site (ADR-0023, ADR-0036).
+ *
+ * Pagefind's stock UI is decent but its live result count and filter semantics
+ * needed verifying against design §6 — so this is a custom UI over Pagefind's
+ * JS API, which lets the input be a plain labelled input, the filters be real
+ * checkboxes rendered *server-side*, the results be a list, and the count and
+ * the zero-results state announce through one polite live region.
+ *
+ * Progressive enhancement, strictly: the facets and the initial record list are
+ * in the built HTML, and with no JS the form falls back to /browse/, which is a
+ * static paginated list of the whole catalogue. Nothing here is required to
+ * read the catalogue.
+ */
+import FacetGroup from './FacetGroup.astro';
+import type { Facet } from '../lib/facets';
+import TextInput from './TextInput.astro';
+import Button from './Button.astro';
+import Panel from './Panel.astro';
+import RecordCard from './RecordCard.astro';
+import { withBase } from '../lib/url';
+import type { CkanPackage } from '../lib/record';
+
+interface Props {
+  facets: Facet[];
+  initial: CkanPackage[];
+  total: number;
+}
+const { facets, initial, total } = Astro.props;
+---
+
+<search-island class="search" data-base={withBase('/')}>
+  <form class="search__form" role="search" action={withBase('/browse/')} method="get">
+    <div class="search__query">
+      <TextInput
+        id="q"
+        name="q"
+        type="search"
+        label="Search the catalogue"
+        placeholder="lidar, wake, Task 43, an author, a DOI…"
+        autocomplete="off"
+        data-search-input
+      />
+      <Button variant="primary" type="submit" data-search-submit>Search</Button>
+    </div>
+
+    <noscript>
+      <Panel tone="info" icon="ℹ" class="search__noscript">
+        <p>
+          Search needs JavaScript. Everything is still readable without it —
+          <a href={withBase('/browse/')}>browse the full catalogue</a>, which is a
+          plain paginated list of all {total} records.
+        </p>
+      </Panel>
+    </noscript>
+
+    <div class="search__layout">
+      <div class="search__facets">
+        <div class="search__facets-head">
+          <h2 class="search__facets-title">Filter</h2>
+          <button class="search__clear" type="reset" data-search-clear>Clear all</button>
+        </div>
+        {facets.map((facet) => (
+          <FacetGroup name={facet.name} legend={facet.legend} values={facet.values} />
+        ))}
+      </div>
+
+      <div class="search__results">
+        <p class="search__count" role="status" aria-live="polite" data-search-count>
+          Showing the {initial.length} most recently updated of {total} records.
+        </p>
+
+        <ul class="search__list" data-search-results>
+          {initial.map((pkg) => (
+            <li><RecordCard pkg={pkg} /></li>
+          ))}
+        </ul>
+
+        <template data-search-empty>
+          <div class="search__empty">
+            <p><strong>No results.</strong></p>
+            <p class="secondary">
+              Try fewer filters, or a broader term. The catalogue only holds what
+              its sources publish, so an absent record usually means nobody has
+              deposited it yet.
+            </p>
+          </div>
+        </template>
+      </div>
+    </div>
+  </form>
+</search-island>
+
+<script>
+  // Vanilla custom element. Pagefind is a *build* artifact under /pagefind/,
+  // so it does not exist under `astro dev` — the island then does nothing and
+  // the server-rendered list stays, which is the correct degradation.
+  class SearchIsland extends HTMLElement {
+    async connectedCallback() {
+      const base = this.dataset.base ?? '/';
+      let pagefind;
+      try {
+        // Pagefind is generated *after* astro build, so the bundler must not
+        // touch this import. `@vite-ignore` is not enough — Astro 7 still
+        // routes it through Vite's preload helper and leaves a
+        // `__VITE_PRELOAD__` token that throws at runtime, which silently
+        // disables search. Building the importer at runtime is opaque to any
+        // bundler and cannot regress.
+        const load = new Function('url', 'return import(url)');
+        pagefind = await load(`${base}pagefind/pagefind.js`);
+      } catch {
+        return; // no index (dev server, or a build without Pagefind): leave the HTML alone
+      }
+      try {
+        await pagefind.options({ excerptLength: 30 });
+      } catch {
+        /* older index, or no options support: the defaults are fine */
+      }
+
+      const form = this.querySelector('form');
+      const input = this.querySelector('[data-search-input]');
+      const list = this.querySelector('[data-search-results]');
+      const count = this.querySelector('[data-search-count]');
+      const emptyTemplate = this.querySelector('[data-search-empty]');
+      const submit = this.querySelector('[data-search-submit]');
+      const clear = this.querySelector('[data-search-clear]');
+      if (!form || !input || !list || !count) return;
+
+      // JS is available, so the submit button is redundant: results are live.
+      if (submit) submit.hidden = true;
+      form.addEventListener('submit', (event) => event.preventDefault());
+
+      const params = new URLSearchParams(window.location.search);
+      const initialQuery = params.get('q') ?? '';
+      if (initialQuery) input.value = initialQuery;
+      for (const box of this.querySelectorAll('.facet__input')) {
+        if (params.getAll(box.name).includes(box.value)) box.checked = true;
+      }
+
+      const selectedFilters = () => {
+        const filters = {};
+        for (const box of this.querySelectorAll('.facet__input:checked')) {
+          (filters[box.name] ??= []).push(box.value);
+        }
+        return filters;
+      };
+
+      const escape = (text) =>
+        String(text ?? '').replace(/[&<>"']/g, (ch) =>
+          ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]
+        );
+
+      const renderResults = (items) => {
+        list.innerHTML = items
+          .map(
+            (item) => `<li><article class="card">
+              <h2 class="card__title"><a href="${escape(item.url)}">${escape(item.meta?.title ?? item.url)}</a></h2>
+              <p class="card__excerpt">${item.excerpt}</p>
+              <p class="card__doi meta secondary">${escape(item.meta?.doi ?? '')}</p>
+            </article></li>`
+          )
+          .join('');
+      };
+
+      const showEmpty = () => {
+        list.innerHTML = '';
+        if (emptyTemplate) list.append(emptyTemplate.content.cloneNode(true));
+      };
+
+      const updateFacetCounts = (filterCounts) => {
+        for (const node of this.querySelectorAll('[data-facet-count]')) {
+          const [facet, value] = node.dataset.facetCount.split(':');
+          node.textContent = String(filterCounts?.[facet]?.[value] ?? 0);
+        }
+      };
+
+      // The query string is the shareable state of a search — but `?theme=` is
+      // not ours to drop. The a11y gate forces the theme through it, and a user
+      // who shares a dark-mode link means it.
+      const writeUrl = (params) => {
+        const theme = new URLSearchParams(window.location.search).get('theme');
+        if (theme) params.set('theme', theme);
+        const query = params.toString();
+        window.history.replaceState({}, '', query ? `?${query}` : window.location.pathname);
+      };
+
+      // The server-rendered list is the resting state, so keep it to restore.
+      const initialHtml = list.innerHTML;
+      const initialCount = count.textContent;
+
+      let token = 0;
+      const run = async () => {
+        const mine = ++token;
+        const query = input.value.trim();
+        const filters = selectedFilters();
+        const hasFilters = Object.keys(filters).length > 0;
+        const search = await pagefind.search(query === '' ? null : query, { filters });
+        if (mine !== token) return; // a newer keystroke won
+
+        // An empty search returns no filter counts, so the resting state takes
+        // the totals from the index instead — otherwise every facet reads 0
+        // before you have typed anything, which looks like an empty catalogue.
+        updateFacetCounts(
+          query === '' && !hasFilters ? await pagefind.filters() : search.filters
+        );
+
+        if (query === '' && !hasFilters) {
+          list.innerHTML = initialHtml;
+          count.textContent = initialCount;
+          writeUrl(new URLSearchParams());
+          return;
+        }
+
+        const items = await Promise.all(search.results.slice(0, 30).map((r) => r.data()));
+        if (mine !== token) return;
+
+        const shown = Math.min(items.length, search.results.length);
+        const describe = query ? ` for “${query}”` : '';
+        if (search.results.length === 0) {
+          count.textContent = `No results${describe}.`;
+          showEmpty();
+        } else {
+          count.textContent =
+            `${search.results.length} result${search.results.length === 1 ? '' : 's'}${describe}` +
+            (shown < search.results.length ? ` — showing the first ${shown}.` : '.');
+          renderResults(items);
+        }
+
+        const next = new URLSearchParams();
+        if (query) next.set('q', query);
+        for (const [facet, values] of Object.entries(filters))
+          for (const value of values) next.append(facet, value);
+        writeUrl(next);
+      };
+
+      let timer;
+      input.addEventListener('input', () => {
+        window.clearTimeout(timer);
+        timer = window.setTimeout(run, 180);
+      });
+      for (const box of this.querySelectorAll('.facet__input')) {
+        box.addEventListener('change', run);
+      }
+      if (clear) {
+        clear.addEventListener('click', () => {
+          window.setTimeout(() => {
+            input.value = '';
+            run();
+          }, 0);
+        });
+      }
+
+      // Fill the facet counts, and honour any query in the URL, on load.
+      await run();
+    }
+  }
+  if (!customElements.get('search-island')) customElements.define('search-island', SearchIsland);
+</script>
+
+<style>
+  .search__query {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .search__query :global(.field) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .search__noscript {
+    margin-bottom: var(--space-6);
+  }
+
+  .search__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  @media (max-width: 48rem) {
+    .search__layout {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-6);
+    }
+  }
+
+  .search__facets-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+
+  .search__facets-title {
+    margin: 0;
+    font-size: var(--font-size-body);
+  }
+
+  .search__clear {
+    min-height: var(--space-6);
+    padding: 0 var(--space-2);
+    border: 0;
+    background: transparent;
+    color: var(--text-link);
+    font: inherit;
+    font-size: var(--font-size-small);
+    cursor: pointer;
+  }
+
+  .search__clear:hover {
+    color: var(--action-hover);
+    text-decoration: underline;
+  }
+
+  .search__count {
+    margin-bottom: var(--space-4);
+    color: var(--text-secondary);
+    font-size: var(--font-size-small);
+  }
+
+  .search__list {
+    display: grid;
+    gap: var(--space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .search__empty {
+    padding: var(--space-6) var(--space-4);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--surface-raised);
+    text-align: center;
+  }
+
+  /* Result cards are built by the island, so their styles cannot be scoped. */
+  .search__list :global(.card) {
+    padding: var(--space-4);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--surface-raised);
+  }
+
+  .search__list :global(.card__title) {
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-h3);
+  }
+
+  .search__list :global(.card__title a) {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .search__list :global(.card__title a:hover) {
+    color: var(--text-link);
+    text-decoration: underline;
+  }
+
+  .search__list :global(mark) {
+    background: transparent;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+</style>

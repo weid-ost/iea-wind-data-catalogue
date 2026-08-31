@@ -1,0 +1,111 @@
+---
+/**
+ * Metadata as a `<dl>` — the semantically correct structure for label/value
+ * pairs, and the one screen readers navigate well (design §6).
+ *
+ * Each row optionally carries its provenance badge and any curator note
+ * attached to that field. The upstream value is always rendered verbatim, with
+ * the note *beside* it: both truths on the page (plan §4.3, fixture x-10).
+ */
+import ProvenanceBadge from './ProvenanceBadge.astro';
+import Panel from './Panel.astro';
+import type { CuratorNote, Provenance } from '../lib/record';
+
+export interface Row {
+  /** The field name, used to look up provenance and curator notes. */
+  field?: string;
+  label: string;
+  value?: string;
+  /** Rendered in the mono face — DOIs, identifiers, versions, source keys. */
+  mono?: boolean;
+  html?: string;
+  /**
+   * `name:value` for Pagefind. Declared on the element that displays the value,
+   * which is the point of declaring facets in the template rather than in a
+   * config file (ADR-0023). Pagefind reads **one** filter per element, so this
+   * cannot be a comma-separated list.
+   */
+  filter?: string;
+}
+
+interface Props {
+  rows: Row[];
+  provenance?: Record<string, Provenance>;
+  notes?: CuratorNote[];
+}
+const { rows, provenance = {}, notes = [] } = Astro.props;
+const visible = rows.filter((row) => row.value || row.html);
+---
+
+{visible.length > 0 && (
+  <dl class="dl">
+    {visible.map((row) => {
+      const fieldProvenance = row.field ? provenance[row.field] : undefined;
+      const fieldNotes = notes.filter((note) => note.field === row.field);
+      return (
+        <div class="dl__row">
+          <dt class="dl__label">{row.label}</dt>
+          <dd class="dl__value" data-pagefind-filter={row.filter}>
+            <div class="dl__value-line">
+              {row.html ? (
+                <span set:html={row.html} />
+              ) : (
+                <span class:list={[row.mono && 'meta']}>{row.value}</span>
+              )}
+              {fieldProvenance && <ProvenanceBadge provenance={fieldProvenance} />}
+            </div>
+            {fieldNotes.map((note) => (
+              <Panel tone="info" icon="✎" class="dl__note">
+                <p>{note.note}</p>
+              </Panel>
+            ))}
+          </dd>
+        </div>
+      );
+    })}
+  </dl>
+)}
+
+<style>
+  .dl {
+    margin: 0;
+    border-top: var(--border-width-hairline) solid var(--border-subtle);
+  }
+
+  .dl__row {
+    display: grid;
+    grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+    gap: var(--space-2) var(--space-4);
+    padding-block: var(--space-3);
+    border-bottom: var(--border-width-hairline) solid var(--border-subtle);
+  }
+
+  @media (max-width: 34rem) {
+    .dl__row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-1);
+    }
+  }
+
+  .dl__label {
+    color: var(--text-secondary);
+    font-size: var(--font-size-small);
+  }
+
+  .dl__value {
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .dl__value-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2);
+  }
+
+  .dl__note {
+    margin-block-start: var(--space-2);
+  }
+</style>

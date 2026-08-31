@@ -1,6 +1,6 @@
 # IEA Wind Catalogue — Design System
 
-**Status:** proposed · **Tokens:** `design-tokens.json` (W3C Design Tokens / DTCG format)
+**Status:** implemented (Rev 3) · **Tokens:** `design-tokens.json` (W3C Design Tokens / DTCG format), compiled by `design/build-css.mjs` to `site/src/styles/tokens.css`
 **Anchor:** Farrow & Ball *Teresa's Green* No. 236 ≈ `#BDCCC2` — a screen approximation of a physical paint; treated as canonical for this system, `oklch(0.831 0.021 156.7)`.
 
 ---
@@ -26,7 +26,7 @@ The paint itself (`green.300`, kept verbatim) is far too light for interactive u
 | green.50–100 | `#F2F9F4` `#E7F2EA` | chart fills and documentation swatches only — never page or panel backgrounds |
 | **green.300** | **`#BDCCC2`** | **the paint** — hero band, empty states, decorative accents |
 | green.500 | `#7A9C86` | large graphics, charts |
-| green.700-ish (solved) | `#587D66` | **light-mode action & links — 4.63:1 on white** |
+| green.700-ish (solved) | `#587D66` | **light-mode action & links — 4.63:1 on white**; dark mode uses `#5B9070`, solved against `surface.raised` (§2.2.1) |
 | green.900 | `#21372A` | deep chart fills |
 
 Neutrals are near-achromatic (C ≈ 0.004): light mode reads paper-white, dark mode reads instrument-black (`#121312` family) rather than green-black. The hue-lock is still present but sits below the threshold of "tinted" — cohesion without a cast. (Rev 2: chroma was halved after review precisely so dark surfaces read black/grey.)
@@ -36,14 +36,25 @@ Neutrals are near-achromatic (C ≈ 0.004): light mode reads paper-white, dark m
 | Pair | Light | Dark |
 |---|---|---|
 | Body text / page | 17.6:1 | 15.2:1 |
-| Secondary text / deepest surface it sits on | 4.61:1 | 4.60:1 |
-| Action colour / surface | 4.63:1 | 4.64:1 |
-| Label on action (white ⁄ near-black) | 4.63:1 | 4.78:1 |
-| Focus ring / surface (3:1 non-text) | 3.13:1 | ✓ |
-| Input border / surface (3:1 non-text) | 3.35:1 | 7.94:1 |
-| Status text (info · warning · danger · violet) / surface | all ≥ 4.63:1 | all ≥ 4.60:1 |
+| Secondary text / deepest surface it sits on | 4.61:1 | 4.64:1 |
+| Action colour / surface.**raised** | 4.63:1 | 4.62:1 |
+| Action colour / surface.page | 4.57:1 | 5.03:1 |
+| Label on action (white ⁄ near-black) | 4.63:1 | 5.19:1 |
+| Focus ring / surface (3:1 non-text) | 3.13:1 | 6.84:1 |
+| Input border / surface (3:1 non-text) | 3.35:1 | 8.01:1 |
+| Status text (info · warning · danger · violet) / raised | all ≥ 4.63:1 | all ≥ 4.65:1 |
+| Status text / panel background | all ≥ 4.57:1 | all ≥ 4.82:1 |
 
-Two deliberate details: **dark-mode buttons carry near-black labels**, because the accessible dark action colour (`#558A6A`) can't reach 4.5:1 under white text — solving for both constraints simultaneously is what fixed the button colour. And `border.subtle` is decorative only; anything whose boundary *means* something (inputs) uses `border.input`, which is held to the 3:1 non-text rule.
+Two deliberate details: **dark-mode buttons carry near-black labels**, because the accessible dark action colour can't reach 4.5:1 under white text — solving for both constraints simultaneously is what fixed the button colour. And `border.subtle` is decorative only; anything whose boundary *means* something (inputs) uses `border.input`, which is held to the 3:1 non-text rule.
+
+### 2.2.1 Rev 3 — solve against the surface a colour actually lands on
+
+Rev 2 solved each colour against *one* surface and shipped two values that fail on another. The a11y gate found both on its first run:
+
+- **Dark action `#558A6A`** was solved against `surface.page` — 4.64:1 there, but **4.27:1 on `surface.raised`**, and links live inside cards, in the header and in source badges. Re-solved against `raised`: **`#5B9070`** (hover `#6A9F7E`).
+- **`component.panel.bg-light` was `neutral.50`**, on which every status hue measured 4.37–4.40:1, because the status hues were solved against white. It is now `neutral.0`. The hairline border and the 3px bar are what make a panel read as a panel; a tinted background was never doing that work.
+
+The lesson is general, so it is now enforced rather than remembered: `design/gen.py` prints a **second** verification table — *every colour in `design-tokens.json` against every surface it lands on* — and must end `ALL PAIRS PASS`. The first table checks the values the script derives, each against the one surface it was solved for, which is a different and weaker question.
 
 ### 2.3 Semantic colour beyond status
 

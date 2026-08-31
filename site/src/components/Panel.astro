@@ -1,0 +1,77 @@
+---
+/**
+ * The barred panel: neutral background, a 3px square-cornered accent bar down
+ * the left edge, coloured text and icon. Status callouts, the withdrawn banner,
+ * the freshness warning and selected states are all this component with a
+ * different bar colour — colour never fills the surface (design-system.md §1).
+ *
+ * Square corners are deliberate: a single-sided bar against a rounded panel
+ * mismatches at the joins, and radius-0 callouts are the crisper look anyway.
+ */
+interface Props {
+  tone?: 'accent' | 'info' | 'success' | 'warning' | 'danger' | 'violet';
+  icon?: string;
+  role?: string;
+  heading?: string;
+  headingLevel?: 'h2' | 'h3' | 'p';
+  class?: string;
+  'aria-live'?: string;
+}
+const {
+  tone = 'accent',
+  icon,
+  role,
+  heading,
+  headingLevel = 'p',
+  class: className,
+  ...rest
+} = Astro.props;
+const Heading = headingLevel;
+---
+
+<div
+  class:list={['panel', className]}
+  style={`--panel-bar: var(--panel-${tone}-bar)`}
+  role={role}
+  {...rest}
+>
+  {icon && <span class="icon panel__icon" aria-hidden="true" data-icon={icon}></span>}
+  <div class="panel__body">
+    {heading && <Heading class="panel__heading">{heading}</Heading>}
+    <slot />
+  </div>
+</div>
+
+<style>
+  .panel {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-inline-start: var(--panel-bar-width) solid var(--panel-bar);
+    border-radius: var(--panel-radius);
+    background: var(--panel-bg);
+  }
+
+  .panel__icon {
+    flex: none;
+    color: var(--panel-bar);
+    line-height: var(--font-line-height-body);
+  }
+
+  .panel__body {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .panel__heading {
+    margin: 0 0 var(--space-1);
+    color: var(--panel-bar);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .panel :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

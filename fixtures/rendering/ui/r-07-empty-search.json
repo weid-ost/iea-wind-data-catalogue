@@ -1,0 +1,17 @@
+{
+  "fixture_id": "r-07-empty-search",
+  "fixture_kind": "ui_state",
+  "case": "A search that returns nothing — the zero-results state must be ANNOUNCED in the live region, not merely rendered",
+  "note": "Not a record fixture: there is no record. Kept in fixtures/rendering/ui/ so tests/test_fixtures.py, which globs fixtures/rendering/*.json for CKAN packages, does not try to validate a UI state as one.",
+  "query": "vertical axis floating turbine",
+  "filters": {
+    "task": [
+      "task-49"
+    ],
+    "resource_kind": [
+      "software"
+    ]
+  },
+  "results": [],
+  "expected_announcement": "No results for “vertical axis floating turbine”."
+}

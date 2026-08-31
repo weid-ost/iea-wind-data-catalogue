@@ -1,0 +1,363 @@
+---
+/**
+ * The whole record page body, as one component so the gallery can render it
+ * against a pathological fixture and see exactly what a visitor sees.
+ *
+ * The Pagefind filter attributes live here: task, resource kind, year, licence,
+ * source system and institution are declared in the template, not configured
+ * separately (ADR-0023). `data-pagefind-body` marks this element as the only
+ * indexed content on the site, which keeps the gallery and the chrome out of
+ * search results.
+ */
+import AvailabilityBadge from './AvailabilityBadge.astro';
+import Badge from './Badge.astro';
+import CitationBlock from './CitationBlock.astro';
+import EventHistory from './EventHistory.astro';
+import MetadataList from './MetadataList.astro';
+import Panel from './Panel.astro';
+import ProvenanceBadge from './ProvenanceBadge.astro';
+import RetractionFlag from './RetractionFlag.astro';
+import SourceBadge from './SourceBadge.astro';
+import TaskChip from './TaskChip.astro';
+import WithdrawnBanner from './WithdrawnBanner.astro';
+import {
+  authorsOf,
+  boolExtra,
+  curatorNotesOf,
+  extra,
+  formatDate,
+  inferredFields,
+  isWithdrawn,
+  licenseTitleOf,
+  localLinksOf,
+  provenanceOf,
+  relatedIdentifiersOf,
+  reportIssueUrl,
+  retractionOf,
+  sourceLabel,
+  sourceSystemsOf,
+  sourceUrlsOf,
+  tasksOf,
+  yearOf,
+  RESOURCE_KIND_LABELS,
+  type CkanPackage,
+} from '../lib/record';
+import type { EventLine } from '../lib/catalogue';
+import { organizationTitle, taskShort } from '../lib/registers';
+
+interface Props {
+  pkg: CkanPackage;
+  events?: EventLine[];
+  /** h1 on a record page; h2 inside the gallery, where the page owns the h1. */
+  headingLevel?: 'h1' | 'h2';
+  /**
+   * Whether this instance is the indexable one. The gallery renders every
+   * record body on one page; if those carried `data-pagefind-body` too, every
+   * facet count would be doubled and "Component gallery" would turn up as a
+   * search result. `data-pagefind-ignore` on the gallery wrapper is not enough
+   * — a `data-pagefind-body` inside it still registers the page.
+   */
+  indexable?: boolean;
+}
+const { pkg, events = [], headingLevel = 'h1', indexable = true } = Astro.props;
+const Heading = headingLevel;
+
+const provenance = provenanceOf(pkg);
+const notes = curatorNotesOf(pkg);
+const authors = authorsOf(pkg);
+const tasks = tasksOf(pkg);
+const systems = sourceSystemsOf(pkg);
+const urls = sourceUrlsOf(pkg);
+const kind = extra(pkg, 'resource_kind');
+const access = extra(pkg, 'access_status');
+const retraction = retractionOf(pkg);
+const withdrawn = isWithdrawn(pkg);
+const inferred = inferredFields(pkg);
+const related = relatedIdentifiersOf(pkg).filter((r) => r !== retraction);
+const links = localLinksOf(pkg);
+const doi = extra(pkg, 'doi');
+const institution = organizationTitle(pkg.owner_org);
+
+// Section heading ids are scoped to the record, because the gallery renders
+// fourteen record bodies on one page and duplicate ids break every
+// aria-labelledby on it. The slug is already unique and already CKAN-safe.
+const uid = pkg.name;
+
+// How stable this record's identity is. `fragile` is documented as fragile in
+// harvest/CONTRACT.md §4 — a corrected upstream title produces a different key
+// and therefore a second record — so the page says so rather than presenting
+// all three kinds as equally solid.
+const IDENTITY_KIND: Record<string, string> = {
+  doi: 'derived from the DOI, and stable across a retitle',
+  source: "derived from the source system's own id",
+  fragile: 'hashed from title, first author and year — fragile, and liable to split if the source is corrected',
+};
+const identityKind = extra(pkg, 'identity_kind');
+const licenseRaw = extra(pkg, 'license_raw');
+const licenseUnmapped = extra(pkg, 'license_mapped') === 'false';
+const pinned = boolExtra(pkg, 'pinned');
+
+// Facets are declared on the elements that display the value. Pagefind reads
+// one filter per element, so each of the six lives somewhere different: kind on
+// its badge, task and source on their chips, and year, licence and institution
+// on their metadata rows.
+const rows = [
+  { field: 'doi', label: 'DOI', value: doi, mono: true },
+  { field: 'resource_kind', label: 'Resource kind', value: kind && (RESOURCE_KIND_LABELS[kind] ?? kind) },
+  {
+    field: 'published_date',
+    label: 'Published',
+    value: formatDate(extra(pkg, 'published_date')),
+    filter: yearOf(pkg) ? `year:${yearOf(pkg)}` : undefined,
+  },
+  { field: 'publisher', label: 'Publisher', value: extra(pkg, 'publisher') },
+  { field: 'container', label: 'Published in', value: extra(pkg, 'container') },
+  // Grey literature — an OSTI report, a laboratory technical note — often has
+  // no DOI at all, and then the issuing laboratory's number is the only stable
+  // human-facing identifier there is (fixture osti-05).
+  { field: 'report_number', label: 'Report number', value: extra(pkg, 'report_number'), mono: true },
+  { field: 'version', label: 'Version', value: pkg.version, mono: true },
+  {
+    field: 'license_id',
+    label: 'Licence',
+    value: licenseTitleOf(pkg),
+    filter: `licence:${pkg.license_id}`,
+  },
+  // What the source actually said, alongside what it was mapped to. The mapping
+  // is ours; the string is theirs, and both belong on the page.
+  { label: 'Licence as stated', value: licenseRaw, mono: true },
+  { field: 'access_status', label: 'Availability', value: access && access.replace(/-/g, ' ') },
+  { field: 'embargo_date', label: 'Embargoed until', value: formatDate(extra(pkg, 'embargo_date')) },
+  {
+    label: 'Institution',
+    value: institution,
+    filter: pkg.owner_org ? `institution:${pkg.owner_org}` : undefined,
+  },
+  { field: 'identity_key', label: 'Identity key', value: extra(pkg, 'identity_key'), mono: true },
+  { label: 'Identity', value: identityKind && IDENTITY_KIND[identityKind] },
+  { field: 'source_id', label: 'Source id', value: extra(pkg, 'source_id'), mono: true },
+  { field: 'source_key', label: 'Source key', value: extra(pkg, 'source_key'), mono: true },
+  { label: 'First seen', value: formatDate(extra(pkg, 'first_seen')) },
+  { label: 'Last confirmed', value: formatDate(extra(pkg, 'last_seen')) },
+];
+---
+
+<article
+  class="record"
+  data-pagefind-body={indexable ? true : undefined}
+  data-pagefind-meta={indexable ? `doi:${doi ?? ''}` : undefined}
+>
+  {withdrawn && (
+    <WithdrawnBanner withdrawnAt={extra(pkg, 'withdrawn_at')} sourceUrl={extra(pkg, 'source_url')} />
+  )}
+  {retraction && (
+    <RetractionFlag identifier={retraction.identifier} identifierType={retraction.identifier_type} />
+  )}
+
+  <Heading class="record__title">{pkg.title}</Heading>
+
+  {authors.length > 0 && (
+    <p class="record__authors">
+      {authors.map((author, index) => (
+        <>
+          {index > 0 && <span class="icon" aria-hidden="true" data-icon="; "></span>}
+          <span class="record__author">
+            {author.name}
+            {author.orcid && (
+              <a class="record__orcid meta" href={`https://orcid.org/${author.orcid}`} rel="noopener external">
+                <span class="visually-hidden">ORCID for {author.name}: </span>{author.orcid}
+              </a>
+            )}
+          </span>
+        </>
+      ))}
+    </p>
+  )}
+
+  <div class="row record__badges">
+    {kind && (
+      <span data-pagefind-filter={`kind:${kind}`}>
+        <Badge icon="▤">{RESOURCE_KIND_LABELS[kind] ?? kind}</Badge>
+      </span>
+    )}
+    <AvailabilityBadge status={access} embargoDate={extra(pkg, 'embargo_date')} />
+    {withdrawn && <Badge tone="withdrawn" icon="⊘">Withdrawn</Badge>}
+    {pinned && <Badge tone="llm" icon="⌾">Pinned extraction</Badge>}
+    {/* One value per element: Pagefind takes repeated filter values from
+        separate elements, which is how a record joins five tasks at once. */}
+    {tasks.map((task) => (
+      <span data-pagefind-filter={`task:${task}`}><TaskChip task={task} /></span>
+    ))}
+  </div>
+
+  {pkg.notes && <div class="record__notes prose" set:html={pkg.notes} />}
+
+  {inferred.length > 0 && (
+    <Panel tone="violet" icon="◈" heading="Some of this metadata was inferred by a model" headingLevel="h2">
+      <p>
+        {inferred.length} field{inferred.length === 1 ? '' : 's'} on this record
+        {inferred.length === 1 ? ' was' : ' were'} extracted from an unstructured page
+        rather than read from an API. Inferred values are marked below.
+        Identifiers are never accepted from a model: every DOI here resolved
+        against DataCite or Crossref before the record existed.
+      </p>
+      <div class="row record__inferred">
+        {inferred.map((field) => <ProvenanceBadge field={field} provenance={provenance[field]} />)}
+      </div>
+    </Panel>
+  )}
+
+  {licenseUnmapped && (
+    <Panel tone="warning" icon="⚠" heading="The stated licence was not recognised" headingLevel="h2">
+      <p>
+        The source states a licence this catalogue's register does not know, so
+        it is recorded as “not specified”. <strong>It has not been assumed to be
+        open.</strong> The exact wording the source used is below; check it
+        before reusing anything here.
+      </p>
+    </Panel>
+  )}
+
+  {pinned && (
+    <Panel tone="violet" icon="⌾" heading="This extraction is pinned" headingLevel="h2">
+      <p>
+        A curator corrected the machine extraction for this record. The
+        correction holds even when the source page changes; when it does change,
+        a notice fires in the run report so a human can look again.
+      </p>
+    </Panel>
+  )}
+
+  <section aria-labelledby={`${uid}-metadata-heading`}>
+    <h2 id={`${uid}-metadata-heading`}>Metadata</h2>
+    <MetadataList rows={rows} provenance={provenance} notes={notes} />
+  </section>
+
+  {notes.filter((note) => !note.field).length > 0 && (
+    <section aria-labelledby={`${uid}-notes-heading`}>
+      <h2 id={`${uid}-notes-heading`}>Curator notes</h2>
+      {notes
+        .filter((note) => !note.field)
+        .map((note) => (
+          <Panel tone="info" icon="✎">
+            <p>{note.note}</p>
+            {note.added_at && <p class="meta secondary">{formatDate(note.added_at)}</p>}
+          </Panel>
+        ))}
+    </section>
+  )}
+
+  {(pkg.resources ?? []).length > 0 && (
+    <section aria-labelledby={`${uid}-files-heading`}>
+      <h2 id={`${uid}-files-heading`}>Files at the source</h2>
+      <p class="secondary">
+        The catalogue links; it never mirrors. These files live at the source and
+        are subject to its access conditions.
+      </p>
+      <ul class="record__files">
+        {(pkg.resources ?? []).map((resource) => (
+          <li>
+            <a href={resource.url} rel="noopener external">{resource.name ?? resource.url}</a>
+            {resource.format && <span class="meta secondary"> · {resource.format}</span>}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {related.length > 0 && (
+    <section aria-labelledby={`${uid}-related-heading`}>
+      <h2 id={`${uid}-related-heading`}>Related identifiers</h2>
+      <ul class="record__related">
+        {related.map((item) => (
+          <li>
+            <span class="secondary">{item.relation ?? 'related'}</span>{' '}
+            <span class="meta">{item.identifier}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <section aria-labelledby={`${uid}-source-heading`}>
+    <h2 id={`${uid}-source-heading`}>Sources</h2>
+    <p class="secondary">
+      This catalogue reflects what its sources say, verbatim as of the last
+      scrape. If something here is wrong, it is wrong at the source — and fixing
+      it there fixes it for everyone.
+    </p>
+    <div class="row record__sources">
+      {systems.map((system) => (
+        <span data-pagefind-filter={`source:${system}`}>
+          <SourceBadge
+            system={system}
+            url={urls.find((url) => url.includes(system === 'ieawind' ? 'iea-wind' : system)) ?? urls[0]}
+            reportUrl={reportIssueUrl(system, pkg)}
+          />
+        </span>
+      ))}
+    </div>
+    {links.length > 0 && (
+      <ul class="record__links">
+        {links.map((link) => (
+          <li><a href={link.url} rel="noopener external">{link.label ?? link.url}</a></li>
+        ))}
+      </ul>
+    )}
+  </section>
+
+  <CitationBlock pkg={pkg} />
+
+  <EventHistory
+    events={events}
+    id={`${uid}-history`}
+    firstSeen={extra(pkg, 'first_seen')}
+    lastSeen={extra(pkg, 'last_seen')}
+  />
+</article>
+
+<style>
+  .record > :global(* + *) {
+    margin-block-start: var(--space-6);
+  }
+
+  .record__title {
+    margin-bottom: var(--space-2);
+  }
+
+  .record__authors {
+    margin-block-start: 0;
+    max-width: var(--font-measure-prose);
+  }
+
+  .record__author {
+    white-space: nowrap;
+  }
+
+  .record__orcid {
+    margin-inline-start: var(--space-1);
+    font-size: var(--font-size-caption);
+  }
+
+  .record__badges,
+  .record__sources,
+  .record__inferred {
+    gap: var(--space-2);
+  }
+
+  .record__notes {
+    margin-block-start: var(--space-4);
+  }
+
+  .record__files,
+  .record__related,
+  .record__links {
+    margin: var(--space-3) 0 0;
+    padding: 0 0 0 var(--space-4);
+  }
+
+  .record__related {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+</style>

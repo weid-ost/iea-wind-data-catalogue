@@ -1,0 +1,126 @@
+{
+  "fixture_id": "rep-02-wes-publication",
+  "fixture_kind": "record",
+  "case": "A journal article from Crossref — resource_kind publication, with a container",
+  "note": "`published_date` is year-only, exactly as Crossref stated it (fixture cr-02): the page must render '2024', never '1 January 2024'. One author is a collaboration with no given name (cr-06).",
+  "record": {
+    "name": "doi-10-5194-wes-9-1123-2024",
+    "title": "A comparison of wake models for large offshore wind farms",
+    "notes": "<p>We compare five engineering wake models against four years of SCADA data from two large offshore wind farms.</p>",
+    "license_id": "cc-by",
+    "tags": [
+      {
+        "name": "offshore"
+      },
+      {
+        "name": "scada"
+      },
+      {
+        "name": "wake-modelling"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"van der Laan, Maarten Paul\"},{\"name\":\"Peña, Alfredo\"},{\"name\":\"IEA Wind Task 31 Collaboration\"}]"
+      },
+      {
+        "key": "container",
+        "value": "Wind Energy Science"
+      },
+      {
+        "key": "doi",
+        "value": "10.5194/wes-9-1123-2024"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-07-04T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5194/wes-9-1123-2024"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-31\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2024"
+      },
+      {
+        "key": "publisher",
+        "value": "Copernicus GmbH"
+      },
+      {
+        "key": "resource_kind",
+        "value": "publication"
+      },
+      {
+        "key": "source_id",
+        "value": "10.5194/wes-9-1123-2024"
+      },
+      {
+        "key": "source_key",
+        "value": "2024-08-19T11:04:22Z"
+      },
+      {
+        "key": "source_system",
+        "value": "crossref"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"crossref\",\"ieawind\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://doi.org/10.5194/wes-9-1123-2024"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://doi.org/10.5194/wes-9-1123-2024\",\"https://iea-wind.org/task31/\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [],
+    "groups": [
+      {
+        "name": "task-31"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "url": "https://doi.org/10.5194/wes-9-1123-2024"
+  }
+}

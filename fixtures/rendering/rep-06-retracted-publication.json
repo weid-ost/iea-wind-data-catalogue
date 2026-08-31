@@ -1,0 +1,130 @@
+{
+  "fixture_id": "rep-06-retracted-publication",
+  "fixture_kind": "record",
+  "case": "A retracted journal article — the retraction flag must be prominent and must not be confused with withdrawal",
+  "note": "Retraction is a fact about the work, stated upstream via an `IsRetractedBy` related identifier (fixture cr-07). The record is NOT withdrawn — it still exists at the source — so the two banners must read differently.",
+  "record": {
+    "name": "doi-10-1002-we-2599",
+    "title": "Turbulence-corrected power curves for complex terrain sites",
+    "notes": "<p>A method for correcting measured power curves for site-specific turbulence in complex terrain.</p>",
+    "license_id": "other-closed",
+    "tags": [
+      {
+        "name": "complex-terrain"
+      },
+      {
+        "name": "power-curve"
+      },
+      {
+        "name": "turbulence"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "restricted"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Berg, Jacob\"},{\"name\":\"Ivanov, Dmitri\"}]"
+      },
+      {
+        "key": "container",
+        "value": "Wind Energy"
+      },
+      {
+        "key": "doi",
+        "value": "10.1002/we.2599"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-03-30T02:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.1002/we.2599"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-32\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "Copyright"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2021-05-11"
+      },
+      {
+        "key": "publisher",
+        "value": "Wiley"
+      },
+      {
+        "key": "related_identifiers",
+        "value": "[{\"identifier\":\"10.1002/we.2988\",\"identifier_type\":\"DOI\",\"relation\":\"IsRetractedBy\"}]"
+      },
+      {
+        "key": "resource_kind",
+        "value": "publication"
+      },
+      {
+        "key": "source_id",
+        "value": "10.1002/we.2599"
+      },
+      {
+        "key": "source_key",
+        "value": "2023-01-09T08:14:00Z"
+      },
+      {
+        "key": "source_system",
+        "value": "crossref"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"crossref\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://doi.org/10.1002/we.2599"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://doi.org/10.1002/we.2599\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "resources": [],
+    "groups": [
+      {
+        "name": "task-32"
+      }
+    ],
+    "state": "active",
+    "private": false,
+    "url": "https://doi.org/10.1002/we.2599"
+  }
+}
