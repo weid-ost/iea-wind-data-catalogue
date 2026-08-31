@@ -1,0 +1,61 @@
+{
+ "conceptdoi": "10.5281/zenodo.1234569",
+ "conceptrecid": "1234569",
+ "created": "2024-06-01T09:12:41.113372+00:00",
+ "doi": "10.5281/zenodo.1234570",
+ "doi_url": "https://doi.org/10.5281/zenodo.1234570",
+ "files": [],
+ "id": 1234570,
+ "links": {
+  "doi": "https://doi.org/10.5281/zenodo.1234570",
+  "self": "https://zenodo.org/api/records/1234570",
+  "self_html": "https://zenodo.org/records/1234570",
+  "parent_doi": "https://doi.org/10.5281/zenodo.1234569"
+ },
+ "metadata": {
+  "access_right": "embargoed",
+  "communities": [
+   {
+    "id": "ieawindtask52"
+   }
+  ],
+  "creators": [
+   {
+    "affiliation": "Technical University of Denmark",
+    "name": "Müller, Søren Ø.",
+    "orcid": "0000-0002-1825-0097"
+   },
+   {
+    "affiliation": "National Renewable Energy Laboratory",
+    "name": "Okafor, Chidi",
+    "orcid": "0000-0001-5109-3700"
+   }
+  ],
+  "description": "<p>Ten-minute nacelle lidar statistics. Files are under embargo until 1 March 2027; the metadata is public.</p>",
+  "doi": "10.5281/zenodo.1234570",
+  "keywords": [
+   "lidar",
+   "embargo",
+   "Rødsand"
+  ],
+  "license": {
+   "id": "cc-by-4.0"
+  },
+  "publication_date": "2025-11-04",
+  "resource_type": {
+   "title": "Dataset",
+   "type": "dataset"
+  },
+  "title": "Nacelle lidar campaign at the Rødsand site, 2025 (embargoed)",
+  "version": "1.0",
+  "embargo_date": "2027-03-01"
+ },
+ "modified": "2024-06-14T11:03:02.884901+00:00",
+ "revision": 2,
+ "stats": {
+  "downloads": 214,
+  "views": 1893
+ },
+ "title": "Nacelle lidar campaign at the Rødsand site, 2025 (embargoed)",
+ "updated": "2024-06-14T11:03:02.884901+00:00"
+}

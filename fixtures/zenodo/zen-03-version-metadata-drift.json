@@ -1,0 +1,124 @@
+{
+  "fixture_id": "zen-03-version-metadata-drift",
+  "fixture_kind": "source_namespace",
+  "case": "An earlier version of the same concept, with a different title and fewer creators",
+  "note": "Same concept doi as zen-02 (10.5281/zenodo.4549875) and therefore the same identity key, but titled 'NREL/OpenOA: Release 2.2' with 12 creators against the latest version's 16. Replaying both events yields the LATEST metadata under the concept identity while first_seen keeps the earlier observation.",
+  "raw": "raw/zen-03-version-metadata-drift.json",
+  "identity_key": "10.5281/zenodo.4549875",
+  "source_system": "zenodo",
+  "source_id": "4851223",
+  "source_key": "8@10.5281/zenodo.4851223",
+  "source": {
+    "title": "NREL/OpenOA: Release 2.2",
+    "notes": "<ul>\n<li>IAV incorporation in AEP calculation</li>\n<li>Set power to 0 for windspeeds above and below cutoff in IEC power curve function.</li>\n<li>Split unit tests from regression tests and updated CI pipeline to run the full regression tests weekly.</li>\n<li>Flake8 with Black code style implemented with git hook to run on commit</li>\n<li>Updated long-term loss calculations to weight by monthly/daily long-term gross energy</li>\n<li>Added wind turbine asset data to example ENGIE project</li>\n<li>Reduce amount of time it takes to run regression tests by decreasing number of monte carlo iterations. Reduce tolerance of float comparisons in plant analysis regression test. Linear regression on daily data is removed from test.</li>\n<li>Bugfixes, such as fixing an improper python version specifier in setup.py and replacing some straggling references to the master branch with main.</li>\n</ul>",
+    "doi": "10.5281/zenodo.4549875",
+    "url": "https://zenodo.org/records/4851223",
+    "source_urls": [
+      "https://zenodo.org/records/4851223"
+    ],
+    "authors": [
+      {
+        "name": "Jordan Perr-Sauer"
+      },
+      {
+        "name": "Nicola Bodini",
+        "affiliation": "NREL"
+      },
+      {
+        "name": "moptis"
+      },
+      {
+        "name": "nateagarwal"
+      },
+      {
+        "name": "ejsimley"
+      },
+      {
+        "name": "Rob Hammond",
+        "affiliation": "National Renewable Energy Laboratory"
+      },
+      {
+        "name": "sebastianpfaffel"
+      },
+      {
+        "name": "Joseph Lee",
+        "affiliation": "National Renewable Energy Laboratory"
+      },
+      {
+        "name": "Jason Fields",
+        "affiliation": "https://github.com/NREL"
+      },
+      {
+        "name": "charlie9578"
+      },
+      {
+        "name": "Kristen Thyng",
+        "affiliation": "@axiom-data-science"
+      },
+      {
+        "name": "Rafael M Mudafort",
+        "affiliation": "@NREL"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2021-05-29",
+    "version": "v2.2",
+    "license_raw": "other-open",
+    "license_id": "other-open",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/4851223/files/NREL/OpenOA-v2.2.zip",
+        "name": "NREL/OpenOA-v2.2.zip",
+        "format": "zip"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "relation": "IsVersionOf",
+        "identifier": "10.5281/zenodo.4549875",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "isSupplementTo",
+        "identifier": "https://github.com/NREL/OpenOA/tree/v2.2",
+        "identifier_type": "URL"
+      }
+    ],
+    "iea_task": [
+      "task-43"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "zenodo_record_id": 4851223,
+      "zenodo_concept_recid": "4549875",
+      "zenodo_version_doi": "10.5281/zenodo.4851223"
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5281-zenodo-4549875"
+}

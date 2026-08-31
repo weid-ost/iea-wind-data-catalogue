@@ -1,0 +1,184 @@
+{
+ "created": "2025-06-16T19:37:53.338397+00:00",
+ "modified": "2025-06-16T19:37:53.444454+00:00",
+ "id": 15677886,
+ "conceptrecid": "4710168",
+ "doi": "10.5281/zenodo.15677886",
+ "conceptdoi": "10.5281/zenodo.4710168",
+ "doi_url": "https://doi.org/10.5281/zenodo.15677886",
+ "metadata": {
+  "title": "IEA-Task-43/digital_wra_data_standard: 1.4.0-2025.06",
+  "doi": "10.5281/zenodo.15677886",
+  "publication_date": "2025-06-16",
+  "description": "<p>Below is an extract form the CHANGELOG file showing all the updates for this release.</p>\n<p>The major addition to this version is the development of the Floating Lidar File format. This is version 1.0.0-2025.06 and will follow its own independent versioning. Other changes in this release are to expand the data model to include more floating lidar and metocean measurements, sensors and units.</p>\n<p>The Digital Calibration Certificate had a few units added and is now on version 1.2.0-2025.06.</p>\n<h2>[1.4.0-2025.06]</h2>\n<ol>\n<li>Introduce the first release of the <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/tree/master/floating_lidar_file_format\">Floating Lidar File Format</a> developed based on discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268\">#268</a>.</li>\n<li>To <code>lidar_config</code> add:<ol>\n<li><code>logger_stated_device_datum_plane_height_m</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254\">#254</a>)</li>\n<li><code>logger_stated_device_orientation_deg</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254\">#254</a>)</li>\n</ol>\n</li>\n<li>To <code>calibration</code> add:<ol>\n<li><code>slope_unit</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248\">#248</a>)</li>\n<li><code>offset_unit</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248\">#248</a>)</li>\n<li><code>sensitivity_unit</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248\">#248</a>)</li>\n</ol>\n</li>\n<li>As a result of Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248\">#248</a> above, <code>measurement_units</code> are now a definition.</li>\n<li>To <code>measurement_units</code> enum add:<ol>\n<li><code>mV</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>(m/s)/mV</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>mbar/V</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>mbar/mV</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>hPa/V</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>hPa/mV</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>deg_C/V</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>deg_C/mV</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>%/V</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>%/mV</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>m^2/Hz</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974\">#268</a>)</li>\n<li><code>m^2_s</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13382090\">#268</a>)</li>\n<li><code>Pa</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/279\">#279</a>)</li>\n<li><code>ppm</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779\">#268</a>)</li>\n<li><code>ug/L</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779\">#268</a>)</li>\n<li><code>ntu</code>, <code>fnu</code> and <code>ftu</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779\">#268</a>)</li>\n</ol>\n</li>\n<li>To <code>sensor_type</code> add:<ol>\n<li><code>calc</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819\">#268</a>)</li>\n<li><code>fuel_gauge</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819\">#268</a>)</li>\n<li><code>microwave_temperature_profiler</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281\">#268</a>)</li>\n<li><code>nephelometer</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281\">#268</a>)</li>\n<li><code>wave_buoy</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12716402\">#268</a>)</li>\n<li><code>transmissometer</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281\">#268</a>)</li>\n<li><code>fluorometer</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779\">#268</a>)</li>\n<li><code>gps_motion_unit</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779\">#268</a>)</li>\n</ol>\n</li>\n<li>To <code>measurement_type</code> add:<ol>\n<li><code>fuel_level</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819\">#268</a>)</li>\n<li><code>pitch</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281\">#268</a>)</li>\n<li><code>roll</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281\">#268</a>)</li>\n<li><code>heading</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281\">#268</a>)</li>\n<li><code>turbidity</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281\">#268</a>)</li>\n<li><code>visibility_in_air</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281\">#268</a>)</li>\n<li><code>wave_energy_spectrum</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974\">#268</a>)</li>\n<li><code>wave_energy_spectrum_maximum</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974\">#268</a>)</li>\n<li><code>wave_period_first_frequency</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974\">#268</a>)</li>\n<li><code>wave_period_second_frequency</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974\">#268</a>)</li>\n<li><code>wave_period_zero_crossing</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974\">#268</a>)</li>\n<li><code>mass_concentration</code> (Discussion <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779\">#268</a>)</li>\n</ol>\n</li>\n<li>Bug fixes:<ol>\n<li>Add <code>null</code> to <code>license</code> type as it is optional (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/269\">#269</a>)</li>\n</ol>\n</li>\n</ol>\n<h2>Floating Lidar File Format [1.0.0-2025.06]</h2>\n<ol>\n<li>Initial release</li>\n</ol>\n<h2>Digital Calibration Certificate [1.2.0-2025.06]</h2>\n<ol>\n<li>To <code>unit</code> enum add:<ol>\n<li><code>mV</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n<li><code>(m/s)/mV</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260\">#260</a>)</li>\n</ol>\n</li>\n</ol>",
+  "access_right": "open",
+  "creators": [
+   {
+    "name": "stephenholleran",
+    "affiliation": "brightwind"
+   },
+   {
+    "name": "heikowestermann",
+    "affiliation": "Deutsche WindGuard Wind Tunnel Services GmbH"
+   },
+   {
+    "name": "Florian Roscheck",
+    "affiliation": null
+   },
+   {
+    "name": "actions-user",
+    "affiliation": "@actions"
+   },
+   {
+    "name": "Gibson",
+    "affiliation": null
+   },
+   {
+    "name": "Jason Fields",
+    "affiliation": "https://www.res-group.com/digital-solutions/"
+   },
+   {
+    "name": "Christian Jonsson",
+    "affiliation": "KUDO"
+   },
+   {
+    "name": "abohara",
+    "affiliation": "Altosphere"
+   },
+   {
+    "name": "MatteoManaRWE",
+    "affiliation": null
+   },
+   {
+    "name": "Guillermo Tornero",
+    "affiliation": null
+   },
+   {
+    "name": "Michael Purdue",
+    "affiliation": null
+   },
+   {
+    "name": "NikoSimisiroglou",
+    "affiliation": null
+   },
+   {
+    "name": "Tom Clark",
+    "affiliation": "@octue"
+   },
+   {
+    "name": "David Carlson",
+    "affiliation": "NRG Systems, Inc"
+   },
+   {
+    "name": "Joseph Lee",
+    "affiliation": null
+   }
+  ],
+  "related_identifiers": [
+   {
+    "identifier": "https://github.com/IEA-Task-43/digital_wra_data_standard/tree/v1.4.0-2025.06",
+    "relation": "isSupplementTo",
+    "resource_type": "software",
+    "scheme": "url"
+   }
+  ],
+  "version": "v1.4.0-2025.06",
+  "custom": {
+   "code:codeRepository": "https://github.com/IEA-Task-43/digital_wra_data_standard"
+  },
+  "resource_type": {
+   "title": "Software",
+   "type": "software"
+  },
+  "license": {
+   "id": "bsd-3-clause"
+  },
+  "communities": [
+   {
+    "id": "iea_wind_task_43"
+   }
+  ],
+  "relations": {
+   "version": [
+    {
+     "index": 5,
+     "is_last": true,
+     "parent": {
+      "pid_type": "recid",
+      "pid_value": "4710168"
+     }
+    }
+   ]
+  }
+ },
+ "title": "IEA-Task-43/digital_wra_data_standard: 1.4.0-2025.06",
+ "links": {
+  "self": "https://zenodo.org/api/records/15677886",
+  "self_html": "https://zenodo.org/records/15677886",
+  "preview_html": "https://zenodo.org/records/15677886?preview=1",
+  "doi": "https://doi.org/10.5281/zenodo.15677886",
+  "self_doi": "https://doi.org/10.5281/zenodo.15677886",
+  "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.15677886",
+  "reserve_doi": "https://zenodo.org/api/records/15677886/draft/pids/doi",
+  "parent": "https://zenodo.org/api/records/4710168",
+  "parent_html": "https://zenodo.org/records/4710168",
+  "parent_doi": "https://doi.org/10.5281/zenodo.4710168",
+  "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.4710168",
+  "self_iiif_manifest": "https://zenodo.org/api/iiif/record:15677886/manifest",
+  "self_iiif_sequence": "https://zenodo.org/api/iiif/record:15677886/sequence/default",
+  "files": "https://zenodo.org/api/records/15677886/files",
+  "media_files": "https://zenodo.org/api/records/15677886/media-files",
+  "archive": "https://zenodo.org/api/records/15677886/files-archive",
+  "archive_media": "https://zenodo.org/api/records/15677886/media-files-archive",
+  "latest": "https://zenodo.org/api/records/15677886/versions/latest",
+  "latest_html": "https://zenodo.org/records/15677886/latest",
+  "versions": "https://zenodo.org/api/records/15677886/versions",
+  "draft": "https://zenodo.org/api/records/15677886/draft",
+  "access_links": "https://zenodo.org/api/records/15677886/access/links",
+  "access_grants": "https://zenodo.org/api/records/15677886/access/grants",
+  "access_users": "https://zenodo.org/api/records/15677886/access/users",
+  "access_request": "https://zenodo.org/api/records/15677886/access/request",
+  "access": "https://zenodo.org/api/records/15677886/access",
+  "communities": "https://zenodo.org/api/records/15677886/communities",
+  "communities-suggestions": "https://zenodo.org/api/records/15677886/communities-suggestions",
+  "request_deletion": "https://zenodo.org/api/records/15677886/request-deletion",
+  "file_modification": "https://zenodo.org/api/records/15677886/file-modification",
+  "quota_increase": "https://zenodo.org/api/records/15677886/quota-increase",
+  "requests": "https://zenodo.org/api/records/15677886/requests"
+ },
+ "updated": "2025-06-16T19:37:53.444454+00:00",
+ "recid": "15677886",
+ "revision": 4,
+ "files": [
+  {
+   "id": "abddff91-a193-4dde-bd69-bf4932b7505f",
+   "key": "IEA-Task-43/digital_wra_data_standard-v1.4.0-2025.06.zip",
+   "size": 1488522,
+   "checksum": "md5:7f7e257c9a9029a0e9d5ebec77210773",
+   "links": {
+    "self": "https://zenodo.org/api/records/15677886/files/IEA-Task-43/digital_wra_data_standard-v1.4.0-2025.06.zip/content"
+   }
+  }
+ ],
+ "swh": {
+  "swhid": "swh:1:dir:8d7600f2ab4105c46476540202c8d795a5c4128a;origin=https://doi.org/10.5281/zenodo.4710168;visit=swh:1:snp:240710a5b66d6c19363ee51f5f76a75add627f7a;anchor=swh:1:rel:3f4783c183b570a3a0a2efce89cab8197ef62456;path=IEA-Task-43-digital_wra_data_standard-14841ca"
+ },
+ "owners": [
+  {
+   "id": "100573"
+  }
+ ],
+ "status": "published",
+ "stats": {
+  "downloads": 178,
+  "unique_downloads": 173,
+  "views": 973,
+  "unique_views": 944,
+  "version_downloads": 23,
+  "version_unique_downloads": 22,
+  "version_unique_views": 162,
+  "version_views": 169
+ },
+ "state": "done",
+ "submitted": true
+}

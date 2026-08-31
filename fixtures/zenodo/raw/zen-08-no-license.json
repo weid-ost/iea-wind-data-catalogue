@@ -1,0 +1,148 @@
+{
+ "created": "2020-04-28T09:18:55.571149+00:00",
+ "modified": "2020-06-19T20:25:18.959867+00:00",
+ "id": 3773129,
+ "conceptrecid": "3773128",
+ "doi": "10.5281/zenodo.3773129",
+ "conceptdoi": "10.5281/zenodo.3773128",
+ "doi_url": "https://doi.org/10.5281/zenodo.3773129",
+ "metadata": {
+  "title": "OWA Wake Modelling Challenge Scripts",
+  "doi": "10.5281/zenodo.3773129",
+  "publication_date": "2020-04-28",
+  "description": "<p>This repository contains the model evaluation scripts developed in the Offshore Wind Accelerator (OWA) Wake Modelling Challenge. A benchmarking process comprising 5 wind farms allows wake model developers and end-users test their array efficiency prediction methodologies over a wide range of wind climate and wind farm layout conditions.</p>\n\n<p>The project is integrated in the Phase 3 of the IEA Task 31 Wakebench international framework for wind farm modeling and evaluation.</p>\n\n<p>The dataset can be found here:</p>\n\n<p>Sanz Rodrigo, Javier, et al. (2020). OWA Wake Modelling Challenge Dataset (Version 1.0). Zenodo. <a href=\"http://doi.org/10.5281/zenodo.3715198\">http://doi.org/10.5281/zenodo.3715198</a></p>\n\n<p>The results of the Challenge are published here:</p>\n\n<p>Sanz Rodrigo J, Borb&oacute;n Guill&eacute;n F, Fernandes Correia P M, Garc&iacute;a Hevia B, Schlez W, Schmidt S, Basu S, Li B, Nielsen P, Cathelain M, Dall&rsquo;Ozzo C, Grignon L, Pullinger D (2020) Validation of Meso-Wake Models for Array Efficiency Prediction Using Operational Data from Five Offshore Wind Farms. J. Phys.: Conf. Ser., under review</p>\n\n<p>Acknowledgements: The authors would like to thank Carbon Trust and the OWA Technical Working Group for their support providing funding, operational data and guidance throughout the project. We would like to thank all the benchmark participants for their simulations and in-kind support in fine-tuning the benchmark set-up and evaluation methodology.</p>",
+  "access_right": "open",
+  "creators": [
+   {
+    "name": "Sanz Rodrigo, Javier",
+    "affiliation": "CENER",
+    "orcid": "0000-0003-0291-6429"
+   },
+   {
+    "name": "Gancarski, Pawel",
+    "affiliation": "CENER",
+    "orcid": "0000-0001-9198-8429"
+   },
+   {
+    "name": "Fernandes Correia, Pedro Miguel",
+    "affiliation": "CENER"
+   }
+  ],
+  "keywords": [
+   "array efficiency",
+   "OWA",
+   "wake modelling",
+   "mesocale modelling"
+  ],
+  "related_identifiers": [
+   {
+    "identifier": "https://github.com/CENER-EPR/OWAbench/tree/v2.0.1",
+    "relation": "isSupplementTo",
+    "scheme": "url"
+   },
+   {
+    "identifier": "10.5281/zenodo.3715198",
+    "relation": "references",
+    "resource_type": "dataset",
+    "scheme": "doi"
+   }
+  ],
+  "version": "v2.0.1",
+  "language": "eng",
+  "resource_type": {
+   "title": "Software",
+   "type": "software"
+  },
+  "communities": [
+   {
+    "id": "wind_energy"
+   },
+   {
+    "id": "oswec"
+   },
+   {
+    "id": "wakebench"
+   }
+  ],
+  "relations": {
+   "version": [
+    {
+     "index": 0,
+     "is_last": true,
+     "parent": {
+      "pid_type": "recid",
+      "pid_value": "3773128"
+     }
+    }
+   ]
+  }
+ },
+ "title": "OWA Wake Modelling Challenge Scripts",
+ "links": {
+  "self": "https://zenodo.org/api/records/3773129",
+  "self_html": "https://zenodo.org/records/3773129",
+  "preview_html": "https://zenodo.org/records/3773129?preview=1",
+  "doi": "https://doi.org/10.5281/zenodo.3773129",
+  "self_doi": "https://doi.org/10.5281/zenodo.3773129",
+  "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.3773129",
+  "reserve_doi": "https://zenodo.org/api/records/3773129/draft/pids/doi",
+  "parent": "https://zenodo.org/api/records/3773128",
+  "parent_html": "https://zenodo.org/records/3773128",
+  "parent_doi": "https://doi.org/10.5281/zenodo.3773128",
+  "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.3773128",
+  "self_iiif_manifest": "https://zenodo.org/api/iiif/record:3773129/manifest",
+  "self_iiif_sequence": "https://zenodo.org/api/iiif/record:3773129/sequence/default",
+  "files": "https://zenodo.org/api/records/3773129/files",
+  "media_files": "https://zenodo.org/api/records/3773129/media-files",
+  "archive": "https://zenodo.org/api/records/3773129/files-archive",
+  "archive_media": "https://zenodo.org/api/records/3773129/media-files-archive",
+  "latest": "https://zenodo.org/api/records/3773129/versions/latest",
+  "latest_html": "https://zenodo.org/records/3773129/latest",
+  "versions": "https://zenodo.org/api/records/3773129/versions",
+  "draft": "https://zenodo.org/api/records/3773129/draft",
+  "access_links": "https://zenodo.org/api/records/3773129/access/links",
+  "access_grants": "https://zenodo.org/api/records/3773129/access/grants",
+  "access_users": "https://zenodo.org/api/records/3773129/access/users",
+  "access_request": "https://zenodo.org/api/records/3773129/access/request",
+  "access": "https://zenodo.org/api/records/3773129/access",
+  "communities": "https://zenodo.org/api/records/3773129/communities",
+  "communities-suggestions": "https://zenodo.org/api/records/3773129/communities-suggestions",
+  "request_deletion": "https://zenodo.org/api/records/3773129/request-deletion",
+  "file_modification": "https://zenodo.org/api/records/3773129/file-modification",
+  "quota_increase": "https://zenodo.org/api/records/3773129/quota-increase",
+  "requests": "https://zenodo.org/api/records/3773129/requests"
+ },
+ "updated": "2020-06-19T20:25:18.959867+00:00",
+ "recid": "3773129",
+ "revision": 11,
+ "files": [
+  {
+   "id": "4a42c11f-5b01-4993-9054-3710094c9b4f",
+   "key": "CENER-EPR/OWAbench-v2.0.1.zip",
+   "size": 5848745,
+   "checksum": "md5:42e70638b9beb40945c156ed1b18b7b1",
+   "links": {
+    "self": "https://zenodo.org/api/records/3773129/files/CENER-EPR/OWAbench-v2.0.1.zip/content"
+   }
+  }
+ ],
+ "swh": {},
+ "owners": [
+  {
+   "id": "99852"
+  }
+ ],
+ "status": "published",
+ "stats": {
+  "downloads": 70,
+  "unique_downloads": 69,
+  "views": 456,
+  "unique_views": 425,
+  "version_downloads": 70,
+  "version_unique_downloads": 69,
+  "version_unique_views": 425,
+  "version_views": 456
+ },
+ "state": "done",
+ "submitted": true
+}

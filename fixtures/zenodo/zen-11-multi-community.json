@@ -1,0 +1,80 @@
+{
+  "fixture_id": "zen-11-multi-community",
+  "fixture_kind": "source_namespace",
+  "case": "One record in two IEA Wind communities (ieawindtask32 and iea_wind_task_43)",
+  "note": "Harvesting both communities finds this record twice; harvest() de-duplicates on the Zenodo record id so exactly one event is written, and iea_task is multi-valued: ['task-32', 'task-43'] in the order the source lists them.",
+  "raw": "raw/zen-11-multi-community.json",
+  "identity_key": "10.5281/zenodo.4562391",
+  "source_system": "zenodo",
+  "source_id": "4562392",
+  "source_key": "5@10.5281/zenodo.4562392",
+  "source": {
+    "title": "Wind Energy as a Use Case for General Energy System Integration",
+    "notes": "<p>Emerging data sharing protocols such as Open Energy, and the broader context of green finance and sustainable development goals, are discussed. The practical example of the digital integration of wind energy projects is considered, with particular emphasis on the role of wind data, specifically those obtained using lidar.</p>\n\n<p>Originally presented at the Windpower Data and Digital Innovation Forum 2021.</p>",
+    "doi": "10.5281/zenodo.4562391",
+    "url": "https://zenodo.org/records/4562392",
+    "source_urls": [
+      "https://zenodo.org/records/4562392"
+    ],
+    "authors": [
+      {
+        "name": "Clive, Peter James Macdonald"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2021-02-17",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "other",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/4562392/files/Wind%20Energy%20as%20a%20Use%20Case%20for%20General%20Energy%20System%20Integration%20-%20%28A1%29.pptx",
+        "name": "Wind Energy as a Use Case for General Energy System Integration - (A1).pptx",
+        "format": "pptx"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "relation": "IsVersionOf",
+        "identifier": "10.5281/zenodo.4562391",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [
+      "task-32",
+      "task-43"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "zenodo_record_id": 4562392,
+      "zenodo_concept_recid": "4562391",
+      "zenodo_version_doi": "10.5281/zenodo.4562392"
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5281-zenodo-4562391"
+}

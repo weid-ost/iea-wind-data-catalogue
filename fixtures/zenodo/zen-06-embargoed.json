@@ -1,0 +1,87 @@
+{
+  "fixture_id": "zen-06-embargoed",
+  "fixture_kind": "source_namespace",
+  "case": "access_right embargoed with a future embargo_date",
+  "note": "access_status is embargoed and embargo_date is carried through, so the site can say when the files become available and never imply they are downloadable now. Zenodo returns files: [] while the embargo holds, so there is nothing to link either. Re-check after the date.",
+  "invented": "INVENTED. No embargoed record exists in any of the nine IEA Wind Zenodo communities (checked live 2026-08-31: access_right:embargoed returns 0 hits in all nine). Built on the zen-01 reference payload shape with invented ids so that no real artifact is misrepresented as embargoed.",
+  "raw": "raw/zen-06-embargoed.json",
+  "identity_key": "10.5281/zenodo.1234569",
+  "source_system": "zenodo",
+  "source_id": "1234570",
+  "source_key": "2@10.5281/zenodo.1234570",
+  "source": {
+    "title": "Nacelle lidar campaign at the Rødsand site, 2025 (embargoed)",
+    "notes": "<p>Ten-minute nacelle lidar statistics. Files are under embargo until 1 March 2027; the metadata is public.</p>",
+    "doi": "10.5281/zenodo.1234569",
+    "url": "https://zenodo.org/records/1234570",
+    "source_urls": [
+      "https://zenodo.org/records/1234570"
+    ],
+    "authors": [
+      {
+        "name": "Müller, Søren Ø.",
+        "orcid": "0000-0002-1825-0097",
+        "affiliation": "Technical University of Denmark"
+      },
+      {
+        "name": "Okafor, Chidi",
+        "orcid": "0000-0001-5109-3700",
+        "affiliation": "National Renewable Energy Laboratory"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2025-11-04",
+    "version": "1.0",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "dataset",
+    "access_status": "embargoed",
+    "embargo_date": "2027-03-01",
+    "keywords": [
+      "lidar",
+      "embargo",
+      "Rødsand"
+    ],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "relation": "IsVersionOf",
+        "identifier": "10.5281/zenodo.1234569",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [
+      "task-52"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "zenodo_record_id": 1234570,
+      "zenodo_concept_recid": "1234569",
+      "zenodo_version_doi": "10.5281/zenodo.1234570"
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5281-zenodo-1234569"
+}

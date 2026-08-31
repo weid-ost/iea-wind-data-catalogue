@@ -1,0 +1,115 @@
+{
+  "fixture_id": "zen-10-diacritics",
+  "fixture_kind": "source_namespace",
+  "case": "Diacritics in creator names: Cattin René, Klintström, Lehtomäki, Ronsten Göran",
+  "note": "Diacritics are preserved verbatim in display fields and only transliterated when a slug is built. The record's own slug comes from the identity key (a doi) so it is unaffected; harvest.identity.slugify is what folds names.",
+  "raw": "raw/zen-10-diacritics.json",
+  "identity_key": "10.5281/zenodo.14179845",
+  "source_system": "zenodo",
+  "source_id": "14179846",
+  "source_key": "8@10.5281/zenodo.14179846",
+  "source": {
+    "title": "IEA Wind TCP Recommended practice 13: Wind Energy Projects in Cold Climates",
+    "notes": "<p>The purpose of this IEA Wind TCP report is to provide the best available information of recommended practices for cold climate (CC) wind projects to developers, owners, and operators of wind projects within CC. The incentive is to reduce the risks and accelerate the growth of wind energy production. This document also provides preparatory information that should benefit manufacturers, banks, and insurance companies.</p>\n<p><br />Cold climate sites around the world offer large wind energy potential in demanding winter climates. National activities have been conducted to master the challenges that atmospheric icing and low temperatures pose for wind energy development. Our lack of knowledge of special CC issues and the lack of proven and economic technological solutions have limited the large-scale exploitation of these sites. For the sake of this document, the concept of CC includes both low temperature and icing environments.</p>\n<p><br />A generic wind energy development best practise guide provides a good starting point for developing a CC site. Those generic practices should be used to the extent possible, even though they do not normally consider CC issues. This report focuses on the additional challenges that are involved in CC wind energy projects that must also be assessed in detail.</p>\n<p><br />CC conditions directly affect site access, working conditions, technology selection, turbine loads, noise, health and safety, public safety and energy production.<br />Prior to any wind farm investment, mapping of all potential risks are keys to success. In order to get some preliminary information regarding atmospheric icing and low temperature conditions worldwide, associated maps provide a good first glance at potential risks. However, icing maps only provide a rough estimate<br />of potential sites atmospheric icing conditions, and should not be used as the only indicator for icing. Similar to wind speed measurements, on-site icing measurements are of crucial importance and can provide more accurate icing information than icing maps for business case analysis. Icing maps can also be used when planning the site icing measurements that will take place during the resource assessment campaign.</p>",
+    "doi": "10.5281/zenodo.14179845",
+    "url": "https://zenodo.org/records/14179846",
+    "source_urls": [
+      "https://zenodo.org/records/14179846"
+    ],
+    "authors": [
+      {
+        "name": "Bredesen, Rolv",
+        "affiliation": "Kjeller Vindteknikk (Norway)"
+      },
+      {
+        "name": "Cattin, René"
+      },
+      {
+        "name": "Clausen,, Niels-Erik"
+      },
+      {
+        "name": "Davis, Neil"
+      },
+      {
+        "name": "Jordaens, Pieter Jan"
+      },
+      {
+        "name": "Khadiri-Yazami, Zouhair"
+      },
+      {
+        "name": "Klintström, Rebecka"
+      },
+      {
+        "name": "Krenn, Andreas"
+      },
+      {
+        "name": "Lehtomäki, Ville"
+      },
+      {
+        "name": "Ronsten, Göran"
+      },
+      {
+        "name": "Wadham-Gagnon, Matthew"
+      },
+      {
+        "name": "Wickman, Helena"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2017-02-10",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "report",
+    "access_status": "open",
+    "keywords": [
+      "Cold climate"
+    ],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/14179846/files/Task%2019%20RP%2013%20WIND%20ENERGY%20PROJECTS%20IN%20COLD%20CLIMATES.pdf",
+        "name": "Task 19 RP 13 WIND ENERGY PROJECTS IN COLD CLIMATES.pdf",
+        "format": "pdf"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "relation": "IsVersionOf",
+        "identifier": "10.5281/zenodo.14179845",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [
+      "task-54"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "zenodo_record_id": 14179846,
+      "zenodo_concept_recid": "14179845",
+      "zenodo_version_doi": "10.5281/zenodo.14179846"
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5281-zenodo-14179845"
+}

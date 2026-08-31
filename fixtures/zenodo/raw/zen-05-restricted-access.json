@@ -1,0 +1,119 @@
+{
+ "created": "2026-07-15T07:23:37.965151+00:00",
+ "modified": "2026-07-15T07:23:38.602031+00:00",
+ "id": 21037963,
+ "conceptrecid": "18967947",
+ "doi": "10.5281/zenodo.21037963",
+ "conceptdoi": "10.5281/zenodo.18967947",
+ "doi_url": "https://doi.org/10.5281/zenodo.21037963",
+ "metadata": {
+  "title": "WINSENT complex terrain benchmark - Phase I",
+  "doi": "10.5281/zenodo.21037963",
+  "publication_date": "2026-07-15",
+  "description": "<p>These files include the terrain data and measurement data that are released to the participants of the WINSENT complex terrain benchmark, which is one of the benchmarks of the IEA Wind Task 57 (JAM) activities. Within the benchmark the participants simulate in phase I the wind flow from the valley to the test site which is located on a forest-free plateau approx. 150m higher. The slope, known as the Albtrauf, is forested terrain, why different flow conditions with high and low leaf area index are taken into account. The detailed description of the benchmark is described here: &nbsp;<a title=\"ReadTheDocs-WINSENT benchmark\" href=\"https://winsent-benchmark.readthedocs.io/en/latest/\">https://winsent-benchmark.readthedocs.io/en/latest/</a></p>",
+  "access_right": "restricted",
+  "creators": [
+   {
+    "name": "Rettenmeier, Andreas",
+    "affiliation": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)",
+    "orcid": "0000-0002-9953-5392"
+   },
+   {
+    "name": "Lott, Sarah",
+    "affiliation": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)"
+   },
+   {
+    "name": "Knaus, Hermann",
+    "affiliation": null,
+    "orcid": "0000-0002-6584-7363"
+   },
+   {
+    "name": "Hohaus, Jonas",
+    "affiliation": null,
+    "orcid": "0009-0009-1403-5937"
+   }
+  ],
+  "resource_type": {
+   "title": "Dataset",
+   "type": "dataset"
+  },
+  "license": {
+   "id": "cc-by-4.0"
+  },
+  "communities": [
+   {
+    "id": "jam"
+   }
+  ],
+  "relations": {
+   "version": [
+    {
+     "index": 1,
+     "is_last": true,
+     "parent": {
+      "pid_type": "recid",
+      "pid_value": "18967947"
+     }
+    }
+   ]
+  }
+ },
+ "title": "WINSENT complex terrain benchmark - Phase I",
+ "links": {
+  "self": "https://zenodo.org/api/records/21037963",
+  "self_html": "https://zenodo.org/records/21037963",
+  "preview_html": "https://zenodo.org/records/21037963?preview=1",
+  "doi": "https://doi.org/10.5281/zenodo.21037963",
+  "self_doi": "https://doi.org/10.5281/zenodo.21037963",
+  "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.21037963",
+  "reserve_doi": "https://zenodo.org/api/records/21037963/draft/pids/doi",
+  "parent": "https://zenodo.org/api/records/18967947",
+  "parent_html": "https://zenodo.org/records/18967947",
+  "parent_doi": "https://doi.org/10.5281/zenodo.18967947",
+  "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18967947",
+  "self_iiif_manifest": "https://zenodo.org/api/iiif/record:21037963/manifest",
+  "self_iiif_sequence": "https://zenodo.org/api/iiif/record:21037963/sequence/default",
+  "files": "https://zenodo.org/api/records/21037963/files",
+  "media_files": "https://zenodo.org/api/records/21037963/media-files",
+  "archive": "https://zenodo.org/api/records/21037963/files-archive",
+  "archive_media": "https://zenodo.org/api/records/21037963/media-files-archive",
+  "latest": "https://zenodo.org/api/records/21037963/versions/latest",
+  "latest_html": "https://zenodo.org/records/21037963/latest",
+  "versions": "https://zenodo.org/api/records/21037963/versions",
+  "draft": "https://zenodo.org/api/records/21037963/draft",
+  "access_links": "https://zenodo.org/api/records/21037963/access/links",
+  "access_grants": "https://zenodo.org/api/records/21037963/access/grants",
+  "access_users": "https://zenodo.org/api/records/21037963/access/users",
+  "access_request": "https://zenodo.org/api/records/21037963/access/request",
+  "access": "https://zenodo.org/api/records/21037963/access",
+  "communities": "https://zenodo.org/api/records/21037963/communities",
+  "communities-suggestions": "https://zenodo.org/api/records/21037963/communities-suggestions",
+  "request_deletion": "https://zenodo.org/api/records/21037963/request-deletion",
+  "file_modification": "https://zenodo.org/api/records/21037963/file-modification",
+  "quota_increase": "https://zenodo.org/api/records/21037963/quota-increase",
+  "requests": "https://zenodo.org/api/records/21037963/requests"
+ },
+ "updated": "2026-07-15T07:23:38.602031+00:00",
+ "recid": "21037963",
+ "revision": 3,
+ "files": [],
+ "swh": {},
+ "owners": [
+  {
+   "id": "1059440"
+  }
+ ],
+ "status": "published",
+ "stats": {
+  "downloads": 124,
+  "unique_downloads": 121,
+  "views": 153,
+  "unique_views": 105,
+  "version_downloads": 114,
+  "version_unique_downloads": 111,
+  "version_unique_views": 31,
+  "version_views": 35
+ },
+ "state": "done",
+ "submitted": true
+}

@@ -1,0 +1,169 @@
+{
+ "created": "2021-05-29T23:30:11.487591+00:00",
+ "modified": "2023-09-29T23:24:58.626169+00:00",
+ "id": 4851223,
+ "conceptrecid": "4549875",
+ "doi": "10.5281/zenodo.4851223",
+ "conceptdoi": "10.5281/zenodo.4549875",
+ "doi_url": "https://doi.org/10.5281/zenodo.4851223",
+ "metadata": {
+  "title": "NREL/OpenOA: Release 2.2",
+  "doi": "10.5281/zenodo.4851223",
+  "publication_date": "2021-05-29",
+  "description": "<ul>\n<li>IAV incorporation in AEP calculation</li>\n<li>Set power to 0 for windspeeds above and below cutoff in IEC power curve function.</li>\n<li>Split unit tests from regression tests and updated CI pipeline to run the full regression tests weekly.</li>\n<li>Flake8 with Black code style implemented with git hook to run on commit</li>\n<li>Updated long-term loss calculations to weight by monthly/daily long-term gross energy</li>\n<li>Added wind turbine asset data to example ENGIE project</li>\n<li>Reduce amount of time it takes to run regression tests by decreasing number of monte carlo iterations. Reduce tolerance of float comparisons in plant analysis regression test. Linear regression on daily data is removed from test.</li>\n<li>Bugfixes, such as fixing an improper python version specifier in setup.py and replacing some straggling references to the master branch with main.</li>\n</ul>",
+  "access_right": "open",
+  "creators": [
+   {
+    "name": "Jordan Perr-Sauer",
+    "affiliation": null
+   },
+   {
+    "name": "Nicola Bodini",
+    "affiliation": "NREL"
+   },
+   {
+    "name": "moptis",
+    "affiliation": null
+   },
+   {
+    "name": "nateagarwal",
+    "affiliation": null
+   },
+   {
+    "name": "ejsimley",
+    "affiliation": null
+   },
+   {
+    "name": "Rob Hammond",
+    "affiliation": "National Renewable Energy Laboratory"
+   },
+   {
+    "name": "sebastianpfaffel",
+    "affiliation": null
+   },
+   {
+    "name": "Joseph Lee",
+    "affiliation": "National Renewable Energy Laboratory"
+   },
+   {
+    "name": "Jason Fields",
+    "affiliation": "https://github.com/NREL"
+   },
+   {
+    "name": "charlie9578",
+    "affiliation": null
+   },
+   {
+    "name": "Kristen Thyng",
+    "affiliation": "@axiom-data-science"
+   },
+   {
+    "name": "Rafael M Mudafort",
+    "affiliation": "@NREL"
+   }
+  ],
+  "related_identifiers": [
+   {
+    "identifier": "https://github.com/NREL/OpenOA/tree/v2.2",
+    "relation": "isSupplementTo",
+    "scheme": "url"
+   }
+  ],
+  "version": "v2.2",
+  "resource_type": {
+   "title": "Software",
+   "type": "software"
+  },
+  "license": {
+   "id": "other-open"
+  },
+  "communities": [
+   {
+    "id": "iea_wind_task_43"
+   },
+   {
+    "id": "openoa"
+   }
+  ],
+  "relations": {
+   "version": [
+    {
+     "index": 1,
+     "is_last": false,
+     "parent": {
+      "pid_type": "recid",
+      "pid_value": "4549875"
+     }
+    }
+   ]
+  }
+ },
+ "title": "NREL/OpenOA: Release 2.2",
+ "links": {
+  "self": "https://zenodo.org/api/records/4851223",
+  "self_html": "https://zenodo.org/records/4851223",
+  "preview_html": "https://zenodo.org/records/4851223?preview=1",
+  "doi": "https://doi.org/10.5281/zenodo.4851223",
+  "self_doi": "https://doi.org/10.5281/zenodo.4851223",
+  "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.4851223",
+  "reserve_doi": "https://zenodo.org/api/records/4851223/draft/pids/doi",
+  "parent": "https://zenodo.org/api/records/4549875",
+  "parent_html": "https://zenodo.org/records/4549875",
+  "parent_doi": "https://doi.org/10.5281/zenodo.4549875",
+  "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.4549875",
+  "self_iiif_manifest": "https://zenodo.org/api/iiif/record:4851223/manifest",
+  "self_iiif_sequence": "https://zenodo.org/api/iiif/record:4851223/sequence/default",
+  "files": "https://zenodo.org/api/records/4851223/files",
+  "media_files": "https://zenodo.org/api/records/4851223/media-files",
+  "archive": "https://zenodo.org/api/records/4851223/files-archive",
+  "archive_media": "https://zenodo.org/api/records/4851223/media-files-archive",
+  "latest": "https://zenodo.org/api/records/4851223/versions/latest",
+  "latest_html": "https://zenodo.org/records/4851223/latest",
+  "versions": "https://zenodo.org/api/records/4851223/versions",
+  "draft": "https://zenodo.org/api/records/4851223/draft",
+  "access_links": "https://zenodo.org/api/records/4851223/access/links",
+  "access_grants": "https://zenodo.org/api/records/4851223/access/grants",
+  "access_users": "https://zenodo.org/api/records/4851223/access/users",
+  "access_request": "https://zenodo.org/api/records/4851223/access/request",
+  "access": "https://zenodo.org/api/records/4851223/access",
+  "communities": "https://zenodo.org/api/records/4851223/communities",
+  "communities-suggestions": "https://zenodo.org/api/records/4851223/communities-suggestions",
+  "request_deletion": "https://zenodo.org/api/records/4851223/request-deletion",
+  "file_modification": "https://zenodo.org/api/records/4851223/file-modification",
+  "quota_increase": "https://zenodo.org/api/records/4851223/quota-increase",
+  "requests": "https://zenodo.org/api/records/4851223/requests"
+ },
+ "updated": "2023-09-29T23:24:58.626169+00:00",
+ "recid": "4851223",
+ "revision": 8,
+ "files": [
+  {
+   "id": "0e7506ac-057a-436a-a6a5-a24d0c197a06",
+   "key": "NREL/OpenOA-v2.2.zip",
+   "size": 42087686,
+   "checksum": "md5:460c0dec58a7eac80637b07620a87278",
+   "links": {
+    "self": "https://zenodo.org/api/records/4851223/files/NREL/OpenOA-v2.2.zip/content"
+   }
+  }
+ ],
+ "swh": {},
+ "owners": [
+  {
+   "id": "100573"
+  }
+ ],
+ "status": "published",
+ "stats": {
+  "downloads": 646,
+  "unique_downloads": 623,
+  "views": 2192,
+  "unique_views": 2151,
+  "version_downloads": 14,
+  "version_unique_downloads": 14,
+  "version_unique_views": 40,
+  "version_views": 40
+ },
+ "state": "done",
+ "submitted": true
+}

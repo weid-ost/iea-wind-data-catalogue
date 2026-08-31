@@ -1,0 +1,247 @@
+{
+ "created": "2021-09-27T11:57:18.245153+00:00",
+ "modified": "2024-07-17T18:30:21.102933+00:00",
+ "id": 5529750,
+ "conceptrecid": "5529749",
+ "doi": "10.5281/zenodo.5529750",
+ "conceptdoi": "10.5281/zenodo.5529749",
+ "doi_url": "https://doi.org/10.5281/zenodo.5529750",
+ "metadata": {
+  "title": "CFARS Site Suitability Initiative: An Open Source Approach to Evaluate the Performance of Remote Sensing Device (RSD) Turbulence Intensity Measurements & Accelerate Industry Adoption of RSDs for Turbine Suitability Assessment",
+  "doi": "10.5281/zenodo.5529750",
+  "publication_date": "2021-09-27",
+  "description": "<p>In this white paper, the results from the Consortium for Advancing Remote Sensing&#39;s (CFARS) Site Suitability Subgroup&rsquo;s first benchmarking analysis of <em>unadjusted</em> RSD to cup anemometer turbulence intensity (TI) and reference cup-to-redundant cup measurement differences are presented. Eight organizations participated in the benchmarking activity, contributing a total of 35 datasets.</p>\n\n<p>This document introduces the Subgroup&rsquo;s forthcoming analysis, examining the performance of <em>adjusted</em> RSD TI measurements compared to cup anemometry.&nbsp; This will be the industry&rsquo;s first open source tool for comparing the performance of disparate RSD TI measurements and cup anemometry, the TI Adjustment Comparison Tool (TACT). TACT incorporates more than 15 adjustment techniques.&nbsp;Preliminary results from this benchmarking activity using TACT will be released to the industry in the Spring 2022 and summarized in detail in a forthcoming peer-reviewed article.</p>\n\n<p>Finally, to ensure the delivery of commercial value to open source science and tools generated in the Subgroup, a best practice collaboration framework to connect RSD TI benchmarking activities with RSD TI acceptance decision-making for site suitability assessment is introduced herein.&nbsp;The CFARS best practice framework provides a platform that enables data-driven decisions, on acceptable loads bias thresholds in a commercial setting. The framework encourages industry stakeholders to collaborate to further refine TACT, leverage the tool to advance industry understanding of the sensitivity of turbine fatigue load models to varying TI measurements and therefore de-risks the use of adjusted RSD measurements in site suitability assessment.</p>",
+  "access_right": "open",
+  "creators": [
+   {
+    "name": "St. Pé, Alexandra",
+    "affiliation": "RWE Renewables"
+   },
+   {
+    "name": "Weyer, Ellie",
+    "affiliation": "UL"
+   },
+   {
+    "name": "Campbell, Iain",
+    "affiliation": "RES"
+   },
+   {
+    "name": "Arntsen, Alexandra E.",
+    "affiliation": "NRG Systems"
+   },
+   {
+    "name": "Kondabala, Nikhil",
+    "affiliation": "APEX"
+   },
+   {
+    "name": "Mibus, Marcel",
+    "affiliation": "APEX"
+   },
+   {
+    "name": "Coulombe-Pontbriand, Philippe",
+    "affiliation": "TransAlta"
+   },
+   {
+    "name": "Black , Andrew H.",
+    "affiliation": "Leosphere, a Vaisala Company",
+    "orcid": "0000-0002-2319-4384"
+   },
+   {
+    "name": "Parker, Zach",
+    "affiliation": "Nordex"
+   },
+   {
+    "name": "Swytink-Binnema, Nigel",
+    "affiliation": "Nergica",
+    "orcid": "0000-0002-2402-0060"
+   },
+   {
+    "name": "Jolin, Nicolas",
+    "affiliation": "Nergica"
+   },
+   {
+    "name": "Goudeau, Barrett T.",
+    "affiliation": "NRG Systems"
+   },
+   {
+    "name": "Meklenborg Miltersen Slot, René",
+    "affiliation": "EMD"
+   },
+   {
+    "name": "Svenningsen, Lasse",
+    "affiliation": "EMD"
+   },
+   {
+    "name": "Lee, Joseph C. Y.",
+    "affiliation": "NREL"
+   },
+   {
+    "name": "Debnath, Mithu",
+    "affiliation": "NREL",
+    "orcid": "0000-0002-9446-4310"
+   },
+   {
+    "name": "Wylie, Scott",
+    "affiliation": "ZX Lidars"
+   },
+   {
+    "name": "Apgar, Dale",
+    "affiliation": "GE"
+   },
+   {
+    "name": "Fric, Thomas",
+    "affiliation": "GE"
+   },
+   {
+    "name": "Michaud, Dan",
+    "affiliation": "GE"
+   },
+   {
+    "name": "Smith, Elizabeth",
+    "affiliation": "RES"
+   },
+   {
+    "name": "Mazoyer, Paul",
+    "affiliation": "Leosphere, a Vaisala Company"
+   },
+   {
+    "name": "Tocco, Mackenzie",
+    "affiliation": "Avangrid"
+   },
+   {
+    "name": "Guillemin, Fabrice",
+    "affiliation": "IFPEN"
+   },
+   {
+    "name": "Teoh, Krystina",
+    "affiliation": "EDP"
+   },
+   {
+    "name": "Matthew Meyers",
+    "affiliation": "RWE"
+   }
+  ],
+  "keywords": [
+   "wind energy",
+   "wind lidar",
+   "open source",
+   "collaboration",
+   "resource assessment",
+   "atmospheric science"
+  ],
+  "references": [
+   "Knoop, Steven, et al. \"A 2-year intercomparison of continuous-wave focusing wind lidar and tall mast wind measurements at Cabauw.\" Atmospheric Measurement Techniques 14.3 (2021): 2219-2235.",
+   "ZX300 Remote Sensing Device Type-specific Classification, DNV report GLGH-4275 18 14741 258-R-0003, Rev. D. https://www.nrgsystems.com/assets/resources/DNV-GL-Classification-of-ZX-300-M.PDF",
+   "] IEC 61400-1 (2005), International Standard : Wind turbines, Part 1: Design Requirements. Edition 3.0 Amendment 2010, International Electrotechnical Commission",
+   "] DNV Joint Industry Project, Lidar Measured Turbulence Intensity. https://www.dnv.com/article/lidar-measured-turbulence-intensity-150071"
+  ],
+  "language": "eng",
+  "resource_type": {
+   "title": "Working paper",
+   "type": "publication",
+   "subtype": "workingpaper"
+  },
+  "license": {
+   "id": "cc-by-4.0"
+  },
+  "communities": [
+   {
+    "id": "cfars"
+   },
+   {
+    "id": "dswe"
+   },
+   {
+    "id": "ieawindtask32"
+   }
+  ],
+  "relations": {
+   "version": [
+    {
+     "index": 0,
+     "is_last": true,
+     "parent": {
+      "pid_type": "recid",
+      "pid_value": "5529749"
+     }
+    }
+   ]
+  }
+ },
+ "title": "CFARS Site Suitability Initiative: An Open Source Approach to Evaluate the Performance of Remote Sensing Device (RSD) Turbulence Intensity Measurements & Accelerate Industry Adoption of RSDs for Turbine Suitability Assessment",
+ "links": {
+  "self": "https://zenodo.org/api/records/5529750",
+  "self_html": "https://zenodo.org/records/5529750",
+  "preview_html": "https://zenodo.org/records/5529750?preview=1",
+  "doi": "https://doi.org/10.5281/zenodo.5529750",
+  "self_doi": "https://doi.org/10.5281/zenodo.5529750",
+  "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.5529750",
+  "reserve_doi": "https://zenodo.org/api/records/5529750/draft/pids/doi",
+  "parent": "https://zenodo.org/api/records/5529749",
+  "parent_html": "https://zenodo.org/records/5529749",
+  "parent_doi": "https://doi.org/10.5281/zenodo.5529749",
+  "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.5529749",
+  "self_iiif_manifest": "https://zenodo.org/api/iiif/record:5529750/manifest",
+  "self_iiif_sequence": "https://zenodo.org/api/iiif/record:5529750/sequence/default",
+  "files": "https://zenodo.org/api/records/5529750/files",
+  "media_files": "https://zenodo.org/api/records/5529750/media-files",
+  "thumbnails": {
+   "10": "https://zenodo.org/api/iiif/record:5529750:CFARS%20Site%20Suitability%20Initiative%20White%20Paper%2027SEPT2021.pdf/full/%5E10,/0/default.jpg",
+   "50": "https://zenodo.org/api/iiif/record:5529750:CFARS%20Site%20Suitability%20Initiative%20White%20Paper%2027SEPT2021.pdf/full/%5E50,/0/default.jpg",
+   "100": "https://zenodo.org/api/iiif/record:5529750:CFARS%20Site%20Suitability%20Initiative%20White%20Paper%2027SEPT2021.pdf/full/%5E100,/0/default.jpg",
+   "250": "https://zenodo.org/api/iiif/record:5529750:CFARS%20Site%20Suitability%20Initiative%20White%20Paper%2027SEPT2021.pdf/full/%5E250,/0/default.jpg",
+   "750": "https://zenodo.org/api/iiif/record:5529750:CFARS%20Site%20Suitability%20Initiative%20White%20Paper%2027SEPT2021.pdf/full/%5E750,/0/default.jpg",
+   "1200": "https://zenodo.org/api/iiif/record:5529750:CFARS%20Site%20Suitability%20Initiative%20White%20Paper%2027SEPT2021.pdf/full/%5E1200,/0/default.jpg"
+  },
+  "archive": "https://zenodo.org/api/records/5529750/files-archive",
+  "archive_media": "https://zenodo.org/api/records/5529750/media-files-archive",
+  "latest": "https://zenodo.org/api/records/5529750/versions/latest",
+  "latest_html": "https://zenodo.org/records/5529750/latest",
+  "versions": "https://zenodo.org/api/records/5529750/versions",
+  "draft": "https://zenodo.org/api/records/5529750/draft",
+  "access_links": "https://zenodo.org/api/records/5529750/access/links",
+  "access_grants": "https://zenodo.org/api/records/5529750/access/grants",
+  "access_users": "https://zenodo.org/api/records/5529750/access/users",
+  "access_request": "https://zenodo.org/api/records/5529750/access/request",
+  "access": "https://zenodo.org/api/records/5529750/access",
+  "communities": "https://zenodo.org/api/records/5529750/communities",
+  "communities-suggestions": "https://zenodo.org/api/records/5529750/communities-suggestions",
+  "request_deletion": "https://zenodo.org/api/records/5529750/request-deletion",
+  "file_modification": "https://zenodo.org/api/records/5529750/file-modification",
+  "quota_increase": "https://zenodo.org/api/records/5529750/quota-increase",
+  "requests": "https://zenodo.org/api/records/5529750/requests"
+ },
+ "updated": "2024-07-17T18:30:21.102933+00:00",
+ "recid": "5529750",
+ "revision": 9,
+ "files": [
+  {
+   "id": "cdfb553a-4720-447c-aa62-7144071cc694",
+   "key": "CFARS Site Suitability Initiative White Paper 27SEPT2021.pdf",
+   "size": 1180672,
+   "checksum": "md5:c2903983f168c7eb8f798a82fdf1188f",
+   "links": {
+    "self": "https://zenodo.org/api/records/5529750/files/CFARS%20Site%20Suitability%20Initiative%20White%20Paper%2027SEPT2021.pdf/content"
+   }
+  }
+ ],
+ "swh": {},
+ "owners": [
+  {
+   "id": "256089"
+  }
+ ],
+ "status": "published",
+ "stats": {
+  "downloads": 2336,
+  "unique_downloads": 1861,
+  "views": 3719,
+  "unique_views": 3505,
+  "version_downloads": 2330,
+  "version_unique_downloads": 1855,
+  "version_unique_views": 3485,
+  "version_views": 3699
+ },
+ "state": "done",
+ "submitted": true
+}

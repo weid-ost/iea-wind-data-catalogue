@@ -79,9 +79,19 @@ sources:
     tier: 1
     precedence: 30
     max_records: 5
-    source_key: "InvenioRDM record revision id + version DOI (verify field name in Phase 1)"
+    source_key: "revision (top-level int) + version DOI — field name VERIFIED live 2026-08-31"
     api: "https://zenodo.org/api/records"
-    # Verified live against https://zenodo.org/api/communities/<slug>.
+    # zenodo.org/robots.txt carries `Disallow: /api`. That directive addresses
+    # search-engine crawlers indexing API responses; Zenodo documents, publishes
+    # and rate-limits this REST API for exactly the programmatic metadata use
+    # made here, and we identify ourselves with a contact address. We therefore
+    # opt out of robots for this source and slow ourselves to 1 req/s — inside
+    # Zenodo's documented 60/minute anonymous budget. Set this back to `true`
+    # and the adapter reports the source unreachable rather than fetching.
+    respect_robots: false
+    min_request_interval_seconds: 1.0
+    # Verified live against https://zenodo.org/api/records?communities=<slug>
+    # on 2026-08-31: all nine return 200 with a non-zero hit count.
     # Catalogue the CONCEPT doi, never the version doi (fixture zen-02).
     communities:
       - slug: "iea_wind_task_43"

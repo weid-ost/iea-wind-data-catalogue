@@ -1,0 +1,87 @@
+{
+  "fixture_id": "zen-05-restricted-access",
+  "fixture_kind": "source_namespace",
+  "case": "Metadata public, files restricted",
+  "note": "access_right restricted -> access_status restricted, and Zenodo returns files: [] so there are no resources to link. Nothing about this record may imply a download.",
+  "raw": "raw/zen-05-restricted-access.json",
+  "identity_key": "10.5281/zenodo.18967947",
+  "source_system": "zenodo",
+  "source_id": "21037963",
+  "source_key": "3@10.5281/zenodo.21037963",
+  "source": {
+    "title": "WINSENT complex terrain benchmark - Phase I",
+    "notes": "<p>These files include the terrain data and measurement data that are released to the participants of the WINSENT complex terrain benchmark, which is one of the benchmarks of the IEA Wind Task 57 (JAM) activities. Within the benchmark the participants simulate in phase I the wind flow from the valley to the test site which is located on a forest-free plateau approx. 150m higher. The slope, known as the Albtrauf, is forested terrain, why different flow conditions with high and low leaf area index are taken into account. The detailed description of the benchmark is described here:  <a title=\"ReadTheDocs-WINSENT benchmark\" href=\"https://winsent-benchmark.readthedocs.io/en/latest/\" rel=\"nofollow noopener\">https://winsent-benchmark.readthedocs.io/en/latest/</a></p>",
+    "doi": "10.5281/zenodo.18967947",
+    "url": "https://zenodo.org/records/21037963",
+    "source_urls": [
+      "https://zenodo.org/records/21037963"
+    ],
+    "authors": [
+      {
+        "name": "Rettenmeier, Andreas",
+        "orcid": "0000-0002-9953-5392",
+        "affiliation": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)"
+      },
+      {
+        "name": "Lott, Sarah",
+        "affiliation": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)"
+      },
+      {
+        "name": "Knaus, Hermann",
+        "orcid": "0000-0002-6584-7363"
+      },
+      {
+        "name": "Hohaus, Jonas",
+        "orcid": "0009-0009-1403-5937"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2026-07-15",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "dataset",
+    "access_status": "restricted",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "relation": "IsVersionOf",
+        "identifier": "10.5281/zenodo.18967947",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [
+      "task-57"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "zenodo_record_id": 21037963,
+      "zenodo_concept_recid": "18967947",
+      "zenodo_version_doi": "10.5281/zenodo.21037963"
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5281-zenodo-18967947"
+}

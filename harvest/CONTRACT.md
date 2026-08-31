@@ -198,7 +198,7 @@ system** and, if unchanged, **skips the record and writes no event**.
 
 | Source | Key | Note |
 |---|---|---|
-| `zenodo` | record revision id (with the version DOI) | InvenioRDM bumps it on metadata edits — **verify the field name against a live payload** |
+| `zenodo` | `"<revision>@<version DOI>"` | **Verified live 2026-08-31**: the field is `revision` (top-level int); there is no `revision_id` on this API surface. The version DOI is load-bearing, not decoration — the identity is the *concept* DOI, so a new version is a different record whose revision counter restarts, and OpenOA's v3.1.4 and v3.2 are both `revision 4`. See the `harvest/adapters/zenodo.py` docstring |
 | `datacite` | `attributes.updated` | reflects client metadata pushes |
 | `crossref` | `deposited` | **not** `indexed`, which churns without content change |
 | `github` | default-branch SHA + latest release tag + `hash(description, topics, licence)` | no single trustworthy field exists |
@@ -395,6 +395,12 @@ Serialisation is `sort_keys=True, separators=(",", ":"), ensure_ascii=False`,
 
 Written as one line; shown pretty here. This is real output from
 `fixtures/zenodo/zen-01-canonical.json`.
+
+> `zen-01` is a hand-built reference payload, and its `source_key` of `"3"` is
+> the bare revision. A payload harvested from the live API produces
+> `"3@10.5281/zenodo.1234567"` — §3. The shape of the event is what this example
+> is for; `map()` copies whatever key `harvest()` handed it, so both are valid
+> lines.
 
 ```json
 {

@@ -1,0 +1,16 @@
+{
+ "status": 410,
+ "message": "Record deleted",
+ "tombstone": {
+  "note": "Spam record, removed by Zenodo staff.",
+  "removed_by": {
+   "user": "292176"
+  },
+  "removal_date": "2022-02-22T10:14:11.602896",
+  "citation_text": "",
+  "is_visible": true,
+  "removal_reason": {
+   "id": "spam"
+  }
+ }
+}

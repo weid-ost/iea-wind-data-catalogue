@@ -1,0 +1,105 @@
+{
+  "fixture_id": "zen-08-no-license",
+  "fixture_kind": "source_namespace",
+  "case": "Licence absent from the payload entirely",
+  "note": "metadata has no `license` key at all. license_raw is therefore omitted and license_id is notspecified with license_mapped true — the source said nothing, and nothing went wrong. An open licence is NEVER inferred. The flagged case is a non-empty licence string the table does not recognise; see test_zenodo.py::TestLicences.",
+  "raw": "raw/zen-08-no-license.json",
+  "identity_key": "10.5281/zenodo.3773128",
+  "source_system": "zenodo",
+  "source_id": "3773129",
+  "source_key": "11@10.5281/zenodo.3773129",
+  "source": {
+    "title": "OWA Wake Modelling Challenge Scripts",
+    "notes": "<p>This repository contains the model evaluation scripts developed in the Offshore Wind Accelerator (OWA) Wake Modelling Challenge. A benchmarking process comprising 5 wind farms allows wake model developers and end-users test their array efficiency prediction methodologies over a wide range of wind climate and wind farm layout conditions.</p>\n\n<p>The project is integrated in the Phase 3 of the IEA Task 31 Wakebench international framework for wind farm modeling and evaluation.</p>\n\n<p>The dataset can be found here:</p>\n\n<p>Sanz Rodrigo, Javier, et al. (2020). OWA Wake Modelling Challenge Dataset (Version 1.0). Zenodo. <a href=\"http://doi.org/10.5281/zenodo.3715198\" rel=\"nofollow noopener\">http://doi.org/10.5281/zenodo.3715198</a></p>\n\n<p>The results of the Challenge are published here:</p>\n\n<p>Sanz Rodrigo J, Borbón Guillén F, Fernandes Correia P M, García Hevia B, Schlez W, Schmidt S, Basu S, Li B, Nielsen P, Cathelain M, Dall’Ozzo C, Grignon L, Pullinger D (2020) Validation of Meso-Wake Models for Array Efficiency Prediction Using Operational Data from Five Offshore Wind Farms. J. Phys.: Conf. Ser., under review</p>\n\n<p>Acknowledgements: The authors would like to thank Carbon Trust and the OWA Technical Working Group for their support providing funding, operational data and guidance throughout the project. We would like to thank all the benchmark participants for their simulations and in-kind support in fine-tuning the benchmark set-up and evaluation methodology.</p>",
+    "doi": "10.5281/zenodo.3773128",
+    "url": "https://zenodo.org/records/3773129",
+    "source_urls": [
+      "https://zenodo.org/records/3773129"
+    ],
+    "authors": [
+      {
+        "name": "Sanz Rodrigo, Javier",
+        "orcid": "0000-0003-0291-6429",
+        "affiliation": "CENER"
+      },
+      {
+        "name": "Gancarski, Pawel",
+        "orcid": "0000-0001-9198-8429",
+        "affiliation": "CENER"
+      },
+      {
+        "name": "Fernandes Correia, Pedro Miguel",
+        "affiliation": "CENER"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2020-04-28",
+    "version": "v2.0.1",
+    "license_id": "notspecified",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [
+      "array efficiency",
+      "OWA",
+      "wake modelling",
+      "mesocale modelling"
+    ],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/3773129/files/CENER-EPR/OWAbench-v2.0.1.zip",
+        "name": "CENER-EPR/OWAbench-v2.0.1.zip",
+        "format": "zip"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "relation": "IsVersionOf",
+        "identifier": "10.5281/zenodo.3773128",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "isSupplementTo",
+        "identifier": "https://github.com/CENER-EPR/OWAbench/tree/v2.0.1",
+        "identifier_type": "URL"
+      },
+      {
+        "relation": "references",
+        "identifier": "10.5281/zenodo.3715198",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [
+      "task-31"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "zenodo_record_id": 3773129,
+      "zenodo_concept_recid": "3773128",
+      "zenodo_version_doi": "10.5281/zenodo.3773129"
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5281-zenodo-3773128"
+}
