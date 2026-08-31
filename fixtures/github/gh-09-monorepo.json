@@ -1,0 +1,81 @@
+{
+  "fixture_id": "gh-09-monorepo",
+  "fixture_kind": "source_namespace",
+  "case": "One repo holding three distinct reference turbines: one record, limitation noted",
+  "note": "Captured live 2026-08-31. The repository contains the 6.3 MW, 6.9 MW and 7.2 MW land-based reference turbines — three artifacts, one record. That is the documented v1 granularity limitation (gh-09), not a bug: splitting it needs a per-artifact identity the repository does not provide.",
+  "raw": "raw/gh-09-monorepo.json",
+  "identity_key": "github|IEAWindSystems/IEA-LB-RWT",
+  "expected_slug": "github-ieawindsystems-iea-lb-rwt",
+  "source_system": "github",
+  "source_id": "IEAWindSystems/IEA-LB-RWT",
+  "source_key": "578731687313591bcc35ecb7179718b7e9819fa0:v0.0.1:d8bbc4b37aca2e77",
+  "expected_included": true,
+  "source": {
+    "title": "IEAWindSystems/IEA-LB-RWT",
+    "notes": "Repository for 6.3, 6.9, and 7.2 MW land-based reference wind turbines",
+    "url": "https://github.com/IEAWindSystems/IEA-LB-RWT",
+    "source_urls": [
+      "https://github.com/IEAWindSystems/IEA-LB-RWT"
+    ],
+    "authors": [],
+    "publisher": "GitHub",
+    "published_date": "2026-06-22",
+    "version": "v0.0.1",
+    "license_raw": "Apache-2.0",
+    "license_id": "apache",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://github.com/IEAWindSystems/IEA-LB-RWT",
+        "name": "Source repository",
+        "format": "git"
+      },
+      {
+        "url": "https://github.com/IEAWindSystems/IEA-LB-RWT/releases/tag/v0.0.1",
+        "name": "Release v0.0.1",
+        "format": "release"
+      }
+    ],
+    "related_identifiers": [],
+    "iea_task": [
+      "task-37"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "github_repo_id": 1233865884,
+      "github_full_name": "IEAWindSystems/IEA-LB-RWT",
+      "github_owner": "IEAWindSystems",
+      "github_default_branch": "main",
+      "github_head_sha": "578731687313591bcc35ecb7179718b7e9819fa0",
+      "github_archived": false,
+      "github_fork": false,
+      "github_size_kb": 20939,
+      "github_language": "F*"
+    }
+  },
+  "provenance": {
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    },
+    "version": {
+      "extraction_method": "api"
+    }
+  }
+}

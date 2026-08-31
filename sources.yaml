@@ -202,18 +202,33 @@ sources:
     api: "https://api.github.com"
     # Authenticate with the Actions GITHUB_TOKEN: 5,000/hr vs 60/hr.
     token_env: "GITHUB_TOKEN"
-    orgs:                                        # all verified live
-      - login: "IEAWindSystems"
+    # Re-verified live on 2026-08-31 against GET /orgs/<login>: every login
+    # below returned 200. `IEAWindTask43` and `IEAWindTask32` do NOT exist —
+    # Task 43's org is `IEA-Task-43`. Never guess an org name from a task
+    # number, exactly as with the iea-wind.org task slugs.
+    orgs:
+      - login: "IEAWindSystems"                  # verified: 12 public repos
         title: "IEA Wind Systems"
         iea_task: ["task-37"]
-      - login: "IEA-Task-43"
+      - login: "IEA-Task-43"                     # verified: 7 public repos
         title: "IEA Wind Digitalization (Task 43)"
         iea_task: ["task-43"]
-      - login: "IEAWindTask37"
+      - login: "IEAWindTask37"                   # verified: 1 public repo
         title: "IEA Wind Task 37"
         iea_task: ["task-37"]
+      - login: "IEAWindTask52"                   # verified: 3 public repos
+        title: "IEA Wind Task 52"
+        iea_task: ["task-52"]
+      - login: "IEA-Wind-Task-32"                # verified: 13 public repos
+        title: "IEA Wind Task 32 - Wind Lidar"
+        iea_task: ["task-32"]
+    # Repositories named by path. Fetched through GET /repos/<owner>/<name>,
+    # which follows GitHub's rename/transfer 301 (fixture gh-07), and the home
+    # for task code living in an individual's account (fixture gh-08).
+    repos: []
     # Code also lives in individuals' accounts (fixture gh-08); topic search
-    # is the only way to reach it.
+    # is the other way to reach it. Reached only once org enumeration has not
+    # already filled max_records, which at five it always does.
     topics:
       - "iea-wind"
       - "iea-task-43"

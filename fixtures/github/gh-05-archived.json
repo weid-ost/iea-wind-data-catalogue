@@ -1,0 +1,73 @@
+{
+  "fixture_id": "gh-05-archived",
+  "fixture_kind": "source_namespace",
+  "case": "Archived repo: marked and retained, never deleted",
+  "note": "INVENTED, marked: IEA-Task-43/glossary is live; `archived` was flipped to true on the captured payload. source.archived becomes extras.lifecycle_state: archived on the materialised record, and the record is kept (ADR-0027). Note the ADR-0026 limitation: archiving alone does not move the source key, so the flag lands with the next real change.",
+  "invented": true,
+  "raw": "raw/gh-05-archived.json",
+  "identity_key": "github|IEA-Task-43/glossary",
+  "expected_slug": "github-iea-task-43-glossary",
+  "source_system": "github",
+  "source_id": "IEA-Task-43/glossary",
+  "source_key": "a2e75343da813ad8ee2b79313dc4f73f54684847::6a6642c9ca099f83",
+  "expected_included": true,
+  "source": {
+    "title": "IEA-Task-43/glossary",
+    "notes": "Glossary of common information science terms used in wind energy: https://iea-task-43.gitbook.io/iea-task-43-glossary/",
+    "url": "https://github.com/IEA-Task-43/glossary",
+    "source_urls": [
+      "https://github.com/IEA-Task-43/glossary"
+    ],
+    "authors": [],
+    "publisher": "GitHub",
+    "published_date": "2021-09-08",
+    "license_raw": "MIT",
+    "license_id": "mit",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://github.com/IEA-Task-43/glossary",
+        "name": "Source repository",
+        "format": "git"
+      }
+    ],
+    "related_identifiers": [],
+    "iea_task": [
+      "task-43"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "github_repo_id": 404417314,
+      "github_full_name": "IEA-Task-43/glossary",
+      "github_owner": "IEA-Task-43",
+      "github_default_branch": "main",
+      "github_head_sha": "a2e75343da813ad8ee2b79313dc4f73f54684847",
+      "github_archived": true,
+      "github_fork": false,
+      "github_size_kb": 340
+    },
+    "archived": true
+  },
+  "provenance": {
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  }
+}

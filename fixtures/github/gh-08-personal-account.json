@@ -1,0 +1,97 @@
+{
+  "fixture_id": "gh-08-personal-account",
+  "fixture_kind": "source_namespace",
+  "case": "Task code in an individual's account: reachable by topic search, not org enumeration",
+  "note": "Captured live 2026-08-31. Found through GET /search/repositories?q=topic:iea-wind, which at the time returned exactly two repositories, one of them in a User account. No org config claims it, so source.iea_task is empty and the task attribution is a curator's local annotation to make.",
+  "raw": "raw/gh-08-personal-account.json",
+  "identity_key": "github|ksk5429/numerical_model",
+  "expected_slug": "github-ksk5429-numerical_model",
+  "source_system": "github",
+  "source_id": "ksk5429/numerical_model",
+  "source_key": "532dfa93020b4ceba467c12bedc9f9cabb4c0ef4:v1.0.0:7728d81627639a7a",
+  "expected_included": true,
+  "source": {
+    "title": "ksk5429/numerical_model",
+    "notes": "Op^3 (OptumGX-OpenSeesPy-OpenFAST) integrated numerical modeling framework for offshore wind turbines. 11 examples (NREL 5MW + IEA 15MW + Gunsan + 4 isolation tests + 2 jackets), 33/33 analyses passing, fully open-source path with industry-standard 6x6 stiffness formulas (DNV, ISO, API, OWA).",
+    "url": "https://github.com/ksk5429/numerical_model",
+    "source_urls": [
+      "https://github.com/ksk5429/numerical_model"
+    ],
+    "authors": [],
+    "publisher": "GitHub",
+    "published_date": "2026-04-16",
+    "version": "v1.0.0",
+    "license_raw": "Apache-2.0",
+    "license_id": "apache",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [
+      "digital-twin",
+      "iea-wind",
+      "jacket",
+      "monopile",
+      "nrel",
+      "offshore-wind",
+      "openfast",
+      "openseespy",
+      "optumgx",
+      "phd-dissertation",
+      "plaxis",
+      "scour",
+      "scour-monitoring",
+      "soil-structure-interaction",
+      "structural-dynamics",
+      "suction-bucket",
+      "tripod"
+    ],
+    "resources": [
+      {
+        "url": "https://github.com/ksk5429/numerical_model",
+        "name": "Source repository",
+        "format": "git"
+      },
+      {
+        "url": "https://github.com/ksk5429/numerical_model/releases/tag/v1.0.0",
+        "name": "Release v1.0.0",
+        "format": "release"
+      }
+    ],
+    "related_identifiers": [],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "github_repo_id": 1204628094,
+      "github_full_name": "ksk5429/numerical_model",
+      "github_owner": "ksk5429",
+      "github_default_branch": "main",
+      "github_head_sha": "532dfa93020b4ceba467c12bedc9f9cabb4c0ef4",
+      "github_archived": false,
+      "github_fork": false,
+      "github_size_kb": 21444,
+      "github_language": "Python"
+    }
+  },
+  "provenance": {
+    "keywords": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    },
+    "version": {
+      "extraction_method": "api"
+    }
+  }
+}

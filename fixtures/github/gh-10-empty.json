@@ -1,0 +1,67 @@
+{
+  "fixture_id": "gh-10-empty",
+  "fixture_kind": "source_namespace",
+  "case": "Org meta-repository with no description and no README: below the content threshold",
+  "note": "Captured live 2026-08-31. IEAWindTask37/.github holds community health files, not an artifact. It is excluded before any record exists.",
+  "raw": "raw/gh-10-empty.json",
+  "identity_key": "github|IEAWindTask37/.github",
+  "expected_slug": "github-ieawindtask37-github",
+  "source_system": "github",
+  "source_id": "IEAWindTask37/.github",
+  "source_key": "96a6a35fe46b1f642401038dfe4937508385e035::b8f94722f34071de",
+  "expected_included": false,
+  "expected_exclusion_reason": "GitHub meta-repository, not an artifact",
+  "source": {
+    "title": "IEAWindTask37/.github",
+    "url": "https://github.com/IEAWindTask37/.github",
+    "source_urls": [
+      "https://github.com/IEAWindTask37/.github"
+    ],
+    "authors": [],
+    "publisher": "GitHub",
+    "published_date": "2025-01-16",
+    "license_id": "notspecified",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://github.com/IEAWindTask37/.github",
+        "name": "Source repository",
+        "format": "git"
+      }
+    ],
+    "related_identifiers": [],
+    "iea_task": [
+      "task-37"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "github_repo_id": 917873510,
+      "github_full_name": "IEAWindTask37/.github",
+      "github_owner": "IEAWindTask37",
+      "github_default_branch": "main",
+      "github_head_sha": "96a6a35fe46b1f642401038dfe4937508385e035",
+      "github_archived": false,
+      "github_fork": false,
+      "github_size_kb": 3
+    }
+  },
+  "provenance": {
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  }
+}

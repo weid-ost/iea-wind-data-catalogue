@@ -151,7 +151,15 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
         "curator_notes": resolved.local.get("curator_notes") or None,
         "local_links": resolved.local.get("links") or None,
         "provenance": provenance or None,
-        "lifecycle_state": "withdrawn" if resolved.withdrawn else "active",
+        # LIFECYCLE_STATES names three states. Withdrawal wins; "archived" is
+        # what a source says about an artifact it still publishes but no longer
+        # maintains — an archived GitHub repository (fixture gh-05). Marked and
+        # retained, never deleted (ADR-0027).
+        "lifecycle_state": (
+            "withdrawn"
+            if resolved.withdrawn
+            else ("archived" if effective.get("archived") else "active")
+        ),
         "withdrawn": resolved.withdrawn,
         "withdrawn_at": resolved.withdrawn_at,
         "first_seen": resolved.first_seen,

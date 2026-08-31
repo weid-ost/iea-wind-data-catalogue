@@ -1,0 +1,81 @@
+{
+  "fixture_id": "gh-01-canonical",
+  "fixture_kind": "source_namespace",
+  "case": "Active repo in a task org: description, BSD-3-Clause licence, tagged release",
+  "note": "Captured live 2026-08-31. resource_kind is software; the source key is the default-branch head SHA, the latest release tag and a hash of description, topics and licence — nothing that churns.",
+  "raw": "raw/gh-01-canonical.json",
+  "identity_key": "github|IEA-Task-43/digital_wra_data_standard",
+  "expected_slug": "github-iea-task-43-digital_wra_data_standard",
+  "source_system": "github",
+  "source_id": "IEA-Task-43/digital_wra_data_standard",
+  "source_key": "14841ca8e8799149177e5591a8ee71ee649bb783:v1.4.0-2025.06:1841dd919bada8bd",
+  "expected_included": true,
+  "source": {
+    "title": "IEA-Task-43/digital_wra_data_standard",
+    "notes": "IEA Task 43: pre-construction energy estimate data standard repository",
+    "url": "https://github.com/IEA-Task-43/digital_wra_data_standard",
+    "source_urls": [
+      "https://github.com/IEA-Task-43/digital_wra_data_standard"
+    ],
+    "authors": [],
+    "publisher": "GitHub",
+    "published_date": "2025-06-16",
+    "version": "v1.4.0-2025.06",
+    "license_raw": "BSD-3-Clause",
+    "license_id": "bsd-3-clause",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://github.com/IEA-Task-43/digital_wra_data_standard",
+        "name": "Source repository",
+        "format": "git"
+      },
+      {
+        "url": "https://github.com/IEA-Task-43/digital_wra_data_standard/releases/tag/v1.4.0-2025.06",
+        "name": "Release v1.4.0-2025.06",
+        "format": "release"
+      }
+    ],
+    "related_identifiers": [],
+    "iea_task": [
+      "task-43"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "github_repo_id": 225719306,
+      "github_full_name": "IEA-Task-43/digital_wra_data_standard",
+      "github_owner": "IEA-Task-43",
+      "github_default_branch": "master",
+      "github_head_sha": "14841ca8e8799149177e5591a8ee71ee649bb783",
+      "github_archived": false,
+      "github_fork": false,
+      "github_size_kb": 5486,
+      "github_language": "Jupyter Notebook"
+    }
+  },
+  "provenance": {
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    },
+    "version": {
+      "extraction_method": "api"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "fixture_id": "gh-04-fork",
+  "fixture_kind": "source_namespace",
+  "case": "Fork of a reference-turbine repo: excluded by default so the catalogue is not fifty copies",
+  "note": "Captured live 2026-08-31. `source` records what map() WOULD produce; the point of the fixture is that harvest() never gets there, because exclusion_reason() returns 'fork' first.",
+  "raw": "raw/gh-04-fork.json",
+  "identity_key": "github|IEAWindSystems/iea37-wflo-casestudies",
+  "expected_slug": "github-ieawindsystems-iea37-wflo-casestudies",
+  "source_system": "github",
+  "source_id": "IEAWindSystems/iea37-wflo-casestudies",
+  "source_key": "267f6e5d2906400b2ee0a8ff533da7ebcc4bb47a::3ef6249373f408c9",
+  "expected_included": false,
+  "expected_exclusion_reason": "fork",
+  "source": {
+    "title": "IEAWindSystems/iea37-wflo-casestudies",
+    "notes": "Two case studies designed to study variability in optimization approach and wake models for wind farm layout optimization. In accordance with IEA Task 37.",
+    "url": "https://github.com/IEAWindSystems/iea37-wflo-casestudies",
+    "source_urls": [
+      "https://github.com/IEAWindSystems/iea37-wflo-casestudies"
+    ],
+    "authors": [],
+    "publisher": "GitHub",
+    "published_date": "2020-07-31",
+    "license_id": "notspecified",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://github.com/IEAWindSystems/iea37-wflo-casestudies",
+        "name": "Source repository",
+        "format": "git"
+      }
+    ],
+    "related_identifiers": [],
+    "iea_task": [
+      "task-37"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "github_repo_id": 283947278,
+      "github_full_name": "IEAWindSystems/iea37-wflo-casestudies",
+      "github_owner": "IEAWindSystems",
+      "github_default_branch": "master",
+      "github_head_sha": "267f6e5d2906400b2ee0a8ff533da7ebcc4bb47a",
+      "github_archived": false,
+      "github_fork": true,
+      "github_size_kb": 10032,
+      "github_language": "Python"
+    }
+  },
+  "provenance": {
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  }
+}

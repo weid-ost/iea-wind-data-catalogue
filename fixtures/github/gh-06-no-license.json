@@ -1,0 +1,71 @@
+{
+  "fixture_id": "gh-06-no-license",
+  "fixture_kind": "source_namespace",
+  "case": "license: null — the record says 'no licence stated', it never infers an open one",
+  "note": "Captured live 2026-08-31. license_id is notspecified and license_raw is absent entirely, so materialize omits license_mapped: nothing went wrong, the source simply stated no licence.",
+  "raw": "raw/gh-06-no-license.json",
+  "identity_key": "github|IEA-Task-43/Standards_Mapping",
+  "expected_slug": "github-iea-task-43-standards_mapping",
+  "source_system": "github",
+  "source_id": "IEA-Task-43/Standards_Mapping",
+  "source_key": "dda400dbcbde052b3c7f003087640a53541d1384::ef0e42e0d07180c4",
+  "expected_included": true,
+  "source": {
+    "title": "IEA-Task-43/Standards_Mapping",
+    "notes": "Results of \"An Investigation of the Standards Landscape in the Wind Energy Sector\"",
+    "url": "https://github.com/IEA-Task-43/Standards_Mapping",
+    "source_urls": [
+      "https://github.com/IEA-Task-43/Standards_Mapping"
+    ],
+    "authors": [],
+    "publisher": "GitHub",
+    "published_date": "2025-03-09",
+    "license_id": "notspecified",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://github.com/IEA-Task-43/Standards_Mapping",
+        "name": "Source repository",
+        "format": "git"
+      }
+    ],
+    "related_identifiers": [],
+    "iea_task": [
+      "task-43"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "github_repo_id": 945403064,
+      "github_full_name": "IEA-Task-43/Standards_Mapping",
+      "github_owner": "IEA-Task-43",
+      "github_default_branch": "master",
+      "github_head_sha": "dda400dbcbde052b3c7f003087640a53541d1384",
+      "github_archived": false,
+      "github_fork": false,
+      "github_size_kb": 136,
+      "github_language": "Python"
+    }
+  },
+  "provenance": {
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "fixture_id": "gh-02-zenodo-badge",
+  "fixture_kind": "source_namespace",
+  "case": "README Zenodo badge: the free join key between the code and the archived release",
+  "note": "Captured live 2026-08-31. The badge carries the VERSION doi 10.5281/zenodo.15191297; DataCite declares it IsVersionOf 10.5281/zenodo.15191296, so the CONCEPT doi becomes the identity and the version doi is kept as a HasVersion related identifier. That is what makes the record dedup against the Zenodo one.",
+  "raw": "raw/gh-02-zenodo-badge.json",
+  "identity_key": "10.5281/zenodo.15191296",
+  "expected_slug": "doi-10-5281-zenodo-15191296",
+  "source_system": "github",
+  "source_id": "IEAWindSystems/windIO",
+  "source_key": "4a61df862d56a12b328e76be1261eaa5d622eb84:2.1.1:0de205c28644697a",
+  "expected_included": true,
+  "source": {
+    "title": "IEAWindSystems/windIO",
+    "notes": "windIO is a data format for inputs and outputs to wind energy system computational models.",
+    "doi": "10.5281/zenodo.15191296",
+    "url": "https://github.com/IEAWindSystems/windIO",
+    "source_urls": [
+      "https://github.com/IEAWindSystems/windIO"
+    ],
+    "authors": [],
+    "publisher": "GitHub",
+    "published_date": "2026-02-25",
+    "version": "2.1.1",
+    "license_raw": "Apache-2.0",
+    "license_id": "apache",
+    "resource_kind": "software",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://github.com/IEAWindSystems/windIO",
+        "name": "Source repository",
+        "format": "git"
+      },
+      {
+        "url": "https://github.com/IEAWindSystems/windIO/releases/tag/2.1.1",
+        "name": "Release 2.1.1",
+        "format": "release"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "relation": "HasVersion",
+        "identifier": "10.5281/zenodo.15191297",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [
+      "task-37"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "github_repo_id": 263153228,
+      "github_full_name": "IEAWindSystems/windIO",
+      "github_owner": "IEAWindSystems",
+      "github_default_branch": "main",
+      "github_head_sha": "4a61df862d56a12b328e76be1261eaa5d622eb84",
+      "github_archived": false,
+      "github_fork": false,
+      "github_size_kb": 5615,
+      "github_language": "Jupyter Notebook",
+      "github_homepage": "https://ieawindsystems.github.io/windIO/"
+    }
+  },
+  "provenance": {
+    "doi": {
+      "extraction_method": "pattern"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    },
+    "version": {
+      "extraction_method": "api"
+    }
+  }
+}
