@@ -1,0 +1,97 @@
+{
+ "green": {
+  "50": "#F2F9F4",
+  "100": "#E7F2EA",
+  "200": "#D5E4DA",
+  "300": "#BDCCC2",
+  "400": "#9DB9A7",
+  "500": "#7A9C86",
+  "600": "#5B8069",
+  "700": "#436751",
+  "800": "#304E3C",
+  "900": "#21372A",
+  "950": "#15251B"
+ },
+ "neutral": {
+  "0": "#FCFEFD",
+  "50": "#F6F9F7",
+  "100": "#EDF1EE",
+  "200": "#DFE5E1",
+  "300": "#CED4D0",
+  "400": "#ACB3AE",
+  "500": "#878E8A",
+  "600": "#666C68",
+  "700": "#505652",
+  "800": "#383D3A",
+  "900": "#232824",
+  "950": "#141915",
+  "1000": "#0B100D"
+ },
+ "light": {
+  "surface": "#FCFEFD",
+  "raised": "#FFFFFF",
+  "sunken": "#EDF1EE",
+  "text1": "#141915",
+  "text2": "#666E69",
+  "action": "#587D66",
+  "action_hover": "#466C55",
+  "action_active": "#3A614A",
+  "focus": "#5E9F78",
+  "border": "#DFE5E1",
+  "border_strong": "#CED4D0"
+ },
+ "dark": {
+  "surface": "#0E1411",
+  "raised": "#171E19",
+  "sunken": "#080C09",
+  "text1": "#E4E9E6",
+  "text2": "#7F8782",
+  "action": "#558A6A",
+  "action_hover": "#649979",
+  "focus": "#68B387",
+  "border": "#29302B",
+  "border_strong": "#3D4440"
+ },
+ "status": {
+  "info": {
+   "text": "#3D78B2",
+   "bg": "#E2F2FF",
+   "border": "#A1C1E4",
+   "dark_text": "#5389BF",
+   "dark_bg": "#172534",
+   "dark_border": "#334F6D"
+  },
+  "warning": {
+   "text": "#976D16",
+   "bg": "#FBEEDA",
+   "border": "#D2BA92",
+   "dark_text": "#A67F38",
+   "dark_bg": "#2D220F",
+   "dark_border": "#5E4925"
+  },
+  "danger": {
+   "text": "#B05D54",
+   "bg": "#FFE9E5",
+   "border": "#E2B0A9",
+   "dark_text": "#BE7168",
+   "dark_bg": "#331D1B",
+   "dark_border": "#6A403B"
+  },
+  "success": {
+   "text": "#587D66",
+   "bg": "#E3F6E9",
+   "border": "#A4C8B1",
+   "dark_text": "#558A6A",
+   "dark_bg": "#18281E",
+   "dark_border": "#355542"
+  },
+  "llm": {
+   "text": "#8766AC",
+   "bg": "#F5ECFF",
+   "border": "#C6B5DD",
+   "dark_text": "#9779BA",
+   "dark_bg": "#282032",
+   "dark_border": "#554568"
+  }
+ }
+}

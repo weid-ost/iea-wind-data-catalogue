@@ -1,0 +1,692 @@
+{
+  "$description": "IEA Wind Catalogue design tokens. W3C Design Tokens (DTCG) format. Anchor: Farrow & Ball 'Teresa's Green' No.236 \u2248 #BDCCC2 (screen approximation; oklch(0.831 0.021 156.7)). All ramps hue-locked to H=156.7; accessible variants solved computationally for WCAG 2.2 AA. Rev 2: surfaces are exclusively neutral (colour never fills); semantic colour appears as left accent bars, outline badges, text, icons and focus only; dark neutrals near-achromatic.",
+  "color": {
+    "green": {
+      "50": {
+        "$type": "color",
+        "$value": "#F2F9F4"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#E7F2EA"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#D5E4DA"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#BDCCC2"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#9DB9A7"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#7A9C86"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#5B8069"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#436751"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#304E3C"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#21372A"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#15251B"
+      }
+    },
+    "neutral": {
+      "0": {
+        "$type": "color",
+        "$value": "#FCFEFD"
+      },
+      "50": {
+        "$type": "color",
+        "$value": "#F7F9F8"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#EEF1EF"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#E1E4E2"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#D0D3D1"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#AFB2B0"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#8A8D8B"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#686B69"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#525553"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#3A3C3B"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#252726"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#161817"
+      },
+      "1000": {
+        "$type": "color",
+        "$value": "#0D0F0E"
+      }
+    },
+    "info": {
+      "text": {
+        "$type": "color",
+        "$value": "#3D78B2"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#E2F2FF"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#A1C1E4"
+      },
+      "dark-text": {
+        "$type": "color",
+        "$value": "#5389BF"
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "#172534"
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "#334F6D"
+      }
+    },
+    "warning": {
+      "text": {
+        "$type": "color",
+        "$value": "#976D16"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#FBEEDA"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#D2BA92"
+      },
+      "dark-text": {
+        "$type": "color",
+        "$value": "#A67F38"
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "#2D220F"
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "#5E4925"
+      }
+    },
+    "danger": {
+      "text": {
+        "$type": "color",
+        "$value": "#B05D54"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#FFE9E5"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#E2B0A9"
+      },
+      "dark-text": {
+        "$type": "color",
+        "$value": "#BE7168"
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "#331D1B"
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "#6A403B"
+      }
+    },
+    "violet": {
+      "text": {
+        "$type": "color",
+        "$value": "#8766AC",
+        "$description": "machine-inference provenance hue"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#F5ECFF"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#C6B5DD"
+      },
+      "dark-text": {
+        "$type": "color",
+        "$value": "#9779BA"
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "#282032"
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "#554568"
+      }
+    }
+  },
+  "theme": {
+    "light": {
+      "surface": {
+        "page": {
+          "$type": "color",
+          "$value": "#FCFEFD"
+        },
+        "raised": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        },
+        "sunken": {
+          "$type": "color",
+          "$value": "#EDF1EE"
+        }
+      },
+      "text": {
+        "primary": {
+          "$type": "color",
+          "$value": "#141915"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "#666E69"
+        },
+        "on-action": {
+          "$type": "color",
+          "$value": "#FFFFFF"
+        },
+        "link": {
+          "$type": "color",
+          "$value": "#587D66"
+        }
+      },
+      "action": {
+        "primary": {
+          "$type": "color",
+          "$value": "#587D66",
+          "$description": "solved: 4.63:1 on white"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "#466C55"
+        },
+        "active": {
+          "$type": "color",
+          "$value": "#3A614A"
+        },
+        "disabled-bg": {
+          "$type": "color",
+          "$value": "{color.neutral.200}"
+        },
+        "disabled-text": {
+          "$type": "color",
+          "$value": "{color.neutral.500}"
+        }
+      },
+      "border": {
+        "subtle": {
+          "$type": "color",
+          "$value": "#DFE5E1",
+          "$description": "decorative only"
+        },
+        "strong": {
+          "$type": "color",
+          "$value": "#CED4D0"
+        },
+        "input": {
+          "$type": "color",
+          "$value": "{color.neutral.500}"
+        },
+        "focus": {
+          "$type": "color",
+          "$value": "#5E9F78",
+          "$description": "solved: 3.13:1 on white"
+        }
+      }
+    },
+    "dark": {
+      "surface": {
+        "page": {
+          "$type": "color",
+          "$value": "#121312"
+        },
+        "raised": {
+          "$type": "color",
+          "$value": "#1A1C1B"
+        },
+        "sunken": {
+          "$type": "color",
+          "$value": "#0A0C0B"
+        }
+      },
+      "text": {
+        "primary": {
+          "$type": "color",
+          "$value": "#E6E9E7"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "#828683"
+        },
+        "on-action": {
+          "$type": "color",
+          "$value": "{color.neutral.1000}"
+        },
+        "link": {
+          "$type": "color",
+          "$value": "#558A6A"
+        }
+      },
+      "action": {
+        "primary": {
+          "$type": "color",
+          "$value": "#558A6A",
+          "$description": "solved: 4.64:1 on page AND 4.78:1 under near-black label"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "#649979"
+        },
+        "active": {
+          "$type": "color",
+          "$value": "#558A6A"
+        },
+        "disabled-bg": {
+          "$type": "color",
+          "$value": "{color.neutral.800}"
+        },
+        "disabled-text": {
+          "$type": "color",
+          "$value": "{color.neutral.500}"
+        }
+      },
+      "border": {
+        "subtle": {
+          "$type": "color",
+          "$value": "#2C2E2D"
+        },
+        "strong": {
+          "$type": "color",
+          "$value": "#414341"
+        },
+        "input": {
+          "$type": "color",
+          "$value": "{color.neutral.400}"
+        },
+        "focus": {
+          "$type": "color",
+          "$value": "#68B387"
+        }
+      }
+    }
+  },
+  "component": {
+    "badge": {
+      "$description": "Outline badges only \u2014 coloured 1px border + coloured text on transparent bg; icon + label always, never colour alone.",
+      "provenance-api": {
+        "light": {
+          "$type": "color",
+          "$value": "#587D66"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#558A6A"
+        }
+      },
+      "provenance-pattern": {
+        "light": {
+          "$type": "color",
+          "$value": "{color.info.text}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.info.dark-text}"
+        }
+      },
+      "provenance-llm": {
+        "light": {
+          "$type": "color",
+          "$value": "{color.violet.text}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.violet.dark-text}"
+        }
+      },
+      "availability-restricted": {
+        "light": {
+          "$type": "color",
+          "$value": "{color.warning.text}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.warning.dark-text}"
+        }
+      },
+      "availability-embargoed": {
+        "light": {
+          "$type": "color",
+          "$value": "{color.neutral.700}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.neutral.400}"
+        }
+      },
+      "lifecycle-withdrawn": {
+        "light": {
+          "$type": "color",
+          "$value": "{color.danger.text}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.danger.dark-text}"
+        }
+      }
+    },
+    "panel": {
+      "$description": "Callout/status panel: neutral background, 3px square-cornered left accent bar, coloured text and icon. Colour never fills a surface.",
+      "bar-width": {
+        "$type": "dimension",
+        "$value": "3px"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "0px"
+      },
+      "bg-light": {
+        "$type": "color",
+        "$value": "{color.neutral.50}"
+      },
+      "bg-dark": {
+        "$type": "color",
+        "$value": "{color.neutral.950}"
+      },
+      "accent": {
+        "bar-light": {
+          "$type": "color",
+          "$value": "#587D66"
+        },
+        "bar-dark": {
+          "$type": "color",
+          "$value": "#558A6A"
+        }
+      },
+      "info": {
+        "bar-light": {
+          "$type": "color",
+          "$value": "{color.info.text}"
+        },
+        "bar-dark": {
+          "$type": "color",
+          "$value": "{color.info.dark-text}"
+        }
+      },
+      "success": {
+        "bar-light": {
+          "$type": "color",
+          "$value": "#587D66"
+        },
+        "bar-dark": {
+          "$type": "color",
+          "$value": "#558A6A"
+        }
+      },
+      "warning": {
+        "bar-light": {
+          "$type": "color",
+          "$value": "{color.warning.text}"
+        },
+        "bar-dark": {
+          "$type": "color",
+          "$value": "{color.warning.dark-text}"
+        }
+      },
+      "danger": {
+        "bar-light": {
+          "$type": "color",
+          "$value": "{color.danger.text}"
+        },
+        "bar-dark": {
+          "$type": "color",
+          "$value": "{color.danger.dark-text}"
+        }
+      },
+      "violet": {
+        "bar-light": {
+          "$type": "color",
+          "$value": "{color.violet.text}"
+        },
+        "bar-dark": {
+          "$type": "color",
+          "$value": "{color.violet.dark-text}"
+        }
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": [
+          "IBM Plex Sans",
+          "Seravek",
+          "Segoe UI",
+          "system-ui",
+          "sans-serif"
+        ]
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": [
+          "IBM Plex Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "monospace"
+        ]
+      }
+    },
+    "size": {
+      "caption": {
+        "$type": "dimension",
+        "$value": "0.75rem"
+      },
+      "small": {
+        "$type": "dimension",
+        "$value": "0.875rem"
+      },
+      "body": {
+        "$type": "dimension",
+        "$value": "1rem"
+      },
+      "lead": {
+        "$type": "dimension",
+        "$value": "1.125rem"
+      },
+      "h3": {
+        "$type": "dimension",
+        "$value": "1.25rem"
+      },
+      "h2": {
+        "$type": "dimension",
+        "$value": "1.5rem"
+      },
+      "h1": {
+        "$type": "dimension",
+        "$value": "1.875rem"
+      },
+      "display": {
+        "$type": "dimension",
+        "$value": "2.25rem"
+      }
+    },
+    "weight": {
+      "regular": {
+        "$type": "number",
+        "$value": 400
+      },
+      "medium": {
+        "$type": "number",
+        "$value": 500
+      },
+      "semibold": {
+        "$type": "number",
+        "$value": 600
+      }
+    },
+    "line-height": {
+      "tight": {
+        "$type": "number",
+        "$value": 1.25
+      },
+      "body": {
+        "$type": "number",
+        "$value": 1.55
+      },
+      "loose": {
+        "$type": "number",
+        "$value": 1.7
+      }
+    },
+    "measure": {
+      "prose": {
+        "$type": "dimension",
+        "$value": "68ch"
+      }
+    }
+  },
+  "space": {
+    "1": {
+      "$type": "dimension",
+      "$value": "0.25rem"
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": "0.5rem"
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "0.75rem"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "1rem"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "1.5rem"
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "2rem"
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "3rem"
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": "4rem"
+    }
+  },
+  "radius": {
+    "sm": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "6px"
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": "999px"
+    }
+  },
+  "border-width": {
+    "hairline": {
+      "$type": "dimension",
+      "$value": "1px"
+    },
+    "focus": {
+      "$type": "dimension",
+      "$value": "2px"
+    }
+  },
+  "shadow": {
+    "overlay": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#0B100D33",
+        "offsetX": "0px",
+        "offsetY": "4px",
+        "blur": "16px",
+        "spread": "0px"
+      },
+      "$description": "popovers/menus only \u2014 cards use border + surface.raised, never shadow"
+    }
+  },
+  "duration": {
+    "fast": {
+      "$type": "duration",
+      "$value": "120ms"
+    },
+    "base": {
+      "$type": "duration",
+      "$value": "200ms"
+    }
+  },
+  "easing": {
+    "standard": {
+      "$type": "cubicBezier",
+      "$value": [
+        0.2,
+        0,
+        0,
+        1
+      ]
+    }
+  }
+}
