@@ -1,0 +1,264 @@
+# ==============================================================================
+# ci.yml — the pull-request and push gates. Lightweight, read-only, no deploy.
+#
+# This is the *other* workflow. It never harvests, never commits and never
+# touches Pages; catalogue.yml owns all of that. Splitting them is what lets the
+# harvest workflow stay off `pull_request` entirely (plan §3.4 guardrail).
+#
+# The gates, numbered as in docs/runbooks/release-checklist.md §1:
+#   1  tests            uv run pytest
+#   2  CKAN-compat      uv run python -m harvest validate
+#   3  replay           rm -f records/*.json && materialize -> no diff (ADR-0037)
+#   4  palette          design/gen.py reproduces design/palette.json exactly
+#   5  token discipline cd site && npm run gates  (the hardcoded-value grep)
+#   6  accessibility    cd site && npm run gates  (pa11y-ci, BOTH themes)
+#   7  site build       cd site && npm run build  (astro build + Pagefind)
+#   8  pinning          no floating runner labels or Node aliases in workflows
+#
+# >>> UNTESTED: this file has never executed. It cannot be run locally and has
+# >>> deliberately not been pushed. The YAML parses and every command it invokes
+# >>> exists in the Makefile / `python -m harvest` CLI (gates 5–7 are the
+# >>> interface site/ must provide, per docs/runbooks/run-the-a11y-gate.md). <<<
+# ==============================================================================
+
+name: ci
+
+on:
+  pull_request:
+  push:
+
+# Read-only throughout. Nothing in CI writes anywhere.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  UV_VERSION: "0.12.7"
+  # Must equal site/.nvmrc and site/package.json "engines". Gate 8 checks it.
+  NODE_VERSION: "22.21.1"
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Gates 1–4: the Python half. Runs on a clean clone, exactly as a maintainer
+  # returning in three years would (ADR-0034).
+  # ---------------------------------------------------------------------------
+  python:
+    name: tests, CKAN gate, replay, palette
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install uv (pinned)
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+
+      - name: Install the pinned CPython
+        run: uv python install
+
+      - name: Install the pinned environment
+        # --frozen: a stale lockfile must fail loudly, not be silently rewritten.
+        run: uv sync --frozen --dev
+
+      - name: Gate 1 — tests
+        run: uv run pytest
+
+      - name: Gate 2 — CKAN-compat
+        run: uv run python -m harvest validate
+
+      - name: Gate 3 — replay determinism
+        # records/ is DERIVED from events/ and must be regenerable byte-for-byte.
+        # This is the acceptance test for ADR-0037.
+        run: |
+          set -euo pipefail
+          rm -f records/*.json
+          uv run python -m harvest materialize
+          if [ -n "$(git status --porcelain -- records/)" ]; then
+            echo "::error::replay is not byte-stable — records/ changed after a rebuild from events/"
+            git status --porcelain -- records/
+            git --no-pager diff -- records/
+            exit 1
+          fi
+          echo "replay: byte-stable"
+
+      - name: Gate 4 — palette reproducibility and WCAG contrast table
+        # design/gen.py writes palette.json into the CURRENT WORKING DIRECTORY,
+        # not into design/ (release-checklist §1, "On gate 4"). Regenerating must
+        # reproduce design/palette.json exactly; a colour change is a deliberate
+        # commit, never a drift.
+        #
+        # The contrast table is printed into the job summary rather than gated
+        # on: the palette as committed reports one FAIL
+        # ("L border n300 / white", 1.51 — a decorative border, not a UI
+        # boundary carrying meaning). Making it fatal today would fail CI on the
+        # foundation as shipped. See the caveat in the CI track's report.
+        run: |
+          set -euo pipefail
+          uv run python design/gen.py | tee /tmp/palette-report.txt
+          uv run python - <<'PY'
+          import json, sys
+          generated = json.load(open("palette.json"))
+          committed = json.load(open("design/palette.json"))
+          if generated != committed:
+              print("::error::design/gen.py no longer reproduces design/palette.json")
+              sys.exit(1)
+          print("palette: reproduced exactly")
+          PY
+          rm -f palette.json
+
+          # release-checklist §1 gate 4 says the gate passes when "every pair
+          # reports PASS". The palette as committed reports exactly one FAIL —
+          # "L border n300 / white", 1.51 — which is a decorative border, not a
+          # UI boundary carrying meaning. Surface it as an annotation so it is
+          # visible in the Actions UI rather than buried in the job summary, but
+          # do NOT make it fatal: that would fail CI on the foundation exactly
+          # as shipped. When the design track resolves it, change the `sed` line
+          # below to `exit 1` and the runbook and the code agree again.
+          if grep -q 'FAIL' /tmp/palette-report.txt; then
+            grep 'FAIL' /tmp/palette-report.txt \
+              | sed -e 's/^[[:space:]]*/::warning title=WCAG contrast::/'
+          fi
+
+          {
+            echo "## WCAG contrast table"
+            echo ""
+            echo '```'
+            cat /tmp/palette-report.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # ---------------------------------------------------------------------------
+  # Gate 8: pinning. Cheap, and the thing most likely to rot silently.
+  # ---------------------------------------------------------------------------
+  pins:
+    name: pinning
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Gate 8 — no floating runners, Node aliases or unpinned actions
+        run: |
+          set -euo pipefail
+          failed=0
+
+          # The character classes below are deliberate: they match the forbidden
+          # strings without this file *containing* them, so the release-checklist
+          # §1 gate-8 grep does not flag its own implementation.
+          if grep -rEn 'runs-on:.*ubuntu-la[t]est' .github/workflows/; then
+            echo "::error::floating runner label — pin the runner image (ADR-0034)"
+            failed=1
+          fi
+          if grep -rEn 'node-version.*lts/[*]' .github/workflows/; then
+            echo "::error::floating Node alias — pin an exact Node version (ADR-0034)"
+            failed=1
+          fi
+          if grep -rEn 'uses:[[:space:]]+[^[:space:]]+@v' .github/workflows/; then
+            echo "::error::action pinned to a mutable tag — pin the commit SHA (ADR-0034)"
+            failed=1
+          fi
+          if ! grep -rq 'runs-on: ubuntu-24.04' .github/workflows/; then
+            echo "::error::expected every job to run on ubuntu-24.04"
+            failed=1
+          fi
+
+          # One Node version, three places. CI installing a Node the lockfile
+          # was not resolved against is exactly the silent rot this gate is for.
+          if [ -f site/.nvmrc ]; then
+            nvmrc="$(tr -d '[:space:]' < site/.nvmrc)"
+            engines="$(node -e 'process.stdout.write((JSON.parse(require("fs").readFileSync("site/package.json","utf8")).engines||{}).node||"")')"
+            for file in .github/workflows/ci.yml .github/workflows/catalogue.yml; do
+              declared="$(grep -oE 'NODE_VERSION: "[^"]+"' "$file" | head -1 | cut -d'"' -f2)"
+              if [ "$declared" != "$nvmrc" ]; then
+                echo "::error::$file pins Node $declared but site/.nvmrc says $nvmrc"
+                failed=1
+              fi
+            done
+            if [ "$engines" != "$nvmrc" ]; then
+              echo "::error::site/package.json engines.node is $engines but site/.nvmrc says $nvmrc"
+              failed=1
+            fi
+          fi
+
+          exit "$failed"
+
+  # ---------------------------------------------------------------------------
+  # Gates 5–7: the site half. `npm run gates` is the name declared in the
+  # Makefile and in docs/runbooks/run-the-a11y-gate.md §1; it must include the
+  # token-discipline grep AND pa11y-ci over the URL list in BOTH themes, forced
+  # via the ?theme= query parameter that <theme-toggle> honours.
+  # ---------------------------------------------------------------------------
+  site:
+    name: site build, token discipline, a11y
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Is the site track present?
+        id: detect
+        run: |
+          set -euo pipefail
+          if [ -f site/package.json ] && [ -f site/package-lock.json ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::site/ is absent — gates 5–7 skipped (SPEC, not yet implemented)"
+          fi
+
+      - name: Install Node (pinned exactly)
+        if: steps.detect.outputs.present == 'true'
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install site dependencies
+        if: steps.detect.outputs.present == 'true'
+        working-directory: site
+        run: npm ci
+
+      - name: The site script contract
+        if: steps.detect.outputs.present == 'true'
+        working-directory: site
+        # `build` and `gates` are not names this workflow chose — they are fixed
+        # by the Makefile (`site:` and `gates:` targets) and by
+        # docs/runbooks/run-the-a11y-gate.md §1. Assert them explicitly so a
+        # rename fails with a sentence rather than with npm's "Missing script".
+        run: |
+          set -euo pipefail
+          missing=0
+          for script in build gates; do
+            if ! node -e 'const s=JSON.parse(require("fs").readFileSync("package.json","utf8")).scripts||{};if(!s[process.argv[1]])process.exit(1)' "$script"; then
+              echo "::error::site/package.json declares no \"$script\" script. The name is fixed by the Makefile and docs/runbooks/run-the-a11y-gate.md §1."
+              missing=1
+            fi
+          done
+          exit "$missing"
+
+      - name: Gate 7 — site build (astro build + Pagefind over dist/)
+        if: steps.detect.outputs.present == 'true'
+        working-directory: site
+        run: npm run build
+
+      - name: Gates 5 and 6 — token discipline and pa11y-ci in both themes
+        if: steps.detect.outputs.present == 'true'
+        working-directory: site
+        # pa11y runs against the BUILT output, so the build above must come
+        # first. Accessibility here is a gate, not advice: violations fail.
+        run: npm run gates

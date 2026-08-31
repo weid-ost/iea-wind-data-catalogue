@@ -1,0 +1,320 @@
+# ==============================================================================
+# catalogue.yml — THE workflow.
+#
+# harvest -> materialize -> validate -> commit heartbeat -> build site -> deploy
+# Pages, all in ONE workflow run.
+#
+# Why one workflow and not three: pushes made with GITHUB_TOKEN deliberately do
+# not trigger further workflows, so a separate workflow listening for the
+# harvest commit would NEVER FIRE. Build and deploy must live in the same run as
+# the harvest (plan §3.3, ADR-0029, docs/runbooks/re-enable-a-dormant-cron.md §4).
+#
+# Binding decisions implemented here:
+#   ADR-0022  GitHub Actions + GitHub Pages; permissions scoped per job.
+#   ADR-0029  Weekly cron + workflow_dispatch; state/last-run.json committed
+#             EVERY run, unconditionally, inline (never a Marketplace keepalive
+#             action) — this is what keeps the cron alive past GitHub's 60-day
+#             dormancy rule.
+#   ADR-0030  LLM = GitHub Models via the built-in GITHUB_TOKEN with
+#             `permissions: models: read`. No PAT, no API key, no repo secret.
+#   ADR-0031  The run must SUCCEED when models are unavailable: extract()
+#             returns None and the page queues to state/pending-extraction.json.
+#             Only validate-ckan-compat fails the run.
+#   ADR-0034  Pinned everything: ubuntu-24.04 (never a floating runner label),
+#             actions pinned to commit SHAs, uv pinned, `uv sync --frozen`,
+#             Node pinned exactly, `npm ci`.
+#
+# NEVER runs on pull_request. See ci.yml for the PR gates.
+#
+# >>> UNTESTED: this file has never executed. It cannot be run locally and has
+# >>> deliberately not been pushed. Its YAML parses and every command it invokes
+# >>> is cross-checked against the Makefile / `python -m harvest` CLI, but the
+# >>> first real run is the first proof. Watch it. <<<
+# ==============================================================================
+
+name: catalogue
+
+on:
+  schedule:
+    # Weekly, not monthly (ADR-0029 §2): shortens the dormancy exposure window
+    # from 30 days to 7. Off the hour to dodge the top-of-hour scheduler crush.
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max records per source. The prototype cap is 5 — raise it consciously."
+        required: false
+        default: "5"
+      source:
+        description: "Optional single source to harvest (e.g. zenodo). Blank = all enabled."
+        required: false
+        default: ""
+
+# No ambient permissions. Every job declares exactly what it needs, rather than
+# inheriting the repository default (re-enable-a-dormant-cron §4).
+permissions: {}
+
+# Never two harvests at once — they would race on the same branch.
+concurrency:
+  group: catalogue
+  cancel-in-progress: false
+
+env:
+  # THE PROTOTYPE CAP, deliberately visible. Five records per source.
+  # Mirrors `LIMIT ?= 5` in the Makefile and harvest.DEFAULT_LIMIT.
+  HARVEST_LIMIT: "5"
+  # Pinned toolchain (ADR-0034). Bump deliberately, never automatically.
+  UV_VERSION: "0.12.7"
+  # Must equal site/.nvmrc and site/package.json "engines". Gate 8 checks it.
+  NODE_VERSION: "22.21.1"
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # 1. Harvest. The only job with write access to the repository.
+  # ---------------------------------------------------------------------------
+  harvest:
+    name: harvest, materialize, validate, commit
+    runs-on: ubuntu-24.04
+    # Guardrail: the write-capable job only ever runs on main. Stated literally
+    # rather than derived from the event payload — an expression that evaluates
+    # to false because a context was empty would silently stop the heartbeat,
+    # which is the one failure mode this whole design is built to avoid.
+    if: github.ref == 'refs/heads/main'
+    timeout-minutes: 30
+    permissions:
+      contents: write # the heartbeat commit, and only here
+      models: read # GitHub Models inference via GITHUB_TOKEN (ADR-0030)
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Full history: the push-retry path below rebases, which a shallow
+          # clone makes needlessly awkward.
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install uv (pinned)
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+
+      - name: Install the pinned CPython
+        # Reads .python-version (3.12.8). uv fetches a standalone build, so this
+        # does not depend on whatever the runner's tool cache happens to hold.
+        run: uv python install
+
+      - name: Install the pinned environment
+        # --frozen: a stale uv.lock fails loudly instead of being rewritten.
+        run: uv sync --frozen --dev
+
+      - name: Harvest
+        id: harvest
+        env:
+          # Inputs are read through the environment, never interpolated into the
+          # shell, so a dispatch input cannot become a command.
+          INPUT_LIMIT: ${{ inputs.limit }}
+          INPUT_SOURCE: ${{ inputs.source }}
+          # ADR-0030 / ADR-0035: GitHub Models is OpenAI-compatible, so this is
+          # an httpx POST, not a vendor SDK. The credential is the built-in
+          # token; there is no secret to rotate.
+          HARVEST_LLM_ENDPOINT: "https://models.github.ai/inference"
+          HARVEST_LLM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HARVEST_LLM_MODEL: "openai/gpt-4o-mini"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          limit="${INPUT_LIMIT:-}"
+          if [ -z "$limit" ]; then limit="$HARVEST_LIMIT"; fi
+          case "$limit" in
+            ''|*[!0-9]*) echo "::error::limit must be a non-negative integer, got '$limit'"; exit 2 ;;
+          esac
+
+          args=(run --limit "$limit")
+
+          source_name="${INPUT_SOURCE:-}"
+          if [ -n "$source_name" ]; then
+            case "$source_name" in
+              *[!a-z0-9_-]*) echo "::error::source must match [a-z0-9_-]+, got '$source_name'"; exit 2 ;;
+            esac
+            args+=(--source "$source_name")
+          fi
+
+          echo "::notice::harvest run --limit $limit ${source_name:+--source $source_name}"
+
+          # Exit 0 = the run completed and the CKAN gate passed.
+          # Exit 1 = validate-ckan-compat FAILED. That is the ONE thing allowed
+          #          to fail the run (ADR-0031). An unreachable source, an auth
+          #          wall or an unavailable model are reported, not fatal.
+          uv run python -m harvest "${args[@]}"
+
+      - name: Commit the heartbeat
+        # ALWAYS. Including when nothing changed upstream, and including when
+        # the harvest step above failed. This single commit is the entire
+        # keepalive: GitHub disables scheduled workflows after 60 days with no
+        # repository activity, and only commits count (ADR-0029).
+        #
+        # A condition like `if: steps.harvest.outputs.changed == 'true'` here
+        # would skip exactly the no-op runs the keepalive exists for. Do not add
+        # one (re-enable-a-dormant-cron §3.3).
+        if: always()
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # events/ is the source of truth; records/ is derived but committed
+          # (it is what the site globs and what CKAN receives on promotion day);
+          # state/ carries the heartbeat; cache/ is the committed extraction
+          # cache (ADR-0025). Same set as run-a-harvest-locally §8.
+          git add -A events records state cache
+
+          stamp="$(date -u +'%Y-%m-%dT%H:%MZ')"
+          if git diff --cached --quiet; then
+            # Belt and braces: if the harvest died before RunReport.write could
+            # produce a diff, still make a commit, because a run that produces
+            # no commit is not repository activity and the 60-day clock keeps
+            # ticking. Implemented inline — never a Marketplace keepalive
+            # action, which would put a third party inside a workflow holding
+            # `contents: write`.
+            git commit --allow-empty -m "chore(harvest): heartbeat ${stamp} (no changes)"
+          else
+            git commit -m "harvest: scheduled run ${stamp}"
+          fi
+
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${branch}"; then
+              echo "pushed on attempt ${attempt}"
+              exit 0
+            fi
+            echo "push rejected; rebasing and retrying (attempt ${attempt})"
+            git pull --rebase --autostash origin "${branch}" || true
+            sleep 5
+          done
+          echo "::error::could not push the heartbeat commit — the cron keepalive did not fire"
+          exit 1
+
+      - name: Summarise the run
+        if: always()
+        run: |
+          set -euo pipefail
+          {
+            echo "## Harvest run"
+            echo ""
+            if [ -f state/last-run.json ]; then
+              echo '<details><summary>state/last-run.json</summary>'
+              echo ""
+              echo '```json'
+              cat state/last-run.json
+              echo '```'
+              echo ""
+              echo '</details>'
+            else
+              echo "**No run report was written.** That is a bug: "
+              echo "\`RunReport.write\` is called unconditionally in \`cmd_run\`."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # ---------------------------------------------------------------------------
+  # 2. Build the site. Read-only token: the build runs third-party npm code and
+  #    has no business holding write access (ADR-0034, residual supply-chain
+  #    risk). It checks out the branch head, which now includes the commit the
+  #    harvest job just pushed.
+  # ---------------------------------------------------------------------------
+  build:
+    name: build site
+    needs: harvest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    outputs:
+      site: ${{ steps.detect.outputs.present }}
+    steps:
+      - name: Check out the branch head (including the harvest commit)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+          persist-credentials: false
+
+      - name: Is the site track present?
+        id: detect
+        # site/ is owned by track J and may not have landed yet. A missing site
+        # must not fail the workflow, because the heartbeat (already committed
+        # above) is the part that must never stop.
+        run: |
+          set -euo pipefail
+          if [ -f site/package.json ] && [ -f site/package-lock.json ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::site/ is absent — skipping build and deploy. The harvest still committed."
+          fi
+
+      - name: Install Node (pinned exactly)
+        if: steps.detect.outputs.present == 'true'
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          # An exact version, never a floating alias. Floating references are
+          # how dormant repos break unattended (ADR-0034).
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install site dependencies
+        if: steps.detect.outputs.present == 'true'
+        working-directory: site
+        # npm ci, never npm install: installs from the committed lockfile and
+        # nothing else.
+        run: npm ci
+
+      - name: The site script contract
+        if: steps.detect.outputs.present == 'true'
+        working-directory: site
+        # `build` is fixed by the Makefile's `site:` target, not chosen here.
+        # Fail with a sentence rather than with npm's "Missing script".
+        run: |
+          set -euo pipefail
+          if ! node -e 'const s=JSON.parse(require("fs").readFileSync("package.json","utf8")).scripts||{};if(!s.build)process.exit(1)' ; then
+            echo "::error::site/package.json declares no \"build\" script. The name is fixed by the Makefile's site: target."
+            exit 1
+          fi
+
+      - name: Build (astro build, then Pagefind over dist/)
+        if: steps.detect.outputs.present == 'true'
+        working-directory: site
+        # A malformed record fails this build — the Zod collection schema is the
+        # validate-ckan-compat gate restated (CONTRACT §11, fixture x-08).
+        run: npm run build
+
+      - name: Upload the Pages artifact
+        if: steps.detect.outputs.present == 'true'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: site/dist
+          # Pagefind and Astro both emit dot-prefixed assets in some
+          # configurations; excluding hidden files silently breaks search.
+          include-hidden-files: true
+
+  # ---------------------------------------------------------------------------
+  # 3. Deploy. The ONLY job holding pages: write and id-token: write.
+  # ---------------------------------------------------------------------------
+  deploy:
+    name: deploy to GitHub Pages
+    needs: build
+    if: needs.build.outputs.site == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
