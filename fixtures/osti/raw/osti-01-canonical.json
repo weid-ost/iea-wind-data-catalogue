@@ -1,0 +1,76 @@
+{
+  "language": "English",
+  "entry_date": "2026-08-21T15:07:11Z",
+  "report_number": "NREL/TP-5000-89937",
+  "identifier": "AC36-08GO28308",
+  "country_publication": "United States",
+  "doi": "10.2172/2447928",
+  "description": "This report, prepared within Work package 1 of IEA Wind Task 49, presents reference site conditions for floating wind arrays to serve as a design basis for the techno-economic design of reference floating wind arrays. Data of the reference sites presented here are publicly available in an open database and thus support fast development and comparable design of floating wind arrays for various relevant conditions. The development of these reference sites drew on existing open access datasets and ongoing research projects of task participants. Six classes were identified that describe relevant key conditions for the design and development of floating wind arrays: met-ocean conditions, seabed conditions, coastal infrastructure, environmental impact, socio-economic impact, as well as regulations and permissions. The reference sites for the techno-economic design of floating wind arrays are based on a concept with building blocks to synthesize purpose-built site representations. In each of the identified classes with influencing design factors, building blocks are used to describe the characteristic properties and their spread. However, the latter three classes (i.e., environmental impact, socio-economic impact, regulations and permissions) are not included in the reference site conditions due to limited knowledge and lack of reliable criteria to quantify their impact on the techno-economic design in numeric parameters. Building blocks with key parameters for the techno-economic design of floating wind arrays are provided for met-ocean conditions, seabed conditions, and coastal infrastructure. For met-ocean conditions, multiple sites were selected for detailed analysis that represent a range of conditions across the pipeline of floating wind projects. Wind conditions and sea states are separated, and each location considers both the severity of wind and waves e.g. one site may have a moderate wave condition but severe wind condition. From this pipeline, eleven representative sites were selected where both site-specific analysis was available within the consortium, and where they represent different parts of the global pipeline. The eleven sites are: Hannibal (Italy), Humboldt (US), Ulsan (South Korea), MoneyPoint One (Ireland), Havbredey (UK), Fukushima (Japan), Utsira Nord (Norway), Gulf of Maine (US), Sud de la Bretagne II (France), Sorlige Nordsjo II (Norway). Each of these sites is summarized in the main report while more details about the studies and analyses behind the datasets are provided in the appendix. For seabed conditions, general information about the geotechnical parameters is provided and a baseline is established for the geotechnical parameters and stratigraphy that may be encountered on the sites. A set of six 'synthetic cases' is defined as building blocks providing the different parameters required for design under each case/soil condition. For the coastal infrastructure, general information about the main requirements is provided that a port should comply with to provide a satisfactory service during the construction of floating offshore wind arrays. Minimum port infrastructural requirements are provided for three types of ports.",
+  "title": "IEA Wind TCP Task 49: Reference Site Conditions for Floating Wind Arrays",
+  "other_number": "MainId:90716; UUID:1a88b8ea-869b-4c68-937f-fe6fabfe6887; MainAdminId:73892",
+  "contract_number": "AC36-08GO28308; ",
+  "publication_date": "2024-09-25T00:00:00Z",
+  "osti_id": "2447928",
+  "product_type": "Technical Report",
+  "authors": [
+    "Creane, Shauna [Gavin & Doherty Geosolutions, Dublin (Ireland)]",
+    "Santos, Pedro [Danish Hydraulic Institute, Hørsholm (Denmark)]",
+    "Kölle, Konstanze [SINTEF Energy Research, Trondheim (Norway)]",
+    "Airoldi, Davide [Ricerca sul Sistema Energetico - RSE S.p.A., Milan (Italy)]",
+    "Bakhoday-Paskyabi, Mostafa [Univ. of Bergen (Norway)]",
+    "Biglu, Michael [National Renewable Energy Laboratory (NREL), Golden, CO (United States)] (ORCID:0009000900123952)",
+    "Brown, William [Gavin & Doherty Geosolutions, Dublin (Ireland)]",
+    "Cheynet, Etienne [Univ. of Bergen (Norway)]",
+    "Ecenarro Diaz-Tejeiro, Laura [Gavin & Doherty Geosolutions, Dublin (Ireland)]",
+    "Frøyd, Lars [4subsea, Asker (Norway)]",
+    "Hagerman, George [National Renewable Energy Laboratory (NREL), Golden, CO (United States)]",
+    "Hall, Matthew [National Renewable Energy Laboratory (NREL), Golden, CO (United States)] (ORCID:0000000203988320)",
+    "Kim, Yong-Yook [Inst. for Advanced Engineering, Seoul (Korea, Republic of)]",
+    "Larsén, Xiaoli Guo [Technical Univ. of Denmark, Roskilde (Denmark)]",
+    "Li, Lin [Univ. of Stavanger (Norway)]",
+    "Lozon, Ericka [National Renewable Energy Laboratory (NREL), Golden, CO (United States)]",
+    "Musialik, Mateusz [Gavin & Doherty Geosolutions, Dublin (Ireland)]",
+    "Naldi, Roberto [Ricerca sul Sistema Energetico - RSE S.p.A., Milan (Italy)]",
+    "Park, Miho [Inst. for Advanced Engineering, Seoul (Korea, Republic of)]",
+    "Shields, Matt [National Renewable Energy Laboratory (NREL), Golden, CO (United States)] (ORCID:0000000206983816)",
+    "Tronfeldt Sorensen, Jacob [Danish Hydraulic Institute, Hørsholm (Denmark)]",
+    "Tanemoto, Jun [Shimizu Corporation, Tokyo (Japan)]",
+    "Yu, Young-Jae [UlsanLab, Uslan (Korea, Republic of)]",
+    "Zouaoui, Aimen [Gavin & Doherty Geosolutions, Dublin (Ireland)]"
+  ],
+  "subjects": [
+    "17 WIND ENERGY",
+    "floating wind",
+    "metocean",
+    "reference site",
+    "site conditions",
+    "Task 49",
+    "wind farm"
+  ],
+  "format": "158 p.",
+  "doe_contract_number": "AC36-08GO28308; ",
+  "sponsor_orgs": [
+    "International Energy Agency Wind Technology Collaboration Programme (IEA Wind)",
+    "Sustainable Energy Authority of Ireland",
+    "Danish Energy Agency",
+    "Research Council of Norway",
+    "Research Fund for the Italian Electrical System",
+    "USDOE"
+  ],
+  "research_orgs": [
+    "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
+  ],
+  "other_identifiers": [
+    "MainId:90716; UUID:1a88b8ea-869b-4c68-937f-fe6fabfe6887; MainAdminId:73892"
+  ],
+  "links": [
+    {
+      "rel": "citation",
+      "href": "https://www.osti.gov/biblio/2447928"
+    },
+    {
+      "rel": "fulltext",
+      "href": "https://www.osti.gov/servlets/purl/2447928"
+    }
+  ]
+}

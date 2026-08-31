@@ -1,0 +1,113 @@
+{
+  "fixture_id": "osti-05-report-number",
+  "fixture_kind": "source_namespace",
+  "case": "Report number is the only stable human-facing identifier — no DOI, so it must reach the record page",
+  "note": "NREL/PR-5C00-80872 is what a reader cites and the only durable handle this artifact has. It is carried as a first-class 'report_number' field on the source namespace, which materialises into a first-class CKAN extra (harvest.materialize.EXTRA_KEYS, schema/ckan-scheming.json), and is mirrored into related_identifiers for the reconciler. The description says 'IEA Wind TCT Task 25' — a typo for TCP upstream, left verbatim, and the pattern still resolves it to task-25 because it allows up to three words between 'Wind' and 'Task'.",
+  "raw": "raw/osti-05-report-number.json",
+  "identity_key": "osti|1891471",
+  "source_system": "osti",
+  "source_id": "1891471",
+  "source_key": "2026-03-03T08:34:48Z",
+  "source": {
+    "title": "Task 25 Summary Report: Design and Operation of Energy Systems with Large Amounts of Variable Generation; The Planning Challenge",
+    "notes": "This presentation will summarize ongoing activities in the IEA Wind TCT Task 25 as related to the Planning Work Package.",
+    "url": "https://www.osti.gov/biblio/1891471",
+    "source_urls": [
+      "https://www.osti.gov/biblio/1891471"
+    ],
+    "authors": [
+      {
+        "name": "Frew, Bethany"
+      }
+    ],
+    "published_date": "2022-10-03",
+    "license_id": "notspecified",
+    "resource_kind": "publication",
+    "access_status": "open",
+    "keywords": [
+      "grid integration",
+      "operations",
+      "planning",
+      "POWER TRANSMISSION AND DISTRIBUTION",
+      "WIND ENERGY",
+      "renewables",
+      "stability",
+      "wholesale electricity markets"
+    ],
+    "resources": [
+      {
+        "url": "https://www.osti.gov/servlets/purl/1891471",
+        "name": "Full text at OSTI"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "relation": "IsIdenticalTo",
+        "identifier": "1891471",
+        "identifier_type": "OSTI"
+      },
+      {
+        "relation": "IsIdenticalTo",
+        "identifier": "NREL/PR-5C00-80872",
+        "identifier_type": "Report-Number"
+      }
+    ],
+    "iea_task": [
+      "task-25"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "osti_id": "1891471",
+      "osti_product_type": "Conference",
+      "osti_entry_date": "2026-03-03T08:34:48Z",
+      "osti_report_number": "NREL/PR-5C00-80872",
+      "osti_doe_contract_number": "AC36-08GO28308;",
+      "osti_conference_info": "Presented at the 20th Wind Integration Workshop, 29 September - 1 October 2021, Berlin, Germany",
+      "osti_country_publication": "United States",
+      "osti_language": "English",
+      "osti_research_orgs": [
+        "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
+      ],
+      "osti_sponsor_orgs": [
+        "USDOE Office of Energy Efficiency and Renewable Energy (EERE), Wind Energy Technologies Office (EE-4W)"
+      ]
+    },
+    "report_number": "NREL/PR-5C00-80872"
+  },
+  "provenance": {
+    "access_status": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "keywords": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "report_number": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "osti-1891471"
+}

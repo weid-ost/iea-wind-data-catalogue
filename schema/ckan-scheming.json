@@ -197,6 +197,12 @@
       "extras": true
     },
     {
+      "field_name": "report_number",
+      "label": "Report number",
+      "help_text": "The issuing laboratory's report number, e.g. NREL/TP-5000-89937. For grey literature with no DOI this is the only stable human-facing identifier there is, so it is carried as a first-class field and shown in the citation block (fixture osti-05).",
+      "extras": true
+    },
+    {
       "field_name": "related_identifiers",
       "label": "Related identifiers",
       "help_text": "JSON string: list of {relation, identifier, identifier_type}. Used for version resolution and preprint/dataset linking. Records are NOT created for the targets (fixture dc-06).",

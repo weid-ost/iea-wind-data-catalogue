@@ -1,0 +1,37 @@
+{
+  "language": "English",
+  "entry_date": "2025-11-17T11:50:23Z",
+  "identifier": "EE0010724",
+  "country_publication": "United States",
+  "publisher": "The University of Texas at Austin",
+  "description": "The power grid is on the cusp of a massive transition driven by three major areas: 1) the growth in demand for electricity, 2) efforts to decarbonize the United States economy, and 3) a desire to mitigate social disparities from the impact of electricity generation on local populations. However, most studies of the electricity sector do not include equity impacts in their models. This study seeks to do so by developing a comprehensive and generalizable model tailored to the Electric Reliability Council of Texas (ERCOT) grid, designed to incorporate the equity impacts of electricity generation in a decarbonized and resilient framework. To integrate equity into our research, we incorporate environmental externalities into our capacity expansion model of ERCOT. Specifically, we factor in intermediate-level local marginal damages of precursor pollutants (NH3, NOx, primary PM2.5, SO2, and VOC) and global pollutant CO2 into the cost of generating electricity. We do this by taking into account county population, county ambient pollution concentration, and generator emission rates. Leveraging open-source modeling tools, such as PowerGenome, pyGRETA, and GenX we construct a county-level model to account for these costs. We integrate these marginal damages into the variable operations and maintenance costs of generators, for both existing and potential future builds. This study’s findings suggest that the value of a dynamic social cost of carbon (SSC) will cover criteria pollutant marginal damages within the ERCOT grid and solar and wind is expected to increase out to 2035. Key metrics evaluated within this research include fuel mix distribution across technologies, transmission and grid infrastructure costs, CO2 emissions, local pollutants marginal damages, and the variation in generation capacity built by the model. These results and framework can be used to support grid decisions that explicitly include distributional and procedural equity within a decarbonized and sustainable grid framework.",
+  "title": "A Framework for Assessing Economic and Environmental Trade-offs of Internalized Emission Costs in ERCOT Grid Planning",
+  "contract_number": "EE0010724; ",
+  "publication_date": "2025-05-31T00:00:00Z",
+  "osti_id": "2568356",
+  "product_type": "Thesis/Dissertation",
+  "authors": [
+    "Katsiroumba, Melpomeni"
+  ],
+  "subjects": [
+    "24 POWER TRANSMISSION AND DISTRIBUTION",
+    "29 ENERGY PLANNING, POLICY, AND ECONOMY"
+  ],
+  "doe_contract_number": "EE0010724; ",
+  "sponsor_orgs": [
+    "University of Texas at Austin"
+  ],
+  "research_orgs": [
+    "Golden Field Office, Golden, CO (United States)"
+  ],
+  "links": [
+    {
+      "rel": "citation",
+      "href": "https://www.osti.gov/biblio/2568356"
+    },
+    {
+      "rel": "fulltext",
+      "href": "https://www.osti.gov/servlets/purl/2568356"
+    }
+  ]
+}

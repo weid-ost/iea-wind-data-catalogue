@@ -1,0 +1,131 @@
+{
+  "fixture_id": "osti-04-metadata-only",
+  "fixture_kind": "source_namespace",
+  "case": "No public full text at OSTI — availability must be honest and imply no download",
+  "note": "The payload has a rel:citation link and nothing else: OSTI holds the metadata, not the paper. access_status is therefore 'metadata-only' and resources is EMPTY — a record page must never offer a download that does not exist. The task attribution comes from 'The International Energy Agency (IEA) Wind Task 49 is facilitating...' in the description, which is why the pattern has to tolerate the parenthesised expansion.",
+  "raw": "raw/osti-04-metadata-only.json",
+  "identity_key": "osti|2323276",
+  "source_system": "osti",
+  "source_id": "2323276",
+  "source_key": "2024-03-13T23:05:47Z",
+  "source": {
+    "title": "Reference Design Cases for Floating Offshore Wind Arrays",
+    "notes": "Given the immature nature of the Floating Offshore Wind (FLOW) industry, there is a need for reference FLOW farm designs to allow researchers and technology developers to study the behavior of floating wind turbine systems, without having to design every part of those systems or without having to get access to a wide range of information that is often confidential. The International Energy Agency (IEA) Wind Task 49 is facilitating research collaboration on the integrated design of Floating Offshore Wind Arrays (FOWA), and will develop several reference FOWAs to facilitate R&amp;D activities of the floating wind community and efficient scale change of the floating wind industry (from pilot farms to commercial ones). This paper will outline the key design considerations the task has identified for the sustainable deployment of large-scale FOWAs. The aim is to prepare a comprehensive overview of the different elements that impact the design of FOWA to support the development of best practices for FOWA design. The paper will also present three baseline reference design cases that are being prepared for shallow, intermediate and deep water sites. The final designs will be made open access including the engineering and cost inputs to accelerate further innovation, research and the deployment of FOWAs.",
+    "url": "https://www.osti.gov/biblio/2323276",
+    "source_urls": [
+      "https://www.osti.gov/biblio/2323276"
+    ],
+    "authors": [
+      {
+        "name": "Devoy McAuliffe, Fiona"
+      },
+      {
+        "name": "Lozon, Ericka"
+      },
+      {
+        "name": "Hall, Matthew",
+        "orcid": "0000-0002-0398-8320"
+      },
+      {
+        "name": "Ong, Muk Chen"
+      },
+      {
+        "name": "Lee, Chern Fong"
+      },
+      {
+        "name": "Feng, Ju"
+      },
+      {
+        "name": "Moghtadaei, Milad"
+      },
+      {
+        "name": "Wright, Chris"
+      }
+    ],
+    "publisher": "Trondheim, Norway: SINTEF",
+    "published_date": "2024-01-12",
+    "license_id": "notspecified",
+    "resource_kind": "publication",
+    "access_status": "metadata-only",
+    "keywords": [
+      "array layout",
+      "dynamic cable",
+      "ENGINEERING",
+      "WIND ENERGY",
+      "floating wind",
+      "IEA wind",
+      "mooring system",
+      "reference design"
+    ],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "relation": "IsIdenticalTo",
+        "identifier": "2323276",
+        "identifier_type": "OSTI"
+      },
+      {
+        "relation": "IsIdenticalTo",
+        "identifier": "NREL/PO-5000-88502",
+        "identifier_type": "Report-Number"
+      }
+    ],
+    "iea_task": [
+      "task-49"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "osti_id": "2323276",
+      "osti_product_type": "Conference",
+      "osti_entry_date": "2024-03-13T23:05:47Z",
+      "osti_report_number": "NREL/PO-5000-88502",
+      "osti_doe_contract_number": "AC36-08GO28308;",
+      "osti_conference_info": "Presented at the 2024 EERA DeepWind Conference, 17-19 January 2024, Trondheim, Norway",
+      "osti_country_publication": "United States",
+      "osti_language": "English",
+      "osti_research_orgs": [
+        "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
+      ],
+      "osti_sponsor_orgs": [
+        "USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office"
+      ]
+    },
+    "report_number": "NREL/PO-5000-88502"
+  },
+  "provenance": {
+    "access_status": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    },
+    "keywords": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "report_number": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "osti-2323276"
+}

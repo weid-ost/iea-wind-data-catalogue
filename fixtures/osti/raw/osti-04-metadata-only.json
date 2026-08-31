@@ -1,0 +1,52 @@
+{
+  "language": "English",
+  "entry_date": "2024-03-13T23:05:47Z",
+  "relation": "Presented at the 2024 EERA DeepWind Conference, 17-19 January 2024, Trondheim, Norway",
+  "report_number": "NREL/PO-5000-88502",
+  "identifier": "AC36-08GO28308",
+  "country_publication": "United States",
+  "publisher": "Trondheim, Norway: SINTEF",
+  "description": "Given the immature nature of the Floating Offshore Wind (FLOW) industry, there is a need for reference FLOW farm designs to allow researchers and technology developers to study the behavior of floating wind turbine systems, without having to design every part of those systems or without having to get access to a wide range of information that is often confidential. The International Energy Agency (IEA) Wind Task 49 is facilitating research collaboration on the integrated design of Floating Offshore Wind Arrays (FOWA), and will develop several reference FOWAs to facilitate R&D activities of the floating wind community and efficient scale change of the floating wind industry (from pilot farms to commercial ones). This paper will outline the key design considerations the task has identified for the sustainable deployment of large-scale FOWAs. The aim is to prepare a comprehensive overview of the different elements that impact the design of FOWA to support the development of best practices for FOWA design. The paper will also present three baseline reference design cases that are being prepared for shallow, intermediate and deep water sites. The final designs will be made open access including the engineering and cost inputs to accelerate further innovation, research and the deployment of FOWAs.",
+  "title": "Reference Design Cases for Floating Offshore Wind Arrays",
+  "other_number": "MainId:89281; UUID:0f1c763e-6929-40b5-befe-bdb3c4a4c5e9; MainAdminId:72064",
+  "contract_number": "AC36-08GO28308; ",
+  "publication_date": "2024-01-12T00:00:00Z",
+  "osti_id": "2323276",
+  "product_type": "Conference",
+  "authors": [
+    "Devoy McAuliffe, Fiona",
+    "Lozon, Ericka",
+    "Hall, Matthew (ORCID:0000000203988320)",
+    "Ong, Muk Chen",
+    "Lee, Chern Fong",
+    "Feng, Ju",
+    "Moghtadaei, Milad",
+    "Wright, Chris"
+  ],
+  "subjects": [
+    "array layout",
+    "dynamic cable",
+    "ENGINEERING,WIND ENERGY",
+    "floating wind",
+    "IEA wind",
+    "mooring system",
+    "reference design"
+  ],
+  "doe_contract_number": "AC36-08GO28308; ",
+  "sponsor_orgs": [
+    "USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office"
+  ],
+  "research_orgs": [
+    "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
+  ],
+  "other_identifiers": [
+    "MainId:89281; UUID:0f1c763e-6929-40b5-befe-bdb3c4a4c5e9; MainAdminId:72064"
+  ],
+  "conference_info": "Presented at the 2024 EERA DeepWind Conference, 17-19 January 2024, Trondheim, Norway",
+  "links": [
+    {
+      "rel": "citation",
+      "href": "https://www.osti.gov/biblio/2323276"
+    }
+  ]
+}

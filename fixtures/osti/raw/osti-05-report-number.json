@@ -1,0 +1,49 @@
+{
+  "language": "English",
+  "entry_date": "2026-03-03T08:34:48Z",
+  "relation": "Presented at the 20th Wind Integration Workshop, 29 September - 1 October 2021, Berlin, Germany",
+  "report_number": "NREL/PR-5C00-80872",
+  "identifier": "AC36-08GO28308",
+  "country_publication": "United States",
+  "description": "This presentation will summarize ongoing activities in the IEA Wind TCT Task 25 as related to the Planning Work Package.",
+  "title": "Task 25 Summary Report: Design and Operation of Energy Systems with Large Amounts of Variable Generation; The Planning Challenge",
+  "other_number": "MainId:78650; UUID:72e49388-8339-4220-83c2-0bdeb9147b3d; MainAdminID:67692",
+  "contract_number": "AC36-08GO28308; ",
+  "publication_date": "2022-10-03T00:00:00Z",
+  "osti_id": "1891471",
+  "product_type": "Conference",
+  "authors": [
+    "Frew, Bethany"
+  ],
+  "subjects": [
+    "grid integration",
+    "operations",
+    "planning",
+    "POWER TRANSMISSION AND DISTRIBUTION,WIND ENERGY",
+    "renewables",
+    "stability",
+    "wholesale electricity markets"
+  ],
+  "format": "920 KB",
+  "doe_contract_number": "AC36-08GO28308; ",
+  "sponsor_orgs": [
+    "USDOE Office of Energy Efficiency and Renewable Energy (EERE), Wind Energy Technologies Office (EE-4W)"
+  ],
+  "research_orgs": [
+    "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
+  ],
+  "other_identifiers": [
+    "MainId:78650; UUID:72e49388-8339-4220-83c2-0bdeb9147b3d; MainAdminID:67692"
+  ],
+  "conference_info": "Presented at the 20th Wind Integration Workshop, 29 September - 1 October 2021, Berlin, Germany",
+  "links": [
+    {
+      "rel": "citation",
+      "href": "https://www.osti.gov/biblio/1891471"
+    },
+    {
+      "rel": "fulltext",
+      "href": "https://www.osti.gov/servlets/purl/1891471"
+    }
+  ]
+}

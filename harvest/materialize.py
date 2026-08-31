@@ -60,6 +60,7 @@ EXTRA_KEYS = (
     "published_date",
     "publisher",
     "related_identifiers",
+    "report_number",
     "resource_kind",
     "source_id",
     "source_key",
@@ -143,6 +144,10 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
         "publisher": effective.get("publisher"),
         "published_date": effective.get("published_date"),
         "container": effective.get("container"),
+        # A report/laboratory number (NREL/TP-5000-89937). For the large
+        # population of grey literature with no DOI it is the only stable
+        # human-facing identifier there is, and it is what a reader cites.
+        "report_number": effective.get("report_number"),
         "related_identifiers": effective.get("related_identifiers") or None,
         "license_raw": license_raw,
         "license_mapped": None if license_raw is None else mapped,

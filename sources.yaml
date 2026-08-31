@@ -163,16 +163,19 @@ sources:
     tier: 1
     precedence: 40
     max_records: 5
-    source_key: "metadata-updated field if provided, else normalised payload hash"
+    source_key: "entry_date — OSTI's metadata entry/update stamp; else normalised payload hash"
+    # Verified live 2026-08-31 (Track E): the v1 endpoint is public — no key, no
+    # token — and answers 200 with a BARE JSON ARRAY of flat record objects,
+    # plus X-Total-Count and RFC 5988 Link headers. `/api/` is not disallowed by
+    # https://www.osti.gov/robots.txt. The v2 endpoint (/api/v2/records) answers
+    # 403 to an anonymous client and is deliberately NOT used.
     api: "https://www.osti.gov/api/v1/records"
-    unverified: true
+    # Free-text search. Both queries already surface the DOE laboratories'
+    # IEA Wind output, so no research_org filter is applied — narrowing by lab
+    # would drop the international Task participants' co-authored deposits.
     queries:
       - '"IEA Wind"'
       - '"IEA Wind Task"'
-    research_orgs:
-      - "National Renewable Energy Laboratory"
-      - "Pacific Northwest National Laboratory"
-      - "Sandia National Laboratories"
     rows: 25
 
   # -------------------------------------------------------------------------
