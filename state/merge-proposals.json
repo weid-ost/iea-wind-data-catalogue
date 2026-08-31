@@ -1,0 +1,5 @@
+{
+  "merges": [],
+  "note": "Fuzzy matches proposed by `python -m harvest dedupe`. Nothing here has been applied. Confirm one by writing the merge annotation (see docs/runbooks/correct-a-record.md); reject one by leaving it alone.",
+  "proposals": []
+}
