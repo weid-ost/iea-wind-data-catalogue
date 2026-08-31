@@ -1,0 +1,27 @@
+{
+  "case": "REAL page captured 2026-08-31: https://iea-wind.org/digitalisation-of-wind-lidar/ — an IEA Wind Task 32 workshop write-up. The slug gives nothing away and the page cites a real DOI, so the deterministic heuristics return None and the page reaches the model. The committed cache entry (cache/6ea1d5f1ff1b….json, model claude-fable-5) classifies it as an event with no records. This is the ONLY path a model call is on, and with the cache seeded the whole pipeline runs offline.",
+  "dois_present_on_page": [
+    "10.5281/zenodo.4646945"
+  ],
+  "expected_cache_model": "claude-fable-5",
+  "expected_classification": {
+    "kind": "event",
+    "method": "llm"
+  },
+  "expected_content_chars": 3469,
+  "expected_content_hash": "18eed04cc2e178ca",
+  "expected_deterministic_classification": null,
+  "expected_dois": [],
+  "expected_notice_types": [
+    "page_not_record_bearing"
+  ],
+  "expected_record_bearing": false,
+  "fixture_id": "iea-09-workshop-page",
+  "fixture_kind": "page",
+  "html": "raw/iea-09-workshop-page.html",
+  "iea_task": "task-32",
+  "page_url": "https://iea-wind.org/digitalisation-of-wind-lidar/",
+  "raw": "raw/iea-09-workshop-page.html",
+  "raw_bytes": 539773,
+  "trusted": false
+}

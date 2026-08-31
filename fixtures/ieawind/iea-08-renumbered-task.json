@@ -1,0 +1,25 @@
+{
+  "case": "INVENTED page (marked in the HTML): the Task 59 (WREN) page, which says in so many words that WREN was Task 34. Both numbers go through harvest.config.canonical_group and the record carries ONE task, task-59. There is no task-34 group and none is created.",
+  "expected_classification": {
+    "kind": "publication-list",
+    "method": "pattern"
+  },
+  "expected_content_chars": 517,
+  "expected_content_hash": "52106041bcfcb89a",
+  "expected_dois": [
+    "10.5194/wes-9-883-2024"
+  ],
+  "expected_iea_task": [
+    "task-59"
+  ],
+  "expected_notices": [],
+  "fixture_id": "iea-08-renumbered-task",
+  "fixture_kind": "page",
+  "html": "raw/iea-08-renumbered-task.html",
+  "iea_task": "task-59",
+  "note": "page_tasks() also accepts the alias spelled 'task-34' and yields task-59.",
+  "page_url": "https://iea-wind.org/task59/",
+  "raw": "raw/iea-08-renumbered-task.html",
+  "raw_bytes": 2050,
+  "trusted": false
+}

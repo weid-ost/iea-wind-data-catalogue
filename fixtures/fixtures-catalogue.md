@@ -103,6 +103,7 @@ This is where most extraction bugs will live.
 | `iea-07-no-doi-citation` | Publication listed as title + journal + year only | Fuzzy lookup | Crossref title search; accept only on high-confidence match, else flag |
 | `iea-08-renumbered-task` | Page referencing both old and new task numbers (19→54, 34→59) | Task identity | Canonical task number with alias mapping |
 | `iea-09-news-page` | Event announcement or news post caught by the crawl | False positive | Must **not** become a record; classification test |
+| `iea-09-workshop-page` | Real captured workshop write-up whose slug gives nothing away and which cites a real DOI | The Tier-3 escalation itself | Deterministic heuristics return `None`; the page reaches the model; the committed cache entry (`claude-fable-5`) classifies it `event`, zero records, one `page_not_record_bearing` notice — and it replays offline |
 | `iea-10-boilerplate` | Page with heavy nav, cookie banner, footer | LLM input hygiene | trafilatura output contains body text only |
 | `iea-11-pdf-only` | Publication list inside a linked PDF, not in HTML | Coverage gap | Out of scope for v1 — record the gap explicitly |
 | `iea-12-dead-page` | Completed task whose page 404s or redirects | Link rot | Existing records retained; source marked unreachable |

@@ -1,0 +1,30 @@
+{
+  "assert_absent_dois": [
+    "10.5281/zenodo.7940068.",
+    "10.5194/wes-8-947-2023,"
+  ],
+  "case": "INVENTED page (marked in the HTML): DOIs written in running prose, one of them ending a sentence — '...zenodo.7940068.' The classic regex bug. The trailing full stop is stripped; the DOI is 10.5281/zenodo.7940068, not '10.5281/zenodo.7940068.'",
+  "expected_classification": {
+    "kind": "publication-list",
+    "method": "pattern"
+  },
+  "expected_content_chars": 737,
+  "expected_content_hash": "923c7c71ae7f8686",
+  "expected_dois": [
+    "10.5281/zenodo.7940068",
+    "10.5194/wes-9-883-2024",
+    "10.5194/wes-8-947-2023"
+  ],
+  "expected_iea_task": [
+    "task-43"
+  ],
+  "expected_notices": [],
+  "fixture_id": "iea-02-doi-punctuation",
+  "fixture_kind": "page",
+  "html": "raw/iea-02-doi-punctuation.html",
+  "iea_task": "task-43",
+  "page_url": "https://iea-wind.org/task43/selected-publications/",
+  "raw": "raw/iea-02-doi-punctuation.html",
+  "raw_bytes": 2362,
+  "trusted": false
+}

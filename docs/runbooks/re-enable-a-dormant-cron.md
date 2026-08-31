@@ -77,9 +77,8 @@ Ask, in order:
 
 ## 4. Requirements on the harvest workflow
 
-> **`SPEC — not yet implemented`.** `.github/workflows/` does not exist in this
-> checkout. These are binding on the CI track and are the things to verify after
-> any change to it:
+`.github/workflows/catalogue.yml` implements all of this. These are the things
+to verify after any change to it:
 
 - **`schedule:` weekly** *and* **`workflow_dispatch:`**.
 - **`runs-on: ubuntu-24.04`** — never `ubuntu-latest`

@@ -268,9 +268,28 @@ When the page's content hash later changes, **the pin holds and a `pin_notice`
 fires**. A human then decides whether the pin is still right. **Verified**:
 `pinned` lands as `extras.pinned = "true"`.
 
-The corrected object should also replace the cache entry and be marked pinned —
-that half is owned by the extraction track. See
-[[drain-the-pending-extraction-queue]].
+The corrected object should also replace the cache entry and be marked pinned.
+Edit `cache/<key>.json` in place — it is committed on purpose, so this is a
+reviewable diff — and set three fields:
+
+```jsonc
+{
+  "fields":  { "…": "the corrected extraction" },
+  "pinned":  true,
+  "pin_source_key": "a1b2c3d4e5f60718",                    // the content hash
+  "pin_url": "https://iea-wind.org/task43/t43-publications/" // the page it is for
+}
+```
+
+`pin_url` is not decoration. A cache entry is keyed on content, so a redesigned
+page mints a new key — and a pin found only by content would be reverted by the
+first site refresh, silently. `harvest.extract.find_pin` looks a pin up by the
+one handle the page keeps, and `harvest.extract.lookup_cache(..., url=…)`
+serves it whatever the page says today. **Verified**: after such an edit the
+`ieawind` adapter serves the pinned classification and raises one `pin_notice`
+in `state/last-run.json` naming both hashes.
+
+See [[drain-the-pending-extraction-queue]] §6.
 
 ### 3.7 Raise a notice by hand
 

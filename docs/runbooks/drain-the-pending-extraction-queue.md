@@ -5,7 +5,7 @@ status: current
 date: 2026-08-31
 related: [adr-0031-the-harvest-never-fails-on-llm-unavailability, adr-0025-the-extraction-cache-is-committed, adr-0030-llm-access-via-github-models, adr-0024-the-llm-boundary, adr-0035-no-vendor-sdk, correct-a-record]
 tags: [runbook, llm, tier-3]
-last_executed: never
+last_executed: 2026-09-01
 ---
 
 # Runbook — drain the pending-extraction queue
@@ -78,36 +78,46 @@ Expected output:
 
 ```
 extract: resolved N pending extraction(s)
+extract: M still queued (see state/pending-extraction.json)
 ```
 
-> **`SPEC — not yet implemented`.** Today this exits **2** with
-> `extract: harvest.extract.drain_pending — owner: Track H (extraction)`.
-> `read_cache`, `write_cache`, `queue_pending`, `read_pending`, `extract` and
-> `drain_pending` are stubs. `cache_key` is implemented and must not be changed:
-> the Tier-3 source key derives from the same normalised content, and the
-> adapters and the reconciler have to agree on it.
->
-> **Requirements on the extraction track**, all checkable:
-> - `uv run python -m harvest extract` exits **0** and prints
->   `extract: resolved N pending extraction(s)`.
-> - `extract()` returns `None` — never raises — on no token, rate limit,
->   outage or schema-validation failure (fixture `x-07`).
-> - a cache miss with no model appends `{url, cache_key, reason, queued_at}` to
->   `state/pending-extraction.json`, deduped on `cache_key`, and the run
->   succeeds.
-> - cache entries are written to `cache/<key>.json` as byte-stable JSON, where
->   `key == sha256(content + prompt_version + model_id)`.
-> - `state/last-run.json` carries real `cache.hits`, `cache.misses` and
->   `pending_extraction` values.
-> - no more than `MAX_EXTRACTIONS` model calls per invocation.
-> - content passed to `extract()` is `trafilatura` main content run through
->   `harvest.sanitize.html_to_text` — **never raw HTML**.
-> - identifiers are supplied as `context` from `harvest.doi.extract_dois` and
->   every one is put through `harvest.doi.resolve_or_drop`; unresolvable ⇒ the
->   record is dropped and appears in `dropped_dois`.
-> - every model-produced field carries
->   `FieldProvenance(extraction_method="llm", model=…, prompt_version=…,
->   confidence=…)`.
+It exits **0** whether or not anything drained. An entry stays queued when the
+page cannot be re-fetched or the model is unavailable; an entry with no `url`
+at all is dropped rather than kept forever.
+
+Every one of the requirements this runbook used to list as pending is now
+implemented and covered by `tests/test_extract.py`:
+
+- `extract()` returns `None` — never raises — on no token, rate limit, outage,
+  unparseable JSON or schema-validation failure (fixture `x-07`).
+- a cache miss with no model appends `{url, cache_key, reason, queued_at}` to
+  `state/pending-extraction.json`, deduped on `cache_key` with `queued_at`
+  pinned to the first sighting, and the run succeeds.
+- cache entries are `cache/<key>.json`, byte-stable, where
+  `key == sha256(content + prompt_version + model_id)`. `cache_key` is
+  unchanged from the foundation: the Tier-3 source key derives from the same
+  normalised content, and the adapters and the reconciler have to agree.
+- `state/last-run.json` carries real `cache.hits`, `cache.misses` and
+  `pending_extraction`.
+- no more than `MAX_EXTRACTIONS` model calls per invocation.
+- content reaching `extract()` is `trafilatura` main content through
+  `harvest.sanitize.html_to_text` — never raw HTML. `harvest.extract.main_text`
+  is the single definition, so the adapter, the source key and this drain
+  cannot disagree about what "the content" is.
+- identifiers are supplied as `context["dois"]` from
+  `harvest.doi.extract_dois`, **and a DOI the model returns that was not in
+  that list is blanked before the result is cached** — so a hallucinated
+  identifier cannot even reach `resolve_or_drop`, let alone a record.
+- every model-produced field carries
+  `FieldProvenance(extraction_method="llm", model=…, prompt_version=…,
+  confidence=…)`, which the model layer refuses to construct without a `model`
+  and a `prompt_version`.
+
+> **Observed 2026-09-01: GitHub Models answers `410 Gone`** with
+> `github_models_retirement_brownout`. The harvest does not care, which is the
+> entire point of [[adr-0031-the-harvest-never-fails-on-llm-unavailability]]:
+> the pages queue, the run reports `ok: true`, Tier 1 is untouched. Point
+> `$HARVEST_LLM_ENDPOINT` at any OpenAI-compatible provider (§2) to drain.
 
 ## 4. Commit the cache
 
@@ -143,10 +153,22 @@ After that, CI only ever handles a handful of pages a week.
 ## 6. Pinning a wrong extraction
 
 If the model got something wrong, do not re-run it and hope. Pin the correction:
-[[correct-a-record]] §3.6. The corrected object replaces the cache entry, is
-marked `pinned`, and records `pin_source_key` — the content hash it was made
-against. When the page later changes, **the pin holds and a `pin_notice`
-fires**.
+[[correct-a-record]] §3.6. The corrected object replaces the cache entry and is
+marked `pinned`, recording both `pin_source_key` — the content hash it was made
+against — and `pin_url`, the page it is for.
+
+`pin_url` is what makes the pin survive. Cache entries are keyed on content, so
+a page rewrite mints a new key; a pin found only by content would be reverted
+by the next site refresh without anybody noticing. `find_pin` looks it up by
+URL, `lookup_cache(..., url=…)` serves it whatever the page says today, and when
+the content hash no longer matches `pin_source_key` **the pin holds and a
+`pin_notice` fires** into `state/last-run.json` so a human revisits it.
+
+Check for held pins in the monthly read:
+
+```sh
+uv run python -m harvest report | python3 -m json.tool | grep -A6 pin_notice
+```
 
 ## 7. Bumping the prompt
 
@@ -158,7 +180,13 @@ commit message.
 
 ---
 
-**Last executed:** never — the extraction track has not landed. The queue
-inspection in §1 and the environment variables in §2 are verified against
-`harvest/extract.py` and `harvest/cli.py`; the drain command currently exits 2
-by design.
+**Last executed:** 2026-09-01. `uv run python -m harvest run --source ieawind
+--limit 5` harvested five records live from `iea-wind.org/task43/
+t43-publications/` (every DOI resolved against DataCite; nothing came from the
+page), queued seven ambiguous pages, and reported `ok: true`. A second run was a
+clean no-op — `seen: 5, skipped_unchanged: 5, changed: 0`. `uv run python -m
+harvest extract --limit 2` then exited 0 with
+`extract: resolved 0 pending extraction(s)` / `extract: 7 still queued`,
+because GitHub Models is in its retirement brownout and answered `410 Gone` to
+every call. §1, §3 and §6 are verified output; §5's budget is still an
+estimate.

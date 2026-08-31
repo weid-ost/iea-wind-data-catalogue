@@ -55,8 +55,47 @@ class TestEveryFixture:
     def test_declares_id_and_kind(self, path: Path) -> None:
         fixture = load(path)
         assert fixture["fixture_id"] == path.stem
-        assert fixture["fixture_kind"] in ("source_namespace", "record")
+        assert fixture["fixture_kind"] in (
+            "source_namespace", "record", "page", "degradation"
+        )
         assert fixture.get("case"), "say what the fixture is for"
+
+    def test_page_fixtures_pin_a_page_and_its_hash(self, path: Path) -> None:
+        """``page`` fixtures pin crawl behaviour, not a record (Tier 3).
+
+        A task page is a citation list: most of what can go wrong there —
+        classification, the DOI sweep, boilerplate stripping, a recorded
+        coverage gap — happens *before* any record exists, so those fixtures
+        hold an HTML page and the expectations about it rather than a
+        ``SourceNamespace``.
+        """
+        fixture = load(path)
+        if fixture["fixture_kind"] != "page":
+            pytest.skip("not a page fixture")
+        raw = path.parent / fixture["raw"]
+        assert raw.exists(), f"missing captured page: {raw}"
+        assert raw.suffix == ".html"
+        assert fixture["page_url"].startswith("http")
+        assert fixture["expected_content_hash"]
+        assert isinstance(fixture["expected_dois"], list)
+
+    def test_degradation_fixtures_pin_a_source_result(self, path: Path) -> None:
+        """``degradation`` fixtures pin *absence*: a source that disables itself.
+
+        There is no record to capture and no page to reduce — the whole point
+        is that upstream gave us nothing. So the expectation is the
+        :class:`~harvest.adapters.base.SourceResult` the run report will show,
+        and the raw payload is the probe transcript that justifies it
+        (``wdh-07``).
+        """
+        fixture = load(path)
+        if fixture["fixture_kind"] != "degradation":
+            pytest.skip("not a degradation fixture")
+        expected = fixture["expected_source_result"]
+        assert expected["reachable"] is False
+        assert expected["changed"] == 0, "a disabled source appends no events"
+        assert fixture["expected_run_ok"] is True, "degradation never fails the run"
+        assert fixture["expected_records_untouched"] is True
 
     def test_source_namespace_fixtures_are_valid(self, path: Path) -> None:
         fixture = load(path)
@@ -87,7 +126,26 @@ class TestEveryFixture:
             pytest.skip("no raw payload referenced")
         raw_path = path.parent / raw
         assert raw_path.exists(), f"missing verbatim upstream payload: {raw_path}"
-        json.loads(raw_path.read_text(encoding="utf-8"))
+        if raw_path.suffix == ".html":
+            assert raw_path.read_text(encoding="utf-8").lstrip().startswith("<!DOCTYPE")
+        else:
+            json.loads(raw_path.read_text(encoding="utf-8"))
+
+    def test_an_invented_payload_says_so(self, path: Path) -> None:
+        """Fixtures the tracks had to invent are marked, in the payload itself.
+
+        A captured payload tests the parser against the API; an invented one
+        tests it against somebody's idea of the API. Both are legitimate — the
+        second only when the shape genuinely cannot be captured — but the
+        difference has to be visible to whoever reads the fixture next.
+        """
+        fixture = load(path)
+        if "INVENTED" not in (fixture.get("case") or "").upper():
+            pytest.skip("not declared invented")
+        raw_path = path.parent / fixture["raw"]
+        assert "INVENTED" in raw_path.read_text(encoding="utf-8").upper(), (
+            f"{raw_path.name} is used as an invented fixture but does not say so"
+        )
 
 
 class TestZen01:

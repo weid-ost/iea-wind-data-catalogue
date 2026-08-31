@@ -1,0 +1,68 @@
+{
+  "_note": "Spike 4 evidence, captured live against wdh.energy.gov on 2026-09-01 (first captured 2026-08-31; re-verified unchanged). Each entry is one real probe: the request that was made and the response that came back, verbatim. Nothing here is invented — every status code and body was observed with the project User-Agent.",
+  "probes": [
+    {
+      "id": "robots",
+      "request": { "method": "GET", "url": "https://wdh.energy.gov/robots.txt" },
+      "response": {
+        "status": 200,
+        "body": "# https://www.robotstxt.org/robotstxt.html\nUser-agent: *\nDisallow: /static/"
+      },
+      "reading": "Crawling is permitted outside /static/. Robots is NOT the obstacle; authentication is."
+    },
+    {
+      "id": "api-info",
+      "request": { "method": "GET", "url": "https://wdh.energy.gov/api/info" },
+      "response": {
+        "status": 200,
+        "body": {
+          "siteName": "Wind Data Hub (WDH)",
+          "siteShortName": "WDH",
+          "siteDoi": "10.21947/WDH-DAP/1910052",
+          "apiUrl": "https://70d76sxu18.execute-api.us-west-2.amazonaws.com/prod"
+        }
+      },
+      "reading": "The only public, machine-readable endpoint. It advertises the documented API gateway."
+    },
+    {
+      "id": "gateway-datasets",
+      "request": {
+        "method": "GET",
+        "url": "https://70d76sxu18.execute-api.us-west-2.amazonaws.com/prod/datasets"
+      },
+      "response": { "status": 403, "body": { "message": "Missing Authentication Token" } },
+      "reading": "The documented API needs a token we do not have and cannot obtain without an account."
+    },
+    {
+      "id": "search-get",
+      "request": { "method": "GET", "url": "https://wdh.energy.gov/api/datasets/_search" },
+      "response": { "status": 404, "body": "" },
+      "reading": "The SPA's Elasticsearch proxy rejects GET outright."
+    },
+    {
+      "id": "search-post",
+      "request": {
+        "method": "POST",
+        "url": "https://wdh.energy.gov/api/datasets/_search",
+        "headers": { "Content-Type": "application/json" },
+        "body": { "size": 1 }
+      },
+      "response": {
+        "status": 419,
+        "body_excerpt": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Page Expired</title>"
+      },
+      "reading": "Laravel CSRF. Without a browser session token the proxy refuses. A deliberate signal that unattended clients are not the intended consumer; we do not forge one."
+    },
+    {
+      "id": "projects-search-post",
+      "request": {
+        "method": "POST",
+        "url": "https://wdh.energy.gov/api/projects/_search",
+        "headers": { "Content-Type": "application/json" },
+        "body": { "size": 1 }
+      },
+      "response": { "status": 419, "body_excerpt": "<!DOCTYPE html> … Page Expired" },
+      "reading": "Same wall on the projects index."
+    }
+  ]
+}

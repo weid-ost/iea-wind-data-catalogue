@@ -153,6 +153,23 @@ def cmd_run(args: argparse.Namespace) -> int:
             dry_run=args.dry_run,
         )
         report.add_source(name, result)
+        # Optional adapter reporting surfaces (Tier 3 uses both): a DOI drop log
+        # so `dropped_dois` is never silent (ADR-0024 rule 3), and coverage
+        # notices so a recorded gap reaches the curator's monthly read.
+        drop_log = getattr(adapter, "drop_log", None)
+        if drop_log is not None and len(drop_log):
+            report.dropped_dois.extend(drop_log.as_notices())
+        report.add_notices(getattr(adapter, "notices", []) or [])
+
+    # Tier-3 accounting (ADR-0025, ADR-0031). Written even when no Tier-3
+    # source ran, because the site renders the backlog unconditionally.
+    from harvest import extract as extraction
+
+    report.cache_hits = extraction.STATS.hits
+    report.cache_misses = extraction.STATS.misses
+    report.pending_extraction = len(
+        extraction.read_pending(config.state_dir(root) if root else None)
+    )
 
     if not args.no_annotations:
         from harvest.annotations import apply_annotations, check_pins
@@ -299,12 +316,15 @@ def cmd_extract(args: argparse.Namespace) -> int:
     from harvest import extract as extraction
 
     limit = args.limit if args.limit is not None else extraction.MAX_EXTRACTIONS
-    try:
-        resolved = extraction.drain_pending(limit=limit)
-    except NotImplementedError as exc:
-        print(f"extract: {exc}", file=sys.stderr)
-        return 2
+    state_directory = config.state_dir(args.root) if args.root else None
+    cache_directory = config.cache_dir(args.root) if args.root else None
+    resolved = extraction.drain_pending(
+        limit=limit, state_directory=state_directory, cache_directory=cache_directory
+    )
     print(f"extract: resolved {resolved} pending extraction(s)")
+    remaining = len(extraction.read_pending(state_directory))
+    if remaining:
+        print(f"extract: {remaining} still queued (see state/pending-extraction.json)")
     return 0
 
 

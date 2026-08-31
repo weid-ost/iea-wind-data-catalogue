@@ -251,20 +251,27 @@ Reproduced verbatim from `CLAUDE.md`. These are not guidance.
 
 ## 8. What is built, and what is not
 
-As of this commit, the **foundation** exists and `uv run pytest` is green:
-`harvest/models.py`, `identity.py`, `doi.py`, `licenses.py`, `sanitize.py`,
-`http.py`, `events.py`, `materialize.py`, `ckan_compat.py`, `config.py`,
-`runreport.py`, `cli.py`, the adapter base and registry, the three YAML
-registers, `schema/ckan-scheming.json`, the `Makefile` and `harvest/CONTRACT.md`.
+**Every track has landed.** As of this commit there are no stubs left in
+`harvest/adapters/`, no `SPEC — not yet implemented` command in the runbooks,
+and the pipeline has been run end to end against the live upstreams. `uv run
+pytest` is green.
 
-The following are **stubs or absent**, owned by the parallel build tracks
-listed in `harvest/CONTRACT.md` §14. Every runbook command that depends on one
-is marked **`SPEC — not yet implemented`**:
+The foundation: `harvest/models.py`, `identity.py`, `doi.py`, `licenses.py`,
+`sanitize.py`, `http.py`, `events.py`, `materialize.py`, `ckan_compat.py`,
+`config.py`, `runreport.py`, `cli.py`, the adapter base and registry, the three
+YAML registers, `schema/ckan-scheming.json`, the `Makefile` and
+`harvest/CONTRACT.md`.
 
-| Not yet built | Owner | First checkable evidence it is done |
+| Built | Owner | The evidence it is done |
 |---|---|---|
-| the seven adapters' `harvest()` / `map()` | tracks A–G | `uv run python -m harvest run` reports `implemented: true` for that source |
-| Tier-3 extraction, cache, pending queue | track H | `uv run python -m harvest extract` exits 0 instead of 2 |
-| ~~reconciliation, merges, link checking, `annotations/` replay~~ — **built**: `harvest/dedupe.py`, `harvest/annotations.py`, `harvest/linkcheck.py`, the `dedupe` / `linkcheck` / `annotations` verbs | track I | `uv run python -m harvest dedupe` and `linkcheck` exit 0; notices appear in `state/last-run.json` |
+| the seven adapters' `harvest()` / `map()` — `zenodo`, `datacite`, `crossref`, `github`, `osti`, `ieawind`, `wdh` | tracks A–G | `uv run python -m harvest run` reports `implemented: true` for every source; each has its own `tests/test_<name>.py` and its fixture family |
+| Tier-3 extraction, committed cache, pending queue — `harvest/extract.py` | track H | `uv run python -m harvest extract` exits 0 and prints `extract: resolved N pending extraction(s)`; the committed `cache/` entries replay offline |
+| reconciliation, merges, link checking, `annotations/` replay — `harvest/dedupe.py`, `harvest/annotations.py`, `harvest/linkcheck.py`, the `dedupe` / `linkcheck` / `annotations` verbs | track I | `uv run python -m harvest dedupe` and `linkcheck` exit 0; notices appear in `state/last-run.json` |
 | `site/` — Astro, Pagefind, the gallery, the a11y gate | track J | `make site` and `make gates` succeed |
 | `.github/workflows/` | CI track | a weekly run commits `state/last-run.json` and deploys in the same job |
+
+What remains is not a track but a **recorded gap**: publication lists that live
+only inside a linked PDF are out of scope for v1 and are reported as a coverage
+notice rather than crawled (fixture `iea-11-pdf-only`), and the Wind Data Hub
+disables itself behind its authentication wall rather than guessing (fixture
+`wdh-07`). Neither is a bug; both are visible in the run report.

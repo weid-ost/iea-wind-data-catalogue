@@ -1,0 +1,188 @@
+{
+  "_id": "35",
+  "_index": "production-datasets_20260831_030005",
+  "_score": 1,
+  "_source": {
+    "accessLevel": "public",
+    "accessRestriction": "none",
+    "constraintsDescription": "",
+    "contactPoint": [
+      {
+        "fn": "Raghavendra Krishnamurthy",
+        "hasEmail": "mailto:raghavendra.krishnamurthy@pnnl.gov",
+        "hasRole": "Co-PI",
+        "hasRoleId": ".d.copi"
+      }
+    ],
+    "dapAccessGroup": "__PUBLIC__",
+    "dapAccessRequiresMfa": false,
+    "dapFileSummary": {
+      "begins": "2014-08-13T20:30:03.000000Z",
+      "count": 1202,
+      "ends": "2016-05-31T20:30:03.000000Z",
+      "extensions": [
+        "6nb00120_lidar_20141213_20160530.txt",
+        "6nb00120_met_20141212_20160530.txt",
+        "6nb00120_wave_20141212_20160530.txt",
+        "lidar_readme.txt",
+        "met_readme.txt",
+        "raw.primary.txt",
+        "raw.secondary.txt",
+        "wave_readme.txt"
+      ],
+      "range": null,
+      "size": 229082932,
+      "storageTier": null,
+      "types": [
+        "txt"
+      ],
+      "updated": "2026-01-24T02:24:38.000000Z"
+    },
+    "dapOrderStats": {
+      "orderedBytes": 0,
+      "orderedFiles": 0,
+      "timePeriod": "6M",
+      "uniqueUserCount": 1
+    },
+    "dapSortOrder": 0,
+    "dataDetails": "Raw data are contained in the *.txt files, including \"readme\" files.\n\nbuoy.z01.00.20141213.000000.6nb00120_lidar*, *lidar_readme.txt\n\nbuoy.z01.00.20141212.000000.6nb00120_met*, *met_readme.txt\n\nbuoy.z01.00.20141212.000000.6nb00120_wave*, *wave_readme.txt\n\nTo request this data choose a date range that includes:  20141212-20141213",
+    "dataLevel": "Raw Data (00)",
+    "dataQualityDescription": "**Note**:  As of 8/30/2018 the longitude in the processed (a0) files is incorrect.\n\n`282.6339` is incorrect\n\n`-75.4919` is the correct value\n\nThis may be reprocessed and corrected in the future.",
+    "description": "Data collected to explore wind energy applications",
+    "distributionType": [
+      "download-dap"
+    ],
+    "doiIdFromPublisher": "1406992",
+    "doiName": "10.21947/1406992",
+    "family": "buoy/buoy.z01",
+    "fileExtensions": [
+      {
+        "downloadDisplay": "list",
+        "example": "lidar_readme",
+        "label": "Extension 1",
+        "pattern": "^[a-z0-9\\-_]+$"
+      },
+      {
+        "downloadDisplay": "list",
+        "example": "txt",
+        "label": "Extension 2",
+        "pattern": "^[a-z0-9\\-_]+$"
+      },
+      {
+        "downloadDisplay": "list",
+        "example": "txt",
+        "label": "File Type",
+        "pattern": "^[a-z0-9\\-_]+$"
+      }
+    ],
+    "generalUseReady": false,
+    "identifier": "buoy/buoy.z01.00",
+    "identifierSchema": {
+      "type": "instrument",
+      "typeName": "Instrument"
+    },
+    "instance": "z01",
+    "instrument": "Buoy (buoy)",
+    "isExternal": false,
+    "isStandardized": false,
+    "lastUpdated": "2022-09-27T00:37:07.000000Z",
+    "measurements": [],
+    "name": "buoy/buoy.z01.00",
+    "project": {
+      "accessLevel": "public",
+      "accessRestriction": "none",
+      "contactPoint": [
+        {
+          "fn": "Alicia Mahon",
+          "hasEmail": "mailto:alicia.mahon@pnnl.gov",
+          "hasOrg": "Pacific Northwest National Laboratory",
+          "hasRole": "Principal Investigator"
+        },
+        {
+          "fn": "Raghavendra Krishnamurthy",
+          "hasEmail": "mailto:raghu@pnnl.gov",
+          "hasOrg": "Pacific Northwest National Laboratory",
+          "hasRole": "Principal Investigator"
+        },
+        {
+          "fn": "Mark Severy",
+          "hasEmail": "mailto:mark.severy@pnnl.gov",
+          "hasOrg": "Pacific Northwest National Laboratory",
+          "hasRole": "Principal Investigator"
+        }
+      ],
+      "description": "## Overview\nThe Pacific Northwest National Laboratory (PNNL) manages two lidar buoys for offshore wind resource characterization on behalf of the U.S. Department of Energy’s Wind Energy Technologies Office. The buoys include instruments that measure meteorological and oceanographic conditions at offshore locations. Details about the lidar buoys and instrument specifications are available on the \"[program webpage](https://www.pnnl.gov/projects/lidar-buoy-program)\". Descriptions of each deployment campaign are provided below.\n\n\n### Virginia and New Jersey Deployments, 2014 - 2017   \nThe buoys were deployed in Virginia and New Jersey from 2014 through 2017. Processed data in NetCDF format are available for the Virginia deployment (December 11, 2014 to May 31, 2016) and the New Jersey deployment (November 2, 2015 to February 7, 2017).\n\n### Lidar Replacement and Validation, 2020  \nThe original lidar systems were replaced by Leosphere Windcube 866 lidar systems in 2019. The buoys and new lidar systems were validated in early 2020 against a reference lidar system on the Air-Sea Interaction Tower, operated by Woods Hole Oceanographic Institute. To ensure compliance with recommended practices published by the Carbon Trust, an independent wind resource consultant certified the validation approach and execution. Raw data from the validation campaigns are available from the lidar and buoy systems. The lidar validation reports for both lidars are available in the References section of the lidar data set webpage.  \n\n### California Coastal Deployment 2020 - 2022  \nThe buoys were deployed off the California coast to conduct a year-long wind resource characterization campaign in partnership with the Bureau of Ocean Energy Management. The buoys were moored in the Morro Bay Call Area in central California and the Humboldt Call Area in northern California. Both areas were leased to commercial developers in 2022.  \n\n### Hawaii Deployment, 2022 - 2023  \nOne buoy was deployed off the coast of O’ahu, Hawaii, on December 1, 2022 in partnership with the Bureau of Ocean Energy Management. Raw and processes data are available throughout the deployment campaign.\n",
+      "identifier": "buoy",
+      "keywords": [
+        "Air-sea interactions",
+        "Meteorological instruments",
+        "Meteorology",
+        "Oceanography",
+        "Offshore winds",
+        "Wind resource assessment"
+      ],
+      "participatingOrganizations": [
+        {
+          "name": "Pacific Northwest National Laboratory",
+          "shortName": "PNNL"
+        }
+      ],
+      "projectCategory": [
+        "Wind energy"
+      ],
+      "references": [],
+      "title": "Offshore Wind Energy - Buoy Lidar Project"
+    },
+    "projectName": "buoy",
+    "project_name": "buoy",
+    "references": [
+      {
+        "custom": {
+          "fileExtension": "pdf",
+          "fileSize": 34262,
+          "fileType": "application/pdf"
+        },
+        "referenceTitle": "readme-change-log.pdf",
+        "referenceURL": "https://wdh.energy.gov/api/datasets/buoy/buoy.z01.00/files/readme-change-log.pdf"
+      },
+      {
+        "custom": {
+          "fileExtension": "pdf",
+          "fileSize": 408165,
+          "fileType": "application/pdf"
+        },
+        "referenceTitle": "readme-one-second-lidar-data.pdf",
+        "referenceURL": "https://wdh.energy.gov/api/datasets/buoy/buoy.z01.00/files/readme-one-second-lidar-data.pdf"
+      },
+      {
+        "custom": {
+          "fileExtension": "pdf",
+          "fileSize": 2141860,
+          "fileType": "application/pdf"
+        },
+        "referenceTitle": "pnnl-25512-1.pdf",
+        "referenceURL": "https://wdh.energy.gov/api/datasets/buoy/buoy.z01.00/files/pnnl-25512-1.pdf"
+      },
+      {
+        "custom": {
+          "fileExtension": "txt",
+          "fileSize": 11743300,
+          "fileType": "text/plain"
+        },
+        "referenceTitle": "6nb00120-flux-20141211-20160531-600s-coare3.0.csv",
+        "referenceURL": "https://wdh.energy.gov/api/datasets/buoy/buoy.z01.00/files/6nb00120-flux-20141211-20160531-600s-coare3.0.csv"
+      }
+    ],
+    "referencesDescription": "",
+    "settings": [],
+    "spatial": [
+      [
+        -75.4919,
+        36.8668
+      ]
+    ],
+    "timezoneOffset": 0,
+    "title": "Buoy - Virginia - Wind Sentinel Vindicator 3 (120) - Raw Data",
+    "uncertaintyDescription": ""
+  }
+}

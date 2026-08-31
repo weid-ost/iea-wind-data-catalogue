@@ -1,0 +1,26 @@
+{
+  "case": "REAL page captured 2026-08-31: https://iea-wind.org/task-25-has-published-two-journal-articles/ — a news post announcing two genuinely published articles, with two real DOIs on it. It must NOT become a record and its DOIs must NOT be swept. Caught deterministically by the announcement-shaped slug, before any model is consulted.",
+  "dois_present_on_page": [
+    "10.1002/wene.376",
+    "10.1109/tpwrs.2020.3034924"
+  ],
+  "expected_classification": {
+    "kind": "news",
+    "method": "pattern"
+  },
+  "expected_content_chars": 1106,
+  "expected_content_hash": "4a9680b15136cc3d",
+  "expected_dois": [],
+  "expected_notice_types": [
+    "page_not_record_bearing"
+  ],
+  "expected_record_bearing": false,
+  "fixture_id": "iea-09-news-page",
+  "fixture_kind": "page",
+  "html": "raw/iea-09-news-page.html",
+  "iea_task": "task-25",
+  "page_url": "https://iea-wind.org/task-25-has-published-two-journal-articles/",
+  "raw": "raw/iea-09-news-page.html",
+  "raw_bytes": 542643,
+  "trusted": true
+}

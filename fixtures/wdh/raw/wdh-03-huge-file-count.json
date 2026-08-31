@@ -1,0 +1,145 @@
+{
+  "_id": "1185",
+  "_index": "production-datasets_20260831_030005",
+  "_score": 1,
+  "_source": {
+    "accessLevel": "public",
+    "accessRestriction": "none",
+    "contactPoint": [
+      {
+        "fn": "Raghu Krishnamurthy",
+        "hasEmail": "mailto:raghu@pnnl.gov",
+        "hasOrg": "Pacific Northwest National Laboratory",
+        "hasRole": "PI"
+      }
+    ],
+    "dapAccessGroup": "__PUBLIC__",
+    "dapAccessRequiresMfa": false,
+    "dapFileSummary": {
+      "begins": "2023-12-14T20:30:20.000000Z",
+      "count": 1758855,
+      "ends": "2025-09-09T20:30:20.000000Z",
+      "extensions": [
+        "txt"
+      ],
+      "range": null,
+      "size": 10226269335,
+      "storageTier": null,
+      "types": [
+        "txt"
+      ],
+      "updated": "2026-01-24T06:59:22.000000Z"
+    },
+    "dapOrderStats": {
+      "orderedBytes": 541414735,
+      "orderedFiles": 93147,
+      "timePeriod": "6M",
+      "uniqueUserCount": 2
+    },
+    "dapSortOrder": 0,
+    "dataLevel": "Raw Data (00)",
+    "description": "This dataset contains raw data from the laser disdrometer at Nantucket. The disdrometer measures droplet size distribution, hydrometer type, and precipitation rate.",
+    "distributionType": [
+      "download-dap"
+    ],
+    "doiIdFromPublisher": "2234009",
+    "doiName": "10.21947/2234009",
+    "family": "wfip3/nant.ld.z01",
+    "fileExtensions": [
+      {
+        "downloadDisplay": "list",
+        "label": "File Type"
+      }
+    ],
+    "generalUseReady": false,
+    "identifier": "wfip3/nant.ld.z01.00",
+    "identifierSchema": {
+      "type": "instrument",
+      "typeName": "Instrument"
+    },
+    "instance": "z01",
+    "instrument": "Laser Disdrometer (ld)",
+    "isExternal": false,
+    "isStandardized": false,
+    "lastUpdated": "2026-03-03T21:02:06.000000Z",
+    "location": "nant",
+    "measurements": [],
+    "name": "wfip3/nant.ld.z01.00",
+    "project": {
+      "accessLevel": "public",
+      "accessRestriction": "none",
+      "contactPoint": [
+        {
+          "fn": "Raghu Krishnamurthy",
+          "hasEmail": "mailto:raghu@pnnl.gov",
+          "hasOrg": "Pacific Northwest National Laboratory",
+          "hasRole": "DOE Resources Principal Investigator"
+        },
+        {
+          "fn": "Anthony Kirincich",
+          "hasEmail": "mailto:akirincich@whoi.edu",
+          "hasOrg": "Woods Hole Oceanographic Institution",
+          "hasRole": "WHOI Resources Principal Investigator"
+        },
+        {
+          "fn": "Dave Turner",
+          "hasEmail": "mailto:dave.turner@noaa.gov",
+          "hasOrg": "National Oceanic and Atmospheric Administration",
+          "hasRole": "NOAA Resources Principal Investigator"
+        }
+      ],
+      "description": "## Overview\nThe Wind Forecasting Improvement Project 3 (WFIP-3) is the first offshore-based wind resource characterization project within the WFIP construct, funded by the U.S. Department of Energy.\n\nWFIP-3 has three scientific goals:  \n\n- Improve the physical understanding of mesoscale meteorological and oceanographic processes that directly affect wind resource characterization in the U.S. East Coast offshore environment.\n- Deploy and operate a 3-D multiscale sensor array to characterize vertical and horizontal structure of the marine boundary layer to provide the observations necessary to improve our understanding of these processes.\n- Incorporate and validate the new understanding into foundational numerical weather forecasting models and other physics-based atmospheric and oceanographic models to improve wind energy forecasts.\n\n#### Participants/Institutions  \nIn support of these goals, a team of universities lead by Woods Hole Oceanographic Institution (WHOI), the U.S. Department of Energy (DOE), and the National Oceanographic and Atmospheric Administration (NOAA) are supporting a multi-seasonal offshore field measurement campaign, linked to intensive numerical modeling development and validation efforts, that will work to address each of the WFIP-3 project goals.  The project partners involved within the WFIP3 project are shown below.\n\n![Alt Text](images/wfip3_partners2.jpg)\n\n\n## Objective\nWFIP-3 will provide a unique field study that will deliver the comprehensive suite of data needed to inform a series of modeling efforts that will develop and evaluate parameterization schemes suited to offshore environments and improved industry-targeted applications.  The field study has two goals: (1) detailed sampling of the vertical structure of the Marine Atmospheric Boundary Layer (MABL) at key observational areas, creating a rich dataset that will be used to refine and validate parameterization schemes, and (2) wide-area sampling of the MABL to create a multi-scale array of observations informing and guiding models of resource characterization.  We will deploy a multi-platform array of measurements that span the MABL and create a multi-scale observational array stretching south from Marth’s Vineyard across the wind energy areas.  We will:\n\n- Collect detailed measurements of momentum, heat, and mass fluxes at multiple levels and lidar-based profiles of the MABL vertical structure from two offshore towers at the Air-Sea Interaction Tower (ASIT) and on a large Barge. \n- Carry out wide-area sampling of the coupled atmosphere and ocean boundary layers using lidar buoys, an array of surface flux buoys, as well as nearby land-based profiling and scanning observational systems. \n- Conduct coordinated in situ sampling of the vertical structure of the MABL and beyond via rawinsonde launches from Martha’s Vineyard and during Intensive Operating Periods (IOPs) during ship-based transects.\n- Utilize remote sensing products (e.g., SST), adding wide-area sampling of the ocean surface winds via HFR-based wind observations and satellite-based flux products to enhance the in-situ observations.\n-  Leverage the historical record of metocean and surface flux observations in the region.\n\nOur deployment strategy will place instruments at locations in and near existing wind energy lease areas along the northeast US continental shelf.  Figure below shows the study area and measurement sites planned for WFIP-3.  \n\n![Alt Text](images/wfip3_area2.jpg)  \n\nThese measurements will help support six core research questions to be addressed within WFIP-3:\n- Characterization and parameterization of the marine atmospheric boundary layer, surface layer and the coastal ocean\n- Assess the effects of mesoscale atmospheric or oceanic processes on boundary and rotor layer characteristics\n- Impacts of a dynamic, coupled, atmosphere-wave-ocean on the atmospheric boundary layer and wind power forecasts\n- Improve air-sea fluxes and flux profile parameterizations to better capture the evolving characteristics of winds over the study region\n- Assess the effects of clouds and precipitation on boundary layer, rotor layer winds and turbine performance\n- Impact of atmospheric and oceanic conditions on wind plant wakes in the study region\n\n\n\n#### Project Timeline\n\n![Alt Text](images/wfip3_timeline.JPG)\n",
+      "doiName": "10.21947/WFIP3/3008589",
+      "identifier": "wfip3",
+      "keywords": [
+        "Boundary layers",
+        "Modeling",
+        "Offshore winds",
+        "Wind profiles"
+      ],
+      "participatingOrganizations": [
+        {
+          "name": "Argonne National Laboratory",
+          "shortName": "ANL"
+        },
+        {
+          "name": "Lawrence Livermore National Laboratory",
+          "shortName": "LLNL"
+        },
+        {
+          "name": "National Oceanic and Atmospheric Administration",
+          "shortName": "NOAA"
+        },
+        {
+          "name": "National Renewable Energy Laboratory",
+          "shortName": "NREL"
+        },
+        {
+          "name": "Pacific Northwest National Laboratory",
+          "shortName": "PNNL"
+        },
+        {
+          "name": "Woods Hole Oceanographic Institution",
+          "shortName": "WHOI"
+        }
+      ],
+      "projectCategory": [
+        "Wind energy"
+      ],
+      "references": [],
+      "title": "The Wind Forecasting Improvement Project 3 (WFIP-3)"
+    },
+    "projectName": "wfip3",
+    "project_name": "wfip3",
+    "references": [],
+    "settings": [],
+    "spatial": [
+      [
+        -70.107003,
+        41.24255
+      ]
+    ],
+    "timezoneOffset": 0,
+    "title": "NANT Laser Disdrometer / Raw Data"
+  }
+}

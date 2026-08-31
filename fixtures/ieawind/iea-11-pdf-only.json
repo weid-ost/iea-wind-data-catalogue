@@ -1,0 +1,25 @@
+{
+  "case": "INVENTED page (marked in the HTML): the publication list exists only inside two linked PDFs. PDF parsing is out of scope for v1 (sources.yaml: pdf_publication_lists: false). The gap is RECORDED as a coverage_gap_pdf_only notice naming the PDFs, not silently skipped.",
+  "expected_classification": {
+    "kind": "publication-list",
+    "method": "pattern"
+  },
+  "expected_content_chars": 310,
+  "expected_content_hash": "a87a150e03a3612c",
+  "expected_dois": [],
+  "expected_gap_pdfs": [
+    "https://iea-wind.org/wp-content/uploads/2025/03/task-45-publications-2025.pdf",
+    "https://iea-wind.org/wp-content/uploads/2026/02/task-45-publications-2026.pdf"
+  ],
+  "expected_notice_types": [
+    "coverage_gap_pdf_only"
+  ],
+  "fixture_id": "iea-11-pdf-only",
+  "fixture_kind": "page",
+  "html": "raw/iea-11-pdf-only.html",
+  "iea_task": "task-45",
+  "page_url": "https://iea-wind.org/task45/outputs/",
+  "raw": "raw/iea-11-pdf-only.html",
+  "raw_bytes": 2131,
+  "trusted": false
+}

@@ -1,0 +1,101 @@
+{
+  "_id": "807",
+  "_index": "production-datasets_20260831_030005",
+  "_score": 1,
+  "_source": {
+    "accessLevel": "public",
+    "accessRestriction": "none",
+    "dapAccessGroup": "__PUBLIC__",
+    "dapAccessRequiresMfa": false,
+    "dapFileSummary": {
+      "begins": "2022-12-27T20:30:15.000000Z",
+      "count": 37,
+      "ends": "2022-12-27T20:30:15.000000Z",
+      "extensions": [
+        "cdf"
+      ],
+      "range": null,
+      "size": 63151008,
+      "storageTier": null,
+      "types": [
+        "cdf"
+      ],
+      "updated": "2026-08-31T01:24:35.000000Z"
+    },
+    "dapOrderStats": {
+      "orderedBytes": 0,
+      "orderedFiles": 0,
+      "timePeriod": "6M",
+      "uniqueUserCount": 0
+    },
+    "dapSortOrder": 0,
+    "dataLevel": "Reviewed Data Reformatted (b1)",
+    "distributionType": [],
+    "externalSourceIdentifier": "arm",
+    "family": "awaken/arm.lidar.sgp_s5.ppi",
+    "identifier": "awaken/arm.lidar.sgp_s5.ppi.b1",
+    "identifierSchema": {
+      "type": "arm-datastream",
+      "typeName": "ARM Datastream"
+    },
+    "instrument": "Lidar (lidar)",
+    "isExternal": true,
+    "isStandardized": false,
+    "lastUpdated": "2026-08-27T22:54:04.000000Z",
+    "location": "sgp_s5",
+    "measurements": [],
+    "name": "awaken/arm.lidar.sgp_s5.ppi.b1",
+    "project": {
+      "accessLevel": "public",
+      "accessRestriction": "none",
+      "contactPoint": [
+        {
+          "fn": "Nicholas Hamilton",
+          "hasEmail": "mailto:nicholas.hamilton@nlr.gov",
+          "hasOrg": "National Laboratory of the Rockies",
+          "hasRole": "Principal Investigator"
+        },
+        {
+          "fn": "Daniel Zalkind",
+          "hasEmail": "mailto:dzalkind@nlr.gov",
+          "hasOrg": "National Laboratory of the Rockies",
+          "hasRole": "Principal Investigator"
+        },
+        {
+          "fn": "Patrick Moriarty",
+          "hasEmail": "mailto:patrick.moriarty@nlr.gov",
+          "hasOrg": "National Laboratory of the Rockies",
+          "hasRole": "Principal Investigator"
+        }
+      ],
+      "description": "\nAWAKEN was a multi-institutional, international field campaign funded by the U.S. Department of Energy (DOE) Wind Energy Technologies Office and led by four national laboratories: the National Laboratory of the Rockies (NLR, formerly National Renewable Energy Laboratory, NREL), Sandia National Laboratories, Pacific Northwest National Laboratory (PNNL), and Lawrence Livermore National Laboratory. The campaign gathered an unprecedented observational dataset focused on wind farm-atmosphere interactions at five wind farms in the U.S. Southern Great Plains near Enid, Oklahoma - a region with some of the richest wind resources in the world.\n\n\n\n## Campaign Overview\n\nInstrument deployment began in September 2022 and observations continued through summer 2025, with the core measurement period concentrated between fall 2022 and fall 2023. More than 50 advanced instruments - including scanning and profiling lidars, dual-Doppler X-band radars, infrared spectroradiometers, flux stations, research aircraft, and nacelle-mounted lidar systems - were deployed across 13 ground-based sites and five instrumented wind turbines. Download the  [Instrument Timeline](files/AWAKEN_instrument_timeline.xlsx) and  [map of instrumentation sites](files/AWAKEN_map.kmz) (.kmz file). The campaign site borders the DOE Atmospheric Radiation Measurement (ARM) Southern Great Plains facility, which provided supplemental infrastructure and data quality protocols. Intensive Observational Periods (IOPs) were also conducted using a research aircraft and the NOAA PUMAS mobile lidar truck in 2023 to characterize large-scale wind farm wakes.\n\n\n\n\n\n\n\n## Primary Focus Areas and Key Findings\nAWAKEN addresses seven central hypotheses related to wind farm and turbine wakes, wind farm blockage, turbulent mixing and momentum transport, turbine structural loading, and intermittent turbulent bursting events. To date, AWAKEN-related research yielded the following key results:  \n\n* Wind farm wakes: Under stable atmospheric conditions, wakes from the King Plains wind farm were observed extending at least 15 km downstream, reaching and impacting the neighboring Armadillo Flats wind farm. Wake evolution was found to be strongly modulated by atmospheric stability and terrain effects.  \n\n* Low-level jets (LLJs): Nighttime LLJs are frequently observed year-round at the AWAKEN site (except winter). LLJs play a large role in modulating turbine power production, wake recovery rates, and vertical momentum transport. LLJ nose heights were found to systematically increase from south to north across the King Plains wind farm, linked to both terrain and wind farm effects.  \n\n* Terrain effects: Even modest terrain variations in this largely flat landscape were shown to create meaningful spatial variability in wind speed across a single wind farm. During stable low-level jet episodes, downslope flow acceleration caused unexpected power production patterns where interior turbine rows outperformed the upwind row by as much as 25–50%.  \n\n* Turbulence and wake morphology: Wake momentum deficit magnitude, recovery rate, and vertical structure scale predictably with ambient turbulence intensity. In stable, low-turbulence conditions, wakes remained stronger and persisted over longer distances; convective conditions produced rapid wake dissipation. The shape of the velocity deficit was also observed to be sensitive to atmospheric stability, with an elongated and tilted shape during stable conditions and a more axisymmetric appearance during convective conditions. Long-range wake meandering was identified as a key process modulating downstream turbine loading and power.  \n\n* Local temperature impacts: Under stably stratified conditions, wind farm wakes were associated with statistically significant temperature differences of up to 0.65°C between sites, with the site experiencing more cumulative wake effects found to be slightly warmer - consistent with downward mixing of warmer air.  \n\n* Extreme events: The campaign captured multiple thunderstorm gust fronts, gravity wave/bore events, and - uniquely - a tornado that passed through the Armadillo Flats wind farm on 7 May 2024. These represent the first known observations of a tornado interacting with an operating wind farm and provide new data to evaluate current turbine design standards for extreme loads.  \n\n* International model benchmarking: Through IEA Wind Task 57, more than 15 international research groups benchmarked wind farm wake models against an AWAKEN case study. Results demonstrated that access to more observational data improved model performance by up to 40% and that an increase in model fidelity is not necessarily associated with improved accuracy.  \n\n## Data Access\nThe vast majority of AWAKEN atmospheric observations are publicly available and managed in accordance with FAIR data principles. In addition to this WDH page, some limited data are hosted at a few other repositories:  \n\n* ARM Data Center (raw ARM observations from sites A1, A2, H): https://adc.arm.gov\n  \n* Aircraft data (TU Braunschweig): https://doi.pangaea.de/10.1594/PANGAEA.984783\n  \nA curated event log summarizing notable meteorological events and wind conditions detected by lidars at sites A1, A2, and H is also available through the Wind Data Hub (DOI: 10.21947/2568473). Turbine-specific datasets (SCADA, structural loads, nacelle lidar) are not publicly available due to proprietary constraints.\n\n## Project PIs\nPatrick Moriarty - NLR, <Patrick.Moriarty@nlr.gov>, Primary  \nNicola Bodini - NLR, <nicola.bodini@nlr.gov>, Science  \nStefano Letizia - NLR, <stefano.letizia@nlr.gov>, Instrumentation  \nNicolas Hamilton - NLR, <Nicholas.Hamilton@nlr.gov>, Simulation  \nAndy Scholbrock - NLR, <andy.scholbrock@nlr.gov>, Experimental Logistics  \n\n",
+      "doiName": "10.21947/AWAKEN/1914202",
+      "identifier": "awaken",
+      "keywords": [
+        "Aerodynamics",
+        "Control strategies",
+        "Design",
+        "Numerical models",
+        "Power generation",
+        "Wakes",
+        "Wind turbines"
+      ],
+      "participatingOrganizations": [
+        {
+          "name": "National Laboratory of the Rockies",
+          "shortName": "NLR"
+        }
+      ],
+      "projectCategory": [
+        "Wind energy"
+      ],
+      "title": "The American WAKE experimeNt (AWAKEN)"
+    },
+    "projectName": "awaken",
+    "project_name": "awaken",
+    "qualifier": "ppi",
+    "settings": [],
+    "source": "arm",
+    "spatial": []
+  }
+}

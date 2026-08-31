@@ -1,0 +1,83 @@
+{
+  "case": "Real WDH dataset (awaken/arm.lidar.sgp_s5.ppi.b1) with no doiName at all. Identity falls back to wdh|<project>/<dataset>.",
+  "expected_slug": "wdh-awaken-arm-lidar-sgp_s5-ppi-b1",
+  "fixture_id": "wdh-02-no-doi",
+  "fixture_kind": "source_namespace",
+  "identity_key": "wdh|awaken/arm.lidar.sgp_s5.ppi.b1",
+  "provenance": {
+    "access_status": {
+      "extraction_method": "pattern"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "raw": "raw/wdh-02-no-doi.json",
+  "source": {
+    "access_status": "open",
+    "authors": [],
+    "container": "The American WAKE experimeNt (AWAKEN)",
+    "extra": {
+      "spatial_coverage": null,
+      "temporal_coverage_end": "2022-12-27T20:30:15.000000Z",
+      "temporal_coverage_start": "2022-12-27T20:30:15.000000Z",
+      "wdh_access_level": "public",
+      "wdh_access_restriction": "none",
+      "wdh_data_level": "Reviewed Data Reformatted (b1)",
+      "wdh_file_count": 37,
+      "wdh_file_types": [
+        "cdf"
+      ],
+      "wdh_files_enumerated": false,
+      "wdh_identifier": "awaken/arm.lidar.sgp_s5.ppi.b1",
+      "wdh_instrument": "Lidar (lidar)",
+      "wdh_project": "awaken",
+      "wdh_project_title": "The American WAKE experimeNt (AWAKEN)",
+      "wdh_total_bytes": 63151008
+    },
+    "iea_task": [],
+    "keywords": [
+      "Lidar (lidar)",
+      "Reviewed Data Reformatted (b1)",
+      "Aerodynamics",
+      "Control strategies",
+      "Design",
+      "Numerical models",
+      "Power generation",
+      "Wakes",
+      "Wind turbines"
+    ],
+    "license_id": "notspecified",
+    "notes": "",
+    "publisher": "Wind Data Hub",
+    "related_identifiers": [],
+    "resource_kind": "dataset",
+    "resources": [
+      {
+        "description": "Dataset page at the Wind Data Hub. Individual files are listed and downloaded there; this catalogue links to datasets and never enumerates or mirrors their files.",
+        "name": "awaken/arm.lidar.sgp_s5.ppi.b1",
+        "url": "https://wdh.energy.gov/ds/awaken/arm.lidar.sgp_s5.ppi.b1"
+      }
+    ],
+    "source_urls": [
+      "https://wdh.energy.gov/ds/awaken/arm.lidar.sgp_s5.ppi.b1"
+    ],
+    "title": "awaken/arm.lidar.sgp_s5.ppi.b1",
+    "url": "https://wdh.energy.gov/ds/awaken/arm.lidar.sgp_s5.ppi.b1",
+    "withdrawn": false
+  },
+  "source_id": "awaken/arm.lidar.sgp_s5.ppi.b1",
+  "source_key": "2026-08-27T22:54:04.000000Z"
+}

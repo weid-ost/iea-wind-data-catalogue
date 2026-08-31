@@ -1,0 +1,36 @@
+{
+  "case": "REAL page captured 2026-08-31: https://iea-wind.org/task43/ — 564 kB of WordPress with 21 <script> blocks, two <nav> elements and a footer. main_text() reduces it to about 4 kB of body prose with no markup, no script, no nav and no footer. This is simultaneously the token budget, the accuracy control and the prompt-injection boundary.",
+  "expected_absent_from_text": [
+    "<script",
+    "<nav",
+    "</div>",
+    "Privacy Policy",
+    "Newsletter",
+    "onclick",
+    "wp-content"
+  ],
+  "expected_classification": {
+    "kind": "task-overview",
+    "method": "config"
+  },
+  "expected_content_chars": 4074,
+  "expected_content_hash": "d20c08faeb1a1b74",
+  "expected_dois": [],
+  "expected_iea_task": [
+    "task-43"
+  ],
+  "expected_min_reduction_ratio": 50,
+  "expected_present_in_text": [
+    "Grand Challenges",
+    "Working Group 1",
+    "digital transformation"
+  ],
+  "fixture_id": "iea-10-boilerplate",
+  "fixture_kind": "page",
+  "html": "raw/iea-10-boilerplate.html",
+  "iea_task": "task-43",
+  "page_url": "https://iea-wind.org/task43/",
+  "raw": "raw/iea-10-boilerplate.html",
+  "raw_bytes": 564528,
+  "trusted": true
+}

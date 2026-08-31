@@ -47,9 +47,8 @@ individually while iterating.
 | 7 | site build | `make site` | `astro build` **and** Pagefind complete; a malformed record fails the build |
 | 8 | pinning | `grep -rn "ubuntu-latest\|lts/\*" .github/workflows/` | **no matches** |
 
-> Gates 5–8 depend on `site/` and `.github/workflows/`, which do not exist in
-> this checkout — **`SPEC — not yet implemented`**. Gates 1–4 run today and
-> were verified on 2026-08-31.
+All eight gates run today: `site/` and `.github/workflows/` both exist, and
+gates 1–8 were verified on 2026-09-01 against the first coherent harvest.
 
 ### On gate 4
 

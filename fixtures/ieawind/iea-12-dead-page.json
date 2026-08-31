@@ -1,0 +1,21 @@
+{
+  "case": "INVENTED page (marked in the HTML): a retired task microsite, served with HTTP 404. The page is recorded as unreachable and skipped; every existing record is left untouched; the other task pages finish. Only when EVERY configured page fails does the source declare itself unreachable.",
+  "expected_classification": null,
+  "expected_content_chars": 133,
+  "expected_content_hash": "68a7df10d4f4da1b",
+  "expected_dois": [],
+  "expected_existing_records_untouched": true,
+  "expected_notice_types": [
+    "page_unreachable"
+  ],
+  "expected_record_bearing": false,
+  "fixture_id": "iea-12-dead-page",
+  "fixture_kind": "page",
+  "html": "raw/iea-12-dead-page.html",
+  "iea_task": "task-65",
+  "page_url": "https://iea-wind.org/task11-retired/",
+  "raw": "raw/iea-12-dead-page.html",
+  "raw_bytes": 761,
+  "serve_status": 404,
+  "trusted": true
+}

@@ -1,0 +1,95 @@
+{
+  "case": "Real WDH dataset (wfip3/nant.ld.z01.00) holding 1,758,855 files. The record carries the count as a number and links to the dataset page. Files are NEVER enumerated.",
+  "expected_slug": "doi-10-21947-2234009",
+  "fixture_id": "wdh-03-huge-file-count",
+  "fixture_kind": "source_namespace",
+  "identity_key": "10.21947/2234009",
+  "provenance": {
+    "access_status": {
+      "extraction_method": "pattern"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "raw": "raw/wdh-03-huge-file-count.json",
+  "source": {
+    "access_status": "open",
+    "authors": [
+      {
+        "affiliation": "Pacific Northwest National Laboratory",
+        "name": "Raghu Krishnamurthy",
+        "role": "PI"
+      }
+    ],
+    "container": "The Wind Forecasting Improvement Project 3 (WFIP-3)",
+    "doi": "10.21947/2234009",
+    "extra": {
+      "spatial_coverage": [
+        [
+          -70.107003,
+          41.24255
+        ]
+      ],
+      "temporal_coverage_end": "2025-09-09T20:30:20.000000Z",
+      "temporal_coverage_start": "2023-12-14T20:30:20.000000Z",
+      "wdh_access_level": "public",
+      "wdh_access_restriction": "none",
+      "wdh_data_level": "Raw Data (00)",
+      "wdh_file_count": 1758855,
+      "wdh_file_types": [
+        "txt"
+      ],
+      "wdh_files_enumerated": false,
+      "wdh_identifier": "wfip3/nant.ld.z01.00",
+      "wdh_instrument": "Laser Disdrometer (ld)",
+      "wdh_project": "wfip3",
+      "wdh_project_title": "The Wind Forecasting Improvement Project 3 (WFIP-3)",
+      "wdh_total_bytes": 10226269335
+    },
+    "iea_task": [],
+    "keywords": [
+      "Laser Disdrometer (ld)",
+      "Raw Data (00)",
+      "Boundary layers",
+      "Modeling",
+      "Offshore winds",
+      "Wind profiles"
+    ],
+    "license_id": "notspecified",
+    "notes": "This dataset contains raw data from the laser disdrometer at Nantucket. The disdrometer measures droplet size distribution, hydrometer type, and precipitation rate.",
+    "publisher": "Wind Data Hub",
+    "related_identifiers": [],
+    "resource_kind": "dataset",
+    "resources": [
+      {
+        "description": "Dataset page at the Wind Data Hub. Individual files are listed and downloaded there; this catalogue links to datasets and never enumerates or mirrors their files.",
+        "name": "NANT Laser Disdrometer / Raw Data",
+        "url": "https://wdh.energy.gov/ds/wfip3/nant.ld.z01.00"
+      }
+    ],
+    "source_urls": [
+      "https://wdh.energy.gov/ds/wfip3/nant.ld.z01.00"
+    ],
+    "title": "NANT Laser Disdrometer / Raw Data",
+    "url": "https://wdh.energy.gov/ds/wfip3/nant.ld.z01.00",
+    "withdrawn": false
+  },
+  "source_id": "wfip3/nant.ld.z01.00",
+  "source_key": "2026-03-03T21:02:06.000000Z"
+}

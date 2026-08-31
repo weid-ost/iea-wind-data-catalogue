@@ -1,0 +1,343 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "oai:zenodo.org:11289823",
+          "alternateIdentifierType": "oai"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [
+        {
+          "total": 1,
+          "year": "2024"
+        }
+      ],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2024-05-24T22:52:31.000Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Perr-Sauer",
+          "givenName": "Jordan",
+          "name": "Perr-Sauer, Jordan",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0003-1571-1887",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Optis",
+          "givenName": "Mike",
+          "name": "Optis, Mike",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0001-5617-6134",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Fields",
+          "givenName": "Jason M.",
+          "name": "Fields, Jason M.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0002-8781-6138",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Bodini",
+          "givenName": "Nicola",
+          "name": "Bodini, Nicola",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0002-2550-9853",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lee",
+          "givenName": "Joseph C.Y.",
+          "name": "Lee, Joseph C.Y.",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0003-1897-6290",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Todd",
+          "givenName": "Austin",
+          "name": "Todd, Austin",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0002-1123-0982",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Simley",
+          "givenName": "Eric",
+          "name": "Simley, Eric",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0002-1027-9848",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Hammond",
+          "givenName": "Robert",
+          "name": "Hammond, Robert",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0003-4476-6406",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Phillips",
+          "givenName": "Caleb",
+          "name": "Phillips, Caleb",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Lunacek",
+          "givenName": "Monte",
+          "name": "Lunacek, Monte",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0003-3755-224X",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Kemper",
+          "givenName": "Travis",
+          "name": "Kemper, Travis",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Williams",
+          "givenName": "Lindy",
+          "name": "Williams, Lindy",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Craig",
+          "givenName": "Anna",
+          "name": "Craig, Anna",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Agarwal",
+          "givenName": "Nathan",
+          "name": "Agarwal, Nathan",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0002-2734-5514",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Sheng",
+          "givenName": "Shawn",
+          "name": "Sheng, Shawn",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "0000-0003-0134-0907",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Meissner",
+          "givenName": "John",
+          "name": "Meissner, John",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2024-05-25",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Minor patches for Pandas, typos, and naming conventions.",
+          "descriptionType": "Abstract"
+        },
+        {
+          "description": "If you use this software, please cite it as below.",
+          "descriptionType": "Other"
+        }
+      ],
+      "doi": "10.5281/zenodo.11289823",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "oai:zenodo.org:11289823",
+          "identifierType": "oai"
+        }
+      ],
+      "isActive": true,
+      "language": null,
+      "metadataVersion": 0,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.5281",
+      "publicationYear": 2024,
+      "published": "2024",
+      "publisher": "Zenodo",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2024-05-24T22:52:31.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "https://github.com/NREL/OpenOA/tree/v3.1.2",
+          "relatedIdentifierType": "URL",
+          "relationType": "IsSupplementTo",
+          "resourceTypeGeneral": "Software"
+        },
+        {
+          "relatedIdentifier": "10.5281/zenodo.4549875",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsVersionOf"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/"
+        }
+      ],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "api",
+      "state": "findable",
+      "subjects": [],
+      "suffix": "zenodo.11289823",
+      "titles": [
+        {
+          "title": "OpenOA: An Open-Source Codebase For Operational Analysis of Wind Farms"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "article",
+        "resourceType": "",
+        "resourceTypeGeneral": "Software",
+        "ris": "COMP",
+        "schemaOrg": "SoftwareSourceCode"
+      },
+      "updated": "2025-01-31T18:28:39.000Z",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.11289823",
+      "version": "v3.1.2",
+      "versionCount": 0,
+      "versionOfCount": 1,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTI4MS9aRU5PRE8uMTEyODk4MjM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlBlcnItU2F1ZXIsIEpvcmRhbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9yZGFuPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPlBlcnItU2F1ZXI8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iIj4wMDAwLTAwMDMtMTU3MS0xODg3PC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5PcHRpcywgTWlrZTwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWlrZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5PcHRpczwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSIiPjAwMDAtMDAwMS01NjE3LTYxMzQ8L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkZpZWxkcywgSmFzb24gTS48L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkphc29uIE0uPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZpZWxkczwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSIiPjAwMDAtMDAwMi04NzgxLTYxMzg8L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkJvZGluaSwgTmljb2xhPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5OaWNvbGE8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+Qm9kaW5pPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9IiI+MDAwMC0wMDAyLTI1NTAtOTg1MzwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TGVlLCBKb3NlcGggQy5ZLjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9zZXBoIEMuWS48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+TGVlPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9IiI+MDAwMC0wMDAzLTE4OTctNjI5MDwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+VG9kZCwgQXVzdGluPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5BdXN0aW48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+VG9kZDwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSIiPjAwMDAtMDAwMi0xMTIzLTA5ODI8L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlNpbWxleSwgRXJpYzwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+RXJpYzwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5TaW1sZXk8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iIj4wMDAwLTAwMDItMTAyNy05ODQ4PC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5IYW1tb25kLCBSb2JlcnQ8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPlJvYmVydDwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5IYW1tb25kPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9IiI+MDAwMC0wMDAzLTQ0NzYtNjQwNjwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+UGhpbGxpcHMsIENhbGViPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5DYWxlYjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5QaGlsbGlwczwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5MdW5hY2VrLCBNb250ZTwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TW9udGU8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+THVuYWNlazwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSIiPjAwMDAtMDAwMy0zNzU1LTIyNFg8L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPktlbXBlciwgVHJhdmlzPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5UcmF2aXM8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+S2VtcGVyPC9mYW1pbHlOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPldpbGxpYW1zLCBMaW5keTwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TGluZHk8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+V2lsbGlhbXM8L2ZhbWlseU5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Q3JhaWcsIEFubmE8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkFubmE8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+Q3JhaWc8L2ZhbWlseU5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QWdhcndhbCwgTmF0aGFuPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5OYXRoYW48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+QWdhcndhbDwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSIiPjAwMDAtMDAwMi0yNzM0LTU1MTQ8L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlNoZW5nLCBTaGF3bjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+U2hhd248L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+U2hlbmc8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iIj4wMDAwLTAwMDMtMDEzNC0wOTA3PC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5NZWlzc25lciwgSm9objwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9objwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5NZWlzc25lcjwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+T3Blbk9BOiBBbiBPcGVuLVNvdXJjZSBDb2RlYmFzZSBGb3IgT3BlcmF0aW9uYWwgQW5hbHlzaXMgb2YgV2luZCBGYXJtczwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5aZW5vZG88L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjQ8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlNvZnR3YXJlIi8+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAyNC0wNS0yNTwvZGF0ZT4KICA8L2RhdGVzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJvYWkiPm9haTp6ZW5vZG8ub3JnOjExMjg5ODIzPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJJc1N1cHBsZW1lbnRUbyIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU29mdHdhcmUiPmh0dHBzOi8vZ2l0aHViLmNvbS9OUkVML09wZW5PQS90cmVlL3YzLjEuMjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNWZXJzaW9uT2YiPjEwLjUyODEvemVub2RvLjQ1NDk4NzU8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxzaXplcy8+CiAgPGZvcm1hdHMvPgogIDx2ZXJzaW9uPnYzLjEuMjwvdmVyc2lvbj4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJodHRwczovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvNC4wL2xlZ2FsY29kZSIgcmlnaHRzSWRlbnRpZmllcj0iY2MtYnktNC4wIiByaWdodHNJZGVudGlmaWVyU2NoZW1lPSJzcGR4Ij5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIDQuMCBJbnRlcm5hdGlvbmFsPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+TWlub3IgcGF0Y2hlcyBmb3IgUGFuZGFzLCB0eXBvcywgYW5kIG5hbWluZyBjb252ZW50aW9ucy48L2Rlc2NyaXB0aW9uPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iT3RoZXIiPklmIHlvdSB1c2UgdGhpcyBzb2Z0d2FyZSwgcGxlYXNlIGNpdGUgaXQgYXMgYmVsb3cuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4K"
+    },
+    "id": "10.5281/zenodo.11289823",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "cern.zenodo",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.5281/zenodo.11289823",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "cern",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": [
+          {
+            "id": "10.5281/zenodo.4549875",
+            "type": "dois"
+          }
+        ]
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

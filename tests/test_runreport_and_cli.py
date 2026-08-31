@@ -124,9 +124,10 @@ class TestCli:
         main(["--root", str(repo), "run", "--source", "zenodo"])
         assert set(read_run_report(root=repo)["sources"]) == {"zenodo"}
 
-    def test_extract_reports_the_stub_rather_than_crashing(self, repo: Path, capsys) -> None:  # noqa: ANN001
-        assert main(["--root", str(repo), "extract"]) == 2
-        assert "Track H" in capsys.readouterr().err
+    def test_extract_drains_an_empty_queue_and_exits_zero(self, repo: Path, capsys) -> None:  # noqa: ANN001
+        """The runbook's contract: exit 0, print the count (RUN-drain §3)."""
+        assert main(["--root", str(repo), "extract"]) == 0
+        assert "extract: resolved 0 pending extraction(s)" in capsys.readouterr().out
 
     def test_sources_lists_every_adapter(self, repo: Path, capsys) -> None:  # noqa: ANN001
         assert main(["--root", str(repo), "sources"]) == 0

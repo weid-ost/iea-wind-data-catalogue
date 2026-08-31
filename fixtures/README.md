@@ -39,13 +39,21 @@ curl -sS -H 'Accept: application/json' \
 
 ## `<id>.json` — the expectation
 
-One of two shapes, and the file says which in its `fixture_kind`:
+One of four shapes, and the file says which in its `fixture_kind`:
 
 * `"source_namespace"` — what `Adapter.map()` should produce: the
   `source` block, the `identity_key`, the `source_key`, and the per-field
   `provenance`. This is the normal shape for an adapter fixture.
 * `"record"` — a whole CKAN package dict, for fixtures that exercise
   materialisation, the CKAN gate, or the gallery.
+* `"page"` — a Tier-3 crawl expectation. `raw` is a captured `.html` page;
+  the expectation is what happens *before* any record exists: the content
+  hash, the reduced text, the DOI sweep, the classification, the notices
+  (`iea-02` … `iea-12`).
+* `"degradation"` — a source that disables itself. There is nothing upstream
+  to capture, so `raw` is the live probe transcript that justifies the
+  decision and the expectation is the `SourceResult` the run report shows
+  (`wdh-07`).
 
 ```jsonc
 {

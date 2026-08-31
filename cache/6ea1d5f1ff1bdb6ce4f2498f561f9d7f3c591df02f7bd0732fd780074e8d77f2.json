@@ -1,0 +1,21 @@
+{
+  "confidence": {
+    "is_record_bearing": 0.88,
+    "page_kind": 0.88,
+    "records": 0.88
+  },
+  "content_sha256": "18eed04cc2e178ca553d921797b6ea97adfaca59b831c5b03a58a0e2ead8f324",
+  "extracted_at": "2026-08-31T22:15:04Z",
+  "fields": {
+    "confidence": 0.88,
+    "is_record_bearing": false,
+    "notes": "Write-up of IEA Wind Task 32 Workshop 16. The page reports what happened at a workshop and links its own minutes; it is not a list of the task's published outputs.",
+    "page_kind": "event",
+    "records": []
+  },
+  "key": "6ea1d5f1ff1bdb6ce4f2498f561f9d7f3c591df02f7bd0732fd780074e8d77f2",
+  "model": "claude-fable-5",
+  "pin_source_key": null,
+  "pinned": false,
+  "prompt_version": "v1"
+}

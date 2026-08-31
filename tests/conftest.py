@@ -77,6 +77,40 @@ def no_network(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(httpx.AsyncHTTPTransport, "handle_async_request", blocked_async)
 
 
+#: Every credential the harvester can pick up from the environment. Cleared for
+#: every test, so that a developer with a real ``GITHUB_TOKEN`` exported (or a
+#: CI job that has one) never gets a different suite from everyone else. The
+#: Tier-3 tests in particular assert what happens when there is *no* key.
+_CREDENTIAL_ENV = (
+    "HARVEST_LLM_TOKEN",
+    "HARVEST_LLM_ENDPOINT",
+    "HARVEST_LLM_MODEL",
+    "HARVEST_LLM_CACHE_LINEAGE",
+    "HARVEST_MAX_EXTRACTIONS",
+    "OPENAI_API_KEY",
+    "OPENAI_BASE_URL",
+    "OPENAI_API_BASE",
+    "OPENAI_MODEL",
+    "MODEL_ID",
+    "GITHUB_TOKEN",
+    "WDH_API_TOKEN",
+    "HARVEST_ROOT",
+)
+
+
+@pytest.fixture(autouse=True)
+def no_credentials(monkeypatch: pytest.MonkeyPatch) -> None:
+    """No test sees a real credential, whatever the developer has exported.
+
+    The companion to :func:`no_network`: that one stops the suite reaching a
+    live API, this one stops it *authenticating* to one, and stops a stray
+    ``HARVEST_LLM_*`` in the shell turning the deterministic Tier-3 assertions
+    into a live inference call (ADR-0031).
+    """
+    for name in _CREDENTIAL_ENV:
+        monkeypatch.delenv(name, raising=False)
+
+
 @pytest.fixture
 def repo(tmp_path: Path) -> Path:
     """A throwaway repository root with the real registers copied in."""

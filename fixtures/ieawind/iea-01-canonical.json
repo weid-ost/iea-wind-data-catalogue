@@ -1,0 +1,159 @@
+{
+  "case": "Real /task43/t43-publications/ page captured 2026-08-31: a citation table of 30 DOIs. The record for 10.5194/wes-9-883-2024 is built ENTIRELY from the Crossref resolution (raw/iea-01-canonical-crossref.json, captured the same day); the page contributes only the iea_task attribution and a source URL. Nothing on the page is trusted as metadata.",
+  "expected_classification": {
+    "kind": "publication-list",
+    "method": "pattern"
+  },
+  "expected_content_hash": "56a50f704dc5d65b",
+  "expected_doi_count": 30,
+  "expected_dois_head": [
+    "10.5281/zenodo.13376316",
+    "10.5281/zenodo.13225353",
+    "10.5281/zenodo.13367815",
+    "10.5281/zenodo.13367875",
+    "10.5281/zenodo.13367892",
+    "10.5281/zenodo.13367906"
+  ],
+  "expected_slug": "doi-10-5194-wes-9-883-2024",
+  "fixture_id": "iea-01-canonical",
+  "fixture_kind": "source_namespace",
+  "identity_key": "10.5194/wes-9-883-2024",
+  "note": "The DOI sweep is deterministic; no model is consulted for this page.",
+  "page_url": "https://iea-wind.org/task43/t43-publications/",
+  "pages": [
+    "raw/iea-01-canonical.html"
+  ],
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "pattern",
+      "source_system": "ieawind"
+    },
+    "iea_task": {
+      "extraction_method": "pattern",
+      "source_system": "ieawind"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "raw": "raw/iea-01-canonical.json",
+  "source": {
+    "authors": [
+      {
+        "family": "Marykovskiy",
+        "given": "Yuriy",
+        "name": "Marykovskiy, Yuriy",
+        "orcid": "0000-0002-6570-6966"
+      },
+      {
+        "family": "Clark",
+        "given": "Thomas",
+        "name": "Clark, Thomas"
+      },
+      {
+        "family": "Day",
+        "given": "Justin",
+        "name": "Day, Justin",
+        "orcid": "0000-0002-5226-6105"
+      },
+      {
+        "family": "Wiens",
+        "given": "Marcus",
+        "name": "Wiens, Marcus",
+        "orcid": "0000-0002-1646-1691"
+      },
+      {
+        "family": "Henderson",
+        "given": "Charles",
+        "name": "Henderson, Charles"
+      },
+      {
+        "family": "Quick",
+        "given": "Julian",
+        "name": "Quick, Julian"
+      },
+      {
+        "family": "Abdallah",
+        "given": "Imad",
+        "name": "Abdallah, Imad",
+        "orcid": "0000-0001-8678-0965"
+      },
+      {
+        "family": "Sempreviva",
+        "given": "Anna Maria",
+        "name": "Sempreviva, Anna Maria",
+        "orcid": "0000-0003-4124-9040"
+      },
+      {
+        "family": "Calbimonte",
+        "given": "Jean-Paul",
+        "name": "Calbimonte, Jean-Paul"
+      },
+      {
+        "family": "Chatzi",
+        "given": "Eleni",
+        "name": "Chatzi, Eleni"
+      },
+      {
+        "family": "Barber",
+        "given": "Sarah",
+        "name": "Barber, Sarah",
+        "orcid": "0000-0002-7329-6434"
+      }
+    ],
+    "container": "Wind Energy Science",
+    "doi": "10.5194/wes-9-883-2024",
+    "extra": {
+      "cited_on": [
+        "https://iea-wind.org/task43/t43-publications/"
+      ],
+      "identifier_source": "page-doi-sweep",
+      "resolved_by": "crossref"
+    },
+    "iea_task": [
+      "task-43"
+    ],
+    "keywords": [],
+    "license_id": "cc-by",
+    "license_raw": "https://creativecommons.org/licenses/by/4.0/",
+    "notes": "Abstract. With the rapid evolution of the wind energy sector, there is an ever-increasing need to create value from the vast amounts of data made available both from within the domain and from other sectors. This article addresses the challenges faced by wind energy domain experts in converting data into domain knowledge, connecting and integrating them with other sources of knowledge, and making them available for use in next-generation artificial intelligence systems. To this end, this article highlights the role that knowledge engineering can play in the digital transformation of the wind energy sector. It presents the main concepts underpinning knowledge-based systems and summarises previous work in the areas of knowledge engineering and knowledge representation in a manner that is relevant and accessible to wind energy domain experts. A systematic analysis of the current state of the art on knowledge engineering in the wind energy domain is performed with available tools put into perspective by establishing the main domain actors and their needs, as well as identifying key problematic areas. Finally, recommendations for further development and improvement are provided.",
+    "published_date": "2024-04-12",
+    "publisher": "Copernicus GmbH",
+    "related_identifiers": [],
+    "resource_kind": "publication",
+    "resources": [
+      {
+        "description": "Resolved landing page",
+        "name": "DOI",
+        "url": "https://doi.org/10.5194/wes-9-883-2024"
+      }
+    ],
+    "source_urls": [
+      "https://doi.org/10.5194/wes-9-883-2024",
+      "https://iea-wind.org/task43/t43-publications/"
+    ],
+    "title": "Knowledge engineering for wind energy",
+    "url": "https://doi.org/10.5194/wes-9-883-2024",
+    "withdrawn": false
+  },
+  "source_id": "10.5194/wes-9-883-2024",
+  "source_key": "56a50f704dc5d65b"
+}

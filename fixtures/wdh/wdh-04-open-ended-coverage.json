@@ -1,0 +1,116 @@
+{
+  "case": "INVENTED (marked in the raw payload): an ongoing collection whose dapFileSummary.ends is null. No live WDH dataset has begins-without-ends (verified 2026-08-31, 0 of 1155), so this shape cannot be captured verbatim. temporal_coverage_end stays null — never a fabricated end date.",
+  "expected_slug": "wdh-buoy-buoy-z01-b0",
+  "fixture_id": "wdh-04-open-ended-coverage",
+  "fixture_kind": "source_namespace",
+  "identity_key": "wdh|buoy/buoy.z01.b0",
+  "provenance": {
+    "access_status": {
+      "extraction_method": "pattern"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "raw": "raw/wdh-04-open-ended-coverage.json",
+  "source": {
+    "access_status": "open",
+    "authors": [
+      {
+        "name": "Raghavendra Krishnamurthy",
+        "role": "Co-PI"
+      }
+    ],
+    "container": "Offshore Wind Energy - Buoy Lidar Project",
+    "extra": {
+      "spatial_coverage": [
+        [
+          -75.4919,
+          36.8668
+        ]
+      ],
+      "temporal_coverage_end": null,
+      "temporal_coverage_start": "2014-08-13T20:30:03.000000Z",
+      "wdh_access_level": "public",
+      "wdh_access_restriction": "none",
+      "wdh_data_level": "Raw Data (00)",
+      "wdh_file_count": 1202,
+      "wdh_file_types": [
+        "txt"
+      ],
+      "wdh_files_enumerated": false,
+      "wdh_identifier": "buoy/buoy.z01.b0",
+      "wdh_instrument": "Buoy (buoy)",
+      "wdh_project": "buoy",
+      "wdh_project_title": "Offshore Wind Energy - Buoy Lidar Project",
+      "wdh_total_bytes": 229082932
+    },
+    "iea_task": [],
+    "keywords": [
+      "Buoy (buoy)",
+      "Raw Data (00)",
+      "Air-sea interactions",
+      "Meteorological instruments",
+      "Meteorology",
+      "Oceanography",
+      "Offshore winds",
+      "Wind resource assessment"
+    ],
+    "license_id": "notspecified",
+    "notes": "Data collected to explore wind energy applications",
+    "publisher": "Wind Data Hub",
+    "related_identifiers": [],
+    "resource_kind": "dataset",
+    "resources": [
+      {
+        "description": "Dataset page at the Wind Data Hub. Individual files are listed and downloaded there; this catalogue links to datasets and never enumerates or mirrors their files.",
+        "name": "Buoy - Virginia - Wind Sentinel Vindicator 3 (120) - Ongoing Collection",
+        "url": "https://wdh.energy.gov/ds/buoy/buoy.z01.b0"
+      },
+      {
+        "description": "Supporting document published alongside the dataset.",
+        "format": "pdf",
+        "name": "readme-change-log.pdf",
+        "url": "https://wdh.energy.gov/api/datasets/buoy/buoy.z01.00/files/readme-change-log.pdf"
+      },
+      {
+        "description": "Supporting document published alongside the dataset.",
+        "format": "pdf",
+        "name": "readme-one-second-lidar-data.pdf",
+        "url": "https://wdh.energy.gov/api/datasets/buoy/buoy.z01.00/files/readme-one-second-lidar-data.pdf"
+      },
+      {
+        "description": "Supporting document published alongside the dataset.",
+        "format": "pdf",
+        "name": "pnnl-25512-1.pdf",
+        "url": "https://wdh.energy.gov/api/datasets/buoy/buoy.z01.00/files/pnnl-25512-1.pdf"
+      },
+      {
+        "description": "Supporting document published alongside the dataset.",
+        "format": "txt",
+        "name": "6nb00120-flux-20141211-20160531-600s-coare3.0.csv",
+        "url": "https://wdh.energy.gov/api/datasets/buoy/buoy.z01.00/files/6nb00120-flux-20141211-20160531-600s-coare3.0.csv"
+      }
+    ],
+    "source_urls": [
+      "https://wdh.energy.gov/ds/buoy/buoy.z01.b0"
+    ],
+    "title": "Buoy - Virginia - Wind Sentinel Vindicator 3 (120) - Ongoing Collection",
+    "url": "https://wdh.energy.gov/ds/buoy/buoy.z01.b0",
+    "withdrawn": false
+  },
+  "source_id": "buoy/buoy.z01.b0",
+  "source_key": "2022-09-27T00:37:07.000000Z"
+}

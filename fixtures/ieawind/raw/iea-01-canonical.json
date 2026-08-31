@@ -1,0 +1,1086 @@
+{
+  "agency": "crossref",
+  "doi": "10.5194/wes-9-883-2024",
+  "identifier_source": "page-doi-sweep",
+  "iea_task": [
+    "task-43"
+  ],
+  "pages": [
+    {
+      "classification_method": "pattern",
+      "classified_as": "publication-list",
+      "content_hash": "56a50f704dc5d65b",
+      "iea_task": [
+        "task-43"
+      ],
+      "url": "https://iea-wind.org/task43/t43-publications/"
+    }
+  ],
+  "resolution": {
+    "message": {
+      "DOI": "10.5194/wes-9-883-2024",
+      "ISSN": [
+        "2366-7451"
+      ],
+      "URL": "https://doi.org/10.5194/wes-9-883-2024",
+      "abstract": "<jats:p>Abstract. With the rapid evolution of the wind energy sector, there is an ever-increasing need to create value from the vast amounts of data made available both from within the domain and from other sectors. This article addresses the challenges faced by wind energy domain experts in converting data into domain knowledge, connecting and integrating them with other sources of knowledge, and making them available for use in next-generation artificial intelligence systems. To this end, this article highlights the role that knowledge engineering can play in the digital transformation of the wind energy sector. It presents the main concepts underpinning knowledge-based systems and summarises previous work in the areas of knowledge engineering and knowledge representation in a manner that is relevant and accessible to wind energy domain experts. A systematic analysis of the current state of the art on knowledge engineering in the wind energy domain is performed with available tools put into perspective by establishing the main domain actors and their needs, as well as identifying key problematic areas. Finally, recommendations for further development and improvement are provided.</jats:p>",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-6570-6966",
+          "affiliation": [],
+          "authenticated-orcid": false,
+          "family": "Marykovskiy",
+          "given": "Yuriy",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "first"
+        },
+        {
+          "affiliation": [],
+          "family": "Clark",
+          "given": "Thomas",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5226-6105",
+          "affiliation": [],
+          "authenticated-orcid": false,
+          "family": "Day",
+          "given": "Justin",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-1646-1691",
+          "affiliation": [],
+          "authenticated-orcid": false,
+          "family": "Wiens",
+          "given": "Marcus",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "affiliation": [],
+          "family": "Henderson",
+          "given": "Charles",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "affiliation": [],
+          "family": "Quick",
+          "given": "Julian",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-8678-0965",
+          "affiliation": [],
+          "authenticated-orcid": false,
+          "family": "Abdallah",
+          "given": "Imad",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4124-9040",
+          "affiliation": [],
+          "authenticated-orcid": false,
+          "family": "Sempreviva",
+          "given": "Anna Maria",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "affiliation": [],
+          "family": "Calbimonte",
+          "given": "Jean-Paul",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "affiliation": [],
+          "family": "Chatzi",
+          "given": "Eleni",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7329-6434",
+          "affiliation": [],
+          "authenticated-orcid": false,
+          "family": "Barber",
+          "given": "Sarah",
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ],
+          "sequence": "additional"
+        }
+      ],
+      "container-title": [
+        "Wind Energy Science"
+      ],
+      "content-domain": {
+        "crossmark-restriction": false,
+        "domain": []
+      },
+      "created": {
+        "date-parts": [
+          [
+            2024,
+            4,
+            12
+          ]
+        ],
+        "date-time": "2024-04-12T09:10:59Z",
+        "timestamp": 1712913059000
+      },
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            1,
+            22
+          ]
+        ],
+        "date-time": "2025-01-22T11:04:23Z",
+        "timestamp": 1737543863000
+      },
+      "funder": [
+        {
+          "DOI": "10.13039/501100001711",
+          "award": [
+            "40B2-0_187087"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "40B2-0_187087"
+              ]
+            }
+          ],
+          "doi-asserted-by": "publisher",
+          "id": [
+            {
+              "asserted-by": "publisher",
+              "id": "10.13039/501100001711",
+              "id-type": "DOI"
+            }
+          ],
+          "name": "Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung"
+        }
+      ],
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            5
+          ]
+        ],
+        "date-time": "2026-08-05T04:24:06Z",
+        "timestamp": 1785903846820,
+        "version": "3.56.0"
+      },
+      "is-referenced-by-count": 8,
+      "issn-type": [
+        {
+          "type": "electronic",
+          "value": "2366-7451"
+        }
+      ],
+      "issue": "4",
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            4,
+            12
+          ]
+        ]
+      },
+      "journal-issue": {
+        "issue": "4",
+        "published-online": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        }
+      },
+      "language": "en",
+      "license": [
+        {
+          "URL": "https://creativecommons.org/licenses/by/4.0/",
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                4,
+                12
+              ]
+            ],
+            "date-time": "2024-04-12T00:00:00Z",
+            "timestamp": 1712880000000
+          }
+        }
+      ],
+      "link": [
+        {
+          "URL": "https://wes.copernicus.org/articles/9/883/2024/wes-9-883-2024.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "member": "3145",
+      "original-title": [],
+      "page": "883-917",
+      "prefix": "10.5194",
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            4,
+            12
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2024,
+            4,
+            12
+          ]
+        ]
+      },
+      "publisher": "Copernicus GmbH",
+      "reference": [
+        {
+          "key": "ref1",
+          "unstructured": "AIAA and AIA: Digital Twin: Definition &amp;amp; Value – An AIAA and AIA Position Paper, https://www.aiaa.org/advocacy/Policy-Papers/Institute-Position-Papers (last access: 1 October 2023), 2020. a"
+        },
+        {
+          "key": "ref2",
+          "unstructured": "Akerkar, R. and Sajja, P.: Knowledge-based systems, Jones &amp;amp; Bartlett Publishers, ISBN: 9780763776473, 2009. a"
+        },
+        {
+          "DOI": "10.1515/9783110214420",
+          "doi-asserted-by": "crossref",
+          "key": "ref3",
+          "unstructured": "Andersen, G. and Aijmer, K.: Pragmatics of society, Vol. 5, Walter de Gruyter, https://doi.org/10.1515/9783110214420, 2011. a"
+        },
+        {
+          "DOI": "10.1016/j.strusafe.2020.102072",
+          "doi-asserted-by": "crossref",
+          "key": "ref4",
+          "unstructured": "Andriotis, C. P., Papakonstantinou, K. G., and Chatzi, E. N.: Value of structural health information in partially observable stochastic environments, Struct. Saf., 93, 102072, https://doi.org/10.1016/j.strusafe.2020.102072, 2021. a"
+        },
+        {
+          "key": "ref5",
+          "unstructured": "Angele, K. and Angele, J.: JSON towards a simple Ontology and Rule Language, in: Proceedings of the 15th International Rule Challenge, 7th Industry Track, and 5th Doctoral Consortium @ RuleML+RR 2021, edited by: Soylu, A., Nezhad, A. T., Nikolov, N., Toma, I., Fensel, A., and Vennekens, J., Vol. 2956 of CEUR Workshop Proceedings, CEUR, Leuven, Belgium, 8–15 September 2021​​​​​​​, virtual, http://ceur-ws.org/Vol-2956/#paper8 (last access: 25 March 2024), 2021. a"
+        },
+        {
+          "DOI": "10.1016/j.jmsy.2023.02.012",
+          "doi-asserted-by": "crossref",
+          "key": "ref6",
+          "unstructured": "Arista, R., Zheng, X., Lu, J., and Mas, F.: An Ontology-based Engineering system to support aircraft manufacturing system design, J. Manuf. Syst., 68, 270–288, https://doi.org/10.1016/j.jmsy.2023.02.012, 2023. a"
+        },
+        {
+          "DOI": "10.1016/j.apenergy.2018.07.037",
+          "doi-asserted-by": "crossref",
+          "key": "ref7",
+          "unstructured": "Artigao, E., Martín-Martínez, S., Honrubia-Escribano, A., and Gómez-Lázaro, E.: Wind turbine reliability: A comprehensive review towards effective condition monitoring development, Appl. Energ., 228, 1569–1583, https://doi.org/10.1016/j.apenergy.2018.07.037, 2018. a, b, c"
+        },
+        {
+          "DOI": "10.1016/j.apgeog.2019.102050",
+          "doi-asserted-by": "crossref",
+          "key": "ref8",
+          "unstructured": "Aschenbrenner, M. and Winder, G. M.: Planning for a sustainable marine future? Marine spatial planning in the German exclusive economic zone of the North Sea, Appl. Geogr., 110, 102050, https://doi.org/10.1016/j.apgeog.2019.102050, 2019. a"
+        },
+        {
+          "DOI": "10.3390/en15155638",
+          "doi-asserted-by": "crossref",
+          "key": "ref9",
+          "unstructured": "Barber, S., Lima, L. A. M., Sakagami, Y., Quick, J., Latiffianti, E., L&lt;span id=&quot;page913&quot;/&gt;iu, Y., Ferrari, R., Letzgus, S., Zhang, X., and Hammer, F.: Enabling Co-Innovation for a Successful Digital Transformation in Wind Energy Using a New Digital Ecosystem and a Fault Detection Case Study, Energies, 15, 5638, https://doi.org/10.3390/en15155638, 2022. a"
+        },
+        {
+          "DOI": "10.1088/1742-6596/2507/1/012003",
+          "doi-asserted-by": "crossref",
+          "key": "ref10",
+          "unstructured": "Barber, S., Hammer, F., and Henderson, C.: Can data sharing really provide added value? Practical data sharing recommendations for the wind energy sector, J. Phys. Conf. Ser., 2507, 012003, https://doi.org/10.1088/1742-6596/2507/1/012003, 2023a. a"
+        },
+        {
+          "DOI": "10.3390/en16083567",
+          "doi-asserted-by": "crossref",
+          "key": "ref11",
+          "unstructured": "Barber, S., Izagirre, U., Serradilla, O., Olaizola, J., Zugasti, E., Aizpurua, J. I., Milani, A. E., Sehnke, F., Sakagami, Y., and Henderson, C.: Best Practice Data Sharing Guidelines for Wind Turbine Fault Detection Model Evaluation, Energies, 16, 3567, https://doi.org/10.3390/en16083567, 2023b. a"
+        },
+        {
+          "DOI": "10.1088/1742-6596/2507/1/012002",
+          "doi-asserted-by": "crossref",
+          "key": "ref12",
+          "unstructured": "Barber, S., Sempreviva, A. M., Sheng, S., Farren, D., and Zappalá, D.: A use-case-driven approach for demonstrating the added value of digitalisation in wind energy, J. Phys. Conf. Ser., 2507, 012002, https://doi.org/10.1088/1742-6596/2507/1/012002, 2023c. a, b, c"
+        },
+        {
+          "DOI": "10.1145/3604932",
+          "doi-asserted-by": "crossref",
+          "key": "ref13",
+          "unstructured": "Besta, M., Gerstenberger, R., Peter, E., Fischer, M., Podstawski, M., Barthels, C., Alonso, G., and Hoefler, T.: Demystifying Graph Databases: Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries, ACM Comput. Surv., 56, 31, https://doi.org/10.1145/3604932, 2023. a"
+        },
+        {
+          "DOI": "10.1016/j.egyai.2021.100074",
+          "doi-asserted-by": "crossref",
+          "key": "ref14",
+          "unstructured": "Booshehri, M., Emele, L., Flügel, S., Förster, H., Frey, J., Frey, U., Glauer, M., Hastings, J., Hofmann, C., Hoyer-Klick, C., Hülk, L., Kleinau, A., Knosala, K., Kotzur, L., Kuckertz, P., Mossakowski, T., Muschner, C., Neuhaus, F., Pehl, M., Robinius, M., Sehn, V., and Stappel, M.: Introducing the Open Energy Ontology: Enhancing data interpretation and interfacing in energy systems analysis, Energy and AI, 5, 100074, https://doi.org/10.1016/j.egyai.2021.100074, 2021. a, b"
+        },
+        {
+          "DOI": "10.2172/1868328",
+          "doi-asserted-by": "crossref",
+          "key": "ref15",
+          "unstructured": "Bortolotti, P., Bay, C., Barter, G., Gaertner, E., Dykes, K., McWilliam, M., Friis-Moller, M., Molgaard Pedersen, M., and Zahle, F.: System Modeling Frameworks for Wind Turbines and Plants: Review and Requirements Specifications, Tech. rep. no. NREL/TP-5000-82621, Office of Scientific and Technical Information (OSTI), https://doi.org/10.2172/1868328, 2022. a"
+        },
+        {
+          "key": "ref16",
+          "unstructured": "Bremere, I. and Indriksone, D.: Regional stakeholder maps and analyses of decision flows, WP3.1, Baltic Energy Areas – A Planning Perspective (BEA-APP) project, https://www.balticenergyareas.eu/images/achievements/wp3.1_regional_stakeholder_maps_and_ananalyses_of_decision_flows.pdf (last access: 15 July 2023), 2017. a, b"
+        },
+        {
+          "DOI": "10.5220/0006590204300437",
+          "doi-asserted-by": "crossref",
+          "key": "ref17",
+          "unstructured": "Bunte, A., Li, P., and Niggemann, O.: Mapping Data Sets to Concepts using Machine Learning and a Knowledge based Approach, in: Proceedings of the 10th International Conference on Agents and Artificial Intelligence, Funchal, Madeira, Portugal, 16–18 January 2018, SCITEPRESS – Science and Technology Publications, 2, 430–437, https://doi.org/10.5220/0006590204300437, 2018. a"
+        },
+        {
+          "key": "ref18",
+          "unstructured": "Cann, R., Kempson, R., and Gregoromichelaki, E.: Semantics: An Introduction to Meaning in Language, Cambridge University Press, ISBN: 9780521525664, 2009. a"
+        },
+        {
+          "key": "ref19",
+          "unstructured": "Chah, N.: OK Google, What Is Your Ontology? Or: Exploring Freebase Classification to Understand Google's Knowledge Graph, arXiv [preprint], https://doi.org/10.48550/arXiv.1805.03885, 22 May 2018. a"
+        },
+        {
+          "DOI": "10.1088/1742-6596/1618/2/022022",
+          "doi-asserted-by": "crossref",
+          "key": "ref20",
+          "unstructured": "Chatterjee, J. and Dethlefs, N.: Temporal Causal Inference in Wind Turbine SCADA Data Using Deep Learning for Explainable AI, J. Phys. Conf. Ser., 1618, 022022, https://doi.org/10.1088/1742-6596/1618/2/022022, 2020. a"
+        },
+        {
+          "DOI": "10.3390/app9122469",
+          "doi-asserted-by": "crossref",
+          "key": "ref21",
+          "unstructured": "Chavero-Navarrete, E., Trejo-Perea, M., Jáuregui-Correa, J. C., Carrillo-Serrano, R. V., and Ríos-Moreno, J. G.: Expert Control Systems for Maximum Power Point Tracking in a Wind Turbine with PMSG: State of the Art, Appl. Sci.-Basel, 9, 2469, https://doi.org/10.3390/app9122469, 2019. a"
+        },
+        {
+          "DOI": "10.1007/s11227-018-2672-3",
+          "doi-asserted-by": "crossref",
+          "key": "ref22",
+          "unstructured": "Chun, S., Jung, J., Jin, X., Seo, S., and Lee, K.-H.: Designing an integrated knowledge graph for smart energy services, J. Supercomput., 76, 8058–8085, https://doi.org/10.1007/s11227-018-2672-3, 2018. a"
+        },
+        {
+          "key": "ref23",
+          "unstructured": "Clark, T.: How to communicate and collaborate on data: easy-to-use tools and techniques for eliminating overwhelm, confusion and ambiguity, Zenodo, https://doi.org/10.5281/zenodo.7928816, 2022. a"
+        },
+        {
+          "key": "ref24",
+          "unstructured": "Clark, T.: Powerful Power Curves: A production-proven, open-source schema for wind turbine power curves, Zenodo, https://doi.org/10.5281/zenodo.7940068, 2023. a"
+        },
+        {
+          "DOI": "10.5194/wes-8-947-2023",
+          "doi-asserted-by": "crossref",
+          "key": "ref25",
+          "unstructured": "Clifton, A., Barber, S., Bray, A., Enevoldsen, P., Fields, J., Sempreviva, A. M., Williams, L., Quick, J., Purdue, M., Totaro, P., and Ding, Y.: Grand challenges in the digitalisation of wind energy, Wind Energ. Sci., 8, 947–974, https://doi.org/10.5194/wes-8-947-2023, 2023. a, b, c, d"
+        },
+        {
+          "key": "ref26",
+          "unstructured": "Codd, E. F.: The Relational Model for Database Management: Version 2, Addison-Wesley Longman Publishing Co., Inc., USA, ISBN 0201141922, 1990. a"
+        },
+        {
+          "DOI": "10.1126/science.231.4741.957",
+          "doi-asserted-by": "crossref",
+          "key": "ref27",
+          "unstructured": "Davis, R.: Knowledge-based systems, Science, 231, 957–963, 1986. a"
+        },
+        {
+          "DOI": "10.1109/ACCESS.2023.3327725",
+          "doi-asserted-by": "crossref",
+          "key": "ref28",
+          "unstructured": "De Baas, A., Nostro, P. D., Friis, J., Ghedini, E., Goldbeck, G., Paponetti, I. M., Pozzi, A., Sarkar, A., Yang, L., Zaccarini, F. A., and Toti, D.: Review and Alignment of Domain-Level Ontologies for Materials Science, IEEE Access, 11, 120372–120401, https://doi.org/10.1109/ACCESS.2023.3327725, 2023. a"
+        },
+        {
+          "DOI": "10.1007/978-3-319-61893-7_11",
+          "doi-asserted-by": "crossref",
+          "key": "ref29",
+          "unstructured": "De Giacomo, G., Lembo, D., Lenzerini, M., Poggi, A., and Rosati, R.: Using Ontologies for Semantic Data Integration, Springer International Publishing, Cham, 187–202, https://doi.org/10.1007/978-3-319-61893-7_11, ISBN 978-3-319-61893-7, 2018. a"
+        },
+        {
+          "DOI": "10.1007/11546924_64",
+          "doi-asserted-by": "crossref",
+          "key": "ref30",
+          "unstructured": "De Nicola, A., Missikoff, M., and Navigli, R.: A Proposal for a Unified Process for Ontology Building: UPON, in: Database and Expert Systems Applications, edited by: Andersen, K. V., Debenham, J., and Wagner, R., Springer Berlin Heidelberg, Berlin, Heidelberg, 655–664, ISBN 978-3-540-31729-6, 2005. a"
+        },
+        {
+          "key": "ref31",
+          "unstructured": "de Vivero, J. L. S.: An exercise in Stakeholder Analysis for a hypothetical offshore wind farm in the Gulf of Cadix, Tech. rep. no. 00000909, University of Seville, https://spicosa-inline.databases.eucc-d.de/files/documents/00000908_Stakeholder%20Exercise_28%20ene%2008.pdf (last access: 25 March 2024), 2023. a"
+        },
+        {
+          "DOI": "10.1201/9780429490972",
+          "doi-asserted-by": "crossref",
+          "key": "ref32",
+          "unstructured": "Ding, Y.: Data Science for Wind Energy, Chapman and Hall/CRC, https://doi.org/10.1201/9780429490972, 2019. a"
+        },
+        {
+          "DOI": "10.1109/INDIN.2010.5549458",
+          "doi-asserted-by": "crossref",
+          "key": "ref33",
+          "unstructured": "Dourgnon-Hanoune, A., Dang, T., Salaun, P., and Bouthors, V.: An ontology for I&amp;amp;C knowledge using trees of porphyry, in: 2010 8th IEEE International Conference on Industrial Informatics, Osaka University Nakanoshima Center Osaka, Japan, 13–16 July 2010, IEEE, 86–92, https://doi.org/10.1109/indin.2010.5549458, 2010. a"
+        },
+        {
+          "DOI": "10.1051/e3sconf/20171901038",
+          "doi-asserted-by": "crossref",
+          "key": "ref34",
+          "unstructured": "Duer, S., Wrzesień, P., and Duer, R.: Creating of structure of facts for the knowledge base of an expert system for wind power plant’s equipment diagnosis, E3S Web Conf., 19, 01038, https://doi.org/10.1051/e3sconf/20171901038, 2017. a"
+        },
+        {
+          "key": "ref35",
+          "unstructured": "FAIR Data Maturity Model Working Group: FAIR Data Maturity Model: specification and guidelines, Version 1.0, Zenodo, https://doi.org/10.15497/RDA00050, 2020. a"
+        },
+        {
+          "key": "ref36",
+          "unstructured": "Graybeal, J., Jonquet, C., Fiore, N., and Musen, M. A.: Adoption of BioPortal's Ontology Registry Software: The Emerging OntoPortal Community, 13th Research Data Alliance Plenary Meeting (RDA P13), Philadelphia, United States, April 2019, poster session, https://hal-lirmm.ccsd.cnrs.fr/lirmm-02360625 (last access: 25 March 2024), 2019. a"
+        },
+        {
+          "key": "ref37",
+          "unstructured": "Grieves, M.: SME Management Forum Completing the Cycle: Using PLM Information in the Sales and Service Functions, SME Management Forum, Troy, MI, 31 Octrober 2002, https://www.researchgate.net/publication/356192963_SME_Management_Forum_Completing_the_Cycle_Using_PLM_Information_in_the_Sales_and_Service_Functions (last access: 25 March 2024), 2002. a"
+        },
+        {
+          "DOI": "10.12688/digitaltwin.17574.1",
+          "doi-asserted-by": "crossref",
+          "key": "ref38",
+          "unstructured": "Grieves, M.: Intelligent digital twins and the development and management of complex systems, Digital Twin, 2, 8, https://doi.org/10.12688/digitaltwin.17574.1, 2022. a"
+        },
+        {
+          "key": "ref39",
+          "unstructured": "Groarke, L.: Informal Logic, in: The Stanford Encyclopedia of Philosophy, edited by: Zalta, E. N. and Nodelman, U., Metaphysics Research Lab, Stanford University, Winter 2022 edn., ISSN 1095-5054, 2022. a"
+        },
+        {
+          "key": "ref40",
+          "unstructured": "Group, W. S. W.: SPARQL 1.1 overview, W3C recommendation, World Wide Web Consortium (W3C), http://www.w3.org/TR/sparql11-overview/ (last access: 25 March 2024), 2013. a"
+        },
+        {
+          "DOI": "10.1006/knac.1993.1008",
+          "doi-asserted-by": "crossref",
+          "key": "ref41",
+          "unstructured": "Gruber, T. R.: A translation approach to portable ontology specifications, Knowl. Acquis., 5, 199–220, https://doi.org/10.1006/knac.1993.1008, 1993. a"
+        },
+        {
+          "key": "ref42",
+          "unstructured": "Guarino, N.: Formal Ontology in Information Systems: Proceedings of the 1st International Conference, Trento, Italy, 6–8 June 1998, IOS Press, NLD, 1st edn., ISBN 9051993994, 1998. a"
+        },
+        {
+          "DOI": "10.1145/289.291",
+          "doi-asserted-by": "crossref",
+          "key": "ref43",
+          "unstructured": "Haerder, T. and Reuter, A.: Principles of Transaction-Oriented Database Recovery, ACM Comput. Surv., 15, 287–317, https://doi.org/10.1145/289.291, 1983. a"
+        },
+        {
+          "key": "ref44",
+          "unstructured": "Hamilton, J. and Liming, D.: Careers in Wind Energy: U.S. Bureau of Labor Statistics, https://www.bls.gov/green/wind_energy/ (last access: 15 July 2023), 2012. a"
+        },
+        {
+          "DOI": "10.1007/978-3-031-79432-2",
+          "doi-asserted-by": "crossref",
+          "key": "ref45",
+          "unstructured": "Heath, T. and Bizer, C.: Linked Data, Springer International Publishing, https://doi.org/10.1007/978-3-031-79432-2, 2011. a"
+        },
+        {
+          "DOI": "10.1093/icc/dtac022",
+          "doi-asserted-by": "crossref",
+          "key": "ref46",
+          "unstructured": "Heidenreich, M. and Mattes, J.: Knowledge generation and diffusion in the German wind energy industry, Ind. Corp. Change, 31, 1285–1306, https://doi.org/10.1093/icc/dtac022, 2022. a"
+        },
+        {
+          "key": "ref47",
+          "unstructured": "Heist, N., Hertling, S., Ringler, D., and Paulheim, H.: Knowledge Graphs on the Web – an Overview, arXiv [preprint], https://doi.org/10.48550/arXiv.2003.00719, 12 March 2020. a"
+        },
+        {
+          "key": "ref48",
+          "unstructured": "Hitzler, P., Krötzsch, M., Parsia, B., Patel-Schneider, P. F., and Rudolph, S.: OWL 2 Web Ontology Language Primer, 2nd edn., W3C Recommendation, World Wide Web Consortium (W3C), 11 December 2012, https://www.w3.org/TR/owl2-primer/ (last access: 25 March 2024), 2009. a"
+        },
+        {
+          "DOI": "10.1080/15732479.2022.2037667",
+          "doi-asserted-by": "crossref",
+          "key": "ref49",
+          "unstructured": "Hlaing, N., Morato, P. G., Nielsen, J. S., Amirafshari, P., Kolios, A., and Rigo, P.: Inspection and maintenance planning for offshore wind structural components: integrating fatigue failure criteria with Bayesian networks and Markov decision processes, Struct. Infrastruct. E., 18, 983–1001, https://doi.org/10.1080/15732479.2022.2037667, 2022. a"
+        },
+        {
+          "DOI": "10.1145/3447772",
+          "doi-asserted-by": "crossref",
+          "key": "ref50",
+          "unstructured": "Hogan, A., Blomqvist, E., Cochez, M., d’Amato, C., Melo, G. D., Gutierrez, C., Kirrane, S., Gayo, J. E. L., Navigli, R., Neumaier, S., Rula, A., Sequeda, J., Zimmermann, A., Hogan, A., Gutierrez, C., Cochez, M., de Melo, G., Kirrane, S., Polleres, A., Navigli, R., Ngomo, A.-C. N., Rashid, S. M., Schmelzeisen, L., Staab, S., Blomqvist, E., d’Amato, C., Gayo, J. E. L., Neumaier, S., Rula, A., Sequeda, J., and Zimmermann, A.: Knowledge graphs, ACM Comput. Surv., 54, 1–37, 2021. a"
+        },
+        {
+          "DOI": "10.1016/j.rser.2015.12.310",
+          "doi-asserted-by": "crossref",
+          "key": "ref51",
+          "unstructured": "Huesca-Pérez, M. E., Sheinbaum-Pardo, C., and Köppel, J.: Social implications of siting wind energy in a disadvantaged region – The case of the Isthmus of Tehuantepec, Mexico, Renew. Sust. Energ. Rev., 58, 952–965, https://doi.org/10.1016/j.rser.2015.12.310, 2016. a"
+        },
+        {
+          "DOI": "10.4204/EPTCS.333.11",
+          "doi-asserted-by": "crossref",
+          "key": "ref52",
+          "unstructured": "Jaz Myers, D.: Double Categories of Open Dynamical Systems (Extended Abstract), Electronic Proceedings in Theoretical Computer Science, 333, 154–167, https://doi.org/10.4204/eptcs.333.11, 2021. a"
+        },
+        {
+          "DOI": "10.1017/S0960129511000442",
+          "doi-asserted-by": "crossref",
+          "key": "ref53",
+          "unstructured": "Johnson, M., Rosebrugh, R., and Wood, R. J.: Lenses, fibrations and universal translations, Math. Struct. Comp. Sci., 22, 25–42, https://doi.org/10.1017/S0960129511000442, 2012. a"
+        },
+        {
+          "DOI": "10.1016/S1570-2464(02)80010-6",
+          "doi-asserted-by": "crossref",
+          "key": "ref54",
+          "unstructured": "Johnson, R. and Blair, J.: Informal logic and the reconfiguration of logic, in: Handbook of the Logic of Argument and Inference, edited by: Gabbay, D. M., Johnson, R. H., Ohlbach, H. J., and Woods, J., Studies in Logic and Practical Reasoning, Elsevier, 1, 339–396, https://doi.org/10.1016/S1570-2464(02)80010-6, 2002. a"
+        },
+        {
+          "DOI": "10.1016/j.compag.2017.10.012",
+          "doi-asserted-by": "crossref",
+          "key": "ref55",
+          "unstructured": "Jonquet, C., Toulet, A., Arnaud, E., Aubin, S., Dzalé Yeumo, E., Emonet, V., Graybeal, J., Laporte, M.-A., Musen, M. A., Pesce, V., and Larmande, P.: AgroPortal: A vocabulary and ontology repository for agronomy, Comput. Electron. Agr., 144, 126–143, https://doi.org/10.1016/j.compag.2017.10.012, 2018. a"
+        },
+        {
+          "DOI": "10.1007/978-3-031-47243-5_3",
+          "doi-asserted-by": "crossref",
+          "key": "ref56",
+          "unstructured": "Jonquet, C., Graybeal, J., Bouazzouni, S., Dorf, M., Fiore, N., Kechagioglou, X., Redmond, T., Rosati, I., Skrenchuk, A., Vendetti, J. L., and Musen, M.: Ontology Repositories and Semantic Artefact Catalogues with the OntoPortal Technology, in: Lecture Notes in Computer Science, Springer Nature Switzerland, 38–58, https://doi.org/10.1007/978-3-031-47243-5_3, 2023. a"
+        },
+        {
+          "key": "ref57",
+          "unstructured": "Kechagioglou, X., Vaira, L., Tomassino, P., Fiore, N., Basset, A., and Rosati, I.: EcoPortal: An Environment for FAIR Semantic Resources in the Ecological Domain, in: Joint Ontology Workshops, Bolzano, Italy, 11–18 September 2021, Vol. 2969, ISSN 1613-0073, https://ceur-ws.org/Vol-2969/paper6-s4biodiv.pdf (last access: 25 March 2025), 2021. a"
+        },
+        {
+          "DOI": "10.3233/SW-180310",
+          "doi-asserted-by": "crossref",
+          "key": "ref58",
+          "unstructured": "Keil, J. M. and Schindler, S.: Comparison and evaluation of ontologies for units of measurement, Semant. Web, 10, 33–51, https://doi.org/10.3233/SW-180310, 2019. a"
+        },
+        {
+          "DOI": "10.1038/s41560-023-01266-z",
+          "doi-asserted-by": "crossref",
+          "key": "ref59",
+          "unstructured": "Kirkegaard, J. K., Rudolph, D. P., Nyborg, S., Solman, H., Gill, E., Cronin, T., and Hallisey, M.: Tackling grand challenges in wind energy through a socio-technical perspective, Nature Energy, 8, 655–664, https://doi.org/10.1038/s41560-023-01266-z, 2023. a"
+        },
+        {
+          "key": "ref60",
+          "unstructured": "Klonari, V., Papachristos, G., and Fraile, D.: Wind energy digitalisation towards 2030, https://windeurope.org/intelligence-platform/product/wind-energy-digitalisation-towards-2030/ (last access: 1 October 2023), 2021. a"
+        },
+        {
+          "key": "ref61",
+          "unstructured": "Komisar, A. and Fox, M. S.: An Energy Ontology for Global City Indicators (ISO 37120), arXiv [preprint], https://doi.org/10.48550/arXiv.2008.04070, 19 July 2020. a"
+        },
+        {
+          "key": "ref62",
+          "unstructured": "Küçük, D. and Küçük, D.: OntoWind: An Improved and Extended Wind Energy Ontology, arXiv [preprint], https://doi.org/10.48550/arXiv.1803.02808, 7 March 2018. a"
+        },
+        {
+          "key": "ref63",
+          "unstructured": "Lamanna, D. D. and Maccioni, A.: Renewable Energy Data Sources in the Semantic Web with OpenWatt, in: Proceedings of the Workshops of the EDBT/ICDT 2014 Joint Conference (EDBT/ICDT 2014), CEUR Workshop Proceedings, Athens, Greece, 28 March 2014, edited by: Candan, K. S., Amer-Yahia, S., Schweikardt, N., Christophides, V., and Leroy, V., CEUR-WS.org, 1133, 128–133, http://ceur-ws.org/Vol-1133/paper-20.pdf (last access: 25 March 2025), 2014. a"
+        },
+        {
+          "key": "ref64",
+          "unstructured": "Lassila, O. and McGuinness, D. L.: The Role of Frame-Based Representation on the Semantic Web, Tech. Rep. KSL-01-02, Stanford University, Stanford, http://www.ida.liu.se/ext/epa/ej/etai/2001/018/01018-etaibody.pdf (last access: 25 March 2025), 2001. a"
+        },
+        {
+          "key": "ref65",
+          "unstructured": "Lavore, E. D., Leal, W., and de Paiva, V.: Dialectica Petri nets, arXiv [preprint], https://doi.org/10.48550/arxiv.2105.12801, 14 February 2024. a"
+        },
+        {
+          "key": "ref66",
+          "unstructured": "Le Franc, Y., Parland-von Essen, J., Bonino, L., Lehväslaiho, H., Coen, G., and Staiger, C.: D2.2 FAIR Semantics: First recommendations, Zenodo, https://doi.org/10.5281/zenodo.3707985, 2020. a"
+        },
+        {
+          "DOI": "10.3390/en12020201",
+          "doi-asserted-by": "crossref",
+          "key": "ref67",
+          "unstructured": "Leahy, K., Gallagher, C., O’Donovan, P., and O’Sullivan, D. T.: Issues with data quality for wind turbine condition monitoring and reliability analyses, Energies, 12, 201, https://doi.org/10.3390/en12020201, 2019. a"
+        },
+        {
+          "DOI": "10.3233/ATDE210263",
+          "doi-asserted-by": "crossref",
+          "key": "ref68",
+          "unstructured": "Li, F., Li, L., and Peng, Y.: Research on Digital Twin and Collaborative Cloud and Edge Computing Applied in Operations and Maintenance in Wind Turbines of Wind Power Farm, in: Advances in Transdisciplinary Engineering, IOS Press, https://doi.org/10.3233/atde210263, 2021. a"
+        },
+        {
+          "DOI": "10.1109/PESGM48719.2022.9917075",
+          "doi-asserted-by": "crossref",
+          "key": "#cr-split#-ref69.1",
+          "unstructured": "Liang, Y., Sun, L., and Zhao, X.: Reinforcement Learning-Based Inertia and Droop Control for Wind Farm Frequency Regulation, in: 2022 IEEE Power &amp;amp"
+        },
+        {
+          "DOI": "10.1109/PESGM48719.2022.9917075",
+          "doi-asserted-by": "crossref",
+          "key": "#cr-split#-ref69.2",
+          "unstructured": "Energy Society General Meeting (PESGM), Denver, CO, USA, 17-21 July 2022, IEEE, https://doi.org/10.1109/pesgm48719.2022.9917075, 2022. a"
+        },
+        {
+          "DOI": "10.1007/978-3-319-16486-1_73",
+          "doi-asserted-by": "crossref",
+          "key": "ref70",
+          "unstructured": "Lourenço, J. R., Abramova, V., Vieira, M., Cabral, B., and Bernardino, J.: NoSQL Databases: A Software Engineering Perspective, in: New Contributions in Information Systems and Technologies, edited by: Rocha, A., Correia, A. M., Costanzo, S., and Reis, L. P., Springer International Publishing, Cham, 741–750, ISBN 978-3-319-16486-1, 2015. a"
+        },
+        {
+          "key": "ref71",
+          "unstructured": "Lungu, I., Velicanu, A., Bâra, L. A., Botha, I., Mocanu, A.-M., and Tudor, A.: Spatial databases for wind parks, Econ. Comput. Econ. Cyb., Vol. 6, https://www.researchgate.net/publication/290734023_Spatial_databases_for_wind_parks (last access: 25 March 2024), 2012. a"
+        },
+        {
+          "DOI": "10.1016/B978-1-84334-601-2.50008-8",
+          "doi-asserted-by": "crossref",
+          "key": "ref72",
+          "unstructured": "Magee, L.: 8 – Contemporary dilemmas: tables versus webs, in: Towards a Semantic Web, edited by: Cope, B., Kalantzis, M., and Magee, L., Chandos Publishing, 215–234, https://doi.org/10.1016/B978-1-84334-601-2.50008-8, ISBN 978-1-84334-601-2, 2011. a"
+        },
+        {
+          "DOI": "10.1063/1.4812996",
+          "doi-asserted-by": "crossref",
+          "key": "ref73",
+          "unstructured": "Markovska, N., Krkoleva, A., Taseska, V., Borozan, V., and Pop-Jordanov, J.: Enabling an environment for solar and wind energy deployment in the Macedonian agricultural sector, J. Renew. Sustain. Ener., 5, 041804, https://doi.org/10.1063/1.4812996, 2013. a"
+        },
+        {
+          "key": "ref74",
+          "unstructured": "Marykovskiy, Y., Abdallah, I., Barber, S., and Chatzi, E.: Extended Taxonomy of Digital Twins, Version v2, Zenodo, https://doi.org/10.5281/zenodo.8021787, 2023. a"
+        },
+        {
+          "DOI": "10.3390/en15249531",
+          "doi-asserted-by": "crossref",
+          "key": "ref75",
+          "unstructured": "Michiorri, A., Sempreviva, A. M., Philipp, S., Perez-Lopez, P., Ferriere, A., and Moser, D.: Topic Taxonomy and Metadata to Support Renewable Energy Digitalisation, Energies, 15, 9531, https://doi.org/10.3390/en15249531, 2022. a"
+        },
+        {
+          "DOI": "10.1016/j.strusafe.2021.102140",
+          "doi-asserted-by": "crossref",
+          "key": "ref76",
+          "unstructured": "Morato, P., Papakonstantinou, K., Andriotis, C., Nielsen, J., and Rigo, P.: Optimal inspection and maintenance planning for deteriorating structural components through dynamic Bayesian networks and Markov decision processes, Struct. Saf., 94, 102140, https://doi.org/10.1016/j.strusafe.2021.102140, 2022. a"
+        },
+        {
+          "DOI": "10.1007/s11276-022-03177-5",
+          "doi-asserted-by": "crossref",
+          "key": "ref77",
+          "unstructured": "Naghib, A., Jafari Navimipour, N., Hosseinzadeh, M., and Sharifi, A.: A comprehensive and systematic literature review on the big data management techniques in the internet of things, Wirel. Netw., 29, 1085–1144, https://doi.org/10.1007/s11276-022-03177-5, 2022. a"
+        },
+        {
+          "DOI": "10.1504/IJMSO.2014.065445",
+          "doi-asserted-by": "crossref",
+          "key": "ref78",
+          "unstructured": "Nguyen, T. H., Dunlap, R., Mark, L., Prinz, A., Østgren, B. M., and Friisø, T.: Offshore Wind Metadata Management, International Journal of Metadata, Semantics and Ontologies, 9, 333–349, https://doi.org/10.1504/IJMSO.2014.065445, 2014. a, b"
+        },
+        {
+          "key": "ref79",
+          "unstructured": "Nowack, B.: The Semantic Web – Not a piece of cake..., http://web.archive.org/web/20220628120341/http://bnode.org/blog/2009/07/08/the-semantic-Web-not-a-piece-of-cake (last access: 15 July 2023), 2009. a"
+        },
+        {
+          "DOI": "10.1145/3331166",
+          "doi-asserted-by": "crossref",
+          "key": "ref80",
+          "unstructured": "Noy, N., Gao, Y., Jain, A., Narayanan, A., Patterson, A., and Taylor, J.: Industry-Scale Knowledge Graphs: Lessons and Challenges, Commun. ACM, 62, 36–43, https://doi.org/10.1145/3331166, 2019. a"
+        },
+        {
+          "key": "ref81",
+          "unstructured": "Noy, N. F. and Mcguinness, D. L.: Ontology Development 101: A Guide to Creating Your First Ontology, Stanford, http://ksl.stanford.edu/people/dlm/papers/ontology-tutorial-noy-mcguinness.pdf (last access: 10 March 2023), 2001. a"
+        },
+        {
+          "DOI": "10.1093/nar/gkp440",
+          "doi-asserted-by": "crossref",
+          "key": "ref82",
+          "unstructured": "Noy, N. F., Shah, N. H., Whetzel, P. L., Dai, B., Dorf, M., Griffith, N., Jonquet, C., Rubin, D. L., Storey, M.-A., Chute, C. G., and Musen, M. A.: BioPortal: ontologies and integrated data resources at the click of a mouse, Nucleic Acids Res., 37, W170–W173, https://doi.org/10.1093/nar/gkp440, 2009. a"
+        },
+        {
+          "DOI": "10.1109/SUPERGEN.2009.5430854",
+          "doi-asserted-by": "crossref",
+          "key": "ref83",
+          "unstructured": "Papadopoulos, P. and Cipcigan, L.: Wind turbines' condition monitoring: an ontology model, in: 2009 International Conference on Sustainable Power Generation and Supply, Nanjing, China, 6–7 April 2009, IEEE, 1–4, https://doi.org/10.1109/SUPERGEN.2009.5430854, ISSN 2156-969X, 2009. a, b"
+        },
+        {
+          "DOI": "10.1016/j.ress.2014.04.005",
+          "doi-asserted-by": "crossref",
+          "key": "ref84",
+          "unstructured": "Papakonstantinou, K. and Shinozuka, M.: Planning structural inspection and maintenance policies via dynamic programming and Markov processes. Part I: Theory, Reliab. Eng. Syst. Safe., 130, 202–213, https://doi.org/10.1016/j.ress.2014.04.005, 2014. a"
+        },
+        {
+          "key": "ref85",
+          "unstructured": "Partridge, C., Mitchell, A., Cook, A., Sullivan, J., and West, M.: A Survey of Top-Level Ontologies – to inform the ontological choices for a Foundation Data Model, CDBB, https://doi.org/10.17863/CAM.58311, 2020. a"
+        },
+        {
+          "DOI": "10.1016/j.future.2020.06.008",
+          "doi-asserted-by": "crossref",
+          "key": "ref86",
+          "unstructured": "Pease, S. G., Sharpe, R., van Lopik, K., Tsalapati, E., Goodall, P., Young, B., Conway, P., and West, A.: An interoperable semantic service toolset with domain ontology for automated decision support in the end-of-life domain, Future Gener. Comp. Sy., 112, 848–858, https://doi.org/10.1016/j.future.2020.06.008, 2020. a"
+        },
+        {
+          "DOI": "10.1016/j.aei.2013.12.004",
+          "doi-asserted-by": "crossref",
+          "key": "ref87",
+          "unstructured": "Premkumar, V., Krishnamurty, S., Wileden, J. C., and Grosse, I. R.: A semantic knowledge management system for laminated composites, Adv. Eng. Inform., 28, 91–101, https://doi.org/10.1016/j.aei.2013.12.004, 2014. a"
+        },
+        {
+          "DOI": "10.1109/ICE/ITMC52061.2021.9570114",
+          "doi-asserted-by": "crossref",
+          "key": "ref88",
+          "unstructured": "Pronost, G., Mayer, F., Marche, B., Camargo, M., and Dupont, L.: Towards a Framework for the Classification of Digital Twins and their Applications, in: 2021 IEEE International Conference on Engineering, Technology and Innovation (ICE/ITMC), Cardiff, United Kingdom, 21–23 June 2021, IEEE, 1–7, https://doi.org/10.1109/ICE/ITMC52061.2021.9570114, 2021. a"
+        },
+        {
+          "DOI": "10.1098/rspa.2022.0156",
+          "doi-asserted-by": "crossref",
+          "key": "ref89",
+          "unstructured": "Qi, Q., Terkaj, W., Urgo, M., Jiang, X., and Scott, P. J.: A mathematical foundation to support bidirectional mappings between digital models: an application of multi-scale modelling in manufacturing, P. Roy. Soc. A-Math. Phy., 478, 20220156, https://doi.org/10.1098/rspa.2022.0156, 2022. a"
+        },
+        {
+          "DOI": "10.5194/wes-5-259-2020",
+          "doi-asserted-by": "crossref",
+          "key": "ref90",
+          "unstructured": "Quaeghebeur, E., Sanchez Perez-Moreno, S., and Zaaijer, M. B.: WESgraph: a graph database for the wind farm domain, Wind Energ. Sci., 5, 259–284, https://doi.org/10.5194/wes-5-259-2020, 2020. a"
+        },
+        {
+          "DOI": "10.1088/1742-6596/753/7/072027",
+          "doi-asserted-by": "crossref",
+          "key": "ref91",
+          "unstructured": "Reder, M. D., Gonzalez, E., and Melero, J. J.: Wind Turbine Failures – Tackling current Problems in Failure Data Analysis, J. Phys. Conf. Ser., 753, 072027, https://doi.org/10.1088/1742-6596/753/7/072027, 2016. a"
+        },
+        {
+          "key": "ref92",
+          "unstructured": "Rogushina, J. V. and Gladun, A. Y.: Semantic Processing of Metadata for Big Data: Standards, Ontologies and Typical Information Objects, in: Information Technologies and Security (ITS), Kyiv, Ukraine, 10 December 2020, 114–128, ISSN 1613-0073, https://ceur-ws.org/Vol-2859/paper10.pdf (last access: 25 March 2024), 2020. a"
+        },
+        {
+          "DOI": "10.1108/TCJ-03-2019-0024",
+          "doi-asserted-by": "crossref",
+          "key": "ref93",
+          "unstructured": "Rosenberg, S.: PSEG and the promise of wind power, The CASE Journal, 16, 51–74, https://doi.org/10.1108/tcj-03-2019-0024, 2019. a"
+        },
+        {
+          "DOI": "10.1002/we.2793",
+          "doi-asserted-by": "crossref",
+          "key": "ref94",
+          "unstructured": "Sanchez-Fernandez, A. J., González-Sánchez, J.-L., Luna Rodríguez, I., Rodríguez, F. R., and Sanchez-Rivero, J.: Reliability of onshore wind turbines based on linking power curves to failure and maintenance records: A case study in central Spain, Wind Energy, 26, 349–364, https://doi.org/10.1002/we.2793, 2023. a"
+        },
+        {
+          "key": "ref95",
+          "unstructured": "Schreiber, G. and Raimond, Y.: RDF 1.1 Primer, http://www.w3.org/TR/rdf11-primer/ (last access: 25 March 2024), 2014. a"
+        },
+        {
+          "key": "ref96",
+          "unstructured": "Sempreviva, A. M., Vesth, A., Bak, C., Verelst, D. R., Giebel, G., Danielsen, H. K., Mikkelsen, L. P., Andersson, M., Vasiljevic, N., Barth, S., Sanz, R. J., Gancarski, P., Reigstad, T. I., Bolstad, H. C., Wagenaar, J. W., and Hermans Koen, W.: Taxonomy And Metadata For Wind Energy Research &amp;amp; Development, Zenodo, https://doi.org/10.5281/zenodo.1199489, 2017. a"
+        },
+        {
+          "DOI": "10.3390/app9020278",
+          "doi-asserted-by": "crossref",
+          "key": "ref97",
+          "unstructured": "Seyr, H. and Muskulus, M.: Decision Support Models for Operations and Maintenance for Offshore Wind Farms: A Review, Applied Sciences, 9, 278, https://doi.org/10.3390/app9020278, 2019. a"
+        },
+        {
+          "DOI": "10.4204/EPTCS.380.11",
+          "doi-asserted-by": "crossref",
+          "key": "ref98",
+          "unstructured": "Shapiro, B. T. and Spivak, D. I.: Dynamic Operads, Dynamic Categories: From Deep Learning to Prediction Markets, Electronic Proceedings in Theoretical Computer Science, 380, 183–202, https://doi.org/10.4204/eptcs.380.11, 2023. a"
+        },
+        {
+          "DOI": "10.1007/978-3-030-11928-7_9",
+          "doi-asserted-by": "crossref",
+          "key": "ref99",
+          "unstructured": "Soussi, N. and Bahaj, M.: Exploiting NoSQL Document Oriented Data Using Semantic Web Tools, in: Advanced Intelligent Systems for Sustainable Development (AI2SD'2018), edited by: Ezziyyani, M., Springer International Publishing, Cham, 110–117, ISBN 978-3-030-11928-7, 2019. a"
+        },
+        {
+          "DOI": "10.1016/j.ic.2012.05.001",
+          "doi-asserted-by": "crossref",
+          "key": "ref100",
+          "unstructured": "Spivak, D. I.: Functorial data migration, Inform. Comput., 217, 31–51, https://doi.org/10.1016/j.ic.2012.05.001, 2012. a"
+        },
+        {
+          "key": "ref101",
+          "unstructured": "Spivak, D. I.: Poly: An abundant categorical setting for mode-dependent dynamics, arXiv [preprint], https://doi.org/10.48550/arXiv.2005.01894, 11 June 2020. a"
+        },
+        {
+          "DOI": "10.1371/journal.pone.0024274",
+          "doi-asserted-by": "crossref",
+          "key": "ref102",
+          "unstructured": "Spivak, D. I. and Kent, R. E.: Ologs: A Categorical Framework for Knowledge Representation, PLoS ONE, 7, e24274, https://doi.org/10.1371/journal.pone.0024274, 2012. a"
+        },
+        {
+          "DOI": "10.1145/637411.637413",
+          "doi-asserted-by": "crossref",
+          "key": "ref103",
+          "unstructured": "Spyns, P., Meersman, R., and Jarrar, M.: Data Modelling versus Ontology Engineering, SIGMOD Rec., 31, 12–17, https://doi.org/10.1145/637411.637413, 2002. a"
+        },
+        {
+          "DOI": "10.4204/EPTCS.380.18",
+          "doi-asserted-by": "crossref",
+          "key": "ref104",
+          "unstructured": "St. Clere Smithe, T.: Open Dynamical Systems as Coalgebras for Polynomial Functors, with Application to Predictive Processing, Electronic Proceedings in Theoretical Computer Science, 380, 307–330, https://doi.org/10.4204/eptcs.380.18, 2023. a"
+        },
+        {
+          "DOI": "10.1007/s10010-021-00466-x",
+          "doi-asserted-by": "crossref",
+          "key": "ref105",
+          "unstructured": "Strack, B., Lenart, M., Frank, J., and Kramer, N.: Ontology for maintenance of onshore wind turbines, Forsch. Ingenieurwes., 85, 265–272, https://doi.org/10.1007/s10010-021-00466-x, 2021. a"
+        },
+        {
+          "DOI": "10.1016/S0169-023X(97)00056-6",
+          "doi-asserted-by": "crossref",
+          "key": "ref106",
+          "unstructured": "Studer, R., Benjamins, V. R., and Fensel, D.: Knowledge engineering: Principles and methods, Data Knowl. Eng., 25, 161–197, 1998. a"
+        },
+        {
+          "key": "ref107",
+          "unstructured": "The Editors of Encyclopaedia Britannica: Formal system | Logic, Symbols &amp;amp; Axioms, https://www.britannica.com/topic/formal-system (last access: 1 October 2023), 2012. a"
+        },
+        {
+          "DOI": "10.24251/HICSS.2018.196",
+          "doi-asserted-by": "crossref",
+          "key": "ref108",
+          "unstructured": "Tsalapati, E., Jackson, T., Johnson, W., Jackson, L. M., Vasilyev, A., West, A. A., Mao, L., and Davies, B.: The Role of Semantic Technologies in Diagnostic and Decision Support for Service Systems, in: Hawaii International Conference on System Sciences, Waikoloa Village, Hawaii, 3–6 January 2018, https://doi.org/10.24251/HICSS.2018.196, 2018. a"
+        },
+        {
+          "DOI": "10.1007/978-3-030-47717-2_6",
+          "doi-asserted-by": "crossref",
+          "key": "ref109",
+          "unstructured": "Tsialiamanis, G. P., Wagg, D. J., Antoniadou, I., and Worden, K.: An Ontological Approach to Structural Health Monitoring, in: Topics in Modal Analysis &amp;amp; Testing, edited by: Dilworth, B. and Mains, M., Springer International Publishing, Cham, 8, 51–59, ISBN 978-3-030-47717-2, 2021. a"
+        },
+        {
+          "DOI": "10.1109/ACCESS.2022.3186353",
+          "doi-asserted-by": "crossref",
+          "key": "ref110",
+          "unstructured": "Uhlenkamp, J.-F., Hauge, J. B., Broda, E., Lütjen, M., Freitag, M., and Thoben, K.-D.: Digital Twins: A Maturity Model for Their Classification and Evaluation, IEEE Access, 10, 69605–69635, https://doi.org/10.1109/ACCESS.2022.3186353, 2022. a"
+        },
+        {
+          "DOI": "10.1007/s12599-021-00727-7",
+          "doi-asserted-by": "crossref",
+          "key": "ref111",
+          "unstructured": "van der Valk, H., Haße, H., Möller, F., and Otto, B.: Archetypes of Digital Twins, Bus. Inf. Syst. Eng., 64, 375–391, https://doi.org/10.1007/s12599-021-00727-7, 2021. a"
+        },
+        {
+          "DOI": "10.1126/science.aau2027",
+          "doi-asserted-by": "crossref",
+          "key": "ref112",
+          "unstructured": "Veers, P., Dykes, K., Lantz, E., Barth, S., Bottasso, C. L., Carlson, O., Clifton, A., Green, J., Green, P., Holttinen, H., Laird, D., Lehtomäki, V., Lundquist, J. K., Manwell, J., Marquis, M., Meneveau, C., Moriarty, P., Munduate, X., Muskulus, M., Naughton, J., Pao, L., Paquette, J., Peinke, J., Robertson, A., Sanz Rodrigo, J., Sempreviva, A. M., Smith, J. C., Tuohy, A., and Wiser, R.: Grand challenges in the science of wind energy, Science, 366, eaau2027, https://doi.org/10.1126/science.aau2, 2019. a, b"
+        },
+        {
+          "DOI": "10.5209/aguc.69333",
+          "doi-asserted-by": "crossref",
+          "key": "ref113",
+          "unstructured": "Vicuña, D. M. and Pérez, J. E.: Wind energy policy and its effects on local development. An analysis from the stakeholder system (Loja, Ecuador), Anales de Geografía de la Universidad Complutense, 40, 73–95, https://doi.org/10.5209/aguc.69333, 2020. a"
+        },
+        {
+          "key": "ref114",
+          "unstructured": "Villegas, M., Melero, M., and Bel, N.: Metadata as Linked Open Data: mapping disparate XML metadata registries into one RDF/OWL registry, in: Proceedings of the Ninth International Conference on Language Resources and Evaluation (LREC'14), Reykjavik, Iceland, 26–31 May 2014, European Language Resources Association (ELRA), 393–400, ISBN 978-2-9517408-8-4, http://www.lrec-conf.org/proceedings/lrec2014/pdf/664_Paper.pdf (last access: 25 March 2024), 2014. a"
+        },
+        {
+          "DOI": "10.1007/978-3-540-92673-3_13",
+          "doi-asserted-by": "crossref",
+          "key": "ref115",
+          "unstructured": "Vrandečić, D.: Ontology Evaluation, Springer, Berlin, Heidelberg, 293–313, https://doi.org/10.1007/978-3-540-92673-3_13, ISBN 978-3-540-92673-3, 2009. a"
+        },
+        {
+          "key": "ref116",
+          "unstructured": "W3C: Linked Data, https://www.w3.org/standards/semanticweb/data, last access: 10 March 2023. a"
+        },
+        {
+          "DOI": "10.1115/1.4046739",
+          "doi-asserted-by": "crossref",
+          "key": "ref117",
+          "unstructured": "Wagg, D. J., Worden, K., Barthorpe, R. J., and Gardner, P.: Digital Twins: State-of-the-Art and Future Directions for Modeling and Simulation in Engineering Dynamics Applications, ASME J. Risk Uncertainty Part B, 6, 030901, https://doi.org/10.1115/1.4046739, 030901, 2020. a, b, c"
+        },
+        {
+          "DOI": "10.3390/en15207654",
+          "doi-asserted-by": "crossref",
+          "key": "ref118",
+          "unstructured": "Weber, J. and Köppel, J.: Can MCDA Serve Ex-Post to Indicate ‘Winners and Losers’ in Sustainability Dilemmas? A Case Study of Marine Spatial Planning in Germany, Energies, 15, 7654, https://doi.org/10.3390/en15207654, 2022. a"
+        },
+        {
+          "DOI": "10.1016/j.marpol.2014.08.015",
+          "doi-asserted-by": "crossref",
+          "key": "ref119",
+          "unstructured": "Wever, L., Krause, G., and Buck, B. H.: Lessons from stakeholder dialogues on marine aquaculture in offshore wind farms: Perceived potentials, constraints and research gaps, Mar. Policy, 51, 251–259, https://doi.org/10.1016/j.marpol.2014.08.015, 2015. a"
+        },
+        {
+          "DOI": "10.3384/ecp21181235",
+          "doi-asserted-by": "crossref",
+          "key": "ref120",
+          "unstructured": "Wiens, M., Meyer, T., and Thomas, P.: The Potential of FMI for the Development of Digital Twins for Large Modular Multi-Domain Systems, in: Proceedings of 14th Modelica Conference 2021, Modelica 2021, Linköping, Sweden, 20–24 September 2021, Linköping University Electronic Press, 235–240, https://doi.org/10.3384/ecp21181235, ISSN 1650-3686, 2021. a"
+        },
+        {
+          "DOI": "10.3390/en14206692",
+          "doi-asserted-by": "crossref",
+          "key": "ref121",
+          "unstructured": "Wierling, A., Schwanitz, V. J., Altinci, S., Bałazińska, M., Barber, M. J., Biresselioglu, M. E., Burger-Scheidlin, C., Celino, M., Demir, M. H., Dennis, R., Dintzner, N., el Gammal, A., Fernández-Peruchena, C. M., Gilcrease, W., Gładysz, P., Hoyer-Klick, C., Joshi, K., Kruczek, M., Lacroix, D., Markowska, M., Mayo-García, R., Morrison, R., Paier, M., Peronato, G., Ramakrishnan, M., Reid, J., Sciullo, A., Solak, B., Suna, D., Süß, W., Unger, A., Fernandez Vanoni, M. L., and Vasiljevic, N.: FAIR Metadata Standards for Low Carbon Energy Research – A Review of Practices and How to Advance, Energies, 14, 6692, https://doi.org/10.3390/en14206692, 2021.  a"
+        },
+        {
+          "DOI": "10.1038/sdata.2016.18",
+          "doi-asserted-by": "crossref",
+          "key": "ref122",
+          "unstructured": "Wilkinson, M. D., Dumontier, M., Aalbersberg, I. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., da Silva Santos, L. B., Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., Gonzalez-Beltran, A., Gray, A. J., Groth, P., Goble, C., Grethe, J. S., Heringa, J., 't Hoen, P. A., Hooft, R., Kuhn, T., Kok, R., Kok, J., Lusher, S. J., Martone, M. E., Mons, A., Packer, A. L., Persson, B., Rocca-Serra, P., Roos, M., van Schaik, R., Sansone, S.-A., Schultes, E., Sengstag, T., Slater, T., Strawn, G., Swertz, M. A., Thompson, M., van der Lei, J., van Mulligen, E., Velterop, J., Waagmeester, A., Wittenburg, P., Wolstencroft, K., Zhao, J., and Mons, B.: The FAIR Guiding Principles for scientific data management and stewardship, Scientific Data, 3, 160018, https://doi.org/10.1038/sdata.2016.18, 2016. a, b"
+        },
+        {
+          "key": "ref123",
+          "unstructured": "Wu, M., Juty, N., WG, R. R. M. S., Collins, J., Duerr, R., Ridsdale, C., Shepherd, A., Verhey, C., and Castro, L. J.: Guidelines for publishing structured metadata on the web, Version 3.1, Zenodo, https://doi.org/10.15497/RDA00066, 2021. a"
+        },
+        {
+          "DOI": "10.1109/IROS51168.2021.9636513",
+          "doi-asserted-by": "crossref",
+          "key": "ref124",
+          "unstructured": "Zardini, G., Milojevic, D., Censi, A., and Frazzoli, E.: Co-design of Embodied Intelligence: A Structured Approach, in: 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Prague, Czech Republic, 27 September 2021–1 October 2021, 7536–7543, https://doi.org/10.1109/IROS51168.2021.9636513, 2021. a"
+        },
+        {
+          "DOI": "10.1080/00207543.2021.2014591",
+          "doi-asserted-by": "crossref",
+          "key": "ref125",
+          "unstructured": "Zheng, X., Lu, J., and Kiritsis, D.: The emergence of cognitive digital twin: vision, challenges and opportunities, Int. J. Prod. Res., 60, 1–23, https://doi.org/10.1080/00207543.2021.2014591, 2021. a, b"
+        },
+        {
+          "DOI": "10.1016/j.aei.2014.10.001",
+          "doi-asserted-by": "crossref",
+          "key": "ref126",
+          "unstructured": "Zhou, A., Yu, D., and Zhang, W.: A research on intelligent fault diagnosis of wind turbines based on ontology and FMECA, Adv. Eng. Inform., 29, 115–125, https://doi.org/10.1016/j.aei.2014.10.001, 2015. a, b"
+        },
+        {
+          "DOI": "10.1109/WKDD.2008.88",
+          "doi-asserted-by": "crossref",
+          "key": "ref127",
+          "unstructured": "Zhu, Y.-L., Wang, X.-Y., and Cheng, D.-L.: Ontology-Based Research on Wind Power Plant Information Interaction, in: First International Workshop on Knowledge Discovery and Data Mining (WKDD 2008), Adelaide, SA, Australia, 23–24 January 2008, IEEE, 169–172, https://doi.org/10.1109/WKDD.2008.88, 2008. a, b"
+        }
+      ],
+      "reference-count": 128,
+      "references-count": 128,
+      "relation": {
+        "has-preprint": [
+          {
+            "asserted-by": "subject",
+            "id": "10.5194/wes-2023-173",
+            "id-type": "doi"
+          },
+          {
+            "asserted-by": "object",
+            "id": "10.5194/wes-2023-173",
+            "id-type": "doi"
+          }
+        ],
+        "has-review": [
+          {
+            "asserted-by": "subject",
+            "id": "10.5194/wes-2023-173-RC1",
+            "id-type": "doi"
+          },
+          {
+            "asserted-by": "subject",
+            "id": "10.5194/wes-2023-173-AC1",
+            "id-type": "doi"
+          },
+          {
+            "asserted-by": "subject",
+            "id": "10.5194/wes-2023-173-RC2",
+            "id-type": "doi"
+          },
+          {
+            "asserted-by": "subject",
+            "id": "10.5194/wes-2023-173-AC2",
+            "id-type": "doi"
+          },
+          {
+            "asserted-by": "object",
+            "id": "10.5194/wes-2023-173-RC2",
+            "id-type": "doi"
+          },
+          {
+            "asserted-by": "object",
+            "id": "10.5194/wes-2023-173-RC1",
+            "id-type": "doi"
+          },
+          {
+            "asserted-by": "object",
+            "id": "10.5194/wes-2023-173-AC1",
+            "id-type": "doi"
+          },
+          {
+            "asserted-by": "object",
+            "id": "10.5194/wes-2023-173-AC2",
+            "id-type": "doi"
+          }
+        ]
+      },
+      "resource": {
+        "primary": {
+          "URL": "https://wes.copernicus.org/articles/9/883/2024/"
+        }
+      },
+      "score": 1,
+      "short-container-title": [
+        "Wind Energ. Sci."
+      ],
+      "short-title": [],
+      "source": "Crossref",
+      "subject": [],
+      "subtitle": [],
+      "title": [
+        "Knowledge engineering for wind energy"
+      ],
+      "type": "journal-article",
+      "volume": "9"
+    },
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "status": "ok"
+  }
+}

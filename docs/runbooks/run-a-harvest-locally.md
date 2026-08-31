@@ -95,7 +95,7 @@ Prints `state/last-run.json`. What to look at, in order:
 | Field | Means |
 |---|---|
 | `ok` | did the CKAN gate pass |
-| `sources.<name>.implemented` | `false` = the adapter is still a stub |
+| `sources.<name>.implemented` | `false` = the adapter is still a stub. **All seven are now built, so this should never be `false`** — if it is, an adapter module has regressed to carrying its `_TODO` marker |
 | `sources.<name>.reachable` | `false` = network, auth wall, robots, or an exception; see `errors` |
 | `sources.<name>.seen` / `changed` / `skipped_unchanged` | change detection working as designed |
 | `unreachable_sources` | rendered on the site as an honest degradation notice |
@@ -106,9 +106,11 @@ Prints `state/last-run.json`. What to look at, in order:
 | `pending_extraction` | the Tier-3 backlog — see [[drain-the-pending-extraction-queue]] |
 | `validation_violations` | why `ok` is false |
 
-On a foundation-only checkout every source reports
-`"implemented": false` with `not implemented: harvest.adapters.<name> is a stub`.
-That is the expected state until the adapter tracks land.
+All seven adapters are built, so a healthy run reports `"implemented": true`
+for all seven. `wdh` is the one source expected to report `reachable: false`
+routinely: its listing endpoint is behind an authentication wall and the
+adapter disables itself rather than guessing (fixture `wdh-07`). That is
+correct degradation, not a failure — `ok` stays `true`.
 
 ## 5. Prove change detection works
 
@@ -149,7 +151,7 @@ system — do not hammer it.
 
 | Symptom | Cause | Do |
 |---|---|---|
-| `not implemented: … is a stub` | that adapter has not been built | expected on a foundation checkout |
+| `not implemented: … is a stub` | that adapter has lost its implementation | a regression: every adapter is built. Check the module still lacks its `_TODO` marker |
 | `reachable: false` with an HTTP status | upstream down, rate limited, or robots-blocked | re-run later; the harvest is idempotent |
 | `reachable: false` with `SourceUnreachable: listing endpoint requires a token` | the WDH auth wall (fixture `wdh-07`) | correct degradation; nothing to fix |
 | `map failed for <system>:<id>` | one record's payload broke `map()` | only that record is lost; capture it as a fixture and fix `map()` |

@@ -1,0 +1,31 @@
+{
+  "case": "INVENTED page (marked in the HTML): a syntactically perfect DOI (10.5281/zenodo.99999999999) that resolves at neither DataCite nor Crossref — verified live 2026-08-31, both 404. Resolve-or-drop: no record, and the drop appears in state/last-run.json -> dropped_dois. Never silent.",
+  "expected_classification": {
+    "kind": "publication-list",
+    "method": "pattern"
+  },
+  "expected_content_chars": 339,
+  "expected_content_hash": "7313fe01d19c709d",
+  "expected_dois": [
+    "10.5281/zenodo.99999999999",
+    "10.5194/wes-9-883-2024"
+  ],
+  "expected_dropped": [
+    "10.5281/zenodo.99999999999"
+  ],
+  "expected_iea_task": [
+    "task-47"
+  ],
+  "expected_notices": [],
+  "expected_resolved": [
+    "10.5194/wes-9-883-2024"
+  ],
+  "fixture_id": "iea-05-invalid-doi",
+  "fixture_kind": "page",
+  "html": "raw/iea-05-invalid-doi.html",
+  "iea_task": "task-47",
+  "page_url": "https://iea-wind.org/task47/publications/",
+  "raw": "raw/iea-05-invalid-doi.html",
+  "raw_bytes": 1895,
+  "trusted": false
+}

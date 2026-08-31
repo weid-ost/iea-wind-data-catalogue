@@ -1,0 +1,31 @@
+{
+  "case": "INVENTED page (marked in the HTML): citations given as title + journal + year with no DOI column at all. The committed cache entry (cache/63b2066571f8….json, model claude-fable-5) supplies the two titles with a null doi; the Crossref title search accepts the first on an exact normalised-title match and FLAGS the second, which exists nowhere. A near-match is never accepted.",
+  "expected_classification": {
+    "kind": "publication-list",
+    "method": "pattern"
+  },
+  "expected_content_chars": 423,
+  "expected_content_hash": "77c2982bf2c0cb2e",
+  "expected_dois": [],
+  "expected_iea_task": [
+    "task-53"
+  ],
+  "expected_notice_types": [
+    "unresolved_citation"
+  ],
+  "expected_title_search_accepts": {
+    "Knowledge engineering for wind energy": "10.5194/wes-9-883-2024"
+  },
+  "expected_titles_without_doi": [
+    "Knowledge engineering for wind energy",
+    "An entirely internal note on economics methodology that was never published anywhere"
+  ],
+  "fixture_id": "iea-07-no-doi-citation",
+  "fixture_kind": "page",
+  "html": "raw/iea-07-no-doi-citation.html",
+  "iea_task": "task-53",
+  "page_url": "https://iea-wind.org/task53/publications/",
+  "raw": "raw/iea-07-no-doi-citation.html",
+  "raw_bytes": 1984,
+  "trusted": false
+}

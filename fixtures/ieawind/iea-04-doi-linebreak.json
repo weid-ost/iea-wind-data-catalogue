@@ -1,0 +1,31 @@
+{
+  "case": "INVENTED page (marked in the HTML): one DOI soft-wrapped across a real rendered line break inside <pre>, and a second wrapped at a SPACE inside a <p>. The first is rejoined and resolves. The second truncates to '10.1088/1742-6596/' — harvest.doi's rejoining is deliberately narrow, and the truncated identifier is caught by resolve-or-drop rather than by a wider, riskier regex. Both behaviours are pinned here on purpose.",
+  "expected_classification": {
+    "kind": "publication-list",
+    "method": "pattern"
+  },
+  "expected_content_chars": 543,
+  "expected_content_hash": "4797534fd5bf7a6d",
+  "expected_dois": [
+    "10.5194/wes-9-883-2024",
+    "10.1088/1742-6596/"
+  ],
+  "expected_dropped": [
+    "10.1088/1742-6596/"
+  ],
+  "expected_iea_task": [
+    "task-44"
+  ],
+  "expected_notices": [],
+  "expected_resolved": [
+    "10.5194/wes-9-883-2024"
+  ],
+  "fixture_id": "iea-04-doi-linebreak",
+  "fixture_kind": "page",
+  "html": "raw/iea-04-doi-linebreak.html",
+  "iea_task": "task-44",
+  "page_url": "https://iea-wind.org/task44/reading-list/",
+  "raw": "raw/iea-04-doi-linebreak.html",
+  "raw_bytes": 2074,
+  "trusted": false
+}

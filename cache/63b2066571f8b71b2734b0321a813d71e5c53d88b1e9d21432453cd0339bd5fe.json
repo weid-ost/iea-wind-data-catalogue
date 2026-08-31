@@ -1,0 +1,46 @@
+{
+  "confidence": {
+    "is_record_bearing": 0.81,
+    "page_kind": 0.81,
+    "records": 0.35
+  },
+  "content_sha256": "77c2982bf2c0cb2e000c310509178f3117810bb8a6236a567d5664882c884f18",
+  "extracted_at": "2026-08-31T22:15:09Z",
+  "fields": {
+    "confidence": 0.81,
+    "is_record_bearing": true,
+    "notes": "No DOI column on this page; both citations were emitted with a null doi.",
+    "page_kind": "publication-list",
+    "records": [
+      {
+        "access_status": null,
+        "authors": [
+          "Marykovskiy et al."
+        ],
+        "confidence": 0.74,
+        "container": "Wind Energy Science",
+        "doi": null,
+        "published_date": "2024",
+        "resource_kind": "publication",
+        "title": "Knowledge engineering for wind energy"
+      },
+      {
+        "access_status": null,
+        "authors": [
+          "Task 53 participants"
+        ],
+        "confidence": 0.35,
+        "container": null,
+        "doi": null,
+        "published_date": "2025",
+        "resource_kind": "report",
+        "title": "An entirely internal note on economics methodology that was never published anywhere"
+      }
+    ]
+  },
+  "key": "63b2066571f8b71b2734b0321a813d71e5c53d88b1e9d21432453cd0339bd5fe",
+  "model": "claude-fable-5",
+  "pin_source_key": null,
+  "pinned": false,
+  "prompt_version": "v1"
+}

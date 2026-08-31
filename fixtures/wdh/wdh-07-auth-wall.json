@@ -1,0 +1,25 @@
+{
+  "case": "The Wind Data Hub listing endpoint is walled (Spike 4, probes re-verified live 2026-09-01). No token ⇒ the adapter disables itself, run_adapter records one unreachable source, every other source finishes, and existing records are untouched. This is the DEFAULT and PRIMARY tested path for wdh, not an error branch.",
+  "expected_events_appended": 0,
+  "expected_exception": "SourceUnreachable",
+  "expected_records_untouched": true,
+  "expected_source_result": {
+    "changed": 0,
+    "enabled": true,
+    "implemented": true,
+    "reachable": false,
+    "seen": 0,
+    "skipped_unchanged": 0
+  },
+  "expected_reason_mentions": [
+    "Missing Authentication Token",
+    "419",
+    "WDH_API_TOKEN"
+  ],
+  "expected_run_ok": true,
+  "fixture_id": "wdh-07-auth-wall",
+  "fixture_kind": "degradation",
+  "note": "The raw payload is the live probe transcript, not an upstream record: there is no record to capture, and the absence IS the behaviour under test. If a credential is ever issued, set $WDH_API_TOKEN and the adapter queries the gateway instead; nothing here is guessed or impersonated in the meantime.",
+  "raw": "raw/wdh-07-auth-wall.json",
+  "token_env": "WDH_API_TOKEN"
+}

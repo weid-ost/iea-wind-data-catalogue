@@ -1,0 +1,24 @@
+{
+  "case": "INVENTED page (marked in the HTML): the SAME DOI written five ways — bare, 'doi:' with upper-case suffix, https://doi.org/, http://dx.doi.org/ and info:doi/. All five normalise to one identity, so the sweep returns exactly one DOI.",
+  "expected_classification": {
+    "kind": "publication-list",
+    "method": "pattern"
+  },
+  "expected_content_chars": 474,
+  "expected_content_hash": "95c88b003542ff1c",
+  "expected_dois": [
+    "10.5281/zenodo.11289823"
+  ],
+  "expected_iea_task": [
+    "task-52"
+  ],
+  "expected_notices": [],
+  "fixture_id": "iea-03-doi-prefixed",
+  "fixture_kind": "page",
+  "html": "raw/iea-03-doi-prefixed.html",
+  "iea_task": "task-52",
+  "page_url": "https://iea-wind.org/task52/citing-the-lidar-ontology/",
+  "raw": "raw/iea-03-doi-prefixed.html",
+  "raw_bytes": 2075,
+  "trusted": false
+}
