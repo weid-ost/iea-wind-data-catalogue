@@ -1,0 +1,120 @@
+{
+  "fixture_id": "cr-04-preprint-pair",
+  "fixture_kind": "source_namespace",
+  "case": "Authorea preprint with relation.is-preprint-of the published Wind Energy Science article",
+  "note": "cr-04. The identity is the PUBLISHED article's DOI (10.5194/wes-11-2345-2026), not the preprint's, so the preprint merges into the published record instead of being listed separately. The preprint's own DOI is kept as source_id, in extra.crossref_preprint_doi and in source_urls, and the relation is in related_identifiers for the dedup track. `url` points at the published version. When the published version is in the same harvest batch the preprint is dropped outright; when it is not, harvest() resolves the asserted DOI against DataCite/Crossref first and drops the observation if it does not resolve — an identifier asserted by a third party is never accepted on trust.",
+  "raw": "raw/cr-04-preprint-pair.json",
+  "identity_key": "10.5194/wes-11-2345-2026",
+  "source_system": "crossref",
+  "source_id": "10.22541/au.173542765.58148137/v1",
+  "source_key": "2026-07-08T09:00:24Z",
+  "source": {
+    "title": "Large Eddy Simulation of the IEA 15-MW Wind Turbine Using a Two-Way Coupled Fluid-Structure Interaction Model",
+    "notes": "<p> The aim of the work is studying the aeroelastic response of the 15 MW NREL-IEA large-scale wind turbine using a high-fidelity fluid-structure interaction solver that combines large-eddy simulation with a modal computational structural dynamics solver through a two-way coupling. The fluid solver employs the actuator line model to simulate the interaction between the turbine blades and the fluid and the immersed boundary method to model the presence of the tower and nacelle. The results are compared with those obtained by the OpenFAST software, which is a well-known numerical tool for engineering predictions. A series of simulations have been performed with and without the presence of the tower and nacelle to better understand the effects of these components on flow structures and structural deformations. The largest discrepancies among the solvers have been observed in correspondence with the blade passage in front of the tower, which induces an abrupt alteration in the local incidence angle of the flow. </p>",
+    "doi": "10.5194/wes-11-2345-2026",
+    "url": "https://doi.org/10.5194/wes-11-2345-2026",
+    "source_urls": [
+      "https://doi.org/10.5194/wes-11-2345-2026",
+      "https://doi.org/10.22541/au.173542765.58148137/v1",
+      "https://www.authorea.com/doi/full/10.22541/au.173542765.58148137/v1"
+    ],
+    "authors": [
+      {
+        "name": "Bernardi, Claudio",
+        "given": "Claudio",
+        "family": "Bernardi",
+        "orcid": "0009-0002-4310-4136",
+        "affiliation": "Politecnico di Bari Dipartimento di Meccanica Matematica e Management"
+      },
+      {
+        "name": "Cherubini, Stefania",
+        "given": "Stefania",
+        "family": "Cherubini",
+        "affiliation": "Politecnico di Bari Dipartimento di Meccanica Matematica e Management"
+      },
+      {
+        "name": "Manganelli, Felice",
+        "given": "Felice",
+        "family": "Manganelli",
+        "affiliation": "Politecnico di Bari Dipartimento di Meccanica Matematica e Management"
+      },
+      {
+        "name": "Posta, Giacomo Della",
+        "given": "Giacomo Della",
+        "family": "Posta",
+        "orcid": "0000-0001-5516-9338",
+        "affiliation": "Universita degli Studi di Roma La Sapienza Dipartimento di Ingegneria Meccanica e Aerospaziale"
+      },
+      {
+        "name": "Leonardi, Stefano",
+        "given": "Stefano",
+        "family": "Leonardi",
+        "orcid": "0000-0002-4570-2255",
+        "affiliation": "The University of Texas at Dallas Department of Mechanical Engineering"
+      },
+      {
+        "name": "Palma, Pietro De",
+        "given": "Pietro De",
+        "family": "Palma",
+        "affiliation": "Politecnico di Bari Dipartimento di Meccanica Matematica e Management"
+      }
+    ],
+    "publisher": "Wiley",
+    "published_date": "2024-12-28",
+    "license_id": "notspecified",
+    "resource_kind": "publication",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "relation": "IsPreprintOf",
+        "identifier": "10.5194/wes-11-2345-2026",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "crossref_type": "posted-content",
+      "crossref_links": [
+        {
+          "URL": "https://www.authorea.com/doi/pdf/10.22541/au.173542765.58148137/v1",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "crossref_preprint_doi": "10.22541/au.173542765.58148137/v1"
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5194-wes-11-2345-2026"
+}

@@ -1,0 +1,351 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        8
+      ]
+    ],
+    "date-time": "2026-07-08T04:17:09Z",
+    "timestamp": 1783484229722
+  },
+  "publisher": "Copernicus GmbH",
+  "issue": "7",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            7,
+            8
+          ]
+        ],
+        "date-time": "2026-07-08T00:00:00Z",
+        "timestamp": 1783468800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100021856",
+      "name": "Ministero dell'Università e della Ricerca",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "20229YJP33"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "20229YJP33"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100021856",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100021856",
+      "name": "Ministero dell'Università e della Ricerca",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "PE0000021"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "PE0000021"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100021856",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/100031060",
+      "name": "European High Performance Computing Joint Undertaking",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "IsCc6_WINDAERO"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "IsCc6_WINDAERO"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100031060",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/100031060",
+      "name": "European High Performance Computing Joint Undertaking",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "IsCd4_WINSEAv"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "IsCd4_WINSEAv"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100031060",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Wind Energ. Sci."
+  ],
+  "abstract": "<jats:p>Abstract. The aim of this work is to study the aeroelastic response of the IEA 15 MW Reference Wind Turbine (RWT)using a high-fidelity fluid–structure interaction solver that combines large-eddy simulation with a modal computational structural dynamics solver through a two-way coupling. The fluid solver employs the actuator line model to simulate the interaction between the turbine blades and the fluid and the immersed-boundary method to model the presence of the tower and nacelle. The results are compared with those obtained by the OpenFAST software, which is a well-known numerical tool for engineering predictions. A series of simulations have been performed with and without the presence of the tower and nacelle to better understand the effects of these components on flow structures and structural deformations. The largest discrepancies among the solvers have been observed in correspondence with the blade passage in front of the tower, which induces an abrupt alteration in the local incidence angle of the flow. Moreover, by comparing the outcomes of different structural approximations, it has been established that taking into account the torsional degree of freedom affects the deformations, aerodynamic loads, and power coefficient considerably. On the other hand, the non-linearity of the solver appears to have a weak effect on the same quantities.</jats:p>",
+  "DOI": "10.5194/wes-11-2345-2026",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        8
+      ]
+    ],
+    "date-time": "2026-07-08T04:08:41Z",
+    "timestamp": 1783483721000
+  },
+  "page": "2345-2367",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Large-eddy simulation of the IEA 15 MW wind turbine using a two-way coupled fluid–structure interaction model"
+  ],
+  "prefix": "10.5194",
+  "volume": "11",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0009-0002-4310-4136",
+      "authenticated-orcid": false,
+      "given": "Claudio",
+      "family": "Bernardi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Stefania",
+      "family": "Cherubini",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Felice",
+      "family": "Manganelli",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-5516-9338",
+      "authenticated-orcid": false,
+      "given": "Giacomo",
+      "family": "Della Posta",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Stefano",
+      "family": "Leonardi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Pietro",
+      "family": "De Palma",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "3145",
+  "published-online": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        8
+      ]
+    ]
+  },
+  "container-title": [
+    "Wind Energy Science"
+  ],
+  "link": [
+    {
+      "URL": "https://wes.copernicus.org/articles/11/2345/2026/wes-11-2345-2026.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        8
+      ]
+    ],
+    "date-time": "2026-07-08T04:10:22Z",
+    "timestamp": 1783483822000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://wes.copernicus.org/articles/11/2345/2026/"
+    }
+  },
+  "issued": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        8
+      ]
+    ]
+  },
+  "references-count": 60,
+  "URL": "https://doi.org/10.5194/wes-11-2345-2026",
+  "relation": {
+    "has-preprint": [
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120",
+        "asserted-by": "object"
+      }
+    ],
+    "has-review": [
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120-RC1",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120-AC1",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120-RC2",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120-AC2",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120-AC1",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120-AC2",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120-RC2",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-120-RC1",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "ISSN": [
+    "2366-7451"
+  ],
+  "issn-type": [
+    {
+      "type": "electronic",
+      "value": "2366-7451"
+    }
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        8
+      ]
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "fixture_id": "cr-04b-published-version",
+  "fixture_kind": "source_namespace",
+  "case": "The published Wind Energy Science article that cr-04's preprint became",
+  "note": "The other half of the pair. Same identity key as cr-04, reached from the published side — which is the point: two Crossref observations, one record. Note the has-preprint relation names a different preprint (the Copernicus discussion paper), and Crossref asserts it twice.",
+  "raw": "raw/cr-04b-published-version.json",
+  "identity_key": "10.5194/wes-11-2345-2026",
+  "source_system": "crossref",
+  "source_id": "10.5194/wes-11-2345-2026",
+  "source_key": "2026-07-08T04:10:22Z",
+  "source": {
+    "title": "Large-eddy simulation of the IEA 15 MW wind turbine using a two-way coupled fluid–structure interaction model",
+    "notes": "<p>Abstract. The aim of this work is to study the aeroelastic response of the IEA 15 MW Reference Wind Turbine (RWT)using a high-fidelity fluid–structure interaction solver that combines large-eddy simulation with a modal computational structural dynamics solver through a two-way coupling. The fluid solver employs the actuator line model to simulate the interaction between the turbine blades and the fluid and the immersed-boundary method to model the presence of the tower and nacelle. The results are compared with those obtained by the OpenFAST software, which is a well-known numerical tool for engineering predictions. A series of simulations have been performed with and without the presence of the tower and nacelle to better understand the effects of these components on flow structures and structural deformations. The largest discrepancies among the solvers have been observed in correspondence with the blade passage in front of the tower, which induces an abrupt alteration in the local incidence angle of the flow. Moreover, by comparing the outcomes of different structural approximations, it has been established that taking into account the torsional degree of freedom affects the deformations, aerodynamic loads, and power coefficient considerably. On the other hand, the non-linearity of the solver appears to have a weak effect on the same quantities.</p>",
+    "doi": "10.5194/wes-11-2345-2026",
+    "url": "https://doi.org/10.5194/wes-11-2345-2026",
+    "source_urls": [
+      "https://doi.org/10.5194/wes-11-2345-2026",
+      "https://wes.copernicus.org/articles/11/2345/2026/"
+    ],
+    "authors": [
+      {
+        "name": "Bernardi, Claudio",
+        "given": "Claudio",
+        "family": "Bernardi",
+        "orcid": "0009-0002-4310-4136"
+      },
+      {
+        "name": "Cherubini, Stefania",
+        "given": "Stefania",
+        "family": "Cherubini"
+      },
+      {
+        "name": "Manganelli, Felice",
+        "given": "Felice",
+        "family": "Manganelli"
+      },
+      {
+        "name": "Della Posta, Giacomo",
+        "given": "Giacomo",
+        "family": "Della Posta",
+        "orcid": "0000-0001-5516-9338"
+      },
+      {
+        "name": "Leonardi, Stefano",
+        "given": "Stefano",
+        "family": "Leonardi"
+      },
+      {
+        "name": "De Palma, Pietro",
+        "given": "Pietro",
+        "family": "De Palma"
+      }
+    ],
+    "publisher": "Copernicus GmbH",
+    "published_date": "2026-07-08",
+    "license_raw": "https://creativecommons.org/licenses/by/4.0/",
+    "license_id": "cc-by",
+    "resource_kind": "publication",
+    "container": "Wind Energy Science",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "relation": "HasPreprint",
+        "identifier": "10.5194/wes-2025-120",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "HasReview",
+        "identifier": "10.5194/wes-2025-120-rc1",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "HasReview",
+        "identifier": "10.5194/wes-2025-120-ac1",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "HasReview",
+        "identifier": "10.5194/wes-2025-120-rc2",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "HasReview",
+        "identifier": "10.5194/wes-2025-120-ac2",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "crossref_type": "journal-article",
+      "crossref_title_raw": "Large-eddy simulation of the IEA 15 MW wind turbine using a two-way coupled fluid–structure interaction model",
+      "crossref_short_container_title": "Wind Energ. Sci.",
+      "crossref_volume": "11",
+      "crossref_issue": "7",
+      "crossref_page": "2345-2367",
+      "crossref_issn": [
+        "2366-7451"
+      ],
+      "crossref_links": [
+        {
+          "URL": "https://wes.copernicus.org/articles/11/2345/2026/wes-11-2345-2026.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "container": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5194-wes-11-2345-2026"
+}

@@ -1,0 +1,121 @@
+{
+  "fixture_id": "cr-07b-retraction-notice",
+  "fixture_kind": "source_namespace",
+  "case": "A retraction NOTICE — update-to naming a different DOI — which is not itself retracted",
+  "note": "The other half of cr-07, and the trap. This work is the notice, not the retracted article: its update-to names 10.1051/rees/2021056. Flagging the notice as withdrawn would be wrong, so withdrawn stays false and the only trace is an IsRetractionOf relation — the flag belongs on the article it names, which is the reconciler's business. `issued` is [[2022]], year precision.",
+  "raw": "raw/cr-07b-retraction-notice.json",
+  "identity_key": "10.1051/rees/2022008",
+  "source_system": "crossref",
+  "source_id": "10.1051/rees/2022008",
+  "source_key": "2022-05-09T03:53:06Z",
+  "source": {
+    "title": "Retraction Note: Techno-economic analysis and modelling of the feasibility of wind energy in Kuwait",
+    "notes": "<p>The original Article was published on 06 January 2022.</p> <p>The Editors have retracted this article because the authors have used data from a study without permission and without citing the source. The Editors received this information after the publication of the paper.</p> <p>The authors have already responded to the correspondence from the editor/publisher about this retraction and confirm understanding our position.</p>",
+    "doi": "10.1051/rees/2022008",
+    "url": "https://doi.org/10.1051/rees/2022008",
+    "source_urls": [
+      "https://doi.org/10.1051/rees/2022008",
+      "https://www.rees-journal.org/10.1051/rees/2022008"
+    ],
+    "authors": [
+      {
+        "name": "Kaboli, Seyed Amir",
+        "given": "Seyed Amir",
+        "family": "Kaboli",
+        "orcid": "0000-0002-4924-890X"
+      },
+      {
+        "name": "Nazmabadi, Reyhaneh",
+        "given": "Reyhaneh",
+        "family": "Nazmabadi"
+      }
+    ],
+    "publisher": "EDP Sciences",
+    "published_date": "2022",
+    "license_raw": "https://creativecommons.org/licenses/by/4.0",
+    "license_id": "cc-by",
+    "resource_kind": "publication",
+    "container": "Renewable Energy and Environmental Sustainability",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "relation": "IsRetractionOf",
+        "identifier": "10.1051/rees/2021056",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "crossref_type": "journal-article",
+      "crossref_short_container_title": "Renew. Energy Environ. Sustain.",
+      "crossref_volume": "7",
+      "crossref_page": "15",
+      "crossref_issn": [
+        "2493-9439"
+      ],
+      "crossref_links": [
+        {
+          "URL": "https://www.rees-journal.org/10.1051/rees/2022008/pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "crossref_update_to": [
+        {
+          "DOI": "10.1051/rees/2021056",
+          "type": "retraction",
+          "label": "Retraction",
+          "source": "retraction-watch",
+          "updated": {
+            "date-parts": [
+              [
+                2022,
+                5,
+                9
+              ]
+            ],
+            "date-time": "2022-05-09T00:00:00Z",
+            "timestamp": 1652054400000
+          },
+          "record-id": "44239"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "container": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-1051-rees-2022008"
+}

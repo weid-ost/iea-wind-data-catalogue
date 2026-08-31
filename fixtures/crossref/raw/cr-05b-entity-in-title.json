@@ -1,0 +1,268 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        30
+      ]
+    ],
+    "date-time": "2026-06-30T12:35:28Z",
+    "timestamp": 1782822928153
+  },
+  "publisher": "IOP Publishing",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2016,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2016-09-01T00:00:00Z",
+        "timestamp": 1472688000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "http://iopscience.iop.org/info/page/text-and-data-mining"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2016,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2016-09-01T00:00:00Z",
+        "timestamp": 1472688000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/3.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "J. Phys.: Conf. Ser."
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2016,
+        9
+      ]
+    ]
+  },
+  "DOI": "10.1088/1742-6596/753/3/032042",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2016,
+        9,
+        30
+      ]
+    ],
+    "date-time": "2016-09-30T11:16:19Z",
+    "timestamp": 1475234179000
+  },
+  "page": "032042",
+  "is-referenced-by-count": 7,
+  "title": [
+    "Wind power forecasting: IEA Wind Task 36 &amp; future research issues"
+  ],
+  "prefix": "10.1088",
+  "volume": "753",
+  "author": [
+    {
+      "given": "G",
+      "family": "Giebel",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "J",
+      "family": "Cline",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "H",
+      "family": "Frank",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "W",
+      "family": "Shaw",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "P",
+      "family": "Pinson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "B-M",
+      "family": "Hodge",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "G",
+      "family": "Kariniotakis",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "J",
+      "family": "Madsen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "C",
+      "family": "Möhrlen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "266",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        9,
+        30
+      ]
+    ]
+  },
+  "container-title": [
+    "Journal of Physics: Conference Series"
+  ],
+  "link": [
+    {
+      "URL": "http://stacks.iop.org/1742-6596/753/i=3/a=032042/pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://stacks.iop.org/1742-6596/753/i=3/a=032042?key=crossref.78020846cd982ea8397fde3118d4b8e7",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2020,
+        4,
+        11
+      ]
+    ],
+    "date-time": "2020-04-11T07:08:17Z",
+    "timestamp": 1586588897000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/753/3/032042"
+    }
+  },
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        9
+      ]
+    ]
+  },
+  "references-count": 16,
+  "URL": "https://doi.org/10.1088/1742-6596/753/3/032042",
+  "ISSN": [
+    "1742-6588",
+    "1742-6596"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "1742-6588"
+    },
+    {
+      "type": "electronic",
+      "value": "1742-6596"
+    }
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        9
+      ]
+    ]
+  }
+}

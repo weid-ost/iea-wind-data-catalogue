@@ -1,0 +1,260 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        31
+      ]
+    ],
+    "date-time": "2025-12-31T17:03:34Z",
+    "timestamp": 1767200614573
+  },
+  "publisher-location": "Reston, Virginia",
+  "publisher": "American Institute of Aeronautics and Astronautics",
+  "content-domain": {
+    "domain": [
+      "arc.aiaa.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        11
+      ]
+    ]
+  },
+  "DOI": "10.2514/6.2021-1412",
+  "type": "proceedings-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        5
+      ]
+    ],
+    "date-time": "2021-01-05T02:59:38Z",
+    "timestamp": 1609815578000
+  },
+  "update-policy": "https://doi.org/10.2514/aiaa_crossmarkpolicy",
+  "is-referenced-by-count": 2,
+  "title": [
+    "IEA Wind Energy Task 37 - System Engineering - Aerodynamic Optimization Case Study"
+  ],
+  "prefix": "10.2514",
+  "author": [
+    {
+      "given": "Michael K.",
+      "family": "McWilliam",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Technical University of Denmark"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Frederik",
+      "family": "Zahle",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Technical University of Denmark"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Katherine",
+      "family": "Dykes",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Technical University of Denmark"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Pietro",
+      "family": "Bortolotti",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Renewable Energy Laboratory"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Andrew",
+      "family": "Ning",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Brigham Young University"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Evan",
+      "family": "Gaertner",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Renewable Energy Laboratory"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Terence",
+      "family": "Macquart",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Bristol"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Karl",
+      "family": "Merz",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "SINTEF"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Ainara I.",
+      "family": "Ruiz",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Renewable Energy Centre"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "1387",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        4
+      ]
+    ]
+  },
+  "event": {
+    "name": "AIAA Scitech 2021 Forum",
+    "location": "VIRTUAL EVENT"
+  },
+  "container-title": [
+    "AIAA Scitech 2021 Forum"
+  ],
+  "link": [
+    {
+      "URL": "https://arc.aiaa.org/doi/pdf/10.2514/6.2021-1412",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        5,
+        5
+      ]
+    ],
+    "date-time": "2025-05-05T21:17:34Z",
+    "timestamp": 1746479854000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://arc.aiaa.org/doi/10.2514/6.2021-1412"
+    }
+  },
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        4
+      ]
+    ]
+  },
+  "references-count": 14,
+  "alternative-id": [
+    "10.2514/6.2021-1412",
+    "10.2514/MSCITECH21"
+  ],
+  "URL": "https://doi.org/10.2514/6.2021-1412",
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        4
+      ]
+    ]
+  }
+}

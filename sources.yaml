@@ -69,24 +69,42 @@ sources:
     tier: 1
     precedence: 20
     max_records: 5
-    source_key: "deposited — NOT indexed, which churns without content change"
+    source_key: "deposited.date-time — NOT indexed, which churns without content change"
     api: "https://api.crossref.org/works"
     # Land in the polite pool. The project User-Agent already carries the address.
     mailto: "tom@octue.com"
+    # All three ISSNs verified live against api.crossref.org on 2026-08-31.
+    # `journals` is the register the `filter: issn:` queries below draw on; the
+    # adapter reads `queries`, not this list.
     journals:
       - issn: "2366-7451"           # verified: Wind Energy Science, Copernicus GmbH
         title: "Wind Energy Science"
-      - issn: "1095-4244"
+      - issn: "1095-4244"           # verified: Wind Energy, Wiley (fixtures cr-05, cr-07)
         title: "Wind Energy"
-        unverified: true
-      - issn: "1742-6596"
+      - issn: "1742-6596"           # verified: J. Phys. Conf. Ser., IOP (fixture cr-03)
         title: "Journal of Physics: Conference Series"
-        note: "TORQUE / EAWE proceedings live here (fixture cr-03)"
-        unverified: true
+        note: "TORQUE / EAWE / WindEurope proceedings live here (fixture cr-03)"
+    # The queries, decided by Track C and verified live 2026-08-31. Each entry
+    # is passed to https://api.crossref.org/works verbatim, plus `rows`,
+    # `select` and `mailto`.
+    #
+    # NOTE on sorting: `sort=deposited` is deliberately absent. It ranks the
+    # whole 160-million-work corpus by deposit time and, at a five-record cap,
+    # returns unrelated chemistry. Crossref's relevance ranking, checked live,
+    # returns the IEA Wind task literature at the top. The source key is still
+    # `deposited` — sorting and change detection are different questions.
     queries:
-      - '"IEA Wind Task"'
-      - '"IEA Wind TCP"'
-    rows: 25
+      - name: "iea-wind-task-by-title"
+        note: "Works that name an IEA Wind task: task reports, benchmarks, overviews."
+        params:
+          query.title: "IEA Wind Task"
+      - name: "wind-energy-science-iea-wind"
+        note: "The anchor journal, narrowed to IEA-Wind-relevant works."
+        params:
+          filter: "issn:2366-7451"
+          query.bibliographic: "IEA Wind"
+    # Upper bound on rows per query; the adapter asks for min(rows, limit + 5).
+    rows: 20
 
   # -------------------------------------------------------------------------
   zenodo:

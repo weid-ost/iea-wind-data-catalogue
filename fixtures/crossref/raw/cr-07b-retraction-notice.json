@@ -1,0 +1,180 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        31
+      ]
+    ],
+    "date-time": "2025-12-31T04:40:49Z",
+    "timestamp": 1767156049782
+  },
+  "update-to": [
+    {
+      "DOI": "10.1051/rees/2021056",
+      "type": "retraction",
+      "label": "Retraction",
+      "source": "retraction-watch",
+      "updated": {
+        "date-parts": [
+          [
+            2022,
+            5,
+            9
+          ]
+        ],
+        "date-time": "2022-05-09T00:00:00Z",
+        "timestamp": 1652054400000
+      },
+      "record-id": "44239"
+    }
+  ],
+  "publisher": "EDP Sciences",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            5,
+            9
+          ]
+        ],
+        "date-time": "2022-05-09T00:00:00Z",
+        "timestamp": 1652054400000
+      },
+      "content-version": "vor",
+      "delay-in-days": 128,
+      "URL": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Renew. Energy Environ. Sustain."
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "abstract": "<jats:p>The original Article was published on 06 January 2022.</jats:p>\n                  <jats:p>The Editors have retracted this article because the authors have used data from a study without permission and without citing the source. The Editors received this information after the publication of the paper.</jats:p>\n                  <jats:p>The authors have already responded to the correspondence from the editor/publisher about this retraction and confirm understanding our position.</jats:p>",
+  "DOI": "10.1051/rees/2022008",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        5,
+        9
+      ]
+    ],
+    "date-time": "2022-05-09T03:53:06Z",
+    "timestamp": 1652068386000
+  },
+  "page": "15",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Retraction Note: Techno-economic analysis and modelling of the feasibility of wind energy in Kuwait"
+  ],
+  "prefix": "10.1051",
+  "volume": "7",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-4924-890X",
+      "authenticated-orcid": false,
+      "given": "Seyed Amir",
+      "family": "Kaboli",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Reyhaneh",
+      "family": "Nazmabadi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "250",
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        5,
+        9
+      ]
+    ]
+  },
+  "container-title": [
+    "Renewable Energy and Environmental Sustainability"
+  ],
+  "link": [
+    {
+      "URL": "https://www.rees-journal.org/10.1051/rees/2022008/pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2022,
+        5,
+        9
+      ]
+    ],
+    "date-time": "2022-05-09T03:53:06Z",
+    "timestamp": 1652068386000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://www.rees-journal.org/10.1051/rees/2022008"
+    }
+  },
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "references-count": 0,
+  "alternative-id": [
+    "rees220008s"
+  ],
+  "URL": "https://doi.org/10.1051/rees/2022008",
+  "ISSN": [
+    "2493-9439"
+  ],
+  "issn-type": [
+    {
+      "type": "electronic",
+      "value": "2493-9439"
+    }
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  }
+}

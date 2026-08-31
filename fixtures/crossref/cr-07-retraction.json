@@ -1,0 +1,187 @@
+{
+  "fixture_id": "cr-07-retraction",
+  "fixture_kind": "source_namespace",
+  "case": "Retracted Wind Energy article — update-to and updated-by both naming its own DOI",
+  "note": "cr-07. Crossref (via Retraction Watch and the publisher) flags this DOI as retracted against itself, so source.withdrawn is true. ADR-0027: the record is retained, the URL survives, and the site renders the banner from extras.lifecycle_state. The notice is kept verbatim in extra.crossref_update_to / crossref_updated_by, and extra.crossref_retraction carries the parsed flag (type, label, source, retracted_date) for a prominent, specific `Retracted` badge.",
+  "raw": "raw/cr-07-retraction.json",
+  "identity_key": "10.1002/we.2194",
+  "source_system": "crossref",
+  "source_id": "10.1002/we.2194",
+  "source_key": "2023-09-18T09:52:48Z",
+  "source": {
+    "title": "Retracted: Analysis of blade fragment risk at a wind energy facility",
+    "notes": "Abstract <p> The above article, published online on 6 April 2018 in Wiley Online Library ( wileyonlinelibrary.com ), has been retracted by agreement between the authors, the journal Editor in Chief, Prof. Simon Watson and John Wiley and Sons Ltd. The retraction has been agreed due to an error in the conclusion, which used the analysis of NREL's wind site for evaluation of wind turbine setbacks in general. The assumptions and results do not apply to commercial wind energy sites, as the conclusion suggests, and are therefore not suitable for setback recommendations in other locations. </p>",
+    "doi": "10.1002/we.2194",
+    "url": "https://doi.org/10.1002/we.2194",
+    "source_urls": [
+      "https://doi.org/10.1002/we.2194",
+      "https://onlinelibrary.wiley.com/doi/10.1002/we.2194"
+    ],
+    "authors": [
+      {
+        "name": "Larwood, Scott",
+        "given": "Scott",
+        "family": "Larwood",
+        "orcid": "0000-0002-8154-7483",
+        "affiliation": "Department of Mechanical Engineering University of the Pacific Stockton California USA"
+      },
+      {
+        "name": "Simms, David",
+        "given": "David",
+        "family": "Simms",
+        "affiliation": "National Wind Technology Center National Renewable Energy Laboratory Golden Colorado USA"
+      }
+    ],
+    "publisher": "Wiley",
+    "published_date": "2018-04-06",
+    "license_raw": "http://onlinelibrary.wiley.com/termsAndConditions#vor",
+    "license_id": "notspecified",
+    "resource_kind": "publication",
+    "container": "Wind Energy",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [],
+    "iea_task": [],
+    "withdrawn": true,
+    "extra": {
+      "crossref_type": "journal-article",
+      "crossref_short_container_title": "Wind Energy",
+      "crossref_volume": "21",
+      "crossref_issue": "8",
+      "crossref_page": "681-681",
+      "crossref_update_policy": "https://doi.org/10.1002/crossmark_policy",
+      "crossref_issn": [
+        "1095-4244",
+        "1099-1824"
+      ],
+      "crossref_links": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fwe.2194",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/we.2194",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "crossref_update_to": [
+        {
+          "DOI": "10.1002/we.2194",
+          "type": "retraction",
+          "label": "Retraction",
+          "source": "retraction-watch",
+          "updated": {
+            "date-parts": [
+              [
+                2018,
+                7,
+                11
+              ]
+            ],
+            "date-time": "2018-07-11T00:00:00Z",
+            "timestamp": 1531267200000
+          },
+          "record-id": "26500"
+        },
+        {
+          "DOI": "10.1002/we.2194",
+          "type": "erratum",
+          "label": "Erratum",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                6
+              ]
+            ],
+            "date-time": "2018-04-06T00:00:00Z",
+            "timestamp": 1522972800000
+          }
+        }
+      ],
+      "crossref_updated_by": [
+        {
+          "DOI": "10.1002/we.2194",
+          "type": "retraction",
+          "label": "Retraction",
+          "source": "retraction-watch",
+          "updated": {
+            "date-parts": [
+              [
+                2018,
+                7,
+                11
+              ]
+            ],
+            "date-time": "2018-07-11T00:00:00Z",
+            "timestamp": 1531267200000
+          },
+          "record-id": "26500"
+        },
+        {
+          "DOI": "10.1002/we.2194",
+          "type": "erratum",
+          "label": "Erratum",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                6
+              ]
+            ],
+            "date-time": "2018-04-06T00:00:00Z",
+            "timestamp": 1522972800000
+          }
+        }
+      ],
+      "crossref_retraction": {
+        "type": "retraction",
+        "label": "Retraction",
+        "source": "retraction-watch",
+        "retracted_date": "2018-07-11",
+        "doi": "10.1002/we.2194"
+      }
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "container": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    },
+    "withdrawn": {
+      "extraction_method": "pattern"
+    }
+  },
+  "expected_slug": "doi-10-1002-we-2194"
+}

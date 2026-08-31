@@ -1,0 +1,297 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        30
+      ]
+    ],
+    "date-time": "2025-12-30T23:22:03Z",
+    "timestamp": 1767136923227
+  },
+  "update-to": [
+    {
+      "DOI": "10.1002/we.2194",
+      "type": "retraction",
+      "label": "Retraction",
+      "source": "retraction-watch",
+      "updated": {
+        "date-parts": [
+          [
+            2018,
+            7,
+            11
+          ]
+        ],
+        "date-time": "2018-07-11T00:00:00Z",
+        "timestamp": 1531267200000
+      },
+      "record-id": "26500"
+    },
+    {
+      "DOI": "10.1002/we.2194",
+      "type": "erratum",
+      "label": "Erratum",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2018,
+            4,
+            6
+          ]
+        ],
+        "date-time": "2018-04-06T00:00:00Z",
+        "timestamp": 1522972800000
+      }
+    }
+  ],
+  "publisher": "Wiley",
+  "issue": "8",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2018,
+            4,
+            6
+          ]
+        ],
+        "date-time": "2018-04-06T00:00:00Z",
+        "timestamp": 1522972800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "onlinelibrary.wiley.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Wind Energy"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2018,
+        8
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    The above article, published online on 6 April 2018 in Wiley Online Library (\n                    <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"wileyonlinelibrary.com\">wileyonlinelibrary.com</jats:ext-link>\n                    ), has been retracted by agreement between the authors, the journal Editor in Chief, Prof. Simon Watson and John Wiley and Sons Ltd. The retraction has been agreed due to an error in the conclusion, which used the analysis of NREL's wind site for evaluation of wind turbine setbacks in general. The assumptions and results do not apply to commercial wind energy sites, as the conclusion suggests, and are therefore not suitable for setback recommendations in other locations.\n                  </jats:p>",
+  "DOI": "10.1002/we.2194",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        4,
+        6
+      ]
+    ],
+    "date-time": "2018-04-06T18:46:16Z",
+    "timestamp": 1523040376000
+  },
+  "page": "681-681",
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "is-referenced-by-count": 1,
+  "title": [
+    "Retracted: Analysis of blade fragment risk at a wind energy facility"
+  ],
+  "prefix": "10.1002",
+  "volume": "21",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-8154-7483",
+      "authenticated-orcid": false,
+      "given": "Scott",
+      "family": "Larwood",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Mechanical Engineering University of the Pacific  Stockton California USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "David",
+      "family": "Simms",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Wind Technology Center National Renewable Energy Laboratory  Golden Colorado USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2018,
+        4,
+        6
+      ]
+    ]
+  },
+  "updated-by": [
+    {
+      "DOI": "10.1002/we.2194",
+      "type": "retraction",
+      "label": "Retraction",
+      "source": "retraction-watch",
+      "updated": {
+        "date-parts": [
+          [
+            2018,
+            7,
+            11
+          ]
+        ],
+        "date-time": "2018-07-11T00:00:00Z",
+        "timestamp": 1531267200000
+      },
+      "record-id": "26500"
+    },
+    {
+      "DOI": "10.1002/we.2194",
+      "type": "erratum",
+      "label": "Erratum",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2018,
+            4,
+            6
+          ]
+        ],
+        "date-time": "2018-04-06T00:00:00Z",
+        "timestamp": 1522972800000
+      }
+    }
+  ],
+  "container-title": [
+    "Wind Energy"
+  ],
+  "link": [
+    {
+      "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fwe.2194",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/we.2194",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        9,
+        18
+      ]
+    ],
+    "date-time": "2023-09-18T09:52:48Z",
+    "timestamp": 1695030768000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://onlinelibrary.wiley.com/doi/10.1002/we.2194"
+    }
+  },
+  "issued": {
+    "date-parts": [
+      [
+        2018,
+        4,
+        6
+      ]
+    ]
+  },
+  "references-count": 0,
+  "alternative-id": [
+    "10.1002/we.2194"
+  ],
+  "URL": "https://doi.org/10.1002/we.2194",
+  "archive": [
+    "Portico"
+  ],
+  "ISSN": [
+    "1095-4244",
+    "1099-1824"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "1095-4244"
+    },
+    {
+      "type": "electronic",
+      "value": "1099-1824"
+    }
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2018,
+        4,
+        6
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2017-09-11",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2018-02-22",
+      "order": 1,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2018-04-06",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

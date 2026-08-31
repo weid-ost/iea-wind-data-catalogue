@@ -1,0 +1,268 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        4,
+        30
+      ]
+    ],
+    "date-time": "2026-04-30T03:17:28Z",
+    "timestamp": 1777519048728
+  },
+  "publisher": "Copernicus GmbH",
+  "issue": "5",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            15
+          ]
+        ],
+        "date-time": "2024-05-15T00:00:00Z",
+        "timestamp": 1715731200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100013405",
+      "name": "Rijksdienst voor Ondernemend Nederland",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "TEHE119018"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "TEHE119018"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100013405",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Wind Energ. Sci."
+  ],
+  "abstract": "<jats:p>Abstract. This study presents results from a wind tunnel experiment on a three-bladed horizontal axis wind turbine. The model turbine is a scaled-down version of the IEA 15 MW reference wind turbine, preserving the non-dimensional thrust distribution along the blade. Flow fields were captured around the blade at multiple radial locations using particle image velocimetry. In addition to these flow fields, this comprehensive dataset contains spanwise distributions of bound circulation, inflow conditions and blade forces derived from the velocity field. As such, the three blades' aerodynamics are fully characterised. It is demonstrated that the lift coefficient measured along the span agrees well with the lift polar of the airfoil used in the blade design, thereby validating the experimental approach. This research provides a valuable public experimental dataset for validating low- to high-fidelity numerical models simulating state-of-the-art wind turbines. Furthermore, this article establishes the aerodynamic properties of the newly developed model wind turbine, creating a baseline for future wind tunnel experiments using this model.</jats:p>",
+  "DOI": "10.5194/wes-9-1173-2024",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        15
+      ]
+    ],
+    "date-time": "2024-05-15T09:12:27Z",
+    "timestamp": 1715764347000
+  },
+  "page": "1173-1187",
+  "is-referenced-by-count": 5,
+  "title": [
+    "Aerodynamic characterisation of a thrust-scaled  IEA 15 MW wind turbine model: experimental insights using PIV data"
+  ],
+  "prefix": "10.5194",
+  "volume": "9",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0003-1486-3643",
+      "authenticated-orcid": false,
+      "given": "Erik",
+      "family": "Fritz",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "André",
+      "family": "Ribeiro",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Koen",
+      "family": "Boorsma",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-0192-3651",
+      "authenticated-orcid": false,
+      "given": "Carlos",
+      "family": "Ferreira",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "3145",
+  "published-online": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        15
+      ]
+    ]
+  },
+  "container-title": [
+    "Wind Energy Science"
+  ],
+  "link": [
+    {
+      "URL": "https://wes.copernicus.org/articles/9/1173/2024/wes-9-1173-2024.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        22
+      ]
+    ],
+    "date-time": "2025-01-22T13:21:59Z",
+    "timestamp": 1737552119000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://wes.copernicus.org/articles/9/1173/2024/"
+    }
+  },
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        15
+      ]
+    ]
+  },
+  "references-count": 54,
+  "URL": "https://doi.org/10.5194/wes-9-1173-2024",
+  "relation": {
+    "has-preprint": [
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3",
+        "asserted-by": "object"
+      }
+    ],
+    "has-review": [
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3-RC1",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3-AC1",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3-RC2",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3-AC1",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3-AC1",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3-RC2",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3-RC1",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2024-3-AC1",
+        "asserted-by": "object"
+      }
+    ],
+    "is-part-of": [
+      {
+        "id-type": "doi",
+        "id": "10.4121/164890ab-39d7-4af8-8b3c-9e21f789b80a",
+        "asserted-by": "subject"
+      }
+    ]
+  },
+  "ISSN": [
+    "2366-7451"
+  ],
+  "issn-type": [
+    {
+      "type": "electronic",
+      "value": "2366-7451"
+    }
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        15
+      ]
+    ]
+  }
+}

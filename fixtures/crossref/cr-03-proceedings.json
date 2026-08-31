@@ -1,0 +1,155 @@
+{
+  "fixture_id": "cr-03-proceedings",
+  "fixture_kind": "source_namespace",
+  "case": "Conference paper in Journal of Physics: Conference Series — series as container, volume/issue retained",
+  "note": "cr-03. NOTE a live-verified discrepancy with fixtures-catalogue.md: Crossref types JPCS papers as `journal-article`, not `proceedings-article` (verified 2026-08-31). The behaviour the catalogue asks for is unaffected: the container is the series title, and volume 1618 / issue 4 / page 042029 are retained — in source.extra, because the record format has no first-class field for them. See cr-03b for a genuine `proceedings-article`. Note also extra.iea_task_candidates: the title names Task 32 and Task 37 and the abstract names both again, but these stay CANDIDATES — Crossref does not state task membership, and a pure map() cannot check a task number against groups.yaml.",
+  "raw": "raw/cr-03-proceedings.json",
+  "identity_key": "10.1088/1742-6596/1618/4/042029",
+  "source_system": "crossref",
+  "source_id": "10.1088/1742-6596/1618/4/042029",
+  "source_key": "2022-02-02T04:26:19Z",
+  "source": {
+    "title": "IEA Wind Task 32 and Task 37: Optimizing Wind Turbines with Lidar-Assisted Control Using Systems Engineering",
+    "notes": "Abstract <p>Lidar-assisted control is a promising technology for reducing the levelized cost of energy from wind turbines, but quantifying its impact at the overall system level requires sophisticated systems engineering analysis and optimization frameworks. The joint workshop on Optimizing Wind Turbines with Lidar-Assisted Control Using Systems Engineering was held by the International Energy Agency Wind Task 32 (Lidar) and Task 37 (Systems Engineering) in October 2019 to address this challenge. This paper summarizes the outcome of the workshop and presents a road map for further research. The most promising applications of lidar-assisted control identified at the workshop and discussed here include 1) increasing annual energy production, 2) decreasing capital expenditure costs by reducing design loads, 3) extending turbine lifetime by reducing operating loads, and 4) enabling wind turbine class upgrades. For each application, we review the state of the art and highlight remaining research needs. Finally, we discuss strategies for addressing these research needs by conducting high-fidelity systems engineering optimizations.</p>",
+    "doi": "10.1088/1742-6596/1618/4/042029",
+    "url": "https://doi.org/10.1088/1742-6596/1618/4/042029",
+    "source_urls": [
+      "https://doi.org/10.1088/1742-6596/1618/4/042029",
+      "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029"
+    ],
+    "authors": [
+      {
+        "name": "Simley, Eric",
+        "given": "Eric",
+        "family": "Simley"
+      },
+      {
+        "name": "Bortolotti, Pietro",
+        "given": "Pietro",
+        "family": "Bortolotti"
+      },
+      {
+        "name": "Scholbrock, Andrew",
+        "given": "Andrew",
+        "family": "Scholbrock"
+      },
+      {
+        "name": "Schlipf, David",
+        "given": "David",
+        "family": "Schlipf"
+      },
+      {
+        "name": "Dykes, Katherine",
+        "given": "Katherine",
+        "family": "Dykes"
+      }
+    ],
+    "publisher": "IOP Publishing",
+    "published_date": "2020-09-01",
+    "license_raw": "http://creativecommons.org/licenses/by/3.0/",
+    "license_id": "cc-by",
+    "resource_kind": "publication",
+    "container": "Journal of Physics: Conference Series",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "crossref_type": "journal-article",
+      "crossref_short_container_title": "J. Phys.: Conf. Ser.",
+      "crossref_volume": "1618",
+      "crossref_issue": "4",
+      "crossref_page": "042029",
+      "crossref_update_policy": "https://doi.org/10.1088/crossmark-policy",
+      "crossref_issn": [
+        "1742-6588",
+        "1742-6596"
+      ],
+      "crossref_links": [
+        {
+          "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029/pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029/pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029/pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029/pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        },
+        {
+          "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        },
+        {
+          "URL": "https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029/pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "iea_task_candidates": [
+        "task-32",
+        "task-37"
+      ]
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "container": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-1088-1742-6596-1618-4-042029"
+}

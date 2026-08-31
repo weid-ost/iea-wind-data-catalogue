@@ -1,0 +1,306 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        17
+      ]
+    ],
+    "date-time": "2026-08-17T14:55:34Z",
+    "timestamp": 1786978534151
+  },
+  "publisher": "Wiley",
+  "issue": "5",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2014,
+            4,
+            14
+          ]
+        ],
+        "date-time": "2014-04-14T00:00:00Z",
+        "timestamp": 1397433600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100007398",
+      "name": "Danish Council for Strategic Research",
+      "doi-asserted-by": "crossref",
+      "award": [
+        "09-067216"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "09-067216"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100007398",
+          "id-type": "DOI",
+          "asserted-by": "crossref"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Wind Energy"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2015,
+        5
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    An improved\n                    <jats:italic>k</jats:italic>\n                    ‐\n                    <jats:italic>ϵ</jats:italic>\n                    turbulence model is developed and applied to a single wind turbine wake in a neutral atmospheric boundary layer using a Reynolds averaged Navier–Stokes solver. The proposed model includes a flow‐dependent\n                    <jats:italic>C</jats:italic>\n                    <jats:sub>\n                      <jats:italic>μ</jats:italic>\n                    </jats:sub>\n                    that is sensitive to high velocity gradients, e.g., at the edge of a wind turbine wake. The modified\n                    <jats:italic>k</jats:italic>\n                    ‐\n                    <jats:italic>ϵ</jats:italic>\n                    model is compared with the original\n                    <jats:italic>k</jats:italic>\n                    ‐\n                    <jats:italic>ϵ</jats:italic>\n                    eddy viscosity model, Large‐Eddy Simulations and field measurements using eight test cases. The comparison shows that the velocity wake deficits, predicted by the proposed model are much closer to the ones calculated by the Large‐Eddy Simulation and those observed in the measurements, than predicted by the original\n                    <jats:italic>k</jats:italic>\n                    ‐\n                    <jats:italic>ϵ</jats:italic>\n                    model. Copyright © 2014 John Wiley &amp; Sons, Ltd.\n                  </jats:p>",
+  "DOI": "10.1002/we.1736",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2014,
+        4,
+        14
+      ]
+    ],
+    "date-time": "2014-04-14T23:48:45Z",
+    "timestamp": 1397519325000
+  },
+  "page": "889-907",
+  "is-referenced-by-count": 155,
+  "title": [
+    "An improved\n                    <i>k</i>\n                    ‐\n                    <b>\n                      <i>ϵ</i>\n                    </b>\n                    model applied to a wind turbine wake in atmospheric turbulence"
+  ],
+  "prefix": "10.1002",
+  "volume": "18",
+  "author": [
+    {
+      "given": "M. Paul",
+      "family": "van der Laan",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Wind Energy Technical University of Denmark  Risø campus, DK‐4000 Roskilde Denmark"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Niels N.",
+      "family": "Sørensen",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Wind Energy Technical University of Denmark  Risø campus, DK‐4000 Roskilde Denmark"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Pierre‐Elouan",
+      "family": "Réthoré",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Wind Energy Technical University of Denmark  Risø campus, DK‐4000 Roskilde Denmark"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jakob",
+      "family": "Mann",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Wind Energy Technical University of Denmark  Risø campus, DK‐4000 Roskilde Denmark"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Mark C.",
+      "family": "Kelly",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Wind Energy Technical University of Denmark  Risø campus, DK‐4000 Roskilde Denmark"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Niels",
+      "family": "Troldborg",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Wind Energy Technical University of Denmark  Risø campus, DK‐4000 Roskilde Denmark"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "J. Gerard",
+      "family": "Schepers",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Energy Research Centre of the Netherlands (ECN) Wind Energy  Petten, 1755ZG The Netherlands"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ewan",
+      "family": "Machefaux",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Wind Energy Technical University of Denmark  Risø campus, DK‐4000 Roskilde Denmark"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2014,
+        4,
+        14
+      ]
+    ]
+  },
+  "container-title": [
+    "Wind Energy"
+  ],
+  "link": [
+    {
+      "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fwe.1736",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/we.1736",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        10,
+        5
+      ]
+    ],
+    "date-time": "2023-10-05T06:14:02Z",
+    "timestamp": 1696486442000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://onlinelibrary.wiley.com/doi/10.1002/we.1736"
+    }
+  },
+  "issued": {
+    "date-parts": [
+      [
+        2014,
+        4,
+        14
+      ]
+    ]
+  },
+  "references-count": 42,
+  "alternative-id": [
+    "10.1002/we.1736"
+  ],
+  "URL": "https://doi.org/10.1002/we.1736",
+  "archive": [
+    "Portico"
+  ],
+  "ISSN": [
+    "1095-4244",
+    "1099-1824"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "1095-4244"
+    },
+    {
+      "type": "electronic",
+      "value": "1099-1824"
+    }
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2014,
+        4,
+        14
+      ]
+    ]
+  }
+}

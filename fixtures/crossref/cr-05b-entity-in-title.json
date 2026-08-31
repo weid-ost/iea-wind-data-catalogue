@@ -1,0 +1,133 @@
+{
+  "fixture_id": "cr-05b-entity-in-title",
+  "fixture_kind": "source_namespace",
+  "case": "Title containing the entity &amp;, plus a year-and-month `issued` date",
+  "note": "The escaping half of cr-05. `IEA Wind Task 36 &amp; future research issues` decodes exactly once, to a literal ampersand: correct in JSON-LD, and re-escaped to &amp; by any HTML renderer. Double-decoding, or leaving it decoded twice, is the classic bug. `issued` is [[2016, 9]], so published_date is `2016-09` — month precision, no fabricated day.",
+  "raw": "raw/cr-05b-entity-in-title.json",
+  "identity_key": "10.1088/1742-6596/753/3/032042",
+  "source_system": "crossref",
+  "source_id": "10.1088/1742-6596/753/3/032042",
+  "source_key": "2020-04-11T07:08:17Z",
+  "source": {
+    "title": "Wind power forecasting: IEA Wind Task 36 & future research issues",
+    "doi": "10.1088/1742-6596/753/3/032042",
+    "url": "https://doi.org/10.1088/1742-6596/753/3/032042",
+    "source_urls": [
+      "https://doi.org/10.1088/1742-6596/753/3/032042",
+      "https://iopscience.iop.org/article/10.1088/1742-6596/753/3/032042"
+    ],
+    "authors": [
+      {
+        "name": "Giebel, G",
+        "given": "G",
+        "family": "Giebel"
+      },
+      {
+        "name": "Cline, J",
+        "given": "J",
+        "family": "Cline"
+      },
+      {
+        "name": "Frank, H",
+        "given": "H",
+        "family": "Frank"
+      },
+      {
+        "name": "Shaw, W",
+        "given": "W",
+        "family": "Shaw"
+      },
+      {
+        "name": "Pinson, P",
+        "given": "P",
+        "family": "Pinson"
+      },
+      {
+        "name": "Hodge, B-M",
+        "given": "B-M",
+        "family": "Hodge"
+      },
+      {
+        "name": "Kariniotakis, G",
+        "given": "G",
+        "family": "Kariniotakis"
+      },
+      {
+        "name": "Madsen, J",
+        "given": "J",
+        "family": "Madsen"
+      },
+      {
+        "name": "Möhrlen, C",
+        "given": "C",
+        "family": "Möhrlen"
+      }
+    ],
+    "publisher": "IOP Publishing",
+    "published_date": "2016-09",
+    "license_raw": "http://creativecommons.org/licenses/by/3.0/",
+    "license_id": "cc-by",
+    "resource_kind": "publication",
+    "container": "Journal of Physics: Conference Series",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "crossref_type": "journal-article",
+      "crossref_title_raw": "Wind power forecasting: IEA Wind Task 36 &amp; future research issues",
+      "crossref_short_container_title": "J. Phys.: Conf. Ser.",
+      "crossref_volume": "753",
+      "crossref_page": "032042",
+      "crossref_issn": [
+        "1742-6588",
+        "1742-6596"
+      ],
+      "crossref_links": [
+        {
+          "URL": "http://stacks.iop.org/1742-6596/753/i=3/a=032042/pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://stacks.iop.org/1742-6596/753/i=3/a=032042?key=crossref.78020846cd982ea8397fde3118d4b8e7",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        }
+      ],
+      "iea_task_candidates": [
+        "task-36"
+      ]
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "container": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-1088-1742-6596-753-3-032042"
+}

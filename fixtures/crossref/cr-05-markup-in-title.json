@@ -1,0 +1,139 @@
+{
+  "fixture_id": "cr-05-markup-in-title",
+  "fixture_kind": "source_namespace",
+  "case": "Title carrying JATS <i>/<b> markup, a Unicode hyphen and deposit whitespace",
+  "note": "cr-05. `An improved <i>k</i>-<b><i>e</i></b> model ...`, deposited with newlines and 20 spaces of indentation. source.title is plain text with the markup removed and whitespace collapsed, so it is correct in JSON-LD, in <title> and in the search index; extra.crossref_title_html keeps the sanitised marked-up form for a renderer that wants the italics, and extra.crossref_title_raw keeps the deposit byte-for-byte. Nothing is stripped blindly and nothing is lost. The Wiley terms-and-conditions URL is not a licence this register knows, so license_mapped is false.",
+  "raw": "raw/cr-05-markup-in-title.json",
+  "identity_key": "10.1002/we.1736",
+  "source_system": "crossref",
+  "source_id": "10.1002/we.1736",
+  "source_key": "2023-10-05T06:14:02Z",
+  "source": {
+    "title": "An improved k ‐ ϵ model applied to a wind turbine wake in atmospheric turbulence",
+    "notes": "Abstract <p> An improved k ‐ ϵ turbulence model is developed and applied to a single wind turbine wake in a neutral atmospheric boundary layer using a Reynolds averaged Navier–Stokes solver. The proposed model includes a flow‐dependent C <sub> μ </sub> that is sensitive to high velocity gradients, e.g., at the edge of a wind turbine wake. The modified k ‐ ϵ model is compared with the original k ‐ ϵ eddy viscosity model, Large‐Eddy Simulations and field measurements using eight test cases. The comparison shows that the velocity wake deficits, predicted by the proposed model are much closer to the ones calculated by the Large‐Eddy Simulation and those observed in the measurements, than predicted by the original k ‐ ϵ model. Copyright © 2014 John Wiley &amp; Sons, Ltd. </p>",
+    "doi": "10.1002/we.1736",
+    "url": "https://doi.org/10.1002/we.1736",
+    "source_urls": [
+      "https://doi.org/10.1002/we.1736",
+      "https://onlinelibrary.wiley.com/doi/10.1002/we.1736"
+    ],
+    "authors": [
+      {
+        "name": "van der Laan, M. Paul",
+        "given": "M. Paul",
+        "family": "van der Laan",
+        "affiliation": "Department of Wind Energy Technical University of Denmark Risø campus, DK‐4000 Roskilde Denmark"
+      },
+      {
+        "name": "Sørensen, Niels N.",
+        "given": "Niels N.",
+        "family": "Sørensen",
+        "affiliation": "Department of Wind Energy Technical University of Denmark Risø campus, DK‐4000 Roskilde Denmark"
+      },
+      {
+        "name": "Réthoré, Pierre‐Elouan",
+        "given": "Pierre‐Elouan",
+        "family": "Réthoré",
+        "affiliation": "Department of Wind Energy Technical University of Denmark Risø campus, DK‐4000 Roskilde Denmark"
+      },
+      {
+        "name": "Mann, Jakob",
+        "given": "Jakob",
+        "family": "Mann",
+        "affiliation": "Department of Wind Energy Technical University of Denmark Risø campus, DK‐4000 Roskilde Denmark"
+      },
+      {
+        "name": "Kelly, Mark C.",
+        "given": "Mark C.",
+        "family": "Kelly",
+        "affiliation": "Department of Wind Energy Technical University of Denmark Risø campus, DK‐4000 Roskilde Denmark"
+      },
+      {
+        "name": "Troldborg, Niels",
+        "given": "Niels",
+        "family": "Troldborg",
+        "affiliation": "Department of Wind Energy Technical University of Denmark Risø campus, DK‐4000 Roskilde Denmark"
+      },
+      {
+        "name": "Schepers, J. Gerard",
+        "given": "J. Gerard",
+        "family": "Schepers",
+        "affiliation": "Energy Research Centre of the Netherlands (ECN) Wind Energy Petten, 1755ZG The Netherlands"
+      },
+      {
+        "name": "Machefaux, Ewan",
+        "given": "Ewan",
+        "family": "Machefaux",
+        "affiliation": "Department of Wind Energy Technical University of Denmark Risø campus, DK‐4000 Roskilde Denmark"
+      }
+    ],
+    "publisher": "Wiley",
+    "published_date": "2014-04-14",
+    "license_raw": "http://onlinelibrary.wiley.com/termsAndConditions#vor",
+    "license_id": "notspecified",
+    "resource_kind": "publication",
+    "container": "Wind Energy",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "crossref_type": "journal-article",
+      "crossref_title_raw": "An improved\n                    <i>k</i>\n                    ‐\n                    <b>\n                      <i>ϵ</i>\n                    </b>\n                    model applied to a wind turbine wake in atmospheric turbulence",
+      "crossref_title_html": "An improved <i>k</i> ‐ <b> <i>ϵ</i> </b> model applied to a wind turbine wake in atmospheric turbulence",
+      "crossref_short_container_title": "Wind Energy",
+      "crossref_volume": "18",
+      "crossref_issue": "5",
+      "crossref_page": "889-907",
+      "crossref_issn": [
+        "1095-4244",
+        "1099-1824"
+      ],
+      "crossref_links": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fwe.1736",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/we.1736",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "container": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-1002-we-1736"
+}

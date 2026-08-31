@@ -1,0 +1,129 @@
+{
+  "fixture_id": "cr-03b-proceedings-article",
+  "fixture_kind": "source_namespace",
+  "case": "A genuine `type: proceedings-article` — AIAA Scitech 2021, container plus `event`",
+  "note": "The companion to cr-03. Container comes from container-title; the `event` block (name, location) is retained verbatim in extra. No licence is deposited at all: license_id is `notspecified` with mapped=true, because nothing went wrong — Crossref simply carries no licence for this work.",
+  "raw": "raw/cr-03b-proceedings-article.json",
+  "identity_key": "10.2514/6.2021-1412",
+  "source_system": "crossref",
+  "source_id": "10.2514/6.2021-1412",
+  "source_key": "2025-05-05T21:17:34Z",
+  "source": {
+    "title": "IEA Wind Energy Task 37 - System Engineering - Aerodynamic Optimization Case Study",
+    "doi": "10.2514/6.2021-1412",
+    "url": "https://doi.org/10.2514/6.2021-1412",
+    "source_urls": [
+      "https://doi.org/10.2514/6.2021-1412",
+      "https://arc.aiaa.org/doi/10.2514/6.2021-1412"
+    ],
+    "authors": [
+      {
+        "name": "McWilliam, Michael K.",
+        "given": "Michael K.",
+        "family": "McWilliam",
+        "affiliation": "Technical University of Denmark"
+      },
+      {
+        "name": "Zahle, Frederik",
+        "given": "Frederik",
+        "family": "Zahle",
+        "affiliation": "Technical University of Denmark"
+      },
+      {
+        "name": "Dykes, Katherine",
+        "given": "Katherine",
+        "family": "Dykes",
+        "affiliation": "Technical University of Denmark"
+      },
+      {
+        "name": "Bortolotti, Pietro",
+        "given": "Pietro",
+        "family": "Bortolotti",
+        "affiliation": "National Renewable Energy Laboratory"
+      },
+      {
+        "name": "Ning, Andrew",
+        "given": "Andrew",
+        "family": "Ning",
+        "affiliation": "Brigham Young University"
+      },
+      {
+        "name": "Gaertner, Evan",
+        "given": "Evan",
+        "family": "Gaertner",
+        "affiliation": "National Renewable Energy Laboratory"
+      },
+      {
+        "name": "Macquart, Terence",
+        "given": "Terence",
+        "family": "Macquart",
+        "affiliation": "University of Bristol"
+      },
+      {
+        "name": "Merz, Karl",
+        "given": "Karl",
+        "family": "Merz",
+        "affiliation": "SINTEF"
+      },
+      {
+        "name": "Ruiz, Ainara I.",
+        "given": "Ainara I.",
+        "family": "Ruiz",
+        "affiliation": "National Renewable Energy Centre"
+      }
+    ],
+    "publisher": "American Institute of Aeronautics and Astronautics",
+    "published_date": "2021-01-04",
+    "license_id": "notspecified",
+    "resource_kind": "publication",
+    "container": "AIAA Scitech 2021 Forum",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "crossref_type": "proceedings-article",
+      "crossref_update_policy": "https://doi.org/10.2514/aiaa_crossmarkpolicy",
+      "crossref_event": {
+        "name": "AIAA Scitech 2021 Forum",
+        "location": "VIRTUAL EVENT"
+      },
+      "crossref_links": [
+        {
+          "URL": "https://arc.aiaa.org/doi/pdf/10.2514/6.2021-1412",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "authors": {
+      "extraction_method": "api"
+    },
+    "container": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "title": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-2514-6-2021-1412"
+}

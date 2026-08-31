@@ -1,0 +1,256 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        28
+      ]
+    ],
+    "date-time": "2026-08-28T22:21:47Z",
+    "timestamp": 1787955707174
+  },
+  "publisher": "Office of Scientific and Technical Information (OSTI)",
+  "funder": [
+    {
+      "name": "USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office"
+    },
+    {
+      "name": "DOE",
+      "award": [
+        "AC36-08GO28308"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "AC36-08GO28308"
+          ]
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        29
+      ]
+    ]
+  },
+  "DOI": "10.2172/2333634",
+  "type": "report",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        4,
+        6
+      ]
+    ],
+    "date-time": "2024-04-06T22:05:10Z",
+    "timestamp": 1712441110000
+  },
+  "is-referenced-by-count": 8,
+  "title": [
+    "IEA Wind TCP Task 55: The IEA Wind 740-10-MW Reference Offshore Wind Plants"
+  ],
+  "prefix": "10.2172",
+  "author": [
+    {
+      "name": "National Renewable Energy Laboratory (NREL), Golden, CO (United States)",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Samuel",
+      "family": "Kainz",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Technische Univ., Munich (Germany)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "name": "USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Julian",
+      "family": "Quick",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Technical Univ. of Denmark, Lyngby (Denmark)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Mauricio",
+      "family": "Souza de Alencar",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Technical Univ. of Denmark, Lyngby (Denmark)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sebastian",
+      "family": "Sanchez Perez Moreno",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Delft Univ. of Technology (Netherlands)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Katherine",
+      "family": "Dykes",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Technical Univ. of Denmark, Lyngby (Denmark)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2658-5559",
+      "authenticated-orcid": false,
+      "given": "Christopher",
+      "family": "Bay",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Michiel",
+      "family": "Zaaijer",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Delft Univ. of Technology (Netherlands)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-8515-9488",
+      "authenticated-orcid": false,
+      "given": "Pietro",
+      "family": "Bortolotti",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "960",
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        21
+      ]
+    ],
+    "date-time": "2026-08-21T18:52:31Z",
+    "timestamp": 1787338351000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://www.osti.gov/biblio/2333634"
+    }
+  },
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        29
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.2172/2333634",
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        29
+      ]
+    ]
+  }
+}
