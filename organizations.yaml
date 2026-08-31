@@ -51,12 +51,15 @@ organizations:
     aliases: ["Sandia", "Sandia National Laboratories, Albuquerque"]
 
   - name: ost
-    title: Ocean Science and Technology
+    title: OST — Ostschweizer Fachhochschule (Eastern Switzerland University of Applied Sciences)
     description: >-
-      Prospective host and operator of this catalogue. Present so that
+      The author's organisation, initial owner of this repository, and
+      prospective host and operator of the catalogue. Present so that
       curator-authored records and annotations have an owner.
-    country: GB
-    aliases: ["OST"]
+      "OST" is expanded ONLY as Ostschweizer Fachhochschule — never as anything
+      else, however plausible the acronym looks in a wind-energy context.
+    country: CH
+    aliases: ["OST", "Ostschweizer Fachhochschule", "Eastern Switzerland University of Applied Sciences", "OST - Ostschweizer Fachhochschule"]
 
   - name: fraunhofer-iwes
     title: Fraunhofer Institute for Wind Energy Systems (IWES)

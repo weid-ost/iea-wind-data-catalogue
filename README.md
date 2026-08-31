@@ -1,28 +1,90 @@
-# IEA Wind Data Catalogue — Planning Package
+# IEA Wind Data Catalogue
 
-Everything produced in the planning conversation of 2026-08-31, packaged to seed the repository. Start Claude (Code) on this with `CLAUDE.md`, which binds the invariants and points at the authoritative documents.
+A static, self-maintaining catalogue of IEA Wind datasets, publications and
+software. Nobody who has already published a fully-described dataset to Zenodo
+will log into a second system to describe it again — so this catalogue asks
+nothing of anyone. It watches the places where IEA Wind people already publish
+and reflects what it finds. A scheduled job harvests the sources, records what
+it sees as an append-only event log, materialises that log into CKAN-shaped JSON
+records, validates them against what CKAN's API would accept, and renders them
+as a static site with a build-time search index. GitHub Actions + GitHub Pages,
+no servers, no databases, no billing account, ≈ $0/month.
 
-## Contents
+## Status
 
-| Path | What it is |
+**Prototype.** The foundation — the `harvest` package, the event log, the
+materialiser, the CKAN-compat gate, the source/organisation/task registers — is
+built and tested. The seven source adapters, the Tier-3 extraction layer, the
+Astro site and the CI workflows are in progress.
+
+**There is a deliberate five-record cap per source.** `harvest.DEFAULT_LIMIT`
+is 5 and `sources.yaml` sets `max_records: 5` everywhere, so a stray run cannot
+hammer an upstream API or commit a catalogue nobody has looked at. Raise it
+consciously, per run: `make harvest LIMIT=50`.
+
+## Quickstart
+
+Requires [`uv`](https://docs.astral.sh/uv/) — it fetches the pinned CPython, so
+you do not need Python 3.12 installed.
+
+```sh
+make sync        # install the pinned environment (uv sync --frozen --dev)
+make test        # 320 passed, 3 skipped
+make harvest     # harvest every enabled source (LIMIT=5) → events → records → validate → report
+make materialize # replay events/ into records/ (records/ is derived; delete it freely)
+make validate    # the CKAN-compat gate
+make site        # build the static site + Pagefind index   [not yet implemented]
+make             # list every command
+```
+
+The underlying CLI is `uv run python -m harvest {run,materialize,validate,extract,report,sources}`.
+
+## Repo layout
+
+| Path | What |
 |---|---|
-| `CLAUDE.md` | Repo seed for Claude — invariants, conventions, reading order |
-| `plans/02-static-plan.md` | **Authoritative architecture**: static site, GitHub-only, event log, no-update annotation model, ADR register 0020–0039, decisions log |
-| `plans/01-ckan-plan.md` | The original CKAN/GCP plan — retained as the documented *promotion path*, not the current design |
-| `design/design-system.md` | Design system spec: Teresa's Green anchor, accent-bar model, typography, ARIA requirements, a11y gate |
-| `design/design-tokens.json` | W3C DTCG tokens (rev 2 — neutral surfaces, panel/badge components) |
-| `design/gen.py` + `design/palette.json` | The colour derivation + WCAG verification script and its output — rerun after any palette change |
-| `fixtures/fixtures-catalogue.md` | Canonical + edge-case fixtures per source, cross-cutting, and rendering-only sets |
-| `transcript/conversation-record.md` | Every user prompt verbatim + faithful per-turn account of responses and artifacts |
+| `sources.yaml` | the source register — the only configuration that matters |
+| `organizations.yaml` / `groups.yaml` | CKAN-shaped institutions and IEA Wind Tasks; canonical data, not config |
+| `schema/ckan-scheming.json` | the written definition of the custom fields; CKAN needs it on promotion day |
+| `harvest/` | adapters, event log, materialiser, CKAN gate. **Read `harvest/CONTRACT.md` first** |
+| `events/` | **the source of truth.** Append-only JSONL, one file per identity |
+| `records/` | derived CKAN package dicts. Regenerable — `make materialize` rebuilds them byte-for-byte |
+| `annotations/` | the human-readable record of curatorial intent |
+| `cache/` | committed LLM extraction cache, content-hash keyed |
+| `state/last-run.json` | the run report, and the cron heartbeat — written on every run |
+| `site/` | the Astro renderer and Pagefind index build |
+| `design/` | DTCG design tokens, the palette derivation script, the design system |
+| `fixtures/` | test and gallery fixtures; `fixtures-catalogue.md` is the specification |
+| `docs/` | the documentation vault — ADRs, runbooks, architecture |
+| `plans/` | the two plan documents |
 
-## Reading order for a newcomer
+## Documentation
 
-1. `plans/02-static-plan.md` §1–§2 (the premise), then §4 (the data model — source keys, no-update, event log).
-2. `CLAUDE.md` (the rules distilled).
-3. `fixtures/fixtures-catalogue.md` (what correct behaviour looks like at the edges).
-4. `design/design-system.md` (how it should look and the a11y gate).
-5. `transcript/conversation-record.md` when you want to know *why*.
+Start at **[`docs/index.md`](docs/index.md)** — the vault map.
 
-## Provenance note
+- [`docs/architecture.md`](docs/architecture.md) — the system end to end, and the binding invariants
+- [`docs/record-format.md`](docs/record-format.md) — the record and event schemas
+- [`docs/adrs/`](docs/adrs/) — twenty ADRs, 0020–0039. Do not relitigate one without saying so
+- [`docs/runbooks/`](docs/runbooks/) — thirteen procedures with exact commands
 
-The transcript preserves user prompts verbatim; Claude's responses are recorded faithfully but not byte-for-byte (the sandbox had no transcript export). All decisions those responses produced are fully captured in the plans, ADRs and design documents — for a verbatim chat log, use claude.ai's built-in conversation export (Settings → Privacy → Export data, or share the chat).
+Underneath the vault:
+
+- [`plans/02-static-plan.md`](plans/02-static-plan.md) — the authoritative architecture, with the ADR register (§8) and decisions log (§9)
+- [`plans/01-ckan-plan.md`](plans/01-ckan-plan.md) — the original CKAN/GCP plan, retained as the documented *promotion path*, not the current design
+- [`harvest/CONTRACT.md`](harvest/CONTRACT.md) — the interface document the code is written against
+- [`design/design-system.md`](design/design-system.md) — the visual system and the accessibility gate
+- [`transcript/conversation-record.md`](transcript/conversation-record.md) — why everything is the way it is
+
+## Two things to know before changing anything
+
+1. **`events/` is the truth; `records/` is derived.** Never edit a record file —
+   append an event and re-materialise. See
+   [`docs/runbooks/correct-a-record.md`](docs/runbooks/correct-a-record.md).
+2. **Source metadata is never edited, only annotated.** The catalogue reports
+   what a source says, verbatim; local additions live in a separate namespace.
+   See [ADR-0038](docs/adrs/adr-0038-source-metadata-is-never-updated-only-annotated.md).
+
+## Licence
+
+MIT for the code. Harvested metadata belongs to its sources; the catalogue holds
+metadata and links only and never mirrors a file.
