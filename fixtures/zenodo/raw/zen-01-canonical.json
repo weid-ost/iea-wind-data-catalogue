@@ -1,0 +1,66 @@
+{
+  "conceptdoi": "10.5281/zenodo.1234566",
+  "conceptrecid": "1234566",
+  "created": "2024-06-01T09:12:41.113372+00:00",
+  "doi": "10.5281/zenodo.1234567",
+  "doi_url": "https://doi.org/10.5281/zenodo.1234567",
+  "files": [
+    {
+      "checksum": "md5:0d2b0f0f6a4a1f1c3f7b9a1d6e4c5b2a",
+      "key": "osterild-lidar-2021.csv",
+      "links": {
+        "self": "https://zenodo.org/api/records/1234567/files/osterild-lidar-2021.csv/content"
+      },
+      "size": 48211992,
+      "type": "csv"
+    }
+  ],
+  "id": 1234567,
+  "links": {
+    "doi": "https://doi.org/10.5281/zenodo.1234567",
+    "self": "https://zenodo.org/api/records/1234567",
+    "self_html": "https://zenodo.org/records/1234567"
+  },
+  "metadata": {
+    "access_right": "open",
+    "communities": [
+      { "id": "iea_wind_task_43" }
+    ],
+    "creators": [
+      {
+        "affiliation": "Technical University of Denmark",
+        "name": "Müller, Søren Ø.",
+        "orcid": "0000-0002-1825-0097"
+      },
+      {
+        "affiliation": "National Renewable Energy Laboratory",
+        "name": "Okafor, Chidi",
+        "orcid": "0000-0001-5109-3700"
+      }
+    ],
+    "description": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021. Includes horizontal wind speed, direction and turbulence intensity at eleven measurement heights.</p>",
+    "doi": "10.5281/zenodo.1234567",
+    "keywords": ["lidar", "wind energy", "Østerild", "remote sensing"],
+    "license": { "id": "cc-by-4.0" },
+    "publication_date": "2024-06-01",
+    "relations": {
+      "version": [
+        {
+          "count": 3,
+          "index": 2,
+          "is_last": true,
+          "last_child": { "pid_type": "recid", "pid_value": "1234567" },
+          "parent": { "pid_type": "recid", "pid_value": "1234566" }
+        }
+      ]
+    },
+    "resource_type": { "title": "Dataset", "type": "dataset" },
+    "title": "Lidar measurements from the Østerild campaign, 2021",
+    "version": "2.0"
+  },
+  "modified": "2024-06-14T11:03:02.884901+00:00",
+  "revision": 3,
+  "stats": { "downloads": 214, "views": 1893 },
+  "title": "Lidar measurements from the Østerild campaign, 2021",
+  "updated": "2024-06-14T11:03:02.884901+00:00"
+}

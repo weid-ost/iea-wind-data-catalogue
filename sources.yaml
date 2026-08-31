@@ -1,0 +1,221 @@
+# sources.yaml — the source register.
+#
+# The only "config" that matters (plan §3.2). One top-level key per source; the
+# key IS the adapter module name, the class's `source_name`, and the
+# `source_system` recorded on every event. Those four strings must agree.
+#
+# Fields every source carries:
+#   enabled      bool  — false disables the adapter without deleting its config
+#   tier         1|2|3 — 1 structured API (never LLM), 2 structured-ish HTML/API,
+#                        3 heterogeneous HTML (the only tier allowed a model)
+#   precedence   int   — lower wins when several sources describe one identity.
+#                        DOI registries outrank repositories outrank HTML.
+#   max_records  int   — the prototype cap. FIVE. Raise consciously.
+#   source_key   str   — human-readable semantics of the change token (plan §4.1).
+#                        The adapter owns the implementation; this documents it.
+#
+# Everything else is adapter-specific and reaches the adapter as
+# `SourceConfig.options`.
+#
+# All endpoints, communities, orgs and task URLs below were verified live on
+# 2026-08-31. Anything unverified is marked `unverified: true`.
+
+version: 1
+
+defaults:
+  max_records: 5
+  user_agent: "iea-wind-data-catalogue/0.1 (+https://github.com/thclark/iea-wind-data-catalogue; tom@octue.com)"
+  respect_robots: true
+  min_request_interval_seconds: 0.2
+
+sources:
+
+  # -------------------------------------------------------------------------
+  datacite:
+    enabled: true
+    tier: 1
+    precedence: 10
+    max_records: 5
+    source_key: "attributes.updated — reflects client metadata pushes"
+    api: "https://api.datacite.org/dois"
+    # Only `findable` DOIs become records (fixture dc-04).
+    state: findable
+    queries:
+      - 'creators.affiliation.name:"IEA Wind" OR descriptions.description:"IEA Wind"'
+      - 'subjects.subject:"IEA Wind Task"'
+    # Prefixes worth sweeping directly; Zenodo's own prefix is the big one.
+    prefixes:
+      - "10.5281"   # Zenodo
+    page_size: 25
+
+  # -------------------------------------------------------------------------
+  crossref:
+    enabled: true
+    tier: 1
+    precedence: 20
+    max_records: 5
+    source_key: "deposited — NOT indexed, which churns without content change"
+    api: "https://api.crossref.org/works"
+    # Land in the polite pool. The project User-Agent already carries the address.
+    mailto: "tom@octue.com"
+    journals:
+      - issn: "2366-7451"           # verified: Wind Energy Science, Copernicus GmbH
+        title: "Wind Energy Science"
+      - issn: "1095-4244"
+        title: "Wind Energy"
+        unverified: true
+      - issn: "1742-6596"
+        title: "Journal of Physics: Conference Series"
+        note: "TORQUE / EAWE proceedings live here (fixture cr-03)"
+        unverified: true
+    queries:
+      - '"IEA Wind Task"'
+      - '"IEA Wind TCP"'
+    rows: 25
+
+  # -------------------------------------------------------------------------
+  zenodo:
+    enabled: true
+    tier: 1
+    precedence: 30
+    max_records: 5
+    source_key: "InvenioRDM record revision id + version DOI (verify field name in Phase 1)"
+    api: "https://zenodo.org/api/records"
+    # Verified live against https://zenodo.org/api/communities/<slug>.
+    # Catalogue the CONCEPT doi, never the version doi (fixture zen-02).
+    communities:
+      - slug: "iea_wind_task_43"
+        title: "IEA Wind Task 43: Wind Energy Digitalization"
+        iea_task: ["task-43"]
+      - slug: "ieawindtask32"
+        title: "IEA Wind Task 32: Wind Lidar"
+        iea_task: ["task-32"]
+      - slug: "ieawindtask52"
+        title: "IEA Wind Task 52"
+        iea_task: ["task-52"]
+      - slug: "lidar_ontology"
+        title: "Lidar Ontology — IEA Wind TCP Task 52"
+        iea_task: ["task-52"]
+      - slug: "coldclimatewind"
+        title: "IEA Wind TCP Cold Climate Wind Task results"
+        iea_task: ["task-54"]
+      - slug: "ieawindtask51_austria"
+        title: "IEA Wind TCP Task 51 Austria"
+        iea_task: ["task-51"]
+      - slug: "ieawindtask56-oc7-wp22"
+        title: "IEA Wind Task 56: WP2.2 of OC7 Project Phase II"
+        iea_task: ["task-56"]
+      - slug: "jam"
+        title: "IEA Wind Task 57 — JAM"
+        iea_task: ["task-57"]
+      - slug: "wakebench"
+        title: "IEA-Wind Task 31 Wakebench"
+        iea_task: ["task-31"]
+    queries:
+      - '"IEA Wind Task"'
+
+  # -------------------------------------------------------------------------
+  osti:
+    enabled: true
+    tier: 1
+    precedence: 40
+    max_records: 5
+    source_key: "metadata-updated field if provided, else normalised payload hash"
+    api: "https://www.osti.gov/api/v1/records"
+    unverified: true
+    queries:
+      - '"IEA Wind"'
+      - '"IEA Wind Task"'
+    research_orgs:
+      - "National Renewable Energy Laboratory"
+      - "Pacific Northwest National Laboratory"
+      - "Sandia National Laboratories"
+    rows: 25
+
+  # -------------------------------------------------------------------------
+  wdh:
+    enabled: true
+    tier: 2
+    precedence: 50
+    max_records: 5
+    source_key: "dataset-updated field if provided, else normalised payload hash"
+    base_url: "https://wdh.energy.gov"          # verified: 200
+    legacy_hosts:                                # verified: 301 -> wdh.energy.gov
+      - "a2e.energy.gov"
+    api: "https://wdh.energy.gov/api"
+    unverified: true
+    # Spike 4: the listing endpoint may require a token we do not have. If so
+    # the adapter raises SourceUnreachable and disables itself cleanly
+    # (fixture wdh-07). NEVER enumerate a dataset's files (fixture wdh-03).
+    enumerate_files: false
+
+  # -------------------------------------------------------------------------
+  github:
+    enabled: true
+    tier: 1
+    precedence: 60
+    max_records: 5
+    source_key: "default-branch SHA + latest release tag + hash(description, topics, licence)"
+    api: "https://api.github.com"
+    # Authenticate with the Actions GITHUB_TOKEN: 5,000/hr vs 60/hr.
+    token_env: "GITHUB_TOKEN"
+    orgs:                                        # all verified live
+      - login: "IEAWindSystems"
+        title: "IEA Wind Systems"
+        iea_task: ["task-37"]
+      - login: "IEA-Task-43"
+        title: "IEA Wind Digitalization (Task 43)"
+        iea_task: ["task-43"]
+      - login: "IEAWindTask37"
+        title: "IEA Wind Task 37"
+        iea_task: ["task-37"]
+    # Code also lives in individuals' accounts (fixture gh-08); topic search
+    # is the only way to reach it.
+    topics:
+      - "iea-wind"
+      - "iea-task-43"
+      - "wind-energy"
+    exclude_forks: true       # fixture gh-04 — or you catalogue fifty copies
+    min_content_bytes: 2048   # fixture gh-10 — empty/template repos are noise
+
+  # -------------------------------------------------------------------------
+  ieawind:
+    enabled: true
+    tier: 3
+    precedence: 90
+    max_records: 5
+    source_key: "normalised main-content hash (= the LLM cache key input)"
+    base_url: "https://iea-wind.org"
+    # Verified live on 2026-08-31 from the iea-wind.org navigation. Note that
+    # the site's URL slugs are NOT uniform, and /task11/ actually serves
+    # Task 65 — never construct a task URL by string formatting.
+    task_pages:
+      - { iea_task: "task-25", url: "https://iea-wind.org/task25-63/", title: "Task 25/63 – TWENTY-FIVE" }
+      - { iea_task: "task-41", url: "https://iea-wind.org/task41/", title: "Task 41 – Distributed Wind" }
+      - { iea_task: "task-42", url: "https://iea-wind.org/task42/", title: "Task 42 – Wind Turbine Lifetime Extension" }
+      - { iea_task: "task-43", url: "https://iea-wind.org/task43/", title: "Task 43 – Digitalization" }
+      - { iea_task: "task-44", url: "https://iea-wind.org/task44/", title: "Task 44 – Farm Flow Control" }
+      - { iea_task: "task-45", url: "https://iea-wind.org/task45/", title: "Task 45 – Recycling" }
+      - { iea_task: "task-46", url: "https://iea-wind.org/task46/", title: "Task 46 – Erosion" }
+      - { iea_task: "task-47", url: "https://iea-wind.org/task47/", title: "Task 47 – TURBINIA" }
+      - { iea_task: "task-48", url: "https://iea-wind.org/task48/", title: "Task 48 – Airborne" }
+      - { iea_task: "task-49", url: "https://iea-wind.org/task49/", title: "Task 49 – IDEA" }
+      - { iea_task: "task-50", url: "https://iea-wind.org/task50/", title: "Task 50 – Hybrid Power Plants" }
+      - { iea_task: "task-51", url: "https://iea-wind.org/task51/", title: "Task 51 – Forecasting" }
+      - { iea_task: "task-52", url: "https://iea-wind.org/task52/", title: "Task 52 – Large-scale Wind Lidar" }
+      - { iea_task: "task-53", url: "https://iea-wind.org/task53/", title: "Task 53 – Wind Energy Economics" }
+      - { iea_task: "task-54", url: "https://iea-wind.org/task54/", title: "Task 54 – Cold Climate Wind Power" }
+      - { iea_task: "task-55", url: "https://iea-wind.org/task55/", title: "Task 55 – REFWIND" }
+      - { iea_task: "task-56", url: "https://iea-wind.org/task-56-oc7-project-offshore-code-comparison-collaboration-7/", title: "Task 56 – OC7" }
+      - { iea_task: "task-57", url: "https://iea-wind.org/task57/", title: "Task 57 – JAM" }
+      - { iea_task: "task-58", url: "https://iea-wind.org/task-58/", title: "Task 58 – Offshore Energy Hubs" }
+      - { iea_task: "task-59", url: "https://iea-wind.org/task59/", title: "Task 59 – WREN" }
+      - { iea_task: "task-60", url: "https://iea-wind.org/task-60-cyclewind-harmonised-life-cycle-assessment-for-wind-power/", title: "Task 60 – CYCLEWIND" }
+      - { iea_task: "task-61", url: "https://iea-wind.org/task-61/", title: "Task 61 – VRE-H2" }
+      - { iea_task: "task-62", url: "https://iea-wind.org/task-62/", title: "Task 62 – Social Science" }
+      - { iea_task: "task-65", url: "https://iea-wind.org/task11/", title: "Task 65 – Wind SCOUT (served from /task11/ — do not assume URL == task number)" }
+    directory_url: "https://iea-wind.org/task-directory/"
+    # Tier-3 pages are read with trafilatura, sanitised, DOI-swept, and only
+    # then — if anything is left unidentified — sent to a model.
+    extract_main_content: true
+    pdf_publication_lists: false   # fixture iea-11: out of scope for v1, recorded

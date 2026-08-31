@@ -1,0 +1,54 @@
+# IEA Wind Data Catalogue.
+#
+# Everything Python goes through `uv run` so it uses the pinned interpreter in
+# .python-version and the pinned lockfile — never whatever `python` happens to
+# be on PATH (ADR-0034). CI uses `uv sync --frozen`; `make sync` here uses
+# --frozen too, so a stale lockfile fails loudly instead of being rewritten.
+
+.DEFAULT_GOAL := help
+.PHONY: help sync harvest materialize validate test extract build-tokens site gates clean
+
+# The PROTOTYPE CAP. Five records per source. Raise it consciously:
+#   make harvest LIMIT=50
+LIMIT ?= 5
+
+UV ?= uv
+NPM ?= npm
+
+help:  ## show this help
+	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
+		| awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
+
+sync:  ## install the pinned Python environment (uv sync --frozen)
+	$(UV) sync --frozen --dev
+
+harvest:  ## harvest every enabled source (LIMIT=5 by default) and materialize
+	$(UV) run python -m harvest run --limit $(LIMIT)
+
+materialize:  ## replay events/ into records/ (derived; safe to delete and rebuild)
+	$(UV) run python -m harvest materialize
+
+validate:  ## CKAN-compat gate over records/ — exits non-zero listing every violation
+	$(UV) run python -m harvest validate
+
+test:  ## run the test suite
+	$(UV) run pytest
+
+extract:  ## drain state/pending-extraction.json through the LLM (human-operated)
+	$(UV) run python -m harvest extract
+
+build-tokens:  ## regenerate the palette and re-verify WCAG contrast
+	$(UV) run python design/gen.py
+
+site:  ## build the static site and the Pagefind index
+	cd site && $(NPM) ci && $(NPM) run build
+
+gates:  ## everything CI enforces: tests, CKAN compat, tokens, a11y
+	$(MAKE) test
+	$(MAKE) validate
+	$(MAKE) build-tokens
+	cd site && $(NPM) run gates
+
+clean:  ## remove derived artifacts (NEVER touches events/, which is the truth)
+	rm -rf records/*.json .pytest_cache site/dist site/.astro
+	find . -name '__pycache__' -type d -prune -exec rm -rf {} +

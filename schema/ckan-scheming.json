@@ -1,0 +1,319 @@
+{
+  "scheming_version": 2,
+  "dataset_type": "dataset",
+  "about": "IEA Wind Data Catalogue — canonical record schema. Nothing in this repository consumes this file yet: it is the written definition of the record shape (plan §2.2), it documents every custom field carried in `extras`, and it is the input ckanext-scheming needs on the day the catalogue is promoted to CKAN. Keep it in step with harvest/materialize.py:EXTRA_KEYS and harvest/CONTRACT.md — those three are the same contract stated three ways.",
+  "about_url": "https://github.com/thclark/iea-wind-data-catalogue",
+
+  "notes": [
+    "Every custom field below is stored as a CKAN EXTRA with a STRING value. Fields whose logical type is a list or an object are JSON-encoded inside that string, compactly, with sorted keys. CKAN accepts nothing else in extras unless declared here, which is exactly what this file declares.",
+    "Records are never edited in place. `source.*` metadata is replaced wholesale on a source-key change; `local.*` annotation is additive (ADR-0038). The event log in events/ is the source of truth; records/*.json is a derived view.",
+    "Withdrawal is NOT CKAN `state: deleted` — that would hide and permit purging a record ADR-0027 requires be retained. Withdrawal is `lifecycle_state`, `withdrawn` and `withdrawn_at` below."
+  ],
+
+  "dataset_fields": [
+    {
+      "field_name": "title",
+      "label": "Title",
+      "preset": "title",
+      "form_placeholder": "Title, verbatim from the source",
+      "help_text": "Never edited. If the source has a typo, that is what the source says; attach a curator note instead (plan §4.3)."
+    },
+    {
+      "field_name": "name",
+      "label": "URL slug",
+      "preset": "dataset_slug",
+      "help_text": "Derived deterministically from the identity key, never from the title, so a retitled artifact keeps its citable URL."
+    },
+    {
+      "field_name": "notes",
+      "label": "Description",
+      "form_snippet": "markdown.html",
+      "help_text": "Verbatim source abstract, sanitised to a safe HTML subset. Never model-generated prose."
+    },
+    {
+      "field_name": "url",
+      "label": "Landing page",
+      "display_snippet": "link.html"
+    },
+    {
+      "field_name": "version",
+      "label": "Version"
+    },
+    {
+      "field_name": "license_id",
+      "label": "Licence",
+      "form_snippet": "license.html",
+      "help_text": "Mapped through harvest/licenses.py. Unmappable input becomes 'notspecified' AND is flagged in the run report — never silently defaulted to something open."
+    },
+    {
+      "field_name": "owner_org",
+      "label": "Organization",
+      "preset": "dataset_organization",
+      "help_text": "Must exist in organizations.yaml."
+    },
+    {
+      "field_name": "tag_string",
+      "label": "Tags",
+      "preset": "tag_string_autocomplete",
+      "help_text": "Alphanumerics, '-', '_' and '.', 2-100 characters each."
+    },
+
+    {
+      "field_name": "identity_key",
+      "label": "Identity key",
+      "required": true,
+      "help_text": "The catalogue's notion of 'the same artifact'. Lowercase-normalised DOI when one exists; else source_system|source_id; else hash|<16 hex> of normalised title + first author + year (fragile).",
+      "validators": "not_empty unicode_safe",
+      "extras": true
+    },
+    {
+      "field_name": "identity_kind",
+      "label": "Identity derivation",
+      "help_text": "How the identity key was derived. 'fragile' records are the ones a corrected upstream title would split in two.",
+      "choices": [
+        {"value": "doi", "label": "DOI"},
+        {"value": "source", "label": "Source system identifier"},
+        {"value": "fragile", "label": "Hash of title, author and year (fragile)"}
+      ],
+      "extras": true
+    },
+    {
+      "field_name": "doi",
+      "label": "DOI",
+      "help_text": "Bare lowercase form, e.g. 10.5281/zenodo.1234567. Every DOI in a record has been resolved against DataCite or Crossref; non-resolving DOIs cause the record to be dropped and logged.",
+      "display_snippet": "doi.html",
+      "extras": true
+    },
+    {
+      "field_name": "source_system",
+      "label": "Source system",
+      "help_text": "The adapter that most recently scraped this record.",
+      "choices": [
+        {"value": "zenodo", "label": "Zenodo"},
+        {"value": "datacite", "label": "DataCite"},
+        {"value": "crossref", "label": "Crossref"},
+        {"value": "github", "label": "GitHub"},
+        {"value": "osti", "label": "OSTI"},
+        {"value": "wdh", "label": "Wind Data Hub"},
+        {"value": "ieawind", "label": "iea-wind.org"}
+      ],
+      "extras": true
+    },
+    {
+      "field_name": "source_systems",
+      "label": "Contributing source systems",
+      "help_text": "JSON string: sorted list of every source that has described this identity. Four entries for a four-way merge (fixture x-01).",
+      "json_type": "list[str]",
+      "extras": true
+    },
+    {
+      "field_name": "source_id",
+      "label": "Source identifier",
+      "help_text": "The upstream system's own identifier, as a string.",
+      "extras": true
+    },
+    {
+      "field_name": "source_key",
+      "label": "Source key",
+      "help_text": "The record-level change token (plan §4.1). Semantics are owned by the adapter. Displayed in the mono face as provenance, not as a user-facing identifier.",
+      "extras": true
+    },
+    {
+      "field_name": "source_url",
+      "label": "Source URL",
+      "help_text": "Primary upstream landing page.",
+      "display_snippet": "link.html",
+      "extras": true
+    },
+    {
+      "field_name": "source_urls",
+      "label": "Source URLs",
+      "help_text": "JSON string: every upstream landing page for this identity. SET-VALUED — unions across sources, never displaces.",
+      "json_type": "list[str]",
+      "extras": true
+    },
+    {
+      "field_name": "iea_task",
+      "label": "IEA Wind Task",
+      "help_text": "JSON string: sorted list of group names, e.g. [\"task-43\",\"task-49\"]. SET-VALUED — a source adding a task must never erase a hand-attributed one (ADR-0038, fixture x-04). Values must exist in groups.yaml; renumbering aliases (19->54, 34->59) resolve first.",
+      "json_type": "list[str]",
+      "extras": true
+    },
+    {
+      "field_name": "resource_kind",
+      "label": "Resource kind",
+      "choices": [
+        {"value": "dataset", "label": "Dataset"},
+        {"value": "publication", "label": "Publication"},
+        {"value": "software", "label": "Software"},
+        {"value": "report", "label": "Report"},
+        {"value": "model", "label": "Model"},
+        {"value": "other", "label": "Other"}
+      ],
+      "help_text": "Often classified rather than stated. Where classified by a model, provenance records extraction_method 'llm' and the record page shows a machine-inferred badge.",
+      "extras": true
+    },
+    {
+      "field_name": "access_status",
+      "label": "Access",
+      "choices": [
+        {"value": "open", "label": "Open"},
+        {"value": "restricted", "label": "Restricted"},
+        {"value": "embargoed", "label": "Embargoed"},
+        {"value": "registration-required", "label": "Registration required"},
+        {"value": "metadata-only", "label": "Metadata only"},
+        {"value": "unknown", "label": "Unknown"}
+      ],
+      "help_text": "Availability honesty (fixtures zen-05, zen-06, osti-04, wdh-06). Never imply a file is downloadable when it is not.",
+      "extras": true
+    },
+    {
+      "field_name": "embargo_date",
+      "label": "Embargo lifts",
+      "help_text": "ISO 8601. Re-checked after the date passes.",
+      "extras": true
+    },
+    {
+      "field_name": "authors",
+      "label": "Creators",
+      "help_text": "JSON string: list of {name, given?, family?, orcid?, affiliation?}. `name` is the only guaranteed key — Crossref emits collaboration entries with no given name (fixture cr-06).",
+      "json_type": "list[object]",
+      "extras": true
+    },
+    {
+      "field_name": "publisher",
+      "label": "Publisher",
+      "extras": true
+    },
+    {
+      "field_name": "published_date",
+      "label": "Published",
+      "help_text": "ISO 8601, possibly year-only. A year-only source date stays year-only; never fabricate a month or day (fixture cr-02).",
+      "extras": true
+    },
+    {
+      "field_name": "container",
+      "label": "Journal or series",
+      "extras": true
+    },
+    {
+      "field_name": "related_identifiers",
+      "label": "Related identifiers",
+      "help_text": "JSON string: list of {relation, identifier, identifier_type}. Used for version resolution and preprint/dataset linking. Records are NOT created for the targets (fixture dc-06).",
+      "json_type": "list[object]",
+      "extras": true
+    },
+    {
+      "field_name": "license_raw",
+      "label": "Licence, as stated at source",
+      "help_text": "Verbatim. Retained even when it maps cleanly, so a disputed mapping is checkable.",
+      "extras": true
+    },
+    {
+      "field_name": "license_mapped",
+      "label": "Licence mapped",
+      "help_text": "'false' means the source stated something the lookup table did not recognise. license_id is then 'notspecified' and the run report flags it.",
+      "json_type": "bool-as-string",
+      "extras": true
+    },
+    {
+      "field_name": "provenance",
+      "label": "Field provenance",
+      "help_text": "JSON string: {field: {extraction_method: api|pattern|llm, model?, prompt_version?, confidence?, source_system?, pinned?}}. Fields with extraction_method 'llm' render with a visible machine-inferred badge (ADR-0028, fixture x-05). This is the field that makes the catalogue credible to a FAIR-literate audience; do not omit it.",
+      "json_type": "object",
+      "extras": true
+    },
+    {
+      "field_name": "lifecycle_state",
+      "label": "Lifecycle",
+      "choices": [
+        {"value": "active", "label": "Active"},
+        {"value": "archived", "label": "Archived"},
+        {"value": "withdrawn", "label": "Withdrawn"}
+      ],
+      "help_text": "NOT CKAN's `state`. A withdrawn record is retained with its URL intact so existing citations survive (ADR-0027, fixtures zen-12, r-04).",
+      "extras": true
+    },
+    {
+      "field_name": "withdrawn",
+      "label": "Withdrawn",
+      "json_type": "bool-as-string",
+      "extras": true
+    },
+    {
+      "field_name": "withdrawn_at",
+      "label": "Withdrawn at",
+      "help_text": "Our observation time, not the source's. ISO 8601 UTC.",
+      "extras": true
+    },
+    {
+      "field_name": "first_seen",
+      "label": "First seen",
+      "help_text": "Observation time of the first event for this identity. Survives version drift (fixture zen-03).",
+      "extras": true
+    },
+    {
+      "field_name": "last_seen",
+      "label": "Last seen",
+      "help_text": "Observation time of the most recent event. NOT the last run time — an unchanged record writes no event (ADR-0026).",
+      "extras": true
+    },
+    {
+      "field_name": "curator_notes",
+      "label": "Curator notes",
+      "help_text": "JSON string: list of {field?, note, added_at?}. LOCAL-ONLY and never displaced by a source. Where upstream is known wrong and will not be fixed, the wrong value is displayed verbatim with the note beside it — both truths on the page (plan §4.3, fixture x-10).",
+      "json_type": "list[object]",
+      "extras": true
+    },
+    {
+      "field_name": "local_links",
+      "label": "Curator links",
+      "help_text": "JSON string: list of {url, label}. Cross-record relationships and context a curator added.",
+      "json_type": "list[object]",
+      "extras": true
+    },
+    {
+      "field_name": "suppressed",
+      "label": "Suppressed",
+      "help_text": "Local annotation: a noise record, retained but not listed.",
+      "json_type": "bool-as-string",
+      "extras": true
+    },
+    {
+      "field_name": "pinned",
+      "label": "Pinned extraction",
+      "help_text": "A human corrected a Tier-3 extraction. The pin HOLDS when the page's content hash later changes, and a pin_notice fires for a human to adjudicate (plan §4.3, fixture x-09).",
+      "json_type": "bool-as-string",
+      "extras": true
+    }
+  ],
+
+  "resource_fields": [
+    {
+      "field_name": "url",
+      "label": "URL",
+      "preset": "resource_url_upload",
+      "help_text": "A link upstream. The catalogue never mirrors files — metadata and links only."
+    },
+    {
+      "field_name": "name",
+      "label": "Name",
+      "form_placeholder": "eg. January 2011 Gold Prices"
+    },
+    {
+      "field_name": "description",
+      "label": "Description",
+      "form_snippet": "markdown.html"
+    },
+    {
+      "field_name": "format",
+      "label": "Format",
+      "preset": "resource_format_autocomplete"
+    },
+    {
+      "field_name": "version_doi",
+      "label": "Version DOI",
+      "help_text": "For a Zenodo concept record, each version appears here as a resource. The catalogue holds one record per concept, never one per version (fixture zen-02)."
+    }
+  ]
+}

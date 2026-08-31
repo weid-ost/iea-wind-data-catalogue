@@ -1,0 +1,102 @@
+# organizations.yaml — CKAN-shaped organization definitions.
+#
+# Canonical data in the repo, not configuration (plan §2.2). A record's
+# `owner_org` MUST reference a `name` below or the CKAN-compat gate fails.
+#
+# The premise of this catalogue is that nobody registers anything, so these
+# are NOT accounts: they are the institutional attribution the harvest infers
+# from a source's publisher, affiliation or research-organisation field. They
+# exist so that promotion day has somewhere to hang records, and so the site
+# can facet by institution.
+#
+# `name` follows CKAN slug rules: lowercase, a-z 0-9 - _ , 2-100 chars.
+
+version: 1
+
+organizations:
+
+  - name: dtu
+    title: Technical University of Denmark (DTU Wind and Energy Systems)
+    description: >-
+      DTU Wind and Energy Systems, Risø campus. Leads and participates in
+      several IEA Wind Tasks and publishes heavily to Zenodo and Wind Energy
+      Science.
+    ror: "https://ror.org/04qtj9h94"
+    country: DK
+    aliases: ["Technical University of Denmark", "DTU Wind Energy", "DTU Wind and Energy Systems", "Danmarks Tekniske Universitet"]
+
+  - name: nrel
+    title: National Renewable Energy Laboratory
+    description: >-
+      US DOE national laboratory, Golden CO. Operating agent for several Tasks;
+      publishes to OSTI, GitHub (IEAWindSystems, OpenFAST) and Zenodo.
+    ror: "https://ror.org/036266993"
+    country: US
+    aliases: ["NREL", "National Renewable Energy Laboratory (NREL)", "Alliance for Sustainable Energy, LLC"]
+
+  - name: pnnl
+    title: Pacific Northwest National Laboratory
+    description: >-
+      US DOE national laboratory, Richland WA. Operates the Wind Data Hub
+      (formerly A2e) and leads Task 59 (WREN).
+    ror: "https://ror.org/05h992307"
+    country: US
+    aliases: ["PNNL", "Battelle Memorial Institute, Pacific Northwest Division"]
+
+  - name: sandia
+    title: Sandia National Laboratories
+    description: US DOE national laboratory. Wind energy materials, blades and reliability.
+    ror: "https://ror.org/01apwpt12"
+    country: US
+    aliases: ["Sandia", "Sandia National Laboratories, Albuquerque"]
+
+  - name: ost
+    title: Ocean Science and Technology
+    description: >-
+      Prospective host and operator of this catalogue. Present so that
+      curator-authored records and annotations have an owner.
+    country: GB
+    aliases: ["OST"]
+
+  - name: fraunhofer-iwes
+    title: Fraunhofer Institute for Wind Energy Systems (IWES)
+    ror: "https://ror.org/03d9mxk94"
+    country: DE
+    aliases: ["Fraunhofer IWES", "Fraunhofer-Institut für Windenergiesysteme"]
+
+  - name: tno
+    title: TNO Energy Transition
+    ror: "https://ror.org/01bnjb948"
+    country: NL
+    aliases: ["TNO", "Nederlandse Organisatie voor toegepast-natuurwetenschappelijk onderzoek"]
+
+  - name: vtt
+    title: VTT Technical Research Centre of Finland
+    ror: "https://ror.org/04b181w54"
+    country: FI
+    aliases: ["VTT"]
+
+  - name: cener
+    title: National Renewable Energy Centre of Spain (CENER)
+    country: ES
+    aliases: ["CENER", "Centro Nacional de Energías Renovables"]
+
+  - name: nortek-uzh
+    title: University of Zurich
+    country: CH
+    unverified: true
+
+  - name: zenodo-community
+    title: Zenodo (community deposit, no institutional attribution)
+    description: >-
+      Fallback owner for records harvested from a Zenodo community where the
+      deposit states no resolvable institutional affiliation. Deliberately
+      explicit rather than leaving `owner_org` null, so "we do not know" is
+      visible on the record page instead of being invisible.
+    aliases: ["Zenodo"]
+
+  - name: unattributed
+    title: Unattributed
+    description: >-
+      Owner of last resort. A record here is a curation task, not a failure —
+      the run report counts them.

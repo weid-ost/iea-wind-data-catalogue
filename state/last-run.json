@@ -1,0 +1,104 @@
+{
+  "cache": {
+    "hit_rate": 0.0,
+    "hits": 0,
+    "misses": 0
+  },
+  "dropped_dois": [],
+  "events_appended": 0,
+  "finished_at": "2026-08-31T20:42:00Z",
+  "harvest_version": "0.1.0",
+  "limit": 5,
+  "notices": [],
+  "ok": true,
+  "pending_extraction": 0,
+  "records": {
+    "pruned": 0,
+    "total": 0,
+    "unchanged": 0,
+    "written": 0
+  },
+  "sources": {
+    "crossref": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "not implemented: harvest.adapters.crossref is a stub — owner: Track C (crossref)"
+      ],
+      "implemented": false,
+      "reachable": true,
+      "seen": 0,
+      "skipped_unchanged": 0
+    },
+    "datacite": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "not implemented: harvest.adapters.datacite is a stub — owner: Track B (datacite)"
+      ],
+      "implemented": false,
+      "reachable": true,
+      "seen": 0,
+      "skipped_unchanged": 0
+    },
+    "github": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "not implemented: harvest.adapters.github is a stub — owner: Track D (github)"
+      ],
+      "implemented": false,
+      "reachable": true,
+      "seen": 0,
+      "skipped_unchanged": 0
+    },
+    "ieawind": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "not implemented: harvest.adapters.ieawind is a stub — owner: Track F (ieawind, Tier 3)"
+      ],
+      "implemented": false,
+      "reachable": true,
+      "seen": 0,
+      "skipped_unchanged": 0
+    },
+    "osti": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "not implemented: harvest.adapters.osti is a stub — owner: Track E (osti)"
+      ],
+      "implemented": false,
+      "reachable": true,
+      "seen": 0,
+      "skipped_unchanged": 0
+    },
+    "wdh": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "not implemented: harvest.adapters.wdh is a stub — owner: Track G (wdh)"
+      ],
+      "implemented": false,
+      "reachable": true,
+      "seen": 0,
+      "skipped_unchanged": 0
+    },
+    "zenodo": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "not implemented: harvest.adapters.zenodo is a stub — owner: Track A (zenodo)"
+      ],
+      "implemented": false,
+      "reachable": true,
+      "seen": 0,
+      "skipped_unchanged": 0
+    }
+  },
+  "started_at": "2026-08-31T20:42:00Z",
+  "unmapped_licenses": [],
+  "unreachable_sources": [],
+  "validation_violations": []
+}

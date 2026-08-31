@@ -1,0 +1,284 @@
+# groups.yaml — CKAN-shaped group definitions. Groups ARE the IEA Wind Tasks.
+#
+# Canonical data in the repo (plan §2.2). A record's `groups[].name` MUST
+# reference a `name` below or the CKAN-compat gate fails. `iea_task` extras
+# hold these same names.
+#
+# `aliases` carries every other string that means this task — most importantly
+# the RENUMBERINGS (fixture iea-08): task pages cite both the old and the new
+# number, sometimes in the same sentence, and both must resolve to one group.
+# Resolve through harvest.config.canonical_group(); never string-match.
+#
+# Task titles and URLs marked "verified" were read from iea-wind.org on
+# 2026-08-31. Completed tasks predating that navigation are marked
+# `unverified: true` and carry no URL rather than a guessed one.
+
+version: 1
+
+groups:
+
+  # --- current tasks (verified from the iea-wind.org navigation) ------------
+
+  - name: task-25
+    title: "Task 25/63 — Design and Operation of Energy Systems with Large Amounts of Variable Generation (TWENTY-FIVE)"
+    url: "https://iea-wind.org/task25-63/"
+    state: active
+    aliases: ["task-63", "task 25", "task 63", "task 25/63", "twenty-five"]
+
+  - name: task-31
+    title: "Task 31 — Wakebench: Benchmarking of Wind Farm Flow Models"
+    state: completed
+    zenodo_community: "wakebench"
+    aliases: ["task 31", "wakebench"]
+
+  - name: task-32
+    title: "Task 32 — Wind Lidar Systems for Wind Energy Deployment"
+    state: completed
+    zenodo_community: "ieawindtask32"
+    aliases: ["task 32", "wind lidar"]
+
+  - name: task-37
+    title: "Task 37 — Wind Energy Systems Engineering: Integrated RD&D"
+    state: completed
+    github_orgs: ["IEAWindSystems", "IEAWindTask37"]
+    aliases: ["task 37", "systems engineering"]
+
+  - name: task-41
+    title: "Task 41 — Enabling Wind to Contribute to a Distributed Energy Future"
+    url: "https://iea-wind.org/task41/"
+    state: active
+    aliases: ["task 41", "distributed wind"]
+
+  - name: task-42
+    title: "Task 42 — Wind Turbine Lifetime Extension"
+    url: "https://iea-wind.org/task42/"
+    state: active
+    aliases: ["task 42", "lifetime extension"]
+
+  - name: task-43
+    title: "Task 43 — Digitalization"
+    url: "https://iea-wind.org/task43/"
+    state: active
+    zenodo_community: "iea_wind_task_43"
+    github_orgs: ["IEA-Task-43"]
+    aliases: ["task 43", "digitalization", "digitalisation", "wind energy digitalization"]
+
+  - name: task-44
+    title: "Task 44 — Wind Farm Flow Control"
+    url: "https://iea-wind.org/task44/"
+    state: active
+    aliases: ["task 44", "farm flow control"]
+
+  - name: task-45
+    title: "Task 45 — Enabling Wind Turbine Blade Recycling"
+    url: "https://iea-wind.org/task45/"
+    state: active
+    aliases: ["task 45", "recycling"]
+
+  - name: task-46
+    title: "Task 46 — Erosion of Wind Turbine Blades"
+    url: "https://iea-wind.org/task46/"
+    state: active
+    aliases: ["task 46", "erosion"]
+
+  - name: task-47
+    title: "Task 47 — TURBINIA: Turbulent Inflow Innovative Aerodynamics"
+    url: "https://iea-wind.org/task47/"
+    state: active
+    aliases: ["task 47", "turbinia"]
+
+  - name: task-48
+    title: "Task 48 — Airborne Wind Energy"
+    url: "https://iea-wind.org/task48/"
+    state: active
+    aliases: ["task 48", "airborne wind energy", "awe"]
+
+  - name: task-49
+    title: "Task 49 — Integrated Design of Floating Wind Arrays (IDEA)"
+    url: "https://iea-wind.org/task49/"
+    state: active
+    aliases: ["task 49", "idea", "floating wind arrays"]
+
+  - name: task-50
+    title: "Task 50 — Hybrid Power Plants"
+    url: "https://iea-wind.org/task50/"
+    state: active
+    aliases: ["task 50", "hybrid power plants"]
+
+  - name: task-51
+    title: "Task 51 — Forecasting for the Weather Driven Energy System"
+    url: "https://iea-wind.org/task51/"
+    state: active
+    zenodo_community: "ieawindtask51_austria"
+    aliases: ["task 51", "forecasting"]
+
+  - name: task-52
+    title: "Task 52 — Large-scale Deployment of Wind Lidar"
+    url: "https://iea-wind.org/task52/"
+    state: active
+    zenodo_community: "ieawindtask52"
+    aliases: ["task 52", "large-scale wind lidar", "lidar ontology"]
+
+  - name: task-53
+    title: "Task 53 — Wind Energy Economics"
+    url: "https://iea-wind.org/task53/"
+    state: active
+    aliases: ["task 53", "wind energy economics"]
+
+  - name: task-54
+    title: "Task 54 — Cold Climate Wind Power"
+    url: "https://iea-wind.org/task54/"
+    state: active
+    zenodo_community: "coldclimatewind"
+    # RENUMBERING: Task 19 (Wind Energy in Cold Climates) became Task 54.
+    # Fixture iea-08. Both numbers appear on live pages.
+    aliases: ["task-19", "task 19", "task 54", "cold climate", "cold climates",
+              "wind energy in cold climates"]
+
+  - name: task-55
+    title: "Task 55 — REFWIND: Reference Wind Farms"
+    url: "https://iea-wind.org/task55/"
+    state: active
+    aliases: ["task 55", "refwind"]
+
+  - name: task-56
+    title: "Task 56 — OC7: Offshore Code Comparison Collaboration 7"
+    url: "https://iea-wind.org/task-56-oc7-project-offshore-code-comparison-collaboration-7/"
+    state: active
+    zenodo_community: "ieawindtask56-oc7-wp22"
+    aliases: ["task 56", "oc7", "offshore code comparison collaboration 7"]
+
+  - name: task-57
+    title: "Task 57 — JAM: Joint Aero-Structural Modelling"
+    url: "https://iea-wind.org/task57/"
+    state: active
+    zenodo_community: "jam"
+    aliases: ["task 57", "jam"]
+
+  - name: task-58
+    title: "Task 58 — Offshore Energy Hubs"
+    url: "https://iea-wind.org/task-58/"
+    state: active
+    aliases: ["task 58", "offshore energy hubs"]
+
+  - name: task-59
+    title: "Task 59 — WREN: Working Together to Resolve Environmental Effects of Wind Energy"
+    url: "https://iea-wind.org/task59/"
+    state: active
+    # RENUMBERING: Task 34 (WREN) became Task 59. Fixture iea-08.
+    aliases: ["task-34", "task 34", "task 59", "wren",
+              "working together to resolve environmental effects of wind energy"]
+
+  - name: task-60
+    title: "Task 60 — CYCLEWIND: Harmonised Life Cycle Assessment for Wind Power"
+    url: "https://iea-wind.org/task-60-cyclewind-harmonised-life-cycle-assessment-for-wind-power/"
+    state: active
+    aliases: ["task 60", "cyclewind", "life cycle assessment"]
+
+  - name: task-61
+    title: "Task 61 — Variable Renewable Energy to Hydrogen (VRE-H2)"
+    url: "https://iea-wind.org/task-61/"
+    state: active
+    aliases: ["task 61", "vre-h2", "variable renewable energy to hydrogen"]
+
+  - name: task-62
+    title: "Task 62 — Social Science for Collaborative Wind Energy Planning & Participation"
+    url: "https://iea-wind.org/task-62/"
+    state: active
+    aliases: ["task 62", "social science"]
+
+  - name: task-65
+    title: "Task 65 — Wind SCOUT"
+    # Served from https://iea-wind.org/task11/ — the URL slug is NOT the task
+    # number. Never construct a task URL by formatting the number in.
+    url: "https://iea-wind.org/task11/"
+    state: active
+    aliases: ["task 65", "wind scout"]
+
+  # --- completed tasks, retained for attribution of historical output ------
+  # Titles here are from institutional memory rather than a live page. Marked
+  # unverified so a later pass can confirm or correct them without guessing
+  # which entries were checked.
+
+  - name: task-11
+    title: "Task 11 — Base Technology Information Exchange"
+    state: completed
+    unverified: true
+    aliases: ["task 11"]
+
+  - name: task-26
+    title: "Task 26 — Cost of Wind Energy"
+    state: completed
+    unverified: true
+    aliases: ["task 26", "cost of wind energy"]
+
+  - name: task-27
+    title: "Task 27 — Small Wind Turbines in High Turbulence Sites"
+    state: completed
+    unverified: true
+    aliases: ["task 27", "small wind turbines"]
+
+  - name: task-28
+    title: "Task 28 — Social Acceptance of Wind Energy Projects"
+    state: completed
+    unverified: true
+    aliases: ["task 28", "social acceptance"]
+
+  - name: task-29
+    title: "Task 29 — Analysis of Aerodynamic Measurements (MexNext)"
+    state: completed
+    unverified: true
+    aliases: ["task 29", "mexnext"]
+
+  - name: task-30
+    title: "Task 30 — Offshore Code Comparison Collaboration Continued (OC5/OC6)"
+    state: completed
+    unverified: true
+    aliases: ["task 30", "oc4", "oc5", "oc6"]
+
+  - name: task-33
+    title: "Task 33 — Reliability Data: Standardising Collection and Assessment"
+    state: completed
+    unverified: true
+    aliases: ["task 33", "reliability data"]
+
+  - name: task-35
+    title: "Task 35 — Full-Size, Ground Testing of Wind Turbines and Components"
+    state: completed
+    unverified: true
+    aliases: ["task 35", "ground testing"]
+
+  - name: task-36
+    title: "Task 36 — Forecasting for Wind Energy"
+    state: completed
+    unverified: true
+    # NOT aliased to task-51: Task 51 is a successor with a different scope,
+    # not a renumbering. Only 19->54 and 34->59 are renumberings.
+    aliases: ["task 36"]
+
+  - name: task-38
+    title: "Task 38 — Hybrid Power Plants (scoping)"
+    state: completed
+    unverified: true
+    aliases: ["task 38"]
+
+  - name: task-39
+    title: "Task 39 — Quiet Wind Turbine Technology"
+    state: completed
+    unverified: true
+    aliases: ["task 39", "quiet wind turbine"]
+
+  - name: task-40
+    title: "Task 40 — Downwind Turbine Technologies"
+    state: completed
+    unverified: true
+    aliases: ["task 40", "downwind turbines"]
+
+  # --- non-task grouping ---------------------------------------------------
+
+  - name: unattributed
+    title: "Not attributed to a Task"
+    description: >-
+      A record the harvest could not attribute. Visible on purpose: the run
+      report counts these, and they are the curation backlog.
+    state: active

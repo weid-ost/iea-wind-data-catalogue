@@ -1,0 +1,3 @@
+Local annotations only — tasks, notes, links, pins, suppression.
+Source fields are never edited here or anywhere (ADR-0038).
+Annotations enter the system as `annotated` events; see harvest/CONTRACT.md §5.

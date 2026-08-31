@@ -1,0 +1,73 @@
+{
+  "fixture_id": "zen-01-canonical",
+  "fixture_kind": "source_namespace",
+  "case": "Published dataset, DOI, ORCID'd creators, licence, files, in iea_wind_task_43",
+  "note": "The reference mapping. Two things to look at: the identity is the CONCEPT doi (10.5281/zenodo.1234566), not the version doi on the payload's top level; and the description has been sanitised to the safe subset before storage.",
+  "raw": "raw/zen-01-canonical.json",
+
+  "identity_key": "10.5281/zenodo.1234566",
+  "source_system": "zenodo",
+  "source_id": "1234567",
+  "source_key": "3",
+
+  "source": {
+    "title": "Lidar measurements from the Østerild campaign, 2021",
+    "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021. Includes horizontal wind speed, direction and turbulence intensity at eleven measurement heights.</p>",
+    "doi": "10.5281/zenodo.1234566",
+    "url": "https://zenodo.org/records/1234567",
+    "source_urls": ["https://zenodo.org/records/1234567"],
+    "authors": [
+      {
+        "name": "Müller, Søren Ø.",
+        "orcid": "0000-0002-1825-0097",
+        "affiliation": "Technical University of Denmark"
+      },
+      {
+        "name": "Okafor, Chidi",
+        "orcid": "0000-0001-5109-3700",
+        "affiliation": "National Renewable Energy Laboratory"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2024-06-01",
+    "version": "2.0",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "dataset",
+    "access_status": "open",
+    "keywords": ["lidar", "wind energy", "Østerild", "remote sensing"],
+    "iea_task": ["task-43"],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv",
+        "name": "osterild-lidar-2021.csv",
+        "format": "csv"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "relation": "IsVersionOf",
+        "identifier": "10.5281/zenodo.1234566",
+        "identifier_type": "DOI"
+      }
+    ],
+    "withdrawn": false,
+    "extra": {
+      "zenodo_record_id": 1234567,
+      "zenodo_concept_recid": "1234566",
+      "zenodo_version_doi": "10.5281/zenodo.1234567"
+    }
+  },
+
+  "provenance": {
+    "title": { "extraction_method": "api" },
+    "notes": { "extraction_method": "api" },
+    "doi": { "extraction_method": "api" },
+    "authors": { "extraction_method": "api" },
+    "license_id": { "extraction_method": "pattern" },
+    "resource_kind": { "extraction_method": "api" },
+    "iea_task": { "extraction_method": "pattern" }
+  },
+
+  "expected_slug": "doi-10-5281-zenodo-1234566"
+}

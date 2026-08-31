@@ -1,0 +1,26 @@
+{
+  "fixture_id": "x-08-ckan-invalid",
+  "fixture_kind": "record",
+  "case": "A record whose slug, tag, licence, extras and group would all fail CKAN",
+  "note": "Every field below is wrong in a different way, so one fixture exercises the whole gate. The build must FAIL on this — see tests/test_fixtures.py. Never 'fix' this fixture; it is the failure case.",
+  "expect_violations": true,
+  "expected_violation_fields": [
+    "name", "license_id", "tags[0]", "extras['iea_task']", "owner_org", "groups[0]", "state"
+  ],
+
+  "record": {
+    "name": "Doi 10.5281/ZENODO.9999",
+    "title": "A record CKAN would refuse",
+    "notes": "",
+    "license_id": "CC-BY-4.0",
+    "tags": [{ "name": "wind energy" }],
+    "extras": [
+      { "key": "identity_key", "value": "10.5281/zenodo.9999" },
+      { "key": "iea_task", "value": ["task-43"] }
+    ],
+    "resources": [{ "name": "a resource with no url" }],
+    "groups": [{ "name": "task-999" }],
+    "owner_org": "university-of-nowhere",
+    "state": "withdrawn"
+  }
+}

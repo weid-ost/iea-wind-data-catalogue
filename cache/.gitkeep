@@ -1,0 +1,3 @@
+Committed LLM extraction cache (ADR-0025), keyed by
+sha256(content + prompt_version + model_id). A rebuild replays this rather
+than re-inferring, which is what makes an AI harvest reproducible.
