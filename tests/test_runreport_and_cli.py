@@ -14,6 +14,24 @@ from harvest.adapters.base import SourceResult
 from harvest.cli import main
 from harvest.runreport import RunReport, read_run_report
 
+from conftest import SEVEN_SOURCES, stub_sources
+
+#: A source name deliberately absent from ``sources.yaml``. Used only if every
+#: adapter has been implemented, so that a CLI test narrowed to "the sources
+#: that cannot talk to anything" still has something inert to run.
+NO_SUCH_SOURCE = "__no_adapter__"
+
+
+def only_stubs() -> list[str]:
+    """``["--source", name, ...]`` for every still-stubbed source.
+
+    ``python -m harvest run`` with no ``--source`` walks all seven adapters,
+    which for the tests that only care about the heartbeat is a lot of blocked
+    requests and a lot of politeness throttling for nothing.
+    """
+    names = stub_sources() or [NO_SUCH_SOURCE]
+    return [argument for name in names for argument in ("--source", name)]
+
 
 class TestRunReport:
     def test_is_written_even_for_a_complete_no_op(self, repo: Path) -> None:
@@ -72,23 +90,34 @@ class TestCli:
         assert main(["--root", str(repo), "materialize"]) == 0
         assert "0 record(s)" in capsys.readouterr().out
 
-    def test_run_survives_every_adapter_being_a_stub(self, repo: Path) -> None:
-        """The whole point of the degradation rule: exit 0, report the failures."""
+    def test_run_survives_every_adapter_failing(self, repo: Path) -> None:
+        """The whole point of the degradation rule: exit 0, report the failures.
+
+        Every source fails here, in one of the only two ways a source can fail:
+        a stub is ``implemented: false``, and an implemented adapter — with the
+        network blocked by ``conftest.no_network`` — is ``reachable: false``.
+        Neither raises, neither writes an event, and the run still writes its
+        heartbeat. As the remaining tracks land, sources move from the first
+        column to the second and this test keeps meaning what it means.
+        """
+        stubs = set(stub_sources())
         assert main(["--root", str(repo), "run", "--limit", "5"]) == 0
         payload = read_run_report(root=repo)
-        assert set(payload["sources"]) == {
-            "zenodo", "datacite", "crossref", "github", "osti", "ieawind", "wdh"
-        }
-        assert all(source["implemented"] is False for source in payload["sources"].values())
+        assert set(payload["sources"]) == set(SEVEN_SOURCES)
+        for name, source in payload["sources"].items():
+            assert source["implemented"] is (name not in stubs), name
+            if name not in stubs:
+                assert source["reachable"] is False, name
+            assert source["changed"] == 0, name
         assert payload["limit"] == 5
         assert payload["ok"] is True
 
     def test_run_writes_the_heartbeat_even_when_nothing_happens(self, repo: Path) -> None:
-        main(["--root", str(repo), "run"])
+        main(["--root", str(repo), "run", *only_stubs()])
         assert (repo / "state" / "last-run.json").exists()
 
     def test_run_defaults_to_a_limit_of_five(self, repo: Path) -> None:
-        main(["--root", str(repo), "run"])
+        main(["--root", str(repo), "run", *only_stubs()])
         assert read_run_report(root=repo)["limit"] == 5
 
     def test_run_can_target_one_source(self, repo: Path) -> None:

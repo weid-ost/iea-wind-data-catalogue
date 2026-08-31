@@ -8,12 +8,73 @@ DOI resolver and every adapter take an injected client for exactly that reason.
 
 from __future__ import annotations
 
+import importlib
 import shutil
 from pathlib import Path
 
+import httpx
 import pytest
 
 REAL_ROOT = Path(__file__).resolve().parent.parent
+
+#: The seven sources in ``sources.yaml``, in track order.
+SEVEN_SOURCES = ("zenodo", "datacite", "crossref", "github", "osti", "ieawind", "wdh")
+
+
+def stub_sources() -> list[str]:
+    """The sources whose adapter is still the foundation stub.
+
+    A stub module carries **two** markers: the module attribute ``_TODO`` and
+    the word ``STUB.`` in its docstring. A track that implements its adapter
+    removes both. Either one is enough to recognise a stub here, because the
+    five adapter tracks each keyed off a different one and the two Tier-3
+    tracks have not landed yet — accepting both keeps this correct however the
+    remaining tracks are written.
+
+    Tests about stub behaviour iterate over this rather than over all seven, so
+    that they keep testing what they mean as adapters land — and so that no
+    test in this suite accidentally calls a live API.
+    """
+    stubs = []
+    for name in SEVEN_SOURCES:
+        module = importlib.import_module(f"harvest.adapters.{name}")
+        if hasattr(module, "_TODO") or "STUB" in (module.__doc__ or ""):
+            stubs.append(name)
+    return stubs
+
+
+@pytest.fixture(autouse=True)
+def no_network(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Make the "nothing touches the network" rule enforceable, not aspirational.
+
+    Once a track ships a real adapter, ``python -m harvest run`` in the CLI
+    tests would otherwise reach out to a live API. Blocking happens at the
+    **real transport**, which is deliberate on two counts:
+
+    * ``httpx.MockTransport`` still works, so an adapter test can inject a fake
+      upstream and exercise the whole client stack offline;
+    * an adapter that reaches for the network anyway sees a transport error,
+      which :class:`harvest.http.HarvestClient` turns into an unreachable
+      source — the degradation path every adapter must already handle, rather
+      than a flaky, impolite test that depends on somebody else's uptime.
+
+    Adapters under test get their client injected (``Adapter(client=...)``).
+    """
+
+    def blocked(self, request: httpx.Request, **kwargs: object) -> httpx.Response:
+        raise httpx.ConnectError(
+            f"network access is blocked in tests (attempted {request.url}); "
+            "inject an httpx.MockTransport instead"
+        )
+
+    async def blocked_async(self, request: httpx.Request, **kwargs: object) -> httpx.Response:
+        raise httpx.ConnectError(
+            f"network access is blocked in tests (attempted {request.url}); "
+            "inject an httpx.MockTransport instead"
+        )
+
+    monkeypatch.setattr(httpx.HTTPTransport, "handle_request", blocked)
+    monkeypatch.setattr(httpx.AsyncHTTPTransport, "handle_async_request", blocked_async)
 
 
 @pytest.fixture

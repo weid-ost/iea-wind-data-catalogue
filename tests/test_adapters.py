@@ -26,6 +26,8 @@ from harvest.models import (
     SourceNamespace,
 )
 
+from conftest import stub_sources
+
 
 class FakeAdapter(Adapter):
     """A minimal, complete adapter. Also the worked example in CONTRACT.md."""
@@ -98,7 +100,16 @@ class TestRegistry:
             get_adapter("not-a-source")
 
     def test_every_stub_raises_not_implemented_naming_its_owner(self) -> None:
-        for name in ("zenodo", "datacite", "crossref", "github", "osti", "ieawind", "wdh"):
+        """Every *remaining* stub, that is.
+
+        A source nobody has built yet must still fail informatively. A track
+        that ships its adapter drops the stub markers, and this test steps over
+        it: calling ``harvest()`` on an implemented adapter would try to reach
+        its live API, which no test in this suite does. See
+        ``conftest.stub_sources``; the implemented adapters have their own
+        ``tests/test_<name>.py``.
+        """
+        for name in stub_sources():
             adapter = get_adapter(name)(config=SourceConfig(name=name))
             with pytest.raises(NotImplementedError, match="owner: Track"):
                 list(adapter.harvest(limit=1))
