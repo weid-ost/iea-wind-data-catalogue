@@ -1,0 +1,98 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Lozon\",\"given\":\"Ericka\",\"name\":\"Lozon, Ericka\",\"orcid\":\"0000-0003-0971-2613\"},{\"affiliation\":\"Norwegian University of Science and Technology\",\"family\":\"Ramachandran Nair Rajasree\",\"given\":\"Vishnu\",\"name\":\"Ramachandran Nair Rajasree, Vishnu\",\"orcid\":\"0009-0002-1867-1745\"},{\"family\":\"Mulas Hernando\",\"given\":\"Daniel\",\"name\":\"Mulas Hernando, Daniel\",\"orcid\":\"0009-0004-4512-0759\"},{\"family\":\"Lee\",\"given\":\"Junho\",\"name\":\"Lee, Junho\",\"orcid\":\"0000-0001-9644-3292\"},{\"family\":\"Castagné\",\"given\":\"Michel\",\"name\":\"Castagné, Michel\"},{\"family\":\"Nassor\",\"given\":\"Alice\",\"name\":\"Nassor, Alice\"},{\"family\":\"Poirette\",\"given\":\"Yann\",\"name\":\"Poirette, Yann\"},{\"family\":\"Alkarem\",\"given\":\"Yuksel Rudy\",\"name\":\"Alkarem, Yuksel Rudy\"},{\"family\":\"Biglu\",\"given\":\"Michael\",\"name\":\"Biglu, Michael\",\"orcid\":\"0009-0009-0012-3952\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"family\":\"Sirkis\",\"given\":\"Leah Hope\",\"name\":\"Sirkis, Leah Hope\",\"orcid\":\"0009-0002-0106-747X\"},{\"family\":\"Hall\",\"given\":\"Matthew\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.20218023"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:01Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.20218023"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:01Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-15"
+    },
+    {
+      "key": "publisher",
+      "value": "IEA Wind Task 49"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.20218022\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.20218023"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-30T09:55:54Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.20218023"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.20218023\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-20218023",
+  "notes": "This dataset provides various design definition and input file for the IEA Wind Task 49 Deep Water Array Design. The dataset can be found on GitHub at https://github.com/IEAWindTask49/Reference_Array_Deep_Semi.",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "The IEA Wind RFA3 Deep-Water Reference Array Design",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.20218023"
+}

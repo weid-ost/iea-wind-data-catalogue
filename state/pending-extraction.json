@@ -1,0 +1,44 @@
+[
+  {
+    "cache_key": "97d59cc334a12cfeffdd9205b35b5a8a89e1af8fbf61c9a3a7a55f3f97075bea",
+    "queued_at": "2026-08-31T23:03:16Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/annual-report-2025/"
+  },
+  {
+    "cache_key": "f2420e646974804f366a7189fcec0d7dee3d130822fbbf22084d14a4186d72c0",
+    "queued_at": "2026-08-31T23:03:18Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/publications/"
+  },
+  {
+    "cache_key": "eadbe794bd47314c16c1a065d04777f93ef4880f78fab8d6a9be81181add3500",
+    "queued_at": "2026-08-31T23:03:20Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task41/t41-publications/"
+  },
+  {
+    "cache_key": "23fcc459b6775fb80737fcbd260e1adc7a077f17a99f90b718e75376421907dd",
+    "queued_at": "2026-08-31T23:03:21Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task41/t41-publications/danish-iea-task-41-eudp-funded-project/"
+  },
+  {
+    "cache_key": "4c04b94d490d90f8b73b686ceb86eb6dbec4172f006439f3e5c3ea6b4e4f9fc5",
+    "queued_at": "2026-08-31T23:03:24Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task42/t42-publications/"
+  },
+  {
+    "cache_key": "872459f2d2b2d2f3f881caba123e9762916bc627035346a4f014b6d0df2ed499",
+    "queued_at": "2026-08-31T23:03:25Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
+  },
+  {
+    "cache_key": "8115c6a37160e25d7aff42bfde1395b82782f3159dc9ac26c4e3d9654e2f012b",
+    "queued_at": "2026-08-31T23:03:27Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task43/task-43-open-data/"
+  }
+]

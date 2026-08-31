@@ -1,0 +1,107 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Bergua, Roger\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.21947/1574498"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:04Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.21947/1574498"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-30\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:04Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-13"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"1574498\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "1574498"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-13T10:15:05Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/1574498"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/1574498\",\"https://www.osti.gov/dataexplorer/biblio/dataset/1574498\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-30"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-21947-1574498",
+  "notes": "The Offshore Code Comparison, Collaboration, Continued, with Correlation (OC5) is an international research project run under the International Energy Agency (IEA) Wind Task 30. The project is focused on validating the tools used design offshore wind systems. OC5 consists of four phases.\n\n•\tPhase 1b: Analysis of a fixed-bottom cylinder in a wave basin\n\nThis website provides the data used for validation in these four phases, as well as simulation results from multiple participants.",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/1574498"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    }
+  ],
+  "title": "- Analysis of a fixed-bottom cylinder in a wave basin",
+  "url": "https://www.osti.gov/biblio/1574498"
+}

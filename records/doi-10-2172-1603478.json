@@ -1,0 +1,86 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Gaertner\",\"given\":\"Evan\",\"name\":\"Gaertner, Evan\",\"orcid\":\"0000-0001-6033-2654\"},{\"name\":\"USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office\"},{\"affiliation\":\"Technical University of Denmark, Lyngby (Denmark)\",\"family\":\"Rinker\",\"given\":\"Jennifer\",\"name\":\"Rinker, Jennifer\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Sethuraman\",\"given\":\"Latha\",\"name\":\"Sethuraman, Latha\",\"orcid\":\"0000-0001-6270-0430\"},{\"affiliation\":\"Technical University of Denmark, Lyngby (Denmark)\",\"family\":\"Zahle\",\"given\":\"Frederik\",\"name\":\"Zahle, Frederik\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Anderson\",\"given\":\"Benjamin\",\"name\":\"Anderson, Benjamin\",\"orcid\":\"0000-0003-3619-9042\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Barter\",\"given\":\"Garrett\",\"name\":\"Barter, Garrett\",\"orcid\":\"0000-0001-7757-8853\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Abbas\",\"given\":\"Nikhar\",\"name\":\"Abbas, Nikhar\"},{\"affiliation\":\"Technical University of Denmark, Lyngby (Denmark)\",\"family\":\"Meng\",\"given\":\"Fanzhong\",\"name\":\"Meng, Fanzhong\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Bortolotti\",\"given\":\"Pietro\",\"name\":\"Bortolotti, Pietro\",\"orcid\":\"0000-0002-8515-9488\"},{\"affiliation\":\"Technical University of Denmark, Lyngby (Denmark)\",\"family\":\"Skrzypinski\",\"given\":\"Witold\",\"name\":\"Skrzypinski, Witold\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Scott\",\"given\":\"George\",\"name\":\"Scott, George\",\"orcid\":\"0000-0002-7983-3050\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Feil\",\"given\":\"Roland\",\"name\":\"Feil, Roland\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Bredmose\",\"given\":\"Henrik\",\"name\":\"Bredmose, Henrik\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Dykes\",\"given\":\"Katherine\",\"name\":\"Dykes, Katherine\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Shields\",\"given\":\"Matthew\",\"name\":\"Shields, Matthew\",\"orcid\":\"0000-0002-0698-3816\"},{\"affiliation\":\"University of Maine\",\"family\":\"Allen\",\"given\":\"Christopher\",\"name\":\"Allen, Christopher\"},{\"affiliation\":\"University of Maine\",\"family\":\"Viselli\",\"given\":\"Anthony\",\"name\":\"Viselli, Anthony\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/1603478"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/1603478"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-03-02"
+    },
+    {
+      "key": "publisher",
+      "value": "Office of Scientific and Technical Information (OSTI)"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2172/1603478"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T17:19:27Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2172/1603478"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2172/1603478\",\"https://www.osti.gov/biblio/1603478\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-1603478",
+  "notes": "",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP Task 37: Definition of the IEA 15-Megawatt Offshore Reference Wind Turbine",
+  "url": "https://doi.org/10.2172/1603478"
+}

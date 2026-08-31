@@ -1,0 +1,116 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Kwakye, Daniel\"},{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"},{\"affiliation\":\"HES-SO University of Applied Sciences and Arts Western Switzerland\",\"name\":\"Calbimonte, Jean-Paul\",\"orcid\":\"0000-0002-0364-6945\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.21871066"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:03Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.21871066"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:03Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21871066\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "21871069"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.21871069"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/21871069"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/21871069\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-21871066",
+  "notes": "<p>The wind energy domain is moving, together with broader IEA and open data communities, towards semantic technologies and shared formal ontologies. When those are mature and adopted, existing information modelling efforts may need to map to them. The cost of that alignment depends heavily on decisions made today.</p>\n<p><br />As part of the Swiss-funded project “Exploring ORD practices with the IEA Wind Technology Collaboration Programme”, we are exploring how to better align information modelling efforts in the wind energy domain. In this document, we suggest some development steps for the WRA Data Model that we expect to make future alignment with domain ontologies much easier and cheaper.</p>\n<p><br />This document starts with a description of the added value of semantic alignment and then a summary of our recommendations for the WRA Data Model. These sections are followed by four sections explaining the recommendations in more detail, each consisting of our observation followed by concrete recommendations.</p>",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "CHORD-IEA_Results_WRA_DataModel_20260618.pdf",
+      "url": "https://zenodo.org/records/21871069/files/CHORD-IEA_Results_WRA_DataModel_20260618.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Future-Proofing the WRA Data Model - Recommendations for JSON data modelling that converges with semantic technologies",
+  "url": "https://zenodo.org/records/21871069"
+}

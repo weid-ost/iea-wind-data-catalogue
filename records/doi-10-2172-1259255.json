@@ -1,0 +1,86 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"National Renewable Energy Lab. (NREL), Golden, CO (United States)\"},{\"affiliation\":\"Offshore Renewable Energy Catapult, Blyth, Northumberland (United Kingdom)\",\"family\":\"Smart\",\"given\":\"Gavin\",\"name\":\"Smart, Gavin\"},{\"name\":\"USDOE Office of Energy Efficiency and Renewable Energy (EERE), Wind and Water Technologies Office (EE-4W)\"},{\"affiliation\":\"National Renewable Energy Lab. (NREL), Golden, CO (United States)\",\"family\":\"Smith\",\"given\":\"Aaron\",\"name\":\"Smith, Aaron\"},{\"affiliation\":\"National Renewable Energy Lab. (NREL), Golden, CO (United States)\",\"family\":\"Warner\",\"given\":\"Ethan\",\"name\":\"Warner, Ethan\"},{\"affiliation\":\"SINTEF Energy Research, Trondheim (Norway)\",\"family\":\"Sperstad\",\"given\":\"Iver\",\"name\":\"Sperstad, Iver\"},{\"affiliation\":\"Ecofys, Utrecht (Netherlands). TKI Wind Op Zee\",\"family\":\"Prinsen\",\"given\":\"Bob\",\"name\":\"Prinsen, Bob\"},{\"affiliation\":\"European Commission Joint Research Centre (JRC), Brussels (Belgium)\",\"family\":\"Lacal-Arantegui\",\"given\":\"Roberto\",\"name\":\"Lacal-Arantegui, Roberto\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/1259255"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/1259255"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2016-06-02"
+    },
+    {
+      "key": "publisher",
+      "value": "Office of Scientific and Technical Information (OSTI)"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2172/1259255"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-26T15:26:48Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2172/1259255"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2172/1259255\",\"https://www.osti.gov/biblio/1259255\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-1259255",
+  "notes": "",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 26: Offshore Wind Farm Baseline Documentation",
+  "url": "https://doi.org/10.2172/1259255"
+}

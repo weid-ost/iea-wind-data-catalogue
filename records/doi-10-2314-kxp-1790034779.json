@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Hübner, Gundula\",\"orcid\":\"0000-0002-1027-5222\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2314/kxp:1790034779"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:01Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2314/kxp:1790034779"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:01Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "Open Access"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020"
+    },
+    {
+      "key": "publisher",
+      "value": "[MSH Medical School Hamburg]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2314/kxp:1790034779"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-28T02:05:10Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.tib.eu/suchen/id/TIBKAT:1790034779"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.tib.eu/suchen/id/TIBKAT:1790034779\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2314-kxp-1790034779",
+  "notes": "Diagramm",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "mechanical-engineering-power-engineering"
+    }
+  ],
+  "title": "Verbundvorhaben: Fortführung der deutschen Beteiligung an dem IEA Wind TCP Task 28 - Social Acceptance of Wind (Phase3) : Abschlussbericht : Akronym/Kurzbezeichnung: Task 28 : Teilvorhaben: MSH Medical School Hamburg (MSH)",
+  "url": "https://www.tib.eu/suchen/id/TIBKAT:1790034779",
+  "version": "1.0"
+}

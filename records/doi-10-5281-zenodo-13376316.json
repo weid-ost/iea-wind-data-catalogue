@@ -1,0 +1,112 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Julian Quick\",\"name\":\"Julian Quick\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.13376316"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:29Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.13376316"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-08-26"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.13376315\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.13376316"
+    },
+    {
+      "key": "source_key",
+      "value": "56a50f704dc5d65b"
+    },
+    {
+      "key": "source_system",
+      "value": "ieawind"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"ieawind\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.13376316"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.13376316\",\"https://iea-wind.org/task43/t43-publications/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-13376316",
+  "notes": "How rich metadata schemes can allow for better designs via optimization under uncertainty.",
+  "private": false,
+  "resources": [
+    {
+      "description": "Resolved landing page",
+      "name": "DOI",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.13376316"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Uncertainty and metadata",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.13376316"
+}

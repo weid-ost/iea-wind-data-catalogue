@@ -1,5 +1,14 @@
 {
   "merges": [],
   "note": "Fuzzy matches proposed by `python -m harvest dedupe`. Nothing here has been applied. Confirm one by writing the merge annotation (see docs/runbooks/correct-a-record.md); reject one by leaving it alone.",
-  "proposals": []
+  "proposals": [
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (lozon) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.20218022",
+      "secondary": "10.5281/zenodo.20218023"
+    }
+  ]
 }

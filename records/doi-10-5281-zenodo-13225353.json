@@ -1,0 +1,112 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Fraunhofer IEE\",\"family\":\"Marc-Alexander Lutz\",\"name\":\"Marc-Alexander Lutz\"},{\"affiliation\":\"clockworkX\",\"family\":\"Nicolas Munoz Castellano\",\"name\":\"Nicolas Munoz Castellano\"},{\"affiliation\":\"clockworkX\",\"family\":\"Altug Emiroglu\",\"name\":\"Altug Emiroglu\"},{\"affiliation\":\"clockworkX\",\"family\":\"Markus Duschl\",\"name\":\"Markus Duschl\"},{\"affiliation\":\"ServusNet Informatics Ltd.\",\"family\":\"Des Farren\",\"name\":\"Des Farren\"},{\"affiliation\":\"Electric Power Research Institute\",\"family\":\"Noah Myrent\",\"name\":\"Noah Myrent\"},{\"affiliation\":\"Fraunhofer IEE\",\"family\":\"Berthold Hahn\",\"name\":\"Berthold Hahn\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.13225353"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:29Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.13225353"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-08-05"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.13225352\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.13225353"
+    },
+    {
+      "key": "source_key",
+      "value": "56a50f704dc5d65b"
+    },
+    {
+      "key": "source_system",
+      "value": "ieawind"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"ieawind\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.13225353"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.13225353\",\"https://iea-wind.org/task43/t43-publications/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-13225353",
+  "notes": "This work outlines the findings of the IEA Wind Task 43 sub-group who investigated the degree to which industry standards and guidelines support those activities and disciplines which contribute to higher asset value.",
+  "private": false,
+  "resources": [
+    {
+      "description": "Resolved landing page",
+      "name": "DOI",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.13225353"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "International Energy Agency Wind Task 43 Digitalization: Data Standards Gap Analysis",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.13225353"
+}

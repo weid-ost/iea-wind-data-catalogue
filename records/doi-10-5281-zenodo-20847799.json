@@ -1,0 +1,124 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"}]"
+    },
+    {
+      "key": "container",
+      "value": "The Science of Making Torque from Wind Conference 2026"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.20847799"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:03Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.20847799"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:03Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.20847799\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "20847800"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.20847800"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/20847800"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/20847800\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-20847799",
+  "notes": "<p><span>In this key-note presentation at the TORQUE2026 conference, I</span><span> talked about how open innovation and data sharing can advance wind energy innovation, in particular related to Structural Health Monitoring. I talked about:</span></p>\n<p><span>(1) Digitalisation is about creating value from data. </span></p>\n<p><span>(2) Through interviews with practitioners, we found that key needs are introducing common vocabulary and data models, fostering a digital organisational culture and digital skills, and providing platforms or opportunities to innovate together.</span></p>\n<p><span>(3) The WeDoWind open innovation ecosystem attempts to address these needs </span><span>by providing a platform to share data and code, and to work on common vocabularies and recommendations for sharing data, and to solve data-related industry problems collaboratively.</span></p>",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "TORQUE2026_SarahBarber_20260604.pdf",
+      "url": "https://zenodo.org/records/20847800/files/TORQUE2026_SarahBarber_20260604.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "open-innovation"
+    }
+  ],
+  "title": "How open innovation and data sharing can advance Structural Health Monitoring in wind energy",
+  "url": "https://zenodo.org/records/20847800"
+}

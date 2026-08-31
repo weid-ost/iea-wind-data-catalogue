@@ -2,103 +2,251 @@
   "cache": {
     "hit_rate": 0.0,
     "hits": 0,
-    "misses": 0
+    "misses": 7
   },
   "dropped_dois": [],
-  "events_appended": 0,
-  "finished_at": "2026-08-31T20:42:00Z",
+  "events_appended": 30,
+  "finished_at": "2026-08-31T23:03:29Z",
   "harvest_version": "0.1.0",
   "limit": 5,
-  "notices": [],
+  "notices": [
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/annual-report-2025/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-25",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/annual-report-2025/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-25",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task41/t41-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-41",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task41/t41-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task41/t41-publications/danish-iea-task-41-eudp-funded-project/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-41",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task41/t41-publications/danish-iea-task-41-eudp-funded-project/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task42/t42-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-42",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task42/t42-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-42",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task43/task-43-open-data/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-43",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task43/task-43-open-data/"
+    },
+    {
+      "identity_key": "10.5281/zenodo.1234566",
+      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
+      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/doi-10-5281-zenodo-1234566.yaml",
+      "type": "annotation_pending"
+    },
+    {
+      "identity_key": "10.5281/zenodo.1234566",
+      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
+      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/doi-10-5281-zenodo-1234566.yaml",
+      "type": "annotation_pending"
+    },
+    {
+      "identity_key": "10.5281/zenodo.1234566",
+      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
+      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/doi-10-5281-zenodo-1234566.yaml",
+      "type": "annotation_pending"
+    },
+    {
+      "identity_key": "github|IEA-Task-43/digital-wra-data-standard",
+      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
+      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/github-iea-task-43-digital-wra-data-standard.yaml",
+      "type": "annotation_pending"
+    },
+    {
+      "identity_key": "github|IEA-Task-43/digital-wra-data-standard",
+      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
+      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/github-iea-task-43-digital-wra-data-standard.yaml",
+      "type": "annotation_pending"
+    },
+    {
+      "identity_key": "github|IEA-Task-43/digital-wra-data-standard",
+      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
+      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/github-iea-task-43-digital-wra-data-standard.yaml",
+      "type": "annotation_pending"
+    },
+    {
+      "identity_key": "hash|1f0e3dad99908345",
+      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
+      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/hash-1f0e3dad99908345.yaml",
+      "type": "annotation_pending"
+    },
+    {
+      "identity_key": "hash|1f0e3dad99908345",
+      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
+      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/hash-1f0e3dad99908345.yaml",
+      "type": "annotation_pending"
+    }
+  ],
   "ok": true,
-  "pending_extraction": 0,
+  "pending_extraction": 7,
   "records": {
     "pruned": 0,
-    "total": 0,
+    "total": 30,
     "unchanged": 0,
-    "written": 0
+    "written": 30
   },
   "sources": {
     "crossref": {
-      "changed": 0,
+      "changed": 5,
       "enabled": true,
-      "errors": [
-        "not implemented: harvest.adapters.crossref is a stub — owner: Track C (crossref)"
-      ],
-      "implemented": false,
+      "errors": [],
+      "implemented": true,
       "reachable": true,
-      "seen": 0,
+      "seen": 5,
       "skipped_unchanged": 0
     },
     "datacite": {
-      "changed": 0,
+      "changed": 5,
       "enabled": true,
-      "errors": [
-        "not implemented: harvest.adapters.datacite is a stub — owner: Track B (datacite)"
-      ],
-      "implemented": false,
+      "errors": [],
+      "implemented": true,
       "reachable": true,
-      "seen": 0,
+      "seen": 5,
       "skipped_unchanged": 0
     },
     "github": {
-      "changed": 0,
+      "changed": 5,
       "enabled": true,
-      "errors": [
-        "not implemented: harvest.adapters.github is a stub — owner: Track D (github)"
-      ],
-      "implemented": false,
+      "errors": [],
+      "implemented": true,
       "reachable": true,
-      "seen": 0,
+      "seen": 5,
       "skipped_unchanged": 0
     },
     "ieawind": {
-      "changed": 0,
+      "changed": 5,
       "enabled": true,
-      "errors": [
-        "not implemented: harvest.adapters.ieawind is a stub — owner: Track F (ieawind, Tier 3)"
-      ],
-      "implemented": false,
+      "errors": [],
+      "implemented": true,
       "reachable": true,
-      "seen": 0,
+      "seen": 5,
       "skipped_unchanged": 0
     },
     "osti": {
-      "changed": 0,
+      "changed": 5,
       "enabled": true,
-      "errors": [
-        "not implemented: harvest.adapters.osti is a stub — owner: Track E (osti)"
-      ],
-      "implemented": false,
+      "errors": [],
+      "implemented": true,
       "reachable": true,
-      "seen": 0,
+      "seen": 5,
       "skipped_unchanged": 0
     },
     "wdh": {
       "changed": 0,
       "enabled": true,
       "errors": [
-        "not implemented: harvest.adapters.wdh is a stub — owner: Track G (wdh)"
+        "Wind Data Hub listing is not machine-readable without credentials (Spike 4, verified 2026-08-31, re-verified 2026-09-01): /api/info advertises an AWS API Gateway that answers 403 'Missing Authentication Token', and the site's /api/datasets/_search proxy rejects GET with 404 and unauthenticated POST with 419 (CSRF). Set $WDH_API_TOKEN if a credential is ever issued; the adapter is disabling itself for this run and existing records are untouched."
       ],
-      "implemented": false,
-      "reachable": true,
+      "implemented": true,
+      "reachable": false,
       "seen": 0,
       "skipped_unchanged": 0
     },
     "zenodo": {
-      "changed": 0,
+      "changed": 5,
       "enabled": true,
-      "errors": [
-        "not implemented: harvest.adapters.zenodo is a stub — owner: Track A (zenodo)"
-      ],
-      "implemented": false,
+      "errors": [],
+      "implemented": true,
       "reachable": true,
-      "seen": 0,
+      "seen": 5,
       "skipped_unchanged": 0
     }
   },
-  "started_at": "2026-08-31T20:42:00Z",
-  "unmapped_licenses": [],
-  "unreachable_sources": [],
+  "started_at": "2026-08-31T23:03:00Z",
+  "unmapped_licenses": [
+    {
+      "identity_key": "10.2314/kxp:1790028361",
+      "license_raw": "Open Access",
+      "name": "doi-10-2314-kxp-1790028361"
+    },
+    {
+      "identity_key": "10.2314/kxp:1790034779",
+      "license_raw": "Open Access",
+      "name": "doi-10-2314-kxp-1790034779"
+    }
+  ],
+  "unreachable_sources": [
+    "wdh"
+  ],
   "validation_violations": []
 }

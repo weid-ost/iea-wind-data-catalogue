@@ -1,0 +1,86 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\"},{\"affiliation\":\"Technische Univ., Munich (Germany)\",\"family\":\"Kainz\",\"given\":\"Samuel\",\"name\":\"Kainz, Samuel\"},{\"name\":\"USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"family\":\"Quick\",\"given\":\"Julian\",\"name\":\"Quick, Julian\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"family\":\"Souza de Alencar\",\"given\":\"Mauricio\",\"name\":\"Souza de Alencar, Mauricio\"},{\"affiliation\":\"Delft Univ. of Technology (Netherlands)\",\"family\":\"Sanchez Perez Moreno\",\"given\":\"Sebastian\",\"name\":\"Sanchez Perez Moreno, Sebastian\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"family\":\"Dykes\",\"given\":\"Katherine\",\"name\":\"Dykes, Katherine\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Bay\",\"given\":\"Christopher\",\"name\":\"Bay, Christopher\",\"orcid\":\"0000-0002-2658-5559\"},{\"affiliation\":\"Delft Univ. of Technology (Netherlands)\",\"family\":\"Zaaijer\",\"given\":\"Michiel\",\"name\":\"Zaaijer, Michiel\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Bortolotti\",\"given\":\"Pietro\",\"name\":\"Bortolotti, Pietro\",\"orcid\":\"0000-0002-8515-9488\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/2333634"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/2333634"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-03-29"
+    },
+    {
+      "key": "publisher",
+      "value": "Office of Scientific and Technical Information (OSTI)"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2172/2333634"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T18:52:31Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2172/2333634"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2172/2333634\",\"https://www.osti.gov/biblio/2333634\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-2333634",
+  "notes": "",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP Task 55: The IEA Wind 740-10-MW Reference Offshore Wind Plants",
+  "url": "https://doi.org/10.2172/2333634"
+}

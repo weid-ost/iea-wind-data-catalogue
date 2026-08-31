@@ -1,0 +1,86 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Hall\",\"given\":\"Matthew\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"name\":\"USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office\"},{\"name\":\"Sustainable Energy Authority of Ireland\"},{\"name\":\"Korea Institute of Energy Technology Evaluation and Planning (KETEP)\"},{\"name\":\"Ministry of Trade, Industry & Energy (MOTIE) of the Republic of Korea\"},{\"name\":\"European Union's Horizon 2020\"},{\"name\":\"Equinor-UiS Akademia Program\"},{\"name\":\"Research Council of Norway\"},{\"name\":\"Danish Energy Agency\"},{\"name\":\"Agence de l'Environnement et de la Maîtrise de l'Energie (ADEME)\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Lozon\",\"given\":\"Ericka\",\"name\":\"Lozon, Ericka\"},{\"affiliation\":\"University College Cork (Ireland)\",\"family\":\"Devoy McAuliffe\",\"given\":\"Fiona\",\"name\":\"Devoy McAuliffe, Fiona\"},{\"affiliation\":\"Delft Univ. of Technology (Netherlands); Offshore Renewable Energy Catapult (United Kingdom)\",\"family\":\"Baudino Bessone\",\"given\":\"Matteo\",\"name\":\"Baudino Bessone, Matteo\"},{\"affiliation\":\"PEAK Wind (Denmark)\",\"family\":\"Bayati\",\"given\":\"Ilmas\",\"name\":\"Bayati, Ilmas\"},{\"affiliation\":\"First Energy Development / Encomara (United Kingdom)\",\"family\":\"Bowie\",\"given\":\"Malcolm\",\"name\":\"Bowie, Malcolm\"},{\"affiliation\":\"IFP Energies Nouvelles, Rueil-Malmaison (France)\",\"family\":\"Bozonnet\",\"given\":\"Pauline\",\"name\":\"Bozonnet, Pauline\"},{\"affiliation\":\"IFP Energies Nouvelles, Rueil-Malmaison (France)\",\"family\":\"Castagné\",\"given\":\"Michel\",\"name\":\"Castagné, Michel\"},{\"affiliation\":\"Technical Univ. of Denmark, Roskilde (Denmark)\",\"family\":\"Feng\",\"given\":\"Ju\",\"name\":\"Feng, Ju\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Housner\",\"given\":\"Stein\",\"name\":\"Housner, Stein\",\"orcid\":\"0000-0002-5427-9962\"},{\"affiliation\":\"Univ. of Stavanger (Norway)\",\"family\":\"Janocha\",\"given\":\"Marek\",\"name\":\"Janocha, Marek\"},{\"affiliation\":\"Univ. of Agder (Norway)\",\"family\":\"Jiang\",\"given\":\"Zhiyu\",\"name\":\"Jiang, Zhiyu\"},{\"affiliation\":\"Inst. for Advanced Engineering (South Korea)\",\"family\":\"Kim\",\"given\":\"Yong\",\"name\":\"Kim, Yong\"},{\"affiliation\":\"Shimizu Corporation (Japan)\",\"family\":\"Ko\",\"given\":\"Donghee\",\"name\":\"Ko, Donghee\"},{\"affiliation\":\"SINTEF Energy Research, Trondheim (Norway)\",\"family\":\"Kölle\",\"given\":\"Konstanze\",\"name\":\"Kölle, Konstanze\"},{\"affiliation\":\"Univ. of Stavanger (Norway)\",\"family\":\"Lee\",\"given\":\"Chern\",\"name\":\"Lee, Chern\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Lekkala\",\"given\":\"Malakonda Reddy\",\"name\":\"Lekkala, Malakonda Reddy\"},{\"affiliation\":\"Univ. of Agder (Norway)\",\"family\":\"Liang\",\"given\":\"Guodong\",\"name\":\"Liang, Guodong\"},{\"affiliation\":\"Univ. of Stuttgart (Germany)\",\"family\":\"Mahfouz\",\"given\":\"Mohammad\",\"name\":\"Mahfouz, Mohammad\"},{\"affiliation\":\"Interocean (United Kingdom)\",\"family\":\"Mohan\",\"given\":\"Madhan\",\"name\":\"Mohan, Madhan\"},{\"affiliation\":\"Bureau of Ocean Energy Management, Washington, DC (United States)\",\"family\":\"O'Connell\",\"given\":\"Daniel\",\"name\":\"O'Connell, Daniel\"},{\"affiliation\":\"Univ. of Stavanger (Norway)\",\"family\":\"Ong\",\"given\":\"Muk\",\"name\":\"Ong, Muk\"},{\"affiliation\":\"SBM Offshore (Monaco)\",\"family\":\"Prieur\",\"given\":\"Julien\",\"name\":\"Prieur, Julien\"},{\"affiliation\":\"Norwegian Univ. of Science and Technology, Trondheim (Norway)\",\"family\":\"Rajasree\",\"given\":\"Vishnu\",\"name\":\"Rajasree, Vishnu\"},{\"affiliation\":\"Univ. of Stavanger (Norway)\",\"family\":\"Schnepf\",\"given\":\"Anja\",\"name\":\"Schnepf, Anja\"},{\"affiliation\":\"PEAK Wind (Denmark)\",\"family\":\"Snedker\",\"given\":\"Thor\",\"name\":\"Snedker, Thor\"},{\"affiliation\":\"Bureau of Ocean Energy Management, Washington, DC (United States)\",\"family\":\"Thurston-Keller\",\"given\":\"Jean\",\"name\":\"Thurston-Keller, Jean\"},{\"affiliation\":\"Gavin & Doherty Geosolutions (Ireland)\",\"family\":\"Wright\",\"given\":\"Chris\",\"name\":\"Wright, Chris\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/2382797"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/2382797"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Office of Scientific and Technical Information (OSTI)"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2172/2382797"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T18:59:36Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2172/2382797"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2172/2382797\",\"https://www.osti.gov/biblio/2382797\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-2382797",
+  "notes": "",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "The IEA Wind Task 49 Reference Floating Wind Array Design Basis",
+  "url": "https://doi.org/10.2172/2382797"
+}

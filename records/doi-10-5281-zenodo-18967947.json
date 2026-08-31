@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)\",\"family\":\"Rettenmeier\",\"given\":\"Andreas\",\"name\":\"Rettenmeier, Andreas\",\"orcid\":\"0000-0002-9953-5392\"},{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)\",\"family\":\"Lott\",\"given\":\"Sarah\",\"name\":\"Lott, Sarah\"},{\"family\":\"Knaus\",\"given\":\"Hermann\",\"name\":\"Knaus, Hermann\",\"orcid\":\"0000-0002-6584-7363\"},{\"family\":\"Hohaus\",\"given\":\"Jonas\",\"name\":\"Hohaus, Jonas\",\"orcid\":\"0009-0009-1403-5937\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.18967947"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:01Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.18967947"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:01Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21037963\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.18967948\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.18967947"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-27T07:07:43Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.18967947"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.18967947\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-18967947",
+  "notes": "These files include the terrain data and measurement data that are released to the participants of the WINSENT complex terrain benchmark, which is one of the benchmarks of the IEA Wind Task 57 (JAM) activities. Within the benchmark the participants simulate in phase I the wind flow from the valley to the test site which is located on a forest-free plateau approx. 150m higher. The slope, known as the Albtrauf, is forested terrain, why different flow conditions with high and low leaf area index are taken into account. The detailed description of the benchmark is described here:  https://winsent-benchmark.readthedocs.io/en/latest/",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "WINSENT complex terrain benchmark - Phase I",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.18967947",
+  "version": "Phase I, V1.0"
+}

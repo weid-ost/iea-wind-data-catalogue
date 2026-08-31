@@ -1,0 +1,118 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.10944126"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:10Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.10944126"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-37\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:10Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Apache-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-11"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10944127\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindSystems/IEA-22-280-RWT"
+    },
+    {
+      "key": "source_key",
+      "value": "6923180ed0f52301867261a0238cc935e60da935:v1.1.0:2464eb2ff98df051"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindSystems/IEA-22-280-RWT"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindSystems/IEA-22-280-RWT\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-37"
+    }
+  ],
+  "license_id": "apache",
+  "name": "doi-10-5281-zenodo-10944126",
+  "notes": "Repository for the IEA 22-MW offshore reference wind turbine developed by the IEA Wind Task 55 REFWIND",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindSystems/IEA-22-280-RWT"
+    },
+    {
+      "format": "release",
+      "name": "Release v1.1.0",
+      "url": "https://github.com/IEAWindSystems/IEA-22-280-RWT/releases/tag/v1.1.0"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindSystems/IEA-22-280-RWT",
+  "url": "https://github.com/IEAWindSystems/IEA-22-280-RWT",
+  "version": "v1.1.0"
+}

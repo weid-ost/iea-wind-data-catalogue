@@ -1,0 +1,86 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Giebel\",\"given\":\"Gregor\",\"name\":\"Giebel, Gregor\",\"orcid\":\"0000-0002-4453-8756\"},{\"family\":\"Shaw\",\"given\":\"Will\",\"name\":\"Shaw, Will\",\"orcid\":\"0000-0002-9979-1089\"},{\"family\":\"Frank\",\"given\":\"Helmut\",\"name\":\"Frank, Helmut\"},{\"family\":\"Pinson\",\"given\":\"Pierre\",\"name\":\"Pinson, Pierre\"},{\"family\":\"Draxl\",\"given\":\"Caroline\",\"name\":\"Draxl, Caroline\"},{\"family\":\"Zack\",\"given\":\"John\",\"name\":\"Zack, John\"},{\"family\":\"Möhrlen\",\"given\":\"Corinna\",\"name\":\"Möhrlen, Corinna\"},{\"family\":\"Kariniotakis\",\"given\":\"Georges\",\"name\":\"Kariniotakis, Georges\",\"orcid\":\"0000-0002-5261-0172\"},{\"family\":\"Bessa\",\"given\":\"Ricardo\",\"name\":\"Bessa, Ricardo\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/egusphere-egu2020-14253"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/egusphere-egu2020-14253"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:02Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-03-23"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/egusphere-egu2020-14253"
+    },
+    {
+      "key": "source_key",
+      "value": "2020-03-23T19:07:33Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/egusphere-egu2020-14253"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/egusphere-egu2020-14253\",\"https://meetingorganizer.copernicus.org/EGU2020/EGU2020-14253.html\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-5194-egusphere-egu2020-14253",
+  "notes": "<p> &amp;lt;p&amp;gt;Wind power forecasts have been used operatively for over 20 years. Despite this fact, there are still several possibilities to improve the forecasts, both from the weather prediction side and from the usage of the forecasts. The International Energy Agency (IEA) Wind Task on Wind Power Forecasting organises international collaboration, among national weather centres with an interest and/or large projects on wind forecast improvements (NOAA, DWD, UK MetOffice, ...), forecast vendors and forecast users.&amp;lt;br&amp;gt;Collaboration is open to IEA Wind member states, 12 countries are already therein.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;The Task is divided in three work packages: Firstly, a collaboration on the improvement of the scientific basis for the wind predictions themselves. This includes numerical weather prediction model physics, but also widely distributed information on accessible datasets. Secondly, we will be aiming at an international pre-standard (an IEA Recommended Practice) on benchmarking and comparing wind power forecasts, including probabilistic forecasts. This WP will also organise benchmarks for NWP models. Thirdly, we will be engaging end users aiming at dissemination of the best practice in the usage of wind power predictions.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;The main result is the IEA Recommended Practice for Selecting Renewable Power Forecasting Solutions. This document in three parts (Forecast solution selection process, and Designing and executing forecasting benchmarks and trials, and their Evaluation) takes its outset from the recurrent problem at forecast user companies of how to choose a forecast vendor. The first report describes how to tackle the general situation, while the second report specifically describes how to set up a forecasting trial so that the result is what the client intended. Many of the pitfalls which we have seen over the years, are avoided. &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;Other results include a paper on possible uses of uncertainty forecasts, an assessment of the uncertainty chain within the forecasts, and meteorological data on an information portal for wind power forecasting. This meteorological data is used for a benchmark exercise, to be announced at the conference. The poster will present the latest developments from the Task, and announce the next activities.&amp;lt;/p&amp;gt; </p>",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 36 Forecasting",
+  "url": "https://doi.org/10.5194/egusphere-egu2020-14253"
+}

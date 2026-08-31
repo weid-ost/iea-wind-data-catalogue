@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Unknown\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2314/kxp:1790028361"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:01Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2314/kxp:1790028361"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:01Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "Open Access"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020"
+    },
+    {
+      "key": "publisher",
+      "value": "[IZES gGmbH - Institut für ZukunftsEnergie- und Stoffstromsysteme]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2314/kxp:1790028361"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-28T02:05:10Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.tib.eu/suchen/id/TIBKAT:1790028361"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.tib.eu/suchen/id/TIBKAT:1790028361\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2314-kxp-1790028361",
+  "notes": "",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "mechanical-engineering-power-engineering"
+    }
+  ],
+  "title": "Verbundvorhaben: Fortführung der deutschen Beteiligung an dem IEA Wind TCP Task 28 - Social Acceptance of Wind (Phase3) - Teilvorhaben IZES; IEA Wind - Technology Collaboration Programme for Co-operation in the Research, Development, and Deployment of Wind Energy Systems : Abschlussbericht : Akronym/Kurzbezeichnung: Task 28 : Laufzeit: 01.07.2017-30.04.2020",
+  "url": "https://www.tib.eu/suchen/id/TIBKAT:1790028361",
+  "version": "1.0"
+}

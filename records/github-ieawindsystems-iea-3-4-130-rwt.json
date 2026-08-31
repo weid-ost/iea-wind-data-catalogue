@@ -1,0 +1,104 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-08-31T23:03:11Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEAWindSystems/IEA-3.4-130-RWT"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-37\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-08-31T23:03:11Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Apache-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-03-07"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindSystems/IEA-3.4-130-RWT"
+    },
+    {
+      "key": "source_key",
+      "value": "05cceeef686423d4e28763fa1459f9658d64b12f::3090c0a3c1c1353d"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindSystems/IEA-3.4-130-RWT"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindSystems/IEA-3.4-130-RWT\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-37"
+    }
+  ],
+  "license_id": "apache",
+  "name": "github-ieawindsystems-iea-3-4-130-rwt",
+  "notes": "This repository contains the model data of the land-based reference wind turbine developed within IEA Wind Task 37",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindSystems/IEA-3.4-130-RWT"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindSystems/IEA-3.4-130-RWT",
+  "url": "https://github.com/IEAWindSystems/IEA-3.4-130-RWT"
+}
