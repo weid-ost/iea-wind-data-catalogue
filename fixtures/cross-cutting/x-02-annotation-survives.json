@@ -1,0 +1,250 @@
+{
+  "fixture_id": "x-02-annotation-survives",
+  "fixture_kind": "record",
+  "case": "Local task attribution and a curator note survive a re-scrape that replaces source.* wholesale",
+  "raw": "raw/x-02-annotation-survives.json",
+  "identity_key": "10.5281/zenodo.2000001",
+  "identity_keys": [
+    "10.5281/zenodo.2000001"
+  ],
+  "expected_record_names": [
+    "doi-10-5281-zenodo-2000001"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Andersson, Karin\"}]"
+      },
+      {
+        "key": "curator_notes",
+        "value": "[{\"added_at\":\"2026-08-25T08:05:00Z\",\"field\":\"title\",\"note\":\"The first release omitted 'offshore'; corrected upstream on 2026-08-27.\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.2000001"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.2000001"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-31\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-27T09:00:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2023-03-01"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "2000002"
+      },
+      {
+        "key": "source_key",
+        "value": "4"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/2000002"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/2000002\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-31"
+      }
+    ],
+    "license_id": "cc-by",
+    "name": "doi-10-5281-zenodo-2000001",
+    "notes": "<p>Second release, with the nacelle lidar channel added.</p>",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [
+      {
+        "name": "nacelle-lidar"
+      },
+      {
+        "name": "wake"
+      }
+    ],
+    "title": "Wake measurements at the Lillgrund offshore wind farm",
+    "url": "https://zenodo.org/records/2000002"
+  },
+  "expected_records": {
+    "doi-10-5281-zenodo-2000001": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Andersson, Karin\"}]"
+        },
+        {
+          "key": "curator_notes",
+          "value": "[{\"added_at\":\"2026-08-25T08:05:00Z\",\"field\":\"title\",\"note\":\"The first release omitted 'offshore'; corrected upstream on 2026-08-27.\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.2000001"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.2000001"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-31\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-27T09:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2023-03-01"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "resource_kind",
+          "value": "dataset"
+        },
+        {
+          "key": "source_id",
+          "value": "2000002"
+        },
+        {
+          "key": "source_key",
+          "value": "4"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/2000002"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/2000002\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-31"
+        }
+      ],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-2000001",
+      "notes": "<p>Second release, with the nacelle lidar channel added.</p>",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [
+        {
+          "name": "nacelle-lidar"
+        },
+        {
+          "name": "wake"
+        }
+      ],
+      "title": "Wake measurements at the Lillgrund offshore wind farm",
+      "url": "https://zenodo.org/records/2000002"
+    }
+  },
+  "expected_notices": []
+}

@@ -1,0 +1,272 @@
+{
+  "fixture_id": "x-23-link-rot",
+  "fixture_kind": "record",
+  "case": "A dead task page and a dead file link: reported in the run report, the record retained untouched",
+  "raw": "raw/x-23-link-rot.json",
+  "identity_key": "10.5281/zenodo.8000008",
+  "identity_keys": [
+    "10.5281/zenodo.8000008"
+  ],
+  "expected_record_names": [
+    "doi-10-5281-zenodo-8000008"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Nowak, Piotr\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.8000008"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:14:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.8000008"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-11\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:14:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2019"
+      },
+      {
+        "key": "resource_kind",
+        "value": "report"
+      },
+      {
+        "key": "source_id",
+        "value": "task11/publications#7"
+      },
+      {
+        "key": "source_key",
+        "value": "9a8b7c6d5e4f3021"
+      },
+      {
+        "key": "source_system",
+        "value": "ieawind"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"ieawind\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://iea-wind.org/task11/publications/"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://iea-wind.org/task11/publications/\",\"https://zenodo.org/records/8000009\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-11"
+      }
+    ],
+    "license_id": "cc-by",
+    "name": "doi-10-5281-zenodo-8000008",
+    "notes": "",
+    "private": false,
+    "resources": [
+      {
+        "format": "pdf",
+        "name": "task11-final.pdf",
+        "url": "https://iea-wind.org/wp-content/uploads/task11-final.pdf"
+      }
+    ],
+    "state": "active",
+    "tags": [],
+    "title": "Task 11 final technical report",
+    "url": "https://iea-wind.org/task11/publications/"
+  },
+  "expected_records": {
+    "doi-10-5281-zenodo-8000008": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.8000008"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:14:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.8000008"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-11\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:14:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2019"
+        },
+        {
+          "key": "resource_kind",
+          "value": "report"
+        },
+        {
+          "key": "source_id",
+          "value": "task11/publications#7"
+        },
+        {
+          "key": "source_key",
+          "value": "9a8b7c6d5e4f3021"
+        },
+        {
+          "key": "source_system",
+          "value": "ieawind"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"ieawind\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://iea-wind.org/task11/publications/"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://iea-wind.org/task11/publications/\",\"https://zenodo.org/records/8000009\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-11"
+        }
+      ],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-8000008",
+      "notes": "",
+      "private": false,
+      "resources": [
+        {
+          "format": "pdf",
+          "name": "task11-final.pdf",
+          "url": "https://iea-wind.org/wp-content/uploads/task11-final.pdf"
+        }
+      ],
+      "state": "active",
+      "tags": [],
+      "title": "Task 11 final technical report",
+      "url": "https://iea-wind.org/task11/publications/"
+    }
+  },
+  "expected_notices": [],
+  "expected_link_check": {
+    "dead_urls": [
+      "https://iea-wind.org/task11/publications/",
+      "https://iea-wind.org/wp-content/uploads/task11-final.pdf"
+    ],
+    "dead_by_record": {
+      "doi-10-5281-zenodo-8000008": [
+        "https://iea-wind.org/task11/publications/",
+        "https://iea-wind.org/wp-content/uploads/task11-final.pdf"
+      ]
+    },
+    "unreachable_hosts": [
+      "iea-wind.org"
+    ],
+    "notices": [
+      {
+        "type": "dead_link",
+        "record": "doi-10-5281-zenodo-8000008",
+        "url": "https://iea-wind.org/task11/publications/",
+        "status_code": 404,
+        "error": null,
+        "gone": true,
+        "action": "record retained; source link unreachable (ADR-0027)"
+      },
+      {
+        "type": "dead_link",
+        "record": "doi-10-5281-zenodo-8000008",
+        "url": "https://iea-wind.org/wp-content/uploads/task11-final.pdf",
+        "status_code": 404,
+        "error": null,
+        "gone": true,
+        "action": "record retained; source link unreachable (ADR-0027)"
+      },
+      {
+        "type": "source_unreachable",
+        "host": "iea-wind.org",
+        "action": "every checked link on this host failed; records retained"
+      }
+    ]
+  }
+}

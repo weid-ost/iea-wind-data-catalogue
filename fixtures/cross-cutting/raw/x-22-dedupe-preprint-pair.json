@@ -1,0 +1,91 @@
+{
+  "note": "Fixture cr-04. A Crossref posted-content preprint declaring IsPreprintOf the published article. Both are real, citable works with their own DOIs, so neither is deleted — but the catalogue should list the published version and LINK the preprint from it, not show two near-identical entries. The relation is an explicit, machine-stated join key, so this merge is automatic; the direction is fixed by the relation, not by precedence.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:12:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5194/egusphere-2023-1234",
+      "source_system": "crossref",
+      "source_id": "10.5194/egusphere-2023-1234",
+      "source_key": "2023-06-01T00:00:00Z",
+      "actor": "harvest/crossref",
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
+      "source": {
+        "title": "Turbulence intensity in the wake of a floating offshore turbine",
+        "doi": "10.5194/egusphere-2023-1234",
+        "url": "https://doi.org/10.5194/egusphere-2023-1234",
+        "source_urls": [
+          "https://doi.org/10.5194/egusphere-2023-1234"
+        ],
+        "authors": [
+          {
+            "name": "Okafor, Chidi"
+          }
+        ],
+        "publisher": "Copernicus GmbH",
+        "published_date": "2023-06-01",
+        "container": "EGUsphere",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "access_status": "open",
+        "related_identifiers": [
+          {
+            "relation": "IsPreprintOf",
+            "identifier": "10.5194/wes-9-101-2024",
+            "identifier_type": "DOI"
+          }
+        ],
+        "withdrawn": false
+      }
+    },
+    {
+      "observed_at": "2026-08-24T03:12:30Z",
+      "event_type": "scraped",
+      "identity_key": "10.5194/wes-9-101-2024",
+      "source_system": "crossref",
+      "source_id": "10.5194/wes-9-101-2024",
+      "source_key": "2024-02-14T00:00:00Z",
+      "actor": "harvest/crossref",
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
+      "source": {
+        "title": "Turbulence intensity in the wake of a floating offshore wind turbine",
+        "doi": "10.5194/wes-9-101-2024",
+        "url": "https://doi.org/10.5194/wes-9-101-2024",
+        "source_urls": [
+          "https://doi.org/10.5194/wes-9-101-2024"
+        ],
+        "authors": [
+          {
+            "name": "Okafor, Chidi"
+          }
+        ],
+        "publisher": "Copernicus GmbH",
+        "published_date": "2024-02-14",
+        "container": "Wind Energy Science",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "access_status": "open",
+        "withdrawn": false
+      }
+    }
+  ],
+  "expected_merges": [
+    {
+      "primary": "10.5194/wes-9-101-2024",
+      "secondary": "10.5194/egusphere-2023-1234",
+      "kind": "preprint-pair",
+      "automatic": true
+    }
+  ],
+  "merge_observed_at": "2026-08-31T12:00:00Z"
+}

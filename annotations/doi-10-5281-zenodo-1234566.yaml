@@ -1,0 +1,43 @@
+# Sample annotation — every kind of local addition, on one identity.
+#
+# This is the identity of the reference fixture, fixtures/zenodo/zen-01-canonical.
+# Until the Zenodo adapter has harvested it, every entry below is reported as
+# `annotation_pending` in state/last-run.json and applied by the run that first
+# sees the record. Nothing here fabricates a record.
+#
+# Reference: docs/runbooks/correct-a-record.md §3.
+
+identity_key: "10.5281/zenodo.1234566"
+actor: "curator:tom"
+
+annotations:
+
+  # §3.1 — a task attribution the source does not state. SET-VALUED: this
+  # unions with the task-43 the Zenodo community implies; neither erases the
+  # other (ADR-0038, fixture x-04).
+  - local:
+      iea_task: ["task-49"]
+    note: "Task 49 attribution from the IDEA workshop participant list"
+    observed_at: "2026-08-28T09:00:00Z"
+
+  # §3.2 — a known-wrong upstream licence. The wrong value STAYS on the page,
+  # verbatim; the note is rendered beside it (fixture x-10).
+  - local:
+      curator_notes:
+        - field: license_id
+          note: >-
+            OST note: the licence stated at source appears incorrect; the
+            archive's own LICENCE file says CC-BY-NC-4.0. Reported upstream
+            2026-08-28.
+          added_at: "2026-08-28T09:05:00Z"
+    note: "known-wrong upstream licence; reported at source 2026-08-28"
+    observed_at: "2026-08-28T09:05:00Z"
+
+  # §3.4 — a related link. Lands in extras.local_links, namespaced so it can
+  # never be confused with something a source supplied.
+  - local:
+      links:
+        - url: "https://github.com/IEA-Task-43/digital-wra-data-standard"
+          label: "Reference implementation of the data standard"
+    note: "cross-link to the Task 43 reference implementation"
+    observed_at: "2026-08-28T09:10:00Z"

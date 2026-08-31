@@ -6,7 +6,8 @@
 # --frozen too, so a stale lockfile fails loudly instead of being rewritten.
 
 .DEFAULT_GOAL := help
-.PHONY: help sync harvest materialize validate test extract build-tokens site gates clean
+.PHONY: help sync harvest materialize validate annotations dedupe linkcheck test extract \
+        build-tokens site gates clean
 
 # The PROTOTYPE CAP. Five records per source. Raise it consciously:
 #   make harvest LIMIT=50
@@ -30,6 +31,15 @@ materialize:  ## replay events/ into records/ (derived; safe to delete and rebui
 
 validate:  ## CKAN-compat gate over records/ — exits non-zero listing every violation
 	$(UV) run python -m harvest validate
+
+annotations:  ## replay annotations/*.yaml into annotated events (idempotent)
+	$(UV) run python -m harvest annotations
+
+dedupe:  ## find cross-source duplicates; propose merges (add APPLY=1 to record them)
+	$(UV) run python -m harvest dedupe $(if $(APPLY),--apply,)
+
+linkcheck:  ## check every record's outbound links; dead links are reported, never deleted
+	$(UV) run python -m harvest linkcheck
 
 test:  ## run the test suite
 	$(UV) run pytest

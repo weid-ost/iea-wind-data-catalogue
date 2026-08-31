@@ -662,6 +662,38 @@ not finished.
 
 ---
 
+## 9a. Reconciliation, annotations and link checking (track I)
+
+Three modules sit on top of the event log and never bypass it.
+
+**`harvest/annotations.py`** replays `annotations/*.yaml` into `annotated`
+events, **idempotently** — the fingerprint is a hash of
+`identity_key + actor + note + local`, deliberately excluding `observed_at`, so
+a replay never depends on the clock. It refuses a file that sets `source:`,
+validates `local` against `LocalNamespace`, and refuses an `iea_task` that is
+not in `groups.yaml`. An annotation for an identity with no events is
+**pending**, not applied (it would materialise a record with no source);
+`allow_new: true` overrides. `check_pins()` fires one `pin_notice` per observed
+source key when a pinned page's content hash moves (ADR-0038 §4.3, `x-09`);
+the notice is stamped with the triggering scrape's `observed_at`, so replay is
+reproducible.
+
+**`harvest/dedupe.py`** merges identities that identity alone cannot. A merge is
+two `annotated` events with `actor: "reconcile"` — the primary gains the other's
+`source_urls` and a `local.links` entry, the secondary gains
+`local.suppressed: true`. **Nothing is deleted and no identity key is
+rewritten.** Automatic kinds need an explicit join key (`shared-doi`,
+`related-identifier`, `preprint-pair`); the fuzzy kind (`fuzzy-title`, `dc-08`)
+is **proposed only**, into `state/merge-proposals.json` and the run report, and
+`--apply` will not touch it.
+
+**`harvest/linkcheck.py`** checks every record's outbound URLs with the usual
+etiquette and writes `state/link-check.json`. It never edits, withdraws or
+deletes a record: a 404 means the page moved, and HTTP status in a byte-stable
+record would churn `records/` every run.
+
+---
+
 ## 10. Tier 3 and the LLM boundary
 
 `harvest/extract.py` documents the interface precisely; the implementation is
@@ -714,6 +746,13 @@ const records = defineCollection({
 | notices | `state/last-run.json` → `notices` | the curator's short monthly read |
 | tasks | `groups.yaml` | task chips, task pages, facet labels |
 | institutions | `organizations.yaml` | institution facet |
+| dead links | `state/link-check.json` → `dead_by_record` | optional "source link unreachable" note. **Never** in the record: HTTP status would churn byte-stable records |
+| merge proposals | `state/merge-proposals.json` | curator review queue; not rendered publicly |
+
+`extras.suppressed == "true"` means **retained but not listed** — the record
+page and its URL still exist, and the record is excluded from listings, facets
+and the homepage. It is what a merge does to the losing identity (§14, track I)
+and what a curator does to a noise record. It is never deletion.
 
 Per-record rendering notes:
 
@@ -739,8 +778,11 @@ uv sync --frozen --dev                       # the pinned environment (ADR-0034)
 uv run pytest                                # tests
 uv run python -m harvest run --limit 5       # harvest → events → records → validate → report
 uv run python -m harvest run --source zenodo # one source
-uv run python -m harvest materialize         # replay events/ into records/
+uv run python -m harvest materialize         # replay annotations/ + events/ into records/
 uv run python -m harvest validate            # the CKAN gate alone
+uv run python -m harvest annotations         # replay annotations/*.yaml (idempotent)
+uv run python -m harvest dedupe [--apply]    # propose / record cross-source merges
+uv run python -m harvest linkcheck           # check every record's outbound links
 uv run python -m harvest extract             # drain the Tier-3 pending queue
 uv run python -m harvest report              # print state/last-run.json
 uv run python -m harvest sources             # what is configured, and its adapter
@@ -779,7 +821,7 @@ If you are certain you need a fifth, that is an ADR, not a commit.
 | F | iea-wind.org (Tier 3) | `harvest/adapters/ieawind.py` |
 | G | Wind Data Hub | `harvest/adapters/wdh.py` |
 | H | LLM extraction, cache, pending queue | `harvest/extract.py` |
-| I | Reconciliation, merges, notices, link checking | new module; uses `events.resolve` |
+| I | Reconciliation, merges, notices, link checking, `annotations/` replay | `harvest/dedupe.py`, `harvest/annotations.py`, `harvest/linkcheck.py` |
 | J | The Astro site | `site/` |
 
 Each stub's docstring names its source key, its identity rule, its fixtures and

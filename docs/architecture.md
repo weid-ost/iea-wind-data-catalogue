@@ -106,6 +106,8 @@ visitor rather than only to a CI dashboard.
 | change detection | `harvest.events.has_changed` | nothing | [[adr-0026-change-detection-by-source-key]] |
 | append | `harvest.events.record_scrape` | `events/<slug>.jsonl` | append-only, append-on-change |
 | annotate | `harvest.events.annotate` / `withdraw` | `events/<slug>.jsonl` | `local.*` only |
+| replay annotations | `harvest.annotations.apply_annotations` | `events/<slug>.jsonl` | `annotations/*.yaml` → `annotated` events, idempotently; part of `run` and `materialize` |
+| check pins | `harvest.annotations.check_pins` | `events/<slug>.jsonl` | one `pin_notice` per observed source key when a pinned page moves (§4.3) |
 | resolve | `harvest.events.resolve` | nothing | folds a log into a `ResolvedRecord` |
 | materialise | `harvest.materialize.materialize_all` | `records/<slug>.json` | byte-stable; prunes orphans |
 | validate | `harvest.ckan_compat.validate_records` | nothing | prints **every** violation, not the first |
@@ -113,8 +115,15 @@ visitor rather than only to a CI dashboard.
 | render | `astro build` + `pagefind` | `site/dist/` | records load via glob |
 
 `uv run python -m harvest run` performs harvest → change detection → append →
-materialise → validate → report in one pass. See
-[[run-a-harvest-locally]].
+replay `annotations/` → check pins → materialise → validate → report in one
+pass. See [[run-a-harvest-locally]].
+
+Two stages are deliberately **not** in that pass, and are separate verbs:
+`harvest dedupe` writes merge decisions into the log, and `harvest linkcheck`
+talks to every upstream a record points at. Neither belongs in an unattended
+weekly job without being asked for — `run --linkcheck` opts in. Both write to
+`state/` (`merge-proposals.json`, `link-check.json`) and to the run report's
+`notices`; neither ever edits `records/`. See [[correct-a-record]] §6 and §7.
 
 ---
 
@@ -256,6 +265,6 @@ is marked **`SPEC — not yet implemented`**:
 |---|---|---|
 | the seven adapters' `harvest()` / `map()` | tracks A–G | `uv run python -m harvest run` reports `implemented: true` for that source |
 | Tier-3 extraction, cache, pending queue | track H | `uv run python -m harvest extract` exits 0 instead of 2 |
-| reconciliation, merges, link checking, `annotations/` replay | track I | notices appear in `state/last-run.json` |
+| ~~reconciliation, merges, link checking, `annotations/` replay~~ — **built**: `harvest/dedupe.py`, `harvest/annotations.py`, `harvest/linkcheck.py`, the `dedupe` / `linkcheck` / `annotations` verbs | track I | `uv run python -m harvest dedupe` and `linkcheck` exit 0; notices appear in `state/last-run.json` |
 | `site/` — Astro, Pagefind, the gallery, the a11y gate | track J | `make site` and `make gates` succeed |
 | `.github/workflows/` | CI track | a weekly run commits `state/last-run.json` and deploys in the same job |

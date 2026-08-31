@@ -1,0 +1,484 @@
+{
+  "fixture_id": "x-06-no-identifier",
+  "fixture_kind": "record",
+  "case": "No DOI and no stable source id: a deterministic but fragile hash identity, and the second record a corrected title creates",
+  "raw": "raw/x-06-no-identifier.json",
+  "identity_key": "hash|58aa9ac5f00333d0",
+  "identity_keys": [
+    "hash|58aa9ac5f00333d0",
+    "hash|718ed9153ec70073"
+  ],
+  "expected_record_names": [
+    "hash-58aa9ac5f00333d0",
+    "hash-718ed9153ec70073"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Nowak, Piotr\"}]"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "hash|58aa9ac5f00333d0"
+      },
+      {
+        "key": "identity_kind",
+        "value": "fragile"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-65\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"authors\":{\"confidence\":0.74,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.81,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2022"
+      },
+      {
+        "key": "resource_kind",
+        "value": "report"
+      },
+      {
+        "key": "source_id",
+        "value": "task65/publications#3"
+      },
+      {
+        "key": "source_key",
+        "value": "b17d0c9a2f4e6810"
+      },
+      {
+        "key": "source_system",
+        "value": "ieawind"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"ieawind\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://iea-wind.org/task11/publications/"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://iea-wind.org/task11/publications/\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-65"
+      }
+    ],
+    "license_id": "notspecified",
+    "name": "hash-58aa9ac5f00333d0",
+    "notes": "",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Wind resource assessment for the Baltic Sea, intrim report",
+    "url": "https://iea-wind.org/task11/publications/"
+  },
+  "expected_records": {
+    "hash-58aa9ac5f00333d0": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"}]"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "hash|58aa9ac5f00333d0"
+        },
+        {
+          "key": "identity_kind",
+          "value": "fragile"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-65\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"authors\":{\"confidence\":0.74,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.81,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022"
+        },
+        {
+          "key": "resource_kind",
+          "value": "report"
+        },
+        {
+          "key": "source_id",
+          "value": "task65/publications#3"
+        },
+        {
+          "key": "source_key",
+          "value": "b17d0c9a2f4e6810"
+        },
+        {
+          "key": "source_system",
+          "value": "ieawind"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"ieawind\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://iea-wind.org/task11/publications/"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://iea-wind.org/task11/publications/\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-65"
+        }
+      ],
+      "license_id": "notspecified",
+      "name": "hash-58aa9ac5f00333d0",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Wind resource assessment for the Baltic Sea, intrim report",
+      "url": "https://iea-wind.org/task11/publications/"
+    },
+    "hash-718ed9153ec70073": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"}]"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-31T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "hash|718ed9153ec70073"
+        },
+        {
+          "key": "identity_kind",
+          "value": "fragile"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-65\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-31T03:11:07Z"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"authors\":{\"confidence\":0.74,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.83,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022"
+        },
+        {
+          "key": "resource_kind",
+          "value": "report"
+        },
+        {
+          "key": "source_id",
+          "value": "task65/publications#3"
+        },
+        {
+          "key": "source_key",
+          "value": "2c5b9e17f0a3d842"
+        },
+        {
+          "key": "source_system",
+          "value": "ieawind"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"ieawind\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://iea-wind.org/task11/publications/"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://iea-wind.org/task11/publications/\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-65"
+        }
+      ],
+      "license_id": "notspecified",
+      "name": "hash-718ed9153ec70073",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Wind resource assessment for the Baltic Sea, interim report",
+      "url": "https://iea-wind.org/task11/publications/"
+    }
+  },
+  "expected_notices": [],
+  "expected_dedupe": {
+    "merges": [],
+    "proposals": [
+      {
+        "primary": "hash|58aa9ac5f00333d0",
+        "secondary": "hash|718ed9153ec70073",
+        "kind": "fuzzy-title",
+        "confidence": 0.9913,
+        "evidence": "title similarity 0.99 with the same first author (nowak) and year (2022); no shared DOI — REVIEW REQUIRED",
+        "automatic": false
+      }
+    ]
+  },
+  "expected_applied_merges": [],
+  "expected_records_after_merge": {
+    "hash-58aa9ac5f00333d0": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"}]"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "hash|58aa9ac5f00333d0"
+        },
+        {
+          "key": "identity_kind",
+          "value": "fragile"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-65\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"authors\":{\"confidence\":0.74,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.81,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022"
+        },
+        {
+          "key": "resource_kind",
+          "value": "report"
+        },
+        {
+          "key": "source_id",
+          "value": "task65/publications#3"
+        },
+        {
+          "key": "source_key",
+          "value": "b17d0c9a2f4e6810"
+        },
+        {
+          "key": "source_system",
+          "value": "ieawind"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"ieawind\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://iea-wind.org/task11/publications/"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://iea-wind.org/task11/publications/\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-65"
+        }
+      ],
+      "license_id": "notspecified",
+      "name": "hash-58aa9ac5f00333d0",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Wind resource assessment for the Baltic Sea, intrim report",
+      "url": "https://iea-wind.org/task11/publications/"
+    },
+    "hash-718ed9153ec70073": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"}]"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-31T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "hash|718ed9153ec70073"
+        },
+        {
+          "key": "identity_kind",
+          "value": "fragile"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-65\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-31T03:11:07Z"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"authors\":{\"confidence\":0.74,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.83,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022"
+        },
+        {
+          "key": "resource_kind",
+          "value": "report"
+        },
+        {
+          "key": "source_id",
+          "value": "task65/publications#3"
+        },
+        {
+          "key": "source_key",
+          "value": "2c5b9e17f0a3d842"
+        },
+        {
+          "key": "source_system",
+          "value": "ieawind"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"ieawind\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://iea-wind.org/task11/publications/"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://iea-wind.org/task11/publications/\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-65"
+        }
+      ],
+      "license_id": "notspecified",
+      "name": "hash-718ed9153ec70073",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Wind resource assessment for the Baltic Sea, interim report",
+      "url": "https://iea-wind.org/task11/publications/"
+    }
+  }
+}

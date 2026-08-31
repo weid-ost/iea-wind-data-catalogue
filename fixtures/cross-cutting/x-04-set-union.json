@@ -1,0 +1,242 @@
+{
+  "fixture_id": "x-04-set-union",
+  "fixture_kind": "record",
+  "case": "A Zenodo community adds Task 43 to a record a curator had attributed to Task 49 — union, never displace",
+  "raw": "raw/x-04-set-union.json",
+  "identity_key": "10.5281/zenodo.4000004",
+  "identity_keys": [
+    "10.5281/zenodo.4000004"
+  ],
+  "expected_record_names": [
+    "doi-10-5281-zenodo-4000004"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Andersson, Karin\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.4000004"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.4000004"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-43\",\"task-49\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-29T06:00:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2025-05-20"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "4000005"
+      },
+      {
+        "key": "source_key",
+        "value": "2"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/4000005"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/4000005\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-43"
+      },
+      {
+        "name": "task-49"
+      }
+    ],
+    "license_id": "cc-by",
+    "name": "doi-10-5281-zenodo-4000004",
+    "notes": "",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [
+      {
+        "name": "wra"
+      }
+    ],
+    "title": "Digital WRA data standard — worked examples",
+    "url": "https://zenodo.org/records/4000005"
+  },
+  "expected_records": {
+    "doi-10-5281-zenodo-4000004": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Andersson, Karin\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.4000004"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.4000004"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-43\",\"task-49\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-29T06:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2025-05-20"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "resource_kind",
+          "value": "dataset"
+        },
+        {
+          "key": "source_id",
+          "value": "4000005"
+        },
+        {
+          "key": "source_key",
+          "value": "2"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/4000005"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/4000005\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-43"
+        },
+        {
+          "name": "task-49"
+        }
+      ],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-4000004",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [
+        {
+          "name": "wra"
+        }
+      ],
+      "title": "Digital WRA data standard — worked examples",
+      "url": "https://zenodo.org/records/4000005"
+    }
+  },
+  "expected_notices": []
+}

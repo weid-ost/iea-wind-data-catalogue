@@ -1,0 +1,577 @@
+{
+  "fixture_id": "x-22-dedupe-preprint-pair",
+  "fixture_kind": "record",
+  "case": "A Crossref preprint declaring IsPreprintOf the published article: the published version is listed, the preprint linked",
+  "raw": "raw/x-22-dedupe-preprint-pair.json",
+  "identity_key": "10.5194/egusphere-2023-1234",
+  "identity_keys": [
+    "10.5194/egusphere-2023-1234",
+    "10.5194/wes-9-101-2024"
+  ],
+  "expected_record_names": [
+    "doi-10-5194-egusphere-2023-1234",
+    "doi-10-5194-wes-9-101-2024"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Okafor, Chidi\"}]"
+      },
+      {
+        "key": "container",
+        "value": "EGUsphere"
+      },
+      {
+        "key": "doi",
+        "value": "10.5194/egusphere-2023-1234"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:12:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5194/egusphere-2023-1234"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:12:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2023-06-01"
+      },
+      {
+        "key": "publisher",
+        "value": "Copernicus GmbH"
+      },
+      {
+        "key": "related_identifiers",
+        "value": "[{\"identifier\":\"10.5194/wes-9-101-2024\",\"identifier_type\":\"DOI\",\"relation\":\"IsPreprintOf\"}]"
+      },
+      {
+        "key": "resource_kind",
+        "value": "publication"
+      },
+      {
+        "key": "source_id",
+        "value": "10.5194/egusphere-2023-1234"
+      },
+      {
+        "key": "source_key",
+        "value": "2023-06-01T00:00:00Z"
+      },
+      {
+        "key": "source_system",
+        "value": "crossref"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"crossref\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://doi.org/10.5194/egusphere-2023-1234"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://doi.org/10.5194/egusphere-2023-1234\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [],
+    "license_id": "cc-by",
+    "name": "doi-10-5194-egusphere-2023-1234",
+    "notes": "",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Turbulence intensity in the wake of a floating offshore turbine",
+    "url": "https://doi.org/10.5194/egusphere-2023-1234"
+  },
+  "expected_records": {
+    "doi-10-5194-egusphere-2023-1234": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "container",
+          "value": "EGUsphere"
+        },
+        {
+          "key": "doi",
+          "value": "10.5194/egusphere-2023-1234"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5194/egusphere-2023-1234"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2023-06-01"
+        },
+        {
+          "key": "publisher",
+          "value": "Copernicus GmbH"
+        },
+        {
+          "key": "related_identifiers",
+          "value": "[{\"identifier\":\"10.5194/wes-9-101-2024\",\"identifier_type\":\"DOI\",\"relation\":\"IsPreprintOf\"}]"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "10.5194/egusphere-2023-1234"
+        },
+        {
+          "key": "source_key",
+          "value": "2023-06-01T00:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "crossref"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"crossref\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://doi.org/10.5194/egusphere-2023-1234"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://doi.org/10.5194/egusphere-2023-1234\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5194-egusphere-2023-1234",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Turbulence intensity in the wake of a floating offshore turbine",
+      "url": "https://doi.org/10.5194/egusphere-2023-1234"
+    },
+    "doi-10-5194-wes-9-101-2024": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "container",
+          "value": "Wind Energy Science"
+        },
+        {
+          "key": "doi",
+          "value": "10.5194/wes-9-101-2024"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:12:30Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5194/wes-9-101-2024"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:12:30Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2024-02-14"
+        },
+        {
+          "key": "publisher",
+          "value": "Copernicus GmbH"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "10.5194/wes-9-101-2024"
+        },
+        {
+          "key": "source_key",
+          "value": "2024-02-14T00:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "crossref"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"crossref\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://doi.org/10.5194/wes-9-101-2024"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://doi.org/10.5194/wes-9-101-2024\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5194-wes-9-101-2024",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Turbulence intensity in the wake of a floating offshore wind turbine",
+      "url": "https://doi.org/10.5194/wes-9-101-2024"
+    }
+  },
+  "expected_notices": [],
+  "expected_dedupe": {
+    "merges": [
+      {
+        "primary": "10.5194/wes-9-101-2024",
+        "secondary": "10.5194/egusphere-2023-1234",
+        "kind": "preprint-pair",
+        "confidence": 0.99,
+        "evidence": "10.5194/egusphere-2023-1234 declares IsPreprintOf 10.5194/wes-9-101-2024; the published version is listed, the preprint is linked from it",
+        "automatic": true
+      }
+    ],
+    "proposals": []
+  },
+  "expected_applied_merges": [
+    {
+      "primary": "10.5194/wes-9-101-2024",
+      "secondary": "10.5194/egusphere-2023-1234",
+      "kind": "preprint-pair",
+      "confidence": 0.99,
+      "evidence": "10.5194/egusphere-2023-1234 declares IsPreprintOf 10.5194/wes-9-101-2024; the published version is listed, the preprint is linked from it",
+      "automatic": true
+    }
+  ],
+  "expected_records_after_merge": {
+    "doi-10-5194-egusphere-2023-1234": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "container",
+          "value": "EGUsphere"
+        },
+        {
+          "key": "doi",
+          "value": "10.5194/egusphere-2023-1234"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5194/egusphere-2023-1234"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-31T12:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "local_links",
+          "value": "[{\"label\":\"Catalogued as 10.5194/wes-9-101-2024\",\"url\":\"https://doi.org/10.5194/wes-9-101-2024\"}]"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2023-06-01"
+        },
+        {
+          "key": "publisher",
+          "value": "Copernicus GmbH"
+        },
+        {
+          "key": "related_identifiers",
+          "value": "[{\"identifier\":\"10.5194/wes-9-101-2024\",\"identifier_type\":\"DOI\",\"relation\":\"IsPreprintOf\"}]"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "10.5194/egusphere-2023-1234"
+        },
+        {
+          "key": "source_key",
+          "value": "2023-06-01T00:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "crossref"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"crossref\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://doi.org/10.5194/egusphere-2023-1234"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://doi.org/10.5194/egusphere-2023-1234\"]"
+        },
+        {
+          "key": "suppressed",
+          "value": "true"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5194-egusphere-2023-1234",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Turbulence intensity in the wake of a floating offshore turbine",
+      "url": "https://doi.org/10.5194/egusphere-2023-1234"
+    },
+    "doi-10-5194-wes-9-101-2024": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "container",
+          "value": "Wind Energy Science"
+        },
+        {
+          "key": "doi",
+          "value": "10.5194/wes-9-101-2024"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:12:30Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5194/wes-9-101-2024"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-31T12:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "local_links",
+          "value": "[{\"label\":\"Also catalogued as 10.5194/egusphere-2023-1234\",\"url\":\"https://doi.org/10.5194/egusphere-2023-1234\"}]"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2024-02-14"
+        },
+        {
+          "key": "publisher",
+          "value": "Copernicus GmbH"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "10.5194/wes-9-101-2024"
+        },
+        {
+          "key": "source_key",
+          "value": "2024-02-14T00:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "crossref"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"crossref\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://doi.org/10.5194/wes-9-101-2024"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://doi.org/10.5194/wes-9-101-2024\",\"https://doi.org/10.5194/egusphere-2023-1234\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5194-wes-9-101-2024",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Turbulence intensity in the wake of a floating offshore wind turbine",
+      "url": "https://doi.org/10.5194/wes-9-101-2024"
+    }
+  }
+}

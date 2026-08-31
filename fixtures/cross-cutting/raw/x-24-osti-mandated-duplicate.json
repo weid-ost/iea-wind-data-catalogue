@@ -1,0 +1,86 @@
+{
+  "note": "Fixture osti-03. US federal funding mandates a deposit at OSTI even when the work is already published elsewhere, so the catalogue meets the same artifact twice. This OSTI deposit has no DOI of its own — its identity is osti|1854723 — but it states the journal DOI, which is the join key. The Crossref DOI identity is the primary; the OSTI deposit is retained and becomes an additional way in, exactly as the fixture requires: 'Merge; OSTI becomes an additional source_url'.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:12:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.1088/1742-6596/2265/2/022001",
+      "source_system": "crossref",
+      "source_id": "10.1088/1742-6596/2265/2/022001",
+      "source_key": "2022-05-30T00:00:00Z",
+      "actor": "harvest/crossref",
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
+      "source": {
+        "title": "Validation of a nacelle-mounted lidar for power performance testing",
+        "doi": "10.1088/1742-6596/2265/2/022001",
+        "url": "https://doi.org/10.1088/1742-6596/2265/2/022001",
+        "source_urls": [
+          "https://doi.org/10.1088/1742-6596/2265/2/022001"
+        ],
+        "authors": [
+          {
+            "name": "Okafor, Chidi"
+          }
+        ],
+        "publisher": "IOP Publishing",
+        "published_date": "2022-05-30",
+        "container": "Journal of Physics: Conference Series",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "access_status": "open",
+        "withdrawn": false
+      }
+    },
+    {
+      "observed_at": "2026-08-24T03:15:00Z",
+      "event_type": "scraped",
+      "identity_key": "osti|1854723",
+      "source_system": "osti",
+      "source_id": "1854723",
+      "source_key": "2022-06-14T00:00:00Z",
+      "actor": "harvest/osti",
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        },
+        "doi": {
+          "extraction_method": "api"
+        }
+      },
+      "source": {
+        "title": "Validation of a Nacelle-Mounted Lidar for Power Performance Testing",
+        "doi": "10.1088/1742-6596/2265/2/022001",
+        "url": "https://www.osti.gov/biblio/1854723",
+        "source_urls": [
+          "https://www.osti.gov/biblio/1854723"
+        ],
+        "authors": [
+          {
+            "name": "Okafor, Chidi"
+          }
+        ],
+        "publisher": "National Renewable Energy Laboratory",
+        "published_date": "2022-05-30",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "access_status": "open",
+        "withdrawn": false
+      }
+    }
+  ],
+  "expected_merges": [
+    {
+      "primary": "10.1088/1742-6596/2265/2/022001",
+      "secondary": "osti|1854723",
+      "kind": "shared-doi",
+      "automatic": true
+    }
+  ],
+  "merge_observed_at": "2026-08-31T12:00:00Z"
+}

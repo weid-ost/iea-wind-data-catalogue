@@ -1,0 +1,85 @@
+{
+  "note": "A scrape, an annotation, then a re-scrape whose source key has moved. ADR-0038: source.* is replaced WHOLESALE (note that the second scrape stops sending `version`, and the record loses it — that is what the source now says), while local.* is untouched. The annotation is declared as YAML exactly as a curator would write it in annotations/, and replayed by harvest.annotations.apply_annotations.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.2000001",
+      "source_system": "zenodo",
+      "source_id": "2000002",
+      "source_key": "3",
+      "actor": "harvest/zenodo",
+      "provenance": { "title": { "extraction_method": "api" } },
+      "source": {
+        "title": "Wake measurements at the Lillgrund wind farm",
+        "notes": "<p>First release.</p>",
+        "doi": "10.5281/zenodo.2000001",
+        "url": "https://zenodo.org/records/2000002",
+        "source_urls": ["https://zenodo.org/records/2000002"],
+        "authors": [{ "name": "Andersson, Karin" }],
+        "publisher": "Zenodo",
+        "published_date": "2023-03-01",
+        "version": "1.0",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "dataset",
+        "access_status": "open",
+        "keywords": ["wake"],
+        "iea_task": [],
+        "withdrawn": false
+      }
+    },
+    {
+      "observed_at": "2026-08-27T09:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.2000001",
+      "source_system": "zenodo",
+      "source_id": "2000002",
+      "source_key": "4",
+      "actor": "harvest/zenodo",
+      "provenance": { "title": { "extraction_method": "api" } },
+      "source": {
+        "title": "Wake measurements at the Lillgrund offshore wind farm",
+        "notes": "<p>Second release, with the nacelle lidar channel added.</p>",
+        "doi": "10.5281/zenodo.2000001",
+        "url": "https://zenodo.org/records/2000002",
+        "source_urls": ["https://zenodo.org/records/2000002"],
+        "authors": [{ "name": "Andersson, Karin" }],
+        "publisher": "Zenodo",
+        "published_date": "2023-03-01",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "dataset",
+        "access_status": "open",
+        "keywords": ["wake", "nacelle lidar"],
+        "iea_task": [],
+        "withdrawn": false
+      }
+    }
+  ],
+  "annotations_yaml": {
+    "identity_key": "10.5281/zenodo.2000001",
+    "actor": "curator:tom",
+    "annotations": [
+      {
+        "local": { "iea_task": ["task-31"] },
+        "note": "Task 31 attribution from the Wakebench benchmark list",
+        "observed_at": "2026-08-25T08:00:00Z"
+      },
+      {
+        "local": {
+          "curator_notes": [
+            {
+              "field": "title",
+              "note": "The first release omitted 'offshore'; corrected upstream on 2026-08-27.",
+              "added_at": "2026-08-25T08:05:00Z"
+            }
+          ]
+        },
+        "note": "context for a title that changed under us",
+        "observed_at": "2026-08-25T08:05:00Z"
+      }
+    ]
+  },
+  "annotations_applied_before_event_index": 1
+}

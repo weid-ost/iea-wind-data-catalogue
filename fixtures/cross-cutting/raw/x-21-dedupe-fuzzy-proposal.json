@@ -1,0 +1,89 @@
+{
+  "note": "Fixture dc-08: the same work registered by Zenodo AND an institutional repository, with two different DOIs and therefore two identity keys. There is no join key — only a resemblance. The reconciler therefore PROPOSES the merge and stops: it lands in state/merge-proposals.json and in the run report's notices, and `--apply` will not touch it. A wrong automatic merge hides a real record behind a suppression flag, which is a worse failure than two records a human can see.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.6000006",
+      "source_system": "zenodo",
+      "source_id": "6000006",
+      "source_key": "1",
+      "actor": "harvest/zenodo",
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
+      "source": {
+        "title": "Probabilistic wake loss estimation for large offshore arrays",
+        "doi": "10.5281/zenodo.6000006",
+        "url": "https://zenodo.org/records/6000006",
+        "source_urls": [
+          "https://zenodo.org/records/6000006"
+        ],
+        "authors": [
+          {
+            "name": "Nowak, Piotr"
+          },
+          {
+            "name": "Andersson, Karin"
+          }
+        ],
+        "publisher": "Zenodo",
+        "published_date": "2024-09-02",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "access_status": "open",
+        "withdrawn": false
+      }
+    },
+    {
+      "observed_at": "2026-08-24T03:12:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.11583/dtu.6000007",
+      "source_system": "datacite",
+      "source_id": "10.11583/dtu.6000007",
+      "source_key": "2026-07-04T11:00:00Z",
+      "actor": "harvest/datacite",
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
+      "source": {
+        "title": "Probabilistic wake-loss estimation for large offshore arrays",
+        "doi": "10.11583/dtu.6000007",
+        "url": "https://doi.org/10.11583/dtu.6000007",
+        "source_urls": [
+          "https://doi.org/10.11583/dtu.6000007"
+        ],
+        "authors": [
+          {
+            "name": "Nowak, Piotr"
+          },
+          {
+            "name": "Andersson, Karin"
+          }
+        ],
+        "publisher": "Technical University of Denmark",
+        "published_date": "2024-09-02",
+        "license_raw": "CC-BY-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "access_status": "open",
+        "withdrawn": false
+      }
+    }
+  ],
+  "expected_proposals": [
+    {
+      "primary": "10.11583/dtu.6000007",
+      "secondary": "10.5281/zenodo.6000006",
+      "kind": "fuzzy-title",
+      "automatic": false
+    }
+  ],
+  "expected_merges": [],
+  "merge_observed_at": "2026-08-31T12:00:00Z"
+}

@@ -1,0 +1,276 @@
+{
+  "fixture_id": "x-01-four-way-merge",
+  "fixture_kind": "record",
+  "case": "The same artifact reached from Zenodo, DataCite, GitHub and an iea-wind.org citation — one record, four source URLs",
+  "raw": "raw/x-01-four-way-merge.json",
+  "identity_key": "10.5281/zenodo.1234566",
+  "identity_keys": [
+    "10.5281/zenodo.1234566"
+  ],
+  "expected_record_names": [
+    "doi-10-5281-zenodo-1234566"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Müller, Søren Ø.\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Okafor, Chidi\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.1234566"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.1234566"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-43\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:14:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "CC-BY-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2024-06-01"
+      },
+      {
+        "key": "publisher",
+        "value": "Technical University of Denmark"
+      },
+      {
+        "key": "related_identifiers",
+        "value": "[{\"identifier\":\"10.5281/zenodo.1234567\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "task43/outputs#osterild"
+      },
+      {
+        "key": "source_key",
+        "value": "c0ffee1234567890"
+      },
+      {
+        "key": "source_system",
+        "value": "ieawind"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"datacite\",\"github\",\"ieawind\",\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://iea-wind.org/task43/outputs/"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://iea-wind.org/task43/outputs/\",\"https://github.com/IEA-Task-43/osterild-lidar\",\"https://zenodo.org/records/1234567\",\"https://doi.org/10.5281/zenodo.1234566\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-43"
+      }
+    ],
+    "license_id": "cc-by",
+    "name": "doi-10-5281-zenodo-1234566",
+    "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021.</p>",
+    "private": false,
+    "resources": [
+      {
+        "format": "csv",
+        "name": "osterild-lidar-2021.csv",
+        "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv"
+      }
+    ],
+    "state": "active",
+    "tags": [
+      {
+        "name": "lidar"
+      },
+      {
+        "name": "python"
+      },
+      {
+        "name": "remote-sensing"
+      },
+      {
+        "name": "wind-energy"
+      }
+    ],
+    "title": "Lidar measurements from the Østerild campaign, 2021",
+    "url": "https://doi.org/10.5281/zenodo.1234566",
+    "version": "2.0"
+  },
+  "expected_records": {
+    "doi-10-5281-zenodo-1234566": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Müller, Søren Ø.\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.1234566"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.1234566"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-43\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:14:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "CC-BY-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2024-06-01"
+        },
+        {
+          "key": "publisher",
+          "value": "Technical University of Denmark"
+        },
+        {
+          "key": "related_identifiers",
+          "value": "[{\"identifier\":\"10.5281/zenodo.1234567\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+        },
+        {
+          "key": "resource_kind",
+          "value": "dataset"
+        },
+        {
+          "key": "source_id",
+          "value": "task43/outputs#osterild"
+        },
+        {
+          "key": "source_key",
+          "value": "c0ffee1234567890"
+        },
+        {
+          "key": "source_system",
+          "value": "ieawind"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"datacite\",\"github\",\"ieawind\",\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://iea-wind.org/task43/outputs/"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://iea-wind.org/task43/outputs/\",\"https://github.com/IEA-Task-43/osterild-lidar\",\"https://zenodo.org/records/1234567\",\"https://doi.org/10.5281/zenodo.1234566\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-43"
+        }
+      ],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-1234566",
+      "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021.</p>",
+      "private": false,
+      "resources": [
+        {
+          "format": "csv",
+          "name": "osterild-lidar-2021.csv",
+          "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv"
+        }
+      ],
+      "state": "active",
+      "tags": [
+        {
+          "name": "lidar"
+        },
+        {
+          "name": "python"
+        },
+        {
+          "name": "remote-sensing"
+        },
+        {
+          "name": "wind-energy"
+        }
+      ],
+      "title": "Lidar measurements from the Østerild campaign, 2021",
+      "url": "https://doi.org/10.5281/zenodo.1234566",
+      "version": "2.0"
+    }
+  },
+  "expected_notices": []
+}

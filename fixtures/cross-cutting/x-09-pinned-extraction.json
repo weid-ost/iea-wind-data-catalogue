@@ -1,0 +1,199 @@
+{
+  "fixture_id": "x-09-pinned-extraction",
+  "fixture_kind": "record",
+  "case": "A pinned Tier-3 extraction holds when the page content hash changes, and a pin_notice fires",
+  "raw": "raw/x-09-pinned-extraction.json",
+  "identity_key": "ieawind|task43/tools#wra-standard",
+  "identity_keys": [
+    "ieawind|task43/tools#wra-standard"
+  ],
+  "expected_record_names": [
+    "ieawind-task43-tools-wra-standard"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-20T04:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "ieawind|task43/tools#wra-standard"
+      },
+      {
+        "key": "identity_kind",
+        "value": "source"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-43\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-30T04:00:00Z"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "pinned",
+        "value": "true"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"resource_kind\":{\"confidence\":0.41,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"pinned\":true,\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.88,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+      },
+      {
+        "key": "resource_kind",
+        "value": "software"
+      },
+      {
+        "key": "source_id",
+        "value": "task43/tools#wra-standard"
+      },
+      {
+        "key": "source_key",
+        "value": "6d4e2f80b19c7a35"
+      },
+      {
+        "key": "source_system",
+        "value": "ieawind"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"ieawind\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://iea-wind.org/task43/tools/"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://iea-wind.org/task43/tools/\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-43"
+      }
+    ],
+    "license_id": "notspecified",
+    "name": "ieawind-task43-tools-wra-standard",
+    "notes": "",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Digital WRA Data Standard",
+    "url": "https://iea-wind.org/task43/tools/"
+  },
+  "expected_records": {
+    "ieawind-task43-tools-wra-standard": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-20T04:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "ieawind|task43/tools#wra-standard"
+        },
+        {
+          "key": "identity_kind",
+          "value": "source"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-43\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-30T04:00:00Z"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "pinned",
+          "value": "true"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_kind\":{\"confidence\":0.41,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"pinned\":true,\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.88,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+        },
+        {
+          "key": "resource_kind",
+          "value": "software"
+        },
+        {
+          "key": "source_id",
+          "value": "task43/tools#wra-standard"
+        },
+        {
+          "key": "source_key",
+          "value": "6d4e2f80b19c7a35"
+        },
+        {
+          "key": "source_system",
+          "value": "ieawind"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"ieawind\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://iea-wind.org/task43/tools/"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://iea-wind.org/task43/tools/\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-43"
+        }
+      ],
+      "license_id": "notspecified",
+      "name": "ieawind-task43-tools-wra-standard",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Digital WRA Data Standard",
+      "url": "https://iea-wind.org/task43/tools/"
+    }
+  },
+  "expected_notices": [
+    {
+      "type": "pin_notice",
+      "observed_at": "2026-08-30T04:00:00Z",
+      "identity_key": "ieawind|task43/tools#wra-standard",
+      "action": "the pin holds; a human decides whether it is still right",
+      "observed_source_key": "6d4e2f80b19c7a35",
+      "pin_source_key": "a1b2c3d4e5f60718",
+      "reason": "page-content-hash-changed",
+      "source_system": "ieawind"
+    }
+  ]
+}

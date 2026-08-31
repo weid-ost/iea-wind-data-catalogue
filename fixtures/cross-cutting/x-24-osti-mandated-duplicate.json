@@ -1,0 +1,557 @@
+{
+  "fixture_id": "x-24-osti-mandated-duplicate",
+  "fixture_kind": "record",
+  "case": "An OSTI deposit duplicating a journal article, joined on the DOI it states",
+  "raw": "raw/x-24-osti-mandated-duplicate.json",
+  "identity_key": "10.1088/1742-6596/2265/2/022001",
+  "identity_keys": [
+    "10.1088/1742-6596/2265/2/022001",
+    "osti|1854723"
+  ],
+  "expected_record_names": [
+    "doi-10-1088-1742-6596-2265-2-022001",
+    "osti-1854723"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Okafor, Chidi\"}]"
+      },
+      {
+        "key": "container",
+        "value": "Journal of Physics: Conference Series"
+      },
+      {
+        "key": "doi",
+        "value": "10.1088/1742-6596/2265/2/022001"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:12:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.1088/1742-6596/2265/2/022001"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:12:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2022-05-30"
+      },
+      {
+        "key": "publisher",
+        "value": "IOP Publishing"
+      },
+      {
+        "key": "resource_kind",
+        "value": "publication"
+      },
+      {
+        "key": "source_id",
+        "value": "10.1088/1742-6596/2265/2/022001"
+      },
+      {
+        "key": "source_key",
+        "value": "2022-05-30T00:00:00Z"
+      },
+      {
+        "key": "source_system",
+        "value": "crossref"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"crossref\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://doi.org/10.1088/1742-6596/2265/2/022001"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://doi.org/10.1088/1742-6596/2265/2/022001\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [],
+    "license_id": "cc-by",
+    "name": "doi-10-1088-1742-6596-2265-2-022001",
+    "notes": "",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Validation of a nacelle-mounted lidar for power performance testing",
+    "url": "https://doi.org/10.1088/1742-6596/2265/2/022001"
+  },
+  "expected_records": {
+    "doi-10-1088-1742-6596-2265-2-022001": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "container",
+          "value": "Journal of Physics: Conference Series"
+        },
+        {
+          "key": "doi",
+          "value": "10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022-05-30"
+        },
+        {
+          "key": "publisher",
+          "value": "IOP Publishing"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "source_key",
+          "value": "2022-05-30T00:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "crossref"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"crossref\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://doi.org/10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://doi.org/10.1088/1742-6596/2265/2/022001\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-1088-1742-6596-2265-2-022001",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Validation of a nacelle-mounted lidar for power performance testing",
+      "url": "https://doi.org/10.1088/1742-6596/2265/2/022001"
+    },
+    "osti-1854723": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:15:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "osti|1854723"
+        },
+        {
+          "key": "identity_kind",
+          "value": "source"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:15:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022-05-30"
+        },
+        {
+          "key": "publisher",
+          "value": "National Renewable Energy Laboratory"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "1854723"
+        },
+        {
+          "key": "source_key",
+          "value": "2022-06-14T00:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "osti"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"osti\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://www.osti.gov/biblio/1854723"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://www.osti.gov/biblio/1854723\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "osti-1854723",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Validation of a Nacelle-Mounted Lidar for Power Performance Testing",
+      "url": "https://www.osti.gov/biblio/1854723"
+    }
+  },
+  "expected_notices": [],
+  "expected_dedupe": {
+    "merges": [
+      {
+        "primary": "10.1088/1742-6596/2265/2/022001",
+        "secondary": "osti|1854723",
+        "kind": "shared-doi",
+        "confidence": 1.0,
+        "evidence": "both identities assert DOI 10.1088/1742-6596/2265/2/022001",
+        "automatic": true
+      }
+    ],
+    "proposals": []
+  },
+  "expected_applied_merges": [
+    {
+      "primary": "10.1088/1742-6596/2265/2/022001",
+      "secondary": "osti|1854723",
+      "kind": "shared-doi",
+      "confidence": 1.0,
+      "evidence": "both identities assert DOI 10.1088/1742-6596/2265/2/022001",
+      "automatic": true
+    }
+  ],
+  "expected_records_after_merge": {
+    "doi-10-1088-1742-6596-2265-2-022001": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "container",
+          "value": "Journal of Physics: Conference Series"
+        },
+        {
+          "key": "doi",
+          "value": "10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-31T12:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "local_links",
+          "value": "[{\"label\":\"Also catalogued as osti|1854723\",\"url\":\"https://www.osti.gov/biblio/1854723\"}]"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022-05-30"
+        },
+        {
+          "key": "publisher",
+          "value": "IOP Publishing"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "source_key",
+          "value": "2022-05-30T00:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "crossref"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"crossref\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://doi.org/10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://doi.org/10.1088/1742-6596/2265/2/022001\",\"https://www.osti.gov/biblio/1854723\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-1088-1742-6596-2265-2-022001",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Validation of a nacelle-mounted lidar for power performance testing",
+      "url": "https://doi.org/10.1088/1742-6596/2265/2/022001"
+    },
+    "osti-1854723": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.1088/1742-6596/2265/2/022001"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:15:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "osti|1854723"
+        },
+        {
+          "key": "identity_kind",
+          "value": "source"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-31T12:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "local_links",
+          "value": "[{\"label\":\"Catalogued as 10.1088/1742-6596/2265/2/022001\",\"url\":\"https://doi.org/10.1088/1742-6596/2265/2/022001\"}]"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022-05-30"
+        },
+        {
+          "key": "publisher",
+          "value": "National Renewable Energy Laboratory"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "1854723"
+        },
+        {
+          "key": "source_key",
+          "value": "2022-06-14T00:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "osti"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"osti\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://www.osti.gov/biblio/1854723"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://www.osti.gov/biblio/1854723\"]"
+        },
+        {
+          "key": "suppressed",
+          "value": "true"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "osti-1854723",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Validation of a Nacelle-Mounted Lidar for Power Performance Testing",
+      "url": "https://www.osti.gov/biblio/1854723"
+    }
+  }
+}

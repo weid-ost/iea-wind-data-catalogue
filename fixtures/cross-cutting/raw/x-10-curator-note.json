@@ -1,0 +1,54 @@
+{
+  "note": "ADR-0038 §4.3 carve-out two: upstream that is known wrong and will not be fixed. The source says CC-BY-4.0; the archive's own LICENCE file says CC-BY-NC-4.0. The catalogue displays the WRONG value anyway, verbatim — license_id stays cc-by — with the curator note carried in extras.curator_notes for the record page to render BESIDE it. Both truths on the page. Silently overriding the source would fork the truth and start a drift war the catalogue cannot win.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.5000005",
+      "source_system": "zenodo",
+      "source_id": "5000006",
+      "source_key": "1",
+      "actor": "harvest/zenodo",
+      "provenance": {
+        "title": { "extraction_method": "api" },
+        "license_id": { "extraction_method": "pattern" }
+      },
+      "source": {
+        "title": "Offshore turbine load measurements, Alpha Ventus",
+        "notes": "<p>Strain-gauge load measurements from three turbines, 2019-2021.</p>",
+        "doi": "10.5281/zenodo.5000005",
+        "url": "https://zenodo.org/records/5000006",
+        "source_urls": ["https://zenodo.org/records/5000006"],
+        "authors": [{ "name": "Okafor, Chidi" }],
+        "publisher": "Zenodo",
+        "published_date": "2022-11-30",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "dataset",
+        "access_status": "open",
+        "keywords": ["loads"],
+        "withdrawn": false
+      }
+    }
+  ],
+  "annotations_yaml": {
+    "identity_key": "10.5281/zenodo.5000005",
+    "actor": "curator:tom",
+    "annotations": [
+      {
+        "local": {
+          "curator_notes": [
+            {
+              "field": "license_id",
+              "note": "OST note: the licence stated at source appears incorrect; the archive's own LICENCE file says CC-BY-NC-4.0. Reported upstream 2026-08-28.",
+              "added_at": "2026-08-28T09:00:00Z"
+            }
+          ]
+        },
+        "note": "known-wrong upstream licence; reported at source 2026-08-28",
+        "observed_at": "2026-08-28T09:00:00Z"
+      }
+    ]
+  },
+  "annotations_applied_before_event_index": 1
+}

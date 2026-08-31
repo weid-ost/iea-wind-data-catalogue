@@ -1,0 +1,101 @@
+{
+  "note": "Fixtures zen-04 and gh-02, joined. A Zenodo software record and the GitHub repository it mirrors have DIFFERENT identity keys — the DOI and github|org/repo — so identity alone cannot merge them. The join key is free: the Zenodo DOI badge in the README, which the GitHub adapter records as a related identifier. The DOI identity is the primary (a DOI outranks a source id, and Zenodo outranks GitHub in sources.yaml precedence); the GitHub record is retained, linked and suppressed from listings. Nothing is deleted, ever.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.7654321",
+      "source_system": "zenodo",
+      "source_id": "7654321",
+      "source_key": "2",
+      "actor": "harvest/zenodo",
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
+      "source": {
+        "title": "digital-wra-data-standard: v1.3.0",
+        "notes": "<p>Software release archived from GitHub.</p>",
+        "doi": "10.5281/zenodo.7654321",
+        "url": "https://zenodo.org/records/7654321",
+        "source_urls": [
+          "https://zenodo.org/records/7654321"
+        ],
+        "authors": [
+          {
+            "name": "Andersson, Karin"
+          }
+        ],
+        "publisher": "Zenodo",
+        "published_date": "2025-02-11",
+        "version": "1.3.0",
+        "license_raw": "MIT",
+        "license_id": "mit",
+        "resource_kind": "software",
+        "access_status": "open",
+        "iea_task": [
+          "task-43"
+        ],
+        "related_identifiers": [
+          {
+            "relation": "IsSourceOf",
+            "identifier": "https://github.com/IEA-Task-43/digital-wra-data-standard",
+            "identifier_type": "URL"
+          }
+        ],
+        "withdrawn": false
+      }
+    },
+    {
+      "observed_at": "2026-08-24T03:13:00Z",
+      "event_type": "scraped",
+      "identity_key": "github|IEA-Task-43/digital-wra-data-standard",
+      "source_system": "github",
+      "source_id": "IEA-Task-43/digital-wra-data-standard",
+      "source_key": "9f1c2ae0d3b4",
+      "actor": "harvest/github",
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        },
+        "related_identifiers": {
+          "extraction_method": "pattern"
+        }
+      },
+      "source": {
+        "title": "digital-wra-data-standard",
+        "notes": "<p>An IEA Wind Task 43 data standard for wind resource assessment.</p>",
+        "url": "https://github.com/IEA-Task-43/digital-wra-data-standard",
+        "source_urls": [
+          "https://github.com/IEA-Task-43/digital-wra-data-standard"
+        ],
+        "license_raw": "MIT",
+        "license_id": "mit",
+        "resource_kind": "software",
+        "access_status": "open",
+        "keywords": [
+          "wra",
+          "data-standard"
+        ],
+        "related_identifiers": [
+          {
+            "relation": "IsIdenticalTo",
+            "identifier": "10.5281/zenodo.7654321",
+            "identifier_type": "DOI"
+          }
+        ],
+        "withdrawn": false
+      }
+    }
+  ],
+  "expected_merges": [
+    {
+      "primary": "10.5281/zenodo.7654321",
+      "secondary": "github|IEA-Task-43/digital-wra-data-standard",
+      "kind": "related-identifier",
+      "automatic": true
+    }
+  ],
+  "merge_observed_at": "2026-08-31T12:00:00Z"
+}

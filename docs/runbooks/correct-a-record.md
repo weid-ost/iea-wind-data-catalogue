@@ -77,10 +77,41 @@ annotations:
     note: "known-wrong upstream licence; reported at source 2026-08-28"
 ```
 
-> **`SPEC — not yet implemented`.** Replaying `annotations/*.yaml` into
-> `annotated` events, **idempotently** (re-running must not duplicate events),
-> is owned by the reconciliation track. Until it exists, write the YAML for the
-> record of intent *and* append the events with §3, which works today.
+Replaying this directory into `annotated` events is **implemented and
+idempotent** — the same annotation is appended once however many times you run
+it. `python -m harvest materialize` and `python -m harvest run` do the replay
+before rebuilding `records/`, so the whole loop is one command:
+
+```sh
+uv run python -m harvest annotations --dry-run   # say what would be appended
+make materialize                                 # replay, then rebuild records/
+```
+
+Three rules the replay enforces, so a typo fails here rather than three steps
+downstream:
+
+- a file containing a `source:` key is **refused** — source metadata is never
+  edited, only annotated;
+- the `local:` block is validated against `LocalNamespace`, so
+  `iea_task: task-49` (a string where a list belongs) is an error;
+- an `iea_task` that does not resolve through `harvest.config.canonical_group`
+  to a group in `groups.yaml` is refused, because the CKAN gate would otherwise
+  fail the whole run for one invented task name.
+
+**An annotation for an identity nothing has harvested yet waits.** Applying it
+would materialise a record whose title is its own identity key and whose every
+other field is empty. It is reported as `annotation_pending` in
+`state/last-run.json` → `notices`, and applies itself on the run that first sees
+the record. A file that genuinely means to create an identity from nothing says
+`allow_new: true`.
+
+Idempotence is keyed on a fingerprint of `identity_key` + `actor` + `note` +
+the `local` block — **not** on `observed_at`. So changing the `note` on an
+existing entry appends a *new* event rather than editing the old one, which is
+what an append-only log means.
+
+The working examples in `annotations/` cover every kind in the matrix above; the
+directory's `README.md` is the file-format reference.
 
 ## 3. Append the annotation
 
@@ -280,11 +311,68 @@ PY
 | Situation | Actually |
 |---|---|
 | the title is wrong | report it at the source; add a curator note if it matters |
-| two records are the same artifact | a merge, owned by the reconciler; **`SPEC — not yet implemented`** |
+| two records are the same artifact | a merge, owned by the reconciler — `python -m harvest dedupe` proposes it, `--apply` records it as two annotations. Fuzzy matches are **never** applied automatically; see §6 |
+| a source page 404s | `python -m harvest linkcheck` reports it; the record is retained. A dead link is not a withdrawal |
 | the DOI does not resolve | resolve-or-drop already dropped it; it is in `dropped_dois` |
 | the record should not exist at all | `suppressed`, never deletion |
 | the artifact is gone upstream | a `withdrawn` event — [[handle-a-withdrawn-record]] |
 | the licence mapped to `notspecified` and should not have | fix `harvest/licenses.py`'s alias table, with a test; that is a code change, not an annotation |
+
+## 6. Two records that are one artifact
+
+Most of this solves itself: four sources describing one DOI derive one identity
+key and compose into one record with four `source_url`s (fixture `x-01`). What
+needs a decision is a pair whose identity **keys differ** — a Zenodo software
+record and its GitHub repository, an OSTI deposit of an already-published
+article, a preprint and its published version.
+
+```sh
+uv run python -m harvest dedupe            # propose; writes state/merge-proposals.json
+uv run python -m harvest dedupe --apply    # record the automatic ones as annotations
+make materialize
+```
+
+**Automatic** merges need an explicit join key — a shared DOI, a DOI badge
+carried as a related identifier, or an `IsPreprintOf` relation. `--apply`
+records each as two `annotated` events with `actor: reconcile`:
+
+- the **primary** gains the other's `source_urls` and a `local.links` entry, so
+  one record carries every way in;
+- the **secondary** gains `local.suppressed: true` — **retained, citable, out of
+  the listings.** A merge is a suppression, never a deletion (ADR-0027).
+
+Re-running `--apply` changes nothing; the merge is already in the log. To
+reverse one, append the opposite annotation — never delete the events.
+
+**Fuzzy** matches (title + first-author surname + year, no shared DOI, fixture
+`dc-08`) are **proposals only**. They appear in `state/merge-proposals.json` and
+in the run report's `notices`; `--apply` will not touch them. A wrong automatic
+merge hides a real record behind a suppression flag, which is worse than two
+records a human can see. Confirm one by writing the merge annotation by hand;
+reject one by leaving it alone.
+
+## 7. Link rot
+
+```sh
+uv run python -m harvest linkcheck         # writes state/link-check.json
+```
+
+Every record's landing page, `source_urls`, curator links and resource URLs are
+checked with the project's usual etiquette. Dead links are **reported, never
+acted on**: the result goes to `state/link-check.json` and the run report's
+`notices`, and no record is edited, withdrawn or deleted. Two reasons:
+
+1. A 404 means the *page* moved, not that the artifact stopped existing.
+   Withdrawal is an adapter's finding about the artifact
+   ([[handle-a-withdrawn-record]]), never a link checker's inference from an
+   HTTP status.
+2. Records are byte-stable by contract. Writing HTTP status into a record would
+   make one flaky 503 rewrite it, and a weekly run would churn `records/`
+   forever for no change in what any source said.
+
+`python -m harvest run --linkcheck` folds the same check into a run and puts the
+notices in `state/last-run.json`. It is off by default: an unattended weekly job
+should not add a few hundred requests to seven upstreams without being asked.
 
 ---
 

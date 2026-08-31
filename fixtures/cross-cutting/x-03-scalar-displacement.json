@@ -1,0 +1,213 @@
+{
+  "fixture_id": "x-03-scalar-displacement",
+  "fixture_kind": "record",
+  "case": "A source starts providing a field a curator had added: the source displaces the local scalar, with a notice",
+  "raw": "raw/x-03-scalar-displacement.json",
+  "identity_key": "zenodo|3000003",
+  "identity_keys": [
+    "zenodo|3000003"
+  ],
+  "expected_record_names": [
+    "zenodo-3000003"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Okafor, Chidi\"}]"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "zenodo|3000003"
+      },
+      {
+        "key": "identity_kind",
+        "value": "source"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-28T09:00:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2025-01-15"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "software"
+      },
+      {
+        "key": "source_id",
+        "value": "3000003"
+      },
+      {
+        "key": "source_key",
+        "value": "2"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/3000003"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/3000003\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [],
+    "license_id": "cc-by",
+    "name": "zenodo-3000003",
+    "notes": "",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Aeroelastic model of the IEA 15MW reference turbine",
+    "url": "https://zenodo.org/records/3000003"
+  },
+  "expected_records": {
+    "zenodo-3000003": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "zenodo|3000003"
+        },
+        {
+          "key": "identity_kind",
+          "value": "source"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-28T09:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2025-01-15"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "resource_kind",
+          "value": "software"
+        },
+        {
+          "key": "source_id",
+          "value": "3000003"
+        },
+        {
+          "key": "source_key",
+          "value": "2"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/3000003"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/3000003\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "zenodo-3000003",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Aeroelastic model of the IEA 15MW reference turbine",
+      "url": "https://zenodo.org/records/3000003"
+    }
+  },
+  "expected_notices": [
+    {
+      "type": "displacement",
+      "identity_key": "zenodo|3000003",
+      "field": "resource_kind",
+      "displaced_local_value": "model",
+      "source_value": "software",
+      "implicit": true
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+{
+  "fixture_id": "x-21-dedupe-fuzzy-proposal",
+  "fixture_kind": "record",
+  "case": "The same work in Zenodo and an institutional repository with no shared DOI: a merge PROPOSAL, never applied",
+  "raw": "raw/x-21-dedupe-fuzzy-proposal.json",
+  "identity_key": "10.11583/dtu.6000007",
+  "identity_keys": [
+    "10.11583/dtu.6000007",
+    "10.5281/zenodo.6000006"
+  ],
+  "expected_record_names": [
+    "doi-10-11583-dtu-6000007",
+    "doi-10-5281-zenodo-6000006"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Nowak, Piotr\"},{\"name\":\"Andersson, Karin\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.11583/dtu.6000007"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:12:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.11583/dtu.6000007"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T03:12:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "CC-BY-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2024-09-02"
+      },
+      {
+        "key": "publisher",
+        "value": "Technical University of Denmark"
+      },
+      {
+        "key": "resource_kind",
+        "value": "publication"
+      },
+      {
+        "key": "source_id",
+        "value": "10.11583/dtu.6000007"
+      },
+      {
+        "key": "source_key",
+        "value": "2026-07-04T11:00:00Z"
+      },
+      {
+        "key": "source_system",
+        "value": "datacite"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"datacite\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://doi.org/10.11583/dtu.6000007"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://doi.org/10.11583/dtu.6000007\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [],
+    "license_id": "cc-by",
+    "name": "doi-10-11583-dtu-6000007",
+    "notes": "",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Probabilistic wake-loss estimation for large offshore arrays",
+    "url": "https://doi.org/10.11583/dtu.6000007"
+  },
+  "expected_records": {
+    "doi-10-11583-dtu-6000007": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"},{\"name\":\"Andersson, Karin\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.11583/dtu.6000007"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.11583/dtu.6000007"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "CC-BY-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2024-09-02"
+        },
+        {
+          "key": "publisher",
+          "value": "Technical University of Denmark"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "10.11583/dtu.6000007"
+        },
+        {
+          "key": "source_key",
+          "value": "2026-07-04T11:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "datacite"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"datacite\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://doi.org/10.11583/dtu.6000007"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://doi.org/10.11583/dtu.6000007\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-11583-dtu-6000007",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Probabilistic wake-loss estimation for large offshore arrays",
+      "url": "https://doi.org/10.11583/dtu.6000007"
+    },
+    "doi-10-5281-zenodo-6000006": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"},{\"name\":\"Andersson, Karin\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.6000006"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.6000006"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2024-09-02"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "6000006"
+        },
+        {
+          "key": "source_key",
+          "value": "1"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/6000006"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/6000006\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-6000006",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Probabilistic wake loss estimation for large offshore arrays",
+      "url": "https://zenodo.org/records/6000006"
+    }
+  },
+  "expected_notices": [],
+  "expected_dedupe": {
+    "merges": [],
+    "proposals": [
+      {
+        "primary": "10.11583/dtu.6000007",
+        "secondary": "10.5281/zenodo.6000006",
+        "kind": "fuzzy-title",
+        "confidence": 1.0,
+        "evidence": "title similarity 1.00 with the same first author (nowak) and year (2024); no shared DOI — REVIEW REQUIRED",
+        "automatic": false
+      }
+    ]
+  },
+  "expected_applied_merges": [],
+  "expected_records_after_merge": {
+    "doi-10-11583-dtu-6000007": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"},{\"name\":\"Andersson, Karin\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.11583/dtu.6000007"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.11583/dtu.6000007"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:12:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "CC-BY-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2024-09-02"
+        },
+        {
+          "key": "publisher",
+          "value": "Technical University of Denmark"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "10.11583/dtu.6000007"
+        },
+        {
+          "key": "source_key",
+          "value": "2026-07-04T11:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "datacite"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"datacite\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://doi.org/10.11583/dtu.6000007"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://doi.org/10.11583/dtu.6000007\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-11583-dtu-6000007",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Probabilistic wake-loss estimation for large offshore arrays",
+      "url": "https://doi.org/10.11583/dtu.6000007"
+    },
+    "doi-10-5281-zenodo-6000006": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Nowak, Piotr\"},{\"name\":\"Andersson, Karin\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.6000006"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.6000006"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2024-09-02"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "resource_kind",
+          "value": "publication"
+        },
+        {
+          "key": "source_id",
+          "value": "6000006"
+        },
+        {
+          "key": "source_key",
+          "value": "1"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/6000006"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/6000006\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-6000006",
+      "notes": "",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Probabilistic wake loss estimation for large offshore arrays",
+      "url": "https://zenodo.org/records/6000006"
+    }
+  }
+}

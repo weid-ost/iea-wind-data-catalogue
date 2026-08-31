@@ -1,0 +1,50 @@
+{
+  "note": "Fixture iea-12, from the link checker's side. A completed task's page 404s and one of the record's file links has gone with it. Link rot is the failure mode a catalogue exists to fight, so the answer is never deletion and never a withdrawal inferred from an HTTP status: the record, its page and its citable URL are retained byte-for-byte, and the dead links appear in state/link-check.json and in the run report's notices for a human to act on. A withdrawal is an adapter's finding about the ARTIFACT, not a link checker's finding about a URL.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:14:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.8000008",
+      "source_system": "ieawind",
+      "source_id": "task11/publications#7",
+      "source_key": "9a8b7c6d5e4f3021",
+      "actor": "harvest/ieawind",
+      "provenance": { "doi": { "extraction_method": "pattern" } },
+      "source": {
+        "title": "Task 11 final technical report",
+        "doi": "10.5281/zenodo.8000008",
+        "url": "https://iea-wind.org/task11/publications/",
+        "source_urls": [
+          "https://iea-wind.org/task11/publications/",
+          "https://zenodo.org/records/8000009"
+        ],
+        "authors": [{ "name": "Nowak, Piotr" }],
+        "published_date": "2019",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "report",
+        "access_status": "open",
+        "iea_task": ["task-11"],
+        "resources": [
+          {
+            "url": "https://iea-wind.org/wp-content/uploads/task11-final.pdf",
+            "name": "task11-final.pdf",
+            "format": "pdf"
+          }
+        ],
+        "withdrawn": false
+      }
+    }
+  ],
+  "http_responses": {
+    "https://iea-wind.org/task11/publications/": 404,
+    "https://iea-wind.org/wp-content/uploads/task11-final.pdf": 404,
+    "https://zenodo.org/records/8000009": 200
+  },
+  "expected_dead_urls": [
+    "https://iea-wind.org/task11/publications/",
+    "https://iea-wind.org/wp-content/uploads/task11-final.pdf"
+  ],
+  "expected_unreachable_hosts": ["iea-wind.org"],
+  "expected_record_unchanged": true
+}

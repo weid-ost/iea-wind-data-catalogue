@@ -1,0 +1,75 @@
+{
+  "note": "A curator types a record the source did not type. The source later starts typing it, differently. ADR-0038: for a SCALAR the source displaces the local value, the displaced value stays in the log forever, and resolve() raises the displacement notice itself — nobody has to remember to append one. The notice reaches state/last-run.json -> notices, which is the short list a curator reads monthly.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "zenodo|3000003",
+      "source_system": "zenodo",
+      "source_id": "3000003",
+      "source_key": "1",
+      "actor": "harvest/zenodo",
+      "provenance": { "title": { "extraction_method": "api" } },
+      "source": {
+        "title": "Aeroelastic model of the IEA 15MW reference turbine",
+        "url": "https://zenodo.org/records/3000003",
+        "source_urls": ["https://zenodo.org/records/3000003"],
+        "authors": [{ "name": "Okafor, Chidi" }],
+        "publisher": "Zenodo",
+        "published_date": "2025-01-15",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "access_status": "open",
+        "withdrawn": false
+      }
+    },
+    {
+      "observed_at": "2026-08-28T09:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "zenodo|3000003",
+      "source_system": "zenodo",
+      "source_id": "3000003",
+      "source_key": "2",
+      "actor": "harvest/zenodo",
+      "provenance": {
+        "title": { "extraction_method": "api" },
+        "resource_kind": { "extraction_method": "api" }
+      },
+      "source": {
+        "title": "Aeroelastic model of the IEA 15MW reference turbine",
+        "url": "https://zenodo.org/records/3000003",
+        "source_urls": ["https://zenodo.org/records/3000003"],
+        "authors": [{ "name": "Okafor, Chidi" }],
+        "publisher": "Zenodo",
+        "published_date": "2025-01-15",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "software",
+        "access_status": "open",
+        "withdrawn": false
+      }
+    }
+  ],
+  "annotations_yaml": {
+    "identity_key": "zenodo|3000003",
+    "actor": "curator:tom",
+    "annotations": [
+      {
+        "local": { "resource_kind": "model" },
+        "note": "the source does not type it; it is an aeroelastic model",
+        "observed_at": "2026-08-26T12:00:00Z"
+      }
+    ]
+  },
+  "annotations_applied_before_event_index": 1,
+  "expected_notices": [
+    {
+      "type": "displacement",
+      "identity_key": "zenodo|3000003",
+      "field": "resource_kind",
+      "displaced_local_value": "model",
+      "source_value": "software",
+      "implicit": true
+    }
+  ]
+}

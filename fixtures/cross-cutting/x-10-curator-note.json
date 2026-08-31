@@ -1,0 +1,228 @@
+{
+  "fixture_id": "x-10-curator-note",
+  "fixture_kind": "record",
+  "case": "A known-wrong upstream licence displayed verbatim, with the curator note carried beside it",
+  "raw": "raw/x-10-curator-note.json",
+  "identity_key": "10.5281/zenodo.5000005",
+  "identity_keys": [
+    "10.5281/zenodo.5000005"
+  ],
+  "expected_record_names": [
+    "doi-10-5281-zenodo-5000005"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Okafor, Chidi\"}]"
+      },
+      {
+        "key": "curator_notes",
+        "value": "[{\"added_at\":\"2026-08-28T09:00:00Z\",\"field\":\"license_id\",\"note\":\"OST note: the licence stated at source appears incorrect; the archive's own LICENCE file says CC-BY-NC-4.0. Reported upstream 2026-08-28.\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.5000005"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T03:11:07Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.5000005"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-28T09:00:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2022-11-30"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "5000006"
+      },
+      {
+        "key": "source_key",
+        "value": "1"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/5000006"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/5000006\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [],
+    "license_id": "cc-by",
+    "name": "doi-10-5281-zenodo-5000005",
+    "notes": "<p>Strain-gauge load measurements from three turbines, 2019-2021.</p>",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [
+      {
+        "name": "loads"
+      }
+    ],
+    "title": "Offshore turbine load measurements, Alpha Ventus",
+    "url": "https://zenodo.org/records/5000006"
+  },
+  "expected_records": {
+    "doi-10-5281-zenodo-5000005": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Okafor, Chidi\"}]"
+        },
+        {
+          "key": "curator_notes",
+          "value": "[{\"added_at\":\"2026-08-28T09:00:00Z\",\"field\":\"license_id\",\"note\":\"OST note: the licence stated at source appears incorrect; the archive's own LICENCE file says CC-BY-NC-4.0. Reported upstream 2026-08-28.\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.5000005"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T03:11:07Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.5000005"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-28T09:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2022-11-30"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "resource_kind",
+          "value": "dataset"
+        },
+        {
+          "key": "source_id",
+          "value": "5000006"
+        },
+        {
+          "key": "source_key",
+          "value": "1"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/5000006"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/5000006\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-5000005",
+      "notes": "<p>Strain-gauge load measurements from three turbines, 2019-2021.</p>",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [
+        {
+          "name": "loads"
+        }
+      ],
+      "title": "Offshore turbine load measurements, Alpha Ventus",
+      "url": "https://zenodo.org/records/5000006"
+    }
+  },
+  "expected_notices": []
+}

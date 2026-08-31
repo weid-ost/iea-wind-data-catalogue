@@ -1,0 +1,32 @@
+# Sample annotation — suppression, on a fragile-identity record.
+#
+# `hash|…` identities come from the last-resort rule (no DOI, no stable source
+# id): a hash of normalised title + first-author surname + year. They are
+# fragile by construction — a corrected upstream title yields a different key
+# and therefore a second record (fixture x-06). Suppression is how the
+# superseded one leaves the listings.
+#
+# Suppression is NOT deletion and never becomes deletion (ADR-0027): the record,
+# its page and its URL are retained. Reverse it by appending the opposite
+# annotation, never by deleting this file.
+#
+# Reference: docs/runbooks/correct-a-record.md §3.5.
+
+identity_key: "hash|1f0e3dad99908345"
+actor: "curator:tom"
+
+annotations:
+
+  - local:
+      suppressed: true
+    note: >-
+      superseded by the concept-DOI record after the title was corrected
+      upstream; retained and citable, removed from listings
+    observed_at: "2026-08-28T11:00:00Z"
+
+  - local:
+      links:
+        - url: "https://zenodo.org/records/1234567"
+          label: "The record that supersedes this one"
+    note: "point a reader at the surviving record"
+    observed_at: "2026-08-28T11:00:00Z"

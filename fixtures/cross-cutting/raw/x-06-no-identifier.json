@@ -1,0 +1,99 @@
+{
+  "note": "The worst case for identity: a task-site listing with no DOI and no stable upstream id, so the key is the last-resort hash of normalised title + first-author surname + year. This fixture exists to keep the fragility HONEST rather than to hide it: when the typo in 'intrim' is corrected upstream, the hash changes, and the catalogue gets a SECOND record rather than an updated one. The reconciler's fuzzy pass then proposes the merge (never applies it) — which is the designed recovery path, not an accident.",
+  "identity_rule": "hash of normalise_title(title) + normalise_author(first author) + year",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "hash|58aa9ac5f00333d0",
+      "source_system": "ieawind",
+      "source_id": "task65/publications#3",
+      "source_key": "b17d0c9a2f4e6810",
+      "actor": "harvest/ieawind",
+      "provenance": {
+        "title": {
+          "extraction_method": "llm",
+          "model": "openai/gpt-4o-mini",
+          "prompt_version": "v1",
+          "confidence": 0.81
+        },
+        "authors": {
+          "extraction_method": "llm",
+          "model": "openai/gpt-4o-mini",
+          "prompt_version": "v1",
+          "confidence": 0.74
+        }
+      },
+      "source": {
+        "title": "Wind resource assessment for the Baltic Sea, intrim report",
+        "url": "https://iea-wind.org/task11/publications/",
+        "source_urls": [
+          "https://iea-wind.org/task11/publications/"
+        ],
+        "authors": [
+          {
+            "name": "Nowak, Piotr"
+          }
+        ],
+        "published_date": "2022",
+        "resource_kind": "report",
+        "access_status": "open",
+        "iea_task": [
+          "task-65"
+        ],
+        "withdrawn": false
+      }
+    },
+    {
+      "observed_at": "2026-08-31T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "hash|718ed9153ec70073",
+      "source_system": "ieawind",
+      "source_id": "task65/publications#3",
+      "source_key": "2c5b9e17f0a3d842",
+      "actor": "harvest/ieawind",
+      "provenance": {
+        "title": {
+          "extraction_method": "llm",
+          "model": "openai/gpt-4o-mini",
+          "prompt_version": "v1",
+          "confidence": 0.83
+        },
+        "authors": {
+          "extraction_method": "llm",
+          "model": "openai/gpt-4o-mini",
+          "prompt_version": "v1",
+          "confidence": 0.74
+        }
+      },
+      "source": {
+        "title": "Wind resource assessment for the Baltic Sea, interim report",
+        "url": "https://iea-wind.org/task11/publications/",
+        "source_urls": [
+          "https://iea-wind.org/task11/publications/"
+        ],
+        "authors": [
+          {
+            "name": "Nowak, Piotr"
+          }
+        ],
+        "published_date": "2022",
+        "resource_kind": "report",
+        "access_status": "open",
+        "iea_task": [
+          "task-65"
+        ],
+        "withdrawn": false
+      }
+    }
+  ],
+  "expected_proposals": [
+    {
+      "primary": "hash|58aa9ac5f00333d0",
+      "secondary": "hash|718ed9153ec70073",
+      "kind": "fuzzy-title",
+      "automatic": false
+    }
+  ],
+  "merge_observed_at": "2026-08-31T12:00:00Z"
+}

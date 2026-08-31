@@ -1,0 +1,72 @@
+{
+  "note": "The case that motivates the whole set-valued/scalar split. Task 49 is hand-attributed from a workshop list; Zenodo later adds the record to the Task 43 community. Union, never displace: the record ends up in BOTH groups and the hand attribution survives. Order is deliberate — the annotation comes first, the community second, because the dangerous direction is the source arriving last.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T03:11:07Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.4000004",
+      "source_system": "zenodo",
+      "source_id": "4000005",
+      "source_key": "1",
+      "actor": "harvest/zenodo",
+      "provenance": { "title": { "extraction_method": "api" } },
+      "source": {
+        "title": "Digital WRA data standard — worked examples",
+        "doi": "10.5281/zenodo.4000004",
+        "url": "https://zenodo.org/records/4000005",
+        "source_urls": ["https://zenodo.org/records/4000005"],
+        "authors": [{ "name": "Andersson, Karin" }],
+        "publisher": "Zenodo",
+        "published_date": "2025-05-20",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "dataset",
+        "access_status": "open",
+        "keywords": ["wra"],
+        "iea_task": [],
+        "withdrawn": false
+      }
+    },
+    {
+      "observed_at": "2026-08-29T06:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.4000004",
+      "source_system": "zenodo",
+      "source_id": "4000005",
+      "source_key": "2",
+      "actor": "harvest/zenodo",
+      "provenance": {
+        "title": { "extraction_method": "api" },
+        "iea_task": { "extraction_method": "pattern" }
+      },
+      "source": {
+        "title": "Digital WRA data standard — worked examples",
+        "doi": "10.5281/zenodo.4000004",
+        "url": "https://zenodo.org/records/4000005",
+        "source_urls": ["https://zenodo.org/records/4000005"],
+        "authors": [{ "name": "Andersson, Karin" }],
+        "publisher": "Zenodo",
+        "published_date": "2025-05-20",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "dataset",
+        "access_status": "open",
+        "keywords": ["wra"],
+        "iea_task": ["task-43"],
+        "withdrawn": false
+      }
+    }
+  ],
+  "annotations_yaml": {
+    "identity_key": "10.5281/zenodo.4000004",
+    "actor": "curator:tom",
+    "annotations": [
+      {
+        "local": { "iea_task": ["task-49"] },
+        "note": "Task 49 attribution from the IDEA workshop participant list",
+        "observed_at": "2026-08-26T09:00:00Z"
+      }
+    ]
+  },
+  "annotations_applied_before_event_index": 1
+}

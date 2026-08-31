@@ -59,6 +59,41 @@ One of two shapes, and the file says which in its `fixture_kind`:
 }
 ```
 
+## `cross-cutting/` — where the input is an event stream, not a payload
+
+A cross-cutting fixture belongs to no adapter, so there is no upstream payload
+to capture. Its `raw/<id>.json` holds the **inputs to the pipeline** instead,
+and `tests/test_crosscutting.py` replays them through the real code —
+`append_event` → `apply_annotations` → `check_pins` → `materialize_all` →
+`dedupe` / `linkcheck`:
+
+```jsonc
+{
+  "note": "why this fixture exists and what it proves",
+  "events": [ /* Event objects, appended in order */ ],
+
+  // optional — the YAML a curator would have written in annotations/
+  "annotations_yaml": { "identity_key": "...", "annotations": [ /* ... */ ] },
+  "annotations_applied_before_event_index": 1,   // when the curator acted
+
+  // optional — what the link checker sees, so it never touches the network
+  "http_responses": { "https://example.org/x": 404 },
+
+  // optional — a fixed timestamp for merge annotations, so replay is byte-stable
+  "merge_observed_at": "2026-08-31T12:00:00Z",
+
+  // what the fixture asserts, restated for a human reading the input file
+  "expected_merges": [], "expected_proposals": [], "expected_notices": []
+}
+```
+
+The expectation file is `"fixture_kind": "record"` and carries
+`expected_records` (every materialised record, keyed by slug), plus
+`expected_notices`, `expected_dedupe` / `expected_records_after_merge` for a
+dedupe fixture, and `expected_link_check` for a link-rot one. `record` is the
+first record by slug, so the generic checks in `tests/test_fixtures.py` still
+apply.
+
 ## How tests use them
 
 `tests/test_fixtures.py` walks the tree and checks every fixture is
