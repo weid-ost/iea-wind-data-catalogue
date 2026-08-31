@@ -15,18 +15,19 @@
     "/",
     "/search/",
     "/browse/",
-    "/record/doi-10-5281-zenodo-1234566/",
-    "/record/doi-10-5281-zenodo-7702209/",
-    "/record/doi-10-5281-zenodo-3376526/",
+    "/record/doi-10-2172-2447928/",
+    "/record/doi-10-2314-kxp-1790028361/",
+    "/record/doi-10-5281-zenodo-20847799/",
     "/dev/components/"
   ],
   "why": {
     "/": "the homepage, and the freshness banner",
     "/search/": "the page a screen-reader user lives on",
     "/browse/": "the no-JavaScript path, and pagination",
-    "/record/doi-10-5281-zenodo-1234566/": "rep-01: the canonical record",
-    "/record/doi-10-5281-zenodo-7702209/": "r-01: the 300-character title",
-    "/record/doi-10-5281-zenodo-3376526/": "r-04: the withdrawn record and its banner",
+    "//records": "Three REAL harvested records, not fixtures. Fixture-shaped record pages are already audited through /dev/components; these prove the gate holds over what the pipeline actually produced.",
+    "/record/doi-10-2172-2447928/": "the rich one (OSTI): seven keyword tags, a task group, a resource, two related identifiers, a 3,200-character abstract and a very long author list — the widest set of surfaces any real record lights up",
+    "/record/doi-10-2314-kxp-1790028361/": "the sparse one (DataCite): no abstract, no resources, no group, no task attribution — and its stated licence, 'Open Access', is not in the licence table, so it also renders the unrecognised-licence warning panel",
+    "/record/doi-10-5281-zenodo-20847799/": "the task-attributed one (Zenodo): a task chip, a group, a resource and a related identifier together. No record in this harvest is withdrawn or retracted, so this stands in as the record carrying the most task and source attribution; the withdrawn banner and retraction flag are audited on fixtures r-04 and x-06 in /dev/components/",
     "/dev/components/": "the gallery — every component in every fixture state, plus the token swatches, so one URL audits the whole inventory AND the palette"
   }
 }

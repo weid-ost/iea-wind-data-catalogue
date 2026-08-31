@@ -180,5 +180,7 @@ fixes. Plus ≈$90/month, Postgres, Solr and Redis.
 
 ---
 
-**Last executed:** never. §1 was verified on 2026-08-31 — `make materialize` and
-`make validate` both green on the foundation checkout.
+**Last executed:** never — promotion is a future decision, not a pending task.
+§1 was re-verified on 2026-09-01 against the first coherent harvest: `make
+materialize` and `make validate` both green over 30 real records, so what CKAN
+would receive on promotion day now exists and passes the gate.

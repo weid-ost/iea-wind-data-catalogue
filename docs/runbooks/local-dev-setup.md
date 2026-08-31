@@ -55,7 +55,10 @@ for development.
 make test
 ```
 
-Expect a green run — `320 passed, 3 skipped` at the time of writing.
+Expect a green run — `1753 passed, 389 skipped` at the time of writing. (The
+skips are the fixture-kind parametrisations stepping over fixtures of the other
+kinds; nothing is being avoided.)
+
 Then confirm the CLI is wired up:
 
 ```sh

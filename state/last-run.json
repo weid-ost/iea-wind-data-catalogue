@@ -5,8 +5,8 @@
     "misses": 7
   },
   "dropped_dois": [],
-  "events_appended": 30,
-  "finished_at": "2026-08-31T23:03:29Z",
+  "events_appended": 0,
+  "finished_at": "2026-08-31T23:05:10Z",
   "harvest_version": "0.1.0",
   "limit": 5,
   "notices": [
@@ -162,54 +162,54 @@
   "records": {
     "pruned": 0,
     "total": 30,
-    "unchanged": 0,
-    "written": 30
+    "unchanged": 30,
+    "written": 0
   },
   "sources": {
     "crossref": {
-      "changed": 5,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 5,
-      "skipped_unchanged": 0
+      "skipped_unchanged": 5
     },
     "datacite": {
-      "changed": 5,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 5,
-      "skipped_unchanged": 0
+      "skipped_unchanged": 5
     },
     "github": {
-      "changed": 5,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 5,
-      "skipped_unchanged": 0
+      "skipped_unchanged": 5
     },
     "ieawind": {
-      "changed": 5,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 5,
-      "skipped_unchanged": 0
+      "skipped_unchanged": 5
     },
     "osti": {
-      "changed": 5,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 5,
-      "skipped_unchanged": 0
+      "skipped_unchanged": 5
     },
     "wdh": {
       "changed": 0,
@@ -223,16 +223,16 @@
       "skipped_unchanged": 0
     },
     "zenodo": {
-      "changed": 5,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 5,
-      "skipped_unchanged": 0
+      "skipped_unchanged": 5
     }
   },
-  "started_at": "2026-08-31T23:03:00Z",
+  "started_at": "2026-08-31T23:04:41Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.2314/kxp:1790028361",

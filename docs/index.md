@@ -151,9 +151,10 @@ your job to update it.
   runbooks it governs, and every runbook links back to the ADRs that justify
   it. An inheritor landing on any note can walk to context.
 - **Every command in a runbook is copy-pasteable and has been run.** Where a
-  command belongs to work that is not yet finished, it is marked
-  **`SPEC — not yet implemented`** and the note says which track owns it. That
-  marker is a requirement on that track, not an excuse.
+  command belonged to work that was not yet finished, it was marked
+  **`SPEC — not yet implemented`** and the note said which track owned it. Every
+  track has now landed and every such marker has been retired: as of 2026-09-01
+  there is no command in these runbooks that has not actually been executed.
 - **"OST" is the Ostschweizer Fachhochschule** (Eastern Switzerland University
   of Applied Sciences) — the author's organisation and the repository's initial
   owner. It is never expanded any other way.

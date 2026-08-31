@@ -12,14 +12,20 @@ no servers, no databases, no billing account, ≈ $0/month.
 
 ## Status
 
-**Prototype.** The foundation — the `harvest` package, the event log, the
-materialiser, the CKAN-compat gate, the source/organisation/task registers — is
-built and tested. So are **five of the seven adapters** (Zenodo, DataCite,
-Crossref, GitHub, OSTI), reconciliation and link checking, the Astro site with
-its design system and accessibility gate, and the CI workflows. The **Tier-3
-extraction layer** and the two adapters that depend on it — `ieawind` and
-`wdh` — are still stubs, and `records/` is still empty: the first coherent
-harvest across all sources has not been run yet.
+**Prototype, and now a working one.** Everything is built: the `harvest`
+package, the event log, the materialiser, the CKAN-compat gate, the registers,
+**all seven adapters** (Zenodo, DataCite, Crossref, GitHub, OSTI, iea-wind.org,
+Wind Data Hub), the Tier-3 extraction layer with its committed cache, the
+reconciliation layer, the Astro site with its design system and accessibility
+gate, and the CI workflows.
+
+The first coherent harvest ran on 2026-09-01 and is committed: **30 records**
+from six sources, five each, under the deliberate five-record cap. The seventh,
+Wind Data Hub, disabled itself behind its authentication wall and said so — the
+site shows that as a degradation notice rather than pretending. Seven
+iea-wind.org pages that needed a model to classify are sitting in
+`state/pending-extraction.json`, because the model was unavailable and the rule
+is that the harvest does not fail when that happens.
 
 **There is a deliberate five-record cap per source.** `harvest.DEFAULT_LIMIT`
 is 5 and `sources.yaml` sets `max_records: 5` everywhere, so a stray run cannot

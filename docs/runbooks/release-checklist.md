@@ -38,7 +38,7 @@ individually while iterating.
 
 | # | Gate | Command | Passes when |
 |---|---|---|---|
-| 1 | tests | `make test` | `320 passed, 3 skipped` or better; **no new skips without a reason** |
+| 1 | tests | `make test` | `1753 passed, 389 skipped` or better; **no new skips without a reason**. The skips are the fixture-kind parametrisations stepping over fixtures of the other kinds, which is by design |
 | 2 | CKAN-compat | `make validate` | `validate-ckan-compat: OK — N record(s)` |
 | 3 | replay determinism | `rm -f records/*.json && make materialize && git status --short records/` | **no changes** — the acceptance test for ADR-0037 |
 | 4 | palette + contrast | `make build-tokens` | every pair reports `PASS`; **`design/palette.json` unchanged** unless a colour was deliberately altered |
@@ -52,19 +52,25 @@ gates 1–8 were verified on 2026-09-01 against the first coherent harvest.
 
 ### On gate 4
 
-`make build-tokens` runs `uv run python design/gen.py`, which **writes
-`palette.json` into the current working directory**, not into `design/`. Compare
-and move deliberately:
+`make build-tokens` runs `uv run python design/gen.py`, which writes
+`design/palette.json` in place — it no longer drops a stray `palette.json` in
+whatever directory you happened to be in. So the check is just a diff:
 
 ```sh
 uv run python design/gen.py
-diff <(python3 -m json.tool palette.json) <(python3 -m json.tool design/palette.json) \
-  && rm palette.json                       # unchanged: discard
-# if it differs and the change was intended:
-# mv palette.json design/palette.json
+git status --short design/      # expect: nothing
 ```
 
-Verified on 2026-08-31: regenerating reproduces `design/palette.json` exactly.
+Anything listed there is a deliberate colour change or a bug. Read the script's
+own WCAG block too: every pair must print `PASS` and the summary must read
+`ALL PAIRS PASS`. The decorative hairline border (`n300` on white, 1.51) is
+reported at a 1.0 floor rather than judged at 3:1, because WCAG 1.4.11 governs
+components you must perceive to operate, not decoration; every border that
+*does* carry meaning — focus, input, strong — is a separate token held to 3:1
+in the shipped block.
+
+Verified on 2026-09-01: regenerating reproduces `design/palette.json` and
+`design/design-tokens.json` byte for byte, with every pair PASS.
 
 ## 2. The three manual accessibility passes
 
@@ -140,7 +146,12 @@ ran. An unexecuted runbook is a hypothesis.
 
 ---
 
-**Last executed:** 2026-08-31 — gates 1–4 verified on the foundation checkout:
-`320 passed, 3 skipped`; `validate-ckan-compat: OK — 0 record(s)`;
-`make materialize` byte-stable; `design/gen.py` reproduces `design/palette.json`
-exactly with every contrast pair PASS. Gates 5–8 and §2 pending `site/`.
+**Last executed:** 2026-09-01 — **all eight gates**, against the first coherent
+harvest rather than an empty checkout: `1753 passed, 389 skipped`;
+`validate-ckan-compat: OK — 30 record(s)`; `make materialize` byte-stable;
+`design/gen.py` reproduces `design/palette.json` exactly with every contrast
+pair PASS; `check-tokens`, `check-ckan-gate` and `check-urls` all OK;
+`pa11y-ci` **14/14 URLs passed** (7 pages × 2 themes, three of them real
+harvested record pages); `astro build` + Pagefind complete, 36 pages, 30
+records indexed; and `grep -rn "ubuntu-latest\|lts/\*" .github/workflows/`
+returns nothing.

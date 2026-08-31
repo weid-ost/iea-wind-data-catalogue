@@ -139,7 +139,11 @@ POSTed to CKAN `package_create` unmodified. Drill: [[promote-to-ckan]].
 
 ---
 
-**Last executed:** 2026-08-31 — `uv run python -m harvest materialize` and
-`uv run python -m harvest validate` both exit 0 on the foundation checkout
-(`0 record(s)`), and the annotate → materialise → validate cycle in
-[[correct-a-record]] produced a valid record under `$HARVEST_ROOT`.
+**Last executed:** 2026-09-01, against the first coherent harvest — no longer
+an empty checkout. `uv run python -m harvest materialize` reports
+`30 record(s) (0 written, 30 unchanged, 0 pruned)` and
+`uv run python -m harvest validate` reports `validate-ckan-compat: OK — 30
+record(s)`, both exit 0. Replay is byte-stable: materialising twice in a row
+leaves every file in `records/` unchanged, checked by hashing the tree either
+side. The annotate → materialise → validate cycle in [[correct-a-record]]
+produced a valid record under `$HARVEST_ROOT`.

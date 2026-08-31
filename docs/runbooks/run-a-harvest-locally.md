@@ -5,7 +5,7 @@ status: current
 date: 2026-08-31
 related: [adr-0026-change-detection-by-source-key, adr-0031-the-harvest-never-fails-on-llm-unavailability, adr-0029-scheduling-and-the-heartbeat-commit, materialize-and-validate, add-a-source-adapter]
 tags: [runbook, harvest]
-last_executed: 2026-08-31
+last_executed: 2026-09-01
 ---
 
 # Runbook — run a harvest locally
@@ -174,6 +174,26 @@ would receive on promotion day.
 
 ---
 
-**Last executed:** 2026-08-31 — `uv run python -m harvest run --limit 5
---dry-run` completed with exit 0, all seven sources reporting
-`implemented: false`, `state/last-run.json` written.
+**Last executed:** 2026-09-01 — the first coherent harvest. `uv run python -m
+harvest run --limit 5` exited 0 against the live upstreams: all seven adapters
+`implemented: true`, six reachable and five records each (30 events, 30
+records), `wdh` correctly `reachable: false` behind its auth wall,
+`validate-ckan-compat: OK`, `ok: true`.
+
+Two things worth knowing before you repeat it:
+
+- **`GITHUB_TOKEN` arms two things, not one.** Exporting it to lift the GitHub
+  adapter's rate limit also gives `harvest/extract.py` a credential for GitHub
+  Models, so Tier-3 pages that miss the cache will attempt live inference. On
+  this run the endpoint answered `410 github_models_retirement_brownout` and the
+  degradation path took over exactly as specified: seven pages queued to
+  `state/pending-extraction.json`, one notice each, run still exit 0. If you
+  want the deterministic path only, do not export `GITHUB_TOKEN`.
+- **The committed `cache/` entries did not hit.** They are keyed on page
+  content, and the two pages they were captured from are not among the five
+  `--limit 5` reaches. `cache.hit_rate: 0.0` on a first run is therefore not a
+  fault; it means the crawl went somewhere else.
+
+A second `run --limit 5` immediately afterwards reported `changed: 0` for every
+source, `events_appended: 0`, and left only `state/last-run.json` modified —
+the change-detection and heartbeat proof in §5, performed.
