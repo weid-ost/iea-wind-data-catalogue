@@ -1,0 +1,156 @@
+{
+  "fixture_id": "dc-03-type-mismatch",
+  "fixture_kind": "source_namespace",
+  "case": "resourceTypeGeneral 'Other' on something that is plainly a model/dataset",
+  "provenance_note": "Captured verbatim from https://api.datacite.org/dois/10.5281/zenodo.4322584 on 2026-08-31.",
+  "note": "An OpenFAST model deposited with resourceTypeGeneral 'Other' and no resourceType free text. Tier 1 never calls a model (ADR-0024), so the deterministic mapping yields resource_kind 'other' and the whole types block is retained verbatim in source.extra.datacite_types for a later classifier to work from. access_status comes from info:eu-repo/semantics/openAccess, never from the licence.",
+  "raw": "raw/dc-03-type-mismatch.json",
+  "identity_key": "10.5281/zenodo.4322584",
+  "source_system": "datacite",
+  "source_id": "10.5281/zenodo.4322584",
+  "source_key": "2020-12-15T15:10:13Z",
+  "expected_slug": "doi-10-5281-zenodo-4322584",
+  "findable": true,
+  "source": {
+    "title": "COREWIND - ACTIVEFLOAT OpenFAST model 15 MW FOWT Grand Canary Island site",
+    "notes": "Files to simulate and run, ACTIVEFLOAT OpenFAST model 15MW FOWT from NREL (DTU) at Grand Canary Island site. This model version is consistent with deliverable D1.3 from COREWIND project (link to delvierable). Link to the 15MW wind turbine model can be found in the following link: GitHub - IEAWindTask37/IEA-15-240-RWT: 15MW reference wind turbine repository developed in conjunction with IEA Wind <strong>Disclaimer:</strong> The files and models are provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the models and files or the use or other dealings in the models and files provided.",
+    "doi": "10.5281/zenodo.4322584",
+    "url": "https://zenodo.org/record/4322584",
+    "source_urls": [
+      "https://zenodo.org/record/4322584"
+    ],
+    "authors": [
+      {
+        "name": "Duran, Ruben",
+        "given": "Ruben",
+        "family": "Duran",
+        "affiliation": "COBRA"
+      },
+      {
+        "name": "Hernandez, Sergio",
+        "given": "Sergio",
+        "family": "Hernandez",
+        "affiliation": "ESTEYCO"
+      },
+      {
+        "name": "Vigara, Fernando",
+        "given": "Fernando",
+        "family": "Vigara",
+        "affiliation": "ESTEYCO"
+      },
+      {
+        "name": "M. Youssef Mahfouz",
+        "affiliation": "USTUTT"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2020-12-15",
+    "version": "1.0",
+    "license_raw": "cc-by-nc-nd-4.0",
+    "license_id": "cc-nc-nd",
+    "resource_kind": "other",
+    "access_status": "open",
+    "keywords": [
+      "COREWIND project",
+      "Horizon2020",
+      "Renewable Energy",
+      "Wind",
+      "Floating Wind Energy",
+      "SemiSubmesible platform",
+      "15 MW wind Turbine"
+    ],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.4322585",
+        "identifier_type": "DOI",
+        "relation": "HasVersion"
+      },
+      {
+        "identifier": "https://zenodo.org/communities/corewind",
+        "identifier_type": "URL",
+        "relation": "IsPartOf"
+      }
+    ],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "datacite_state": "findable",
+      "datacite_client_id": "cern.zenodo",
+      "datacite_schema_version": "http://datacite.org/schema/kernel-4",
+      "datacite_types": {
+        "ris": "GEN",
+        "bibtex": "misc",
+        "citeproc": "article",
+        "schemaOrg": "CreativeWork",
+        "resourceTypeGeneral": "Other"
+      },
+      "datacite_container": {
+        "type": "Series",
+        "identifier": "https://zenodo.org/communities/corewind",
+        "identifierType": "URL"
+      },
+      "rights_list": [
+        {
+          "rights": "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
+          "rightsUri": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/",
+          "rightsIdentifier": "cc-by-nc-nd-4.0",
+          "rightsIdentifierScheme": "SPDX"
+        },
+        {
+          "rights": "Open Access",
+          "rightsUri": "info:eu-repo/semantics/openAccess"
+        }
+      ],
+      "other_descriptions": [
+        {
+          "description": "WO2014177729 - SUBMERSIBLE STRUCTURE FOR ACTIVELY SUPPORTING TOWERS OF GENERATORS AND SUB-STATIONS OR SIMILAR ELEMENTS, IN MARITIME FACILITIES, NEBRERA GARCÍA, José Alfonso ALTOLAGUIRRE MCCRUMLISH, Jaime, 2014 (https://patentscope.wipo.int/search/es/detail.jsf?docId=WO2014177729)",
+          "description_type": "Other"
+        },
+        {
+          "description": "{\"references\": [\"Garrett Barter, Nikhar Abbas, Fanzhong Meng, Pietro Bortolotti, Witold Skrzypinski, George Scott, Roland Feil, Henrik Bredmose, Katherine Dykes, Matt Shields, Christopher Allen, and Anthony Viselli. 2020. Definition of the IEA 15-Megawatt Offshore Reference Wind. Golden, CO: National Renewable Energy Laboratory. NREL/TP-5000-75698. https://www.nrel.gov/docs/fy20osti/75698.pdf\", \"COREWIND D1.2 Design Loads, 2019.\", \"COREWIND D1.3\", \"WO2014177729 - SUBMERSIBLE STRUCTURE FOR ACTIVELY SUPPORTING TOWERS OF GENERATORS AND SUB-STATIONS OR SIMILAR ELEMENTS, IN MARITIME FACILITIES, NEBRERA GARC\\u00cdA, Jos\\u00e9 Alfonso ALTOLAGUIRRE MCCRUMLISH, Jaime, 2014\"]}",
+          "description_type": "Other"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "title": {
+      "extraction_method": "api"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "version": {
+      "extraction_method": "api"
+    },
+    "keywords": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "access_status": {
+      "extraction_method": "pattern"
+    }
+  }
+}

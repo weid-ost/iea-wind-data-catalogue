@@ -1,0 +1,105 @@
+{
+  "fixture_id": "dc-07-publisher-object",
+  "fixture_kind": "source_namespace",
+  "case": "publisher as a schema 4.5+ object rather than a string",
+  "invented": true,
+  "provenance_note": "INVENTED, derived from the dc-01 payload. 0 of the 391 IEA-Wind-relevant DataCite payloads captured on 2026-08-31 carried a publisher object — the corpus is 354 kernel-4, 3 kernel-3 and 34 unversioned — so the 4.5 shape had to be constructed from the DataCite 4.5 schema documentation. The DOI uses the reserved test prefix 10.5072.",
+  "note": "source.publisher takes the object's 'name'; the object itself is kept verbatim in source.extra.datacite_publisher so the ROR identifier is not lost. A string publisher (dc-01) and an object publisher must produce the same field.",
+  "raw": "raw/dc-07-publisher-object.json",
+  "identity_key": "10.5072/example-iea-wind-publisher-object-1",
+  "source_system": "datacite",
+  "source_id": "10.5072/example-iea-wind-publisher-object-1",
+  "source_key": "2026-04-09T07:41:02Z",
+  "expected_slug": "doi-10-5072-example-iea-wind-publisher-object-1",
+  "findable": true,
+  "source": {
+    "title": "Reference array wake deficit measurements, IEA Wind Task 49",
+    "notes": "Nacelle-lidar wake deficit measurements behind the reference array, deposited under DataCite metadata schema 4.5, in which <b>publisher</b> is an object rather than a string.",
+    "doi": "10.5072/example-iea-wind-publisher-object-1",
+    "url": "https://zenodo.org/doi/10.5072/example-iea-wind-publisher-object-1",
+    "source_urls": [
+      "https://zenodo.org/doi/10.5072/example-iea-wind-publisher-object-1"
+    ],
+    "authors": [
+      {
+        "name": "Krogh, Søren",
+        "given": "Søren",
+        "family": "Krogh",
+        "orcid": "0000-0002-1825-0097",
+        "affiliation": "Technical University of Denmark"
+      }
+    ],
+    "publisher": "IEA Wind Task 49",
+    "published_date": "2026-04-09",
+    "version": "1.1",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "dataset",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "datacite_state": "findable",
+      "datacite_client_id": "cern.zenodo",
+      "datacite_schema_version": "http://datacite.org/schema/kernel-4.5",
+      "datacite_types": {
+        "ris": "DATA",
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "schemaOrg": "Dataset",
+        "resourceType": "",
+        "resourceTypeGeneral": "Dataset"
+      },
+      "datacite_publisher": {
+        "name": "IEA Wind Task 49",
+        "publisherIdentifier": "https://ror.org/04qw24q55",
+        "publisherIdentifierScheme": "ROR",
+        "schemeUri": "https://ror.org/",
+        "lang": "en"
+      },
+      "rights_list": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX"
+        }
+      ],
+      "iea_task_candidates": [
+        "task-49"
+      ]
+    }
+  },
+  "provenance": {
+    "title": {
+      "extraction_method": "api"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "version": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "fixture_id": "dc-06-related-identifiers",
+  "fixture_kind": "source_namespace",
+  "case": "Cites, IsVersionOf and IsPartOf populated — links only, never new records",
+  "provenance_note": "Captured verbatim from https://api.datacite.org/dois/10.5281/zenodo.4033073 on 2026-08-31.",
+  "note": "Eight related identifiers across three relation types, mixing DOI and URL targets. They are mapped into source.related_identifiers (set-valued, so they union across sources) and nothing else: harvest() yields only the DOIs the configured queries returned, so no target here can become a record. DOI-typed targets are case-normalised so the union actually unions.",
+  "raw": "raw/dc-06-related-identifiers.json",
+  "identity_key": "10.5281/zenodo.4033073",
+  "source_system": "datacite",
+  "source_id": "10.5281/zenodo.4033073",
+  "source_key": "2020-10-29T07:32:46Z",
+  "expected_slug": "doi-10-5281-zenodo-4033073",
+  "findable": true,
+  "source": {
+    "title": "DTU Wind Energy metadata and terminology",
+    "notes": "The main focus of the wind energy domain is to provide practical solutions that will result in cost-effective electricity produced from the wind. To achieve such goals, the wind energy domain is characterized as a multi-disciplinary domain, reusing, mixing and contributing to solutions in fields of Earth Sciences, Mechanical and Electrical Engineering, Material Science, Computer Science and Social Science. Due to multidisciplinarity it is essential to establish common terminology to boost sharing and reuse of data, and general understanding across the domain. In 2017, through the international collaboration with domain experts, several wind energy related taxonomies (e.g., research topics, external conditions, etc.) were developed to enable better description of published datasets. These taxonomies have been initially implemented in 2018 in DTU Data (university instance of figshare), and later in sharewind (instance of b2share). Recently, in the Marinet2 project we have proposed metadata schemas , by generalizing seadatanet standard, for data streams (i.e., recorded parameters) and datasets (collection of data streams) for preparing datasets in NetCDF format for publishing and preservation. To establish a controlled vocabulary of parameters, and thus assure same naming convention across datasets, we are fusing existing vocabularies from Earth Ocean domain (e.g., CF standard name convention, BODC) and terminologies used in IEC standards for wind turbine performance assessment. Follow up steps will be to build a collection of ‘standards’ for wind energy domain under FAIRsharing.org, work towards their implementation during the AWAKEN project, disseminate them through IEA Wind and EERA JP WIND.",
+    "doi": "10.5281/zenodo.4033073",
+    "url": "https://zenodo.org/record/4033073",
+    "source_urls": [
+      "https://zenodo.org/record/4033073"
+    ],
+    "authors": [
+      {
+        "name": "Vasiljevic, Nikola",
+        "given": "Nikola",
+        "family": "Vasiljevic",
+        "orcid": "0000-0002-9381-9693",
+        "affiliation": "Technical University of Denmark"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2020-09-16",
+    "license_raw": "cc-by-nc-nd-4.0",
+    "license_id": "cc-nc-nd",
+    "resource_kind": "publication",
+    "access_status": "open",
+    "keywords": [
+      "FAIR",
+      "RDA",
+      "wind energy"
+    ],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.1199489",
+        "identifier_type": "DOI",
+        "relation": "Cites"
+      },
+      {
+        "identifier": "10.5281/zenodo.4013191",
+        "identifier_type": "DOI",
+        "relation": "Cites"
+      },
+      {
+        "identifier": "http://data.windenergy.dtu.dk/taxonomy",
+        "identifier_type": "URL",
+        "relation": "Cites"
+      },
+      {
+        "identifier": "10.5281/zenodo.1493874",
+        "identifier_type": "DOI",
+        "relation": "Cites"
+      },
+      {
+        "identifier": "https://github.com/rdawg-pidinst/use-cases/blob/master/16-DTU-Wind-Energy.md",
+        "identifier_type": "URL",
+        "relation": "Cites"
+      },
+      {
+        "identifier": "10.5281/zenodo.4033072",
+        "identifier_type": "DOI",
+        "relation": "IsVersionOf"
+      },
+      {
+        "identifier": "https://zenodo.org/communities/oswec",
+        "identifier_type": "URL",
+        "relation": "IsPartOf"
+      },
+      {
+        "identifier": "https://zenodo.org/communities/rda-related",
+        "identifier_type": "URL",
+        "relation": "IsPartOf"
+      }
+    ],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "datacite_state": "findable",
+      "datacite_client_id": "cern.zenodo",
+      "datacite_schema_version": "http://datacite.org/schema/kernel-4",
+      "datacite_types": {
+        "ris": "RPRT",
+        "bibtex": "article",
+        "citeproc": "article-journal",
+        "schemaOrg": "ScholarlyArticle",
+        "resourceType": "Presentation",
+        "resourceTypeGeneral": "Text"
+      },
+      "datacite_container": {
+        "type": "Series",
+        "identifier": "https://zenodo.org/communities/oswec",
+        "identifierType": "URL"
+      },
+      "rights_list": [
+        {
+          "rights": "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
+          "rightsUri": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/",
+          "rightsIdentifier": "cc-by-nc-nd-4.0",
+          "rightsIdentifierScheme": "SPDX"
+        },
+        {
+          "rights": "Open Access",
+          "rightsUri": "info:eu-repo/semantics/openAccess"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "title": {
+      "extraction_method": "api"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "keywords": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "access_status": {
+      "extraction_method": "pattern"
+    }
+  }
+}

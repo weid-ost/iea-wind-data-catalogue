@@ -1,0 +1,233 @@
+{
+  "id": "10.5281/zenodo.4033073",
+  "type": "dois",
+  "attributes": {
+    "doi": "10.5281/zenodo.4033073",
+    "prefix": "10.5281",
+    "suffix": "zenodo.4033073",
+    "identifiers": [],
+    "alternateIdentifiers": [],
+    "creators": [
+      {
+        "name": "Vasiljevic, Nikola",
+        "givenName": "Nikola",
+        "familyName": "Vasiljevic",
+        "affiliation": [
+          "Technical University of Denmark"
+        ],
+        "nameIdentifiers": [
+          {
+            "schemeUri": "https://orcid.org",
+            "nameIdentifier": "https://orcid.org/0000-0002-9381-9693",
+            "nameIdentifierScheme": "ORCID"
+          }
+        ]
+      }
+    ],
+    "titles": [
+      {
+        "title": "DTU Wind Energy metadata and terminology"
+      }
+    ],
+    "publisher": "Zenodo",
+    "container": {
+      "type": "Series",
+      "identifier": "https://zenodo.org/communities/oswec",
+      "identifierType": "URL"
+    },
+    "publicationYear": 2020,
+    "subjects": [
+      {
+        "subject": "FAIR"
+      },
+      {
+        "subject": "RDA"
+      },
+      {
+        "subject": "wind energy"
+      }
+    ],
+    "contributors": [],
+    "dates": [
+      {
+        "date": "2020-09-16",
+        "dateType": "Issued"
+      }
+    ],
+    "language": "en",
+    "types": {
+      "ris": "RPRT",
+      "bibtex": "article",
+      "citeproc": "article-journal",
+      "schemaOrg": "ScholarlyArticle",
+      "resourceType": "Presentation",
+      "resourceTypeGeneral": "Text"
+    },
+    "relatedIdentifiers": [
+      {
+        "relationType": "Cites",
+        "relatedIdentifier": "10.5281/zenodo.1199489",
+        "resourceTypeGeneral": "Text",
+        "relatedIdentifierType": "DOI"
+      },
+      {
+        "relationType": "Cites",
+        "relatedIdentifier": "10.5281/zenodo.4013191",
+        "resourceTypeGeneral": "Text",
+        "relatedIdentifierType": "DOI"
+      },
+      {
+        "relationType": "Cites",
+        "relatedIdentifier": "http://data.windenergy.dtu.dk/taxonomy",
+        "resourceTypeGeneral": "Dataset",
+        "relatedIdentifierType": "URL"
+      },
+      {
+        "relationType": "Cites",
+        "relatedIdentifier": "10.5281/zenodo.1493874",
+        "resourceTypeGeneral": "Text",
+        "relatedIdentifierType": "DOI"
+      },
+      {
+        "relationType": "Cites",
+        "relatedIdentifier": "https://github.com/rdawg-pidinst/use-cases/blob/master/16-DTU-Wind-Energy.md",
+        "resourceTypeGeneral": "Software",
+        "relatedIdentifierType": "URL"
+      },
+      {
+        "relationType": "IsVersionOf",
+        "relatedIdentifier": "10.5281/zenodo.4033072",
+        "relatedIdentifierType": "DOI"
+      },
+      {
+        "relationType": "IsPartOf",
+        "relatedIdentifier": "https://zenodo.org/communities/oswec",
+        "relatedIdentifierType": "URL"
+      },
+      {
+        "relationType": "IsPartOf",
+        "relatedIdentifier": "https://zenodo.org/communities/rda-related",
+        "relatedIdentifierType": "URL"
+      }
+    ],
+    "relatedItems": [],
+    "sizes": [],
+    "formats": [],
+    "version": null,
+    "rightsList": [
+      {
+        "rights": "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
+        "rightsUri": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+        "schemeUri": "https://spdx.org/licenses/",
+        "rightsIdentifier": "cc-by-nc-nd-4.0",
+        "rightsIdentifierScheme": "SPDX"
+      },
+      {
+        "rights": "Open Access",
+        "rightsUri": "info:eu-repo/semantics/openAccess"
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "The main focus of the wind energy domain is to provide practical solutions that will result in cost-effective electricity produced from the wind. To achieve such goals, the wind energy domain is characterized as a multi-disciplinary domain, reusing, mixing and contributing to solutions in fields of Earth Sciences, Mechanical and Electrical Engineering, Material Science, Computer Science and Social Science. Due to multidisciplinarity it is essential to establish common terminology to boost sharing and reuse of data, and general understanding across the domain. In 2017, through the international collaboration with domain experts, several wind energy related taxonomies (e.g., research topics, external conditions, etc.) were developed to enable better description of published datasets. These taxonomies have been initially implemented in 2018 in DTU Data (university instance of figshare), and later in sharewind (instance of b2share). Recently, in the Marinet2 project we have proposed metadata schemas , by generalizing seadatanet standard, for data streams (i.e., recorded parameters) and datasets (collection of data streams) for preparing datasets in NetCDF format for publishing and preservation. To establish a controlled vocabulary of parameters, and thus assure same naming convention across datasets, we are fusing existing vocabularies from Earth Ocean domain (e.g., CF standard name convention, BODC) and terminologies used in IEC standards for wind turbine performance assessment. Follow up steps will be to build a collection of ‘standards’ for wind energy domain under FAIRsharing.org, work towards their implementation during the AWAKEN project, disseminate them through IEA Wind and EERA JP WIND.",
+        "descriptionType": "Abstract"
+      }
+    ],
+    "geoLocations": [],
+    "fundingReferences": [
+      {
+        "awardUri": "info:eu-repo/grantAgreement/EC/H2020/777388/",
+        "awardTitle": "The European plug-in to the global Research Data Alliance",
+        "funderName": "European Commission",
+        "awardNumber": "777388",
+        "funderIdentifier": "https://doi.org/10.13039/501100000780",
+        "funderIdentifierType": "Crossref Funder ID"
+      }
+    ],
+    "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL1pFTk9ETy40MDMzMDczPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+VmFzaWxqZXZpYywgTmlrb2xhPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5OaWtvbGE8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+VmFzaWxqZXZpYzwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyI+MDAwMC0wMDAyLTkzODEtOTY5MzwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5UZWNobmljYWwgVW5pdmVyc2l0eSBvZiBEZW5tYXJrPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RFRVIFdpbmQgRW5lcmd5IG1ldGFkYXRhIGFuZCB0ZXJtaW5vbG9neTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5aZW5vZG88L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjA8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD5GQUlSPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+UkRBPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+d2luZCBlbmVyZ3k8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDIwLTA5LTE2PC9kYXRlPgogIDwvZGF0ZXM+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPlByZXNlbnRhdGlvbjwvcmVzb3VyY2VUeXBlPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJ1cmwiPmh0dHBzOi8vemVub2RvLm9yZy9yZWNvcmQvNDAzMzA3MzwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPjEwLjUyODEvemVub2RvLjExOTk0ODk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij4xMC41MjgxL3plbm9kby40MDEzMTkxPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJDaXRlcyIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+aHR0cDovL2RhdGEud2luZGVuZXJneS5kdHUuZGsvdGF4b25vbXk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij4xMC41MjgxL3plbm9kby4xNDkzODc0PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJDaXRlcyIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU29mdHdhcmUiPmh0dHBzOi8vZ2l0aHViLmNvbS9yZGF3Zy1waWRpbnN0L3VzZS1jYXNlcy9ibG9iL21hc3Rlci8xNi1EVFUtV2luZC1FbmVyZ3kubWQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzVmVyc2lvbk9mIj4xMC41MjgxL3plbm9kby40MDMzMDcyPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiI+aHR0cHM6Ly96ZW5vZG8ub3JnL2NvbW11bml0aWVzL29zd2VjPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiI+aHR0cHM6Ly96ZW5vZG8ub3JnL2NvbW11bml0aWVzL3JkYS1yZWxhdGVkPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJodHRwczovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnktbmMtbmQvNC4wL2xlZ2FsY29kZSI+Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbiBOb24gQ29tbWVyY2lhbCBObyBEZXJpdmF0aXZlcyA0LjAgSW50ZXJuYXRpb25hbDwvcmlnaHRzPgogICAgPHJpZ2h0cyByaWdodHNVUkk9ImluZm86ZXUtcmVwby9zZW1hbnRpY3Mvb3BlbkFjY2VzcyI+T3BlbiBBY2Nlc3M8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4mbHQ7cCZndDtUaGUgbWFpbiBmb2N1cyBvZiB0aGUgd2luZCBlbmVyZ3kgZG9tYWluIGlzIHRvIHByb3ZpZGUgcHJhY3RpY2FsIHNvbHV0aW9ucyB0aGF0IHdpbGwgcmVzdWx0IGluIGNvc3QtZWZmZWN0aXZlIGVsZWN0cmljaXR5IHByb2R1Y2VkIGZyb20gdGhlIHdpbmQuIFRvIGFjaGlldmUgc3VjaCBnb2FscywgdGhlIHdpbmQgZW5lcmd5IGRvbWFpbiBpcyBjaGFyYWN0ZXJpemVkIGFzIGEgbXVsdGktZGlzY2lwbGluYXJ5IGRvbWFpbiwgcmV1c2luZywgbWl4aW5nIGFuZCBjb250cmlidXRpbmcgdG8gc29sdXRpb25zIGluIGZpZWxkcyBvZiBFYXJ0aCBTY2llbmNlcywgTWVjaGFuaWNhbCBhbmQgRWxlY3RyaWNhbCBFbmdpbmVlcmluZywgTWF0ZXJpYWwgU2NpZW5jZSwgQ29tcHV0ZXIgU2NpZW5jZSBhbmQgU29jaWFsIFNjaWVuY2UuIER1ZSB0byBtdWx0aWRpc2NpcGxpbmFyaXR5IGl0IGlzIGVzc2VudGlhbCB0byBlc3RhYmxpc2ggY29tbW9uIHRlcm1pbm9sb2d5IHRvIGJvb3N0IHNoYXJpbmcgYW5kIHJldXNlIG9mIGRhdGEsIGFuZCBnZW5lcmFsIHVuZGVyc3RhbmRpbmcgYWNyb3NzIHRoZSBkb21haW4uJmFtcDtuYnNwOyZsdDsvcCZndDsKCiZsdDtwJmd0O0luIDIwMTcsIHRocm91Z2ggdGhlIGludGVybmF0aW9uYWwgY29sbGFib3JhdGlvbiB3aXRoIGRvbWFpbiBleHBlcnRzLCBzZXZlcmFsICZsdDthIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS93aW5kLWVuZXJneS90YXhvbm9taWVzLWFuZC12b2NhYnVsYXJpZXMiJmd0O3dpbmQgZW5lcmd5IHJlbGF0ZWQgdGF4b25vbWllcyZsdDsvYSZndDsgKGUuZy4sIHJlc2VhcmNoIHRvcGljcywgZXh0ZXJuYWwgY29uZGl0aW9ucywgZXRjLikgd2VyZSBkZXZlbG9wZWQgdG8gZW5hYmxlIGJldHRlciBkZXNjcmlwdGlvbiBvZiBwdWJsaXNoZWQgZGF0YXNldHMuIFRoZXNlIHRheG9ub21pZXMgaGF2ZSBiZWVuIGluaXRpYWxseSBpbXBsZW1lbnRlZCBpbiAyMDE4IGluICZsdDthIGhyZWY9Imh0dHBzOi8vZGF0YS5kdHUuZGsvRFRVX1dpbmRfRW5lcmd5IiZndDtEVFUgRGF0YSZsdDsvYSZndDsgKHVuaXZlcnNpdHkgaW5zdGFuY2Ugb2YgZmlnc2hhcmUpLCBhbmQgbGF0ZXIgaW4gJmx0O2EgaHJlZj0iaHR0cHM6Ly9zaGFyZXdpbmQuZXUvIiZndDtzaGFyZXdpbmQmbHQ7L2EmZ3Q7IChpbnN0YW5jZSBvZiBiMnNoYXJlKS4gUmVjZW50bHksIGluIHRoZSBNYXJpbmV0MiBwcm9qZWN0IHdlIGhhdmUgcHJvcG9zZWQgJmx0O2EgaHJlZj0iaHR0cHM6Ly9mYWlyc2hhcmluZy5vcmcvYnNnLXMwMDE0OTcvIiZndDttZXRhZGF0YSBzY2hlbWFzJmx0Oy9hJmd0OyAsIGJ5IGdlbmVyYWxpemluZyAmbHQ7YSBocmVmPSJodHRwczovL3d3dy5zZWFkYXRhbmV0Lm9yZy9TdGFuZGFyZHMiJmd0O3NlYWRhdGFuZXQmbHQ7L2EmZ3Q7IHN0YW5kYXJkLCBmb3IgZGF0YSBzdHJlYW1zIChpLmUuLCByZWNvcmRlZCBwYXJhbWV0ZXJzKSBhbmQgZGF0YXNldHMgKGNvbGxlY3Rpb24gb2YgZGF0YSBzdHJlYW1zKSBmb3IgcHJlcGFyaW5nIGRhdGFzZXRzIGluIE5ldENERiBmb3JtYXQgZm9yIHB1Ymxpc2hpbmcgYW5kIHByZXNlcnZhdGlvbi4gVG8gZXN0YWJsaXNoIGEgY29udHJvbGxlZCB2b2NhYnVsYXJ5IG9mIHBhcmFtZXRlcnMsIGFuZCB0aHVzIGFzc3VyZSBzYW1lIG5hbWluZyBjb252ZW50aW9uIGFjcm9zcyBkYXRhc2V0cywgd2UgYXJlIGZ1c2luZyBleGlzdGluZyB2b2NhYnVsYXJpZXMgZnJvbSBFYXJ0aCBPY2VhbiBkb21haW4gKGUuZy4sIENGIHN0YW5kYXJkIG5hbWUgY29udmVudGlvbiwgQk9EQykgYW5kIHRlcm1pbm9sb2dpZXMgdXNlZCBpbiBJRUMgc3RhbmRhcmRzIGZvciB3aW5kIHR1cmJpbmUgcGVyZm9ybWFuY2UgYXNzZXNzbWVudC4gRm9sbG93IHVwIHN0ZXBzIHdpbGwgYmUgdG8gYnVpbGQgYSBjb2xsZWN0aW9uIG9mICZhbXA7bHNxdW87c3RhbmRhcmRzJmFtcDtyc3F1bzsgZm9yIHdpbmQgZW5lcmd5IGRvbWFpbiB1bmRlciAmbHQ7YSBocmVmPSJodHRwczovL2ZhaXJzaGFyaW5nLm9yZy8iJmd0O0ZBSVJzaGFyaW5nLm9yZyZsdDsvYSZndDssIHdvcmsgdG93YXJkcyB0aGVpciBpbXBsZW1lbnRhdGlvbiBkdXJpbmcgdGhlICZsdDthIGhyZWY9Imh0dHBzOi8vb3BlbmVpLm9yZy93aWtpL0FXQUtFTiImZ3Q7QVdBS0VOJmx0Oy9hJmd0OyBwcm9qZWN0LCBkaXNzZW1pbmF0ZSB0aGVtIHRocm91Z2ggJmx0O2EgaHJlZj0iaHR0cHM6Ly9jb21tdW5pdHkuaWVhd2luZC5vcmcvaG9tZSImZ3Q7SUVBIFdpbmQmbHQ7L2EmZ3Q7IGFuZCAmbHQ7YSBocmVmPSJodHRwczovL3d3dy5lZXJhanB3aW5kLmV1LyImZ3Q7RUVSQSBKUCBXSU5EJmx0Oy9hJmd0Oy4mbHQ7L3AmZ3Q7PC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KICA8ZnVuZGluZ1JlZmVyZW5jZXM+CiAgICA8ZnVuZGluZ1JlZmVyZW5jZT4KICAgICAgPGZ1bmRlck5hbWU+RXVyb3BlYW4gQ29tbWlzc2lvbjwvZnVuZGVyTmFtZT4KICAgICAgPGZ1bmRlcklkZW50aWZpZXIgZnVuZGVySWRlbnRpZmllclR5cGU9IkNyb3NzcmVmIEZ1bmRlciBJRCI+MTAuMTMwMzkvNTAxMTAwMDAwNzgwPC9mdW5kZXJJZGVudGlmaWVyPgogICAgICA8YXdhcmROdW1iZXIgYXdhcmRVUkk9ImluZm86ZXUtcmVwby9ncmFudEFncmVlbWVudC9FQy9IMjAyMC83NzczODgvIj43NzczODg8L2F3YXJkTnVtYmVyPgogICAgICA8YXdhcmRUaXRsZT5UaGUgRXVyb3BlYW4gcGx1Zy1pbiB0byB0aGUgZ2xvYmFsIFJlc2VhcmNoIERhdGEgQWxsaWFuY2U8L2F3YXJkVGl0bGU+CiAgICA8L2Z1bmRpbmdSZWZlcmVuY2U+CiAgPC9mdW5kaW5nUmVmZXJlbmNlcz4KPC9yZXNvdXJjZT4=",
+    "url": "https://zenodo.org/record/4033073",
+    "contentUrl": null,
+    "metadataVersion": 2,
+    "schemaVersion": "http://datacite.org/schema/kernel-4",
+    "source": "mds",
+    "isActive": true,
+    "state": "findable",
+    "reason": null,
+    "viewCount": 0,
+    "viewsOverTime": [],
+    "downloadCount": 0,
+    "downloadsOverTime": [],
+    "referenceCount": 0,
+    "citationCount": 3,
+    "citationsOverTime": [
+      {
+        "year": "2020",
+        "total": 4
+      }
+    ],
+    "partCount": 0,
+    "partOfCount": 0,
+    "versionCount": 0,
+    "versionOfCount": 1,
+    "created": "2020-09-16T16:30:34.000Z",
+    "registered": "2020-09-16T16:30:35.000Z",
+    "published": "2020",
+    "updated": "2020-10-29T07:32:46.000Z"
+  },
+  "relationships": {
+    "client": {
+      "data": {
+        "id": "cern.zenodo",
+        "type": "clients"
+      }
+    },
+    "provider": {
+      "data": {
+        "id": "cern",
+        "type": "providers"
+      }
+    },
+    "media": {
+      "data": {
+        "id": "10.5281/zenodo.4033073",
+        "type": "media"
+      }
+    },
+    "references": {
+      "data": []
+    },
+    "citations": {
+      "data": [
+        {
+          "id": "10.5281/zenodo.1199489",
+          "type": "dois"
+        },
+        {
+          "id": "10.5281/zenodo.4013191",
+          "type": "dois"
+        },
+        {
+          "id": "10.5281/zenodo.1493874",
+          "type": "dois"
+        }
+      ]
+    },
+    "parts": {
+      "data": []
+    },
+    "partOf": {
+      "data": []
+    },
+    "versions": {
+      "data": []
+    },
+    "versionOf": {
+      "data": [
+        {
+          "id": "10.5281/zenodo.4033072",
+          "type": "dois"
+        }
+      ]
+    }
+  }
+}

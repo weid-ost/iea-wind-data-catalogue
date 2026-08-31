@@ -1,0 +1,215 @@
+{
+  "id": "10.2314/kxp:1790028361",
+  "type": "dois",
+  "attributes": {
+    "doi": "10.2314/kxp:1790028361",
+    "prefix": "10.2314",
+    "suffix": "kxp:1790028361",
+    "identifiers": [
+      {
+        "identifier": "1790028361",
+        "identifierType": "ppn"
+      },
+      {
+        "identifier": "0324223B",
+        "identifierType": "contract"
+      },
+      {
+        "identifier": "TIBKAT:1790028361",
+        "identifierType": "ftx-id"
+      },
+      {
+        "identifier": "01182044",
+        "identifierType": "contract"
+      },
+      {
+        "identifier": "KXP:1790028361",
+        "identifierType": "firstid"
+      }
+    ],
+    "alternateIdentifiers": [
+      {
+        "alternateIdentifierType": "ppn",
+        "alternateIdentifier": "1790028361"
+      },
+      {
+        "alternateIdentifierType": "contract",
+        "alternateIdentifier": "0324223B"
+      },
+      {
+        "alternateIdentifierType": "ftx-id",
+        "alternateIdentifier": "TIBKAT:1790028361"
+      },
+      {
+        "alternateIdentifierType": "contract",
+        "alternateIdentifier": "01182044"
+      },
+      {
+        "alternateIdentifierType": "firstid",
+        "alternateIdentifier": "KXP:1790028361"
+      }
+    ],
+    "creators": [
+      {
+        "name": "Unknown",
+        "affiliation": [],
+        "nameIdentifiers": []
+      }
+    ],
+    "titles": [
+      {
+        "title": "Verbundvorhaben: Fortführung der deutschen Beteiligung an dem IEA Wind TCP Task 28 - Social Acceptance of Wind (Phase3) - Teilvorhaben IZES; IEA Wind - Technology Collaboration Programme for Co-operation in the Research, Development, and Deployment of Wind Energy Systems : Abschlussbericht : Akronym/Kurzbezeichnung: Task 28 : Laufzeit: 01.07.2017-30.04.2020"
+      }
+    ],
+    "publisher": "[IZES gGmbH - Institut für ZukunftsEnergie- und Stoffstromsysteme]",
+    "container": {},
+    "publicationYear": 2020,
+    "subjects": [
+      {
+        "subject": "Mechanical engineering, power engineering",
+        "subjectScheme": "linsearch(automatic)",
+        "classificationCode": "mas"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Technische Informationsbibliothek (TIB)",
+        "nameType": "Organizational",
+        "contributorType": "HostingInstitution",
+        "affiliation": [],
+        "nameIdentifiers": []
+      },
+      {
+        "name": "Technische Informationsbibliothek (TIB)",
+        "contributorType": "DataManager",
+        "affiliation": [],
+        "nameIdentifiers": []
+      },
+      {
+        "name": "Hildebrand, Jan",
+        "contributorType": "Other",
+        "affiliation": [],
+        "nameIdentifiers": []
+      },
+      {
+        "name": "IZES gGmbH - Institut für ZukunftsEnergieSysteme",
+        "nameType": "Organizational",
+        "contributorType": "Other",
+        "nameIdentifiers": [
+          {
+            "schemeUri": "https://d-nb.info/gnd/",
+            "nameIdentifier": "1055836470",
+            "nameIdentifierScheme": "GND"
+          }
+        ],
+        "affiliation": []
+      }
+    ],
+    "dates": [
+      {
+        "date": "2020",
+        "dateType": "Issued"
+      }
+    ],
+    "language": "de",
+    "types": {
+      "ris": "RRPT",
+      "bibtex": "misc",
+      "citeproc": "report",
+      "schemaOrg": "Report",
+      "resourceType": "Electronic Resource",
+      "resourceTypeGeneral": "Report"
+    },
+    "relatedIdentifiers": [],
+    "relatedItems": [
+      {
+        "titles": [
+          {
+            "title": "Verbundvorhaben: Fortführung der deutschen Beteiligung an dem IEA Wind TCP Task 28 - Social Acceptance of Wind (Phase3) - Teilvorhaben IZES; IEA Wind - Technology Collaboration Programme for Co-operation in the Research, Development, and Deployment of Wind Energy Systems"
+          }
+        ],
+        "creators": [],
+        "contributors": [],
+        "relationType": "References",
+        "relatedItemType": "Other"
+      }
+    ],
+    "sizes": [
+      "1 Online-Ressource (15 Seiten, 1,14 MB)"
+    ],
+    "formats": [
+      "application/pdf"
+    ],
+    "version": "1.0",
+    "rightsList": [
+      {
+        "rights": "Open Access"
+      }
+    ],
+    "descriptions": [],
+    "geoLocations": [],
+    "fundingReferences": [],
+    "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjQvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yMzE0L0tYUDoxNzkwMDI4MzYxPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+VW5rbm93bjwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iSG9zdGluZ0luc3RpdHV0aW9uIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZSBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPlRlY2huaXNjaGUgSW5mb3JtYXRpb25zYmlibGlvdGhlayAoVElCKTwvY29udHJpYnV0b3JOYW1lPgogICAgPC9jb250cmlidXRvcj4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IkRhdGFNYW5hZ2VyIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5UZWNobmlzY2hlIEluZm9ybWF0aW9uc2JpYmxpb3RoZWsgKFRJQik8L2NvbnRyaWJ1dG9yTmFtZT4KICAgIDwvY29udHJpYnV0b3I+CiAgICA8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJPdGhlciI+CiAgICAgIDxjb250cmlidXRvck5hbWU+SGlsZGVicmFuZCwgSmFuPC9jb250cmlidXRvck5hbWU+CiAgICA8L2NvbnRyaWJ1dG9yPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iT3RoZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lIG5hbWVUeXBlPSJPcmdhbml6YXRpb25hbCI+SVpFUyBnR21iSCAtIEluc3RpdHV0IGbDvHIgWnVrdW5mdHNFbmVyZ2llU3lzdGVtZTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9IkdORCIgc2NoZW1lVVJJPSJodHRwczovL2QtbmIuaW5mby9nbmQvIj4xMDU1ODM2NDcwPC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5WZXJidW5kdm9yaGFiZW46IEZvcnRmw7xocnVuZyBkZXIgZGV1dHNjaGVuIEJldGVpbGlndW5nIGFuIGRlbSBJRUEgV2luZCBUQ1AgVGFzayAyOCAtIFNvY2lhbCBBY2NlcHRhbmNlIG9mIFdpbmQgKFBoYXNlMykgLSBUZWlsdm9yaGFiZW4gSVpFUzsgSUVBIFdpbmQgLSBUZWNobm9sb2d5IENvbGxhYm9yYXRpb24gUHJvZ3JhbW1lIGZvciBDby1vcGVyYXRpb24gaW4gdGhlIFJlc2VhcmNoLCBEZXZlbG9wbWVudCwgYW5kIERlcGxveW1lbnQgb2YgV2luZCBFbmVyZ3kgU3lzdGVtcyA6IEFic2NobHVzc2JlcmljaHQgOiBBa3JvbnltL0t1cnpiZXplaWNobnVuZzogVGFzayAyOCA6IExhdWZ6ZWl0OiAwMS4wNy4yMDE3LTMwLjA0LjIwMjA8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+W0laRVMgZ0dtYkggLSBJbnN0aXR1dCBmw7xyIFp1a3VuZnRzRW5lcmdpZS0gdW5kIFN0b2Zmc3Ryb21zeXN0ZW1lXTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0IGNsYXNzaWZpY2F0aW9uQ29kZT0ibWFzIiBzdWJqZWN0U2NoZW1lPSJsaW5zZWFyY2goYXV0b21hdGljKSI+TWVjaGFuaWNhbCBlbmdpbmVlcmluZywgcG93ZXIgZW5naW5lZXJpbmc8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDIwPC9kYXRlPgogIDwvZGF0ZXM+CiAgPGxhbmd1YWdlPmRlPC9sYW5ndWFnZT4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlJlcG9ydCI+RWxlY3Ryb25pYyBSZXNvdXJjZTwvcmVzb3VyY2VUeXBlPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJwcG4iPjE3OTAwMjgzNjE8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iY29udHJhY3QiPjAzMjQyMjNCPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9ImZ0eC1pZCI+VElCS0FUOjE3OTAwMjgzNjE8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iY29udHJhY3QiPjAxMTgyMDQ0PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9ImZpcnN0aWQiPktYUDoxNzkwMDI4MzYxPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHNpemVzPgogICAgPHNpemU+MSBPbmxpbmUtUmVzc291cmNlICgxNSBTZWl0ZW4sIDEsMTQgTUIpPC9zaXplPgogIDwvc2l6ZXM+CiAgPGZvcm1hdHM+CiAgICA8Zm9ybWF0PmFwcGxpY2F0aW9uL3BkZjwvZm9ybWF0PgogIDwvZm9ybWF0cz4KICA8dmVyc2lvbj4xLjA8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzPk9wZW4gQWNjZXNzPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxyZWxhdGVkSXRlbXM+CiAgICA8cmVsYXRlZEl0ZW0gcmVsYXRlZEl0ZW1UeXBlPSJPdGhlciIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4KICAgICAgPHRpdGxlcz4KICAgICAgICA8dGl0bGU+VmVyYnVuZHZvcmhhYmVuOiBGb3J0ZsO8aHJ1bmcgZGVyIGRldXRzY2hlbiBCZXRlaWxpZ3VuZyBhbiBkZW0gSUVBIFdpbmQgVENQIFRhc2sgMjggLSBTb2NpYWwgQWNjZXB0YW5jZSBvZiBXaW5kIChQaGFzZTMpIC0gVGVpbHZvcmhhYmVuIElaRVM7IElFQSBXaW5kIC0gVGVjaG5vbG9neSBDb2xsYWJvcmF0aW9uIFByb2dyYW1tZSBmb3IgQ28tb3BlcmF0aW9uIGluIHRoZSBSZXNlYXJjaCwgRGV2ZWxvcG1lbnQsIGFuZCBEZXBsb3ltZW50IG9mIFdpbmQgRW5lcmd5IFN5c3RlbXM8L3RpdGxlPgogICAgICA8L3RpdGxlcz4KICAgIDwvcmVsYXRlZEl0ZW0+CiAgPC9yZWxhdGVkSXRlbXM+CjwvcmVzb3VyY2U+",
+    "url": "https://www.tib.eu/suchen/id/TIBKAT:1790028361",
+    "contentUrl": null,
+    "metadataVersion": 12,
+    "schemaVersion": "http://datacite.org/schema/kernel-4",
+    "source": "mds",
+    "isActive": true,
+    "state": "findable",
+    "reason": null,
+    "viewCount": 0,
+    "viewsOverTime": [],
+    "downloadCount": 0,
+    "downloadsOverTime": [],
+    "referenceCount": 0,
+    "citationCount": 0,
+    "citationsOverTime": [],
+    "partCount": 0,
+    "partOfCount": 0,
+    "versionCount": 0,
+    "versionOfCount": 0,
+    "created": "2022-03-24T12:25:30.000Z",
+    "registered": "2022-03-24T12:25:32.000Z",
+    "published": "2020",
+    "updated": "2026-08-28T02:05:10.000Z"
+  },
+  "relationships": {
+    "client": {
+      "data": {
+        "id": "tib.tib",
+        "type": "clients"
+      }
+    },
+    "provider": {
+      "data": {
+        "id": "wuua",
+        "type": "providers"
+      }
+    },
+    "media": {
+      "data": {
+        "id": "10.2314/kxp:1790028361",
+        "type": "media"
+      }
+    },
+    "references": {
+      "data": []
+    },
+    "citations": {
+      "data": []
+    },
+    "parts": {
+      "data": []
+    },
+    "partOf": {
+      "data": []
+    },
+    "versions": {
+      "data": []
+    },
+    "versionOf": {
+      "data": []
+    }
+  }
+}

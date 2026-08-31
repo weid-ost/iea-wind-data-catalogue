@@ -1,0 +1,156 @@
+{
+  "fixture_id": "dc-02-multi-title",
+  "fixture_kind": "source_namespace",
+  "case": "AlternativeTitle alongside the primary title; alternates go to a secondary field",
+  "provenance_note": "Captured verbatim from https://api.datacite.org/dois/10.5281/zenodo.10069850 on 2026-08-31.",
+  "note": "The primary title is the one with no titleType; everything typed (AlternativeTitle, TranslatedTitle, Subtitle) lands in source.extra.alternate_titles with its type. No IEA-Wind DOI in DataCite carries a TranslatedTitle — 'titles.titleType:TranslatedTitle AND \"IEA Wind\"' returned 0 hits on 2026-08-31 — so rather than invent a payload, the TranslatedTitle half of the case is proved by tests/test_datacite.py::test_translated_title_is_never_the_primary_title. This record also carries IsSupplementTo and IsVersionOf, which are links only: no record is created for either target (dc-06).",
+  "raw": "raw/dc-02-multi-title.json",
+  "identity_key": "10.5281/zenodo.10069850",
+  "source_system": "datacite",
+  "source_id": "10.5281/zenodo.10069850",
+  "source_key": "2025-10-06T17:16:56Z",
+  "expected_slug": "doi-10-5281-zenodo-10069850",
+  "findable": true,
+  "source": {
+    "title": "Wind Value Literature Selection for End-of-Life Valuation Excel File WP 5.1",
+    "notes": "Authors from Wind Value, the Re-Wind Network and IEA Wind Task 45 carried out research on methods of processing end-of-life wind turbine blades. This included a structured literature review which selected the literature in the Excel file. Part of this work helps to estimate the value of an end-of-life wind farm contributing to Work Package 5.1 of the Wind Value project. The paper was pubished as Deeney et al. (2025) End-of-life wind turbine blades and paths to a circular economy, Renewable and Sustainable Energy Reviews.",
+    "doi": "10.5281/zenodo.10069850",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.10069850",
+    "source_urls": [
+      "https://zenodo.org/doi/10.5281/zenodo.10069850"
+    ],
+    "authors": [
+      {
+        "name": "Deeney, Peter",
+        "given": "Peter",
+        "family": "Deeney",
+        "orcid": "0000-0002-8112-8692",
+        "affiliation": "University College Cork"
+      },
+      {
+        "name": "Leahy, Paul G.",
+        "given": "Paul G.",
+        "family": "Leahy",
+        "orcid": "0000-0003-4478-3863",
+        "affiliation": "University College Cork"
+      },
+      {
+        "name": "Campbell, Kevin",
+        "given": "Kevin",
+        "family": "Campbell",
+        "affiliation": "University College Cork"
+      },
+      {
+        "name": "Ducourtieux, Claire",
+        "given": "Claire",
+        "family": "Ducourtieux",
+        "affiliation": "Université Côte d'Azur"
+      },
+      {
+        "name": "Mullally, Gerard",
+        "given": "Gerard",
+        "family": "Mullally",
+        "orcid": "0000-0003-2166-8491",
+        "affiliation": "University College Cork"
+      },
+      {
+        "name": "Dunphy, Niall P.",
+        "given": "Niall P.",
+        "family": "Dunphy",
+        "orcid": "0000-0001-8094-4121",
+        "affiliation": "University College Cork"
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2023-11-03",
+    "version": "version 1",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "dataset",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "identifier": "10.1016/j.rser.2025.115418",
+        "identifier_type": "DOI",
+        "relation": "IsSupplementTo"
+      },
+      {
+        "identifier": "10.5281/zenodo.10069849",
+        "identifier_type": "DOI",
+        "relation": "IsVersionOf"
+      }
+    ],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "datacite_state": "findable",
+      "datacite_client_id": "cern.zenodo",
+      "datacite_schema_version": "http://datacite.org/schema/kernel-4",
+      "datacite_types": {
+        "ris": "DATA",
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "schemaOrg": "Dataset",
+        "resourceType": "",
+        "resourceTypeGeneral": "Dataset"
+      },
+      "datacite_identifiers": [
+        {
+          "identifier": "oai:zenodo.org:10069850",
+          "identifierType": "oai"
+        }
+      ],
+      "rights_list": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX"
+        }
+      ],
+      "alternate_titles": [
+        {
+          "title": "End-of-life wind turbine blades and paths to a circular economy",
+          "title_type": "AlternativeTitle"
+        }
+      ],
+      "iea_task_candidates": [
+        "task-45"
+      ]
+    }
+  },
+  "provenance": {
+    "title": {
+      "extraction_method": "api"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "version": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    }
+  }
+}

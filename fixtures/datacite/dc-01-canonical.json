@@ -1,0 +1,159 @@
+{
+  "fixture_id": "dc-01-canonical",
+  "fixture_kind": "source_namespace",
+  "case": "Findable DOI, one untyped title, resourceTypeGeneral Dataset, SPDX rights",
+  "provenance_note": "Captured verbatim from https://api.datacite.org/dois/10.5281/zenodo.20218022 on 2026-08-31.",
+  "note": "The reference DataCite mapping. Identity is the DOI, lowercase-normalised. The source key is attributes.updated normalised to second precision — the /dois listing returns '...:55Z' and /dois/{doi} returns '...:55.000Z' for the same instant, and only one of those may ever become the change token (ADR-0026). 'IEA Wind Task 49' appears as the publisher, so task-49 is recorded as a CANDIDATE in source.extra and deliberately NOT as source.iea_task: map() is pure and cannot check groups.yaml, and a group name absent from the register fails the CKAN gate for the whole run.",
+  "raw": "raw/dc-01-canonical.json",
+  "identity_key": "10.5281/zenodo.20218022",
+  "source_system": "datacite",
+  "source_id": "10.5281/zenodo.20218022",
+  "source_key": "2026-08-30T09:55:55Z",
+  "expected_slug": "doi-10-5281-zenodo-20218022",
+  "findable": true,
+  "source": {
+    "title": "The IEA Wind RFA3 Deep-Water Reference Array Design",
+    "notes": "This dataset provides various design definition and input file for the IEA Wind Task 49 Deep Water Array Design. The dataset can be found on GitHub at https://github.com/IEAWindTask49/Reference_Array_Deep_Semi.",
+    "doi": "10.5281/zenodo.20218022",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.20218022",
+    "source_urls": [
+      "https://zenodo.org/doi/10.5281/zenodo.20218022"
+    ],
+    "authors": [
+      {
+        "name": "Lozon, Ericka",
+        "given": "Ericka",
+        "family": "Lozon",
+        "orcid": "0000-0003-0971-2613"
+      },
+      {
+        "name": "Ramachandran Nair Rajasree, Vishnu",
+        "given": "Vishnu",
+        "family": "Ramachandran Nair Rajasree",
+        "orcid": "0009-0002-1867-1745",
+        "affiliation": "Norwegian University of Science and Technology"
+      },
+      {
+        "name": "Mulas Hernando, Daniel",
+        "given": "Daniel",
+        "family": "Mulas Hernando",
+        "orcid": "0009-0004-4512-0759"
+      },
+      {
+        "name": "Lee, Junho",
+        "given": "Junho",
+        "family": "Lee",
+        "orcid": "0000-0001-9644-3292"
+      },
+      {
+        "name": "Castagné, Michel",
+        "given": "Michel",
+        "family": "Castagné"
+      },
+      {
+        "name": "Nassor, Alice",
+        "given": "Alice",
+        "family": "Nassor"
+      },
+      {
+        "name": "Poirette, Yann",
+        "given": "Yann",
+        "family": "Poirette"
+      },
+      {
+        "name": "Alkarem, Yuksel Rudy",
+        "given": "Yuksel Rudy",
+        "family": "Alkarem"
+      },
+      {
+        "name": "Biglu, Michael",
+        "given": "Michael",
+        "family": "Biglu",
+        "orcid": "0009-0009-0012-3952"
+      },
+      {
+        "name": "Sirkis, Leah Hope",
+        "given": "Leah Hope",
+        "family": "Sirkis",
+        "orcid": "0009-0002-0106-747X",
+        "affiliation": "National Laboratory of the Rockies"
+      },
+      {
+        "name": "Hall, Matthew",
+        "given": "Matthew",
+        "family": "Hall",
+        "orcid": "0000-0002-0398-8320"
+      }
+    ],
+    "publisher": "IEA Wind Task 49",
+    "published_date": "2026-05-15",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "dataset",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.20218023",
+        "identifier_type": "DOI",
+        "relation": "HasVersion"
+      }
+    ],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "datacite_state": "findable",
+      "datacite_client_id": "cern.zenodo",
+      "datacite_schema_version": "http://datacite.org/schema/kernel-4",
+      "datacite_types": {
+        "ris": "DATA",
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "schemaOrg": "Dataset",
+        "resourceType": "",
+        "resourceTypeGeneral": "Dataset"
+      },
+      "rights_list": [
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX"
+        }
+      ],
+      "iea_task_candidates": [
+        "task-49"
+      ]
+    }
+  },
+  "provenance": {
+    "title": {
+      "extraction_method": "api"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    }
+  }
+}

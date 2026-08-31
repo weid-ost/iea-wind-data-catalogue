@@ -38,14 +38,29 @@ sources:
     max_records: 5
     source_key: "attributes.updated — reflects client metadata pushes"
     api: "https://api.datacite.org/dois"
-    # Only `findable` DOIs become records (fixture dc-04).
+    # Only `findable` DOIs become records (fixture dc-04). `registered` and
+    # `draft` DOIs have no indexed landing page: cataloguing one publishes a
+    # dead citation.
     state: findable
+    # QUERY STRATEGY: query strings, not client ids and not prefixes.
+    # Verified live 2026-08-31:
+    #   * https://api.datacite.org/clients?query=IEA+Wind returns ZERO clients —
+    #     there is no IEA Wind DataCite client to sweep.
+    #   * the 391 IEA-Wind-relevant DOIs these queries reach are spread across
+    #     cern.zenodo (353), doe.pnnl, tib.ubs, tib.fraunirb, dk.dtic, rg.rg,
+    #     arxiv.content, tib.tib, bl.mendeley, ethz.zhaw and doe.osti.
+    #   * the dominant prefix is 10.5281, which is the whole of Zenodo — a bare
+    #     prefix sweep would enumerate millions of unrelated DOIs. There is
+    #     therefore no `prefixes:` key here, deliberately.
+    # Each query is one request; hit counts are as of 2026-08-31.
     queries:
-      - 'creators.affiliation.name:"IEA Wind" OR descriptions.description:"IEA Wind"'
-      - 'subjects.subject:"IEA Wind Task"'
-    # Prefixes worth sweeping directly; Zenodo's own prefix is the big one.
-    prefixes:
-      - "10.5281"   # Zenodo
+      - '"IEA Wind Task"'                                                          # 308
+      - '"IEA Wind TCP"'                                                           # 65
+      - 'subjects.subject:"IEA Wind Task"'                                         # 10
+      - 'creators.affiliation.name:"IEA Wind" OR descriptions.description:"IEA Wind"'  # 334
+    # Newest metadata push first, so the five-record window tracks the source
+    # key rather than an arbitrary corner of the corpus.
+    sort: "-updated"
     page_size: 25
 
   # -------------------------------------------------------------------------

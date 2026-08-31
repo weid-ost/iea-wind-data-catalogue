@@ -1,0 +1,207 @@
+{
+  "id": "10.5281/zenodo.4322584",
+  "type": "dois",
+  "attributes": {
+    "doi": "10.5281/zenodo.4322584",
+    "prefix": "10.5281",
+    "suffix": "zenodo.4322584",
+    "identifiers": [],
+    "alternateIdentifiers": [],
+    "creators": [
+      {
+        "name": "Duran, Ruben",
+        "nameType": "Personal",
+        "givenName": "Ruben",
+        "familyName": "Duran",
+        "affiliation": [
+          "COBRA"
+        ],
+        "nameIdentifiers": []
+      },
+      {
+        "name": "Hernandez, Sergio",
+        "nameType": "Personal",
+        "givenName": "Sergio",
+        "familyName": "Hernandez",
+        "affiliation": [
+          "ESTEYCO"
+        ],
+        "nameIdentifiers": []
+      },
+      {
+        "name": "Vigara, Fernando",
+        "nameType": "Personal",
+        "givenName": "Fernando",
+        "familyName": "Vigara",
+        "affiliation": [
+          "ESTEYCO"
+        ],
+        "nameIdentifiers": []
+      },
+      {
+        "name": "M. Youssef Mahfouz",
+        "affiliation": [
+          "USTUTT"
+        ],
+        "nameIdentifiers": []
+      }
+    ],
+    "titles": [
+      {
+        "title": "COREWIND - ACTIVEFLOAT OpenFAST model 15 MW FOWT Grand Canary Island site"
+      }
+    ],
+    "publisher": "Zenodo",
+    "container": {
+      "type": "Series",
+      "identifier": "https://zenodo.org/communities/corewind",
+      "identifierType": "URL"
+    },
+    "publicationYear": 2020,
+    "subjects": [
+      {
+        "subject": "COREWIND project"
+      },
+      {
+        "subject": "Horizon2020"
+      },
+      {
+        "subject": "Renewable Energy"
+      },
+      {
+        "subject": "Wind"
+      },
+      {
+        "subject": "Floating Wind Energy"
+      },
+      {
+        "subject": "SemiSubmesible platform"
+      },
+      {
+        "subject": "15 MW wind Turbine"
+      }
+    ],
+    "contributors": [],
+    "dates": [
+      {
+        "date": "2020-12-15",
+        "dateType": "Issued"
+      }
+    ],
+    "language": null,
+    "types": {
+      "ris": "GEN",
+      "bibtex": "misc",
+      "citeproc": "article",
+      "schemaOrg": "CreativeWork",
+      "resourceTypeGeneral": "Other"
+    },
+    "relatedIdentifiers": [
+      {
+        "relationType": "HasVersion",
+        "relatedIdentifier": "10.5281/zenodo.4322585",
+        "relatedIdentifierType": "DOI"
+      },
+      {
+        "relationType": "IsPartOf",
+        "relatedIdentifier": "https://zenodo.org/communities/corewind",
+        "relatedIdentifierType": "URL"
+      }
+    ],
+    "relatedItems": [],
+    "sizes": [],
+    "formats": [],
+    "version": "1.0",
+    "rightsList": [
+      {
+        "rights": "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
+        "rightsUri": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+        "schemeUri": "https://spdx.org/licenses/",
+        "rightsIdentifier": "cc-by-nc-nd-4.0",
+        "rightsIdentifierScheme": "SPDX"
+      },
+      {
+        "rights": "Open Access",
+        "rightsUri": "info:eu-repo/semantics/openAccess"
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "Files to simulate and run, ACTIVEFLOAT OpenFAST model 15MW FOWT from NREL (DTU) at Grand Canary Island site. This model version is consistent with deliverable D1.3 from COREWIND project (link to delvierable). Link to the 15MW wind turbine model can be found in the following link: GitHub - IEAWindTask37/IEA-15-240-RWT: 15MW reference wind turbine repository developed in conjunction with IEA Wind <strong>Disclaimer:</strong> The files and models are provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the models and files or the use or other dealings in the models and files provided.",
+        "descriptionType": "Abstract"
+      },
+      {
+        "description": "WO2014177729 - SUBMERSIBLE STRUCTURE FOR ACTIVELY SUPPORTING TOWERS OF GENERATORS AND SUB-STATIONS OR SIMILAR ELEMENTS, IN MARITIME FACILITIES, NEBRERA GARCÍA, José Alfonso ALTOLAGUIRRE MCCRUMLISH, Jaime, 2014 (https://patentscope.wipo.int/search/es/detail.jsf?docId=WO2014177729)",
+        "descriptionType": "Other"
+      },
+      {
+        "description": "{\"references\": [\"Garrett Barter, Nikhar Abbas, Fanzhong Meng, Pietro Bortolotti, Witold Skrzypinski, George Scott, Roland Feil, Henrik Bredmose, Katherine Dykes, Matt Shields, Christopher Allen, and Anthony Viselli. 2020. Definition of the IEA 15-Megawatt Offshore Reference Wind. Golden, CO: National Renewable Energy Laboratory. NREL/TP-5000-75698. https://www.nrel.gov/docs/fy20osti/75698.pdf\", \"COREWIND D1.2 Design Loads, 2019.\", \"COREWIND D1.3\", \"WO2014177729 - SUBMERSIBLE STRUCTURE FOR ACTIVELY SUPPORTING TOWERS OF GENERATORS AND SUB-STATIONS OR SIMILAR ELEMENTS, IN MARITIME FACILITIES, NEBRERA GARC\\u00cdA, Jos\\u00e9 Alfonso ALTOLAGUIRRE MCCRUMLISH, Jaime, 2014\"]}",
+        "descriptionType": "Other"
+      }
+    ],
+    "geoLocations": [],
+    "fundingReferences": [],
+    "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL1pFTk9ETy40MzIyNTg0PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+UnViZW4gRHVyYW48L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+Q09CUkE8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TZXJnaW8gSGVybmFuZGV6PC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkVTVEVZQ088L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZXJuYW5kbyBWaWdhcmE8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+RVNURVlDTzwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPk0uIFlvdXNzZWYgTWFoZm91ejwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU1RVVFQ8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5DT1JFV0lORCAtIEFDVElWRUZMT0FUIE9wZW5GQVNUIG1vZGVsIDE1IE1XIEZPV1QgR3JhbmQgQ2FuYXJ5IElzbGFuZCBzaXRlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlplbm9kbzwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PkNPUkVXSU5EIHByb2plY3Q8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5Ib3Jpem9uMjAyMDwvc3ViamVjdD4KICAgIDxzdWJqZWN0PlJlbmV3YWJsZSBFbmVyZ3k8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5XaW5kPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+RmxvYXRpbmcgV2luZCBFbmVyZ3k8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5TZW1pU3VibWVzaWJsZSBwbGF0Zm9ybTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PjE1IE1XIHdpbmQgVHVyYmluZTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMjAtMTItMTU8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9Ik90aGVyIi8+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9InVybCI+aHR0cHM6Ly96ZW5vZG8ub3JnL3JlY29yZC80MzIyNTg1PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJIYXNWZXJzaW9uIj4xMC41MjgxL3plbm9kby40MzIyNTg1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiI+aHR0cHM6Ly96ZW5vZG8ub3JnL2NvbW11bml0aWVzL2NvcmV3aW5kPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8dmVyc2lvbj4xLjA8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLW5kLzQuMC9sZWdhbGNvZGUiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb24gTm9uIENvbW1lcmNpYWwgTm8gRGVyaXZhdGl2ZXMgNC4wIEludGVybmF0aW9uYWw8L3JpZ2h0cz4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJpbmZvOmV1LXJlcG8vc2VtYW50aWNzL29wZW5BY2Nlc3MiPk9wZW4gQWNjZXNzPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+Jmx0O3AmZ3Q7RmlsZXMgdG8gc2ltdWxhdGUgYW5kIHJ1biwgQUNUSVZFRkxPQVQgT3BlbkZBU1QgbW9kZWwgMTVNVyBGT1dUIGZyb20gTlJFTCAoRFRVKSBhdCZhbXA7bmJzcDsmYW1wO25ic3A7R3JhbmQgQ2FuYXJ5IElzbGFuZCBzaXRlLiZsdDsvcCZndDsKCiZsdDtwJmd0O1RoaXMgbW9kZWwgdmVyc2lvbiBpcyBjb25zaXN0ZW50IHdpdGggZGVsaXZlcmFibGUgRDEuMyBmcm9tIENPUkVXSU5EIHByb2plY3QgKGxpbmsgdG8gZGVsdmllcmFibGUpLiZsdDsvcCZndDsKCiZsdDtwJmd0O0xpbmsgdG8gdGhlIDE1TVcgd2luZCB0dXJiaW5lIG1vZGVsIGNhbiBiZSBmb3VuZCBpbiB0aGUgZm9sbG93aW5nIGxpbms6JmFtcDtuYnNwOyZsdDthIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9JRUFXaW5kVGFzazM3L0lFQS0xNS0yNDAtUldUIiZndDtHaXRIdWIgLSBJRUFXaW5kVGFzazM3L0lFQS0xNS0yNDAtUldUOiAxNU1XIHJlZmVyZW5jZSB3aW5kIHR1cmJpbmUgcmVwb3NpdG9yeSBkZXZlbG9wZWQgaW4gY29uanVuY3Rpb24gd2l0aCBJRUEgV2luZCZsdDsvYSZndDsmbHQ7L3AmZ3Q7CgombHQ7cCZndDsmbHQ7c3Ryb25nJmd0O0Rpc2NsYWltZXI6Jmx0Oy9zdHJvbmcmZ3Q7IFRoZSBmaWxlcyBhbmQgbW9kZWxzIGFyZSBwcm92aWRlZCAmYW1wO2xkcXVvO2FzIGlzJmFtcDtyZHF1bzssIHdpdGhvdXQgd2FycmFudHkgb2YgYW55IGtpbmQsIGV4cHJlc3Mgb3IgaW1wbGllZCwgaW5jbHVkaW5nIGJ1dCBub3QgbGltaXRlZCB0byB0aGUgd2FycmFudGllcyBvZiBtZXJjaGFudGFiaWxpdHksIGZpdG5lc3MgZm9yIGEgcGFydGljdWxhciBwdXJwb3NlIGFuZCBub25pbmZyaW5nZW1lbnQuIGluIG5vIGV2ZW50IHNoYWxsIHRoZSBhdXRob3JzIG9yIGNvcHlyaWdodCBob2xkZXJzIGJlIGxpYWJsZSBmb3IgYW55IGNsYWltLCBkYW1hZ2VzIG9yIG90aGVyIGxpYWJpbGl0eSwgd2hldGhlciBpbiBhbiBhY3Rpb24gb2YgY29udHJhY3QsIHRvcnQgb3Igb3RoZXJ3aXNlLCBhcmlzaW5nIGZyb20sIG91dCBvZiBvciBpbiBjb25uZWN0aW9uIHdpdGggdGhlIG1vZGVscyBhbmQgZmlsZXMgb3IgdGhlIHVzZSBvciBvdGhlciBkZWFsaW5ncyBpbiB0aGUgbW9kZWxzIGFuZCBmaWxlcyBwcm92aWRlZC4mbHQ7L3AmZ3Q7PC9kZXNjcmlwdGlvbj4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIj5XTzIwMTQxNzc3MjkgLSBTVUJNRVJTSUJMRSBTVFJVQ1RVUkUgRk9SIEFDVElWRUxZIFNVUFBPUlRJTkcgVE9XRVJTIE9GIEdFTkVSQVRPUlMgQU5EIFNVQi1TVEFUSU9OUyBPUiBTSU1JTEFSIEVMRU1FTlRTLCBJTiBNQVJJVElNRSBGQUNJTElUSUVTLCBORUJSRVJBIEdBUkPDjUEsIEpvc8OpIEFsZm9uc28gQUxUT0xBR1VJUlJFIE1DQ1JVTUxJU0gsIEphaW1lLCAyMDE0IChodHRwczovL3BhdGVudHNjb3BlLndpcG8uaW50L3NlYXJjaC9lcy9kZXRhaWwuanNmP2RvY0lkPVdPMjAxNDE3NzcyOSk8L2Rlc2NyaXB0aW9uPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iT3RoZXIiPnsicmVmZXJlbmNlcyI6IFsiR2FycmV0dCBCYXJ0ZXIsIE5pa2hhciBBYmJhcywgRmFuemhvbmcgTWVuZywgUGlldHJvIEJvcnRvbG90dGksIFdpdG9sZCBTa3J6eXBpbnNraSwgR2VvcmdlIFNjb3R0LCBSb2xhbmQgRmVpbCwgSGVucmlrIEJyZWRtb3NlLCBLYXRoZXJpbmUgRHlrZXMsIE1hdHQgU2hpZWxkcywgQ2hyaXN0b3BoZXIgQWxsZW4sIGFuZCBBbnRob255IFZpc2VsbGkuIDIwMjAuIERlZmluaXRpb24gb2YgdGhlIElFQSAxNS1NZWdhd2F0dCBPZmZzaG9yZSBSZWZlcmVuY2UgV2luZC4gR29sZGVuLCBDTzogTmF0aW9uYWwgUmVuZXdhYmxlIEVuZXJneSBMYWJvcmF0b3J5LiBOUkVML1RQLTUwMDAtNzU2OTguIGh0dHBzOi8vd3d3Lm5yZWwuZ292L2RvY3MvZnkyMG9zdGkvNzU2OTgucGRmIiwgIkNPUkVXSU5EIEQxLjIgRGVzaWduIExvYWRzLCAyMDE5LiIsICJDT1JFV0lORCBEMS4zIiwgIldPMjAxNDE3NzcyOSAtIFNVQk1FUlNJQkxFIFNUUlVDVFVSRSBGT1IgQUNUSVZFTFkgU1VQUE9SVElORyBUT1dFUlMgT0YgR0VORVJBVE9SUyBBTkQgU1VCLVNUQVRJT05TIE9SIFNJTUlMQVIgRUxFTUVOVFMsIElOIE1BUklUSU1FIEZBQ0lMSVRJRVMsIE5FQlJFUkEgR0FSQ1x1MDBjZEEsIEpvc1x1MDBlOSBBbGZvbnNvIEFMVE9MQUdVSVJSRSBNQ0NSVU1MSVNILCBKYWltZSwgMjAxNCJdfTwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+",
+    "url": "https://zenodo.org/record/4322584",
+    "contentUrl": null,
+    "metadataVersion": 1,
+    "schemaVersion": "http://datacite.org/schema/kernel-4",
+    "source": "mds",
+    "isActive": true,
+    "state": "findable",
+    "reason": null,
+    "viewCount": 0,
+    "viewsOverTime": [],
+    "downloadCount": 0,
+    "downloadsOverTime": [],
+    "referenceCount": 0,
+    "citationCount": 0,
+    "citationsOverTime": [],
+    "partCount": 0,
+    "partOfCount": 0,
+    "versionCount": 0,
+    "versionOfCount": 0,
+    "created": "2020-12-15T10:26:34.000Z",
+    "registered": "2020-12-15T10:26:34.000Z",
+    "published": "2020",
+    "updated": "2020-12-15T15:10:13.000Z"
+  },
+  "relationships": {
+    "client": {
+      "data": {
+        "id": "cern.zenodo",
+        "type": "clients"
+      }
+    },
+    "provider": {
+      "data": {
+        "id": "cern",
+        "type": "providers"
+      }
+    },
+    "media": {
+      "data": {
+        "id": "10.5281/zenodo.4322584",
+        "type": "media"
+      }
+    },
+    "references": {
+      "data": []
+    },
+    "citations": {
+      "data": []
+    },
+    "parts": {
+      "data": []
+    },
+    "partOf": {
+      "data": []
+    },
+    "versions": {
+      "data": []
+    },
+    "versionOf": {
+      "data": []
+    }
+  }
+}
