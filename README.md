@@ -14,8 +14,12 @@ no servers, no databases, no billing account, ≈ $0/month.
 
 **Prototype.** The foundation — the `harvest` package, the event log, the
 materialiser, the CKAN-compat gate, the source/organisation/task registers — is
-built and tested. The seven source adapters, the Tier-3 extraction layer, the
-Astro site and the CI workflows are in progress.
+built and tested. So are **five of the seven adapters** (Zenodo, DataCite,
+Crossref, GitHub, OSTI), reconciliation and link checking, the Astro site with
+its design system and accessibility gate, and the CI workflows. The **Tier-3
+extraction layer** and the two adapters that depend on it — `ieawind` and
+`wdh` — are still stubs, and `records/` is still empty: the first coherent
+harvest across all sources has not been run yet.
 
 **There is a deliberate five-record cap per source.** `harvest.DEFAULT_LIMIT`
 is 5 and `sources.yaml` sets `max_records: 5` everywhere, so a stray run cannot
@@ -29,15 +33,17 @@ you do not need Python 3.12 installed.
 
 ```sh
 make sync        # install the pinned environment (uv sync --frozen --dev)
-make test        # 320 passed, 3 skipped
+make test        # 1447 passed, 101 skipped
 make harvest     # harvest every enabled source (LIMIT=5) → events → records → validate → report
-make materialize # replay events/ into records/ (records/ is derived; delete it freely)
+make materialize # replay annotations/ + events/ into records/ (derived; delete it freely)
 make validate    # the CKAN-compat gate
-make site        # build the static site + Pagefind index   [not yet implemented]
+make site        # build the static site + Pagefind index
+make gates       # everything CI enforces: tests, CKAN gate, palette, tokens, a11y
 make             # list every command
 ```
 
-The underlying CLI is `uv run python -m harvest {run,materialize,validate,extract,report,sources}`.
+The underlying CLI is `uv run python -m harvest
+{run,materialize,validate,annotations,dedupe,linkcheck,extract,report,sources}`.
 
 ## Repo layout
 
