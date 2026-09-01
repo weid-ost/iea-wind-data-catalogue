@@ -13,17 +13,15 @@
   },
   "paths": [
     "/",
-    "/search/",
-    "/browse/",
+    "/about/",
     "/record/doi-10-2172-2447928/",
     "/record/doi-10-2314-kxp-1790028361/",
     "/record/doi-10-5281-zenodo-20847799/",
     "/dev/components/"
   ],
   "why": {
-    "/": "the homepage, and the freshness banner",
-    "/search/": "the page a screen-reader user lives on",
-    "/browse/": "the no-JavaScript path, and pagination",
+    "/": "the catalogue — search box, filter sidebar and the whole server-rendered, paginated record set on one page; the page a screen-reader user lives on and the no-JavaScript path both",
+    "/about/": "how it works, and the status section the catalogue's compact status links to (#status)",
     "//records": "Three REAL harvested records, not fixtures. Fixture-shaped record pages are already audited through /dev/components; these prove the gate holds over what the pipeline actually produced.",
     "/record/doi-10-2172-2447928/": "the rich one (OSTI): seven keyword tags, a task group, a resource, two related identifiers, a 3,200-character abstract and a very long author list — the widest set of surfaces any real record lights up",
     "/record/doi-10-2314-kxp-1790028361/": "the sparse one (DataCite): no abstract, no resources, no group, no task attribution — and its stated licence, 'Open Access', is not in the licence table, so it also renders the unrecognised-licence warning panel",

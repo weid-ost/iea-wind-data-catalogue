@@ -1,64 +1,62 @@
 ---
 import Base from '../layouts/Base.astro';
-import FreshnessBanner from '../components/FreshnessBanner.astro';
 import Panel from '../components/Panel.astro';
-import RecordCard from '../components/RecordCard.astro';
-import TaskChip from '../components/TaskChip.astro';
-import TextInput from '../components/TextInput.astro';
-import Button from '../components/Button.astro';
+import SearchIsland from '../components/SearchIsland.astro';
 import { catalogue, usingFixtures } from '../lib/catalogue';
+import { facetsFor } from '../lib/facets';
 import { freshness } from '../lib/state';
-import { tasksOf, extra, resourceKindCount } from '../lib/record';
+import { formatDate } from '../lib/record';
 import { withBase } from '../lib/url';
+import { CATALOGUE_PAGE_SIZE } from '../lib/paginate';
 
+// The catalogue is the index: search box + filter sidebar + the whole record
+// set, server-rendered and paginated. `catalogue()` returns entries sorted by
+// their `last_seen` extra (the harvest's observation time) newest-first, which
+// is the "most recently updated" order the results default to.
 const entries = await catalogue();
 const sample = await usingFixtures();
 const fresh = freshness();
-const recent = entries.slice(0, 6);
-
-const tasks = [...new Set(entries.flatMap((entry) => tasksOf(entry.pkg)))].sort();
-const kinds = new Map<string, number>();
-for (const entry of entries) {
-  const kind = extra(entry.pkg, 'resource_kind') ?? 'other';
-  kinds.set(kind, (kinds.get(kind) ?? 0) + 1);
-}
+const facets = facetsFor(entries);
+const records = entries.map((entry) => entry.pkg);
+const statusHref = withBase('/about/#status');
 ---
 
 <Base
   title="IEA Wind Data Catalogue"
   description="Datasets, publications and software from the IEA Wind Tasks, harvested from where they are already published."
 >
-  <div class="stack-8">
-    <section class="hero">
+  <div class="stack-6">
+    <header class="catalogue__head">
       <h1>Datasets, publications and software from the IEA&nbsp;Wind Tasks</h1>
-      <p class="hero__lead prose">
-        This catalogue asks nothing of anyone. It watches the places IEA Wind
-        people already publish — Zenodo, DataCite, Crossref, GitHub, OSTI, the
-        Wind Data Hub and the Task sites — and reflects what it finds, verbatim,
-        with the provenance of every field on show.
-      </p>
 
-      <form class="hero__search" role="search" action={withBase('/search/')} method="get">
-        <TextInput
-          id="home-q"
-          name="q"
-          type="search"
-          label="Search the catalogue"
-          placeholder="lidar, wake, Task 43, an author, a DOI…"
-        />
-        <Button variant="primary" type="submit">Search</Button>
-      </form>
+      <div class="catalogue__intro">
+        <p class="catalogue__lead prose">
+          This catalogue watches the places IEA Wind contributors typically
+          publish — Zenodo, DataCite, Crossref, GitHub, OSTI, the Wind Data Hub
+          and the Task sites — and curates this searchable list of IEA Wind and
+          related publications.
+        </p>
 
-      <p class="secondary">
-        {entries.length} record{entries.length === 1 ? '' : 's'} ·{' '}
-        {[...kinds.entries()]
-          .sort((a, b) => b[1] - a[1])
-          .map(([kind, n]) => resourceKindCount(kind, n))
-          .join(' · ')}
-      </p>
-    </section>
-
-    <FreshnessBanner freshness={fresh} />
+        <aside class="status" aria-label="Catalogue status">
+          <p class="status__label">Status</p>
+          {fresh.neverRun ? (
+            <p class="status__line"><a href={statusHref}>Not harvested yet →</a></p>
+          ) : (
+            <>
+              <p class="status__line">
+                <a href={statusHref}>Last updated {formatDate(fresh.finishedAt)} →</a>
+              </p>
+              <p class="status__meta secondary">
+                {fresh.ageDays === 0
+                  ? 'today'
+                  : `${fresh.ageDays} day${fresh.ageDays === 1 ? '' : 's'} ago`}
+                {fresh.stale ? ' · refresh due' : ''}
+              </p>
+            </>
+          )}
+        </aside>
+      </div>
+    </header>
 
     {sample && (
       <Panel tone="info" icon="ℹ" heading="Showing sample records" headingLevel="h2">
@@ -71,71 +69,80 @@ for (const entry of entries) {
       </Panel>
     )}
 
-    {tasks.length > 0 && (
-      <section aria-labelledby="tasks-heading">
-        <h2 id="tasks-heading">By Task</h2>
-        <div class="row">
-          {tasks.map((task) => <TaskChip task={task} />)}
-        </div>
-      </section>
-    )}
-
-    <section aria-labelledby="recent-heading">
-      <h2 id="recent-heading">Recently updated</h2>
-      <ul class="cards">
-        {recent.map((entry) => (
-          <li><RecordCard pkg={entry.pkg} headingLevel="h3" /></li>
-        ))}
-      </ul>
-      <p class="cards__more">
-        <a href={withBase('/browse/')}>Browse all {entries.length} records →</a>
-      </p>
-    </section>
+    <SearchIsland
+      facets={facets}
+      initial={records}
+      total={entries.length}
+      pageSize={CATALOGUE_PAGE_SIZE}
+    />
   </div>
 </Base>
 
 <style>
-  /* The hero is a neutral surface with a left accent bar — colour never fills a
-     surface, so the "hero band" is a bar and type, not a green block. */
-  .hero {
-    padding: var(--space-6) var(--space-6);
+  .catalogue__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-6);
+    align-items: start;
+  }
+
+  @media (max-width: 40rem) {
+    .catalogue__intro {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-4);
+    }
+  }
+
+  .catalogue__lead {
+    font-size: var(--font-size-lead);
+    margin: 0;
+  }
+
+  /* A compact, barred status card — square corners, neutral surface, the accent
+     appears only as the left bar (design §1). It links to /about/#status. */
+  .status {
+    justify-self: end;
+    max-width: 16rem;
+    padding: var(--space-3) var(--space-4);
     border: var(--border-width-hairline) solid var(--border-subtle);
     border-inline-start: var(--panel-bar-width) solid var(--panel-accent-bar);
-    border-radius: var(--panel-radius);
     background: var(--surface-raised);
   }
 
-  .hero h1 {
-    max-width: var(--font-measure-prose);
-    font-size: var(--font-size-display);
+  @media (max-width: 40rem) {
+    .status {
+      justify-self: stretch;
+      max-width: none;
+    }
   }
 
-  .hero__lead {
-    font-size: var(--font-size-lead);
-  }
-
-  .hero__search {
-    display: flex;
-    align-items: flex-end;
-    gap: var(--space-3);
-    max-width: var(--font-measure-prose);
-    margin-block: var(--space-6) var(--space-4);
-  }
-
-  .hero__search :global(.field) {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .cards {
-    display: grid;
-    gap: var(--space-4);
+  .status p {
     margin: 0;
-    padding: 0;
-    list-style: none;
   }
 
-  .cards__more {
-    margin-block-start: var(--space-4);
+  .status__label {
+    color: var(--text-secondary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .status__line {
+    margin-block-start: var(--space-1);
+    font-size: var(--font-size-small);
+  }
+
+  .status__line a {
+    text-decoration: none;
+  }
+
+  .status__line a:hover {
+    text-decoration: underline;
+  }
+
+  .status__meta {
+    margin-block-start: var(--space-1);
+    font-size: var(--font-size-caption);
   }
 </style>

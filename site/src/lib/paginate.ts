@@ -1,9 +1,9 @@
 /**
- * How many records a browse page holds.
+ * How many records one page of the catalogue holds.
  *
- * One constant, because two places need to agree: the route that paginates and
- * the sitemap that has to declare every page the route produced. They did not,
- * and `/browse/2/` was reachable by a real link but absent from sitemap.xml
- * (product-e2e-07, site-08).
+ * The catalogue (`/`) is one page: the whole record set is server-rendered so
+ * zero-JS readers and crawlers see everything, and the island paginates the
+ * *filtered* set client-side via `?page=N`. This constant is the page size it
+ * uses; `index.astro` reads it and passes it to the island so the two agree.
  */
-export const BROWSE_PAGE_SIZE = 20;
+export const CATALOGUE_PAGE_SIZE = 20;

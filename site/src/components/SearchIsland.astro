@@ -1,37 +1,78 @@
 ---
 /**
- * The one island on the site (ADR-0023, ADR-0036).
+ * The catalogue's search-and-filter island (ADR-0023, ADR-0036).
  *
- * Pagefind's stock UI is decent but its live result count and filter semantics
- * needed verifying against design §6 — so this is a custom UI over Pagefind's
- * JS API, which lets the input be a plain labelled input, the filters be real
- * checkboxes rendered *server-side*, the results be a list, and the count and
- * the zero-results state announce through one polite live region.
+ * The whole record set is server-rendered here as real `RecordCard`s, each in a
+ * `<li>` carrying the facet values as `data-*` attributes. That means the zero-JS
+ * reader and the crawler see the entire catalogue in plain HTML — the filtering
+ * is a progressive enhancement layered on top, not a prerequisite for reading.
  *
- * Progressive enhancement, strictly: the facets and the initial record list are
- * in the built HTML, and with no JS the form falls back to /browse/, which is a
- * static paginated list of the whole catalogue. Nothing here is required to
- * read the catalogue.
+ * The island reads the shared filter vocabulary from the query string
+ * (`task`, `kind`, `year`, `licence`, `source`, `institution`, `availability`,
+ * `q`, `page`), applies it over the embedded set, updates the list, the live
+ * count and the facet counts in place, and rewrites the URL so a filtered view
+ * is shareable. It needs no index and no network, so it works identically under
+ * `astro dev` (where Pagefind does not exist) and in the built site — which is
+ * why there is no `pagefind.js` import here to 404.
+ *
+ * Filters are real checkboxes rendered server-side (design §6: "never clickable
+ * `<div>`s"); the count and the zero-results state announce through one polite
+ * live region.
  */
 import FacetGroup from './FacetGroup.astro';
 import type { Facet } from '../lib/facets';
 import TextInput from './TextInput.astro';
 import Button from './Button.astro';
-import Panel from './Panel.astro';
 import RecordCard from './RecordCard.astro';
-import { withBase } from '../lib/url';
-import type { CkanPackage } from '../lib/record';
+import {
+  extra,
+  tasksOf,
+  sourceSystemsOf,
+  yearOf,
+  plainText,
+  authorsOf,
+  availabilityOf,
+  type CkanPackage,
+} from '../lib/record';
 
 interface Props {
   facets: Facet[];
+  /** Every record to embed, filter and paginate. */
   initial: CkanPackage[];
-  total: number;
+  total?: number;
+  pageSize?: number;
 }
-const { facets, initial, total } = Astro.props;
+const { facets, initial, pageSize = 20 } = Astro.props;
+
+const searchText = (pkg: CkanPackage): string =>
+  [
+    pkg.title,
+    authorsOf(pkg)
+      .map((a) => a.name)
+      .join(' '),
+    tasksOf(pkg).join(' '),
+    extra(pkg, 'doi') ?? '',
+    plainText(pkg.notes).slice(0, 600),
+  ]
+    .join(' ')
+    .toLowerCase();
+
+const rows = initial.map((pkg) => ({
+  pkg,
+  task: tasksOf(pkg).join(' '),
+  kind: extra(pkg, 'resource_kind') ?? '',
+  year: yearOf(pkg),
+  licence: pkg.license_id ?? '',
+  source: sourceSystemsOf(pkg).join(' '),
+  institution: pkg.owner_org ?? '',
+  availability: availabilityOf(pkg),
+  text: searchText(pkg),
+}));
+const shown = rows.length;
 ---
 
-<search-island class="search" data-base={withBase('/')}>
-  <form class="search__form" role="search" action={withBase('/browse/')} method="get">
+<search-island class="search" data-page-size={pageSize}>
+  <form class="search__form" role="search" action="?" method="get">
     <div class="search__query">
       <TextInput
         id="q"
@@ -46,13 +87,11 @@ const { facets, initial, total } = Astro.props;
     </div>
 
     <noscript>
-      <Panel tone="info" icon="ℹ" class="search__noscript">
-        <p>
-          Search needs JavaScript. Everything is still readable without it —
-          <a href={withBase('/browse/')}>browse the full catalogue</a>, which is a
-          plain paginated list of all {total} records.
-        </p>
-      </Panel>
+      <p class="secondary search__noscript">
+        Filtering and pagination need JavaScript. The full catalogue —
+        all {shown} record{shown === 1 ? '' : 's'}, most recently updated first — is
+        listed below without it.
+      </p>
     </noscript>
 
     <div class="search__layout">
@@ -68,17 +107,29 @@ const { facets, initial, total } = Astro.props;
 
       <div class="search__results">
         <p class="search__count" role="status" aria-live="polite" data-search-count>
-          Showing the {initial.length} most recently updated of {total} records.
+          Showing all {shown} record{shown === 1 ? '' : 's'}, most recently updated first.
         </p>
 
         <ul class="search__list" data-search-results>
-          {initial.map((pkg) => (
-            <li><RecordCard pkg={pkg} /></li>
+          {rows.map((row) => (
+            <li
+              data-task={row.task}
+              data-kind={row.kind}
+              data-year={row.year}
+              data-licence={row.licence}
+              data-source={row.source}
+              data-institution={row.institution}
+              data-availability={row.availability}
+              data-text={row.text}
+            >
+              <RecordCard pkg={row.pkg} />
+            </li>
           ))}
         </ul>
 
+        <div class="search__empty" data-search-empty-slot hidden></div>
         <template data-search-empty>
-          <div class="search__empty">
+          <div class="search__empty-card">
             <p><strong>No results.</strong></p>
             <p class="secondary">
               Try fewer filters, or a broader term. The catalogue only holds what
@@ -87,172 +138,213 @@ const { facets, initial, total } = Astro.props;
             </p>
           </div>
         </template>
+
+        <nav class="pagination" aria-label="Catalogue pages" data-search-pagination hidden></nav>
       </div>
     </div>
   </form>
 </search-island>
 
 <script>
-  // Vanilla custom element. Pagefind is a *build* artifact under /pagefind/,
-  // so it does not exist under `astro dev` — the island then does nothing and
-  // the server-rendered list stays, which is the correct degradation.
+  // Vanilla custom element (design §3.7). No Pagefind, no network: the record
+  // set is embedded in the page, so filtering works under `astro dev` exactly as
+  // it does in the built site, and there is no missing index to 404 on.
   class SearchIsland extends HTMLElement {
-    async connectedCallback() {
-      const base = this.dataset.base ?? '/';
-      let pagefind;
-      try {
-        // Pagefind is generated *after* astro build, so the bundler must not
-        // touch this import. `@vite-ignore` is not enough — Astro 7 still
-        // routes it through Vite's preload helper and leaves a
-        // `__VITE_PRELOAD__` token that throws at runtime, which silently
-        // disables search. Building the importer at runtime is opaque to any
-        // bundler and cannot regress.
-        const load = new Function('url', 'return import(url)');
-        pagefind = await load(`${base}pagefind/pagefind.js`);
-      } catch {
-        return; // no index (dev server, or a build without Pagefind): leave the HTML alone
-      }
-      try {
-        await pagefind.options({ excerptLength: 30 });
-      } catch {
-        /* older index, or no options support: the defaults are fine */
-      }
+    connectedCallback() {
+      const root = this;
+      const form = root.querySelector('form');
+      const input = root.querySelector('[data-search-input]');
+      const list = root.querySelector('[data-search-results]');
+      const count = root.querySelector('[data-search-count]');
+      const emptySlot = root.querySelector('[data-search-empty-slot]');
+      const emptyTemplate = root.querySelector('[data-search-empty]');
+      const pager = root.querySelector('[data-search-pagination]');
+      const clear = root.querySelector('[data-search-clear]');
+      if (!form || !input || !list || !count || !pager) return;
 
-      const form = this.querySelector('form');
-      const input = this.querySelector('[data-search-input]');
-      const list = this.querySelector('[data-search-results]');
-      const count = this.querySelector('[data-search-count]');
-      const emptyTemplate = this.querySelector('[data-search-empty]');
-      const submit = this.querySelector('[data-search-submit]');
-      const clear = this.querySelector('[data-search-clear]');
-      if (!form || !input || !list || !count) return;
+      const items = Array.from(list.querySelectorAll('li'));
+      const pageSize = Math.max(1, parseInt(root.dataset.pageSize || '20', 10) || 20);
+      const FACETS = ['task', 'kind', 'year', 'licence', 'source', 'institution', 'availability'];
+      const MULTI = new Set(['task', 'source']);
 
-      // JS is available, so the submit button is redundant: results are live.
-      if (submit) submit.hidden = true;
-      form.addEventListener('submit', (event) => event.preventDefault());
+      const valuesOf = (li, facet) => {
+        const raw = (li.dataset[facet] || '').trim();
+        if (!raw) return [];
+        return MULTI.has(facet) ? raw.split(/\s+/) : [raw];
+      };
 
-      const params = new URLSearchParams(window.location.search);
-      const initialQuery = params.get('q') ?? '';
-      if (initialQuery) input.value = initialQuery;
-      for (const box of this.querySelectorAll('.facet__input')) {
-        if (params.getAll(box.name).includes(box.value)) box.checked = true;
-      }
-
-      const selectedFilters = () => {
-        const filters = {};
-        for (const box of this.querySelectorAll('.facet__input:checked')) {
-          (filters[box.name] ??= []).push(box.value);
+      const matches = (li, sel, tokens, except) => {
+        for (const facet of FACETS) {
+          if (facet === except) continue;
+          const chosen = sel[facet];
+          if (!chosen || chosen.length === 0) continue;
+          const has = valuesOf(li, facet);
+          if (!chosen.some((value) => has.includes(value))) return false;
         }
-        return filters;
-      };
-
-      const escape = (text) =>
-        String(text ?? '').replace(/[&<>"']/g, (ch) =>
-          ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]
-        );
-
-      const renderResults = (items) => {
-        list.innerHTML = items
-          .map(
-            (item) => `<li><article class="card">
-              <h2 class="card__title"><a href="${escape(item.url)}">${escape(item.meta?.title ?? item.url)}</a></h2>
-              <p class="card__excerpt">${item.excerpt}</p>
-              <p class="card__doi meta secondary">${escape(item.meta?.doi ?? '')}</p>
-            </article></li>`
-          )
-          .join('');
-      };
-
-      const showEmpty = () => {
-        list.innerHTML = '';
-        if (emptyTemplate) list.append(emptyTemplate.content.cloneNode(true));
-      };
-
-      const updateFacetCounts = (filterCounts) => {
-        for (const node of this.querySelectorAll('[data-facet-count]')) {
-          const [facet, value] = node.dataset.facetCount.split(':');
-          node.textContent = String(filterCounts?.[facet]?.[value] ?? 0);
+        if (tokens.length) {
+          const text = li.dataset.text || '';
+          if (!tokens.every((token) => text.includes(token))) return false;
         }
+        return true;
       };
 
-      // The query string is the shareable state of a search — but `?theme=` is
-      // not ours to drop. The a11y gate forces the theme through it, and a user
-      // who shares a dark-mode link means it.
-      const writeUrl = (params) => {
+      const gather = () => {
+        const sel = {};
+        for (const box of root.querySelectorAll('.facet__input:checked')) {
+          (sel[box.name] = sel[box.name] || []).push(box.value);
+        }
+        const q = input.value.trim();
+        const tokens = q ? q.toLowerCase().split(/\s+/) : [];
+        return { sel, tokens, q };
+      };
+
+      let page = 1;
+
+      const writeUrl = (sel, q) => {
+        const params = new URLSearchParams();
+        for (const facet of FACETS) for (const value of sel[facet] || []) params.append(facet, value);
+        if (q) params.set('q', q);
+        if (page > 1) params.set('page', String(page));
+        // `?theme=` is the a11y gate's and it is not ours to drop.
         const theme = new URLSearchParams(window.location.search).get('theme');
         if (theme) params.set('theme', theme);
         const query = params.toString();
         window.history.replaceState({}, '', query ? `?${query}` : window.location.pathname);
       };
 
-      // The server-rendered list is the resting state, so keep it to restore.
-      const initialHtml = list.innerHTML;
-      const initialCount = count.textContent;
-
-      let token = 0;
-      const run = async () => {
-        const mine = ++token;
-        const query = input.value.trim();
-        const filters = selectedFilters();
-        const hasFilters = Object.keys(filters).length > 0;
-        const search = await pagefind.search(query === '' ? null : query, { filters });
-        if (mine !== token) return; // a newer keystroke won
-
-        // An empty search returns no filter counts, so the resting state takes
-        // the totals from the index instead — otherwise every facet reads 0
-        // before you have typed anything, which looks like an empty catalogue.
-        updateFacetCounts(
-          query === '' && !hasFilters ? await pagefind.filters() : search.filters
-        );
-
-        if (query === '' && !hasFilters) {
-          list.innerHTML = initialHtml;
-          count.textContent = initialCount;
-          writeUrl(new URLSearchParams());
-          return;
+      const updateCounts = (sel, tokens) => {
+        for (const node of root.querySelectorAll('[data-facet-count]')) {
+          const raw = node.dataset.facetCount || '';
+          const idx = raw.indexOf(':');
+          const facet = raw.slice(0, idx);
+          const value = raw.slice(idx + 1);
+          let c = 0;
+          for (const li of items) {
+            if (matches(li, sel, tokens, facet) && valuesOf(li, facet).includes(value)) c += 1;
+          }
+          node.textContent = String(c);
         }
-
-        const items = await Promise.all(search.results.slice(0, 30).map((r) => r.data()));
-        if (mine !== token) return;
-
-        const shown = Math.min(items.length, search.results.length);
-        const describe = query ? ` for “${query}”` : '';
-        if (search.results.length === 0) {
-          count.textContent = `No results${describe}.`;
-          showEmpty();
-        } else {
-          count.textContent =
-            `${search.results.length} result${search.results.length === 1 ? '' : 's'}${describe}` +
-            (shown < search.results.length ? ` — showing the first ${shown}.` : '.');
-          renderResults(items);
-        }
-
-        const next = new URLSearchParams();
-        if (query) next.set('q', query);
-        for (const [facet, values] of Object.entries(filters))
-          for (const value of values) next.append(facet, value);
-        writeUrl(next);
       };
 
+      const renderPager = (pageCount) => {
+        pager.textContent = '';
+        if (pageCount <= 1) {
+          pager.hidden = true;
+          return;
+        }
+        pager.hidden = false;
+        const ul = document.createElement('ul');
+        ul.className = 'pagination__list';
+
+        const wanted = [];
+        for (let n = 1; n <= pageCount; n += 1) {
+          if (n === 1 || n === pageCount || Math.abs(n - page) <= 1) wanted.push(n);
+        }
+
+        const addLink = (n, label, rel) => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.className = 'pagination__link';
+          a.href = '#';
+          a.textContent = label || String(n);
+          if (rel) a.rel = rel;
+          if (!label && n === page) a.setAttribute('aria-current', 'page');
+          a.addEventListener('click', (event) => {
+            event.preventDefault();
+            page = n;
+            apply(false);
+            count.focus?.();
+          });
+          li.appendChild(a);
+          ul.appendChild(li);
+        };
+
+        if (page > 1) addLink(page - 1, '← Previous', 'prev');
+        let prev = 0;
+        for (const n of wanted) {
+          if (prev && n - prev > 1) {
+            const gap = document.createElement('li');
+            gap.className = 'pagination__gap';
+            gap.setAttribute('aria-hidden', 'true');
+            gap.textContent = '…';
+            ul.appendChild(gap);
+          }
+          addLink(n);
+          prev = n;
+        }
+        if (page < pageCount) addLink(page + 1, 'Next →', 'next');
+        pager.appendChild(ul);
+      };
+
+      const apply = (resetPage = true) => {
+        const { sel, tokens, q } = gather();
+        if (resetPage) page = 1;
+
+        const filtered = items.filter((li) => matches(li, sel, tokens, null));
+        const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize));
+        if (page > pageCount) page = pageCount;
+        const start = (page - 1) * pageSize;
+        const visible = new Set(filtered.slice(start, start + pageSize));
+        for (const li of items) li.hidden = !visible.has(li);
+
+        emptySlot.textContent = '';
+        if (filtered.length === 0 && emptyTemplate) {
+          emptySlot.hidden = false;
+          emptySlot.appendChild(emptyTemplate.content.cloneNode(true));
+        } else {
+          emptySlot.hidden = true;
+        }
+
+        const describe = q ? ` for “${q}”` : '';
+        const noun = (n) => `record${n === 1 ? '' : 's'}`;
+        if (filtered.length === 0) {
+          count.textContent = `No results${describe}.`;
+        } else if (pageCount > 1) {
+          count.textContent =
+            `${filtered.length} ${noun(filtered.length)}${describe} — page ${page} of ${pageCount}.`;
+        } else {
+          count.textContent = `${filtered.length} ${noun(filtered.length)}${describe}.`;
+        }
+
+        updateCounts(sel, tokens);
+        renderPager(pageCount);
+        writeUrl(sel, q);
+      };
+
+      // Hydrate the controls from the URL (a filter link lands here).
+      const params = new URLSearchParams(window.location.search);
+      const q0 = params.get('q');
+      if (q0) input.value = q0;
+      for (const box of root.querySelectorAll('.facet__input')) {
+        if (params.getAll(box.name).includes(box.value)) box.checked = true;
+      }
+      const p0 = parseInt(params.get('page') || '1', 10);
+      page = Number.isFinite(p0) && p0 > 0 ? p0 : 1;
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        apply();
+      });
       let timer;
       input.addEventListener('input', () => {
         window.clearTimeout(timer);
-        timer = window.setTimeout(run, 180);
+        timer = window.setTimeout(() => apply(), 200);
       });
-      for (const box of this.querySelectorAll('.facet__input')) {
-        box.addEventListener('change', run);
+      for (const box of root.querySelectorAll('.facet__input')) {
+        box.addEventListener('change', () => apply());
       }
       if (clear) {
         clear.addEventListener('click', () => {
           window.setTimeout(() => {
             input.value = '';
-            run();
+            for (const box of root.querySelectorAll('.facet__input')) box.checked = false;
+            apply();
           }, 0);
         });
       }
 
-      // Fill the facet counts, and honour any query in the URL, on load.
-      await run();
+      // Initial paint: honour the URL's page without resetting it to 1.
+      apply(false);
     }
   }
   if (!customElements.get('search-island')) customElements.define('search-island', SearchIsland);
@@ -331,7 +423,15 @@ const { facets, initial, total } = Astro.props;
     list-style: none;
   }
 
-  .search__empty {
+  .search__list li[hidden] {
+    display: none;
+  }
+
+  .search__empty[hidden] {
+    display: none;
+  }
+
+  .search__empty-card {
     padding: var(--space-6) var(--space-4);
     border: var(--border-width-hairline) solid var(--border-subtle);
     border-radius: var(--radius-md);
@@ -339,32 +439,46 @@ const { facets, initial, total } = Astro.props;
     text-align: center;
   }
 
-  /* Result cards are built by the island, so their styles cannot be scoped. */
-  .search__list :global(.card) {
-    padding: var(--space-4);
+  /* The pager is built by the island, so its nodes carry no scope attribute and
+     must be reached with :global. Tokens only, same look as Pagination.astro. */
+  .search :global(.pagination) {
+    margin-block-start: var(--space-6);
+  }
+
+  .search :global(.pagination__list) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .search :global(.pagination__link) {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--space-8);
+    padding: var(--space-1) var(--space-3);
     border: var(--border-width-hairline) solid var(--border-subtle);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     background: var(--surface-raised);
-  }
-
-  .search__list :global(.card__title) {
-    margin-bottom: var(--space-2);
-    font-size: var(--font-size-h3);
-  }
-
-  .search__list :global(.card__title a) {
-    color: var(--text-primary);
+    color: var(--text-link);
+    font-size: var(--font-size-small);
     text-decoration: none;
   }
 
-  .search__list :global(.card__title a:hover) {
-    color: var(--text-link);
-    text-decoration: underline;
+  .search :global(.pagination__link:hover) {
+    border-color: var(--action-primary);
   }
 
-  .search__list :global(mark) {
-    background: transparent;
+  .search :global(.pagination__link[aria-current='page']) {
+    border-color: var(--action-primary);
     color: var(--text-primary);
     font-weight: var(--font-weight-semibold);
+  }
+
+  .search :global(.pagination__gap) {
+    color: var(--text-secondary);
   }
 </style>

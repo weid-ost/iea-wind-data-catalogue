@@ -233,6 +233,29 @@ function matchesSystem(url: string, system: string): boolean {
   return (host[system] ?? /$^/).test(url);
 }
 
+/**
+ * The availability value a filter uses (the shared `availability=` facet). It
+ * is the source's `access_status` when that is a value we have a label for, and
+ * `unknown` otherwise — never a guess dressed up as a fact.
+ */
+export const availabilityOf = (pkg: CkanPackage): string => {
+  const status = extra(pkg, 'access_status');
+  // Collapse the finer access statuses onto the four shared facet values
+  // (open · restricted · embargoed · unknown) so a record's availability chip
+  // links to the same bucket the facet filters on. Must match the FACET map in
+  // AvailabilityBadge.astro.
+  return AVAILABILITY_FACET[status ?? ''] ?? 'unknown';
+};
+
+const AVAILABILITY_FACET: Record<string, string> = {
+  open: 'open',
+  restricted: 'restricted',
+  'registration-required': 'restricted',
+  embargoed: 'embargoed',
+  'metadata-only': 'embargoed',
+  unknown: 'unknown',
+};
+
 export const ACCESS_LABELS: Record<string, string> = {
   open: 'Open access',
   restricted: 'Restricted',

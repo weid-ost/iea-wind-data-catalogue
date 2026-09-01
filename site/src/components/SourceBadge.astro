@@ -5,9 +5,15 @@
  * is what Zenodo says, and the fix belongs at Zenodo, where the author can make
  * it and every other consumer benefits (plan §4.2).
  *
- * The link text says where it goes; "report an issue" alone would not.
+ * The source name itself is a filter link into the catalogue's source facet
+ * (item 14b), reusing the `Badge` chip so it matches the family (item 10); the
+ * two outbound links go to the record at the source and its issue tracker, and
+ * each says where it goes.
  */
+import Badge from './Badge.astro';
 import { sourceLabel } from '../lib/record';
+import { filterHref } from '../lib/url';
+import { sourceTip } from '../lib/tooltips';
 import { safeHref } from '../safety.mjs';
 
 interface Props {
@@ -24,7 +30,7 @@ const label = sourceLabel(system);
 ---
 
 <span class="source">
-  <span class="source__name">{label}</span>
+  <Badge mono href={filterHref('source', system)} tip={sourceTip(system)}>{label}</Badge>
   {url && (
     <a class="source__link" href={url} rel="noopener external">
       view at {label}
@@ -48,11 +54,5 @@ const label = sourceLabel(system);
     border-radius: var(--radius-md);
     background: var(--surface-raised);
     font-size: var(--font-size-small);
-  }
-
-  .source__name {
-    font-family: var(--font-family-mono);
-    font-size: var(--font-size-caption);
-    color: var(--text-secondary);
   }
 </style>

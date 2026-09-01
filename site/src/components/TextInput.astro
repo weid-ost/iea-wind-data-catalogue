@@ -60,10 +60,9 @@ const described = [describedBy, hintId].filter(Boolean).join(' ') || undefined;
     font: inherit;
   }
 
-  .field__input:hover:not(:disabled) {
-    border-color: var(--action-primary);
-  }
-
+  /* Hover leaves the border alone — a colour change on hover read as a state
+     change and, in dark mode, stacked against the focus ring as a second ring
+     (ITEM 7). Focus is the design's single :focus-visible ring (global.css). */
   .field__input:disabled {
     background: var(--action-disabled-bg);
     color: var(--action-disabled-text);

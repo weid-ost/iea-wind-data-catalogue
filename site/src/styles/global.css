@@ -86,6 +86,39 @@ pre,
   border-radius: var(--radius-sm);
 }
 
+/* --- form controls ------------------------------------------------------- */
+
+/* `color-scheme: light dark` (tokens.css) lets native controls follow the OS.
+   But once the user forces a theme, the OS is no longer the authority: a
+   force-light page on a dark-OS machine was rendering unchecked checkboxes in
+   the dark native scheme (they looked filled — ITEM 6), and the dark native
+   focus outline stacked against our ring on the search box as a second ring
+   (ITEM 7). Pinning color-scheme to the chosen theme makes every native widget
+   render in the page's scheme, so both bugs disappear at the source. */
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark'] { color-scheme: dark; }
+
+/* Filter checkboxes (FacetGroup renders `.facet__checkbox`): the accent colour
+   is the only colour on the control, and — now that the native box renders in
+   the page scheme — an unchecked box reads as a clear empty box in both themes. */
+.facet__checkbox {
+  accent-color: var(--action-primary);
+}
+
+/* Shared text inputs, the search box included. Hover does not touch the border
+   (that colour shift read as a state change); focus is exactly one ring — the
+   design's focus ring plus its offset — never the native outline on top. */
+.field__input:hover:not(:disabled),
+.search__input:hover:not(:disabled) {
+  border-color: var(--border-input);
+}
+
+.field__input:focus-visible,
+.search__input:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: var(--border-width-focus);
+}
+
 /* --- skip link ----------------------------------------------------------- */
 
 .skip-link {

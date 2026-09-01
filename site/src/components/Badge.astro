@@ -1,19 +1,41 @@
 ---
 /**
- * The outline badge primitive: 1px coloured border, coloured text, transparent
+ * The one outline-badge primitive, and the single place chip/badge geometry is
+ * defined (item 9/10): 1px coloured border, coloured text, transparent
  * background. Colour never fills a surface (design-system.md §2.3), and a badge
- * is always icon + text label — never colour alone, which is both the WCAG
- * rule and the reason a screen reader gets the same information as an eye.
+ * is always icon + text label — never colour alone, which is both the WCAG rule
+ * and the reason a screen reader gets the same information as an eye.
  *
- * `tone` selects a token, nothing more. There is no per-tone CSS below.
+ * Every chip in the catalogue is this component, so a row of them shares one
+ * type size, weight, alignment and spacing by construction — the task chip, the
+ * kind badge, availability, source and provenance are all `Badge`, differing
+ * only by `tone` (a token) and, for task/source keys, `mono`.
+ *
+ *  - `href` → a filter link: the badge renders as `<a>` and navigates to the
+ *    catalogue with the value applied (item 14b). A badge with no `href` is a
+ *    plain label, as the design system requires ("a chip that filters is a
+ *    link; a chip that only labels is text").
+ *  - `tip` → an accessible tooltip (item 14a), reachable by hover and keyboard.
+ *    A labelling badge with a tip is made focusable so keyboard users can read
+ *    it, but stays a non-interactive span (no button affordance).
  */
+import Tooltip from './Tooltip.astro';
+import type { Tip } from '../lib/tooltips';
+
 interface Props {
   tone?: 'neutral' | 'api' | 'pattern' | 'llm' | 'restricted' | 'embargoed' | 'withdrawn';
   icon?: string;
+  /** A filter link; the badge becomes an anchor. Omit for a labelling badge. */
+  href?: string | null;
+  /** Set the label in the mono face (task and source keys). */
+  mono?: boolean;
+  /** Accessible tooltip content. */
+  tip?: Tip | null;
+  /** Legacy native tooltip; prefer `tip`. */
   title?: string;
   class?: string;
 }
-const { tone = 'neutral', icon, title, class: className } = Astro.props;
+const { tone = 'neutral', icon, href, mono = false, tip, title, class: className } = Astro.props;
 const TONE_VAR: Record<string, string> = {
   neutral: 'var(--text-secondary)',
   api: 'var(--badge-provenance-api)',
@@ -23,12 +45,26 @@ const TONE_VAR: Record<string, string> = {
   embargoed: 'var(--badge-availability-embargoed)',
   withdrawn: 'var(--badge-lifecycle-withdrawn)',
 };
+
+const interactive = typeof href === 'string';
+const Tag = interactive ? 'a' : 'span';
+// A labelling badge that carries a tooltip must be focusable to reach it by
+// keyboard; it stays a span with no role, so it is not announced as a control.
+const tabindex = !interactive && tip ? 0 : undefined;
 ---
 
-<span class:list={['badge', className]} style={`--badge-colour: ${TONE_VAR[tone]}`} title={title}>
-  {icon && <span class="icon badge__icon" aria-hidden="true" data-icon={icon}></span>}
-  <span class="badge__label"><slot /></span>
-</span>
+<Tooltip tip={tip}>
+  <Tag
+    class:list={['badge', interactive && 'badge--link', mono && 'badge--mono', className]}
+    style={`--badge-colour: ${TONE_VAR[tone]}`}
+    href={interactive ? href : undefined}
+    tabindex={tabindex}
+    title={title}
+  >
+    {icon && <span class="icon badge__icon" aria-hidden="true" data-icon={icon}></span>}
+    <span class="badge__label"><slot /></span>
+  </Tag>
+</Tooltip>
 
 <style>
   .badge {
@@ -40,9 +76,25 @@ const TONE_VAR: Record<string, string> = {
     border-radius: var(--radius-pill);
     background: transparent;
     color: var(--badge-colour);
+    font-family: var(--font-family-sans);
     font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-regular);
     line-height: var(--font-line-height-loose);
+    text-decoration: none;
     white-space: nowrap;
+  }
+
+  .badge--mono {
+    font-family: var(--font-family-mono);
+  }
+
+  /* A filter link intensifies to the action colour on hover/focus, uniformly
+     across every filterable chip, so "this navigates" reads the same whatever
+     the resting tone. */
+  a.badge--link:hover,
+  a.badge--link:focus-visible {
+    border-color: var(--action-primary);
+    color: var(--action-primary);
   }
 
   .badge__icon {

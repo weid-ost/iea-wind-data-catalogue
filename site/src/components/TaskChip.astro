@@ -1,14 +1,18 @@
 ---
 /**
- * An IEA Wind Task attribution.
+ * An IEA Wind Task attribution — a `Badge` (item 10: one chip family, one place
+ * the geometry lives), so it never diverges in size, weight or alignment from
+ * the kind, availability and source badges beside it.
  *
  * Design §6: "task chips that filter are buttons, task chips that merely label
- * are text". A chip here navigates to the filtered search, so it is a link —
- * the accessible name says which task, and the full title is the tooltip
- * because five chips at full length would be unreadable (fixture r-03).
+ * are text". A chip here navigates to the catalogue filtered to its Task
+ * (item 14b, the shared `?task=` contract), so it is a link; passing
+ * `href={null}` renders the labelling-only variant as a plain span.
  */
-import { taskShort, taskTitle } from '../lib/registers';
-import { withBase } from '../lib/url';
+import Badge from './Badge.astro';
+import { taskShort } from '../lib/registers';
+import { filterHref } from '../lib/url';
+import { taskTip } from '../lib/tooltips';
 
 interface Props {
   task: string;
@@ -16,32 +20,10 @@ interface Props {
 }
 const { task, href } = Astro.props;
 const label = taskShort(task);
-const title = taskTitle(task);
-const target = href === null ? undefined : (href ?? withBase(`/search/?task=${encodeURIComponent(task)}`));
-const Tag = target ? 'a' : 'span';
+// null => an explicit label-only chip; undefined => the default filter link.
+const target = href === null ? null : (href ?? filterHref('task', task));
 ---
 
-<Tag class="chip" href={target} title={title === label ? undefined : title}>
+<Badge tone="neutral" href={target} tip={taskTip(task)}>
   <span class="visually-hidden">IEA Wind </span>{label}
-</Tag>
-
-<style>
-  .chip {
-    display: inline-block;
-    padding: 0 var(--space-2);
-    border: var(--border-width-hairline) solid var(--border-strong);
-    border-radius: var(--radius-pill);
-    background: var(--surface-raised);
-    color: var(--text-secondary);
-    font-family: var(--font-family-mono);
-    font-size: var(--font-size-caption);
-    line-height: var(--font-line-height-loose);
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  a.chip:hover {
-    border-color: var(--action-primary);
-    color: var(--action-primary);
-  }
-</style>
+</Badge>

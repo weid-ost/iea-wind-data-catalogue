@@ -84,7 +84,7 @@ const sources = Object.entries(lastRun?.sources ?? {});
       instance would ingest unmodified, should there ever be a reason to run one.
     </p>
 
-    <h2>The last run</h2>
+    <h2 id="status">Status — the last run</h2>
     {fresh.neverRun ? (
       <Panel tone="info" icon="ℹ">
         <p>No run report in this checkout yet.</p>

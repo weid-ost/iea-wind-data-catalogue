@@ -25,6 +25,8 @@ const TONE = { api: 'api', pattern: 'pattern', llm: 'llm' } as const;
 const ICON = { api: '⟐', pattern: '⌗', llm: '◈' } as const;
 const LABEL = { api: 'from API', pattern: 'pattern-matched', llm: 'machine-inferred' } as const;
 
+const TITLE = { api: 'Read from an API', pattern: 'Pattern-matched', llm: 'Machine-inferred' } as const;
+
 const percent = provenance.confidence === undefined
   ? undefined
   : `${Math.round(provenance.confidence * 100)}%`;
@@ -38,11 +40,18 @@ const detail = [
 ]
   .filter(Boolean)
   .join(' · ');
+
+// Provenance is not a facet (it labels how a value was known, it does not
+// filter): the badge carries a tooltip and stays a non-interactive span, never
+// a link. The description names the model and confidence for machine inference.
+const tip = {
+  title: TITLE[method],
+  body: detail || 'How this field came to be known.',
+};
 ---
 
-<Badge tone={TONE[method]} icon={ICON[method]} title={detail}>
+<Badge tone={TONE[method]} icon={ICON[method]} tip={tip}>
   {field ? `${field}: ` : ''}{LABEL[method]}{
     method === 'llm' && percent ? ` (${percent})` : ''
   }
-  <span class="visually-hidden">{detail ? ` — ${detail}` : ''}</span>
 </Badge>

@@ -1,0 +1,133 @@
+---
+/**
+ * An accessible tooltip wrapper (item 14a). It wraps a trigger — the chip or
+ * badge passed as the default slot — and renders a titled description bubble
+ * that appears on hover *and* keyboard focus, per WCAG 2.2:
+ *
+ *  - **Not hover-only.** `:focus-within` reveals it, so a keyboard user reaches
+ *    it by tabbing to the chip.
+ *  - **Hoverable.** The bubble lives inside the wrapper, so moving the pointer
+ *    onto it keeps the wrapper hovered — the tooltip does not vanish.
+ *  - **Dismissable.** The `<catalogue-tooltip>` custom element listens for
+ *    Escape and hides the bubble without moving the pointer; leaving the chip
+ *    restores it.
+ *  - **Described, not just titled.** The custom element wires the trigger's
+ *    `aria-describedby` to the bubble, whose text stays in the accessibility
+ *    tree (hidden with opacity, never `display:none`) so a screen reader hears
+ *    the description when the chip is focused.
+ *
+ * The bubble is the one place the single popover shadow token is allowed.
+ */
+import type { Tip } from '../lib/tooltips';
+
+interface Props {
+  /** When absent, Tooltip is a transparent passthrough — it renders the trigger
+   *  alone, so callers can always wrap and let the data decide. */
+  tip?: Tip | null;
+  /** Extra classes for the inline wrapper (e.g. to control flex behaviour). */
+  class?: string;
+}
+const { tip, class: className } = Astro.props;
+
+// A build-stable, unique id for the bubble, so aria-describedby has a target
+// even before the custom element upgrades.
+const uid = `tt-${(globalThis as any).__ttSeq = ((globalThis as any).__ttSeq ?? 0) + 1}`;
+---
+
+{tip ? (
+  <catalogue-tooltip class:list={['tooltip', className]} data-tip-id={uid}>
+    <slot />
+    <span class="tooltip__bubble" role="tooltip" id={uid} data-pagefind-ignore>
+      <span class="tooltip__title">{tip.title}</span>
+      <span class="tooltip__body">{tip.body}</span>
+    </span>
+  </catalogue-tooltip>
+) : (
+  <slot />
+)}
+
+<script>
+  class CatalogueTooltip extends HTMLElement {
+    connectedCallback() {
+      const bubble = this.querySelector('[role="tooltip"]');
+      // The trigger is whatever focusable element was slotted in; a labelling
+      // chip is a plain span made focusable with tabindex so the tooltip is
+      // reachable by keyboard without turning the chip into a button.
+      const trigger =
+        this.querySelector('a[href], button, [tabindex]') ?? this.firstElementChild;
+      if (bubble && trigger && !trigger.getAttribute('aria-describedby')) {
+        trigger.setAttribute('aria-describedby', bubble.id);
+      }
+      this.addEventListener('keydown', (event) => {
+        if ((event as KeyboardEvent).key === 'Escape') this.setAttribute('data-dismissed', '');
+      });
+      const restore = () => this.removeAttribute('data-dismissed');
+      this.addEventListener('mouseleave', restore);
+      this.addEventListener('focusout', (event) => {
+        if (!this.contains((event as FocusEvent).relatedTarget as Node)) restore();
+      });
+    }
+  }
+  if (!customElements.get('catalogue-tooltip')) {
+    customElements.define('catalogue-tooltip', CatalogueTooltip);
+  }
+</script>
+
+<style>
+  .tooltip {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  .tooltip__bubble {
+    position: absolute;
+    bottom: calc(100% + var(--space-2));
+    left: 0;
+    z-index: 20;
+    display: block;
+    width: max-content;
+    max-width: var(--font-measure-prose);
+    padding: var(--space-2) var(--space-3);
+    border: var(--border-width-hairline) solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--surface-raised);
+    box-shadow: var(--shadow-overlay);
+    /* Hidden with opacity, not visibility/display, so the description stays in
+       the accessibility tree for aria-describedby. pointer-events off when
+       hidden so an invisible bubble never blocks the chips beneath it. */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--duration-fast) var(--easing-standard);
+  }
+
+  .tooltip:hover .tooltip__bubble,
+  .tooltip:focus-within .tooltip__bubble {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Escape wins over hover/focus: same specificity, so it must come last. */
+  .tooltip[data-dismissed] .tooltip__bubble {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .tooltip__title {
+    display: block;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--font-line-height-tight);
+    color: var(--text-primary);
+  }
+
+  .tooltip__body {
+    display: block;
+    margin-block-start: var(--space-1);
+    max-width: var(--font-measure-prose);
+    font-size: var(--font-size-caption);
+    line-height: var(--font-line-height-body);
+    color: var(--text-secondary);
+    white-space: normal;
+  }
+</style>

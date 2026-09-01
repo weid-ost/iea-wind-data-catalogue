@@ -46,6 +46,8 @@ import {
 import type { EventLine } from '../lib/catalogue';
 import { deadLinksFor, readLinkCheck, type DeadLink } from '../lib/state';
 import { organization, organizationTitle, taskShort } from '../lib/registers';
+import { filterHref } from '../lib/url';
+import { kindTip, withdrawnTip, pinnedTip } from '../lib/tooltips';
 import { safeHtml, safeLinks } from '../safety.mjs';
 
 interface Props {
@@ -208,16 +210,18 @@ const rows = [
   <div class="row record__badges">
     {kind && (
       <span data-pagefind-filter={`kind:${kind}`}>
-        <Badge icon="▤">{RESOURCE_KIND_LABELS[kind] ?? kind}</Badge>
+        <Badge icon="▤" href={filterHref('kind', kind)} tip={kindTip(kind)}>
+          {RESOURCE_KIND_LABELS[kind] ?? kind}
+        </Badge>
       </span>
     )}
     <AvailabilityBadge status={access} embargoDate={extra(pkg, 'embargo_date')} />
-    {withdrawn && <Badge tone="withdrawn" icon="⊘">Withdrawn</Badge>}
+    {withdrawn && <Badge tone="withdrawn" icon="⊘" tip={withdrawnTip}>Withdrawn</Badge>}
     {/* Not violet: violet is reserved site-wide for machine inference
         (ADR-0028 §5, ADR-0039 §4), and a pin is the opposite — a human
         overruling the model. Painting it violet inverted the signal
         (compliance-12). It reads as curation, like the curator-note panel. */}
-    {pinned && <Badge icon="⌾">Pinned extraction</Badge>}
+    {pinned && <Badge icon="⌾" tip={pinnedTip}>Pinned extraction</Badge>}
     {/* One value per element: Pagefind takes repeated filter values from
         separate elements, which is how a record joins five tasks at once. */}
     {tasks.map((task) => (

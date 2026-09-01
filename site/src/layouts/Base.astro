@@ -32,10 +32,11 @@ const { title, description, noindex, jsonLd, lang = 'en' } = Astro.props;
 // deployments: project site (base `/iea-wind-data-catalogue`) and custom domain
 // (base `/`). `scripts/check-urls.mjs` fails the build if this ever regresses.
 const canonical = new URL(Astro.url.pathname, Astro.site);
+// Routes after the single-page consolidation: '/' is the catalogue (search +
+// browse in one), '/about/' explains it. The old '/search/' and '/browse/'
+// pages are gone.
 const NAV = [
-  { href: withBase('/'), label: 'Home' },
-  { href: withBase('/search/'), label: 'Search' },
-  { href: withBase('/browse/'), label: 'Browse' },
+  { href: withBase('/'), label: 'Catalogue' },
   { href: withBase('/about/'), label: 'About' },
 ];
 const here = Astro.url.pathname.replace(/\/$/, '');
@@ -105,11 +106,6 @@ const here = Astro.url.pathname.replace(/\/$/, '');
 
     <footer class="site-footer">
       <div class="shell">
-        <p>
-          An aggregation-only catalogue: it reflects what IEA Wind Tasks already
-          publish and asks nothing of anyone. Metadata belongs to its sources —
-          corrections belong there too.
-        </p>
         <p>
           <a href={withBase('/catalog.jsonld')}>DCAT export</a> ·
           <a href={withBase('/about/')}>How this works</a> ·

@@ -5,10 +5,15 @@
  * wrong, because a user who clicks through and hits a login wall stops trusting
  * every other field on the page (fixtures zen-05, zen-06, wdh-06).
  *
- * Open is green, restricted is amber, embargoed is neutral (design §2.3).
+ * Open is green, restricted is amber, embargoed is neutral (design §2.3). The
+ * badge is a filter link to the catalogue's availability facet (item 14b): the
+ * six access statuses collapse to the four facet values the shared contract
+ * names (open · restricted · embargoed · unknown).
  */
 import Badge from './Badge.astro';
 import { ACCESS_LABELS, formatDate } from '../lib/record';
+import { filterHref } from '../lib/url';
+import { availabilityTip } from '../lib/tooltips';
 
 interface Props {
   status?: string;
@@ -33,9 +38,24 @@ const ICON: Record<string, string> = {
   'metadata-only': '◐',
   unknown: '?',
 };
+// The catalogue's availability facet has four values; map the finer access
+// statuses onto them so every badge links to a facet value `/` can apply.
+const FACET: Record<string, 'open' | 'restricted' | 'embargoed' | 'unknown'> = {
+  open: 'open',
+  restricted: 'restricted',
+  'registration-required': 'restricted',
+  embargoed: 'embargoed',
+  'metadata-only': 'embargoed',
+  unknown: 'unknown',
+};
 ---
 
-<Badge tone={TONE[known]} icon={ICON[known]}>
+<Badge
+  tone={TONE[known]}
+  icon={ICON[known]}
+  href={filterHref('availability', FACET[known])}
+  tip={availabilityTip(known)}
+>
   {ACCESS_LABELS[known]}{
     known === 'embargoed' && embargoDate ? ` until ${formatDate(embargoDate)}` : ''
   }

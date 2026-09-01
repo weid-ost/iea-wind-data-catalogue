@@ -14,7 +14,7 @@ interface Props {
 const {
   page,
   pageCount,
-  hrefFor = (n: number) => withBase(n === 1 ? '/browse/' : `/browse/${n}/`),
+  hrefFor = (n: number) => withBase(n === 1 ? '/' : `/?page=${n}`),
   label = 'Catalogue pages',
 } = Astro.props;
 

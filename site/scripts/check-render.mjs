@@ -185,19 +185,21 @@ if (!existsSync(catalogPath)) {
   }
 }
 
-// B.4 — the six facets ADR-0023 §3 names, all of them, in the built HTML.
+// B.4 — the six facets ADR-0023 §3 names, all of them, in the built HTML. The
+// catalogue merged search and browse into the index (`/`), so the filter
+// sidebar — and therefore the facets — now lives there.
 const EXPECTED_FACETS = ['task', 'kind', 'year', 'licence', 'source', 'institution'];
-const searchPage = join(dist, 'search', 'index.html');
-if (!existsSync(searchPage)) {
-  fail('dist/search/index.html is missing');
+const cataloguePage = join(dist, 'index.html');
+if (!existsSync(cataloguePage)) {
+  fail('dist/index.html is missing');
 } else {
   const rendered = new Set(
-    [...read(searchPage).matchAll(/data-facet="([a-z-]+)"/g)].map((match) => match[1])
+    [...read(cataloguePage).matchAll(/data-facet="([a-z-]+)"/g)].map((match) => match[1])
   );
   const missing = EXPECTED_FACETS.filter((facet) => !rendered.has(facet));
   if (missing.length) {
     fail(
-      `/search/ renders ${rendered.size} facets, not six: missing ${missing.join(', ')}. ` +
+      `/ renders ${rendered.size} facets, missing ${missing.join(', ')}. ` +
         'ADR-0023 §3 names task, resource kind, year, licence, source system and institution.'
     );
   }

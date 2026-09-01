@@ -5,7 +5,16 @@
  * the same facet names, which is why they are declared here once.
  */
 import type { CatalogueEntry } from './catalogue';
-import { extra, sourceLabel, tasksOf, licenseTitleOf, yearOf, RESOURCE_KIND_LABELS } from './record';
+import {
+  extra,
+  sourceLabel,
+  tasksOf,
+  licenseTitleOf,
+  yearOf,
+  availabilityOf,
+  RESOURCE_KIND_LABELS,
+  ACCESS_LABELS,
+} from './record';
 import { organizationTitle, taskShort } from './registers';
 
 export interface FacetValue {
@@ -20,7 +29,11 @@ export interface Facet {
   values: FacetValue[];
 }
 
-/** The six facets the plan names: task, resource kind, year, licence, source, institution. */
+/**
+ * The facets the plan names — task, resource kind, year, licence, source,
+ * institution — plus availability, which the catalogue page also filters on
+ * (the shared filter vocabulary: `availability=open|restricted|embargoed|…`).
+ */
 export function facetsFor(entries: CatalogueEntry[]): Facet[] {
   const tally = (
     pick: (entry: CatalogueEntry) => string[],
@@ -59,6 +72,11 @@ export function facetsFor(entries: CatalogueEntry[]): Facet[] {
       name: 'institution',
       legend: 'Institution',
       values: tally((e) => [e.pkg.owner_org ?? ''], (v) => organizationTitle(v) ?? v),
+    },
+    {
+      name: 'availability',
+      legend: 'Availability',
+      values: tally((e) => [availabilityOf(e.pkg)], (v) => ACCESS_LABELS[v] ?? v),
     },
   ].filter((facet) => facet.values.length > 0);
 }

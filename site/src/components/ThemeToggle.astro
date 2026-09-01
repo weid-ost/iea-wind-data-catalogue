@@ -16,9 +16,9 @@
 ---
 
 <theme-toggle class="theme-toggle">
-  <button type="button" data-theme-button aria-pressed="false">
+  <button type="button" data-theme-button aria-pressed="false" aria-label="Theme: Auto">
     <span class="icon" aria-hidden="true" data-icon="◐" data-theme-icon></span>
-    <span class="theme-toggle__label">Theme: <span data-theme-label>auto</span></span>
+    <span class="theme-toggle__label" data-theme-label>Auto</span>
   </button>
 </theme-toggle>
 
@@ -28,6 +28,9 @@
   // head script already applied.
   const ORDER = ['auto', 'light', 'dark'];
   const ICON = { auto: '◐', light: '☀', dark: '☾' };
+  // Visible text is the mode alone (design ITEM 8: "Theme:" ate too much room);
+  // the full "Theme: Auto" stays as the button's aria-label for screen readers.
+  const NAME = { auto: 'Auto', light: 'Light', dark: 'Dark' };
 
   class ThemeToggle extends HTMLElement {
     connectedCallback() {
@@ -42,7 +45,8 @@
       const apply = () => {
         if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
         else document.documentElement.setAttribute('data-theme', mode);
-        if (label) label.textContent = mode;
+        if (label) label.textContent = NAME[mode];
+        button.setAttribute('aria-label', `Theme: ${NAME[mode]}`);
         if (icon) icon.dataset.icon = ICON[mode];
         // aria-pressed is a two-state control's state: "am I overriding the
         // system?" — announced as text too, since 'auto' is a third state.

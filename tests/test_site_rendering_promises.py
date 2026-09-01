@@ -14,7 +14,10 @@ finding the site shipped with:
 * **product-e2e-05** — link rot is the failure mode the catalogue exists to
   fight, and ``state/link-check.json`` was rendered nowhere.
 * **product-e2e-06** — "5 softwares · 2 others": slugs are not English.
-* **product-e2e-07 / site-08** — every browse page belongs in the sitemap.
+* **product-e2e-07 / site-08** — the sitemap declares the catalogue's real
+  locations. Search and browse were merged into the index (``/``), whose
+  pagination is a ``?page=N`` query the island applies over the embedded set, so
+  there is one indexable catalogue location rather than a paginated path chain.
 """
 
 from __future__ import annotations
@@ -127,8 +130,11 @@ class TestLinkRotIsRendered:
 
 class TestTheHomepageCounts:
     def test_kind_counts_are_not_slugs_with_an_s(self) -> None:
+        # The catalogue page surfaces per-kind counts through the ``kind`` facet
+        # (a numeric count beside a ``RESOURCE_KIND_LABELS`` legend), not an
+        # inline pluralised noun, so the naive ``${kind}s`` that produced "5
+        # softwares" must not reappear on it (product-e2e-06).
         index = read("src", "pages", "index.astro")
-        assert "resourceKindCount(kind, n)" in index
         assert "${kind}${n === 1 ? '' : 's'}" not in index
 
     def test_software_has_no_plural_s(self) -> None:
@@ -138,15 +144,24 @@ class TestTheHomepageCounts:
 
 
 class TestTheSitemap:
-    def test_every_browse_page_is_declared(self) -> None:
+    def test_the_catalogue_and_records_are_declared(self) -> None:
+        # Search and browse merged into ``/``; the sitemap declares the catalogue
+        # index, the about page and every record page — and no longer a browse
+        # pagination chain or a separate search page (product-e2e-07 / site-08).
         sitemap = read("src", "pages", "sitemap.xml.ts")
-        assert "BROWSE_PAGE_SIZE" in sitemap
-        assert "browsePages" in sitemap
+        assert "${base}/`" in sitemap
+        assert "${base}/about/`" in sitemap
+        assert "/record/${entry.pkg.name}/" in sitemap
+        assert "browse" not in sitemap
+        assert "/search/" not in sitemap
 
-    def test_the_route_and_the_sitemap_share_one_page_size(self) -> None:
-        route = read("src", "pages", "browse", "[...page].astro")
-        assert "pageSize: BROWSE_PAGE_SIZE" in route
-        assert "pageSize: 20" not in route
+    def test_the_catalogue_page_owns_its_page_size(self) -> None:
+        # One page-size constant, imported by the page that paginates, so the two
+        # cannot drift (the invariant the old browse route and sitemap shared).
+        assert "CATALOGUE_PAGE_SIZE = 20" in read("src", "lib", "paginate.ts")
+        index = read("src", "pages", "index.astro")
+        assert "CATALOGUE_PAGE_SIZE" in index
+        assert "pageSize={CATALOGUE_PAGE_SIZE}" in index
 
     def test_the_gallery_stays_out_of_it(self) -> None:
         assert "/dev/" not in read("src", "pages", "sitemap.xml.ts").split("APIRoute")[1]

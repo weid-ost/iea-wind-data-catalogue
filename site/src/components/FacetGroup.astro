@@ -75,9 +75,13 @@ const hidden = values.slice(limit);
 )}
 
 <style>
+  /* Vertical rhythm: the subtitle sits close to the filters it labels (small gap
+     below the legend) and well clear of the previous group (larger gap above the
+     divider), so each group reads as one unit rather than the subtitle drifting
+     toward the block above it. */
   .facet {
     margin: 0;
-    padding: var(--space-3) 0 0;
+    padding: var(--space-4) 0 0;
     border: 0;
     border-top: var(--border-width-hairline) solid var(--border-subtle);
   }
@@ -92,7 +96,7 @@ const hidden = values.slice(limit);
   }
 
   .facet__list {
-    margin: var(--space-2) 0 0;
+    margin: var(--space-1) 0 0;
     padding: 0;
     list-style: none;
   }

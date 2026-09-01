@@ -12,6 +12,7 @@
 import TaskChip from './TaskChip.astro';
 import Badge from './Badge.astro';
 import AvailabilityBadge from './AvailabilityBadge.astro';
+import Button from './Button.astro';
 import {
   authorSummary,
   authorsOf,
@@ -19,13 +20,16 @@ import {
   isWithdrawn,
   inferredFields,
   plainText,
+  sourceUrlsOf,
   tasksOf,
   truncate,
   yearOf,
   RESOURCE_KIND_LABELS,
   type CkanPackage,
 } from '../lib/record';
-import { recordPath } from '../lib/url';
+import { filterHref, recordPath } from '../lib/url';
+import { kindTip, inferredTip, withdrawnTip } from '../lib/tooltips';
+import { safeHref } from '../safety.mjs';
 
 interface Props {
   pkg: CkanPackage;
@@ -41,6 +45,12 @@ const year = yearOf(pkg);
 const doi = extra(pkg, 'doi');
 const withdrawn = isWithdrawn(pkg);
 const inferred = inferredFields(pkg);
+// A straight line to the original: the DOI resolves to the publisher, otherwise
+// the source URL. Built here, filtered through the scheme allow-list because
+// the source URL is an upstream string (site-01).
+const sourceUrl = doi
+  ? `https://doi.org/${doi}`
+  : safeHref(extra(pkg, 'source_url') ?? sourceUrlsOf(pkg)[0]);
 ---
 
 <article class="card">
@@ -57,18 +67,38 @@ const inferred = inferredFields(pkg);
   {summary && <p class="card__summary">{summary}</p>}
 
   <div class="row card__meta">
-    {kind && <Badge icon="▤">{RESOURCE_KIND_LABELS[kind] ?? kind}</Badge>}
+    {kind && (
+      <Badge icon="▤" href={filterHref('kind', kind)} tip={kindTip(kind)}>
+        {RESOURCE_KIND_LABELS[kind] ?? kind}
+      </Badge>
+    )}
     <AvailabilityBadge status={extra(pkg, 'access_status')} embargoDate={extra(pkg, 'embargo_date')} />
-    {withdrawn && <Badge tone="withdrawn" icon="⊘">Withdrawn upstream</Badge>}
+    {withdrawn && <Badge tone="withdrawn" icon="⊘" tip={withdrawnTip}>Withdrawn upstream</Badge>}
     {inferred.length > 0 && (
-      <Badge tone="llm" icon="◈">
+      <Badge tone="llm" icon="◈" tip={inferredTip(inferred.length)}>
         {inferred.length} machine-inferred field{inferred.length === 1 ? '' : 's'}
       </Badge>
     )}
     {tasksOf(pkg).map((task) => <TaskChip task={task} />)}
   </div>
 
-  {doi && <p class="card__doi meta secondary">{doi}</p>}
+  {(doi || sourceUrl) && (
+    <div class="card__footer">
+      {doi && <p class="card__doi meta secondary">{doi}</p>}
+      {sourceUrl && (
+        <Button
+          variant="secondary"
+          href={sourceUrl}
+          class="card__source"
+          rel="noopener external"
+          aria-label={`Open “${pkg.title}” at its original source`}
+        >
+          {doi ? 'View at DOI source' : 'View at source'}
+          <span class="icon" aria-hidden="true" data-icon="↗"></span>
+        </Button>
+      )}
+    </div>
+  )}
 </article>
 
 <style>
@@ -112,7 +142,21 @@ const inferred = inferredFields(pkg);
     gap: var(--space-2);
   }
 
+  .card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+    margin-block-start: var(--space-3);
+  }
+
   .card__doi {
-    margin: var(--space-3) 0 0;
+    margin: 0;
+  }
+
+  /* Bottom-right: the quick link to the source sits at the trailing edge, with
+     the DOI (when present) at the leading edge of the same row. */
+  .card__source {
+    margin-inline-start: auto;
   }
 </style>
