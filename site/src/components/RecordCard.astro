@@ -12,7 +12,7 @@
 import TaskChip from './TaskChip.astro';
 import Badge from './Badge.astro';
 import AvailabilityBadge from './AvailabilityBadge.astro';
-import Button from './Button.astro';
+import SourceLink from './SourceLink.astro';
 import {
   authorSummary,
   authorsOf,
@@ -20,6 +20,7 @@ import {
   isWithdrawn,
   inferredFields,
   plainText,
+  sourceSystemsOf,
   sourceUrlsOf,
   tasksOf,
   truncate,
@@ -29,7 +30,6 @@ import {
 } from '../lib/record';
 import { filterHref, recordPath } from '../lib/url';
 import { kindTip, inferredTip, withdrawnTip } from '../lib/tooltips';
-import { safeHref } from '../safety.mjs';
 
 interface Props {
   pkg: CkanPackage;
@@ -46,11 +46,10 @@ const doi = extra(pkg, 'doi');
 const withdrawn = isWithdrawn(pkg);
 const inferred = inferredFields(pkg);
 // A straight line to the original: the DOI resolves to the publisher, otherwise
-// the source URL. Built here, filtered through the scheme allow-list because
-// the source URL is an upstream string (site-01).
-const sourceUrl = doi
-  ? `https://doi.org/${doi}`
-  : safeHref(extra(pkg, 'source_url') ?? sourceUrlsOf(pkg)[0]);
+// the first source URL. The <SourceLink> names the destination and puts the
+// upstream URL through the scheme allow-list itself (site-01).
+const source = sourceSystemsOf(pkg)[0];
+const sourceUrl = extra(pkg, 'source_url') ?? sourceUrlsOf(pkg)[0];
 ---
 
 <article class="card">
@@ -84,19 +83,7 @@ const sourceUrl = doi
 
   {(doi || sourceUrl) && (
     <div class="card__footer">
-      {doi && <p class="card__doi meta secondary">{doi}</p>}
-      {sourceUrl && (
-        <Button
-          variant="secondary"
-          href={sourceUrl}
-          class="card__source"
-          rel="noopener external"
-          aria-label={`Open “${pkg.title}” at its original source`}
-        >
-          {doi ? 'View at DOI source' : 'View at source'}
-          <span class="icon" aria-hidden="true" data-icon="↗"></span>
-        </Button>
-      )}
+      <SourceLink source={source} doi={doi} url={sourceUrl} title={pkg.title} />
     </div>
   )}
 </article>
@@ -142,21 +129,10 @@ const sourceUrl = doi
     gap: var(--space-2);
   }
 
+  /* Bottom-right: the source pill sits at the trailing edge of the card. */
   .card__footer {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--space-3);
+    justify-content: flex-end;
     margin-block-start: var(--space-3);
-  }
-
-  .card__doi {
-    margin: 0;
-  }
-
-  /* Bottom-right: the quick link to the source sits at the trailing edge, with
-     the DOI (when present) at the leading edge of the same row. */
-  .card__source {
-    margin-inline-start: auto;
   }
 </style>

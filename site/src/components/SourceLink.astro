@@ -1,0 +1,112 @@
+---
+/**
+ * A compact, GitHub-shield-style link to a record's origin: one rounded,
+ * two-segment control that replaces the separate DOI text + "view at source"
+ * button. The left segment names where you land (the source, e.g. Zenodo, or
+ * "DOI"); the right segment carries the identifier in the mono face (design §1
+ * — DOIs are metadata and set in mono). The whole pill is one link.
+ *
+ * Neutral fills only: the key segment inverts against the page via the
+ * `--text-primary` / `--surface-raised` pair so it reads as a solid dark chip
+ * in light mode and a solid light chip in dark — never a semantic-colour fill
+ * on a surface (design §1). The destination is an upstream string, so it is
+ * put through the scheme allow-list (site-01).
+ */
+import { safeHref } from '../safety.mjs';
+
+interface Props {
+  /** The record's source system slug, e.g. 'zenodo'. */
+  source?: string;
+  doi?: string;
+  url?: string;
+  title: string;
+}
+const { source, doi, url, title } = Astro.props;
+
+const SOURCE_LABEL: Record<string, string> = {
+  zenodo: 'Zenodo',
+  github: 'GitHub',
+  osti: 'OSTI',
+  crossref: 'Crossref',
+  datacite: 'DataCite',
+  wdh: 'Wind Data Hub',
+  ieawind: 'IEA Wind',
+};
+
+const href = doi ? `https://doi.org/${doi}` : safeHref(url ?? undefined);
+// The key names the destination. A DOI resolves through doi.org to whichever
+// publisher registered it (the identifier itself carries the registrar, e.g.
+// zenodo), so it is labelled "DOI"; a record without one links straight to its
+// source system, which is then named (Zenodo, GitHub, …).
+const key = doi ? 'DOI' : (source && SOURCE_LABEL[source]) || 'Source';
+const value = doi ?? (href ? href.replace(/^https?:\/\//, '').replace(/\/$/, '') : '');
+const dest = key === 'DOI' ? 'its DOI' : key === 'Source' ? 'its source' : key;
+---
+
+{href && (
+  <a
+    class="source-link"
+    href={href}
+    rel="noopener external"
+    aria-label={`Open “${title}” at ${dest}`}
+  >
+    <span class="source-link__key">{key}</span>
+    <span class="source-link__val" title={value}>{value}</span>
+    <span class="source-link__go icon" aria-hidden="true" data-icon="↗"></span>
+  </a>
+)}
+
+<style>
+  .source-link {
+    display: inline-flex;
+    align-items: stretch;
+    max-width: 100%;
+    border: var(--border-width-hairline) solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    font-size: var(--font-size-caption);
+    line-height: var(--font-line-height-tight);
+    text-decoration: none;
+  }
+
+  .source-link__key {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-1) var(--space-2);
+    background: var(--text-primary);
+    color: var(--surface-raised);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .source-link__val {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    padding: var(--space-1) var(--space-2);
+    background: var(--surface-sunken);
+    color: var(--text-primary);
+    font-family: var(--font-family-mono);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .source-link__go {
+    display: inline-flex;
+    align-items: center;
+    padding-inline-end: var(--space-2);
+    background: var(--surface-sunken);
+    color: var(--text-secondary);
+  }
+
+  .source-link:hover .source-link__key {
+    background: var(--text-link);
+  }
+
+  .source-link:hover .source-link__val,
+  .source-link:hover .source-link__go {
+    color: var(--text-link);
+  }
+</style>

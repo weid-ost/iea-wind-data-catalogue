@@ -18,11 +18,16 @@ interface Props {
   legend: string;
   values: FacetValue[];
   selected?: string[];
-  limit?: number;
 }
-const { name, legend, values, selected = [], limit = 8 } = Astro.props;
-const shown = values.slice(0, limit);
-const hidden = values.slice(limit);
+const { name, legend, values, selected = [] } = Astro.props;
+// A short list stays fully open — folding one or two values behind a "more"
+// toggle is more friction than it saves. Only a genuinely long facet (more than
+// nine values) collapses, and then it shows six with the rest behind the toggle.
+const COLLAPSE_ABOVE = 9;
+const VISIBLE_WHEN_COLLAPSED = 6;
+const collapse = values.length > COLLAPSE_ABOVE;
+const shown = collapse ? values.slice(0, VISIBLE_WHEN_COLLAPSED) : values;
+const hidden = collapse ? values.slice(VISIBLE_WHEN_COLLAPSED) : [];
 ---
 
 {values.length > 0 && (

@@ -25,9 +25,9 @@ const statusHref = withBase('/about/#status');
   title="IEA Wind Data Catalogue"
   description="Datasets, publications and software from the IEA Wind Tasks, harvested from where they are already published."
 >
-  <div class="stack-6">
+  <div class="catalogue-page">
     <header class="catalogue__head">
-      <h1>Datasets, publications and software from the IEA&nbsp;Wind Tasks</h1>
+      <h1 class="catalogue__title">Datasets, publications and software from the IEA&nbsp;Wind Tasks</h1>
 
       <div class="catalogue__intro">
         <p class="catalogue__lead prose">
@@ -79,10 +79,30 @@ const statusHref = withBase('/about/#status');
 </Base>
 
 <style>
+  /* Give the catalogue room to breathe: the header, the search box and the
+     results are three distinct movements, so they get generous vertical air
+     rather than the tight default rhythm. */
+  .catalogue-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+  }
+
+  .catalogue__head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .catalogue__title {
+    margin: 0;
+    max-width: 20ch;
+  }
+
   .catalogue__intro {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--space-6);
+    gap: var(--space-8);
     align-items: start;
   }
 

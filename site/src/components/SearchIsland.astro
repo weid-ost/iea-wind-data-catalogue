@@ -78,7 +78,7 @@ const shown = rows.length;
         id="q"
         name="q"
         type="search"
-        label="Search the catalogue"
+        label="Search"
         placeholder="lidar, wake, Task 43, an author, a DOI…"
         autocomplete="off"
         data-search-input
@@ -97,7 +97,7 @@ const shown = rows.length;
     <div class="search__layout">
       <div class="search__facets">
         <div class="search__facets-head">
-          <h2 class="search__facets-title">Filter</h2>
+          <h2 class="section-label">Filter</h2>
           <button class="search__clear" type="reset" data-search-clear>Clear all</button>
         </div>
         {facets.map((facet) => (
@@ -343,6 +343,38 @@ const shown = rows.length;
         });
       }
 
+      // Filter chips inside a result card link to `?param=value`. On the
+      // catalogue page a plain navigation to that href would DROP every other
+      // active filter, so intercept the click and ADD the value to the current
+      // selection instead. Off this page (a record page) the identical link is
+      // left alone as an ordinary navigation, so chips work with no JS too.
+      root.addEventListener('click', (event) => {
+        if (event.defaultPrevented || event.button !== 0) return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        const link = event.target.closest('a');
+        if (!link) return;
+        let url;
+        try {
+          url = new URL(link.href, window.location.href);
+        } catch {
+          return;
+        }
+        if (url.pathname !== window.location.pathname) return;
+        const keys = Array.from(url.searchParams.keys()).filter((k) => k !== 'theme');
+        if (keys.length !== 1) return;
+        const param = keys[0];
+        if (!FACETS.includes(param)) return;
+        const value = url.searchParams.get(param);
+        const escaped = window.CSS && CSS.escape ? CSS.escape(value) : value;
+        const box = root.querySelector(`.facet__input[name="${param}"][value="${escaped}"]`);
+        if (!box) return;
+        event.preventDefault();
+        box.checked = true; // additive — every other active filter is kept
+        const details = box.closest('details');
+        if (details) details.open = true; // reveal it if it was folded away
+        apply();
+      });
+
       // Initial paint: honour the URL's page without resetting it to 1.
       apply(false);
     }
@@ -355,12 +387,34 @@ const shown = rows.length;
     display: flex;
     align-items: flex-end;
     gap: var(--space-3);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-8);
   }
 
   .search__query :global(.field) {
     flex: 1;
     min-width: 0;
+    gap: var(--space-2);
+  }
+
+  /* "Search" reads as the same kind of section label as "Filter" — one small
+     uppercase eyebrow system across the page (ITEM 2). The <label> keeps its
+     job as the input's accessible name; only its appearance changes here. */
+  .search__query :global(.field__label) {
+    color: var(--text-secondary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* The shared section-label eyebrow: "Search" and "Filter" match exactly. */
+  .section-label {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
   .search__noscript {
@@ -386,11 +440,7 @@ const shown = rows.length;
     align-items: baseline;
     justify-content: space-between;
     gap: var(--space-2);
-  }
-
-  .search__facets-title {
-    margin: 0;
-    font-size: var(--font-size-body);
+    margin-bottom: var(--space-2);
   }
 
   .search__clear {
