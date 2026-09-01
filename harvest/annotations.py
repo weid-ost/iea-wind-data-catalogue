@@ -219,6 +219,21 @@ def existing_fingerprints(identity_key: str, events_dir: Path | None = None) -> 
 # ---------------------------------------------------------------------------
 
 
+def _relative_path(path: Path, root: Path | None = None) -> str:
+    """A repo-relative path string for the run report.
+
+    ``state/last-run.json`` is committed to a public repo, so an absolute
+    developer path (``/Users/…/annotations/foo.yaml``) both leaks the author's
+    filesystem and makes the file machine-dependent (compliance-11). Fall back
+    to the basename when the file sits outside the resolved root.
+    """
+    base = root or config.repo_root()
+    try:
+        return str(path.resolve().relative_to(base.resolve()))
+    except ValueError:
+        return path.name
+
+
 def _validate_local(local: Any, where: str, root: Path | None = None) -> dict[str, Any]:
     if not isinstance(local, dict) or not local:
         raise AnnotationError(f"{where}: 'local' must be a non-empty mapping")
@@ -335,7 +350,7 @@ def load_annotation_file(path: Path, root: Path | None = None) -> list[Annotatio
                 actor=str(entry.get("actor") or file_actor),
                 note=str(note) if note is not None else None,
                 observed_at=str(observed_at) if observed_at is not None else None,
-                path=str(path),
+                path=_relative_path(path, root),
                 allow_new=bool(entry.get("allow_new", file_allow_new)),
             )
         )
@@ -428,6 +443,7 @@ def apply_annotations(
                     provenance=curator_provenance(annotation.local),
                     events_dir=events_directory,
                     observed_at=annotation.observed_at,
+                    allow_new=annotation.allow_new or known[key],
                 )
             except ValueError as exc:  # e.g. a slug collision — one record's problem
                 message = f"{key}: {exc}"

@@ -412,7 +412,7 @@ class TestX04SetUnion:
 
     def test_repeated_annotations_union_rather_than_replace(self, events_dir: Path) -> None:
         annotate(KEY, {"iea_task": ["task-43"]}, events_dir=events_dir,
-                 observed_at="2026-01-01T00:00:00Z")
+                 observed_at="2026-01-01T00:00:00Z", allow_new=True)
         annotate(KEY, {"iea_task": ["task-49"]}, events_dir=events_dir,
                  observed_at="2026-01-02T00:00:00Z")
         annotate(KEY, {"iea_task": ["task-43"]}, events_dir=events_dir,
@@ -421,10 +421,33 @@ class TestX04SetUnion:
 
     def test_scalar_annotations_are_latest_wins(self, events_dir: Path) -> None:
         annotate(KEY, {"resource_kind": "dataset"}, events_dir=events_dir,
-                 observed_at="2026-01-01T00:00:00Z")
+                 observed_at="2026-01-01T00:00:00Z", allow_new=True)
         annotate(KEY, {"resource_kind": "software"}, events_dir=events_dir,
                  observed_at="2026-01-02T00:00:00Z")
         assert resolve(KEY, events_dir=events_dir).local["resource_kind"] == "software"
+
+
+class TestAnnotatePhantomGuard:
+    """annotate() must not silently mint a record for an unharvested identity."""
+
+    def test_annotate_unharvested_identity_is_refused(self, events_dir: Path) -> None:
+        import pytest
+
+        with pytest.raises(ValueError, match="no harvested record"):
+            annotate(KEY, {"iea_task": ["task-43"]}, events_dir=events_dir,
+                     observed_at="2026-01-01T00:00:00Z")
+        assert list(events_dir.glob("*.jsonl")) == []
+
+    def test_allow_new_creates_a_deliberate_local_only_record(self, events_dir: Path) -> None:
+        annotate(KEY, {"iea_task": ["task-43"]}, events_dir=events_dir,
+                 observed_at="2026-01-01T00:00:00Z", allow_new=True)
+        assert resolve(KEY, events_dir=events_dir).local["iea_task"] == ["task-43"]
+
+    def test_annotate_is_allowed_once_a_scrape_exists(self, events_dir: Path) -> None:
+        scrape(events_dir, source_key="rev-1", at="2026-01-01T00:00:00Z", title="T")
+        annotate(KEY, {"iea_task": ["task-49"]}, events_dir=events_dir,
+                 observed_at="2026-01-15T00:00:00Z")
+        assert resolve(KEY, events_dir=events_dir).local["iea_task"] == ["task-49"]
 
 
 class TestX01FourWayMerge:

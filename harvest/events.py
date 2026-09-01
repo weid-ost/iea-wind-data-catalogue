@@ -382,11 +382,22 @@ def annotate(
     provenance: dict[str, FieldProvenance] | None = None,
     events_dir: Path | None = None,
     observed_at: str | None = None,
+    allow_new: bool = False,
 ) -> Event:
     """Append an ``annotated`` event — an additive local change.
 
     Sanitised on the same terms as a scrape: a curator pastes URLs too.
+
+    Refuses to annotate an identity nothing has harvested unless ``allow_new``
+    is set, so the runbook's own snippet cannot silently mint a contentless
+    phantom record (compliance-02). This mirrors the ``allow_new`` guard the
+    YAML replay path already enforces.
     """
+    if not allow_new and not event_path(identity_key, events_dir).exists():
+        raise ValueError(
+            f"no harvested record for {identity_key!r}; pass allow_new=True to "
+            "create a local-only record deliberately"
+        )
     event = Event(
         observed_at=observed_at or utcnow(),
         event_type="annotated",
