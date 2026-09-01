@@ -82,8 +82,12 @@ Turn 14, after seeing revision 1:
    naff than old CKAN" means in practice.
 6. **Type does the hierarchy**, and **metadata is typographically distinct**:
    DOIs, identifiers, version strings and source keys set in the mono face.
-   **IBM Plex Sans + Mono, self-hosted as subset woff2**, committed to the repo
-   — no CDN, no third-party request, a static asset that cannot rot.
+   **Inter (sans) + IBM Plex Mono (metadata), self-hosted as subset woff2**,
+   committed to the repo — no CDN, no third-party request, a static asset that
+   cannot rot. Headings are medium weight (not semibold) with slight negative
+   tracking, so size carries the hierarchy; links underline on hover/focus only.
+   *(Rev 3: anchor sans changed IBM Plex Sans → Inter after review; Plex Mono
+   kept for metadata.)*
 7. **Light and dark.** Tokens compile to CSS custom properties; `:root` carries
    light and `[data-theme="dark"]` overrides **the semantic tier only** —
    primitives are never redefined. Default follows `prefers-color-scheme`; a

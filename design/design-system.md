@@ -66,9 +66,11 @@ The catalogue's own vocabulary gets colour semantics — expressed only as **out
 
 ## 3. Typography
 
-**IBM Plex Sans + IBM Plex Mono**, self-hosted as subset woff2 (two files, committed to the repo — a static asset that cannot rot, no CDN, no third-party request). Plex is institutional without being dull, has the broad Latin coverage the author names need (`Søren`, `Müller` — fixture `r-05`), and the sans/mono pair is designed together. Fallback stacks are metric-compatible; `font-display: swap`.
+**Inter (sans) + IBM Plex Mono (metadata)**, self-hosted as subset woff2 (committed to the repo — a static asset that cannot rot, no CDN, no third-party request). Inter is the interface face: clean and current rather than institutional-stiff, with the broad Latin coverage the author names need (`Søren`, `Müller` — fixture `r-05`) at weights 400/500/600. IBM Plex Mono stays for the metadata role — DOIs, identifiers, version strings, source keys (§1) — because a catalogue is mostly metadata and Inter has no monospace cut. Fallback stacks are metric-compatible; `font-display: swap`. *(Rev 3: the anchor sans changed from IBM Plex Sans to Inter after review — lighter and less pedestrian on screen; Plex Mono was kept.)*
 
-Scale: 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 px expressed in rem; body line-height 1.55; prose measure 68ch. Record titles at `h2`/semibold — big enough for scanning a results list, restrained enough that `r-01`'s 300-character title wraps with dignity.
+Scale: 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 px expressed in rem; body line-height 1.55; prose measure 68ch. Headings are **medium weight with a touch of negative tracking**, not semibold — lighter and more editorial, with size (not weight) carrying the hierarchy (§1). Record titles are big enough for scanning a results list, restrained enough that `r-01`'s 300-character title wraps with dignity.
+
+Links carry the link colour at rest and reveal their **underline on hover and keyboard focus only** — a page of permanently-underlined links reads as cluttered, and the focus-visible underline keeps the affordance from being mouse-only.
 
 ## 4. Space, shape, elevation, motion
 
@@ -119,7 +121,7 @@ design/
 ├── design-tokens.json      # DTCG source of truth (this proposal)
 ├── build-css.mjs           # tokens → custom properties (≈40 lines; no Style Dictionary
 │                           #   unless multi-platform output is ever actually needed)
-└── fonts/                  # Plex Sans + Mono, subset woff2
+└── fonts/                  # Inter (sans) + IBM Plex Mono, subset woff2
 site/src/styles/tokens.css  # generated — marked as such, never hand-edited
 ```
 
@@ -127,4 +129,4 @@ The gallery gains a **swatch section** rendering every token from the JSON — w
 
 ---
 
-*ADR-0039 records: DTCG token format; Teresa's Green №236 as anchor with computed accessible derivatives; hue-locked ramp; **colour never fills surfaces — accent bars, outline badges, text, icons and focus only**; near-achromatic neutrals; square-cornered barred panels; token-only components enforced by CI grep; AA as a hard gate via pa11y-ci over the gallery in both themes; Plex self-hosted (the referenced chat's fonts deliberately not carried over); violet reserved for machine inference.*
+*ADR-0039 records: DTCG token format; Teresa's Green №236 as anchor with computed accessible derivatives; hue-locked ramp; **colour never fills surfaces — accent bars, outline badges, text, icons and focus only**; near-achromatic neutrals; square-cornered barred panels; token-only components enforced by CI grep; AA as a hard gate via pa11y-ci over the gallery in both themes; Inter (sans) + IBM Plex Mono (metadata) self-hosted; medium-weight headings; hover/focus-only link underlines; violet reserved for machine inference.*

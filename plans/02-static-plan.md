@@ -409,7 +409,7 @@ New:
 | 0026 | Change detection [per-source record-level **source key**, chosen per adapter; normalised payload hash as universal fallback] |
 | 0037 | `events/` is the source of truth; `records/` is a derived materialised view |
 | 0038 | **Source metadata is never updated, only annotated** [two namespaces; scalar collisions displace with notice; set-valued enrichments union; Tier-3 corrections = pinned extractions; known-wrong upstream handled by visible curator notes] |
-| 0039 | Design system [DTCG tokens; Teresa's Green №236 anchor with computed AA derivatives; hue-locked ramp; violet reserved for machine inference; Plex self-hosted; borders over shadows; light+dark; pa11y-ci gate over the gallery in both themes; rev 2: colour never fills surfaces — neutral backgrounds + left accent bars + outline badges; token-only components enforced in CI] |
+| 0039 | Design system [DTCG tokens; Teresa's Green №236 anchor with computed AA derivatives; hue-locked ramp; violet reserved for machine inference; Inter (sans) + IBM Plex Mono (metadata) self-hosted; medium-weight headings; hover/focus-only link underlines; borders over shadows; light+dark; pa11y-ci gate over the gallery in both themes; rev 2: colour never fills surfaces — neutral backgrounds + left accent bars + outline badges; token-only components enforced in CI] |
 | 0027 | Withdrawn records retained, never deleted |
 | 0028 | Provenance display [machine-inferred fields visibly marked] |
 | 0029 | Scheduling [weekly cron + `workflow_dispatch`; heartbeat commit every run; staleness shown on site] |
