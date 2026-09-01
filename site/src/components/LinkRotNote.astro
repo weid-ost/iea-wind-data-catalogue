@@ -1,0 +1,62 @@
+---
+/**
+ * "A link at the source did not respond."
+ *
+ * Link rot is the failure mode this catalogue says it exists to fight, and
+ * `harvest linkcheck` has been recording it into `state/link-check.json` while
+ * nothing rendered it (product-e2e-05). harvest/CONTRACT.md §9 calls this an
+ * "optional source-link-unreachable note", and optional is the operative word:
+ * a dead link is a fact about the last check, not a verdict. The record stays,
+ * the link stays clickable, and the page says what was tried and when — the
+ * same discipline as the withdrawal banner (ADR-0027).
+ */
+import Panel from './Panel.astro';
+import { formatDate } from '../lib/record';
+import type { DeadLink } from '../lib/state';
+
+interface Props {
+  links: DeadLink[];
+  checkedAt?: string;
+  headingLevel?: 'h2' | 'h3' | 'p';
+}
+const { links, checkedAt, headingLevel = 'h2' } = Astro.props;
+---
+
+{links.length > 0 && (
+  <Panel
+    tone="warning"
+    icon="⚠"
+    heading={links.length === 1 ? 'A link at the source did not respond' : 'Links at the source did not respond'}
+    headingLevel={headingLevel}
+  >
+    <p>
+      The last link check{checkedAt ? `, on ${formatDate(checkedAt)},` : ''} could
+      not reach{' '}
+      {links.length === 1 ? 'this URL' : `${links.length} of the URLs`} on this
+      record. The metadata is kept exactly as it was — a page that has moved is
+      not a record that stopped existing — but expect the link to fail.
+    </p>
+    <ul class="link-rot">
+      {links.map((link) => (
+        <li>
+          <span class="meta">{link.url}</span>
+          <span class="secondary">
+            {' — '}
+            {link.status_code ? `HTTP ${link.status_code}` : (link.reason ?? 'no response')}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </Panel>
+)}
+
+<style>
+  .link-rot {
+    margin: var(--space-2) 0 0;
+    padding-inline-start: var(--space-4);
+  }
+
+  .link-rot span {
+    overflow-wrap: anywhere;
+  }
+</style>

@@ -19,6 +19,7 @@ import CitationBlock from '../../components/CitationBlock.astro';
 import EventHistory from '../../components/EventHistory.astro';
 import FacetGroup from '../../components/FacetGroup.astro';
 import FreshnessBanner from '../../components/FreshnessBanner.astro';
+import LinkRotNote from '../../components/LinkRotNote.astro';
 import MetadataList from '../../components/MetadataList.astro';
 import Pagination from '../../components/Pagination.astro';
 import Panel from '../../components/Panel.astro';
@@ -36,7 +37,7 @@ import Swatches from '../../components/Swatches.astro';
 
 import { catalogue, fixtures } from '../../lib/catalogue';
 import { facetsFor } from '../../lib/facets';
-import { freshness, uiFixture, type LastRun } from '../../lib/state';
+import { freshness, uiFixture, type LastRun, type LinkCheck } from '../../lib/state';
 import { provenanceOf, curatorNotesOf, retractionOf, extra } from '../../lib/record';
 
 // The gallery renders real records from `records/` when they exist, plus the
@@ -52,6 +53,11 @@ const facets = facetsFor(fixtureEntries);
 const stale = uiFixture<{ last_run: LastRun; case: string }>('r-08-stale-banner');
 const empty = uiFixture<{ query: string; expected_announcement: string; case: string }>(
   'r-07-empty-search'
+);
+const rot = uiFixture<{ link_check: LinkCheck; case: string }>('r-09-dead-link');
+const rotSlug = Object.keys(rot.link_check.dead_by_record ?? {})[0];
+const rotLinks = (rot.link_check.dead_by_record?.[rotSlug] ?? []).map(
+  (url) => (rot.link_check.dead ?? []).find((link) => link.url === url) ?? { url }
 );
 
 const llm = pick('rep-05-llm-inferred');
@@ -148,7 +154,13 @@ const curated = pick('rep-07-curator-note');
           <Badge tone="restricted" icon="◑">Restricted</Badge>
           <Badge tone="embargoed" icon="◐">Embargoed</Badge>
           <Badge tone="withdrawn" icon="⊘">Withdrawn</Badge>
+          <Badge icon="⌾">Pinned extraction</Badge>
         </div>
+        <p class="secondary">
+          The pin is deliberately <em>not</em> violet: violet means a model
+          guessed, and a pin is a human overruling one. Same reason the
+          machine-inference badge is never used for anything a person decided.
+        </p>
       </div>
 
       <div class="case">
@@ -159,7 +171,7 @@ const curated = pick('rep-07-curator-note');
           <Panel tone="success" icon="✓" heading="Success">Colour never fills the surface.</Panel>
           <Panel tone="warning" icon="⚠" heading="Warning">The freshness banner past 45 days.</Panel>
           <Panel tone="danger" icon="⊘" heading="Danger">The withdrawn banner, and the retraction flag.</Panel>
-          <Panel tone="violet" icon="◈" heading="Violet">Reserved, site-wide, for machine inference.</Panel>
+          <Panel tone="violet" icon="◈" heading="Violet">Reserved, site-wide, for machine inference — and for nothing else, which is why the pinned-extraction panel is info rather than violet.</Panel>
         </div>
       </div>
 
@@ -186,8 +198,10 @@ const curated = pick('rep-07-curator-note');
           <ProvenanceBadge field="iea_task" provenance={llmProvenance.iea_task} />
         </div>
         <p class="secondary">
-          Fixture <code>x-05</code>: the violet badge is the only place violet is
-          used, and it always carries the model and the confidence.
+          Rendered from fixture <code>rep-05-llm-inferred</code>, which is what
+          the inventory's <code>x-05</code> row stands for here: the violet badge
+          is the only place violet is used, and it always carries the model and
+          the confidence.
         </p>
       </div>
 
@@ -233,6 +247,17 @@ const curated = pick('rep-07-curator-note');
           <FreshnessBanner freshness={freshness(undefined)} />
         </div>
         <p class="secondary">{stale.case}</p>
+      </div>
+
+      <div class="case">
+        <h3>Link-rot note (r-09)</h3>
+        <p class="secondary">{rot.case}</p>
+        <LinkRotNote links={rotLinks} checkedAt={rot.link_check.finished_at} headingLevel="h4" />
+        <p class="secondary">
+          Rendered on record <code>{rotSlug}</code>. The link is never removed
+          and the record is never deleted — the page says what was tried, when,
+          and what came back.
+        </p>
       </div>
 
       <div class="case">

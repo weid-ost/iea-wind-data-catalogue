@@ -1,0 +1,37 @@
+{
+  "_comment": "INVENTED. Not a capture: no real Zenodo record carries this payload, and one that did would be attacking whoever harvested it. Shaped like a Zenodo record response so the fixture beside it is consistent with the API it imitates. The identifier uses the 10.5072 DataCite TEST prefix, which does not resolve, so no real work is implicated.",
+  "id": 90000000,
+  "doi": "10.5072/hostile-markup-fixture",
+  "conceptdoi": "10.5072/hostile-markup-fixture",
+  "revision": 1,
+  "links": {
+    "self_html": "https://zenodo.org/records/90000000"
+  },
+  "metadata": {
+    "title": "Wake study </script><img src=x onerror=alert(1)> end",
+    "description": "<p>An ordinary first paragraph, which must survive.</p><script>window.__pwned = 1</script><img src=x onerror=\"window.__pwned2 = 1\"><p>A second paragraph with <a href=\"javascript:window.__pwned3 = 1\">a hostile link</a> and <a href=\"https://example.org/ok\">an ordinary one</a>.</p><iframe src=\"https://evil.example/\"></iframe>",
+    "publication_date": "2026-01-05",
+    "resource_type": {
+      "type": "dataset"
+    },
+    "access_right": "open",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "creators": [
+      {
+        "name": "</script><img src=x onerror=alert(2)>, A."
+      }
+    ],
+    "keywords": ["hostile-input", "wake"]
+  },
+  "files": [
+    {
+      "key": "wake.csv",
+      "type": "csv",
+      "links": {
+        "self": "https://zenodo.org/records/90000000/files/wake.csv"
+      }
+    }
+  ]
+}

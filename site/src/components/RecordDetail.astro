@@ -13,6 +13,7 @@ import AvailabilityBadge from './AvailabilityBadge.astro';
 import Badge from './Badge.astro';
 import CitationBlock from './CitationBlock.astro';
 import EventHistory from './EventHistory.astro';
+import LinkRotNote from './LinkRotNote.astro';
 import MetadataList from './MetadataList.astro';
 import Panel from './Panel.astro';
 import ProvenanceBadge from './ProvenanceBadge.astro';
@@ -43,7 +44,9 @@ import {
   type CkanPackage,
 } from '../lib/record';
 import type { EventLine } from '../lib/catalogue';
-import { organizationTitle, taskShort } from '../lib/registers';
+import { deadLinksFor, readLinkCheck, type DeadLink } from '../lib/state';
+import { organization, organizationTitle, taskShort } from '../lib/registers';
+import { safeHtml, safeLinks } from '../safety.mjs';
 
 interface Props {
   pkg: CkanPackage;
@@ -58,8 +61,23 @@ interface Props {
    * — a `data-pagefind-body` inside it still registers the page.
    */
   indexable?: boolean;
+  /** Dead links for this record; the gallery injects them from fixture r-09,
+   *  the record page reads `state/link-check.json`. */
+  deadLinks?: DeadLink[];
+  /** When that check ran. */
+  linkCheckedAt?: string;
 }
-const { pkg, events = [], headingLevel = 'h1', indexable = true } = Astro.props;
+const {
+  pkg,
+  events = [],
+  headingLevel = 'h1',
+  indexable = true,
+  deadLinks,
+  linkCheckedAt,
+} = Astro.props;
+const linkCheck = readLinkCheck();
+const dead = deadLinks ?? deadLinksFor(pkg.name, linkCheck);
+const deadCheckedAt = linkCheckedAt ?? linkCheck?.finished_at;
 const Heading = headingLevel;
 
 const provenance = provenanceOf(pkg);
@@ -74,9 +92,19 @@ const retraction = retractionOf(pkg);
 const withdrawn = isWithdrawn(pkg);
 const inferred = inferredFields(pkg);
 const related = relatedIdentifiersOf(pkg).filter((r) => r !== retraction);
-const links = localLinksOf(pkg);
+// Curator links and source resources are both strings somebody else chose, and
+// escaping an `href` does not disarm `javascript:`. The harvest filters them on
+// the way in; the renderer filters them again, because the renderer is what
+// makes them clickable (site-01).
+const links = safeLinks(localLinksOf(pkg));
+const resources = safeLinks(pkg.resources ?? []);
 const doi = extra(pkg, 'doi');
 const institution = organizationTitle(pkg.owner_org);
+// The institution is *inferred* from publisher, affiliation or research
+// organisation (harvest/institutions.py) — nobody registers anything here — so
+// the row links out to the ROR record that identifies the organisation rather
+// than asserting more than `organizations.yaml` knows.
+const institutionRor = organization(pkg.owner_org)?.ror;
 
 // Section heading ids are scoped to the record, because the gallery renders
 // fourteen record bodies on one page and duplicate ids break every
@@ -131,6 +159,7 @@ const rows = [
   {
     label: 'Institution',
     value: institution,
+    link: institutionRor ? { href: institutionRor, label: institutionRor.replace(/^https?:\/\//, '') } : undefined,
     filter: pkg.owner_org ? `institution:${pkg.owner_org}` : undefined,
   },
   { field: 'identity_key', label: 'Identity key', value: extra(pkg, 'identity_key'), mono: true },
@@ -153,6 +182,8 @@ const rows = [
   {retraction && (
     <RetractionFlag identifier={retraction.identifier} identifierType={retraction.identifier_type} />
   )}
+
+  <LinkRotNote links={dead} checkedAt={deadCheckedAt} headingLevel={headingLevel === 'h1' ? 'h2' : 'h3'} />
 
   <Heading class="record__title">{pkg.title}</Heading>
 
@@ -182,7 +213,11 @@ const rows = [
     )}
     <AvailabilityBadge status={access} embargoDate={extra(pkg, 'embargo_date')} />
     {withdrawn && <Badge tone="withdrawn" icon="⊘">Withdrawn</Badge>}
-    {pinned && <Badge tone="llm" icon="⌾">Pinned extraction</Badge>}
+    {/* Not violet: violet is reserved site-wide for machine inference
+        (ADR-0028 §5, ADR-0039 §4), and a pin is the opposite — a human
+        overruling the model. Painting it violet inverted the signal
+        (compliance-12). It reads as curation, like the curator-note panel. */}
+    {pinned && <Badge icon="⌾">Pinned extraction</Badge>}
     {/* One value per element: Pagefind takes repeated filter values from
         separate elements, which is how a record joins five tasks at once. */}
     {tasks.map((task) => (
@@ -190,7 +225,10 @@ const rows = [
     ))}
   </div>
 
-  {pkg.notes && <div class="record__notes prose" set:html={pkg.notes} />}
+  {/* `set:html` because a description is real markup — paragraphs, lists and
+      links — but through the allow-list, not raw. The adapters sanitise on the
+      way in; this is the boundary refusing to depend on that (site-02). */}
+  {pkg.notes && <div class="record__notes prose" set:html={safeHtml(pkg.notes)} />}
 
   {inferred.length > 0 && (
     <Panel tone="violet" icon="◈" heading="Some of this metadata was inferred by a model" headingLevel="h2">
@@ -219,7 +257,7 @@ const rows = [
   )}
 
   {pinned && (
-    <Panel tone="violet" icon="⌾" heading="This extraction is pinned" headingLevel="h2">
+    <Panel tone="info" icon="⌾" heading="This extraction is pinned" headingLevel="h2">
       <p>
         A curator corrected the machine extraction for this record. The
         correction holds even when the source page changes; when it does change,
@@ -247,7 +285,12 @@ const rows = [
     </section>
   )}
 
-  {(pkg.resources ?? []).length > 0 && (
+  {/* Withdrawn records keep their files section *off*. The runbook is explicit
+      — "never imply the artifact is downloadable" — and a live download list
+      under a withdrawal banner says exactly that (product-e2e-04). The links
+      are not lost: the banner points at the source, and the event history
+      records what was seen and when. */}
+  {resources.length > 0 && !withdrawn && (
     <section aria-labelledby={`${uid}-files-heading`}>
       <h2 id={`${uid}-files-heading`}>Files at the source</h2>
       <p class="secondary">
@@ -255,9 +298,29 @@ const rows = [
         are subject to its access conditions.
       </p>
       <ul class="record__files">
-        {(pkg.resources ?? []).map((resource) => (
+        {resources.map((resource) => (
           <li>
             <a href={resource.url} rel="noopener external">{resource.name ?? resource.url}</a>
+            {resource.format && <span class="meta secondary"> · {resource.format}</span>}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {resources.length > 0 && withdrawn && (
+    <section aria-labelledby={`${uid}-files-withdrawn-heading`}>
+      <h2 id={`${uid}-files-withdrawn-heading`}>Files as last seen</h2>
+      <p class="secondary">
+        {resources.length === 1 ? 'One file was' : `${resources.length} files were`}
+        {' '}listed at the source when this record was last confirmed. The record
+        has since been withdrawn upstream, so they are recorded here as history —
+        not offered as downloads, and not expected to resolve.
+      </p>
+      <ul class="record__files">
+        {resources.map((resource) => (
+          <li>
+            <span class="meta">{resource.name ?? resource.url}</span>
             {resource.format && <span class="meta secondary"> · {resource.format}</span>}
           </li>
         ))}

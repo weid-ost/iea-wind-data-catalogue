@@ -2,7 +2,7 @@
   "fixture_id": "r-04-withdrawn",
   "fixture_kind": "record",
   "case": "A withdrawn record: the artifact vanished upstream, the page and the URL are kept",
-  "note": "CKAN `state` stays 'active' (ADR-0027): withdrawal lives in extras.lifecycle_state / withdrawn / withdrawn_at. The banner is role=status at the top of <main>, and the citation stays resolvable.",
+  "note": "CKAN `state` stays 'active' (ADR-0027): withdrawal lives in extras.lifecycle_state / withdrawn / withdrawn_at. The banner is role=status at the top of <main>, and the citation stays resolvable. It carries a resource on purpose: a withdrawn record must NOT render a live 'Files at the source' download list (product-e2e-04), and a fixture with no resources could never show that.",
   "raw": "raw/r-04-withdrawn.json",
   "record": {
     "name": "doi-10-5281-zenodo-3376526",
@@ -114,7 +114,13 @@
         "value": "2026-08-24T03:11:07Z"
       }
     ],
-    "resources": [],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/3376526/files/oc6-phase-iii-loads.zip",
+        "name": "oc6-phase-iii-loads.zip",
+        "format": "ZIP"
+      }
+    ],
     "groups": [
       {
         "name": "task-30"

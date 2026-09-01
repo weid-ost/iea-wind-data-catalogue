@@ -14,7 +14,6 @@ import {
   authorsOf,
   extra,
   isWithdrawn,
-  licenseTitleOf,
   plainText,
   sourceUrlsOf,
   tasksOf,
@@ -22,15 +21,7 @@ import {
 } from './record';
 import { taskTitle } from './registers';
 import { LICENSES } from '../licenses.mjs';
-
-const SCHEMA_TYPE: Record<string, string> = {
-  dataset: 'Dataset',
-  publication: 'ScholarlyArticle',
-  software: 'SoftwareSourceCode',
-  report: 'Report',
-  model: 'Dataset',
-  other: 'CreativeWork',
-};
+import { schemaTypeFor } from '../schema-types.mjs';
 
 const drop = <T extends Record<string, unknown>>(object: T): T =>
   Object.fromEntries(
@@ -47,7 +38,10 @@ export function datasetJsonLd(pkg: CkanPackage, canonical: string): Record<strin
 
   return drop({
     '@context': 'https://schema.org',
-    '@type': SCHEMA_TYPE[kind] ?? 'Dataset',
+    // `Dataset` for everything that holds data, the precise type otherwise.
+    // The reasoning, and the gate that keeps datasets typed `Dataset`, live in
+    // `src/schema-types.mjs`.
+    '@type': schemaTypeFor(kind),
     '@id': canonical,
     url: canonical,
     name: pkg.title,
@@ -164,7 +158,13 @@ function dcatDataset(pkg: CkanPackage, base: string): Record<string, unknown> {
     'dct:publisher': extra(pkg, 'publisher')
       ? { '@type': 'foaf:Agent', 'foaf:name': extra(pkg, 'publisher') }
       : undefined,
-    'dct:license': licenseUrl(pkg.license_id) ?? licenseTitleOf(pkg),
+    // DCAT expects an IRI here, and the human label is not one. An unmapped
+    // licence used to emit "License not specified" as though that were the name
+    // of a licence — twelve of thirty records told harvesters they had one
+    // (site-03). Where no IRI is known the property is simply absent, exactly as
+    // the schema.org path already does; the record page still shows the source's
+    // own wording under "Licence as stated".
+    'dct:license': licenseUrl(pkg.license_id),
     'dct:type': extra(pkg, 'resource_kind'),
     'dcat:keyword': [
       ...(pkg.tags ?? []).map((tag) => tag.name),

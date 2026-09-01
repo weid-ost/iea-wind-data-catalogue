@@ -11,6 +11,7 @@ import '../styles/fonts.css';
 import '../styles/global.css';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import { withBase } from '../lib/url';
+import { jsonForHtml } from '../safety.mjs';
 
 interface Props {
   title: string;
@@ -57,7 +58,10 @@ const here = Astro.url.pathname.replace(/\/$/, '');
       href={withBase('/fonts/ibm-plex-sans-latin-400-normal.woff2')}
       crossorigin
     />
-    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    {/* `jsonForHtml`, never `JSON.stringify`: stringify does not escape `<`,
+        so a harvested title containing `</script>` closed this element and the
+        rest of the title became live HTML (scrape-01). */}
+    {jsonLd && <script type="application/ld+json" set:html={jsonForHtml(jsonLd)} />}
     <script is:inline>
       // Applied before first paint so the stored choice never flashes. Two
       // lines, inline, deliberately not bundled (design-system.md §5).

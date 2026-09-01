@@ -10,6 +10,7 @@
 import ProvenanceBadge from './ProvenanceBadge.astro';
 import Panel from './Panel.astro';
 import type { CuratorNote, Provenance } from '../lib/record';
+import { safeHref, safeHtml } from '../safety.mjs';
 
 export interface Row {
   /** The field name, used to look up provenance and curator notes. */
@@ -19,6 +20,9 @@ export interface Row {
   /** Rendered in the mono face — DOIs, identifiers, versions, source keys. */
   mono?: boolean;
   html?: string;
+  /** An outbound link shown beside the value — a ROR record, say. The href is
+   *  scheme-checked here, so a caller cannot make an unlinkable one. */
+  link?: { href: string; label: string };
   /**
    * `name:value` for Pagefind. Declared on the element that displays the value,
    * which is the point of declaring facets in the template rather than in a
@@ -48,9 +52,17 @@ const visible = rows.filter((row) => row.value || row.html);
           <dd class="dl__value" data-pagefind-filter={row.filter}>
             <div class="dl__value-line">
               {row.html ? (
-                <span set:html={row.html} />
+                /* Through the allow-list even though callers build this
+                   themselves: a `set:html` nobody checks is how the next one
+                   gets missed (site-02). */
+                <span set:html={safeHtml(row.html)} />
               ) : (
                 <span class:list={[row.mono && 'meta']}>{row.value}</span>
+              )}
+              {row.link && safeHref(row.link.href) && (
+                <a class="meta" href={safeHref(row.link.href)} rel="noopener external">
+                  {row.link.label}
+                </a>
               )}
               {fieldProvenance && <ProvenanceBadge provenance={fieldProvenance} />}
             </div>

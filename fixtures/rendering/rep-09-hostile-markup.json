@@ -1,0 +1,129 @@
+{
+  "fixture_id": "rep-09-hostile-markup",
+  "fixture_kind": "record",
+  "case": "INVENTED — every harvested string is an attack: a title that breaks out of a <script> block, a description carrying script and an event handler, and a curator link with a javascript: scheme",
+  "note": "The renderer's hostile-input case (scrape-01, site-01, site-02). Nothing upstream can be captured for this — a registrant who published it would be attacking us, so the payload is written by hand and marked INVENTED. The identifier uses the 10.5072 DataCite *test* prefix, which does not resolve, so no real work is implicated. site/scripts/check-render.mjs feeds this fixture through the render-safety helpers and fails the build if the escaping stops biting; /dev/components renders it, so the built gallery is the end-to-end proof.",
+  "raw": "raw/rep-09-hostile-markup.json",
+  "record": {
+    "name": "doi-10-5072-hostile-markup",
+    "title": "Wake study </script><img src=x onerror=alert(1)> end",
+    "notes": "<p>An ordinary first paragraph, which must survive.</p><script>window.__pwned = 1</script><img src=x onerror=\"window.__pwned2 = 1\"><p>A second paragraph with <a href=\"javascript:window.__pwned3 = 1\">a hostile link</a> and <a href=\"https://example.org/ok\">an ordinary one</a>.</p><iframe src=\"https://evil.example/\"></iframe>",
+    "license_id": "cc-by",
+    "tags": [
+      {
+        "name": "hostile-input"
+      },
+      {
+        "name": "wake"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"</script><img src=x onerror=alert(2)>, A.\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5072/hostile-markup-fixture"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-20T00:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5072/hostile-markup-fixture"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-28T00:00:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "local_links",
+        "value": "[{\"label\":\"Mirror of the data\",\"url\":\"javascript:window.__annot_pwned = 1\"},{\"label\":\"A curator link that is fine\",\"url\":\"https://example.org/mirror\"}]"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2026-01-05"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "source_id",
+        "value": "90000000"
+      },
+      {
+        "key": "source_key",
+        "value": "1"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/90000000"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/90000000\"]"
+      }
+    ],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/90000000/files/wake.csv",
+        "name": "wake.csv",
+        "format": "CSV"
+      }
+    ],
+    "groups": [],
+    "state": "active",
+    "private": false,
+    "owner_org": "unattributed",
+    "url": "https://zenodo.org/records/90000000"
+  },
+  "events": [
+    {
+      "observed_at": "2026-08-20T00:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5072/hostile-markup-fixture",
+      "source_system": "zenodo",
+      "source_key": "1",
+      "actor": "harvest/zenodo"
+    }
+  ]
+}

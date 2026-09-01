@@ -6,16 +6,20 @@
  * will conflate "we lost it" with "it was wrong".
  */
 import Panel from './Panel.astro';
+import { safeHref } from '../safety.mjs';
 
 interface Props {
   identifier?: string;
   identifierType?: string;
 }
 const { identifier, identifierType } = Astro.props;
+// A non-DOI related identifier is whatever the source wrote, and it is used as
+// the href, so it goes through the scheme allow-list (site-01). The identifier
+// itself is still shown beside the link, whether or not it is linkable.
 const href =
   identifier && (identifierType ?? 'DOI').toUpperCase() === 'DOI'
     ? `https://doi.org/${identifier}`
-    : identifier;
+    : safeHref(identifier);
 ---
 
 <Panel tone="danger" icon="⚠" role="status" heading="Retracted" headingLevel="p">

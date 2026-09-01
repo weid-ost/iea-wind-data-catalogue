@@ -8,7 +8,7 @@ import TextInput from '../components/TextInput.astro';
 import Button from '../components/Button.astro';
 import { catalogue, usingFixtures } from '../lib/catalogue';
 import { freshness } from '../lib/state';
-import { tasksOf, extra } from '../lib/record';
+import { tasksOf, extra, resourceKindCount } from '../lib/record';
 import { withBase } from '../lib/url';
 
 const entries = await catalogue();
@@ -53,7 +53,7 @@ for (const entry of entries) {
         {entries.length} record{entries.length === 1 ? '' : 's'} ·{' '}
         {[...kinds.entries()]
           .sort((a, b) => b[1] - a[1])
-          .map(([kind, n]) => `${n} ${kind}${n === 1 ? '' : 's'}`)
+          .map(([kind, n]) => resourceKindCount(kind, n))
           .join(' · ')}
       </p>
     </section>

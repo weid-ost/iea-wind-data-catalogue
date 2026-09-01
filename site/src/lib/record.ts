@@ -250,3 +250,24 @@ export const RESOURCE_KIND_LABELS: Record<string, string> = {
   model: 'Model',
   other: 'Other',
 };
+
+/**
+ * The plural of a resource kind, written out — because `${kind}s` produced
+ * "5 softwares · 2 others" on the homepage while the facet beside it said
+ * "Software" and "Other" (product-e2e-06). Slugs are not English.
+ */
+export const RESOURCE_KIND_PLURALS: Record<string, string> = {
+  dataset: 'datasets',
+  publication: 'publications',
+  software: 'software',
+  report: 'reports',
+  model: 'models',
+  other: 'other records',
+};
+
+/** "10 reports", "5 software", "1 dataset". */
+export function resourceKindCount(kind: string, count: number): string {
+  const singular = (RESOURCE_KIND_LABELS[kind] ?? kind).toLowerCase();
+  const plural = RESOURCE_KIND_PLURALS[kind] ?? `${singular}s`;
+  return `${count} ${count === 1 ? singular : plural}`;
+}

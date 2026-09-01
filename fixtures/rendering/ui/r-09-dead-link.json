@@ -1,0 +1,33 @@
+{
+  "fixture_id": "r-09-dead-link",
+  "fixture_kind": "ui_state",
+  "case": "INVENTED — a state/link-check.json in which one record's source link no longer responds: the 'source link unreachable' note harvest/CONTRACT.md §9 promises, in the state that produces it",
+  "note": "A state/link-check.json payload, not a record. Link rot is the failure mode the catalogue says it exists to fight, and until now the checker's output was never rendered anywhere (product-e2e-05). The note never removes the link and never deletes the record (ADR-0027): it says what was tried, when, and what came back. The URLs below are shaped like OSTI and Zenodo ones but the records they name are the rendering fixtures, so nothing here asserts that a real page is dead.",
+  "link_check": {
+    "started_at": "2026-08-28T03:00:00Z",
+    "finished_at": "2026-08-28T03:02:11Z",
+    "checked": 42,
+    "dead": [
+      {
+        "url": "https://zenodo.org/records/3376526",
+        "status_code": 410,
+        "reason": "HTTP 410",
+        "checked_at": "2026-08-28T03:01:44Z"
+      },
+      {
+        "url": "https://example.org/task-43/handbook.pdf",
+        "status_code": null,
+        "reason": "connection timed out",
+        "checked_at": "2026-08-28T03:02:02Z"
+      }
+    ],
+    "dead_by_record": {
+      "doi-10-5281-zenodo-3376526": [
+        "https://zenodo.org/records/3376526",
+        "https://example.org/task-43/handbook.pdf"
+      ]
+    },
+    "unreachable_hosts": [],
+    "records": {}
+  }
+}

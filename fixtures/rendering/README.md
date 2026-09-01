@@ -43,9 +43,10 @@ adapter tracks capture their own, per `fixtures/README.md`.
 
 ## `ui/` — fixtures that are not records
 
-`r-07-empty-search` is a search that returns nothing, and `r-08-stale-banner` is
-a `state/last-run.json` older than 45 days. Neither is a CKAN package, so they
-live one directory down, where the generic fixture test — which globs
-`fixtures/rendering/*.json` and validates each as a package — does not claim
-them. They declare `fixture_kind: "ui_state"` and are read by
-`site/src/lib/state.ts` (`uiFixture`).
+`r-07-empty-search` is a search that returns nothing, `r-08-stale-banner` is a
+`state/last-run.json` older than 45 days, and `r-09-dead-link` is a
+`state/link-check.json` in which one record's source link no longer responds.
+None is a CKAN package, so they live one directory down, where the generic
+fixture test — which globs `fixtures/rendering/*.json` and validates each as a
+package — does not claim them. They declare `fixture_kind: "ui_state"` and are
+read by `site/src/lib/state.ts` (`uiFixture`).

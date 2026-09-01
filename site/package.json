@@ -10,11 +10,12 @@
   "scripts": {
     "tokens": "node ../design/build-css.mjs && node scripts/sync-fonts.mjs",
     "dev": "npm run tokens && astro dev",
-    "build": "npm run tokens && astro build && pagefind --site dist && node scripts/check-tokens.mjs && node scripts/check-ckan-gate.mjs && node scripts/check-urls.mjs",
+    "build": "npm run tokens && astro build && pagefind --site dist && node scripts/check-tokens.mjs && node scripts/check-ckan-gate.mjs && node scripts/check-urls.mjs && node scripts/check-render.mjs",
     "preview": "node scripts/serve.mjs",
     "check-tokens": "node scripts/check-tokens.mjs",
     "a11y": "node scripts/a11y.mjs",
-    "gates": "node scripts/check-tokens.mjs && node scripts/check-ckan-gate.mjs && node scripts/check-urls.mjs && node scripts/a11y.mjs"
+    "gates": "node scripts/check-tokens.mjs && node scripts/check-ckan-gate.mjs && node scripts/check-urls.mjs && node scripts/check-render.mjs && node scripts/a11y.mjs",
+    "check-render": "node scripts/check-render.mjs"
   },
   "dependencies": {
     "astro": "7.2.10",

@@ -69,6 +69,48 @@ export function freshness(lastRun = readLastRun(), now = new Date()): Freshness 
   };
 }
 
+/**
+ * `state/link-check.json` — what `harvest linkcheck` last found.
+ *
+ * Link rot is the failure mode a catalogue exists to fight, so the result is
+ * rendered on the record it belongs to rather than left in a state file nobody
+ * opens (product-e2e-05, harvest/CONTRACT.md §9). Absent or unreadable means
+ * "not checked", never "fine".
+ */
+export interface DeadLink {
+  url: string;
+  status_code?: number | null;
+  reason?: string;
+  checked_at?: string;
+}
+
+export interface LinkCheck {
+  started_at?: string;
+  finished_at?: string;
+  checked?: number;
+  dead?: DeadLink[];
+  dead_by_record?: Record<string, string[]>;
+  unreachable_hosts?: string[];
+}
+
+export function readLinkCheck(): LinkCheck | undefined {
+  const path = join(repoRoot, 'state', 'link-check.json');
+  if (!existsSync(path)) return undefined;
+  try {
+    return JSON.parse(readFileSync(path, 'utf8')) as LinkCheck;
+  } catch {
+    return undefined;
+  }
+}
+
+/** The dead links recorded against one record slug, with what came back. */
+export function deadLinksFor(name: string, check = readLinkCheck()): DeadLink[] {
+  const urls = check?.dead_by_record?.[name] ?? [];
+  if (urls.length === 0) return [];
+  const byUrl = new Map((check?.dead ?? []).map((link) => [link.url, link]));
+  return urls.map((url) => byUrl.get(url) ?? { url });
+}
+
 /** The event log for one record, if `events/` has been populated. */
 export function readEvents(slug: string): Record<string, unknown>[] {
   const path = join(repoRoot, 'events', `${slug}.jsonl`);

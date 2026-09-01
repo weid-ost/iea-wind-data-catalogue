@@ -8,12 +8,13 @@ import Base from '../../layouts/Base.astro';
 import RecordCard from '../../components/RecordCard.astro';
 import Pagination from '../../components/Pagination.astro';
 import { catalogue } from '../../lib/catalogue';
+import { BROWSE_PAGE_SIZE } from '../../lib/paginate';
 import { withBase } from '../../lib/url';
 import type { CkanPackage } from '../../lib/record';
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const entries = await catalogue();
-  return paginate(entries.map((entry) => entry.pkg), { pageSize: 20 });
+  return paginate(entries.map((entry) => entry.pkg), { pageSize: BROWSE_PAGE_SIZE });
 };
 
 const { page } = Astro.props as { page: Page<CkanPackage> };

@@ -157,3 +157,12 @@ Purely for the gallery — these are about layout not parsing, and every one of 
 | `r-06-single-result` | Search returning exactly one result |
 | `r-07-empty-search` | Search returning nothing |
 | `r-08-stale-banner` | `last-run.json` older than 45 days, warning state |
+| `r-09-dead-link` | `link-check.json` with a record whose source link no longer responds — the "source link unreachable" note |
+| `rep-09-hostile-markup` | Hostile upstream strings: a title that breaks out of `<script>`, a description carrying script and an event handler, a curator link with a `javascript:` scheme |
+
+The `rep-NN-…` family — representative *ordinary* records, one per source system
+and one per interesting-but-not-broken state — is inventoried in
+`fixtures/rendering/README.md`. `rep-09-hostile-markup` is listed here as well
+because it is not decoration: `site/scripts/check-render.mjs` loads it by name
+and fails the site build if the render-safety escaping stops neutralising it
+(scrape-01, site-01, site-02).

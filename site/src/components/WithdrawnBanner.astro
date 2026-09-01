@@ -10,12 +10,14 @@
  */
 import Panel from './Panel.astro';
 import { formatDate } from '../lib/record';
+import { safeHref } from '../safety.mjs';
 
 interface Props {
   withdrawnAt?: string;
   sourceUrl?: string;
 }
-const { withdrawnAt, sourceUrl } = Astro.props;
+const { withdrawnAt, sourceUrl: rawSourceUrl } = Astro.props;
+const sourceUrl = safeHref(rawSourceUrl);
 ---
 
 <Panel tone="danger" icon="⊘" role="status" heading="Withdrawn upstream" headingLevel="p">

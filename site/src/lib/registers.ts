@@ -19,6 +19,9 @@ export interface Organization {
   name: string;
   title: string;
   url?: string;
+  /** The Research Organization Registry IRI, when the register carries one. */
+  ror?: string;
+  country?: string;
 }
 
 export const groups: Group[] = GROUPS as Group[];
@@ -49,6 +52,9 @@ export const taskShort = (name: string): string => {
 };
 
 export const taskUrl = (name: string): string | undefined => group(name)?.url;
+
+export const organization = (name?: string): Organization | undefined =>
+  name ? orgsByName.get(name) : undefined;
 
 export const organizationTitle = (name?: string): string | undefined =>
   name ? (orgsByName.get(name)?.title ?? name) : undefined;

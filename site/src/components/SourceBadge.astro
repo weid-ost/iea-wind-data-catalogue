@@ -8,13 +8,18 @@
  * The link text says where it goes; "report an issue" alone would not.
  */
 import { sourceLabel } from '../lib/record';
+import { safeHref } from '../safety.mjs';
 
 interface Props {
   system: string;
   url?: string;
   reportUrl?: string;
 }
-const { system, url, reportUrl } = Astro.props;
+const { system, url: rawUrl, reportUrl: rawReportUrl } = Astro.props;
+// Source URLs are upstream strings; the badge is where they become clickable,
+// so the scheme allow-list is applied here too (site-01).
+const url = safeHref(rawUrl);
+const reportUrl = safeHref(rawReportUrl);
 const label = sourceLabel(system);
 ---
 

@@ -9,14 +9,23 @@
 import type { APIRoute } from 'astro';
 import { catalogue } from '../lib/catalogue';
 import { extra } from '../lib/record';
+import { BROWSE_PAGE_SIZE } from '../lib/paginate';
 
 export const GET: APIRoute = async ({ site }) => {
   const base = (site?.href ?? '/').replace(/\/$/, '');
   const entries = await catalogue();
+  // /browse/ is the no-JS path and the crawler's path, so its pagination chain
+  // has to be declared, not just its first page (product-e2e-07, site-08). The
+  // page size is imported from the same constant the route paginates with, so
+  // the two cannot drift.
+  const browsePages = Math.max(1, Math.ceil(entries.length / BROWSE_PAGE_SIZE));
   const urls = [
     { loc: `${base}/`, lastmod: undefined },
     { loc: `${base}/search/`, lastmod: undefined },
-    { loc: `${base}/browse/`, lastmod: undefined },
+    ...Array.from({ length: browsePages }, (_, index) => ({
+      loc: index === 0 ? `${base}/browse/` : `${base}/browse/${index + 1}/`,
+      lastmod: undefined,
+    })),
     { loc: `${base}/about/`, lastmod: undefined },
     ...entries.map((entry) => ({
       loc: `${base}/record/${entry.pkg.name}/`,

@@ -9,12 +9,23 @@
 // and it was invisible to the a11y gate, to Pagefind and to the tests, because
 // nothing on the site follows its own canonical link.
 //
-// So it is checked. Two rules over the built output:
-//   1. no URL anywhere repeats the base path segment twice in a row;
-//   2. every page's canonical is absolute and ends with that page's own path.
-import { readdirSync, readFileSync, statSync } from 'node:fs';
-import { dirname, join, relative } from 'node:path';
+// So it is checked. Four rules — two over the record set, two over the built
+// output:
+//   1. every record's `name` is unique, and equals its filename stem;
+//   2. no `<loc>` appears twice in sitemap.xml;
+//   3. no URL anywhere repeats the base path segment twice in a row;
+//   4. every page's canonical is absolute and ends with that page's own path.
+//
+// Rules 1 and 2 are here because `name` IS the URL. Two records sharing one
+// name silently dropped a page — the build succeeded, the sitemap listed the
+// same `<loc>` twice, catalog.jsonld emitted two `dcat:Dataset` nodes with one
+// `@id`, and a real record vanished from the site with no warning (site-06).
+// `harvest validate` catches it, but that runs in a different CI job from the
+// one that deploys, so the renderer has to catch it too.
+import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
+import { basename, dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { repoRoot } from '../src/repo-root.mjs';
 
 const dist = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist');
 const BASE = (process.env.SITE_BASE ?? '/iea-wind-data-catalogue').replace(/^\/|\/$/g, '');
@@ -26,6 +37,50 @@ const walk = (dir) => readdirSync(dir).flatMap((entry) => {
 
 const failures = [];
 const pages = walk(dist).filter((p) => p.endsWith('.html'));
+
+// ---------------------------------------------------------------- the corpus
+//
+// `records/` when it has anything in it, `fixtures/rendering/` otherwise —
+// exactly the fallback `src/lib/catalogue.ts` applies, so this checks what was
+// actually rendered.
+const recordsDir = join(repoRoot, 'records');
+const recordFiles = existsSync(recordsDir)
+  ? readdirSync(recordsDir).filter((f) => f.endsWith('.json')).map((f) => join(recordsDir, f))
+  : [];
+
+const seen = new Map();
+for (const path of recordFiles) {
+  const stem = basename(path, '.json');
+  let name;
+  try {
+    name = JSON.parse(readFileSync(path, 'utf8')).name;
+  } catch (error) {
+    failures.push(`records/${stem}.json: not readable as JSON (${error.message})`);
+    continue;
+  }
+  if (name !== stem) {
+    failures.push(
+      `records/${stem}.json: name is "${name}" but the filename stem is "${stem}" — ` +
+        'the slug is the URL, and the two must be the same string'
+    );
+  }
+  if (seen.has(name)) {
+    failures.push(
+      `records/${stem}.json: duplicate name "${name}" (also in ${seen.get(name)}) — ` +
+        'one record would silently overwrite the other at /record/' + name + '/'
+    );
+  } else {
+    seen.set(name, `records/${stem}.json`);
+  }
+}
+
+// ---------------------------------------------------------------- the sitemap
+const sitemap = join(dist, 'sitemap.xml');
+if (existsSync(sitemap)) {
+  const locs = [...readFileSync(sitemap, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const duplicated = [...new Set(locs.filter((loc, index) => locs.indexOf(loc) !== index))];
+  for (const loc of duplicated) failures.push(`sitemap.xml: <loc> listed more than once: ${loc}`);
+}
 
 for (const path of [...pages, ...walk(dist).filter((p) => /\.(xml|jsonld|css)$/.test(p))]) {
   const rel = relative(dist, path).split('\\').join('/');
@@ -63,4 +118,7 @@ if (failures.length) {
   for (const failure of failures) console.error(`  - ${failure}`);
   process.exit(1);
 }
-console.log(`check-urls: OK — ${pages.length} pages, canonicals correct, base emitted once`);
+console.log(
+  `check-urls: OK — ${pages.length} pages, ${seen.size} unique record slugs, ` +
+    'canonicals correct, base emitted once'
+);
