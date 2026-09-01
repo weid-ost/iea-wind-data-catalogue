@@ -1,4 +1,5 @@
 {
+  "_comment": "INVENTED, derived from the dc-01 payload — see the `provenance_note` of fixtures/datacite/dc-05-case-variant.json. The DOI is the real dc-01 DOI with its case flipped; every other field is dc-01's, verbatim.",
   "id": "10.5281/ZENODO.20218022",
   "type": "dois",
   "attributes": {

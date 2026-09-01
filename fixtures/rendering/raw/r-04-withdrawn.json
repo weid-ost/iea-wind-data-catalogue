@@ -1,10 +1,11 @@
 {
-  "id": 3376526,
-  "doi": "10.5281/zenodo.3376526",
-  "conceptdoi": "10.5281/zenodo.3376526",
+  "_comment": "INVENTED. Not a capture — shaped like the API response it imitates so the expectation beside it is consistent, but no upstream artifact carries this payload. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, so no real work is implicated. See fixtures/rendering/README.md.",
+  "id": 90000005,
+  "doi": "10.5072/zenodo.90000005",
+  "conceptdoi": "10.5072/zenodo.90000005",
   "revision": 3,
   "links": {
-    "self_html": "https://zenodo.org/records/3376526"
+    "self_html": "https://sandbox.zenodo.org/records/90000005"
   },
   "metadata": {
     "title": "Turbine loads database from the OC6 Phase III validation campaign",
@@ -19,10 +20,10 @@
     },
     "creators": [
       {
-        "name": "Robertson, Amy"
+        "name": "Ashworth, Nadia"
       },
       {
-        "name": "Bergua, Roger"
+        "name": "Vasquez, Emil"
       }
     ]
   },

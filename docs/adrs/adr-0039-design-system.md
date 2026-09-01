@@ -13,8 +13,25 @@ tags: [design, accessibility, tokens]
 
 ## Status
 
-**Accepted, revision 2.** Revision 1 was agreed in turn 13; revision 2 in
-turn 14 removed tinted surfaces entirely.
+**Accepted, revision 3.** Revision 1 was agreed in turn 13; revision 2 in
+turn 14 removed tinted surfaces entirely; revision 3 shipped with the site.
+
+Revision 3 does not reopen anything decided here. It re-solves two *computed*
+derivatives against the surfaces they actually land on, which is precisely what
+this ADR says the palette is — "binary-searching OKLCH lightness for a target
+WCAG ratio" — and it makes the gate stricter, not looser
+(`design/design-system.md` §2.2.1):
+
+| | Rev 2 | Rev 3 | Why |
+|---|---|---|---|
+| dark `action.primary` | `#558A6A` | **`#5B9070`** (hover `#6A9F7E`) | Rev 2 solved it against `surface.page` (4.64:1) but links live inside cards, where it measured **4.27:1** on `surface.raised`. Re-solved against `raised` |
+| `component.panel.bg-light` | `neutral.50` | **`neutral.0`** | Status hues were solved against white and measured 4.37–4.40:1 on `neutral.50`. The hairline border and the 3px bar are what make a panel read as a panel; the tint was doing no work |
+
+The generalised lesson is enforced rather than remembered: `design/gen.py` now
+prints a **second** contrast table — every token against every surface it lands
+on — and the committed palette ends `ALL PAIRS PASS`. There is no longer a
+tolerated FAIL, so CI gate 4 treats any FAIL as fatal instead of downgrading it
+to an annotation.
 
 ## Context
 
@@ -127,7 +144,8 @@ eroding one "quick fix" at a time.
   `design/gen.py` and re-reading its contrast table.
 - Two deliberate oddities that look like mistakes and are not: **dark-mode
   buttons carry near-black labels**, because the accessible dark action colour
-  `#558A6A` cannot reach 4.5:1 under white text; and `border.subtle` is
+  (`#5B9070` as of revision 3; `#558A6A` when this was written) cannot reach
+  4.5:1 under white text; and `border.subtle` is
   decorative only, while anything whose boundary *means* something (inputs) uses
   `border.input`, held to the 3:1 non-text rule.
 - The token-grep CI step will occasionally block a legitimate one-off value. The

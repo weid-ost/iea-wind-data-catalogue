@@ -2,9 +2,10 @@
   "fixture_id": "rep-06-retracted-publication",
   "fixture_kind": "record",
   "case": "A retracted journal article — the retraction flag must be prominent and must not be confused with withdrawal",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "Retraction is a fact about the work, stated upstream via an `IsRetractedBy` related identifier (fixture cr-07). The record is NOT withdrawn — it still exists at the source — so the two banners must read differently.",
   "record": {
-    "name": "doi-10-1002-we-2599",
+    "name": "doi-10-5072-example-retracted-90000011",
     "title": "Turbulence-corrected power curves for complex terrain sites",
     "notes": "<p>A method for correcting measured power curves for site-specific turbulence in complex terrain.</p>",
     "license_id": "other-closed",
@@ -27,15 +28,15 @@
       },
       {
         "key": "authors",
-        "value": "[{\"name\":\"Berg, Jacob\"},{\"name\":\"Ivanov, Dmitri\"}]"
+        "value": "[{\"name\":\"Bramwell, Hedda\"},{\"name\":\"Ivanova, Zaria\"}]"
       },
       {
         "key": "container",
-        "value": "Wind Energy"
+        "value": "Journal of Example Wind Science"
       },
       {
         "key": "doi",
-        "value": "10.1002/we.2599"
+        "value": "10.5072/example-retracted-90000011"
       },
       {
         "key": "first_seen",
@@ -43,7 +44,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.1002/we.2599"
+        "value": "10.5072/example-retracted-90000011"
       },
       {
         "key": "identity_kind",
@@ -79,11 +80,11 @@
       },
       {
         "key": "publisher",
-        "value": "Wiley"
+        "value": "Example Scholarly Press"
       },
       {
         "key": "related_identifiers",
-        "value": "[{\"identifier\":\"10.1002/we.2988\",\"identifier_type\":\"DOI\",\"relation\":\"IsRetractedBy\"}]"
+        "value": "[{\"identifier\":\"10.5072/example-retraction-notice-90000012\",\"identifier_type\":\"DOI\",\"relation\":\"IsRetractedBy\"}]"
       },
       {
         "key": "resource_kind",
@@ -91,7 +92,7 @@
       },
       {
         "key": "source_id",
-        "value": "10.1002/we.2599"
+        "value": "10.5072/example-retracted-90000011"
       },
       {
         "key": "source_key",
@@ -107,11 +108,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://doi.org/10.1002/we.2599"
+        "value": "https://doi.org/10.5072/example-retracted-90000011"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://doi.org/10.1002/we.2599\"]"
+        "value": "[\"https://doi.org/10.5072/example-retracted-90000011\"]"
       },
       {
         "key": "withdrawn",
@@ -126,6 +127,6 @@
     ],
     "state": "active",
     "private": false,
-    "url": "https://doi.org/10.1002/we.2599"
+    "url": "https://doi.org/10.5072/example-retracted-90000011"
   }
 }

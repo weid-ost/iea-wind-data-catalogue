@@ -1,0 +1,188 @@
+{
+  "fixture_id": "x-05-low-confidence",
+  "fixture_kind": "record",
+  "case": "INVENTED — Tier-3 fields the model extracted at low confidence: the machine-inferred badge appears on exactly those fields, and the record stays visible",
+  "note": "Catalogue row x-05, record side. ADR-0028 §5 requires a visible badge on every field whose extraction_method is `llm`, and §7 forbids hiding low-confidence records — the badge is the mitigation, not suppression. Two fields here came from the model at 0.42 and 0.38; `iea_task` came from a pattern match and must therefore carry NO badge. The rendering side of the same row is fixtures/rendering/rep-05-llm-inferred.json, which is what /dev/components draws.",
+  "raw": "raw/x-05-low-confidence.json",
+  "identity_key": "ieawind|task54/example-low-confidence-page",
+  "identity_keys": [
+    "ieawind|task54/example-low-confidence-page"
+  ],
+  "expected_record_names": [
+    "ieawind-task54-example-low-confidence-page"
+  ],
+  "expected_llm_fields": [
+    "resource_kind",
+    "title"
+  ],
+  "expected_confidence_ceiling": 0.5,
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-08-24T04:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "ieawind|task54/example-low-confidence-page"
+      },
+      {
+        "key": "identity_kind",
+        "value": "source"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-54\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-08-24T04:00:00Z"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"confidence\":0.38,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.42,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+      },
+      {
+        "key": "resource_kind",
+        "value": "report"
+      },
+      {
+        "key": "source_id",
+        "value": "task54/example-low-confidence-page"
+      },
+      {
+        "key": "source_key",
+        "value": "b7c1d9e2f3a40516"
+      },
+      {
+        "key": "source_system",
+        "value": "ieawind"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"ieawind\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://iea-wind.org/task54/example-low-confidence-page/"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://iea-wind.org/task54/example-low-confidence-page/\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-54"
+      }
+    ],
+    "license_id": "notspecified",
+    "name": "ieawind-task54-example-low-confidence-page",
+    "notes": "",
+    "owner_org": "unattributed",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Recommended practices for floating lidar acceptance testing",
+    "url": "https://iea-wind.org/task54/example-low-confidence-page/"
+  },
+  "expected_records": {
+    "ieawind-task54-example-low-confidence-page": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-08-24T04:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "ieawind|task54/example-low-confidence-page"
+        },
+        {
+          "key": "identity_kind",
+          "value": "source"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-54\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-08-24T04:00:00Z"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"confidence\":0.38,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.42,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+        },
+        {
+          "key": "resource_kind",
+          "value": "report"
+        },
+        {
+          "key": "source_id",
+          "value": "task54/example-low-confidence-page"
+        },
+        {
+          "key": "source_key",
+          "value": "b7c1d9e2f3a40516"
+        },
+        {
+          "key": "source_system",
+          "value": "ieawind"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"ieawind\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://iea-wind.org/task54/example-low-confidence-page/"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://iea-wind.org/task54/example-low-confidence-page/\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-54"
+        }
+      ],
+      "license_id": "notspecified",
+      "name": "ieawind-task54-example-low-confidence-page",
+      "notes": "",
+      "owner_org": "unattributed",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Recommended practices for floating lidar acceptance testing",
+      "url": "https://iea-wind.org/task54/example-low-confidence-page/"
+    }
+  },
+  "expected_notices": []
+}

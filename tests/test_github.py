@@ -187,7 +187,7 @@ class TestGh02ZenodoBadge:
         assert badge_doi_candidates(line) == ["10.5281/zenodo.15191297"]
 
     def test_a_doi_outside_a_badge_is_never_a_candidate(self) -> None:
-        assert badge_doi_candidates("See https://doi.org/10.5281/zenodo.1234567") == []
+        assert badge_doi_candidates("See https://doi.org/10.5072/zenodo.1234567") == []
 
     def test_a_markdown_badge_does_not_match_as_one_long_doi(self) -> None:
         """The real IEAWindSystems/IEA-22-280-RWT badge. Brackets and

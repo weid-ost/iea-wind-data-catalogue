@@ -1,16 +1,17 @@
 {
- "conceptdoi": "10.5281/zenodo.1234569",
+ "_comment": "INVENTED. See the `invented` field of fixtures/zenodo/zen-06-embargoed.json: no embargoed record exists in any IEA Wind Zenodo community, so the shape was built by hand on the reserved 10.5072 test prefix.",
+ "conceptdoi": "10.5072/zenodo.1234569",
  "conceptrecid": "1234569",
  "created": "2024-06-01T09:12:41.113372+00:00",
- "doi": "10.5281/zenodo.1234570",
- "doi_url": "https://doi.org/10.5281/zenodo.1234570",
+ "doi": "10.5072/zenodo.1234570",
+ "doi_url": "https://doi.org/10.5072/zenodo.1234570",
  "files": [],
  "id": 1234570,
  "links": {
-  "doi": "https://doi.org/10.5281/zenodo.1234570",
-  "self": "https://zenodo.org/api/records/1234570",
-  "self_html": "https://zenodo.org/records/1234570",
-  "parent_doi": "https://doi.org/10.5281/zenodo.1234569"
+  "doi": "https://doi.org/10.5072/zenodo.1234570",
+  "self": "https://sandbox.zenodo.org/api/records/1234570",
+  "self_html": "https://sandbox.zenodo.org/records/1234570",
+  "parent_doi": "https://doi.org/10.5072/zenodo.1234569"
  },
  "metadata": {
   "access_right": "embargoed",
@@ -32,7 +33,7 @@
    }
   ],
   "description": "<p>Ten-minute nacelle lidar statistics. Files are under embargo until 1 March 2027; the metadata is public.</p>",
-  "doi": "10.5281/zenodo.1234570",
+  "doi": "10.5072/zenodo.1234570",
   "keywords": [
    "lidar",
    "embargo",

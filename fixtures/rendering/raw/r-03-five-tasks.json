@@ -1,10 +1,11 @@
 {
-  "id": 8112233,
-  "doi": "10.5281/zenodo.8112233",
-  "conceptdoi": "10.5281/zenodo.8112233",
+  "_comment": "INVENTED. Not a capture — shaped like the API response it imitates so the expectation beside it is consistent, but no upstream artifact carries this payload. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, so no real work is implicated. See fixtures/rendering/README.md.",
+  "id": 90000004,
+  "doi": "10.5072/zenodo.90000004",
+  "conceptdoi": "10.5072/zenodo.90000004",
   "revision": 2,
   "links": {
-    "self_html": "https://zenodo.org/records/8112233"
+    "self_html": "https://sandbox.zenodo.org/records/90000004"
   },
   "metadata": {
     "title": "Open benchmark of probabilistic wind power forecasts for offshore floating arrays",
@@ -51,7 +52,7 @@
       "key": "benchmark.zip",
       "type": "zip",
       "links": {
-        "self": "https://zenodo.org/records/8112233/files/benchmark.zip"
+        "self": "https://sandbox.zenodo.org/records/90000004/files/benchmark.zip"
       }
     }
   ]

@@ -117,7 +117,10 @@ implemented and covered by `tests/test_extract.py`:
 > `github_models_retirement_brownout`. The harvest does not care, which is the
 > entire point of [[adr-0031-the-harvest-never-fails-on-llm-unavailability]]:
 > the pages queue, the run reports `ok: true`, Tier 1 is untouched. Point
-> `$HARVEST_LLM_ENDPOINT` at any OpenAI-compatible provider (§2) to drain.
+> `$HARVEST_LLM_ENDPOINT` at any OpenAI-compatible provider (§2) to drain. This
+> is now recorded in the ADR register too —
+> [[adr-0030-llm-access-via-github-models]] §Status — so it is not a surprise
+> found only here.
 
 ## 4. Commit the cache
 

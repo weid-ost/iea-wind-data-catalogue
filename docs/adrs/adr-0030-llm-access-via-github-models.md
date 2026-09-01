@@ -13,7 +13,35 @@ tags: [llm, accounts, cost]
 
 ## Status
 
-**Accepted.** Reverses the turn-6 recommendation of a single prepaid provider.
+**Accepted — but the chosen provider is currently unreachable.** Reverses the
+turn-6 recommendation of a single prepaid provider.
+
+> **Provider status, observed 2026-09-01.** `POST
+> https://models.github.ai/inference/chat/completions` answers **`HTTP 410
+> Gone`** with `{"error":{"code":"github_models_retirement_brownout", …}}`,
+> for a valid token and for an invalid one alike. GitHub Models is in a
+> scheduled retirement brownout.
+>
+> **Nothing is broken by this, and that is the point.** ADR-0031 is now proven
+> in production rather than in a test: the run degrades, queues the pages to
+> `state/pending-extraction.json`, reports `ok: true`, exits 0, and leaves
+> Tier 1 completely untouched. Do not debug the 410 as a bug — it is the
+> documented failure mode behaving as designed.
+>
+> **The operative path today is `$HARVEST_LLM_ENDPOINT`.** The reasoning below
+> is about *account admin*, not about GitHub specifically, and ADR-0035's rule
+> — OpenAI-compatible HTTP, no vendor SDK — means the provider is a
+> configuration value, not a code change: point `HARVEST_LLM_ENDPOINT` and
+> `HARVEST_LLM_MODEL` at any OpenAI-compatible endpoint, supply
+> `HARVEST_LLM_TOKEN`, and run `python -m harvest extract` to drain the queue
+> ([[drain-the-pending-extraction-queue]]).
+>
+> This note is deliberately **not** a supersession. Choosing the replacement
+> provider is a decision about whose account it is, which is exactly the
+> question this ADR exists to answer and is the human's to make — see
+> [[drain-the-pending-extraction-queue]] for the operational consequence and
+> `.github/workflows/catalogue.yml` for the two environment variables that
+> would change.
 
 ## Context
 

@@ -43,7 +43,14 @@ roughly fifteen pages a week. That does not need to be automated.
    **`None`** — not an exception. `None` is not an error. The caller appends the
    page to `state/pending-extraction.json` via
    `harvest.extract.queue_pending` and moves on. **`extract()` must never raise
-   for an LLM-side reason.** Fixture `x-07` exists to hold this line.
+   for an LLM-side reason.** Fixture
+   `fixtures/cross-cutting/x-07-cache-miss-no-llm` exists to hold this line, and
+   `tests/test_extract.py::TestTheQueue` drives it: the page it holds is
+   deliberately unclassifiable by pattern, so it escalates, and Tier 3 then has
+   neither a cache entry nor a credential. This stopped being hypothetical on
+   2026-09-01, when GitHub Models entered its retirement brownout and began
+   answering `410 Gone` ([[adr-0030-llm-access-via-github-models]] §Status): the
+   live harvest takes exactly this path today, and reports `ok: true`.
 4. **The run succeeds.** The site renders normally; only new task-site records
    stop appearing.
 5. **The backlog is visible.** `state/last-run.json` → `pending_extraction`

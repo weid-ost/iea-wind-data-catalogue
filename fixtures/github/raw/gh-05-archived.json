@@ -1,4 +1,5 @@
 {
+  "_comment": "INVENTED, derived from a captured payload — see the `note` of fixtures/github/gh-05-archived.json. `archived` was flipped to true; the live IEA-Task-43/glossary repository is NOT archived.",
   "_resolved": {
     "badge_candidates": [],
     "doi": null,

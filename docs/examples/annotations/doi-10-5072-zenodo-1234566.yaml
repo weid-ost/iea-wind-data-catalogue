@@ -1,13 +1,19 @@
+# ILLUSTRATIVE TEMPLATE — this file is NOT replayed.
+#
+# It lives under docs/examples/annotations/, not annotations/, because the
+# identity it names has never been harvested. Copy it into annotations/ and
+# change the identity_key to one that exists in records/ before using it.
+#
 # Sample annotation — every kind of local addition, on one identity.
 #
-# This is the identity of the reference fixture, fixtures/zenodo/zen-01-canonical.
-# Until the Zenodo adapter has harvested it, every entry below is reported as
-# `annotation_pending` in state/last-run.json and applied by the run that first
-# sees the record. Nothing here fabricates a record.
+# This is the identity of the reference fixture, fixtures/zenodo/zen-01-canonical
+# — an INVENTED identity on the reserved 10.5072 test prefix, so no adapter will
+# ever harvest it. Copied into annotations/ as-is it would sit pending forever;
+# change the identity_key first. Nothing here fabricates a record.
 #
 # Reference: docs/runbooks/correct-a-record.md §3.
 
-identity_key: "10.5281/zenodo.1234566"
+identity_key: "10.5072/zenodo.1234566"
 actor: "curator:tom"
 
 annotations:

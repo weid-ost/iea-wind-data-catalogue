@@ -3,12 +3,13 @@
   "fixture_kind": "record",
   "case": "Withdrawn record; the DOI resolves to a Zenodo tombstone page",
   "note": "ADR-0027: withdrawn records are KEPT. The raw payload is a real Zenodo 410 tombstone body and it carries no metadata at all — which is exactly why a tombstone must never be scraped. A scraped event replaces the source block wholesale, so scraping this would blank the record. The adapter detects it (ZenodoAdapter.is_tombstone) and skips it in harvest(); withdrawal is appended as a `withdrawn` event against the identity the caller already holds (ZenodoAdapter.recheck_withdrawn, runbook handle-a-withdrawn-record). The resulting record keeps its metadata, its URL and CKAN state=active, with lifecycle_state/withdrawn/withdrawn_at carrying the withdrawal.",
-  "invented": "The RAW PAYLOAD IS REAL — captured verbatim from https://zenodo.org/api/records/5890532 on 2026-08-31, HTTP 410, a record Zenodo staff removed as spam. The record it is attached to is the invented zen-01 reference identity (10.5281/zenodo.1234566), deliberately: marking a real IEA Wind artifact as withdrawn would be a lie about someone's work.",
+  "invented": "The RAW PAYLOAD IS REAL — captured verbatim from https://zenodo.org/api/records/5890532 on 2026-08-31, HTTP 410, a record Zenodo staff removed as spam. The record it is attached to is the invented zen-01 reference identity (10.5072/zenodo.1234566), deliberately: marking a real IEA Wind artifact as withdrawn would be a lie about someone's work.",
   "raw": "raw/zen-12-tombstone.json",
-  "identity_key": "10.5281/zenodo.1234566",
-  "expected_slug": "doi-10-5281-zenodo-1234566",
+  "raw_is_capture": true,
+  "identity_key": "10.5072/zenodo.1234566",
+  "expected_slug": "doi-10-5072-zenodo-1234566",
   "record": {
-    "name": "doi-10-5281-zenodo-1234566",
+    "name": "doi-10-5072-zenodo-1234566",
     "title": "Lidar measurements from the Østerild campaign, 2021",
     "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021. Includes horizontal wind speed, direction and turbulence intensity at eleven measurement heights.</p>",
     "license_id": "cc-by",
@@ -38,7 +39,7 @@
       },
       {
         "key": "doi",
-        "value": "10.5281/zenodo.1234566"
+        "value": "10.5072/zenodo.1234566"
       },
       {
         "key": "first_seen",
@@ -46,7 +47,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.1234566"
+        "value": "10.5072/zenodo.1234566"
       },
       {
         "key": "identity_kind",
@@ -86,7 +87,7 @@
       },
       {
         "key": "related_identifiers",
-        "value": "[{\"identifier\":\"10.5281/zenodo.1234566\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+        "value": "[{\"identifier\":\"10.5072/zenodo.1234566\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
       },
       {
         "key": "resource_kind",
@@ -110,11 +111,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://zenodo.org/records/1234567"
+        "value": "https://sandbox.zenodo.org/records/1234567"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://zenodo.org/records/1234567\"]"
+        "value": "[\"https://sandbox.zenodo.org/records/1234567\"]"
       },
       {
         "key": "withdrawn",
@@ -129,7 +130,7 @@
       {
         "format": "csv",
         "name": "osterild-lidar-2021.csv",
-        "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv"
+        "url": "https://sandbox.zenodo.org/records/1234567/files/osterild-lidar-2021.csv"
       }
     ],
     "groups": [
@@ -139,7 +140,7 @@
     ],
     "state": "active",
     "private": false,
-    "url": "https://zenodo.org/records/1234567",
+    "url": "https://sandbox.zenodo.org/records/1234567",
     "version": "2.0"
   }
 }

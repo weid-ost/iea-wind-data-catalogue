@@ -2,9 +2,10 @@
   "fixture_id": "rep-03-github-software",
   "fixture_kind": "record",
   "case": "Software: a GitHub repository joined to its Zenodo deposit by the README badge — two source systems, two 'view at source' links",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "The join key is the Zenodo DOI badge in the README (fixture gh-02), which is why the identity is a DOI even though the primary source is GitHub.",
   "record": {
-    "name": "doi-10-5281-zenodo-5793288",
+    "name": "doi-10-5072-zenodo-90000009",
     "title": "digital-wra-data-standard: the IEA Wind Task 43 WRA Data Model",
     "notes": "<p>A JSON-schema data model for wind resource assessment measurement campaigns, with validation tooling.</p>",
     "license_id": "mit",
@@ -30,11 +31,11 @@
       },
       {
         "key": "authors",
-        "value": "[{\"name\":\"Clifton, Andrew\"},{\"name\":\"Barber, Sarah\"}]"
+        "value": "[{\"name\":\"Aldridge, Tomas\"},{\"name\":\"Kowalska, Ines\"}]"
       },
       {
         "key": "doi",
-        "value": "10.5281/zenodo.5793288"
+        "value": "10.5072/zenodo.90000009"
       },
       {
         "key": "first_seen",
@@ -42,7 +43,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.5793288"
+        "value": "10.5072/zenodo.90000009"
       },
       {
         "key": "identity_kind",
@@ -86,7 +87,7 @@
       },
       {
         "key": "source_id",
-        "value": "IEA-Task-43/digital-wra-data-standard"
+        "value": "example-org/example-wra-data-standard"
       },
       {
         "key": "source_key",
@@ -102,11 +103,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://github.com/IEA-Task-43/digital-wra-data-standard"
+        "value": "https://github.com/example-org/example-wra-data-standard"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://github.com/IEA-Task-43/digital-wra-data-standard\",\"https://zenodo.org/records/5793288\"]"
+        "value": "[\"https://github.com/example-org/example-wra-data-standard\",\"https://sandbox.zenodo.org/records/90000009\"]"
       },
       {
         "key": "withdrawn",
@@ -121,7 +122,7 @@
     ],
     "state": "active",
     "private": false,
-    "url": "https://github.com/IEA-Task-43/digital-wra-data-standard",
+    "url": "https://github.com/example-org/example-wra-data-standard",
     "version": "1.3.0"
   }
 }

@@ -2,10 +2,11 @@
   "fixture_id": "r-02-no-description",
   "fixture_kind": "record",
   "case": "A record with a title and a DOI and nothing else — no description, no authors, no licence, no tasks",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "Every optional block on the record page must collapse without leaving an empty heading, an empty <dl> or a dangling 'and N others'. Note the licence reads 'not specified' — never 'open'.",
   "raw": "raw/r-02-no-description.json",
   "record": {
-    "name": "doi-10-5281-zenodo-4419169",
+    "name": "doi-10-5072-zenodo-90000003",
     "title": "Reference wind farm layout, Anholt",
     "notes": "",
     "license_id": "notspecified",
@@ -14,7 +15,7 @@
     "extras": [
       {
         "key": "doi",
-        "value": "10.5281/zenodo.4419169"
+        "value": "10.5072/zenodo.90000003"
       },
       {
         "key": "first_seen",
@@ -22,7 +23,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.4419169"
+        "value": "10.5072/zenodo.90000003"
       },
       {
         "key": "identity_kind",
@@ -42,7 +43,7 @@
       },
       {
         "key": "source_id",
-        "value": "4419169"
+        "value": "90000003"
       },
       {
         "key": "source_key",
@@ -58,11 +59,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://zenodo.org/records/4419169"
+        "value": "https://sandbox.zenodo.org/records/90000003"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://zenodo.org/records/4419169\"]"
+        "value": "[\"https://sandbox.zenodo.org/records/90000003\"]"
       },
       {
         "key": "withdrawn",
@@ -73,6 +74,6 @@
     "groups": [],
     "state": "active",
     "private": false,
-    "url": "https://zenodo.org/records/4419169"
+    "url": "https://sandbox.zenodo.org/records/90000003"
   }
 }

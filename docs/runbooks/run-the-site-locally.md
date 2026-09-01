@@ -5,7 +5,7 @@ status: current
 date: 2026-08-31
 related: [adr-0032-site-framework-astro, adr-0023-search-via-pagefind, adr-0036-component-architecture-and-the-gallery, adr-0034-toolchain-pinning-and-no-auto-updates, run-the-a11y-gate]
 tags: [runbook, site, astro]
-last_executed: never
+last_executed: 2026-09-01
 ---
 
 # Runbook — run the site locally
@@ -172,8 +172,17 @@ first**.
 
 **Last executed:** 2026-09-01 — `make site` from a clean tree (`node_modules/`,
 `dist/`, `.astro/` and the generated `tokens.css` all deleted first):
-`npm ci` + `npm run build` green, 19 pages built, 14 indexed, 6 filters.
-`npm run gates` green: 14/14 URLs, both themes, 0 errors.
+`npm ci` + `npm run build` green: **36 page(s) built**, Pagefind **indexed 30
+pages** and **6 filters**. `npm run gates` green: 14/14 URLs, both themes,
+0 errors.
+
+Those numbers move with `records/`, so read them as a shape rather than a
+constant: 30 indexed pages is one per record, 36 built pages is those plus the
+home, search, browse, about and gallery pages. The sixth filter is
+`institution`, which `src/lib/facets.ts` derives from `pkg.owner_org`; it was
+dormant for a while because no record carried one, and the facet list drops any
+facet with no values rather than rendering an empty control. All 30 records now
+carry an `owner_org`, so it is back.
 
 Verified in a headless browser against the built index, not merely built:
 search returns hits and narrows, the facets are real checkboxes and filter,

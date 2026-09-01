@@ -1,4 +1,5 @@
 {
+  "_comment": "INVENTED, derived from the dc-01 payload — see the `provenance_note` of fixtures/datacite/dc-04-non-findable.json. The public DataCite API serves only findable DOIs, so no registered-state payload could be captured. Reserved 10.5072 test prefix.",
   "id": "10.5072/example-iea-wind-registered-1",
   "type": "dois",
   "attributes": {

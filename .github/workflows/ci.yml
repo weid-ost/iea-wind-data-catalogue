@@ -90,41 +90,34 @@ jobs:
           echo "replay: byte-stable"
 
       - name: Gate 4 — palette reproducibility and WCAG contrast table
-        # design/gen.py writes palette.json into the CURRENT WORKING DIRECTORY,
-        # not into design/ (release-checklist §1, "On gate 4"). Regenerating must
-        # reproduce design/palette.json exactly; a colour change is a deliberate
-        # commit, never a drift.
+        # design/gen.py rewrites design/palette.json IN PLACE (it resolves the
+        # path relative to the script, not the CWD — it used to drop a stray
+        # palette.json in the repository root and no longer does). So the
+        # reproducibility check is a working-tree diff, exactly as
+        # docs/runbooks/release-checklist.md §1 gate 4 now documents: a colour
+        # change is a deliberate commit, never a drift.
         #
-        # The contrast table is printed into the job summary rather than gated
-        # on: the palette as committed reports one FAIL
-        # ("L border n300 / white", 1.51 — a decorative border, not a UI
-        # boundary carrying meaning). Making it fatal today would fail CI on the
-        # foundation as shipped. See the caveat in the CI track's report.
+        # Contrast is fatal here. Since design-system.md Rev 3 re-solved the
+        # dark action colour and reclassified the decorative border pair, the
+        # committed palette reports ALL PAIRS PASS, so there is no longer a
+        # tolerated FAIL to downgrade to a warning (ADR-0039 rev 3).
         run: |
           set -euo pipefail
           uv run python design/gen.py | tee /tmp/palette-report.txt
-          uv run python - <<'PY'
-          import json, sys
-          generated = json.load(open("palette.json"))
-          committed = json.load(open("design/palette.json"))
-          if generated != committed:
-              print("::error::design/gen.py no longer reproduces design/palette.json")
-              sys.exit(1)
-          print("palette: reproduced exactly")
-          PY
-          rm -f palette.json
 
-          # release-checklist §1 gate 4 says the gate passes when "every pair
-          # reports PASS". The palette as committed reports exactly one FAIL —
-          # "L border n300 / white", 1.51 — which is a decorative border, not a
-          # UI boundary carrying meaning. Surface it as an annotation so it is
-          # visible in the Actions UI rather than buried in the job summary, but
-          # do NOT make it fatal: that would fail CI on the foundation exactly
-          # as shipped. When the design track resolves it, change the `sed` line
-          # below to `exit 1` and the runbook and the code agree again.
+          if [ -n "$(git status --porcelain -- design/)" ]; then
+            echo "::error::design/gen.py no longer reproduces design/palette.json — regenerate and commit the change deliberately"
+            git status --porcelain -- design/
+            git --no-pager diff -- design/
+            exit 1
+          fi
+          echo "palette: reproduced exactly"
+
           if grep -q 'FAIL' /tmp/palette-report.txt; then
             grep 'FAIL' /tmp/palette-report.txt \
-              | sed -e 's/^[[:space:]]*/::warning title=WCAG contrast::/'
+              | sed -e 's/^[[:space:]]*/::error title=WCAG contrast::/'
+            echo "::error::the palette no longer reports ALL PAIRS PASS — fix the token, not the page"
+            exit 1
           fi
 
           {

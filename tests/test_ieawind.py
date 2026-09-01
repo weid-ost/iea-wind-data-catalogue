@@ -494,7 +494,7 @@ class TestIea09NotARecord:
 
     def test_the_ambiguous_workshop_page_is_classified_from_the_committed_cache(self) -> None:
         """A *discovered* page (``trusted: false``) — the only model path there is."""
-        fixture = load("iea-09-workshop-page")
+        fixture = load("iea-13-workshop-page")
         content = main_text(html(fixture))
         assert classify_page(fixture["page_url"], content, trusted=False) is None, (
             "the deterministic heuristics must decline — this is the ONLY model path"
@@ -517,7 +517,7 @@ class TestIea09NotARecord:
         )
 
     def test_a_configured_task_page_is_trusted_but_a_discovered_one_is_not(self) -> None:
-        fixture = load("iea-09-workshop-page")
+        fixture = load("iea-13-workshop-page")
         content = main_text(html(fixture))
         assert classify_page(fixture["page_url"], content, trusted=True).kind == "task-overview"
         assert classify_page(fixture["page_url"], content, trusted=False) is None, (
@@ -529,7 +529,7 @@ class TestIea09NotARecord:
     ) -> None:
         """Fixture ``x-07`` through the adapter: queued, skipped, run succeeds."""
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        fixture = load("iea-09-workshop-page")
+        fixture = load("iea-13-workshop-page")
         url = fixture["page_url"]
         adapter = adapter_for(
             PageServer({url: html(fixture)}),
@@ -582,7 +582,7 @@ class TestAPinnedExtraction:
         self, repo: Path, monkeypatch: pytest.MonkeyPatch
     ) -> None:
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        fixture = load("iea-09-workshop-page")
+        fixture = load("iea-13-workshop-page")
         url = fixture["page_url"]
         served = html(fixture)
         # The pin was made against the page as it was; the served page differs.
@@ -602,7 +602,7 @@ class TestAPinnedExtraction:
         self, repo: Path, monkeypatch: pytest.MonkeyPatch
     ) -> None:
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        fixture = load("iea-09-workshop-page")
+        fixture = load("iea-13-workshop-page")
         url = fixture["page_url"]
         served = html(fixture)
         self._pin(repo, url, main_text(served))
@@ -645,7 +645,7 @@ class TestACorruptCacheEntryIsAMiss:
         self, repo: Path, monkeypatch: pytest.MonkeyPatch
     ) -> None:
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        fixture = load("iea-09-workshop-page")
+        fixture = load("iea-13-workshop-page")
         url, served = fixture["page_url"], html(fixture)
         self._bad_entry(repo, main_text(served), {"page_kind": "not-a-kind"})
 
@@ -659,7 +659,7 @@ class TestACorruptCacheEntryIsAMiss:
     ) -> None:
         """ADR-0031: an unclassifiable page queues, exactly as it would with no cache."""
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        fixture = load("iea-09-workshop-page")
+        fixture = load("iea-13-workshop-page")
         url, served = fixture["page_url"], html(fixture)
         self._bad_entry(repo, main_text(served), {"page_kind": "not-a-kind"})
 
@@ -675,7 +675,7 @@ class TestACorruptCacheEntryIsAMiss:
     ) -> None:
         """The whole point: one bad file costs one page, not thirty records."""
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        broken = load("iea-09-workshop-page")
+        broken = load("iea-13-workshop-page")
         healthy = load("iea-02-doi-punctuation")
         self._bad_entry(repo, main_text(html(broken)), {"page_kind": "not-a-kind"})
 

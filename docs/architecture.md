@@ -241,6 +241,7 @@ Reproduced verbatim from `CLAUDE.md`. These are not guidance.
 - **No identifier a model produced is ever accepted.** Every DOI resolves against DataCite/Crossref or the record is dropped and logged.
 - **The harvest never fails because the LLM is unavailable.** Tier 1 is deterministic; Tier-3 misses queue to `state/pending-extraction.json`.
 - **LLM in CI = GitHub Models via `GITHUB_TOKEN` (`permissions: models: read`).** No vendor SDK — OpenAI-compatible HTTP only (ADR-0035). Extraction cache is committed; cache key = hash(content + prompt_version + model_id).
+  *Status, 2026-09-01: GitHub Models is in a scheduled retirement brownout and answers `410 Gone`, so this route is configured but not currently exercisable. Nothing breaks — the invariant above it is what carries the system, and the run degrades to the pending queue. The operative path is `$HARVEST_LLM_ENDPOINT`; see [[adr-0030-llm-access-via-github-models]] §Status.*
 - **Every run commits** (`state/last-run.json` heartbeat) — this keeps the cron alive past GitHub's 60-day dormancy rule. Build+deploy live in the same workflow as the harvest.
 - **Pinned everything, no auto-updates** (ADR-0034): `.python-version` + `uv.lock` (`uv sync --frozen`); pinned Node + `package-lock.json` (`npm ci`); pinned runner image (`ubuntu-24.04`, never `-latest`). Python direct deps capped at four: `httpx`, `trafilatura`, `pydantic`, `pyyaml`.
 - **Astro renders; it doesn't own the data.** Records load via glob; no framework fields in the record format. Astro components for content; vanilla custom elements only for interactivity; `/dev/components` gallery (real records + pathological fixtures) instead of Storybook.
@@ -268,7 +269,7 @@ YAML registers, `schema/ckan-scheming.json`, the `Makefile` and
 | Tier-3 extraction, committed cache, pending queue — `harvest/extract.py` | track H | `uv run python -m harvest extract` exits 0 and prints `extract: resolved N pending extraction(s)`; the committed `cache/` entries replay offline |
 | reconciliation, merges, link checking, `annotations/` replay — `harvest/dedupe.py`, `harvest/annotations.py`, `harvest/linkcheck.py`, the `dedupe` / `linkcheck` / `annotations` verbs | track I | `uv run python -m harvest dedupe` and `linkcheck` exit 0; notices appear in `state/last-run.json` |
 | `site/` — Astro, Pagefind, the gallery, the a11y gate | track J | `make site` and `make gates` succeed |
-| `.github/workflows/` | CI track | a weekly run commits `state/last-run.json` and deploys in the same job |
+| `.github/workflows/` | CI track | `catalogue.yml` and `ci.yml` are present; their YAML parses and every command they invoke exists in the `Makefile` or the `harvest` CLI, cross-checked command by command. **They have never executed** — a workflow cannot be run locally and neither has been pushed, so the first real run is the first proof. `catalogue.yml` is the file that will commit `state/last-run.json` weekly and deploy in the same job |
 
 What remains is not a track but a **recorded gap**: publication lists that live
 only inside a linked PDF are out of scope for v1 and are reported as a coverage

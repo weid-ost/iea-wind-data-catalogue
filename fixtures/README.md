@@ -4,6 +4,13 @@ The inventory of *what* fixtures exist is `fixtures-catalogue.md` — that file 
 the specification and is not edited by the harvest tracks. This file describes
 *where the bytes go*, which the tracks do add to.
 
+The two are checked against each other:
+`tests/test_fixtures.py::TestTheCatalogueMatchesTheTree` fails if a fixture has
+no catalogue row, if a row has no fixture (unless the row says **realised as
+`<id>`** and points at the artifact that carries the case), or if an id names
+two rows. Add the row in the same commit as the fixture — the catalogue is the
+specification, not a changelog.
+
 ```
 fixtures/
 ├── fixtures-catalogue.md          # the inventory (specification; do not edit)
@@ -28,18 +35,36 @@ The upstream response captured verbatim, redacted only where it must be. Never
 hand-written when a real payload can be captured: invented payloads test the
 parser against your idea of the API rather than against the API.
 
+### When you must invent one, two rules
+
+1. **Say so, in the payload itself.** The word `INVENTED`, plus why capturing
+   was impossible, in the expectation *and* in the raw file — `_comment` at the
+   top of a JSON payload, an HTML comment at the top of a page. The disclosure
+   may live in `case`, `note`, `invented` or `provenance_note`;
+   `tests/test_fixtures.py::test_an_invented_payload_says_so` reads all four and
+   then requires the marker in the raw file. (A fixture whose *expectation* is
+   invented but whose payload is a genuine capture says `"raw_is_capture": true`
+   — `zen-12`'s real 410 tombstone body is the only one.)
+2. **Never wear a live identifier.** Synthetic DOIs go on the reserved DataCite
+   test prefix **`10.5072`**, which does not resolve; synthetic Zenodo record
+   URLs go to `sandbox.zenodo.org`. An invented record bound to a real DOI is
+   not a fixture, it is a false statement about someone's work — the rendering
+   fixtures once flagged a real, unretracted *Wind Energy* paper as retracted
+   and hung a "withdrawn upstream" banner on a live Zenodo dataset
+   (fixture-compliance-01). Do not use real people's names either.
+
 Capture with the real client so the shape is honest:
 
 ```sh
 curl -sS -H 'Accept: application/json' \
   -A 'iea-wind-data-catalogue/0.1 (+https://github.com/thclark/iea-wind-data-catalogue; tom@octue.com)' \
-  https://zenodo.org/api/records/1234567 \
+  https://sandbox.zenodo.org/api/records/1234567 \
   | python -m json.tool > fixtures/zenodo/raw/zen-01-canonical.json
 ```
 
 ## `<id>.json` — the expectation
 
-One of four shapes, and the file says which in its `fixture_kind`:
+One of five shapes, and the file says which in its `fixture_kind`:
 
 * `"source_namespace"` — what `Adapter.map()` should produce: the
   `source` block, the `identity_key`, the `source_key`, and the per-field
@@ -54,13 +79,16 @@ One of four shapes, and the file says which in its `fixture_kind`:
   to capture, so `raw` is the live probe transcript that justifies the
   decision and the expectation is the `SourceResult` the run report shows
   (`wdh-07`).
+* `"ui_state"` — not a record at all: a `state/*.json` payload the site renders
+  (`r-07`, `r-08`, `r-09`). These live in `fixtures/rendering/ui/` so the
+  generic record validation does not claim them.
 
 ```jsonc
 {
   "fixture_id": "zen-01-canonical",
   "fixture_kind": "source_namespace",
   "case": "Published dataset, DOI, ORCID'd creators, licence, files",
-  "identity_key": "10.5281/zenodo.1234567",
+  "identity_key": "10.5072/zenodo.1234567",
   "source_key": "3",
   "source": { "...": "the SourceNamespace fields" },
   "provenance": { "title": { "extraction_method": "api" } }

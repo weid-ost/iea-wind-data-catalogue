@@ -158,9 +158,34 @@ class TestTheFixtureSet:
             assert (FIXTURES / fixture["raw"]).exists(), fixture["fixture_id"]
 
     def test_invented_fixtures_say_so(self) -> None:
-        """Prefer real payloads; when you must invent one, admit it in the file."""
+        """Prefer real payloads; when you must invent one, admit it in the file.
+
+        zen-01 belongs in this set. It is the reference fixture — the shape
+        every other Zenodo fixture was built from — and it was the one payload
+        here that had been invented without saying so, on ids that collided
+        with a live Zenodo record (fixture-compliance-02). Its identifiers now
+        sit on the reserved 10.5072 test prefix and it declares itself.
+        """
         invented = {f["fixture_id"] for f in ALL + record_fixtures() if f.get("invented")}
-        assert invented == {"zen-06-embargoed", "zen-07-html-description", "zen-12-tombstone"}
+        assert invented == {
+            "zen-01-canonical",
+            "zen-06-embargoed",
+            "zen-07-html-description",
+            "zen-12-tombstone",
+        }
+
+    def test_invented_fixtures_never_wear_a_live_identifier(self) -> None:
+        """An invented Zenodo payload uses the reserved 10.5072 test prefix.
+
+        10.5281 is Zenodo's live prefix: a DOI under it either resolves to
+        somebody's work or will one day. zen-02..zen-05 and zen-08..zen-11 are
+        verbatim captures and keep theirs; the invented ones do not get to
+        borrow one.
+        """
+        for fixture in ALL + record_fixtures():
+            if not fixture.get("invented") or fixture.get("raw_is_capture"):
+                continue
+            assert fixture["identity_key"].startswith("10.5072/"), fixture["fixture_id"]
 
 
 @pytest.mark.parametrize("fixture", ALL, ids=lambda f: f["fixture_id"])
@@ -690,7 +715,7 @@ class TestTombstone:
         assert validate_package(package, config.organization_names(), config.group_names()) == []
 
     def test_withdrawal_is_append_on_change_too(self, events_dir: Path) -> None:
-        identity = "10.5281/zenodo.1234566"
+        identity = "10.5072/zenodo.1234566"
         client = FakeClient(pages={"/records/1234567": self.tombstone},
                             statuses={"/records/1234567": 410})
         adapter = configured_adapter(client)
@@ -701,15 +726,15 @@ class TestTombstone:
     def test_a_healthy_record_is_never_withdrawn(self, events_dir: Path) -> None:
         client = FakeClient(pages={"/records/1234567": {"id": 1234567, "revision": 3}})
         adapter = configured_adapter(client)
-        assert adapter.recheck_withdrawn("10.5281/zenodo.1234566", "1234567", events_dir) is False
-        assert read_events("10.5281/zenodo.1234566", events_dir) == []
+        assert adapter.recheck_withdrawn("10.5072/zenodo.1234566", "1234567", events_dir) is False
+        assert read_events("10.5072/zenodo.1234566", events_dir) == []
 
     def test_an_unreachable_api_is_never_read_as_withdrawal(self, events_dir: Path) -> None:
         """Runbook: 'a source being unreachable is never withdrawal'."""
         client = FakeClient(failures={"/records/": "connection reset"})
         adapter = configured_adapter(client)
-        assert adapter.recheck_withdrawn("10.5281/zenodo.1234566", "1234567", events_dir) is False
-        assert read_events("10.5281/zenodo.1234566", events_dir) == []
+        assert adapter.recheck_withdrawn("10.5072/zenodo.1234566", "1234567", events_dir) is False
+        assert read_events("10.5072/zenodo.1234566", events_dir) == []
 
     def test_the_expected_record_matches_the_fixture(self, events_dir: Path) -> None:
         fixture = load(FIXTURES / "zen-12-tombstone.json")

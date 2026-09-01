@@ -471,6 +471,71 @@ class TestThePendingQueue:
         assert list(cache_directory.glob("*.json")) == []
         # …and nothing raised, which is the entire point.
 
+    def test_x07_the_fixture_file_drives_the_same_path(self, tmp_path: Path) -> None:
+        """The same case, driven from ``fixtures/cross-cutting/x-07-cache-miss-no-llm``.
+
+        ADR-0031 §3 says "fixture x-07 exists to hold this line" and the fixture
+        catalogue has always listed it, but for a while no such file existed —
+        the behaviour was asserted only against a string literal in this module
+        (site-05, compliance-07, fixture-compliance-04). It exists now, and this
+        is what reads it: the page it holds is deliberately unclassifiable by
+        pattern, so the deterministic tier hands it to Tier 3, and Tier 3 has
+        neither a cache entry nor a credential.
+        """
+        from harvest import config
+        from harvest.adapters.ieawind import classify_page
+        from harvest.doi import extract_dois
+
+        directory = config.fixtures_dir() / "cross-cutting"
+        fixture = json.loads(
+            (directory / "x-07-cache-miss-no-llm.json").read_text(encoding="utf-8")
+        )
+        page = (directory / fixture["html"]).read_text(encoding="utf-8")
+
+        content = main_text(page)
+        assert len(content) == fixture["expected_content_chars"]
+        assert content_hash(content) == fixture["expected_content_hash"]
+        assert cache_key(content) == fixture["expected_cache_key"]
+        assert extract_dois(content) == fixture["expected_dois"]
+
+        # Deterministic classification declines, so the page escalates.
+        assert classify_page(fixture["page_url"], content, trusted=fixture["trusted"]) is None
+
+        cache_directory = tmp_path / "cache"
+        state_directory = tmp_path / "state"
+        cache_directory.mkdir()
+        state_directory.mkdir()
+
+        assert extract(content, cache_directory=cache_directory) is fixture[
+            "expected_extraction_result"
+        ]
+        assert extraction.STATS.calls == fixture["expected_model_calls"], (
+            "no credential means no call is even attempted"
+        )
+        queue_pending(
+            fixture["page_url"],
+            cache_key(content),
+            fixture["expected_pending_reason"],
+            state_directory,
+        )
+
+        pending = read_pending(state_directory)
+        assert len(pending) == fixture["expected_pending_entries"]
+        assert pending[0]["url"] == fixture["page_url"]
+        assert (
+            len(list(cache_directory.glob("*.json")))
+            == fixture["expected_cache_entries_written"]
+        )
+
+        # Queueing is idempotent: a second pass over the same page adds nothing.
+        queue_pending(
+            fixture["page_url"],
+            cache_key(content),
+            fixture["expected_pending_reason"],
+            state_directory,
+        )
+        assert len(read_pending(state_directory)) == fixture["expected_pending_entries"]
+
 
 class TestTheDrain:
     def test_an_empty_queue_resolves_nothing(self, tmp_path: Path) -> None:

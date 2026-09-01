@@ -47,10 +47,26 @@ make validate
 CKAN's API refuses ([[record-format]] §4.5). If it is green, `records/*.json`
 POSTs unmodified.
 
+**On `owner_org`, which nearly falsified that sentence.** CKAN's
+`owner_org_validator` raises *"An organization must be provided"* whenever the
+field is missing and `ckan.auth.create_unowned_dataset` is false — which is the
+default, and which is schema-level, so it fires even for a sysadmin token. For a
+while the gate only checked `owner_org` *when present*, and every record omitted
+it, so a green gate would still have failed all 30 POSTs on promotion day
+(compliance-01). Both halves are closed now:
+`harvest.institutions.infer_owner_org` always returns an organisation — falling
+back to the `unattributed` org that ADR-0020 names — and `harvest/ckan_compat.py`
+**requires** `owner_org`, so a record without one cannot pass the gate. As of the
+2026-09-01 harvest all 30 records carry one (`iea-wind` 7, `nrel` 6, `ost` 5,
+`zenodo-community` 4, `pnnl` 4, `unattributed` 3, `dtu` 1). No CKAN config
+change is needed; leave `create_unowned_dataset` at its default.
+
 Also confirm:
 
 - [ ] every `groups[].name` exists in `groups.yaml`
-- [ ] every `owner_org` exists in `organizations.yaml`
+- [ ] every `owner_org` exists in `organizations.yaml` (the gate enforces this;
+      the checklist entry is a reminder that `organizations.yaml` must be
+      *loaded into CKAN* before the records are)
 - [ ] `schema/ckan-scheming.json` and `harvest.materialize.EXTRA_KEYS` agree
       (a test enforces this — `make test`)
 - [ ] a named owner and a named budget holder exist

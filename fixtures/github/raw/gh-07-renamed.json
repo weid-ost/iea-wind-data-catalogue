@@ -1,4 +1,5 @@
 {
+  "_comment": "INVENTED, derived from the gh-01 payload — see the `note` of fixtures/github/gh-07-renamed.json. The repository path was rewritten to its pre-rename spelling to exercise the first-seen-path rule.",
   "_resolved": {
     "badge_candidates": [],
     "doi": null,

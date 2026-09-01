@@ -18,15 +18,15 @@ from harvest.events import read_events, record_scrape
 from harvest.materialize import materialize_all
 from harvest.runreport import read_run_report
 
-KEY = "10.5281/zenodo.1234566"
-SLUG = "doi-10-5281-zenodo-1234566"
+KEY = "10.5072/zenodo.1234566"
+SLUG = "doi-10-5072-zenodo-1234566"
 
 
 def seed(repo: Path, key: str = KEY, **source) -> None:
     payload = {
         "title": "Lidar measurements from the Østerild campaign, 2021",
-        "url": "https://zenodo.org/records/1234567",
-        "source_urls": ["https://zenodo.org/records/1234567"],
+        "url": "https://sandbox.zenodo.org/records/1234567",
+        "source_urls": ["https://sandbox.zenodo.org/records/1234567"],
         "license_id": "cc-by",
     }
     payload.update(source)

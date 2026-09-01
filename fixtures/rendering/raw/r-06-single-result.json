@@ -1,22 +1,23 @@
 {
-  "osti_id": 1854723,
+  "_comment": "INVENTED. Not a capture — shaped like the API response it imitates so the expectation beside it is consistent, but no upstream artifact carries this payload. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, so no real work is implicated. See fixtures/rendering/README.md.",
+  "osti_id": 90000007,
   "title": "Wind plant performance prediction benchmark: final report",
   "description": "Final report of the WP3 benchmark, comparing eleven wind plant performance models against operational data.",
-  "doi": "10.2172/1854723",
+  "doi": "10.5072/example-osti-90000007",
   "publication_date": "2022-04-01",
   "product_type": "Technical Report",
   "research_orgs": [
     "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
   ],
   "authors": [
-    "Fields, Jason",
-    "Optis, Mike"
+    "Halloran, Priya",
+    "Serrano, Teodor"
   ],
   "date_metadata_last_updated": "2022-04-11T00:00:00Z",
   "links": [
     {
       "rel": "citation",
-      "href": "https://www.osti.gov/biblio/1854723"
+      "href": "https://www.osti.gov/biblio/90000007"
     }
   ]
 }

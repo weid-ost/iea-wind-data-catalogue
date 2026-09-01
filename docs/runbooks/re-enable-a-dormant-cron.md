@@ -121,6 +121,11 @@ detects changed source keys, appends only what changed, and materialises. See
 
 ---
 
-**Last executed:** never — the workflow does not exist yet. The local half of
-§3.2 was verified on 2026-08-31: `harvest run` writes `state/last-run.json`
-unconditionally, and a no-op run leaves everything else untouched.
+**Last executed:** never — and it stays `never` until the workflow runs for real.
+`.github/workflows/catalogue.yml` **does exist** (§4 describes it accurately);
+what does not exist is a run of it. A workflow cannot be executed locally and
+this one has deliberately not been pushed, so its own header says so too. The
+local half of §3.2 was verified on 2026-08-31: `harvest run` writes
+`state/last-run.json` unconditionally, and a no-op run leaves everything else
+untouched. §2 — the "re-enable the dormant schedule" steps — is the part that
+has never been exercised, because nothing has yet been dormant.

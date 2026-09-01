@@ -33,11 +33,15 @@ Related: [[architecture]] · [[adr-0021-canonical-record-is-a-ckan-package-dict]
 
 ### 1.1 The identity key
 
-`harvest.identity.identity_key(...)` prefers, strictly in order:
+`harvest.identity.identity_key(...)` prefers, strictly in order. The worked
+identity throughout this document is `10.5072/zenodo.1234566`, which is the
+**invented** `zen-01-canonical` fixture: `10.5072` is DataCite's reserved test
+prefix and does not resolve, so nothing here is a claim about a real work
+(`fixtures/README.md`). Real records use their real prefixes.
 
 | # | Rule | Example | `identity_kind()` |
 |---|---|---|---|
-| 1 | the lowercase-normalised **DOI** | `10.5281/zenodo.1234566` | `doi` |
+| 1 | the lowercase-normalised **DOI** | `10.5072/zenodo.1234566` | `doi` |
 | 2 | `source_system\|source_id` | `zenodo\|1234567`, `osti\|1854723` | `source` |
 | 3 | `hash\|<16 hex>` of normalised title + first-author surname + year | `hash\|ab12cd34ef567890` | `fragile` |
 
@@ -65,7 +69,7 @@ is **the same string** in four places — that is the point:
 
 | identity key | slug |
 |---|---|
-| `10.5281/zenodo.1234566` | `doi-10-5281-zenodo-1234566` |
+| `10.5072/zenodo.1234566` | `doi-10-5072-zenodo-1234566` |
 | `zenodo\|1234567` | `zenodo-1234567` |
 | `github\|IEA-Task-43/digital-wra-data-standard` | `github-iea-task-43-digital-wra-data-standard` |
 | `hash\|ab12cd34ef567890` | `hash-ab12cd34ef567890` |
@@ -136,7 +140,7 @@ Written as one line; shown pretty here. This is the shape
 {
   "actor": "harvest/zenodo",              // who wrote it: harvest/<source>, curator:<name>, reconcile
   "event_type": "scraped",
-  "identity_key": "10.5281/zenodo.1234566",  // the CONCEPT doi, never the version doi (zen-02)
+  "identity_key": "10.5072/zenodo.1234566",  // the CONCEPT doi, never the version doi (zen-02)
   "local": {},                            // a scrape never sets local.*
   "observed_at": "2026-08-24T03:11:07Z",  // OUR clock, not the source's
   "provenance": {                         // per field, not per record
@@ -156,11 +160,11 @@ Written as one line; shown pretty here. This is the shape
       { "affiliation": "National Renewable Energy Laboratory",
         "name": "Okafor, Chidi", "orcid": "0000-0001-5109-3700" }
     ],
-    "doi": "10.5281/zenodo.1234566",
+    "doi": "10.5072/zenodo.1234566",
     "extra": {                            // anything the mapping has no field for; never rendered
       "zenodo_concept_recid": "1234566",
       "zenodo_record_id": 1234567,
-      "zenodo_version_doi": "10.5281/zenodo.1234567"
+      "zenodo_version_doi": "10.5072/zenodo.1234567"
     },
     "iea_task": ["task-43"],              // SET-VALUED: unions on collision
     "keywords": ["lidar", "wind energy", "Østerild", "remote sensing"],
@@ -170,17 +174,17 @@ Written as one line; shown pretty here. This is the shape
     "published_date": "2024-06-01",       // may be year-only; NEVER fabricate a month (cr-02)
     "publisher": "Zenodo",
     "related_identifiers": [
-      { "identifier": "10.5281/zenodo.1234566",
+      { "identifier": "10.5072/zenodo.1234566",
         "identifier_type": "DOI", "relation": "IsVersionOf" }
     ],
     "resource_kind": "dataset",
     "resources": [                        // LINKS, never mirrors
       { "format": "csv", "name": "osterild-lidar-2021.csv",
-        "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv" }
+        "url": "https://sandbox.zenodo.org/records/1234567/files/osterild-lidar-2021.csv" }
     ],
-    "source_urls": ["https://zenodo.org/records/1234567"],
+    "source_urls": ["https://sandbox.zenodo.org/records/1234567"],
     "title": "Lidar measurements from the Østerild campaign, 2021",
-    "url": "https://zenodo.org/records/1234567",
+    "url": "https://sandbox.zenodo.org/records/1234567",
     "version": "2.0",
     "withdrawn": false
   },
@@ -193,7 +197,7 @@ Written as one line; shown pretty here. This is the shape
 ### 2.2 An `annotated` line, exactly as written
 
 ```json
-{"actor":"curator:tom","event_type":"annotated","identity_key":"10.5281/zenodo.1234566","local":{"curator_notes":[{"added_at":"2026-08-28T09:00:00Z","field":"license_id","note":"OST note: the licence stated at source appears incorrect; see the LICENCE file in the archive."}],"iea_task":["task-49"]},"note":"Task 49 attribution from the IDEA workshop list","observed_at":"2026-08-28T09:00:00Z","provenance":{},"source":{}}
+{"actor":"curator:tom","event_type":"annotated","identity_key":"10.5072/zenodo.1234566","local":{"curator_notes":[{"added_at":"2026-08-28T09:00:00Z","field":"license_id","note":"OST note: the licence stated at source appears incorrect; see the LICENCE file in the archive."}],"iea_task":["task-49"]},"note":"Task 49 attribution from the IDEA workshop list","observed_at":"2026-08-28T09:00:00Z","provenance":{},"source":{}}
 ```
 
 Note what is *absent*: no `source` content, no `source_key`. An annotation can
@@ -295,7 +299,7 @@ in a no-op heartbeat commit is `state/last-run.json`.
 
 ### 4.1 A full record, annotated
 
-`records/doi-10-5281-zenodo-1234566.json`, produced by the scrape in §2.1 plus
+`records/doi-10-5072-zenodo-1234566.json`, produced by the scrape in §2.1 plus
 the annotation in §2.2. This is real output — the procedure that generates it
 is [[correct-a-record]].
 
@@ -305,9 +309,9 @@ is [[correct-a-record]].
     { "key": "access_status", "value": "open" },
     { "key": "authors", "value": "[{\"affiliation\":\"Technical University of Denmark\",…}]" },
     { "key": "curator_notes", "value": "[{\"added_at\":\"2026-08-28T09:00:00Z\",\"field\":\"license_id\",…}]" },
-    { "key": "doi", "value": "10.5281/zenodo.1234566" },
+    { "key": "doi", "value": "10.5072/zenodo.1234566" },
     { "key": "first_seen", "value": "2026-08-24T03:11:07Z" },   // our clock, first event
-    { "key": "identity_key", "value": "10.5281/zenodo.1234566" },
+    { "key": "identity_key", "value": "10.5072/zenodo.1234566" },
     { "key": "identity_kind", "value": "doi" },                 // doi | source | fragile
     { "key": "iea_task", "value": "[\"task-43\",\"task-49\"]" },  // UNION: 43 from Zenodo, 49 by hand
     { "key": "last_seen", "value": "2026-08-28T09:00:00Z" },
@@ -317,30 +321,30 @@ is [[correct-a-record]].
     { "key": "provenance", "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},…}" },
     { "key": "published_date", "value": "2024-06-01" },
     { "key": "publisher", "value": "Zenodo" },
-    { "key": "related_identifiers", "value": "[{\"identifier\":\"10.5281/zenodo.1234566\",…}]" },
+    { "key": "related_identifiers", "value": "[{\"identifier\":\"10.5072/zenodo.1234566\",…}]" },
     { "key": "resource_kind", "value": "dataset" },
     { "key": "source_id", "value": "1234567" },
     { "key": "source_key", "value": "3" },
     { "key": "source_system", "value": "zenodo" },              // the last system to scrape
     { "key": "source_systems", "value": "[\"zenodo\"]" },        // every system that has (x-01)
-    { "key": "source_url", "value": "https://zenodo.org/records/1234567" },
-    { "key": "source_urls", "value": "[\"https://zenodo.org/records/1234567\"]" },
+    { "key": "source_url", "value": "https://sandbox.zenodo.org/records/1234567" },
+    { "key": "source_urls", "value": "[\"https://sandbox.zenodo.org/records/1234567\"]" },
     { "key": "withdrawn", "value": "false" }
   ],
   "groups": [ { "name": "task-43" }, { "name": "task-49" } ],   // must exist in groups.yaml
   "license_id": "cc-by",                                        // must exist in the licence register
-  "name": "doi-10-5281-zenodo-1234566",                         // = the slug = the file stem = the URL
+  "name": "doi-10-5072-zenodo-1234566",                         // = the slug = the file stem = the URL
   "notes": "<p>Ten-minute statistics from a scanning lidar …</p>",
   "private": false,
   "resources": [
     { "format": "csv", "name": "osterild-lidar-2021.csv",
-      "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv" }
+      "url": "https://sandbox.zenodo.org/records/1234567/files/osterild-lidar-2021.csv" }
   ],
   "state": "active",                                            // see §4.3
   "tags": [ { "name": "lidar" }, { "name": "osterild" },
             { "name": "remote-sensing" }, { "name": "wind-energy" } ],
   "title": "Lidar measurements from the Østerild campaign, 2021",
-  "url": "https://zenodo.org/records/1234567",
+  "url": "https://sandbox.zenodo.org/records/1234567",
   "version": "2.0"
 }
 ```

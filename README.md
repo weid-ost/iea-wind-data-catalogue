@@ -25,7 +25,14 @@ Wind Data Hub, disabled itself behind its authentication wall and said so — th
 site shows that as a degradation notice rather than pretending. Seven
 iea-wind.org pages that needed a model to classify are sitting in
 `state/pending-extraction.json`, because the model was unavailable and the rule
-is that the harvest does not fail when that happens.
+is that the harvest does not fail when that happens. Specifically: GitHub
+Models — the inference provider ADR-0030 chose because it needs no additional
+account — entered a scheduled retirement brownout and answers `410 Gone`. The
+run degraded exactly as [ADR-0031](docs/adrs/adr-0031-the-harvest-never-fails-on-llm-unavailability.md)
+requires, queued the pages, reported `ok: true`, and left Tier 1 untouched.
+Draining the queue needs a working OpenAI-compatible endpoint in
+`$HARVEST_LLM_ENDPOINT` — see
+[`docs/runbooks/drain-the-pending-extraction-queue.md`](docs/runbooks/drain-the-pending-extraction-queue.md).
 
 **There is a deliberate five-record cap per source.** `harvest.DEFAULT_LIMIT`
 is 5 and `sources.yaml` sets `max_records: 5` everywhere, so a stray run cannot
@@ -39,7 +46,7 @@ you do not need Python 3.12 installed.
 
 ```sh
 make sync        # install the pinned environment (uv sync --frozen --dev)
-make test        # 1447 passed, 101 skipped
+make test        # 2080 passed, 476 skipped
 make harvest     # harvest every enabled source (LIMIT=5) → events → records → validate → report
 make materialize # replay annotations/ + events/ into records/ (derived; delete it freely)
 make validate    # the CKAN-compat gate
@@ -61,7 +68,7 @@ The underlying CLI is `uv run python -m harvest
 | `harvest/` | adapters, event log, materialiser, CKAN gate. **Read `harvest/CONTRACT.md` first** |
 | `events/` | **the source of truth.** Append-only JSONL, one file per identity |
 | `records/` | derived CKAN package dicts. Regenerable — `make materialize` rebuilds them byte-for-byte |
-| `annotations/` | the human-readable record of curatorial intent |
+| `annotations/` | the human-readable record of curatorial intent. Deliberately empty of samples — the worked templates are in `docs/examples/annotations/`, so a pending annotation here always means a curator is waiting on a harvest |
 | `cache/` | committed LLM extraction cache, content-hash keyed |
 | `state/last-run.json` | the run report, and the cron heartbeat — written on every run |
 | `site/` | the Astro renderer and Pagefind index build |

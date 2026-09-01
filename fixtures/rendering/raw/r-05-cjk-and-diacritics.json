@@ -1,10 +1,11 @@
 {
-  "id": 6650123,
-  "doi": "10.5281/zenodo.6650123",
-  "conceptdoi": "10.5281/zenodo.6650123",
+  "_comment": "INVENTED. Not a capture — shaped like the API response it imitates so the expectation beside it is consistent, but no upstream artifact carries this payload. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, so no real work is implicated. See fixtures/rendering/README.md.",
+  "id": 90000006,
+  "doi": "10.5072/zenodo.90000006",
+  "conceptdoi": "10.5072/zenodo.90000006",
   "revision": 1,
   "links": {
-    "self_html": "https://zenodo.org/records/6650123"
+    "self_html": "https://sandbox.zenodo.org/records/90000006"
   },
   "metadata": {
     "title": "洋上風力発電所の後流計測 — Offshore wind farm wake measurements at Chōshi",
@@ -50,7 +51,7 @@
       "key": "choshi-wake.nc",
       "type": "nc",
       "links": {
-        "self": "https://zenodo.org/records/6650123/files/choshi-wake.nc"
+        "self": "https://sandbox.zenodo.org/records/90000006/files/choshi-wake.nc"
       }
     }
   ]

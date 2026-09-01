@@ -258,7 +258,7 @@ from harvest.identity import identity_key, slug_for_identity, slugify
 
 | identity key | slug |
 |---|---|
-| `10.5281/zenodo.1234566` | `doi-10-5281-zenodo-1234566` |
+| `10.5072/zenodo.1234566` | `doi-10-5072-zenodo-1234566` |
 | `zenodo|1234567` | `zenodo-1234567` |
 | `github|IEA-Task-43/digital-wra-data-standard` | `github-iea-task-43-digital-wra-data-standard` |
 | `hash|ab12cd34ef567890` | `hash-ab12cd34ef567890` |
@@ -398,7 +398,7 @@ Written as one line; shown pretty here. This is real output from
 
 > `zen-01` is a hand-built reference payload, and its `source_key` of `"3"` is
 > the bare revision. A payload harvested from the live API produces
-> `"3@10.5281/zenodo.1234567"` — §3. The shape of the event is what this example
+> `"3@10.5072/zenodo.1234567"` — §3. The shape of the event is what this example
 > is for; `map()` copies whatever key `harvest()` handed it, so both are valid
 > lines.
 
@@ -406,7 +406,7 @@ Written as one line; shown pretty here. This is real output from
 {
   "actor": "harvest/zenodo",
   "event_type": "scraped",
-  "identity_key": "10.5281/zenodo.1234566",
+  "identity_key": "10.5072/zenodo.1234566",
   "local": {},
   "observed_at": "2026-08-24T03:11:07Z",
   "provenance": {
@@ -426,11 +426,11 @@ Written as one line; shown pretty here. This is real output from
       { "affiliation": "National Renewable Energy Laboratory",
         "name": "Okafor, Chidi", "orcid": "0000-0001-5109-3700" }
     ],
-    "doi": "10.5281/zenodo.1234566",
+    "doi": "10.5072/zenodo.1234566",
     "extra": {
       "zenodo_concept_recid": "1234566",
       "zenodo_record_id": 1234567,
-      "zenodo_version_doi": "10.5281/zenodo.1234567"
+      "zenodo_version_doi": "10.5072/zenodo.1234567"
     },
     "iea_task": ["task-43"],
     "keywords": ["lidar", "wind energy", "Østerild", "remote sensing"],
@@ -440,17 +440,17 @@ Written as one line; shown pretty here. This is real output from
     "published_date": "2024-06-01",
     "publisher": "Zenodo",
     "related_identifiers": [
-      { "identifier": "10.5281/zenodo.1234566",
+      { "identifier": "10.5072/zenodo.1234566",
         "identifier_type": "DOI", "relation": "IsVersionOf" }
     ],
     "resource_kind": "dataset",
     "resources": [
       { "format": "csv", "name": "osterild-lidar-2021.csv",
-        "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv" }
+        "url": "https://sandbox.zenodo.org/records/1234567/files/osterild-lidar-2021.csv" }
     ],
-    "source_urls": ["https://zenodo.org/records/1234567"],
+    "source_urls": ["https://sandbox.zenodo.org/records/1234567"],
     "title": "Lidar measurements from the Østerild campaign, 2021",
-    "url": "https://zenodo.org/records/1234567",
+    "url": "https://sandbox.zenodo.org/records/1234567",
     "version": "2.0",
     "withdrawn": false
   },
@@ -463,7 +463,7 @@ Written as one line; shown pretty here. This is real output from
 ### A full `annotated` line, exactly as written
 
 ```json
-{"actor":"curator:tom","event_type":"annotated","identity_key":"10.5281/zenodo.1234566","local":{"curator_notes":[{"added_at":"2026-08-28T09:00:00Z","field":"license_id","note":"OST note: the licence stated at source appears incorrect; see the LICENCE file in the archive."}],"iea_task":["task-49"]},"note":"Task 49 attribution from the IDEA workshop list","observed_at":"2026-08-28T09:00:00Z","provenance":{},"source":{}}
+{"actor":"curator:tom","event_type":"annotated","identity_key":"10.5072/zenodo.1234566","local":{"curator_notes":[{"added_at":"2026-08-28T09:00:00Z","field":"license_id","note":"OST note: the licence stated at source appears incorrect; see the LICENCE file in the archive."}],"iea_task":["task-49"]},"note":"Task 49 attribution from the IDEA workshop list","observed_at":"2026-08-28T09:00:00Z","provenance":{},"source":{}}
 ```
 
 ### Reading it
@@ -494,7 +494,7 @@ run in which nothing changed produces no diff in `records/`.
 
 ### A full record
 
-`records/doi-10-5281-zenodo-1234566.json`, from the scrape and annotation above:
+`records/doi-10-5072-zenodo-1234566.json`, from the scrape and annotation above:
 
 ```json
 {
@@ -502,9 +502,9 @@ run in which nothing changed produces no diff in `records/`.
     { "key": "access_status", "value": "open" },
     { "key": "authors", "value": "[{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Müller, Søren Ø.\",\"orcid\":\"0000-0002-1825-0097\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Okafor, Chidi\",\"orcid\":\"0000-0001-5109-3700\"}]" },
     { "key": "curator_notes", "value": "[{\"added_at\":\"2026-08-28T09:00:00Z\",\"field\":\"license_id\",\"note\":\"OST note: the licence stated at source appears incorrect; see the LICENCE file in the archive.\"}]" },
-    { "key": "doi", "value": "10.5281/zenodo.1234566" },
+    { "key": "doi", "value": "10.5072/zenodo.1234566" },
     { "key": "first_seen", "value": "2026-08-24T03:11:07Z" },
-    { "key": "identity_key", "value": "10.5281/zenodo.1234566" },
+    { "key": "identity_key", "value": "10.5072/zenodo.1234566" },
     { "key": "identity_kind", "value": "doi" },
     { "key": "iea_task", "value": "[\"task-43\",\"task-49\"]" },
     { "key": "last_seen", "value": "2026-08-28T09:00:00Z" },
@@ -514,24 +514,24 @@ run in which nothing changed produces no diff in `records/`.
     { "key": "provenance", "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}" },
     { "key": "published_date", "value": "2024-06-01" },
     { "key": "publisher", "value": "Zenodo" },
-    { "key": "related_identifiers", "value": "[{\"identifier\":\"10.5281/zenodo.1234566\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]" },
+    { "key": "related_identifiers", "value": "[{\"identifier\":\"10.5072/zenodo.1234566\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]" },
     { "key": "resource_kind", "value": "dataset" },
     { "key": "source_id", "value": "1234567" },
     { "key": "source_key", "value": "3" },
     { "key": "source_system", "value": "zenodo" },
     { "key": "source_systems", "value": "[\"zenodo\"]" },
-    { "key": "source_url", "value": "https://zenodo.org/records/1234567" },
-    { "key": "source_urls", "value": "[\"https://zenodo.org/records/1234567\"]" },
+    { "key": "source_url", "value": "https://sandbox.zenodo.org/records/1234567" },
+    { "key": "source_urls", "value": "[\"https://sandbox.zenodo.org/records/1234567\"]" },
     { "key": "withdrawn", "value": "false" }
   ],
   "groups": [ { "name": "task-43" }, { "name": "task-49" } ],
   "license_id": "cc-by",
-  "name": "doi-10-5281-zenodo-1234566",
+  "name": "doi-10-5072-zenodo-1234566",
   "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021.</p>",
   "private": false,
   "resources": [
     { "format": "csv", "name": "osterild-lidar-2021.csv",
-      "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv" }
+      "url": "https://sandbox.zenodo.org/records/1234567/files/osterild-lidar-2021.csv" }
   ],
   "state": "active",
   "tags": [
@@ -539,7 +539,7 @@ run in which nothing changed produces no diff in `records/`.
     { "name": "remote-sensing" }, { "name": "wind-energy" }
   ],
   "title": "Lidar measurements from the Østerild campaign, 2021",
-  "url": "https://zenodo.org/records/1234567",
+  "url": "https://sandbox.zenodo.org/records/1234567",
   "version": "2.0"
 }
 ```

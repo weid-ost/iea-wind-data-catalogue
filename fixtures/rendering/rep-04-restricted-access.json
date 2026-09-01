@@ -2,6 +2,7 @@
   "fixture_id": "rep-04-restricted-access",
   "fixture_kind": "record",
   "case": "Metadata is public, the files are not — the availability badge must never imply a download",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "No `resources` at all: the catalogue links to metadata it can honestly link to and never fabricates a download URL behind an auth wall (wdh-06).",
   "record": {
     "name": "wdh-buoy-lidar-2019",
@@ -26,7 +27,7 @@
       },
       {
         "key": "authors",
-        "value": "[{\"name\":\"Pacific Northwest National Laboratory\"}]"
+        "value": "[{\"name\":\"Example National Laboratory\"}]"
       },
       {
         "key": "first_seen",

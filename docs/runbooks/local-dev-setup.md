@@ -55,7 +55,7 @@ for development.
 make test
 ```
 
-Expect a green run — `1753 passed, 389 skipped` at the time of writing. (The
+Expect a green run — `2080 passed, 476 skipped` at the time of writing. (The
 skips are the fixture-kind parametrisations stepping over fixtures of the other
 kinds; nothing is being avoided.)
 
@@ -85,11 +85,15 @@ Finally, confirm the gate runs:
 
 ```sh
 uv run python -m harvest validate
-# validate-ckan-compat: OK — 0 record(s)
+# validate-ckan-compat: OK — 30 record(s)
 ```
 
-Zero records on a fresh clone is correct: `records/` is derived, and nothing has
-been harvested yet.
+Thirty on a fresh clone, because `records/` is committed: it is *derived* from
+`events/` — delete it and `make materialize` rebuilds it byte-for-byte — but the
+2026-09-01 harvest is in the tree, so a clone has a catalogue in it and the site
+builds without harvesting anything. On a foundation-only checkout, before any
+adapter had run, the same command printed `OK — 0 record(s)`, and that was
+correct too.
 
 ## 4. Everything you can run
 

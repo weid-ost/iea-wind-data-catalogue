@@ -1,3 +1,9 @@
+# ILLUSTRATIVE TEMPLATE — this file is NOT replayed.
+#
+# It lives under docs/examples/annotations/, not annotations/, because the
+# identity it names has never been harvested. Copy it into annotations/ and
+# change the identity_key to one that exists in records/ before using it.
+#
 # Sample annotation — suppression, on a fragile-identity record.
 #
 # `hash|…` identities come from the last-resort rule (no DOI, no stable source
@@ -26,7 +32,7 @@ annotations:
 
   - local:
       links:
-        - url: "https://zenodo.org/records/1234567"
+        - url: "https://sandbox.zenodo.org/records/1234567"
           label: "The record that supersedes this one"
     note: "point a reader at the surviving record"
     observed_at: "2026-08-28T11:00:00Z"

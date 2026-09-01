@@ -2,6 +2,7 @@
   "fixture_id": "r-08-stale-banner",
   "fixture_kind": "ui_state",
   "case": "state/last-run.json older than 45 days — the freshness banner in its warning state, with the pending-extraction backlog beside it",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "A state/last-run.json payload, not a record. Plan §3.3.3: staleness is surfaced on the front page, not in the Actions tab.",
   "threshold_days": 45,
   "last_run": {
@@ -16,19 +17,19 @@
       "wdh"
     ],
     "dropped_dois": [
-      "10.5281/zenodo.999999999"
+      "10.5072/zenodo.999999999"
     ],
     "unmapped_licenses": [
       {
-        "identity_key": "10.5281/zenodo.4302010",
-        "name": "doi-10-5281-zenodo-4302010",
+        "identity_key": "10.5072/zenodo.90000013",
+        "name": "doi-10-5072-zenodo-90000013",
         "license_raw": "Free for academic use, contact the author"
       }
     ],
     "notices": [
       {
         "type": "displacement",
-        "identity_key": "10.5281/zenodo.1234566",
+        "identity_key": "10.5072/zenodo.1234566",
         "field": "resource_kind",
         "local": "report",
         "source": "dataset"

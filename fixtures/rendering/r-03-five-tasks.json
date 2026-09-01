@@ -2,10 +2,11 @@
   "fixture_id": "r-03-five-tasks",
   "fixture_kind": "record",
   "case": "A record attributed to five IEA Wind Tasks at once — task-chip overflow",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "Five chips must wrap rather than scroll, and the card must not grow a second line of chrome to fit them.",
   "raw": "raw/r-03-five-tasks.json",
   "record": {
-    "name": "doi-10-5281-zenodo-8112233",
+    "name": "doi-10-5072-zenodo-90000004",
     "title": "Open benchmark of probabilistic wind power forecasts for offshore floating arrays",
     "notes": "<p>A cross-task benchmark dataset combining lidar-derived inflow, forecast ensembles and floating-array power output.</p>",
     "license_id": "cc-by",
@@ -34,7 +35,7 @@
       },
       {
         "key": "doi",
-        "value": "10.5281/zenodo.8112233"
+        "value": "10.5072/zenodo.90000004"
       },
       {
         "key": "first_seen",
@@ -42,7 +43,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.8112233"
+        "value": "10.5072/zenodo.90000004"
       },
       {
         "key": "identity_kind",
@@ -86,7 +87,7 @@
       },
       {
         "key": "source_id",
-        "value": "8112233"
+        "value": "90000004"
       },
       {
         "key": "source_key",
@@ -102,11 +103,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://zenodo.org/records/8112233"
+        "value": "https://sandbox.zenodo.org/records/90000004"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://zenodo.org/records/8112233\",\"https://iea-wind.org/task43/\"]"
+        "value": "[\"https://sandbox.zenodo.org/records/90000004\",\"https://iea-wind.org/task43/\"]"
       },
       {
         "key": "withdrawn",
@@ -115,7 +116,7 @@
     ],
     "resources": [
       {
-        "url": "https://zenodo.org/records/8112233/files/benchmark.zip",
+        "url": "https://sandbox.zenodo.org/records/90000004/files/benchmark.zip",
         "name": "benchmark.zip",
         "format": "zip"
       }
@@ -140,6 +141,6 @@
     "state": "active",
     "private": false,
     "owner_org": "dtu",
-    "url": "https://zenodo.org/records/8112233"
+    "url": "https://sandbox.zenodo.org/records/90000004"
   }
 }

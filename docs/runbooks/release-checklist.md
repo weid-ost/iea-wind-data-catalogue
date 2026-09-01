@@ -5,7 +5,7 @@ status: current
 date: 2026-08-31
 related: [adr-0039-design-system, adr-0021-canonical-record-is-a-ckan-package-dict, adr-0034-toolchain-pinning-and-no-auto-updates, run-the-a11y-gate, materialize-and-validate, promote-to-ckan]
 tags: [runbook, release, gates]
-last_executed: 2026-08-31
+last_executed: 2026-09-01
 ---
 
 # Runbook — release checklist
@@ -38,7 +38,7 @@ individually while iterating.
 
 | # | Gate | Command | Passes when |
 |---|---|---|---|
-| 1 | tests | `make test` | `1753 passed, 389 skipped` or better; **no new skips without a reason**. The skips are the fixture-kind parametrisations stepping over fixtures of the other kinds, which is by design |
+| 1 | tests | `make test` | `2080 passed, 476 skipped` or better; **no new skips without a reason**. The skips are the fixture-kind parametrisations stepping over fixtures of the other kinds, which is by design |
 | 2 | CKAN-compat | `make validate` | `validate-ckan-compat: OK — N record(s)` |
 | 3 | replay determinism | `rm -f records/*.json && make materialize && git status --short records/` | **no changes** — the acceptance test for ADR-0037 |
 | 4 | palette + contrast | `make build-tokens` | every pair reports `PASS`; **`design/palette.json` unchanged** unless a colour was deliberately altered |
@@ -48,7 +48,15 @@ individually while iterating.
 | 8 | pinning | `grep -rn "ubuntu-latest\|lts/\*" .github/workflows/` | **no matches** |
 
 All eight gates run today: `site/` and `.github/workflows/` both exist, and
-gates 1–8 were verified on 2026-09-01 against the first coherent harvest.
+gates 1–8 were verified **locally** on 2026-09-01 against the first coherent
+harvest. Neither workflow has itself executed — nothing has been pushed — so
+the CI *encoding* of these gates is cross-checked against this checklist by
+reading, not by a green run. That is not academic: gate 4 in `ci.yml` was
+reading `palette.json` from the repository root, which `design/gen.py` stopped
+writing, so it would have crashed with `FileNotFoundError` on every push
+(compliance-01). It now runs the same `git status --short design/` diff this
+section documents, and treats any contrast `FAIL` as fatal, since the Rev 3
+palette reports `ALL PAIRS PASS`.
 
 ### On gate 4
 
@@ -103,8 +111,11 @@ was last done.
       **Never infer an open licence** to clear this.
 - [ ] `dropped_dois` reviewed — DOIs that failed resolve-or-drop are a signal
       about a task page, not noise.
-- [ ] `unreachable_sources` is empty, or each one is expected (the WDH auth
-      wall, fixture `wdh-07`, is expected).
+- [ ] `unreachable_sources` is empty, or each one is expected. Two are:
+      **`wdh`** always (the auth wall, fixture `wdh-07`), and **`github`**
+      whenever the run had no `$GITHUB_TOKEN` — 60 requests/hour is not enough
+      for one harvest. Anything else on that list needs an explanation before
+      release.
 - [ ] Withdrawn records still render, with their banner, at their original URLs.
 - [ ] `/dev/components` is `noindex` **and** `data-pagefind-ignore`.
 - [ ] Every new component appears in the gallery; every new harvest behaviour
@@ -147,7 +158,7 @@ ran. An unexecuted runbook is a hypothesis.
 ---
 
 **Last executed:** 2026-09-01 — **all eight gates**, against the first coherent
-harvest rather than an empty checkout: `1753 passed, 389 skipped`;
+harvest rather than an empty checkout: `2080 passed, 476 skipped`;
 `validate-ckan-compat: OK — 30 record(s)`; `make materialize` byte-stable;
 `design/gen.py` reproduces `design/palette.json` exactly with every contrast
 pair PASS; `check-tokens`, `check-ckan-gate` and `check-urls` all OK;

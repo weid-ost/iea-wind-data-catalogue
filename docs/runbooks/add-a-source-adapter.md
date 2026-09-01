@@ -187,7 +187,7 @@ Then write the expectation, `fixtures/mysource/mys-01-canonical.json`:
   "fixture_id": "mys-01-canonical",
   "fixture_kind": "source_namespace",
   "case": "Published dataset, DOI, licence, files",
-  "identity_key": "10.5281/zenodo.1234567",
+  "identity_key": "10.5072/zenodo.1234567",
   "source_id": "123",
   "source_key": "3",
   "raw": "raw/mys-01-canonical.json",
@@ -201,6 +201,9 @@ fixture generically, so a malformed one fails immediately. Add your own
 parametrised test:
 
 ```python
+from conftest import load_fixtures   # tests/conftest.py; pytest puts tests/ on sys.path
+
+
 @pytest.mark.parametrize("fixture", load_fixtures("mysource"), ids=lambda f: f["fixture_id"])
 def test_map(fixture):
     raw = RawObservation(
@@ -215,7 +218,16 @@ def test_map(fixture):
 
 Cover the canonical case **and** the edge cases the catalogue names for your
 source — for an existing source, the rows in `fixtures/fixtures-catalogue.md`
-are the required set, not a menu.
+are the required set, not a menu. The catalogue is checked in both directions
+(`tests/test_fixtures.py::TestTheCatalogueMatchesTheTree`), so a new fixture
+without a row fails the suite just as a row without a fixture does. **Add the
+row in the same commit as the fixture.**
+
+If your fixture is invented rather than captured, say so in the expectation
+*and* in the raw payload — the word `INVENTED`, plus why — and put its
+identifiers on the reserved DataCite test prefix `10.5072`, which does not
+resolve. `tests/test_fixtures.py` enforces the first; the reason for the second
+is that a fixture bound to a live DOI makes a claim about somebody's real work.
 
 ## 5. Verify
 

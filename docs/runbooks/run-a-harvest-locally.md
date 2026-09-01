@@ -107,10 +107,26 @@ Prints `state/last-run.json`. What to look at, in order:
 | `validation_violations` | why `ok` is false |
 
 All seven adapters are built, so a healthy run reports `"implemented": true`
-for all seven. `wdh` is the one source expected to report `reachable: false`
-routinely: its listing endpoint is behind an authentication wall and the
-adapter disables itself rather than guessing (fixture `wdh-07`). That is
-correct degradation, not a failure — `ok` stays `true`.
+for all seven. **Two sources are routinely unreachable locally, and both are
+expected:**
+
+- **`wdh`, always.** Its listing endpoint is behind an authentication wall and
+  the adapter disables itself rather than guessing (fixture `wdh-07`).
+- **`github`, whenever `$GITHUB_TOKEN` is unset.** Unauthenticated GitHub gets
+  60 requests/hour, which one harvest exhausts, and the adapter says so:
+  `GitHub rate limit exhausted (resets at epoch …); set $GITHUB_TOKEN for
+  5,000 requests/hour`. Export a token — any classic token with no scopes
+  works, since every repository read here is public — and the source comes
+  back.
+
+Note the tension with [[drain-the-pending-extraction-queue]], which suggests
+not exporting `GITHUB_TOKEN` if you want the deterministic path only. That
+advice is about the *model* (GitHub Models authenticates with the same token);
+taking it costs you the `github` adapter for that run. Decide per run which
+you care about.
+
+Either way this is correct degradation, not a failure — `ok` stays `true`, the
+other sources harvest normally, and existing records are untouched.
 
 ## 5. Prove change detection works
 

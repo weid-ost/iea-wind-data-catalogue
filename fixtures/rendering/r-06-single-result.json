@@ -2,10 +2,11 @@
   "fixture_id": "r-06-single-result",
   "fixture_kind": "record",
   "case": "The record a search returns when it matches exactly one thing — the '1 result' state of the result list and its live region",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "Identity falls back to source_system|source_id because OSTI records need not carry a DOI — note the slug has no `doi-` prefix.",
   "raw": "raw/r-06-single-result.json",
   "record": {
-    "name": "osti-1854723",
+    "name": "osti-90000007",
     "title": "Wind plant performance prediction benchmark: final report",
     "notes": "<p>Final report of the WP3 benchmark, comparing eleven wind plant performance models against operational data.</p>",
     "license_id": "other-pd",
@@ -27,11 +28,11 @@
       },
       {
         "key": "authors",
-        "value": "[{\"name\":\"Fields, Jason\"},{\"name\":\"Optis, Mike\"}]"
+        "value": "[{\"name\":\"Halloran, Priya\"},{\"name\":\"Serrano, Teodor\"}]"
       },
       {
         "key": "doi",
-        "value": "10.2172/1854723"
+        "value": "10.5072/example-osti-90000007"
       },
       {
         "key": "first_seen",
@@ -39,7 +40,7 @@
       },
       {
         "key": "identity_key",
-        "value": "osti|1854723"
+        "value": "osti|90000007"
       },
       {
         "key": "identity_kind",
@@ -83,7 +84,7 @@
       },
       {
         "key": "source_id",
-        "value": "1854723"
+        "value": "90000007"
       },
       {
         "key": "source_key",
@@ -99,11 +100,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://www.osti.gov/biblio/1854723"
+        "value": "https://www.osti.gov/biblio/90000007"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://www.osti.gov/biblio/1854723\"]"
+        "value": "[\"https://www.osti.gov/biblio/90000007\"]"
       },
       {
         "key": "withdrawn",
@@ -119,6 +120,6 @@
     "state": "active",
     "private": false,
     "owner_org": "nrel",
-    "url": "https://www.osti.gov/biblio/1854723"
+    "url": "https://www.osti.gov/biblio/90000007"
   }
 }

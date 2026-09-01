@@ -9,7 +9,7 @@
     "checked": 42,
     "dead": [
       {
-        "url": "https://zenodo.org/records/3376526",
+        "url": "https://sandbox.zenodo.org/records/90000005",
         "status_code": 410,
         "reason": "HTTP 410",
         "checked_at": "2026-08-28T03:01:44Z"
@@ -22,8 +22,8 @@
       }
     ],
     "dead_by_record": {
-      "doi-10-5281-zenodo-3376526": [
-        "https://zenodo.org/records/3376526",
+      "doi-10-5072-zenodo-90000005": [
+        "https://sandbox.zenodo.org/records/90000005",
         "https://example.org/task-43/handbook.pdf"
       ]
     },

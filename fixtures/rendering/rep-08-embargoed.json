@@ -2,9 +2,10 @@
   "fixture_id": "rep-08-embargoed",
   "fixture_kind": "record",
   "case": "An embargoed deposit with a future release date — neutral availability badge, no implied download",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "Fixture zen-06: the embargo date is stated, and re-checked after it passes. Until then the page says so.",
   "record": {
-    "name": "doi-10-5281-zenodo-9001122",
+    "name": "doi-10-5072-zenodo-90000014",
     "title": "Blade leading-edge erosion field survey, 2026 campaign",
     "notes": "<p>Field survey of leading-edge erosion on 240 blades across four sites. Files are under embargo until the associated paper appears.</p>",
     "license_id": "cc-by",
@@ -26,11 +27,11 @@
       },
       {
         "key": "authors",
-        "value": "[{\"name\":\"Bech, Jakob Ilsted\"}]"
+        "value": "[{\"name\":\"Byrne, Sorcha\"}]"
       },
       {
         "key": "doi",
-        "value": "10.5281/zenodo.9001122"
+        "value": "10.5072/zenodo.90000014"
       },
       {
         "key": "embargo_date",
@@ -42,7 +43,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.9001122"
+        "value": "10.5072/zenodo.90000014"
       },
       {
         "key": "identity_kind",
@@ -86,7 +87,7 @@
       },
       {
         "key": "source_id",
-        "value": "9001122"
+        "value": "90000014"
       },
       {
         "key": "source_key",
@@ -102,11 +103,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://zenodo.org/records/9001122"
+        "value": "https://sandbox.zenodo.org/records/90000014"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://zenodo.org/records/9001122\"]"
+        "value": "[\"https://sandbox.zenodo.org/records/90000014\"]"
       },
       {
         "key": "withdrawn",
@@ -122,6 +123,6 @@
     "state": "active",
     "private": false,
     "owner_org": "fraunhofer-iwes",
-    "url": "https://zenodo.org/records/9001122"
+    "url": "https://sandbox.zenodo.org/records/90000014"
   }
 }

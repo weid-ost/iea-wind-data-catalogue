@@ -2,9 +2,10 @@
   "fixture_id": "rep-02-wes-publication",
   "fixture_kind": "record",
   "case": "A journal article from Crossref — resource_kind publication, with a container",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "`published_date` is year-only, exactly as Crossref stated it (fixture cr-02): the page must render '2024', never '1 January 2024'. One author is a collaboration with no given name (cr-06).",
   "record": {
-    "name": "doi-10-5194-wes-9-1123-2024",
+    "name": "doi-10-5072-example-wes-90000008",
     "title": "A comparison of wake models for large offshore wind farms",
     "notes": "<p>We compare five engineering wake models against four years of SCADA data from two large offshore wind farms.</p>",
     "license_id": "cc-by",
@@ -27,7 +28,7 @@
       },
       {
         "key": "authors",
-        "value": "[{\"name\":\"van der Laan, Maarten Paul\"},{\"name\":\"Peña, Alfredo\"},{\"name\":\"IEA Wind Task 31 Collaboration\"}]"
+        "value": "[{\"name\":\"van Loon, Marijke\"},{\"name\":\"Ferreira, Nuria\"},{\"name\":\"Example Wake Modelling Collaboration\"}]"
       },
       {
         "key": "container",
@@ -35,7 +36,7 @@
       },
       {
         "key": "doi",
-        "value": "10.5194/wes-9-1123-2024"
+        "value": "10.5072/example-wes-90000008"
       },
       {
         "key": "first_seen",
@@ -43,7 +44,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5194/wes-9-1123-2024"
+        "value": "10.5072/example-wes-90000008"
       },
       {
         "key": "identity_kind",
@@ -87,7 +88,7 @@
       },
       {
         "key": "source_id",
-        "value": "10.5194/wes-9-1123-2024"
+        "value": "10.5072/example-wes-90000008"
       },
       {
         "key": "source_key",
@@ -103,11 +104,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://doi.org/10.5194/wes-9-1123-2024"
+        "value": "https://doi.org/10.5072/example-wes-90000008"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://doi.org/10.5194/wes-9-1123-2024\",\"https://iea-wind.org/task31/\"]"
+        "value": "[\"https://doi.org/10.5072/example-wes-90000008\",\"https://iea-wind.org/task31/\"]"
       },
       {
         "key": "withdrawn",
@@ -122,6 +123,6 @@
     ],
     "state": "active",
     "private": false,
-    "url": "https://doi.org/10.5194/wes-9-1123-2024"
+    "url": "https://doi.org/10.5072/example-wes-90000008"
   }
 }

@@ -2,9 +2,10 @@
   "fixture_id": "rep-05-llm-inferred",
   "fixture_kind": "record",
   "case": "A Tier-3 record whose resource kind, task attribution and description were inferred by a model — every such field carries the violet machine-inferred badge",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "The DOI came from a regex sweep and was resolved against DataCite before the record existed — the model never supplies an identifier. `resource_kind` at 0.41 confidence is the low-confidence case (x-05); `iea_task` is a pinned extraction (x-09). The licence is free text the register does not recognise (zen-08 / dc-09): it maps to `notspecified` with `license_mapped: false`, and the page must say the licence was not recognised rather than imply openness.",
   "record": {
-    "name": "doi-10-2172-1900456",
+    "name": "doi-10-5072-example-osti-90000010",
     "title": "Cold climate wind power: instrumentation guidance for icing detection",
     "notes": "<p>Guidance on instrumentation and measurement practice for detecting and quantifying blade icing in cold climate wind farms.</p>",
     "license_id": "notspecified",
@@ -27,11 +28,11 @@
       },
       {
         "key": "authors",
-        "value": "[{\"name\":\"Lehtomäki, Ville\"}]"
+        "value": "[{\"name\":\"Hakkarainen, Onni\"}]"
       },
       {
         "key": "doi",
-        "value": "10.2172/1900456"
+        "value": "10.5072/example-osti-90000010"
       },
       {
         "key": "first_seen",
@@ -39,7 +40,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.2172/1900456"
+        "value": "10.5072/example-osti-90000010"
       },
       {
         "key": "identity_kind",
@@ -107,7 +108,7 @@
       },
       {
         "key": "source_urls",
-        "value": "[\"https://iea-wind.org/task54/\",\"https://doi.org/10.2172/1900456\"]"
+        "value": "[\"https://iea-wind.org/task54/\",\"https://doi.org/10.5072/example-osti-90000010\"]"
       },
       {
         "key": "withdrawn",

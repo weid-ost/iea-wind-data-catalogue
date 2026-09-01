@@ -60,7 +60,8 @@ If you want to know *why*:
 | `harvest/CONTRACT.md` | **the interface document** — read before writing an adapter | whoever finds it ambiguous |
 | `events/` | **the source of truth.** Append-only JSONL, one file per identity | never by hand, except deliberately |
 | `records/` | derived CKAN package dicts. Delete them and `make materialize` rebuilds them | never — it is generated |
-| `annotations/` | the human-readable record of curatorial intent | curator |
+| `annotations/` | the human-readable record of curatorial intent. Holds no samples on purpose, so a non-zero pending count always means something | curator |
+| `docs/examples/annotations/` | the three worked annotation templates, one per identity kind — copy into `annotations/` and repoint the key | everyone |
 | `cache/` | committed LLM extraction cache, content-hash keyed | generated, committed |
 | `state/last-run.json` | the run report **and** the cron heartbeat | generated every run |
 | `state/pending-extraction.json` | Tier-3 cache misses waiting for someone with a key | generated |
@@ -150,11 +151,20 @@ your job to update it.
 - **Wikilinks are bidirectional by convention.** Every ADR links to the
   runbooks it governs, and every runbook links back to the ADRs that justify
   it. An inheritor landing on any note can walk to context.
-- **Every command in a runbook is copy-pasteable and has been run.** Where a
-  command belonged to work that was not yet finished, it was marked
+- **Every command in a runbook is copy-pasteable, and the runbook says whether
+  it has been run.** The `last_executed` frontmatter field is the answer, and it
+  is kept equal to the body's *Last executed* line. Eleven of the thirteen
+  runbooks carry a date. **Two say `never`, honestly**, and no blanket claim
+  overrides them:
+  - [[promote-to-ckan]] §§2–5 — standing up CKAN is a future decision, not a
+    pending task, and running it would cost money;
+  - [[re-enable-a-dormant-cron]] §2 — `.github/workflows/` exists and its YAML
+    is cross-checked, but a workflow cannot be executed locally and has
+    deliberately not been pushed. The first real run is the first proof.
+
+  Where a command belonged to work that was not yet finished, it was marked
   **`SPEC — not yet implemented`** and the note said which track owned it. Every
-  track has now landed and every such marker has been retired: as of 2026-09-01
-  there is no command in these runbooks that has not actually been executed.
+  track has now landed and every such marker has been retired.
 - **"OST" is the Ostschweizer Fachhochschule** (Eastern Switzerland University
   of Applied Sciences) — the author's organisation and the repository's initial
   owner. It is never expanded any other way.

@@ -9,6 +9,7 @@ DOI resolver and every adapter take an injected client for exactly that reason.
 from __future__ import annotations
 
 import importlib
+import json
 import shutil
 from pathlib import Path
 
@@ -167,3 +168,25 @@ class FakeClient:
 @pytest.fixture
 def fake_client() -> type[FakeClient]:
     return FakeClient
+
+
+def load_fixtures(source: str, pattern: str = "*.json") -> list[dict]:
+    """Every expectation file for one source, parsed, in id order.
+
+    Five adapter tracks each grew their own module-local, zero-argument copy of
+    this, which is why the snippet in
+    ``docs/runbooks/add-a-source-adapter.md`` §4 — written against a shared
+    ``load_fixtures(source)`` — could not be pasted and run (compliance-10).
+    This is that helper. It skips ``raw/`` by construction: expectations live in
+    ``fixtures/<source>/``, payloads one directory down.
+
+    >>> load_fixtures("osti")[0]["fixture_id"]
+    'osti-01-canonical'
+    """
+    from harvest import config
+
+    directory = config.fixtures_dir() / source
+    return [
+        json.loads(path.read_text(encoding="utf-8"))
+        for path in sorted(directory.glob(pattern))
+    ]

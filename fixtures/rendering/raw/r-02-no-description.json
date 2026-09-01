@@ -1,10 +1,11 @@
 {
-  "id": 4419169,
-  "doi": "10.5281/zenodo.4419169",
-  "conceptdoi": "10.5281/zenodo.4419169",
+  "_comment": "INVENTED. Not a capture — shaped like the API response it imitates so the expectation beside it is consistent, but no upstream artifact carries this payload. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, so no real work is implicated. See fixtures/rendering/README.md.",
+  "id": 90000003,
+  "doi": "10.5072/zenodo.90000003",
+  "conceptdoi": "10.5072/zenodo.90000003",
   "revision": 1,
   "links": {
-    "self_html": "https://zenodo.org/records/4419169"
+    "self_html": "https://sandbox.zenodo.org/records/90000003"
   },
   "metadata": {
     "title": "Reference wind farm layout, Anholt"

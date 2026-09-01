@@ -5,7 +5,7 @@ status: current
 date: 2026-08-31
 related: [adr-0039-design-system, adr-0036-component-architecture-and-the-gallery, adr-0023-search-via-pagefind, run-the-site-locally, release-checklist]
 tags: [runbook, accessibility, gate]
-last_executed: never
+last_executed: 2026-09-01
 ---
 
 # Runbook — run the accessibility gate
@@ -65,13 +65,24 @@ must be replaced in the list, not silently skipped.
 | `/` | homepage, freshness banner in its warning state |
 | `/search/` | the page a screen-reader user lives on |
 | `/browse/` | the no-JavaScript path, and pagination |
-| `/record/doi-10-5281-zenodo-1234566/` | `rep-01`, the canonical record |
-| `/record/doi-10-5281-zenodo-7702209/` | `r-01`, the 300-character title |
-| `/record/doi-10-5281-zenodo-3376526/` | `r-04`, withdrawn, and its banner |
+| `/record/doi-10-2172-2447928/` | the rich one (OSTI): seven tags, a task group, a resource, two related identifiers, a 3,200-character abstract, a very long author list — the widest set of surfaces any real record lights up |
+| `/record/doi-10-2314-kxp-1790028361/` | the sparse one (DataCite): no abstract, no resources, no group, no task — and a stated licence (`Open Access`) that is not in the licence table, so it also renders the unrecognised-licence panel |
+| `/record/doi-10-5281-zenodo-20847799/` | the task-attributed one (Zenodo): task chip, group, resource and related identifier together |
 | **`/dev/components`** | **renders every component in every fixture state, so one URL audits the entire component inventory** — the withdrawn banner, the LLM badge, the empty-search state, and the token swatch section |
 
-The list lives in `site/.pa11yci` as site-relative paths; `scripts/a11y.mjs`
-adds the base path and the theme parameter.
+The three record pages are **real harvested records, not fixtures** — that is
+deliberate (commit `cccfbe0`). Fixture-shaped record pages are already audited
+through `/dev/components`, so the record rows here exist to prove the gate holds
+over what the pipeline actually produced. They were fixture slugs once, and
+those slugs did not exist in the built site, so the documented scope named three
+pages that could not have been tested (compliance-05). No record in this harvest
+is withdrawn or retracted; the withdrawn banner and the retraction flag are
+audited on fixtures `r-04` and `rep-06` in the gallery.
+
+The list lives in `site/.pa11yci` as site-relative paths, each with its own
+`why`; `scripts/a11y.mjs` adds the base path and the theme parameter. If you
+change the list, change it there — this table is the narrative, `.pa11yci` is
+the gate.
 
 The gallery is the efficient part of this design: because it also renders every
 token as a swatch, **the a11y gate is auditing the palette itself**, and a

@@ -5,7 +5,7 @@ status: current
 date: 2026-08-31
 related: [adr-0022-hosting-and-automation, adr-0030-llm-access-via-github-models, adr-0034-toolchain-pinning-and-no-auto-updates, re-enable-a-dormant-cron]
 tags: [runbook, security, continuity, annual]
-last_executed: 2026-08-31
+last_executed: 2026-09-01
 ---
 
 # Runbook — no secrets to rotate
@@ -155,6 +155,10 @@ and it runs. That is the entire handover.
 
 ---
 
-**Last executed:** 2026-08-31 — §2.6 verified (`make sync`, `make test` green,
-`make validate` OK). §§2.1–2.2 not yet applicable: `.github/workflows/` does not
-exist in this checkout, and there are no secrets because there is no workflow.
+**Last executed:** 2026-09-01 — §2.6 verified (`make sync`, `make test` green,
+`make validate` OK), and §§2.1–2.2 verified against the workflows, which **do**
+exist: `grep -n 'permissions:' -A4 .github/workflows/*.yml` shows scoped
+per-job permissions and no repository-wide grant, and the floating-label grep
+(`ubuntu-latest`, `lts/*`) returns nothing. There are still no secrets to
+rotate: neither workflow reads a repository secret, and the only credential
+either uses is the ephemeral `GITHUB_TOKEN` Actions mints per run.

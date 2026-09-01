@@ -1,0 +1,41 @@
+{
+  "note": "INVENTED. ADR-0028 §5: every field whose extraction_method is `llm` renders a visible machine-inferred badge, and a low confidence is displayed rather than used to hide the record (§7). This is the record-side half of catalogue row x-05 — the rendering-side half is fixtures/rendering/rep-05-llm-inferred.json, which is what /dev/components draws. There is nothing to capture here: a low-confidence extraction is a state of OUR pipeline, not a payload any upstream API serves, so the event stream is hand-written. The identity is an ieawind|… source identity on a page path that exists only in this fixture, so no real work is implicated. Two of the three mapped fields came from the model at confidence 0.38 and 0.42 — well under the 0.5 the ADR-0031 queueing path treats as a miss — and the third came from a pattern match, so a reader can see the badge appear on exactly the fields it should and on no others.",
+  "events": [
+    {
+      "observed_at": "2026-08-24T04:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "ieawind|task54/example-low-confidence-page",
+      "source_system": "ieawind",
+      "source_id": "task54/example-low-confidence-page",
+      "source_key": "b7c1d9e2f3a40516",
+      "actor": "harvest/ieawind",
+      "provenance": {
+        "title": {
+          "extraction_method": "llm",
+          "model": "openai/gpt-4o-mini",
+          "prompt_version": "v1",
+          "confidence": 0.42
+        },
+        "resource_kind": {
+          "extraction_method": "llm",
+          "model": "openai/gpt-4o-mini",
+          "prompt_version": "v1",
+          "confidence": 0.38
+        },
+        "iea_task": {
+          "extraction_method": "pattern"
+        }
+      },
+      "source": {
+        "title": "Recommended practices for floating lidar acceptance testing",
+        "url": "https://iea-wind.org/task54/example-low-confidence-page/",
+        "source_urls": ["https://iea-wind.org/task54/example-low-confidence-page/"],
+        "resource_kind": "report",
+        "access_status": "open",
+        "iea_task": ["task-54"],
+        "withdrawn": false
+      }
+    }
+  ],
+  "expected_notices": []
+}

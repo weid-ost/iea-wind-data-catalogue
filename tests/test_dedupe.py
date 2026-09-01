@@ -53,13 +53,13 @@ class TestIdentityDoesMostOfIt:
     def test_four_sources_one_doi_one_record_four_source_urls(
         self, repo: Path, events_dir: Path
     ) -> None:
-        key = "10.5281/zenodo.1234566"
+        key = "10.5072/zenodo.1234566"
         scrape(events_dir, key, "zenodo", "1234567", title="Lidar campaign",
-               url="https://zenodo.org/records/1234567",
-               source_urls=["https://zenodo.org/records/1234567"], license_id="cc-by")
+               url="https://sandbox.zenodo.org/records/1234567",
+               source_urls=["https://sandbox.zenodo.org/records/1234567"], license_id="cc-by")
         scrape(events_dir, key, "datacite", key, title="Lidar campaign",
-               url="https://doi.org/10.5281/zenodo.1234566",
-               source_urls=["https://doi.org/10.5281/zenodo.1234566"], license_id="cc-by",
+               url="https://doi.org/10.5072/zenodo.1234566",
+               source_urls=["https://doi.org/10.5072/zenodo.1234566"], license_id="cc-by",
                observed_at="2026-08-24T03:12:00Z")
         scrape(events_dir, key, "github", "IEA-Task-43/lidar", title="lidar",
                url="https://github.com/IEA-Task-43/lidar",
@@ -73,7 +73,7 @@ class TestIdentityDoesMostOfIt:
         materialize_all(events_dir, repo / "records", root=repo)
         assert len(list((repo / "records").glob("*.json"))) == 1
 
-        extras = extras_of(repo / "records", "doi-10-5281-zenodo-1234566")
+        extras = extras_of(repo / "records", "doi-10-5072-zenodo-1234566")
         assert len(json.loads(extras["source_urls"])) == 4
         assert json.loads(extras["source_systems"]) == [
             "datacite", "github", "ieawind", "zenodo"
@@ -82,9 +82,9 @@ class TestIdentityDoesMostOfIt:
         # the record's landing page is the DOI, not the GitHub repo that also
         # described it.
         package = json.loads(
-            (repo / "records" / "doi-10-5281-zenodo-1234566.json").read_text(encoding="utf-8")
+            (repo / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
         )
-        assert package["url"] == "https://doi.org/10.5281/zenodo.1234566"
+        assert package["url"] == "https://doi.org/10.5072/zenodo.1234566"
         assert package["license_id"] == "cc-by"
         assert dedupe(events_dir, root=repo).merges == [], "nothing to reconcile"
 

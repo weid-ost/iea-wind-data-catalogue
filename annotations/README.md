@@ -2,7 +2,7 @@
 
 The human-readable record of **curatorial intent**: what a curator added to a
 record, and why. One file per identity, named after the record's slug
-(`annotations/doi-10-5281-zenodo-1234566.yaml`), so it sits beside the events it
+(`annotations/doi-10-5072-zenodo-1234566.yaml`), so it sits beside the events it
 produces and the record it affects.
 
 `python -m harvest materialize` — and `python -m harvest run` — replay this
@@ -30,7 +30,7 @@ The full matrix of what you are allowed to do, with runnable examples, is
 ## File format
 
 ```yaml
-identity_key: "10.5281/zenodo.1234566"   # the IDENTITY KEY, not the slug
+identity_key: "10.5072/zenodo.1234566"   # the IDENTITY KEY, not the slug
 actor: "curator:tom"                     # default actor for every entry below
 annotations:
   - local:
@@ -54,8 +54,14 @@ annotations:
 An annotation for an identity with no events yet is **pending**, not applied:
 applying it would materialise a record with no source. It applies itself on the
 run that first harvests that identity, and until then it appears in
-`state/last-run.json` → `notices` as `annotation_pending`. That is why the
-samples in this directory can be committed before their adapters exist.
+`state/last-run.json` → `notices` as `annotation_pending`.
+
+That is a *signal*, so this directory deliberately holds no permanent residents:
+a pending count above zero means a curator is waiting on a harvest, not that the
+samples are still sitting here. **The worked examples live in
+[`docs/examples/annotations/`](../docs/examples/annotations/)** — three
+illustrative templates, one per identity kind, none of them replayed. Copy one
+into this directory and point its `identity_key` at a record that exists.
 
 ## Collisions, in one line each
 

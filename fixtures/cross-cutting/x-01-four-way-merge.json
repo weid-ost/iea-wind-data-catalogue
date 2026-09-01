@@ -3,12 +3,12 @@
   "fixture_kind": "record",
   "case": "The same artifact reached from Zenodo, DataCite, GitHub and an iea-wind.org citation — one record, four source URLs",
   "raw": "raw/x-01-four-way-merge.json",
-  "identity_key": "10.5281/zenodo.1234566",
+  "identity_key": "10.5072/zenodo.1234566",
   "identity_keys": [
-    "10.5281/zenodo.1234566"
+    "10.5072/zenodo.1234566"
   ],
   "expected_record_names": [
-    "doi-10-5281-zenodo-1234566"
+    "doi-10-5072-zenodo-1234566"
   ],
   "record": {
     "extras": [
@@ -22,7 +22,7 @@
       },
       {
         "key": "doi",
-        "value": "10.5281/zenodo.1234566"
+        "value": "10.5072/zenodo.1234566"
       },
       {
         "key": "first_seen",
@@ -30,7 +30,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.1234566"
+        "value": "10.5072/zenodo.1234566"
       },
       {
         "key": "identity_kind",
@@ -70,7 +70,7 @@
       },
       {
         "key": "related_identifiers",
-        "value": "[{\"identifier\":\"10.5281/zenodo.1234567\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+        "value": "[{\"identifier\":\"10.5072/zenodo.1234567\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
       },
       {
         "key": "resource_kind",
@@ -98,7 +98,7 @@
       },
       {
         "key": "source_urls",
-        "value": "[\"https://iea-wind.org/task43/outputs/\",\"https://github.com/IEA-Task-43/osterild-lidar\",\"https://zenodo.org/records/1234567\",\"https://doi.org/10.5281/zenodo.1234566\"]"
+        "value": "[\"https://iea-wind.org/task43/outputs/\",\"https://github.com/IEA-Task-43/osterild-lidar\",\"https://sandbox.zenodo.org/records/1234567\",\"https://doi.org/10.5072/zenodo.1234566\"]"
       },
       {
         "key": "withdrawn",
@@ -111,7 +111,7 @@
       }
     ],
     "license_id": "cc-by",
-    "name": "doi-10-5281-zenodo-1234566",
+    "name": "doi-10-5072-zenodo-1234566",
     "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021.</p>",
     "owner_org": "dtu",
     "private": false,
@@ -119,7 +119,7 @@
       {
         "format": "csv",
         "name": "osterild-lidar-2021.csv",
-        "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv"
+        "url": "https://sandbox.zenodo.org/records/1234567/files/osterild-lidar-2021.csv"
       }
     ],
     "state": "active",
@@ -138,11 +138,11 @@
       }
     ],
     "title": "Lidar measurements from the Østerild campaign, 2021",
-    "url": "https://doi.org/10.5281/zenodo.1234566",
+    "url": "https://doi.org/10.5072/zenodo.1234566",
     "version": "2.0"
   },
   "expected_records": {
-    "doi-10-5281-zenodo-1234566": {
+    "doi-10-5072-zenodo-1234566": {
       "extras": [
         {
           "key": "access_status",
@@ -154,7 +154,7 @@
         },
         {
           "key": "doi",
-          "value": "10.5281/zenodo.1234566"
+          "value": "10.5072/zenodo.1234566"
         },
         {
           "key": "first_seen",
@@ -162,7 +162,7 @@
         },
         {
           "key": "identity_key",
-          "value": "10.5281/zenodo.1234566"
+          "value": "10.5072/zenodo.1234566"
         },
         {
           "key": "identity_kind",
@@ -202,7 +202,7 @@
         },
         {
           "key": "related_identifiers",
-          "value": "[{\"identifier\":\"10.5281/zenodo.1234567\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+          "value": "[{\"identifier\":\"10.5072/zenodo.1234567\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
         },
         {
           "key": "resource_kind",
@@ -230,7 +230,7 @@
         },
         {
           "key": "source_urls",
-          "value": "[\"https://iea-wind.org/task43/outputs/\",\"https://github.com/IEA-Task-43/osterild-lidar\",\"https://zenodo.org/records/1234567\",\"https://doi.org/10.5281/zenodo.1234566\"]"
+          "value": "[\"https://iea-wind.org/task43/outputs/\",\"https://github.com/IEA-Task-43/osterild-lidar\",\"https://sandbox.zenodo.org/records/1234567\",\"https://doi.org/10.5072/zenodo.1234566\"]"
         },
         {
           "key": "withdrawn",
@@ -243,14 +243,14 @@
         }
       ],
       "license_id": "cc-by",
-      "name": "doi-10-5281-zenodo-1234566",
+      "name": "doi-10-5072-zenodo-1234566",
       "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021.</p>",
       "private": false,
       "resources": [
         {
           "format": "csv",
           "name": "osterild-lidar-2021.csv",
-          "url": "https://zenodo.org/records/1234567/files/osterild-lidar-2021.csv"
+          "url": "https://sandbox.zenodo.org/records/1234567/files/osterild-lidar-2021.csv"
         }
       ],
       "state": "active",
@@ -269,7 +269,7 @@
         }
       ],
       "title": "Lidar measurements from the Østerild campaign, 2021",
-      "url": "https://doi.org/10.5281/zenodo.1234566",
+      "url": "https://doi.org/10.5072/zenodo.1234566",
       "version": "2.0",
       "owner_org": "dtu"
     }

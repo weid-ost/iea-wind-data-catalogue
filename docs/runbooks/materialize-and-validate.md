@@ -5,7 +5,7 @@ status: current
 date: 2026-08-31
 related: [adr-0037-events-are-the-source-of-truth, adr-0021-canonical-record-is-a-ckan-package-dict, record-format, correct-a-record, promote-to-ckan]
 tags: [runbook, records, gate]
-last_executed: 2026-08-31
+last_executed: 2026-09-01
 ---
 
 # Runbook — materialise and validate

@@ -1,3 +1,9 @@
+# ILLUSTRATIVE TEMPLATE — this file is NOT replayed.
+#
+# It lives under docs/examples/annotations/, not annotations/, because the
+# identity it names has never been harvested. Copy it into annotations/ and
+# change the identity_key to one that exists in records/ before using it.
+#
 # Sample annotation — typing and availability the source does not state, plus
 # a Tier-3 style pin. Both scalar kinds, so both are displaceable by a source
 # that later starts providing the field (with a notice: fixture x-03).

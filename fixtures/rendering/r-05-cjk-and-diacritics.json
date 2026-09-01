@@ -2,10 +2,11 @@
   "fixture_id": "r-05-cjk-and-diacritics",
   "fixture_kind": "record",
   "case": "Mixed scripts in the title and in author names — CJK, Cyrillic and Latin diacritics",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "Diacritics are preserved in display and transliterated only in the slug (`choshi`, not `chōshi`). The Plex subsets do not cover CJK, so the fallback stack must carry 山田 太郎 without a tofu box or a font-size jump.",
   "raw": "raw/r-05-cjk-and-diacritics.json",
   "record": {
-    "name": "doi-10-5281-zenodo-6650123",
+    "name": "doi-10-5072-zenodo-90000006",
     "title": "洋上風力発電所の後流計測 — Offshore wind farm wake measurements at Chōshi",
     "notes": "<p>Scanning-lidar wake measurements from the Chōshi offshore demonstration site, with metadata in Japanese and English.</p>",
     "license_id": "cc-by",
@@ -34,7 +35,7 @@
       },
       {
         "key": "doi",
-        "value": "10.5281/zenodo.6650123"
+        "value": "10.5072/zenodo.90000006"
       },
       {
         "key": "first_seen",
@@ -42,7 +43,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.6650123"
+        "value": "10.5072/zenodo.90000006"
       },
       {
         "key": "identity_kind",
@@ -86,7 +87,7 @@
       },
       {
         "key": "source_id",
-        "value": "6650123"
+        "value": "90000006"
       },
       {
         "key": "source_key",
@@ -102,11 +103,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://zenodo.org/records/6650123"
+        "value": "https://sandbox.zenodo.org/records/90000006"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://zenodo.org/records/6650123\"]"
+        "value": "[\"https://sandbox.zenodo.org/records/90000006\"]"
       },
       {
         "key": "withdrawn",
@@ -115,7 +116,7 @@
     ],
     "resources": [
       {
-        "url": "https://zenodo.org/records/6650123/files/choshi-wake.nc",
+        "url": "https://sandbox.zenodo.org/records/90000006/files/choshi-wake.nc",
         "name": "choshi-wake.nc",
         "format": "netcdf"
       }
@@ -128,6 +129,6 @@
     "state": "active",
     "private": false,
     "owner_org": "dtu",
-    "url": "https://zenodo.org/records/6650123"
+    "url": "https://sandbox.zenodo.org/records/90000006"
   }
 }

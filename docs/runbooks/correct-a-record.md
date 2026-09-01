@@ -57,10 +57,10 @@ Anything not in that table is either a source's job or a bug in an adapter's
 and why — kept next to the events it produced. One file per identity, named
 after the slug:
 
-`annotations/doi-10-5281-zenodo-1234566.yaml`
+`annotations/doi-10-5281-zenodo-20847799.yaml`   ← one file per identity, named after the record's slug
 
 ```yaml
-identity_key: "10.5281/zenodo.1234566"
+identity_key: "10.5281/zenodo.20847799"
 actor: "curator:tom"
 annotations:
 
@@ -110,20 +110,36 @@ the `local` block — **not** on `observed_at`. So changing the `note` on an
 existing entry appends a *new* event rather than editing the old one, which is
 what an append-only log means.
 
-The working examples in `annotations/` cover every kind in the matrix above; the
-directory's `README.md` is the file-format reference.
+The worked examples live in **`docs/examples/annotations/`** — three files, one
+per identity kind, covering every row of the matrix above. They are *templates*,
+not residents: they sit outside `annotations/` because the identities they name
+have never been harvested, and a permanently-pending sample makes a genuinely
+pending curator annotation invisible in the noise (compliance-11). Copy one in
+and repoint its `identity_key`. `annotations/README.md` is the file-format
+reference.
 
 ## 3. Append the annotation
 
 The working path is `harvest.events.annotate`. Each call appends exactly one
 `annotated` event.
 
+> **Use a key that exists.** `annotate()` is the low-level write path and it does
+> **not** carry the `allow_new` guard the YAML replay in §2 does: given an
+> identity nothing has harvested, it creates the event log anyway, and the next
+> `make materialize` produces a contentless record — title equal to the key,
+> empty notes, no tags, no resources (compliance-02). Copy the key out of
+> `records/<slug>.json` → `extras.identity_key`, or route through
+> `annotations/` and let the replay refuse it for you. The `KEY` below is the
+> **invented** zen-01 fixture identity; substitute a real one before running it.
+
 ```sh
 uv run python - <<'PY'
 from harvest.events import annotate
 from harvest.models import utcnow
 
-KEY = "10.5281/zenodo.1234566"      # the IDENTITY KEY, not the slug
+KEY = "10.5072/zenodo.1234566"      # the IDENTITY KEY, not the slug
+                                    # (this one is the zen-01 FIXTURE identity —
+                                    #  substitute a real key from records/)
 
 annotate(
     KEY,
@@ -311,7 +327,7 @@ make materialize
 make validate
 uv run python -m harvest report | python3 -m json.tool | grep -A5 '"notices"'
 git add annotations events records
-git commit -m "annotate: Task 49 attribution and licence note on 10.5281/zenodo.1234566"
+git commit -m "annotate: Task 49 attribution and licence note on 10.5072/zenodo.1234566"
 ```
 
 Rehearse anything you are unsure about under a scratch root first:

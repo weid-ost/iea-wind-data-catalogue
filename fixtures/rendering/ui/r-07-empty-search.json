@@ -2,6 +2,7 @@
   "fixture_id": "r-07-empty-search",
   "fixture_kind": "ui_state",
   "case": "A search that returns nothing — the zero-results state must be ANNOUNCED in the live region, not merely rendered",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "Not a record fixture: there is no record. Kept in fixtures/rendering/ui/ so tests/test_fixtures.py, which globs fixtures/rendering/*.json for CKAN packages, does not try to validate a UI state as one.",
   "query": "vertical axis floating turbine",
   "filters": {

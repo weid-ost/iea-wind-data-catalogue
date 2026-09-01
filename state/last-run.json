@@ -107,54 +107,6 @@
       "source": "ieawind",
       "type": "page_not_record_bearing",
       "url": "https://iea-wind.org/task43/task-43-open-data/"
-    },
-    {
-      "identity_key": "10.5281/zenodo.1234566",
-      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
-      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/doi-10-5281-zenodo-1234566.yaml",
-      "type": "annotation_pending"
-    },
-    {
-      "identity_key": "10.5281/zenodo.1234566",
-      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
-      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/doi-10-5281-zenodo-1234566.yaml",
-      "type": "annotation_pending"
-    },
-    {
-      "identity_key": "10.5281/zenodo.1234566",
-      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
-      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/doi-10-5281-zenodo-1234566.yaml",
-      "type": "annotation_pending"
-    },
-    {
-      "identity_key": "github|IEA-Task-43/digital-wra-data-standard",
-      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
-      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/github-iea-task-43-digital-wra-data-standard.yaml",
-      "type": "annotation_pending"
-    },
-    {
-      "identity_key": "github|IEA-Task-43/digital-wra-data-standard",
-      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
-      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/github-iea-task-43-digital-wra-data-standard.yaml",
-      "type": "annotation_pending"
-    },
-    {
-      "identity_key": "github|IEA-Task-43/digital-wra-data-standard",
-      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
-      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/github-iea-task-43-digital-wra-data-standard.yaml",
-      "type": "annotation_pending"
-    },
-    {
-      "identity_key": "hash|1f0e3dad99908345",
-      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
-      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/hash-1f0e3dad99908345.yaml",
-      "type": "annotation_pending"
-    },
-    {
-      "identity_key": "hash|1f0e3dad99908345",
-      "message": "annotation waits for the record to be harvested; it will apply itself on the run that first sees this identity",
-      "source": "/Users/thc29/source/thclark/iea-wind-data-catalogue/annotations/hash-1f0e3dad99908345.yaml",
-      "type": "annotation_pending"
     }
   ],
   "ok": true,

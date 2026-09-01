@@ -2,13 +2,14 @@
 
 The gallery's data, and the site's fallback content before the first harvest.
 The inventory these implement is `fixtures/fixtures-catalogue.md` §"Rendering-only
-fixtures" (r-01 … r-08); that file is the specification and is not edited here.
+fixtures" — `r-01 … r-09` and the whole `rep-NN` family, each with its own row.
+That file is the specification and is not edited here.
 
 ```
 fixtures/rendering/
 ├── <id>.json           a CKAN package inside the standard fixture wrapper
 ├── raw/<id>.json       the upstream-shaped payload it corresponds to
-└── ui/<id>.json        fixtures that are NOT records (r-07, r-08)
+└── ui/<id>.json        fixtures that are NOT records (r-07, r-08, r-09)
 ```
 
 ## `<id>.json` — records
@@ -32,7 +33,7 @@ Two families:
 Some carry an `events` array: a hand-written event log for the record-history
 component, used only when `events/<slug>.jsonl` does not yet exist.
 
-## `raw/<id>.json` — read this before using them
+## Everything here is invented — including the identifiers
 
 **These payloads are hand-built.** There is no upstream artifact with a
 fabricated 300-character title, so there is nothing to capture. They are shaped
@@ -41,12 +42,29 @@ beside them, but they are *not* verbatim captures and they are **not** a
 reference for what a real Zenodo, OSTI or Crossref response looks like — the
 adapter tracks capture their own, per `fixtures/README.md`.
 
+**The identifiers are invented too, and that took a correction.** These records
+were originally bound to live third-party DOIs, which meant the gallery
+published a retraction flag over a real, unretracted *Wind Energy* paper, a
+"withdrawn upstream" banner over a live Zenodo dataset, and a handful of
+invented papers attributed to named, identifiable researchers
+(fixture-compliance-01). Every DOI here now sits on the reserved DataCite test
+prefix **`10.5072`**, which does not resolve; every Zenodo record URL points at
+`sandbox.zenodo.org`; the OSTI and GitHub identities are out-of-range or
+`example-org`; and no author name belongs to a real person.
+
+`tests/test_fixtures.py::test_rendering_fixtures_only_cite_reserved_identifiers`
+keeps it that way: it fails on any DOI in this directory outside `10.5072/`, and
+on any `https://zenodo.org/` URL. If you add a fixture here, mint its identifier
+inside that space.
+
 ## `ui/` — fixtures that are not records
 
 `r-07-empty-search` is a search that returns nothing, `r-08-stale-banner` is a
 `state/last-run.json` older than 45 days, and `r-09-dead-link` is a
 `state/link-check.json` in which one record's source link no longer responds.
 None is a CKAN package, so they live one directory down, where the generic
-fixture test — which globs `fixtures/rendering/*.json` and validates each as a
-package — does not claim them. They declare `fixture_kind: "ui_state"` and are
-read by `site/src/lib/state.ts` (`uiFixture`).
+record validation — which globs `fixtures/rendering/*.json` and validates each
+as a package — does not claim them. They declare `fixture_kind: "ui_state"`,
+which is a recognised kind in `tests/test_fixtures.py`, and they are read by
+`site/src/lib/state.ts` (`uiFixture`). The rest of the fixture contract does
+apply to them: id, kind, `case`, and the invented-payload disclosure.

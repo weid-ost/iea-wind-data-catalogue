@@ -48,7 +48,7 @@ uv run python - <<'PY'
 from harvest.events import withdraw
 
 withdraw(
-    "10.5281/zenodo.1234566",             # the IDENTITY KEY, not the slug
+    "10.5072/zenodo.1234566",             # the IDENTITY KEY, not the slug
     source_system="zenodo",
     note="DOI resolves to a Zenodo tombstone page; checked 2026-08-31",
 )
@@ -94,8 +94,8 @@ the log.
 ## 5. What must never happen
 
 ```sh
-rm records/doi-10-5281-zenodo-1234566.json     # NO
-rm events/doi-10-5281-zenodo-1234566.jsonl     # NO — this is the source of truth
+rm records/doi-10-5072-zenodo-1234566.json     # NO
+rm events/doi-10-5072-zenodo-1234566.jsonl     # NO — this is the source of truth
 ```
 
 Deleting the record file achieves nothing: `make materialize` recreates it from
@@ -112,7 +112,7 @@ and `site/.astro`, and explicitly never touches `events/`.
 
 ```sh
 git add events records
-git commit -m "withdraw: 10.5281/zenodo.1234566 — tombstoned at Zenodo"
+git commit -m "withdraw: 10.5072/zenodo.1234566 — tombstoned at Zenodo"
 ```
 
 ---

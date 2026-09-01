@@ -1,11 +1,12 @@
 {
-  "id": 7702210,
-  "doi": "10.5281/zenodo.7702210",
-  "conceptdoi": "10.5281/zenodo.7702209",
-  "conceptrecid": "7702209",
+  "_comment": "INVENTED. Not a capture — shaped like the API response it imitates so the expectation beside it is consistent, but no upstream artifact carries this payload. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, so no real work is implicated. See fixtures/rendering/README.md.",
+  "id": 90000002,
+  "doi": "10.5072/zenodo.90000002",
+  "conceptdoi": "10.5072/zenodo.90000001",
+  "conceptrecid": "90000001",
   "revision": 4,
   "links": {
-    "self_html": "https://zenodo.org/records/7702210"
+    "self_html": "https://sandbox.zenodo.org/records/90000002"
   },
   "metadata": {
     "title": "Ten-minute aggregated nacelle-mounted-lidar and met-mast reference measurements for the wake-steering-controller validation campaign conducted at the Oesterild-National-Test-Centre-for-Large-Wind-Turbines during the 2021-2023 measurement period, including quality-flagged turbulence-intensity values.",
@@ -51,7 +52,7 @@
       "key": "osterild-lidar-2021-2023.csv",
       "type": "csv",
       "links": {
-        "self": "https://zenodo.org/records/7702210/files/osterild-lidar-2021-2023.csv"
+        "self": "https://sandbox.zenodo.org/records/90000002/files/osterild-lidar-2021-2023.csv"
       }
     }
   ]

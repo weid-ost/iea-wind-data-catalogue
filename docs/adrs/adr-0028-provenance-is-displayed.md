@@ -73,9 +73,22 @@ omission.
 - The badge occupies layout in already dense metadata lists. The design system's
   answer is `<dl>` definition lists and typographic hierarchy rather than boxes.
 
-**Checkable.** `/dev/components` renders fixture `x-05` — LLM-extracted fields
-below the confidence threshold — so the badge is audited by the a11y gate along
-with everything else ([[run-the-a11y-gate]]).
+**Checkable**, in two halves, because the claim has two halves.
+
+- *The record side.* `fixtures/cross-cutting/x-05-low-confidence.json` holds
+  fields the model extracted at 0.42 and 0.38 beside one pattern-extracted
+  field, and `tests/test_crosscutting.py` asserts the badge lands on exactly the
+  two `llm` fields, that neither is hidden, and that `iea_task` carries no badge
+  at all.
+- *The rendered side.* `/dev/components` draws
+  `fixtures/rendering/rep-05-llm-inferred.json` — the same case as a record page
+  — so the badge is audited by the a11y gate along with everything else
+  ([[run-the-a11y-gate]]).
+
+Until the reconciliation pass, this section named a fixture `x-05` that did not
+exist in any directory (site-05, fixture-compliance-04). It does now, and
+`tests/test_fixtures.py::TestTheCatalogueMatchesTheTree` fails if a named
+fixture goes missing again.
 
 ## Source
 

@@ -5,17 +5,17 @@
   "note": "access_status is embargoed and embargo_date is carried through, so the site can say when the files become available and never imply they are downloadable now. Zenodo returns files: [] while the embargo holds, so there is nothing to link either. Re-check after the date.",
   "invented": "INVENTED. No embargoed record exists in any of the nine IEA Wind Zenodo communities (checked live 2026-08-31: access_right:embargoed returns 0 hits in all nine). Built on the zen-01 reference payload shape with invented ids so that no real artifact is misrepresented as embargoed.",
   "raw": "raw/zen-06-embargoed.json",
-  "identity_key": "10.5281/zenodo.1234569",
+  "identity_key": "10.5072/zenodo.1234569",
   "source_system": "zenodo",
   "source_id": "1234570",
-  "source_key": "2@10.5281/zenodo.1234570",
+  "source_key": "2@10.5072/zenodo.1234570",
   "source": {
     "title": "Nacelle lidar campaign at the Rødsand site, 2025 (embargoed)",
     "notes": "<p>Ten-minute nacelle lidar statistics. Files are under embargo until 1 March 2027; the metadata is public.</p>",
-    "doi": "10.5281/zenodo.1234569",
-    "url": "https://zenodo.org/records/1234570",
+    "doi": "10.5072/zenodo.1234569",
+    "url": "https://sandbox.zenodo.org/records/1234570",
     "source_urls": [
-      "https://zenodo.org/records/1234570"
+      "https://sandbox.zenodo.org/records/1234570"
     ],
     "authors": [
       {
@@ -46,7 +46,7 @@
     "related_identifiers": [
       {
         "relation": "IsVersionOf",
-        "identifier": "10.5281/zenodo.1234569",
+        "identifier": "10.5072/zenodo.1234569",
         "identifier_type": "DOI"
       }
     ],
@@ -57,7 +57,7 @@
     "extra": {
       "zenodo_record_id": 1234570,
       "zenodo_concept_recid": "1234569",
-      "zenodo_version_doi": "10.5281/zenodo.1234570"
+      "zenodo_version_doi": "10.5072/zenodo.1234570"
     }
   },
   "provenance": {
@@ -83,5 +83,5 @@
       "extraction_method": "api"
     }
   },
-  "expected_slug": "doi-10-5281-zenodo-1234569"
+  "expected_slug": "doi-10-5072-zenodo-1234569"
 }

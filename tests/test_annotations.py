@@ -25,7 +25,7 @@ from harvest.annotations import (
 from harvest.events import annotate, read_events, record_scrape, resolve
 from harvest.materialize import materialize_all
 
-KEY = "10.5281/zenodo.1234566"
+KEY = "10.5072/zenodo.1234566"
 
 
 def write_annotation(directory: Path, name: str, document: dict) -> Path:
@@ -38,8 +38,8 @@ def write_annotation(directory: Path, name: str, document: dict) -> Path:
 def seed_scrape(events_dir: Path, key: str = KEY, **source) -> None:
     payload = {
         "title": "Lidar measurements from the Østerild campaign, 2021",
-        "url": "https://zenodo.org/records/1234567",
-        "source_urls": ["https://zenodo.org/records/1234567"],
+        "url": "https://sandbox.zenodo.org/records/1234567",
+        "source_urls": ["https://sandbox.zenodo.org/records/1234567"],
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "withdrawn": False,
@@ -223,7 +223,7 @@ class TestPendingAnnotations:
         })
         result = apply_annotations(repo / "annotations", events_dir, root=repo)
         assert result.applied == [] and len(result.pending) == 1
-        assert not (events_dir / "doi-10-5281-zenodo-1234566.jsonl").exists()
+        assert not (events_dir / "doi-10-5072-zenodo-1234566.jsonl").exists()
         assert result.as_notices()[0]["type"] == "annotation_pending"
 
     def test_it_applies_itself_once_the_record_exists(
@@ -260,7 +260,7 @@ class TestTheCollisionMatrix:
         record_scrape(
             identity_key=KEY, source_system="zenodo", source_id="1234567", source_key="2",
             source={"title": "A corrected title", "license_id": "cc-by",
-                    "url": "https://zenodo.org/records/1234567"},
+                    "url": "https://sandbox.zenodo.org/records/1234567"},
             events_dir=events_dir, observed_at="2026-08-26T00:00:00Z",
         )
         resolved = resolve(KEY, events_dir=events_dir)
@@ -298,7 +298,7 @@ class TestTheCollisionMatrix:
             events_dir=events_dir, observed_at="2026-08-26T00:00:00Z",
         )
         materialize_all(events_dir, repo / "records", root=repo)
-        extras = extras_of(repo / "records", "doi-10-5281-zenodo-1234566")
+        extras = extras_of(repo / "records", "doi-10-5072-zenodo-1234566")
         assert json.loads(extras["iea_task"]) == ["task-43", "task-49"]
 
     def test_x10_a_curator_note_sits_beside_a_verbatim_wrong_value(
@@ -312,7 +312,7 @@ class TestTheCollisionMatrix:
         )
         materialize_all(events_dir, repo / "records", root=repo)
         package = json.loads(
-            (repo / "records" / "doi-10-5281-zenodo-1234566.json").read_text(encoding="utf-8")
+            (repo / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
         )
         assert package["license_id"] == "cc-by", "the wrong upstream value is kept, verbatim"
         extras = {extra["key"]: extra["value"] for extra in package["extras"]}
@@ -324,8 +324,8 @@ class TestTheCollisionMatrix:
         seed_scrape(events_dir)
         annotate(KEY, {"suppressed": True}, actor="curator:tom", events_dir=events_dir)
         materialize_all(events_dir, repo / "records", root=repo)
-        assert (repo / "records" / "doi-10-5281-zenodo-1234566.json").exists()
-        assert extras_of(repo / "records", "doi-10-5281-zenodo-1234566")["suppressed"] == "true"
+        assert (repo / "records" / "doi-10-5072-zenodo-1234566.json").exists()
+        assert extras_of(repo / "records", "doi-10-5072-zenodo-1234566")["suppressed"] == "true"
 
 
 # ---------------------------------------------------------------------------
@@ -546,7 +546,7 @@ class TestTaskSpellingIsNormalisedOnStore:
     def test_the_record_shows_one_chip_not_two(self, repo: Path, events_dir: Path) -> None:
         record_scrape(
             KEY, "zenodo", "1234567", "1",
-            {"title": "T", "url": "https://zenodo.org/records/1234567",
+            {"title": "T", "url": "https://sandbox.zenodo.org/records/1234567",
              "iea_task": ["TASK-43"]},
             events_dir=events_dir, observed_at="2026-08-24T03:11:07Z",
         )
@@ -557,10 +557,10 @@ class TestTaskSpellingIsNormalisedOnStore:
         apply_annotations(repo / "annotations", events_dir, root=repo)
         materialize_all(root=repo)
 
-        extras = extras_of(repo / "records", "doi-10-5281-zenodo-1234566")
+        extras = extras_of(repo / "records", "doi-10-5072-zenodo-1234566")
         assert json.loads(extras["iea_task"]) == ["task-43"]
         package = json.loads(
-            (repo / "records" / "doi-10-5281-zenodo-1234566.json").read_text(encoding="utf-8")
+            (repo / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
         )
         assert [group["name"] for group in package["groups"]] == ["task-43"]
 

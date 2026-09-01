@@ -2,10 +2,11 @@
   "fixture_id": "r-01-long-title",
   "fixture_kind": "record",
   "case": "A 300-character title with no natural break points, in a card and as an <h1>",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "The title is exactly 300 characters and contains a 47-character hyphenated token, so it cannot be wrapped politely by breaking on spaces alone.",
   "raw": "raw/r-01-long-title.json",
   "record": {
-    "name": "doi-10-5281-zenodo-7702209",
+    "name": "doi-10-5072-zenodo-90000001",
     "title": "Ten-minute aggregated nacelle-mounted-lidar and met-mast reference measurements for the wake-steering-controller validation campaign conducted at the Oesterild-National-Test-Centre-for-Large-Wind-Turbines during the 2021-2023 measurement period, including quality-flagged turbulence-intensity values.",
     "notes": "<p>Aggregated ten-minute statistics from the nacelle lidar and the reference met mast, quality-flagged and gap-filled.</p>",
     "license_id": "cc-by",
@@ -34,7 +35,7 @@
       },
       {
         "key": "doi",
-        "value": "10.5281/zenodo.7702209"
+        "value": "10.5072/zenodo.90000001"
       },
       {
         "key": "first_seen",
@@ -42,7 +43,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.7702209"
+        "value": "10.5072/zenodo.90000001"
       },
       {
         "key": "identity_kind",
@@ -86,7 +87,7 @@
       },
       {
         "key": "source_id",
-        "value": "7702210"
+        "value": "90000002"
       },
       {
         "key": "source_key",
@@ -102,11 +103,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://zenodo.org/records/7702210"
+        "value": "https://sandbox.zenodo.org/records/90000002"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://zenodo.org/records/7702210\"]"
+        "value": "[\"https://sandbox.zenodo.org/records/90000002\"]"
       },
       {
         "key": "withdrawn",
@@ -115,7 +116,7 @@
     ],
     "resources": [
       {
-        "url": "https://zenodo.org/records/7702210/files/osterild-lidar-2021-2023.csv",
+        "url": "https://sandbox.zenodo.org/records/90000002/files/osterild-lidar-2021-2023.csv",
         "name": "osterild-lidar-2021-2023.csv",
         "format": "csv"
       }
@@ -131,7 +132,7 @@
     "state": "active",
     "private": false,
     "owner_org": "dtu",
-    "url": "https://zenodo.org/records/7702210",
+    "url": "https://sandbox.zenodo.org/records/90000002",
     "version": "1.2"
   }
 }

@@ -5,7 +5,7 @@
   "conceptdoi": "10.5072/hostile-markup-fixture",
   "revision": 1,
   "links": {
-    "self_html": "https://zenodo.org/records/90000000"
+    "self_html": "https://sandbox.zenodo.org/records/90000000"
   },
   "metadata": {
     "title": "Wake study </script><img src=x onerror=alert(1)> end",
@@ -30,7 +30,7 @@
       "key": "wake.csv",
       "type": "csv",
       "links": {
-        "self": "https://zenodo.org/records/90000000/files/wake.csv"
+        "self": "https://sandbox.zenodo.org/records/90000000/files/wake.csv"
       }
     }
   ]

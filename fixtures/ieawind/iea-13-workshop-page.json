@@ -16,12 +16,12 @@
     "page_not_record_bearing"
   ],
   "expected_record_bearing": false,
-  "fixture_id": "iea-09-workshop-page",
+  "fixture_id": "iea-13-workshop-page",
   "fixture_kind": "page",
-  "html": "raw/iea-09-workshop-page.html",
+  "html": "raw/iea-13-workshop-page.html",
   "iea_task": "task-32",
   "page_url": "https://iea-wind.org/digitalisation-of-wind-lidar/",
-  "raw": "raw/iea-09-workshop-page.html",
+  "raw": "raw/iea-13-workshop-page.html",
   "raw_bytes": 539773,
   "trusted": false
 }

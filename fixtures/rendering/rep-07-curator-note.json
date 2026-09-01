@@ -2,9 +2,10 @@
   "fixture_id": "rep-07-curator-note",
   "fixture_kind": "record",
   "case": "Upstream states a licence the curator believes is wrong — the wrong value is shown verbatim with the note beside it (both truths on the page)",
+  "invented": "INVENTED. Every rendering fixture is hand-built — there is no upstream artifact with a fabricated 300-character title, and binding one to a live DOI would make a false claim about somebody's work. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, and no author named here is a real person. See fixtures/rendering/README.md.",
   "note": "Plan §4.3: the catalogue never overrides a source. The note is rendered beside the value it annotates, and the value itself is untouched (x-10).",
   "record": {
-    "name": "doi-10-5281-zenodo-4302010",
+    "name": "doi-10-5072-zenodo-90000013",
     "title": "Reference offshore wind farm SCADA extract, 2018",
     "notes": "<p>Anonymised ten-minute SCADA for a 100-turbine offshore wind farm.</p>",
     "license_id": "cc-nc",
@@ -26,7 +27,7 @@
       },
       {
         "key": "authors",
-        "value": "[{\"name\":\"de Vries, Wouter\"}]"
+        "value": "[{\"name\":\"de Windt, Lieke\"}]"
       },
       {
         "key": "curator_notes",
@@ -34,7 +35,7 @@
       },
       {
         "key": "doi",
-        "value": "10.5281/zenodo.4302010"
+        "value": "10.5072/zenodo.90000013"
       },
       {
         "key": "first_seen",
@@ -42,7 +43,7 @@
       },
       {
         "key": "identity_key",
-        "value": "10.5281/zenodo.4302010"
+        "value": "10.5072/zenodo.90000013"
       },
       {
         "key": "identity_kind",
@@ -70,7 +71,7 @@
       },
       {
         "key": "local_links",
-        "value": "[{\"label\":\"Upstream licence query\",\"url\":\"https://github.com/IEA-Task-43/digital-wra-data-standard/issues/412\"}]"
+        "value": "[{\"label\":\"Upstream licence query\",\"url\":\"https://github.com/example-org/example-wra-data-standard/issues/412\"}]"
       },
       {
         "key": "provenance",
@@ -90,7 +91,7 @@
       },
       {
         "key": "source_id",
-        "value": "4302010"
+        "value": "90000013"
       },
       {
         "key": "source_key",
@@ -106,11 +107,11 @@
       },
       {
         "key": "source_url",
-        "value": "https://zenodo.org/records/4302010"
+        "value": "https://sandbox.zenodo.org/records/90000013"
       },
       {
         "key": "source_urls",
-        "value": "[\"https://zenodo.org/records/4302010\"]"
+        "value": "[\"https://sandbox.zenodo.org/records/90000013\"]"
       },
       {
         "key": "withdrawn",
@@ -126,6 +127,6 @@
     "state": "active",
     "private": false,
     "owner_org": "tno",
-    "url": "https://zenodo.org/records/4302010"
+    "url": "https://sandbox.zenodo.org/records/90000013"
   }
 }

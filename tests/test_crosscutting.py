@@ -194,7 +194,7 @@ class TestEveryCrossCuttingFixture:
 class TestTheFixturesThemselvesSayWhatTheyMean:
     def test_x01_is_one_record_with_four_source_urls(self) -> None:
         fixture, _ = load("x-01-four-way-merge")
-        assert fixture["expected_record_names"] == ["doi-10-5281-zenodo-1234566"]
+        assert fixture["expected_record_names"] == ["doi-10-5072-zenodo-1234566"]
         extras = {e["key"]: e["value"] for e in fixture["record"]["extras"]}
         assert len(json.loads(extras["source_urls"])) == 4
         assert json.loads(extras["source_systems"]) == [
@@ -223,6 +223,35 @@ class TestTheFixturesThemselvesSayWhatTheyMean:
         extras = {e["key"]: e["value"] for e in fixture["record"]["extras"]}
         assert json.loads(extras["iea_task"]) == ["task-43", "task-49"]
         assert fixture["record"]["groups"] == [{"name": "task-43"}, {"name": "task-49"}]
+
+    def test_x05_badges_exactly_the_machine_inferred_fields(self) -> None:
+        """The catalogue's Expected handling for x-05, asserted rather than promised.
+
+        ADR-0028 §5 puts a visible machine-inferred badge on every field whose
+        ``extraction_method`` is ``llm``, and §7 keeps the record visible however
+        low the confidence is. So: the two model-extracted fields carry a
+        confidence under the threshold, ``iea_task`` came from a pattern and must
+        carry no badge at all, and the record is ``state: active`` — present, not
+        suppressed.
+        """
+        fixture, _ = load("x-05-low-confidence")
+        record = fixture["record"]
+        extras = {e["key"]: e["value"] for e in record["extras"]}
+        provenance = json.loads(extras["provenance"])
+
+        llm = sorted(
+            field for field, p in provenance.items() if p["extraction_method"] == "llm"
+        )
+        assert llm == fixture["expected_llm_fields"]
+        for field in llm:
+            entry = provenance[field]
+            assert entry["confidence"] < fixture["expected_confidence_ceiling"]
+            # ADR-0028 §2: an llm field without model and prompt_version is
+            # unconstructible, and the badge has nothing to say without them.
+            assert entry["model"] and entry["prompt_version"]
+        assert provenance["iea_task"]["extraction_method"] == "pattern"
+        assert "confidence" not in provenance["iea_task"]
+        assert record["state"] == "active", "low confidence is badged, never hidden"
 
     def test_x06_is_two_records_because_the_key_is_fragile(self) -> None:
         fixture, _ = load("x-06-no-identifier")
