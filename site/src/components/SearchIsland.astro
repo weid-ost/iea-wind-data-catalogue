@@ -107,7 +107,7 @@ const shown = rows.length;
 
       <div class="search__results">
         <p class="search__count" role="status" aria-live="polite" data-search-count>
-          Showing all {shown} record{shown === 1 ? '' : 's'}, most recently updated first.
+          {shown} record{shown === 1 ? '' : 's'}, most recently updated first.
         </p>
 
         <ul class="search__list" data-search-results>
@@ -295,15 +295,19 @@ const shown = rows.length;
           emptySlot.hidden = true;
         }
 
+        const total = items.length;
+        const active = tokens.length > 0 || Object.keys(sel).length > 0;
         const describe = q ? ` for “${q}”` : '';
         const noun = (n) => `record${n === 1 ? '' : 's'}`;
+        const pageSuffix = pageCount > 1 ? ` — page ${page} of ${pageCount}` : '';
         if (filtered.length === 0) {
-          count.textContent = `No results${describe}.`;
-        } else if (pageCount > 1) {
+          count.textContent = `No results${describe}. Total records available: ${total}.`;
+        } else if (active) {
           count.textContent =
-            `${filtered.length} ${noun(filtered.length)}${describe} — page ${page} of ${pageCount}.`;
+            `${filtered.length} ${noun(filtered.length)} (filtered)${describe}${pageSuffix}. ` +
+            `Total records available: ${total}.`;
         } else {
-          count.textContent = `${filtered.length} ${noun(filtered.length)}${describe}.`;
+          count.textContent = `${total} ${noun(total)}, most recently updated first${pageSuffix}.`;
         }
 
         updateCounts(sel, tokens);

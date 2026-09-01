@@ -13,7 +13,7 @@ Quiet, papery, institutional-but-current. The references are a well-set journal 
 - **Colour never fills a surface.** Backgrounds are exclusively neutral, near-white through instrument-black. Semantic colour appears in exactly five places: text, icons, outline badges, the focus ring, and the **left accent bar** — a 3px, square-cornered bar down the left edge of a panel. Status callouts, the withdrawn banner, the freshness warning and selected states are all neutral panels distinguished by their bar colour. Scarcity is what makes a desaturated celadon read as considered rather than washed-out.
 - **Barred panels have square corners.** A single-sided bar against a rounded panel mismatches at the joins, and radius-0 callouts are the crisper, instrument-panel look anyway. Plain cards keep 6px and take no bar.
 - **Type does the hierarchy.** Size, weight and space — not rules, boxes, or colour blocks.
-- **Metadata is typographically distinct.** DOIs, identifiers, version strings and source keys set in the mono face. A catalogue is mostly metadata; giving it its own voice is the content-appropriate move.
+- **Metadata is typographically distinct.** DOIs, identifiers, version strings and source keys are set with tabular figures (and, on the source pill, a two-tone treatment) so digits align and identifiers read as data. A catalogue is mostly metadata; giving it a distinct voice is the content-appropriate move — done here within Inter rather than with a separate monospace face.
 
 ## 2. Colour
 
@@ -66,7 +66,7 @@ The catalogue's own vocabulary gets colour semantics — expressed only as **out
 
 ## 3. Typography
 
-**Inter (sans) + IBM Plex Mono (metadata)**, self-hosted as subset woff2 (committed to the repo — a static asset that cannot rot, no CDN, no third-party request). Inter is the interface face: clean and current rather than institutional-stiff, with the broad Latin coverage the author names need (`Søren`, `Müller` — fixture `r-05`) at weights 400/500/600. IBM Plex Mono stays for the metadata role — DOIs, identifiers, version strings, source keys (§1) — because a catalogue is mostly metadata and Inter has no monospace cut. Fallback stacks are metric-compatible; `font-display: swap`. *(Rev 3: the anchor sans changed from IBM Plex Sans to Inter after review — lighter and less pedestrian on screen; Plex Mono was kept.)*
+**Inter throughout**, self-hosted as subset woff2 (committed to the repo — a static asset that cannot rot, no CDN, no third-party request). Inter is the single typeface: clean and current rather than institutional-stiff, with the broad Latin coverage the author names need (`Søren`, `Müller` — fixture `r-05`) at weights 400/500/600. Metadata — DOIs, identifiers, version strings, source keys (§1) — is set in Inter with **tabular figures** so digits still line up; the separate monospace face was retired with the switch. Fallback stacks are metric-compatible; `font-display: swap`. *(Rev 3: the typeface changed from IBM Plex Sans/Mono to Inter throughout after review — lighter and less pedestrian on screen.)*
 
 Scale: 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 px expressed in rem; body line-height 1.55; prose measure 68ch. Headings are **medium weight with a touch of negative tracking**, not semibold — lighter and more editorial, with size (not weight) carrying the hierarchy (§1). Record titles are big enough for scanning a results list, restrained enough that `r-01`'s 300-character title wraps with dignity.
 
@@ -121,7 +121,7 @@ design/
 ├── design-tokens.json      # DTCG source of truth (this proposal)
 ├── build-css.mjs           # tokens → custom properties (≈40 lines; no Style Dictionary
 │                           #   unless multi-platform output is ever actually needed)
-└── fonts/                  # Inter (sans) + IBM Plex Mono, subset woff2
+└── fonts/                  # Inter, subset woff2
 site/src/styles/tokens.css  # generated — marked as such, never hand-edited
 ```
 
@@ -129,4 +129,4 @@ The gallery gains a **swatch section** rendering every token from the JSON — w
 
 ---
 
-*ADR-0039 records: DTCG token format; Teresa's Green №236 as anchor with computed accessible derivatives; hue-locked ramp; **colour never fills surfaces — accent bars, outline badges, text, icons and focus only**; near-achromatic neutrals; square-cornered barred panels; token-only components enforced by CI grep; AA as a hard gate via pa11y-ci over the gallery in both themes; Inter (sans) + IBM Plex Mono (metadata) self-hosted; medium-weight headings; hover/focus-only link underlines; violet reserved for machine inference.*
+*ADR-0039 records: DTCG token format; Teresa's Green №236 as anchor with computed accessible derivatives; hue-locked ramp; **colour never fills surfaces — accent bars, outline badges, text, icons and focus only**; near-achromatic neutrals; square-cornered barred panels; token-only components enforced by CI grep; AA as a hard gate via pa11y-ci over the gallery in both themes; Inter self-hosted throughout (tabular figures for metadata); medium-weight headings; hover/focus-only link underlines; violet reserved for machine inference.*

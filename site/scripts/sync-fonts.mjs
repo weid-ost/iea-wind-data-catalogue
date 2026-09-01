@@ -15,6 +15,6 @@ const to = join(site, 'public', 'fonts');
 
 mkdirSync(to, { recursive: true });
 const files = readdirSync(from).filter((f) => f.endsWith('.woff2'));
-if (files.length === 0) throw new Error(`no woff2 files in ${from} — the Plex subsets are missing`);
+if (files.length === 0) throw new Error(`no woff2 files in ${from} — the Inter subsets are missing`);
 for (const file of files) cpSync(join(from, file), join(to, file));
 console.log(`sync-fonts: ${files.length} woff2 -> site/public/fonts/`);

@@ -80,28 +80,34 @@ const hidden = collapse ? values.slice(VISIBLE_WHEN_COLLAPSED) : [];
 )}
 
 <style>
-  /* Vertical rhythm: the subtitle sits close to the filters it labels (small gap
-     below the legend) and well clear of the previous group (larger gap above the
-     divider), so each group reads as one unit rather than the subtitle drifting
-     toward the block above it. */
+  /* Vertical rhythm: all of the group spacing lives on the legend so the fieldset
+     quirks cannot muddy it. The subtitle sits a big gap BELOW the previous group
+     (its top padding + the divider) and a small gap ABOVE its own filters, so a
+     subtitle binds to the filters it labels — roughly 3:1, unambiguous. */
   .facet {
     margin: 0;
-    padding: var(--space-4) 0 0;
+    padding: 0;
     border: 0;
-    border-top: var(--border-width-hairline) solid var(--border-subtle);
+    min-inline-size: 0;
   }
 
   .facet__legend {
-    padding: 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 var(--space-2);
+    padding: var(--space-6) 0 0;
+    border-top: var(--border-width-hairline) solid var(--border-subtle);
     color: var(--text-secondary);
     font-size: var(--font-size-caption);
     font-weight: var(--font-weight-semibold);
     letter-spacing: 0.06em;
+    line-height: var(--font-line-height-tight);
     text-transform: uppercase;
   }
 
   .facet__list {
-    margin: var(--space-1) 0 0;
+    margin: 0;
     padding: 0;
     list-style: none;
   }
@@ -137,8 +143,10 @@ const hidden = collapse ? values.slice(VISIBLE_WHEN_COLLAPSED) : [];
     font-variant-numeric: tabular-nums;
   }
 
-  /* Long facets fold into a <details>: platform behaviour, no script. */
+  /* Long facets fold into a <details>: platform behaviour, no script. It is part
+     of the same group, so it hugs the list above rather than opening a gap. */
   .facet__more {
+    margin-block-start: var(--space-1);
     font-size: var(--font-size-small);
   }
 

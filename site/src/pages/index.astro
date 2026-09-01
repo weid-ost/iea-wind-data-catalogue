@@ -27,35 +27,34 @@ const statusHref = withBase('/about/#status');
 >
   <div class="catalogue-page">
     <header class="catalogue__head">
-      <h1 class="catalogue__title">Datasets, publications and software from the IEA&nbsp;Wind Tasks</h1>
-
-      <div class="catalogue__intro">
+      <div class="catalogue__headline">
+        <h1 class="catalogue__title">Datasets, publications and software from the IEA&nbsp;Wind Tasks</h1>
         <p class="catalogue__lead prose">
           This catalogue watches the places IEA Wind contributors typically
           publish — Zenodo, DataCite, Crossref, GitHub, OSTI, the Wind Data Hub
           and the Task sites — and curates this searchable list of IEA Wind and
           related publications.
         </p>
-
-        <aside class="status" aria-label="Catalogue status">
-          <p class="status__label">Status</p>
-          {fresh.neverRun ? (
-            <p class="status__line"><a href={statusHref}>Not harvested yet →</a></p>
-          ) : (
-            <>
-              <p class="status__line">
-                <a href={statusHref}>Last updated {formatDate(fresh.finishedAt)} →</a>
-              </p>
-              <p class="status__meta secondary">
-                {fresh.ageDays === 0
-                  ? 'today'
-                  : `${fresh.ageDays} day${fresh.ageDays === 1 ? '' : 's'} ago`}
-                {fresh.stale ? ' · refresh due' : ''}
-              </p>
-            </>
-          )}
-        </aside>
       </div>
+
+      <aside class="status" aria-label="Catalogue status">
+        <p class="status__label">Status</p>
+        {fresh.neverRun ? (
+          <p class="status__line"><a href={statusHref}>Not harvested yet →</a></p>
+        ) : (
+          <>
+            <p class="status__line">
+              <a href={statusHref}>Last updated {formatDate(fresh.finishedAt)} →</a>
+            </p>
+            <p class="status__meta secondary">
+              {fresh.ageDays === 0
+                ? 'today'
+                : `${fresh.ageDays} day${fresh.ageDays === 1 ? '' : 's'} ago`}
+              {fresh.stale ? ' · refresh due' : ''}
+            </p>
+          </>
+        )}
+      </aside>
     </header>
 
     {sample && (
@@ -88,7 +87,16 @@ const statusHref = withBase('/about/#status');
     gap: var(--space-12);
   }
 
+  /* Title + description on the left, the status card top-right of the page —
+     a two-column header with the status aligned to the title's top edge. */
   .catalogue__head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .catalogue__headline {
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
@@ -99,17 +107,10 @@ const statusHref = withBase('/about/#status');
     max-width: 20ch;
   }
 
-  .catalogue__intro {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--space-8);
-    align-items: start;
-  }
-
-  @media (max-width: 40rem) {
-    .catalogue__intro {
+  @media (max-width: 48rem) {
+    .catalogue__head {
       grid-template-columns: minmax(0, 1fr);
-      gap: var(--space-4);
+      gap: var(--space-6);
     }
   }
 
@@ -129,7 +130,7 @@ const statusHref = withBase('/about/#status');
     background: var(--surface-raised);
   }
 
-  @media (max-width: 40rem) {
+  @media (max-width: 48rem) {
     .status {
       justify-self: stretch;
       max-width: none;

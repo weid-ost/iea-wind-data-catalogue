@@ -74,13 +74,16 @@ samp,
 pre,
 .mono {
   font-family: var(--font-family-mono);
+  font-variant-numeric: tabular-nums;
   font-size: 0.9em;
 }
 
-/* Metadata is typographically distinct: DOIs, identifiers, version strings and
-   source keys are set in the mono face (design-system.md §1). */
+/* Metadata — DOIs, identifiers, version strings, source keys — uses tabular
+   figures so digits line up even though the face is now the proportional Inter
+   (design-system.md §1; the mono role was retired with the switch to Inter). */
 .meta {
   font-family: var(--font-family-mono);
+  font-variant-numeric: tabular-nums;
   font-size: var(--font-size-small);
   overflow-wrap: anywhere;
 }

@@ -525,11 +525,14 @@
       "mono": {
         "$type": "fontFamily",
         "$value": [
-          "IBM Plex Mono",
-          "ui-monospace",
-          "SFMono-Regular",
-          "Menlo",
-          "monospace"
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif"
         ]
       }
     },
