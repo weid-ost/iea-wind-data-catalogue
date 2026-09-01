@@ -56,9 +56,17 @@ from typing import Any, Iterable, Mapping
 
 from harvest import config
 from harvest.doi import normalise_doi
-from harvest.events import DEFAULT_SOURCE_PRECEDENCE, annotate, iter_identity_keys, resolve
+from harvest.events import (
+    DEFAULT_SOURCE_PRECEDENCE,
+    annotate,
+    iter_identity_keys,
+    raise_notice,
+    read_events,
+    resolve,
+)
 from harvest.identity import identity_kind, normalise_author, normalise_title
-from harvest.models import ResolvedRecord
+from harvest.models import FieldProvenance, ResolvedRecord, normalise_task
+from harvest.urls import safe_url, safe_urls
 
 __all__ = [
     "SAMENESS_RELATIONS",
@@ -72,6 +80,7 @@ __all__ = [
     "find_candidates",
     "is_merged",
     "apply_merge",
+    "promote_task_candidates",
     "dedupe",
     "proposals_path",
     "write_proposals",
@@ -161,10 +170,14 @@ class DedupeResult:
     applied: list[MergeCandidate] = field(default_factory=list)
     already_merged: list[MergeCandidate] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
+    #: ``source.extra.iea_task_candidates`` entries this pass turned into
+    #: ``local.iea_task`` after checking them against ``groups.yaml``.
+    promotions: list[dict] = field(default_factory=list)
 
     def as_notices(self) -> list[dict]:
         notices = [candidate.as_notice() for candidate in self.applied]
         notices.extend(candidate.as_notice() for candidate in self.proposals)
+        notices.extend(self.promotions)
         notices.extend({"type": "dedupe_error", "message": message} for message in self.errors)
         return notices
 
@@ -172,7 +185,8 @@ class DedupeResult:
         return (
             f"dedupe: {len(self.applied)} merge(s) applied, "
             f"{len(self.already_merged)} already merged, "
-            f"{len(self.proposals)} proposal(s) for review"
+            f"{len(self.proposals)} proposal(s) for review, "
+            f"{len(self.promotions)} task candidate(s) promoted"
         )
 
 
@@ -477,13 +491,20 @@ def find_candidates(
 
 
 def _merge_links(record: ResolvedRecord, label: str) -> list[dict]:
-    url = record.effective.get("url")
+    """The one cross-link a merge writes onto the other record.
+
+    Scheme-filtered: a merge copies a URL from a record the *other* source
+    system controls onto the primary's page, so an unlinkable scheme must not
+    ride across (eventlog-06). Filtering here as well as in the namespaces is
+    deliberate — this is the one place a URL crosses an identity boundary.
+    """
+    url = safe_url(record.effective.get("url"))
     if not url:
-        urls = record.effective.get("source_urls") or []
+        urls = safe_urls(record.effective.get("source_urls") or [])
         url = urls[0] if urls else None
     if not url:
         return []
-    return [{"url": str(url), "label": label}]
+    return [{"url": url, "label": label}]
 
 
 def is_merged(
@@ -521,9 +542,10 @@ def apply_merge(
     primary = records[candidate.primary]
     secondary = records[candidate.secondary]
 
-    secondary_urls = list(secondary.effective.get("source_urls") or [])
-    if secondary.effective.get("url") and secondary.effective["url"] not in secondary_urls:
-        secondary_urls.insert(0, str(secondary.effective["url"]))
+    secondary_urls = safe_urls(secondary.effective.get("source_urls") or [])
+    secondary_url = safe_url(secondary.effective.get("url"))
+    if secondary_url and secondary_url not in secondary_urls:
+        secondary_urls.insert(0, secondary_url)
 
     annotate(
         candidate.primary,
@@ -560,6 +582,131 @@ def apply_merge(
     )
 
 
+def promote_task_candidates(
+    records: Mapping[str, ResolvedRecord],
+    events_dir: Path | None = None,
+    root: Path | None = None,
+    apply: bool = False,
+    observed_at: str | None = None,
+) -> list[dict]:
+    """Turn ``source.extra.iea_task_candidates`` into ``local.iea_task``.
+
+    DataCite and Crossref both spot ``task-43``-shaped strings in an award
+    number, a project name or a series title, and both refuse to write them
+    into ``source.iea_task``: a pure ``map()`` cannot consult ``groups.yaml``,
+    and an unregistered group name would fail the CKAN gate. So they park them
+    in ``extra.iea_task_candidates`` and both docstrings said "the reconciler
+    validates these and writes ``local.iea_task``".
+
+    Nothing did (scrape-10). Every DataCite and Crossref task attribution died
+    in an extra nothing read. This is that promotion, and the validation the
+    adapters were promised:
+
+    * a candidate is promoted **only** if it resolves to a group that is
+      actually in ``groups.yaml`` (aliases included, so the renumbered
+      ``task-19`` -> ``task-54`` lands on the right one);
+    * an unknown candidate is left exactly where it is — visible in the extra,
+      promoted the day someone adds the task to the register;
+    * the promotion is an ``annotated`` event, not an edit, so it is
+      append-only, replayable, and carries ``extraction_method: pattern``. It
+      is machine inference, and the record page says so; it is emphatically not
+      ``curator``, because no human asserted it.
+
+    Returns one notice per promotion. Append-on-change: a candidate already in
+    ``effective.iea_task`` is not re-promoted.
+    """
+    directory = events_dir if events_dir is not None else config.events_dir(root)
+    known = config.group_names(root)
+    notices: list[dict] = []
+
+    for identity_key, record in sorted(records.items()):
+        extra = record.effective.get("extra")
+        candidates = (extra or {}).get("iea_task_candidates") if isinstance(extra, dict) else None
+        if not isinstance(candidates, (list, tuple)) or not candidates:
+            continue
+
+        held = {config.canonical_group(task, root) for task in (record.effective.get("iea_task") or [])}
+        promote: list[str] = []
+        for candidate in candidates:
+            group = config.canonical_group(normalise_task(candidate), root)
+            if known and group not in known:
+                log.info(
+                    "%s: task candidate %r is not in groups.yaml; leaving it a candidate",
+                    identity_key,
+                    candidate,
+                )
+                continue
+            if group in held or group in promote:
+                continue
+            promote.append(group)
+
+        if not promote:
+            continue
+        notices.append(
+            {
+                "type": "task_candidate_promoted",
+                "identity_key": identity_key,
+                "iea_task": promote,
+                "message": (
+                    f"promoted {', '.join(promote)} from source.extra.iea_task_candidates "
+                    "after checking it against groups.yaml"
+                ),
+            }
+        )
+        if not apply:
+            continue
+        annotate(
+            identity_key,
+            {"iea_task": promote},
+            provenance={"iea_task": FieldProvenance(extraction_method="pattern")},
+            actor="reconcile",
+            note=(
+                "task candidate promoted from source metadata and validated against "
+                "groups.yaml"
+            ),
+            events_dir=directory,
+            observed_at=observed_at,
+        )
+    return notices
+
+
+def _record_proposal(
+    candidate: MergeCandidate,
+    events_dir: Path,
+    observed_at: str | None = None,
+) -> bool:
+    """Put a merge *proposal* in the append-only log. Idempotent.
+
+    A proposal lived only in ``state/merge-proposals.json``, which is rewritten
+    wholesale on every pass — so the reconciler's judgement about two records
+    was not durable in ``events/``, the artifact ADR-0037 designates the source
+    of truth, and the spec requires proposals to be *recorded* rather than
+    applied silently (compliance-10). Recording it also puts it on the record
+    page, which is where the human who can decide it will be looking.
+
+    Nothing is merged. This is the reconciler saying what it saw and stopping.
+    """
+    notice = {
+        "kind": candidate.kind,
+        "evidence": candidate.evidence,
+        "confidence": candidate.confidence,
+        "other": candidate.secondary,
+        "action": "review required — no merge was applied",
+    }
+    for event in read_events(candidate.primary, events_dir):
+        if event.event_type == "merge_proposal" and event.notice == notice:
+            return False  # append-on-change: the same proposal, already standing
+    raise_notice(
+        candidate.primary,
+        "merge_proposal",
+        notice,
+        events_dir=events_dir,
+        observed_at=observed_at,
+        note=candidate.note,
+    )
+    return True
+
+
 def dedupe(
     events_dir: Path | None = None,
     root: Path | None = None,
@@ -572,9 +719,17 @@ def dedupe(
     directory = events_dir if events_dir is not None else config.events_dir(root)
     records = load_resolved(directory, root)
 
+    result.promotions = promote_task_candidates(
+        records, events_dir=directory, root=root, apply=apply, observed_at=observed_at
+    )
+    if result.promotions and apply:
+        records = load_resolved(directory, root)
+
     for candidate in find_candidates(records, threshold=threshold, root=root):
         if not candidate.automatic:
             result.proposals.append(candidate)
+            if apply:
+                _record_proposal(candidate, directory, observed_at)
             continue
         result.merges.append(candidate)
         if is_merged(candidate, records):

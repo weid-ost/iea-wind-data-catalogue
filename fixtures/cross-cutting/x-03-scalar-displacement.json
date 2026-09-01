@@ -97,6 +97,7 @@
     "license_id": "cc-by",
     "name": "zenodo-3000003",
     "notes": "",
+    "owner_org": "zenodo-community",
     "private": false,
     "resources": [],
     "state": "active",
@@ -197,7 +198,8 @@
       "state": "active",
       "tags": [],
       "title": "Aeroelastic model of the IEA 15MW reference turbine",
-      "url": "https://zenodo.org/records/3000003"
+      "url": "https://zenodo.org/records/3000003",
+      "owner_org": "zenodo-community"
     }
   },
   "expected_notices": [

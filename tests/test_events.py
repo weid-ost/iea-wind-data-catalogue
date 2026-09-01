@@ -18,14 +18,17 @@ from harvest.events import (
     has_changed,
     iter_identity_keys,
     last_source_key,
+    log_problems,
     raise_notice,
     read_events,
     record_scrape,
     replay,
+    reset_log_problems,
     resolve,
     withdraw,
 )
-from harvest.models import Event, FieldProvenance
+from harvest.identity import disambiguated_slug, slug_for_identity
+from harvest.models import Event, FieldProvenance, SourceNamespace
 
 KEY = "10.5281/zenodo.1234"
 
@@ -72,12 +75,218 @@ class TestFileLayout:
         with pytest.raises(ValueError):
             append_event(KEY, event, events_dir)
 
-    def test_a_malformed_line_is_a_clear_error(self, events_dir: Path) -> None:
+class TestACorruptLogIsSurvivable:
+    """CONTRACT rule 5: nothing fails the run. Not even a shredded event file.
+
+    A truncated line is the ordinary residue of a killed append — the process
+    died between ``write`` and the newline. Raising on it used to abort the
+    whole pipeline before ``state/last-run.json`` could be written, which
+    silently freezes the heartbeat the cron keepalive and the site's freshness
+    banner both depend on (eventlog-02, ADR-0029/0031).
+    """
+
+    def test_a_malformed_line_is_skipped_not_raised(self, events_dir: Path) -> None:
+        reset_log_problems()
         scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
         with event_path(KEY, events_dir).open("a") as handle:
             handle.write("{not json\n")
-        with pytest.raises(ValueError, match="malformed event line"):
-            read_events(KEY, events_dir)
+        scrape(events_dir, source_key="r2", at="2026-02-01T00:00:00Z", title="Two")
+
+        events = read_events(KEY, events_dir)
+
+        assert [e.source_key for e in events] == ["r1", "r2"]
+        assert resolve(KEY, events_dir=events_dir).effective["title"] == "Two"
+
+    def test_the_skipped_line_is_reported_never_swallowed(self, events_dir: Path) -> None:
+        reset_log_problems()
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        with event_path(KEY, events_dir).open("a") as handle:
+            handle.write("{not json\n")
+
+        read_events(KEY, events_dir)
+
+        problems = log_problems()
+        assert [p["reason"] for p in problems] == ["malformed event line"]
+        assert problems[0]["line"] == 2
+        assert problems[0]["path"] == "doi-10-5281-zenodo-1234.jsonl"
+
+    def test_a_truncated_line_does_not_stop_the_other_identities(
+        self, events_dir: Path
+    ) -> None:
+        reset_log_problems()
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        record_scrape("osti|99", "osti", "99", "k", {"title": "Two"}, events_dir=events_dir)
+        (events_dir / "doi-10-5281-zenodo-1234.jsonl").write_text('{"event_ty\n')
+
+        assert sorted(iter_identity_keys(events_dir)) == ["osti|99"]
+        assert resolve("osti|99", events_dir=events_dir).effective["title"] == "Two"
+
+    def test_a_strangers_events_are_not_folded_into_this_record(
+        self, events_dir: Path
+    ) -> None:
+        """eventlog-03: the slug-collision defence must fire on READ as well.
+
+        ``append_event`` guards the write path, but the log is a plain text
+        file a runbook invites people to inspect. A line naming another
+        identity used to be replayed straight into this record — the exact
+        cross-contamination the write guard exists to prevent.
+        """
+        reset_log_problems()
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="Mine")
+        stranger = Event(
+            event_type="scraped",
+            identity_key="10.5281/zenodo.9999",
+            observed_at="2026-06-01T00:00:00Z",
+            source={"title": "Not mine", "license_id": "cc-by"},
+        )
+        with event_path(KEY, events_dir).open("a") as handle:
+            handle.write(stranger.to_jsonl() + "\n")
+
+        resolved = resolve(KEY, events_dir=events_dir)
+
+        assert resolved.effective["title"] == "Mine"
+        assert "license_id" not in resolved.effective
+        assert any(
+            p["reason"] == "event belongs to another identity" for p in log_problems()
+        )
+
+
+class TestASlugCollisionDisambiguates:
+    """site-07: the slug is lossy, so two identities can want one file.
+
+    Losing the second record entirely (and failing the run on the resulting
+    validation violation) is the worst of the available outcomes: it is a hard
+    stop triggered by an upstream data change nobody controls.
+    """
+
+    A = "10.2314/KXP:1790028361"
+    B = "10.2314/KXP.1790028361"
+
+    def test_the_two_keys_really_do_collide(self) -> None:
+        assert slug_for_identity(self.A) == slug_for_identity(self.B)
+
+    def test_the_first_writer_keeps_the_plain_slug(self, events_dir: Path) -> None:
+        record_scrape(self.A, "crossref", "a", "k1", {"title": "A"}, events_dir=events_dir)
+        record_scrape(self.B, "crossref", "b", "k2", {"title": "B"}, events_dir=events_dir)
+
+        assert event_path(self.A, events_dir).stem == "doi-10-2314-kxp-1790028361"
+
+    def test_the_second_gets_its_own_log_rather_than_being_refused(
+        self, events_dir: Path
+    ) -> None:
+        record_scrape(self.A, "crossref", "a", "k1", {"title": "A"}, events_dir=events_dir)
+        record_scrape(self.B, "crossref", "b", "k2", {"title": "B"}, events_dir=events_dir)
+
+        assert event_path(self.B, events_dir).stem == disambiguated_slug(self.B)
+        assert sorted(iter_identity_keys(events_dir)) == sorted([self.A, self.B])
+        assert resolve(self.A, events_dir=events_dir).effective["title"] == "A"
+        assert resolve(self.B, events_dir=events_dir).effective["title"] == "B"
+
+    def test_the_resolved_slug_follows_the_log_not_the_key(self, events_dir: Path) -> None:
+        """Record file, CKAN name and site URL must all be the log's name."""
+        record_scrape(self.A, "crossref", "a", "k1", {"title": "A"}, events_dir=events_dir)
+        record_scrape(self.B, "crossref", "b", "k2", {"title": "B"}, events_dir=events_dir)
+
+        assert resolve(self.B, events_dir=events_dir).slug == disambiguated_slug(self.B)
+
+    def test_the_allocation_is_stable_across_a_replay(self, events_dir: Path) -> None:
+        record_scrape(self.A, "crossref", "a", "k1", {"title": "A"}, events_dir=events_dir)
+        record_scrape(self.B, "crossref", "b", "k2", {"title": "B"}, events_dir=events_dir)
+        first = resolve(self.B, events_dir=events_dir).slug
+
+        record_scrape(self.B, "crossref", "b", "k3", {"title": "B2"}, events_dir=events_dir)
+
+        assert resolve(self.B, events_dir=events_dir).slug == first
+
+
+class TestWithdrawalIsAPositiveAssertion:
+    """eventlog-01: nothing un-withdraws a record without observing it back.
+
+    ``SourceNamespace.withdrawn`` defaulted to ``False`` and was always
+    serialised, so every ordinary scrape from every source carried an
+    un-withdrawal assertion no adapter had made. ADR-0027 keeps a withdrawn
+    record forever; it must not be resurrected by a system that never saw the
+    tombstone.
+    """
+
+    def test_a_plain_scrape_asserts_nothing_about_withdrawal(self) -> None:
+        namespace = SourceNamespace(title="T", url="https://example.org/x")
+        assert "withdrawn" not in namespace.model_dump(exclude_none=True)
+
+    def test_an_unrelated_scrape_does_not_resurrect_a_withdrawn_record(
+        self, events_dir: Path
+    ) -> None:
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        withdraw(
+            KEY,
+            source_system="zenodo",
+            note="tombstoned upstream",
+            events_dir=events_dir,
+            observed_at="2026-02-01T00:00:00Z",
+        )
+
+        record_scrape(
+            KEY,
+            "datacite",
+            "1234",
+            "dc-1",
+            SourceNamespace(title="One", url="https://example.org/x").model_dump(exclude_none=True),
+            events_dir=events_dir,
+            observed_at="2026-03-01T00:00:00Z",
+        )
+
+        resolved = resolve(KEY, events_dir=events_dir)
+        assert resolved.withdrawn is True
+        assert resolved.withdrawn_at == "2026-02-01T00:00:00Z"
+
+    def test_the_system_that_withdrew_it_can_take_it_back(self, events_dir: Path) -> None:
+        """An explicit `withdrawn: False` from the same system IS an observation."""
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        withdraw(
+            KEY,
+            source_system="zenodo",
+            note="tombstoned upstream",
+            events_dir=events_dir,
+            observed_at="2026-02-01T00:00:00Z",
+        )
+
+        record_scrape(
+            KEY,
+            "zenodo",
+            "1234",
+            "r2",
+            SourceNamespace(
+                title="One", url="https://example.org/x", withdrawn=False
+            ).model_dump(exclude_none=True),
+            events_dir=events_dir,
+            observed_at="2026-03-01T00:00:00Z",
+        )
+
+        assert resolve(KEY, events_dir=events_dir).withdrawn is False
+
+    def test_a_manual_withdrawal_is_not_cleared_by_any_scrape(
+        self, events_dir: Path
+    ) -> None:
+        """`withdraw()` with no source system is a human's observation.
+
+        No scrape observed what the human observed, so no scrape may reverse it.
+        """
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        withdraw(KEY, note="gone", events_dir=events_dir, observed_at="2026-02-01T00:00:00Z")
+
+        record_scrape(
+            KEY,
+            "zenodo",
+            "1234",
+            "r2",
+            SourceNamespace(
+                title="One", url="https://example.org/x", withdrawn=False
+            ).model_dump(exclude_none=True),
+            events_dir=events_dir,
+            observed_at="2026-03-01T00:00:00Z",
+        )
+
+        assert resolve(KEY, events_dir=events_dir).withdrawn is True
 
 
 class TestChangeDetection:
@@ -322,3 +531,70 @@ class TestReplayIsPure:
     def test_no_events_yields_an_empty_resolution(self, events_dir: Path) -> None:
         resolved = resolve("10.5281/zenodo.nothing", events_dir=events_dir)
         assert resolved.event_count == 0 and resolved.effective == {}
+
+
+class TestOneSpellingPerSourceSystem:
+    """eventlog-08: `Zenodo` and `zenodo` are one system, not two.
+
+    ``source_system`` keys the per-system block in :func:`resolve` and lands
+    verbatim in ``extras.source_systems``, so two spellings composed as two
+    systems — a duplicate source badge on the record page and a split source
+    facet. ``identity_key()`` already lowercased it when building a key; the
+    write path did not, and that asymmetry was the bug.
+    """
+
+    def test_two_spellings_compose_as_one_system(self, events_dir: Path) -> None:
+        record_scrape(KEY, "zenodo", "1234", "r1", {"title": "One"},
+                      events_dir=events_dir, observed_at="2026-01-01T00:00:00Z")
+        record_scrape(KEY, "Zenodo", "1234", "r2", {"title": "Two"},
+                      events_dir=events_dir, observed_at="2026-02-01T00:00:00Z")
+
+        assert resolve(KEY, events_dir=events_dir).source_systems == ["zenodo"]
+
+    def test_change_detection_is_not_split_by_the_spelling(self, events_dir: Path) -> None:
+        record_scrape(KEY, "zenodo", "1234", "rev-1", {"title": "One"},
+                      events_dir=events_dir, observed_at="2026-01-01T00:00:00Z")
+        assert has_changed(KEY, "ZENODO", "rev-1", events_dir) is False
+
+
+class TestSeenMeansSeenUpstream:
+    """`last_seen` is a claim about the source, so only the source may move it.
+
+    An annotation, a displacement notice or a merge proposal is the catalogue
+    talking to itself. Letting one advance ``last_seen`` puts a freshness date
+    on the record page that nobody upstream vouched for — the reconciler noting
+    a probable duplicate would read as "we checked upstream today".
+    """
+
+    def test_a_scrape_moves_it(self, events_dir: Path) -> None:
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        scrape(events_dir, source_key="r2", at="2026-02-01T00:00:00Z", title="Two")
+        assert resolve(KEY, events_dir=events_dir).last_seen == "2026-02-01T00:00:00Z"
+
+    def test_an_annotation_does_not(self, events_dir: Path) -> None:
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        annotate(KEY, {"iea_task": ["task-43"]}, events_dir=events_dir,
+                 observed_at="2026-06-01T00:00:00Z")
+        assert resolve(KEY, events_dir=events_dir).last_seen == "2026-01-01T00:00:00Z"
+
+    def test_a_reconciler_notice_does_not(self, events_dir: Path) -> None:
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        raise_notice(KEY, "merge_proposal", {"other": "osti|1", "action": "review"},
+                     events_dir=events_dir, observed_at="2026-06-01T00:00:00Z")
+        assert resolve(KEY, events_dir=events_dir).last_seen == "2026-01-01T00:00:00Z"
+
+    def test_a_withdrawal_does(self, events_dir: Path) -> None:
+        """A tombstone IS an observation of the artifact — of its absence."""
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        withdraw(KEY, source_system="zenodo", events_dir=events_dir,
+                 observed_at="2026-06-01T00:00:00Z")
+        assert resolve(KEY, events_dir=events_dir).last_seen == "2026-06-01T00:00:00Z"
+
+    def test_the_proposal_still_reaches_the_record(self, events_dir: Path) -> None:
+        """compliance-10: not moving `last_seen` must not mean it is invisible."""
+        scrape(events_dir, source_key="r1", at="2026-01-01T00:00:00Z", title="One")
+        raise_notice(KEY, "merge_proposal", {"other": "osti|1", "action": "review"},
+                     events_dir=events_dir, observed_at="2026-06-01T00:00:00Z")
+
+        notices = resolve(KEY, events_dir=events_dir).notices
+        assert [n["type"] for n in notices] == ["merge_proposal"]

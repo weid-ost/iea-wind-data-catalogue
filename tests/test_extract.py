@@ -684,6 +684,116 @@ class TestTheRequest:
         assert resolve_token() == "ghs-fake", "ADR-0030: CI uses the built-in token"
 
 
+class TestACredentialOnlyEverGoesToItsOwnProvider:
+    """product-e2e-01: the harvester used to leak the operator's OpenAI key.
+
+    ``resolve_token`` picked the first of ``HARVEST_LLM_TOKEN``,
+    ``OPENAI_API_KEY``, ``GITHUB_TOKEN`` that was set, and ``resolve_endpoint``
+    independently defaulted to GitHub Models. So a laptop with the OpenAI SDK
+    configured — ``OPENAI_API_KEY`` exported, no ``OPENAI_BASE_URL``, which is
+    the *normal* OpenAI setup — sent a live OpenAI secret as a Bearer token to
+    ``https://models.github.ai`` on every ordinary ``make harvest``. A
+    credential handed to a third party is not a config wrinkle; it is the key
+    burned.
+
+    The rule is symmetric, and the symmetry is the point: a credential travels
+    only to an endpoint the operator explicitly configured for that provider.
+    """
+
+    def test_an_openai_key_is_not_sent_to_github_models(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        monkeypatch.setenv("OPENAI_API_KEY", "sk-live-secret")
+        assert resolve_endpoint() == DEFAULT_ENDPOINT, "the default is GitHub's"
+        assert resolve_token() is None
+
+    def test_the_harvest_still_degrades_rather_than_failing(
+        self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+    ) -> None:
+        """ADR-0031: no credential is a supported state, not an error."""
+        monkeypatch.setenv("OPENAI_API_KEY", "sk-live-secret")
+        assert extract(CONTENT, cache_directory=tmp_path) is None
+
+    def test_an_openai_key_goes_to_an_endpoint_configured_for_it(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        monkeypatch.setenv("OPENAI_API_KEY", "sk-live-secret")
+        monkeypatch.setenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
+        assert resolve_token() == "sk-live-secret"
+
+    def test_a_github_token_is_not_walked_to_a_third_party_host(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """The mirror image: a stray OPENAI_BASE_URL must not export GITHUB_TOKEN."""
+        monkeypatch.setenv("GITHUB_TOKEN", "ghs-repo-scoped")
+        monkeypatch.setenv("OPENAI_BASE_URL", "https://inference.evil.example/v1")
+        assert resolve_token() is None
+
+    def test_the_harvesters_own_token_goes_wherever_it_is_pointed(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """HARVEST_LLM_TOKEN is this harvester's own credential, so it is trusted."""
+        monkeypatch.setenv("HARVEST_LLM_TOKEN", "harvest-key")
+        monkeypatch.setenv("HARVEST_LLM_ENDPOINT", "https://inference.example/v1")
+        assert resolve_token() == "harvest-key"
+
+    def test_an_explicit_argument_always_wins(self) -> None:
+        assert resolve_token("passed-in") == "passed-in"
+
+    @pytest.mark.parametrize(
+        "endpoint",
+        [
+            "https://models.github.ai/inference",
+            "https://models.inference.ai.azure.com",
+            "https://api.github.com/models",
+        ],
+    )
+    def test_the_openai_key_is_withheld_from_every_endpoint_it_was_not_issued_for(
+        self, monkeypatch: pytest.MonkeyPatch, endpoint: str
+    ) -> None:
+        """Including a plausible-looking one that is not the configured OpenAI host."""
+        monkeypatch.setenv("OPENAI_API_KEY", "sk-live-secret")
+        monkeypatch.setenv("GITHUB_TOKEN", "ghs-fake")
+        token = resolve_token(endpoint=endpoint)
+        assert token != "sk-live-secret"
+
+    @staticmethod
+    def _capture(monkeypatch: pytest.MonkeyPatch) -> list[dict]:
+        """Record every outbound POST. Asserting on the wire, not on the helper."""
+        import httpx
+
+        calls: list[dict] = []
+
+        def post(self, url, **kwargs):  # noqa: ANN001, ANN202
+            calls.append({"url": url, "headers": dict(kwargs.get("headers") or {})})
+            raise httpx.ConnectError("captured; no request is actually sent")
+
+        monkeypatch.setattr(httpx.Client, "post", post)
+        return calls
+
+    def test_no_request_at_all_is_made_with_a_borrowed_credential(
+        self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+    ) -> None:
+        calls = self._capture(monkeypatch)
+        monkeypatch.setenv("OPENAI_API_KEY", "sk-live-secret")
+
+        assert extract(CONTENT, cache_directory=tmp_path) is None
+        assert calls == [], "the page must queue, not leak the key to GitHub"
+
+    def test_the_ci_path_still_sends_the_github_token_to_github(
+        self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+    ) -> None:
+        """The fix must not have disarmed ADR-0030's actual credential path."""
+        calls = self._capture(monkeypatch)
+        monkeypatch.setenv("GITHUB_TOKEN", "ghs-fake")
+
+        extract(CONTENT, cache_directory=tmp_path)
+
+        assert len(calls) == 1
+        assert calls[0]["url"].startswith(DEFAULT_ENDPOINT)
+        assert calls[0]["headers"]["Authorization"] == "Bearer ghs-fake"
+
+
 # ---------------------------------------------------------------------------
 # The result and its provenance
 # ---------------------------------------------------------------------------
@@ -746,3 +856,15 @@ class TestMainText:
         assert "ignore previous instructions" not in text
         assert "Cookie preferences" not in text
         assert "<script" not in text and "href=" not in text
+
+
+class TestExtractReallyNeverRaises:
+    """product-e2e-08: the contract said "never raises"; the first line did."""
+
+    def test_a_string_cache_directory_is_accepted(self, tmp_path: Path) -> None:
+        assert extract(CONTENT, cache_directory=str(tmp_path)) is None
+
+    def test_cache_path_coerces(self, tmp_path: Path) -> None:
+        from harvest.extract import cache_path
+
+        assert cache_path("k", str(tmp_path)) == tmp_path / "k.json"

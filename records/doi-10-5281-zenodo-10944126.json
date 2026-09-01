@@ -97,6 +97,7 @@
   "license_id": "apache",
   "name": "doi-10-5281-zenodo-10944126",
   "notes": "Repository for the IEA 22-MW offshore reference wind turbine developed by the IEA Wind Task 55 REFWIND",
+  "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {

@@ -6,7 +6,7 @@
   },
   "dropped_dois": [],
   "events_appended": 0,
-  "finished_at": "2026-08-31T23:05:10Z",
+  "finished_at": "2026-09-01T01:11:23Z",
   "harvest_version": "0.1.0",
   "limit": 5,
   "notices": [
@@ -162,8 +162,8 @@
   "records": {
     "pruned": 0,
     "total": 30,
-    "unchanged": 30,
-    "written": 0
+    "unchanged": 0,
+    "written": 30
   },
   "sources": {
     "crossref": {
@@ -232,7 +232,7 @@
       "skipped_unchanged": 5
     }
   },
-  "started_at": "2026-08-31T23:04:41Z",
+  "started_at": "2026-09-01T01:10:53Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.2314/kxp:1790028361",

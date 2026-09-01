@@ -1,5 +1,5 @@
 {
-  "case": "INVENTED page (marked in the HTML): one DOI soft-wrapped across a real rendered line break inside <pre>, and a second wrapped at a SPACE inside a <p>. The first is rejoined and resolves. The second truncates to '10.1088/1742-6596/' — harvest.doi's rejoining is deliberately narrow, and the truncated identifier is caught by resolve-or-drop rather than by a wider, riskier regex. Both behaviours are pinned here on purpose.",
+  "case": "INVENTED page (marked in the HTML): one DOI soft-wrapped across a real rendered line break inside <pre>, and a second wrapped at a SPACE inside a <p>. The first is rejoined and resolves. The second truncates to '10.1088/1742-6596' — harvest.doi's rejoining is deliberately narrow, and the truncated identifier is caught by resolve-or-drop rather than by a wider, riskier regex. The trailing slash is stripped by normalise_doi (scrape-05: a DOI never ends in '/', and a slashed spelling used to mint a second identity that squatted the clean DOI's slug), so the dropped value is the slashless truncation. Both behaviours are pinned here on purpose.",
   "expected_classification": {
     "kind": "publication-list",
     "method": "pattern"
@@ -8,10 +8,10 @@
   "expected_content_hash": "4797534fd5bf7a6d",
   "expected_dois": [
     "10.5194/wes-9-883-2024",
-    "10.1088/1742-6596/"
+    "10.1088/1742-6596"
   ],
   "expected_dropped": [
-    "10.1088/1742-6596/"
+    "10.1088/1742-6596"
   ],
   "expected_iea_task": [
     "task-44"

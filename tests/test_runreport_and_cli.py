@@ -138,3 +138,78 @@ class TestCli:
     def test_report_without_a_run(self, repo: Path, capsys) -> None:  # noqa: ANN001
         assert main(["--root", str(repo), "report"]) == 1
         assert "no run report yet" in capsys.readouterr().err
+
+
+class TestTheHeartbeatSurvivesTheRunFailing:
+    """eventlog-02 / compliance-04 / CONTRACT rule 5, at the CLI boundary.
+
+    ``state/last-run.json`` is the cron keepalive: GitHub disables a scheduled
+    workflow after 60 days with no commits, and this file is what every run
+    commits. It is also the site's freshness banner. So a run that dies in the
+    middle is the worst possible time *not* to write it — a frozen heartbeat
+    beside a cron that is still firing is the one failure nobody would notice,
+    because the page still says a date and the workflow still shows green.
+
+    Before this, a single truncated line in ``events/`` or one malformed
+    ``annotations/*.yaml`` raised out of ``cmd_run`` before ``report.write()``.
+    """
+
+    def _corrupt_event_log(self, repo: Path) -> None:
+        (repo / "events").mkdir(exist_ok=True)
+        (repo / "events" / "doi-10-5281-zenodo-1.jsonl").write_text(
+            '{"observed_at": "2026-01-01T00:00:00Z", "event_type": "scraped", '
+            '"identity_key": "10.5281/zenodo.1", "source": {"title": "ok", '
+            '"url": "https://example.org/1"}}\n'
+            '{"observed_at": "2026-01-02T00:0\n',
+            encoding="utf-8",
+        )
+
+    def test_a_truncated_event_line_does_not_stop_the_heartbeat(self, repo: Path) -> None:
+        self._corrupt_event_log(repo)
+
+        main(["--root", str(repo), "run", *only_stubs()])
+
+        assert (repo / "state" / "last-run.json").exists()
+
+    def test_the_skipped_line_is_named_in_the_run_report(self, repo: Path) -> None:
+        """Skipping quietly would be worse than crashing. It must be loud."""
+        self._corrupt_event_log(repo)
+
+        main(["--root", str(repo), "run", *only_stubs()])
+
+        notices = read_run_report(root=repo)["notices"]
+        assert any(notice.get("type") == "event_log_problem" for notice in notices)
+
+    def test_the_good_records_still_materialise(self, repo: Path) -> None:
+        self._corrupt_event_log(repo)
+
+        main(["--root", str(repo), "run", *only_stubs()])
+
+        assert (repo / "records" / "doi-10-5281-zenodo-1.json").exists()
+
+    def test_a_malformed_annotation_file_does_not_stop_the_heartbeat(
+        self, repo: Path
+    ) -> None:
+        (repo / "annotations").mkdir(exist_ok=True)
+        (repo / "annotations" / "broken.yaml").write_text(
+            "identity_key: x\nannotations: [unclosed\n", encoding="utf-8"
+        )
+
+        assert main(["--root", str(repo), "run", *only_stubs()]) == 0
+        assert (repo / "state" / "last-run.json").exists()
+
+    def test_an_unexpected_crash_still_leaves_a_report_behind(
+        self, repo: Path, monkeypatch
+    ) -> None:  # noqa: ANN001
+        """Belt and braces: whatever breaks, the cron must not go dormant."""
+        import harvest.cli as cli
+
+        def explode(*args, **kwargs):  # noqa: ANN002, ANN003
+            raise RuntimeError("upstream changed everything at once")
+
+        monkeypatch.setattr(cli, "_run_pipeline", explode)
+
+        assert main(["--root", str(repo), "run", *only_stubs()]) == 1
+        payload = read_run_report(root=repo)
+        assert payload["ok"] is False
+        assert any(notice.get("type") == "run_failed" for notice in payload["notices"])

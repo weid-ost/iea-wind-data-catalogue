@@ -7,6 +7,7 @@ import pytest
 from harvest.ckan_compat import validate_package
 from harvest.licenses import (
     LICENSE_IDS,
+    LICENSE_REGISTER,
     UNMAPPED_LICENSE_ID,
     as_ckan_register,
     is_known_license,
@@ -87,9 +88,10 @@ def test_every_register_id_passes_the_ckan_gate() -> None:
     for license_id in sorted(LICENSE_IDS):
         package = {
             "name": "a-record", "title": "T", "license_id": license_id,
+            "owner_org": "dtu",
             "tags": [], "extras": [], "resources": [], "groups": [],
         }
-        assert validate_package(package, set(), set()) == []
+        assert validate_package(package, {"dtu"}, set()) == []
 
 
 def test_is_known_license() -> None:
@@ -104,3 +106,49 @@ def test_ckan_register_export_shape() -> None:
     assert {entry["id"] for entry in register} == set(LICENSE_IDS)
     assert all({"id", "title", "url"} <= entry.keys() for entry in register)
     assert register == sorted(register, key=lambda entry: entry["id"])
+
+
+class TestTheRegistersOwnUrlsAreAliases:
+    """compliance-06: the catalogue answered two ways about one licence family.
+
+    ``_build_alias_table`` seeded from every register entry's id and title but
+    not its ``url``. ``cc-nc`` happened to have a hand-written URL alias and the
+    other three CC variants did not, so ``by-nc/4.0/`` mapped and
+    ``by-nc-nd/4.0/`` — an entry whose register row carries that exact URL —
+    came out ``notspecified``. Crossref and DataCite both emit the URL form, so
+    this hit real records: fixture ``cr-02`` pinned the wrong answer as correct.
+
+    Seeding from the register's own URLs closes it by construction: an entry
+    can no longer carry a URL the mapper does not recognise.
+    """
+
+    @pytest.mark.parametrize(
+        "url,expected",
+        [
+            ("https://creativecommons.org/licenses/by-nd/4.0/", "cc-by-nd"),
+            ("https://creativecommons.org/licenses/by-nc-sa/4.0/", "cc-nc-sa"),
+            ("https://creativecommons.org/licenses/by-nc-nd/4.0/", "cc-nc-nd"),
+            ("http://creativecommons.org/licenses/by-nc-nd/4.0/", "cc-nc-nd"),
+            ("https://creativecommons.org/licenses/by-nc/4.0/", "cc-nc"),
+            ("https://creativecommons.org/licenses/by/4.0/", "cc-by"),
+        ],
+    )
+    def test_the_cc_url_forms_all_map(self, url: str, expected: str) -> None:
+        assert map_license(url) == (expected, True)
+
+    def test_every_register_url_maps_back_to_its_own_entry(self) -> None:
+        """The invariant, not just the six cases that prompted it."""
+        for license_id, entry in LICENSE_REGISTER.items():
+            if not entry.url:
+                continue
+            mapped, ok = map_license(entry.url)
+            assert ok, f"{license_id}: {entry.url!r} does not map"
+            assert mapped == license_id, f"{entry.url!r} -> {mapped}, expected {license_id}"
+
+    def test_an_unmappable_licence_is_still_flagged_never_opened(self) -> None:
+        """The invariant the widening must not have weakened."""
+        assert map_license("Free for academic use only") == ("notspecified", False)
+        assert map_license("") == ("notspecified", True), (
+            "an ABSENT licence is not an unmappable one; only a non-empty "
+            "string the table does not know is flagged"
+        )

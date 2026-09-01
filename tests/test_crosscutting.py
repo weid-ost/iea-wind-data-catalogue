@@ -334,3 +334,79 @@ class TestX08EndToEnd:
             append_event(event.identity_key, event, repo / "events")
         materialize_all(repo / "events", repo / "records", root=repo)
         assert main(["--root", str(repo), "validate"]) == 0
+
+
+class TestDefensiveLimits:
+    """scrape-07 / scrape-11: nothing upstream may inflate this repository.
+
+    ``events/*.jsonl`` and ``records/*.json`` are committed on every change and
+    then rendered as HTML and indexed by Pagefind. With no cap anywhere, one
+    upstream description of ten million characters produced a 10 MB event line,
+    a 10 MB record, a 10 MB page and a Pagefind entry to match — and the CKAN
+    gate reported zero violations.
+    """
+
+    def test_a_giant_description_is_truncated_and_marked(self) -> None:
+        from harvest.models import MAX_TEXT_LENGTH, TRUNCATION_MARKER, SourceNamespace
+
+        source = SourceNamespace(title="T", notes="A" * 10_000_000)
+
+        assert len(source.notes) == MAX_TEXT_LENGTH
+        assert source.notes.endswith(TRUNCATION_MARKER), (
+            "the page must not imply the description simply ended there"
+        )
+
+    def test_an_ordinary_description_is_untouched(self) -> None:
+        from harvest.models import SourceNamespace
+
+        notes = "Ten-minute statistics from a scanning lidar." * 100
+        assert SourceNamespace(title="T", notes=notes).notes == notes
+
+    def test_collections_are_capped(self) -> None:
+        from harvest.models import MAX_COLLECTION_ITEMS, SourceNamespace
+
+        source = SourceNamespace(
+            title="T",
+            keywords=[f"kw-{n}" for n in range(5000)],
+            resources=[{"url": f"https://example.org/{n}.csv"} for n in range(5000)],
+        )
+
+        assert len(source.keywords) == MAX_COLLECTION_ITEMS
+        assert len(source.resources) == MAX_COLLECTION_ITEMS
+
+    def test_the_gate_refuses_an_inflated_record(self) -> None:
+        """Defence in depth: the caps must hold for a hand-edited record too."""
+        from harvest.ckan_compat import validate_package
+        from harvest.models import MAX_TEXT_LENGTH
+
+        package = {
+            "name": "x-1", "title": "T", "notes": "A" * (MAX_TEXT_LENGTH + 1),
+            "license_id": "cc-by", "owner_org": "dtu", "state": "active",
+            "private": False, "tags": [], "groups": [], "extras": [], "resources": [],
+        }
+
+        violations = validate_package(package, {"dtu"}, set())
+
+        assert any(v.field == "notes" for v in violations)
+
+    def test_a_record_written_through_the_pipeline_stays_small(
+        self, tmp_path: Path
+    ) -> None:
+        """The end-to-end claim, measured in bytes on disk."""
+        from harvest.events import record_scrape
+
+        root = build_root(tmp_path)
+        record_scrape(
+            "10.5281/zenodo.1", "zenodo", "1", "rev-1",
+            {"title": "T", "url": "https://example.org/1",
+             "notes": "A" * 10_000_000,
+             "keywords": [f"kw-{n}" for n in range(5000)]},
+            events_dir=root / "events", observed_at="2026-01-01T00:00:00Z",
+        )
+
+        result = materialize_all(root / "events", root / "records", root=root)
+
+        assert not result.violations, [str(v) for v in result.violations]
+        record = root / "records" / "doi-10-5281-zenodo-1.json"
+        assert record.stat().st_size < 1_000_000
+        assert (root / "events" / "doi-10-5281-zenodo-1.jsonl").stat().st_size < 1_000_000

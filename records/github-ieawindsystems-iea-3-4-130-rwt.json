@@ -89,6 +89,7 @@
   "license_id": "apache",
   "name": "github-ieawindsystems-iea-3-4-130-rwt",
   "notes": "This repository contains the model data of the land-based reference wind turbine developed within IEA Wind Task 37",
+  "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {

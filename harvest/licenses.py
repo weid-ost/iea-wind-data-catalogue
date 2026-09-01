@@ -121,8 +121,15 @@ def _build_alias_table() -> dict[str, str]:
         for alias in aliases:
             table[_norm(alias)] = license_id
 
-    for lic in _REGISTER:  # every id and title maps to itself
-        add(lic.id, lic.id, lic.title)
+    # Every id, title *and canonical URL* maps to itself. The URL matters:
+    # Crossref and DataCite emit the URL form of a licence far more often than
+    # the name, and seeding only id+title left `by-nd`, `by-nc-sa` and
+    # `by-nc-nd` unmapped while `by-nc` (which had a hand-written URL alias)
+    # mapped — the same catalogue answering two ways about the same family
+    # (compliance-06). Registering the register's own URLs closes that by
+    # construction: an entry can no longer carry a URL the mapper does not know.
+    for lic in _REGISTER:
+        add(lic.id, *(alias for alias in (lic.id, lic.title, lic.url) if alias))
 
     add("cc-zero",
         "cc0", "cc0-1.0", "CC0 1.0", "cc-0", "zero", "publicdomain/zero/1.0",

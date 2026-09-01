@@ -122,11 +122,20 @@
     "container": "Wind Energy Science",
     "doi": "10.5194/wes-9-883-2024",
     "extra": {
+      "resolved_by": "crossref",
       "cited_on": [
         "https://iea-wind.org/task43/t43-publications/"
       ],
       "identifier_source": "page-doi-sweep",
-      "resolved_by": "crossref"
+      "page_classification": [
+        {
+          "url": "https://iea-wind.org/task43/t43-publications/",
+          "classified_as": "publication-list",
+          "method": "pattern",
+          "evidence": null
+        }
+      ],
+      "llm_influenced": false
     },
     "iea_task": [
       "task-43"
@@ -151,8 +160,7 @@
       "https://iea-wind.org/task43/t43-publications/"
     ],
     "title": "Knowledge engineering for wind energy",
-    "url": "https://doi.org/10.5194/wes-9-883-2024",
-    "withdrawn": false
+    "url": "https://doi.org/10.5194/wes-9-883-2024"
   },
   "source_id": "10.5194/wes-9-883-2024",
   "source_key": "56a50f704dc5d65b"

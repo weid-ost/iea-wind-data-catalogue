@@ -89,6 +89,7 @@
   "license_id": "apache",
   "name": "github-ieawindsystems-iea-15-240-rwt",
   "notes": "15MW reference wind turbine repository developed in conjunction with IEA Wind",
+  "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {

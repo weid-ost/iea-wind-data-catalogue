@@ -35,6 +35,7 @@ __all__ = [
     "identity_kind",
     "slugify",
     "slug_for_identity",
+    "disambiguated_slug",
     "normalise_title",
     "normalise_author",
     "fragile_identity_key",
@@ -201,7 +202,24 @@ def slug_for_identity(key: str) -> str:
     ``hash|ab12cd34...``    -> ``hash-ab12cd34...``
 
     Over-long keys (long OSTI paths, long DOI suffixes) are truncated and given
-    an 8-hex suffix of the full key, so the mapping stays injective.
+    an 8-hex suffix of the full key.
+
+    **This mapping is not injective, and pretending otherwise was the bug**
+    (site-07). :func:`slugify` folds ``.``, ``/``, ``:``, ``|`` and every other
+    non-``[a-z0-9_-]`` character to ``-``, so ``10.2314/KXP:1790028361``,
+    ``10.2314/KXP.1790028361`` and ``10.2314/KXP-1790028361`` — three DOIs a
+    registry may legitimately mint, and the first of which is a live record in
+    this catalogue — all render to ``doi-10-2314-kxp-1790028361``. Truncation
+    was given a hash suffix; collision was not, so the second identity to
+    arrive simply got no record file and failed the run.
+
+    Suffixing *every* slug would be injective and would also rewrite every URL
+    in the catalogue for a case that occurs roughly never, so the resolution
+    lives where the ambiguity is actually observable: the event log knows which
+    identity owns which file, and :func:`harvest.events.event_path` hands a
+    late arrival its :func:`disambiguated_slug` instead of refusing it. First
+    writer keeps the plain slug — so no existing URL moves — and the loser gets
+    a stable, distinct one rather than being dropped.
     """
     kind = identity_kind(key)
     prefix = "doi-" if kind == "doi" else ""
@@ -211,6 +229,21 @@ def slug_for_identity(key: str) -> str:
     if len(body) < 2:
         body = f"{body}-record"
     if len(slugify(prefix + key, max_length=10_000)) > MAX_SLUG_LENGTH:
-        digest = hashlib.sha256(key.encode("utf-8")).hexdigest()[:8]
-        body = f"{body[: MAX_SLUG_LENGTH - 9].rstrip('-_')}-{digest}"
+        body = _with_digest(body, key)
     return body
+
+
+def _with_digest(body: str, key: str) -> str:
+    digest = hashlib.sha256(key.encode("utf-8")).hexdigest()[:8]
+    return f"{body[: MAX_SLUG_LENGTH - 9].rstrip('-_')}-{digest}"
+
+
+def disambiguated_slug(key: str) -> str:
+    """The slug this identity takes when another already owns its plain one.
+
+    Deterministic in the key alone (an 8-hex sha256 suffix), so a record that
+    lands here keeps its URL for as long as the collision stands — and, because
+    the suffix is derived from the *identity key* rather than from arrival
+    order, replaying the whole event log reproduces the same allocation.
+    """
+    return _with_digest(slug_for_identity(key), key)

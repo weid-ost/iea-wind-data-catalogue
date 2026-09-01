@@ -659,6 +659,22 @@ class IeaWindAdapter(Adapter):
         result = cached if cached is not None else llm_extract(
             content, context={"url": url, "dois": extract_dois(content)}
         )
+        if result is not None:
+            try:
+                result.page()
+            except Exception as exc:
+                # A committed cache entry whose fields do not validate is a
+                # MISS, never a hard failure (scrape-06). The runbook tells a
+                # curator to edit cache/<key>.json by hand; one typo there must
+                # cost this page, not the whole source.
+                log.warning("cache entry for %s is not a valid extraction: %s", url, exc)
+                self._note(
+                    "cache_entry_invalid",
+                    url,
+                    f"committed extraction cache entry could not be read ({exc}); "
+                    "treated as a cache miss",
+                )
+                result = None
         if result is None:
             queue_pending(
                 url,
@@ -753,12 +769,26 @@ class IeaWindAdapter(Adapter):
 
     @staticmethod
     def _page_ref(page: dict[str, Any]) -> dict[str, Any]:
+        """What the record remembers about the page it was found on.
+
+        ``classification_evidence`` is here because of scrape-09: on an
+        ambiguous page the *model* decides whether the DOI sweep runs at all,
+        so a record can exist solely because an LLM said "publication list" —
+        and nothing on the record said so. Every field on an ``ieawind`` record
+        comes from a DOI registry and is honestly ``api``/``pattern``, so there
+        is no field to hang an ``llm`` provenance on; what is machine-inferred
+        is the record's *existence*. That is recorded here, and surfaced as
+        ``source.extra.page_classification`` on the record, so an
+        LLM-influenced record is auditable (ADR-0028).
+        """
+        classification = page["classification"]
         return {
             "url": page["url"],
             "iea_task": page["iea_task"],
             "content_hash": page["content_hash"],
-            "classified_as": page["classification"].kind,
-            "classification_method": page["classification"].method,
+            "classified_as": classification.kind,
+            "classification_method": classification.method,
+            "classification_evidence": classification.reason,
         }
 
     def _title_search(
@@ -888,6 +918,23 @@ class IeaWindAdapter(Adapter):
                     "resolved_by": agency,
                     "cited_on": page_urls,
                     "identifier_source": payload.get("identifier_source", "page-doi-sweep"),
+                    # scrape-09: how each contributing page was classified, and
+                    # whether a model was in that loop. Every *field* below is
+                    # api or pattern from a DOI registry; what an LLM may have
+                    # decided is that this record should exist at all, and a
+                    # catalogue that badges machine inference has to say so.
+                    "page_classification": [
+                        {
+                            "url": page.get("url"),
+                            "classified_as": page.get("classified_as"),
+                            "method": page.get("classification_method"),
+                            "evidence": page.get("classification_evidence"),
+                        }
+                        for page in pages
+                    ],
+                    "llm_influenced": any(
+                        page.get("classification_method") == "llm" for page in pages
+                    ),
                 },
             ),
             provenance=provenance,

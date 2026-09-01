@@ -125,8 +125,40 @@ def _configure_logging(verbose: bool) -> None:
 
 
 def cmd_run(args: argparse.Namespace) -> int:
+    """The whole pipeline. Returns non-zero on a validation violation.
+
+    **``state/last-run.json`` is written whatever happens** (ADR-0029 §1,
+    CONTRACT rule 5). It is the cron keepalive and the site's freshness
+    banner, so a crash anywhere in the pipeline must still leave a report
+    behind saying the run happened and what broke — a frozen heartbeat with a
+    live cron committing beside it is the one failure nobody would notice.
+    """
     root: Path | None = args.root
     report = RunReport(limit=args.limit)
+    from harvest import events as event_log
+
+    event_log.reset_log_problems()
+    try:
+        return _run_pipeline(args, report)
+    except Exception as exc:  # the pipeline is never allowed to take the heartbeat with it
+        log.exception("harvest run failed")
+        report.ok = False
+        report.add_notices([
+            {
+                "type": "run_failed",
+                "message": f"{type(exc).__name__}: {exc}",
+                "action": "the run report is written anyway; the cron stays alive",
+            }
+        ])
+        report.add_notices(event_log.log_problems())
+        report.finished_at = None
+        log.info("wrote %s", report.write(root=root))
+        print(f"harvest run: FAILED — {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 1
+
+
+def _run_pipeline(args: argparse.Namespace, report: RunReport) -> int:
+    root: Path | None = args.root
     sources = config.load_sources(root)
     if not sources:
         log.warning("sources.yaml declares no sources; nothing to harvest")
@@ -197,6 +229,10 @@ def cmd_run(args: argparse.Namespace) -> int:
         write_link_report(link_report, root=root)
         report.add_notices(link_report.as_notices())
         log.info("%s", link_report.summary())
+
+    from harvest import events as event_log
+
+    report.add_notices(event_log.log_problems())
 
     report.finished_at = None  # stamped at write time
     path = report.write(root=root)

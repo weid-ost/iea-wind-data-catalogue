@@ -10,6 +10,7 @@
     "notes": "",
     "license_id": "notspecified",
     "tags": [],
+    "owner_org": "zenodo-community",
     "extras": [
       {
         "key": "doi",

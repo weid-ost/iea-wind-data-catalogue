@@ -60,9 +60,11 @@ Watch for
       subjects, titles), and a group name that is not in ``groups.yaml`` would
       fail the CKAN gate for the entire run — DataCite carries real DOIs for
       Task 23 and Task 24, which have no group. The parsed candidates are put
-      in ``source.extra["iea_task_candidates"]`` for the reconciler to promote
-      to ``local.iea_task`` after checking the register. ``map()`` is pure and
-      cannot read ``groups.yaml`` to check for itself.
+      in ``source.extra["iea_task_candidates"]``, and
+      :func:`harvest.dedupe.promote_task_candidates` promotes them to
+      ``local.iea_task`` — but only the ones that resolve to a group actually
+      in ``groups.yaml``. ``map()`` is pure and cannot read the register to
+      check for itself.
 """
 
 from __future__ import annotations

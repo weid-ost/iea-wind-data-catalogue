@@ -89,6 +89,7 @@
   "license_id": "apache",
   "name": "github-ieawindsystems-iea-lb-rwt",
   "notes": "Repository for 6.3, 6.9, and 7.2 MW land-based reference wind turbines",
+  "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {

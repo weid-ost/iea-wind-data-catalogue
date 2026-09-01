@@ -36,9 +36,10 @@ from pathlib import Path
 from typing import Any, Iterable, Iterator, Sequence
 
 from harvest import config
-from harvest.identity import slug_for_identity
+from harvest.identity import disambiguated_slug, slug_for_identity
 from harvest.models import (
     SET_VALUED_FIELDS,
+    sanitise_payload,
     Event,
     FieldProvenance,
     ResolvedRecord,
@@ -61,6 +62,7 @@ __all__ = [
     "annotate",
     "withdraw",
     "raise_notice",
+    "NOTICE_EVENT_TYPES",
 ]
 
 log = logging.getLogger(__name__)
@@ -80,6 +82,15 @@ DEFAULT_SOURCE_PRECEDENCE: dict[str, int] = {
 
 _EMPTY = (None, "", [], {})
 
+#: Event types that carry a ``notice`` rather than metadata. All three end
+#: up in ``ResolvedRecord.notices`` and therefore on the record page and in
+#: the run report. ``merge_proposal`` is here because a proposal that lives
+#: only in ``state/merge-proposals.json`` is not durable: that file is
+#: rewritten wholesale on every pass, while ADR-0037 makes ``events/`` the
+#: source of truth, and the spec requires a proposal to be recorded rather
+#: than applied silently (compliance-10).
+NOTICE_EVENT_TYPES = ("displacement_notice", "pin_notice", "merge_proposal")
+
 
 # ---------------------------------------------------------------------------
 # Reading and writing
@@ -87,20 +98,55 @@ _EMPTY = (None, "", [], {})
 
 
 def event_path(identity_key: str, events_dir: Path | None = None) -> Path:
-    """``events/<slug>.jsonl`` for an identity key."""
+    """``events/<slug>.jsonl`` for an identity key.
+
+    Usually just :func:`~harvest.identity.slug_for_identity`. When the plain
+    slug is already owned by a *different* identity — the slug is lossy, two
+    DOIs can render to one (site-07) — this returns the
+    :func:`~harvest.identity.disambiguated_slug` file instead. First writer
+    keeps the plain name, so no existing record ever moves; the late arrival
+    gets a distinct log rather than being refused a place in the catalogue.
+
+    Read and write agree because both go through here.
+    """
     directory = events_dir or config.events_dir()
-    return directory / f"{slug_for_identity(identity_key)}.jsonl"
+    plain = directory / f"{slug_for_identity(identity_key)}.jsonl"
+    incumbent = _identity_in_file(plain)
+    if incumbent is None or incumbent == identity_key:
+        return plain
+
+    fallback = directory / f"{disambiguated_slug(identity_key)}.jsonl"
+    if _identity_in_file(fallback) == identity_key:
+        return fallback
+
+    # Neither canonical name holds this identity, but a hand-written or
+    # hand-renamed file still might. Losing an existing log because its name is
+    # unexpected would be the worse failure by far, so look before writing a
+    # new one. Reached only by an identity whose plain slug is taken, which is
+    # the collision case and therefore vanishingly rare.
+    for path in sorted(directory.glob("*.jsonl")):
+        if _identity_in_file(path) == identity_key:
+            return path
+    return fallback
 
 
 def _identity_in_file(path: Path) -> str | None:
-    """The identity key already claiming this file, or ``None`` if it is new."""
+    """The identity key already claiming this file, or ``None`` if it is new.
+
+    A corrupt first line is skipped rather than raised on: the file's owner is
+    whichever identity the first *readable* line names.
+    """
     if not path.exists():
         return None
     with path.open("r", encoding="utf-8") as handle:
-        for line in handle:
+        for number, line in enumerate(handle, start=1):
             line = line.strip()
-            if line:
+            if not line:
+                continue
+            try:
                 return json.loads(line).get("identity_key")
+            except json.JSONDecodeError as exc:
+                _log_problem(path, number, "malformed event line", str(exc))
     return None
 
 
@@ -109,11 +155,14 @@ def append_event(identity_key: str, event: Event, events_dir: Path | None = None
 
     The only write path into ``events/``. Never rewrites or reorders a line.
 
-    Refuses to write if a *different* identity key already owns the file. Two
-    identities whose slugs collide would otherwise interleave into one log and
-    corrupt both records, invisibly — the slug is short and lossy, the identity
-    key is not. Callers get a ``ValueError``; ``run_adapter`` turns it into one
-    logged, skipped record rather than a failed run.
+    Two identities whose slugs collide must never interleave into one log —
+    the slug is short and lossy, the identity key is not — so
+    :func:`event_path` routes the late arrival to its
+    :func:`~harvest.identity.disambiguated_slug`. The guard below therefore
+    fires only if *that* file is somehow owned by a third identity, which a
+    sha256 cannot produce by accident; it stays as an assertion. Callers get a
+    ``ValueError``; ``run_adapter`` turns it into one logged, skipped record
+    rather than a failed run.
     """
     if event.identity_key != identity_key:
         raise ValueError(
@@ -132,8 +181,50 @@ def append_event(identity_key: str, event: Event, events_dir: Path | None = None
     return path
 
 
+#: Every event line this process refused to read, as ``{path, line, reason}``.
+#: Collected rather than raised: one truncated line — the residue of a killed
+#: append — must not stop the other 29 identities materialising, and must not
+#: stop ``state/last-run.json`` being written (CONTRACT rule 5, ADR-0029).
+#: ``cmd_run`` drains this into the run report so a skipped line is loud.
+LOG_PROBLEMS: list[dict[str, Any]] = []
+
+
+def _log_problem(path: Path, number: int, reason: str, detail: str) -> None:
+    problem = {
+        "type": "event_log_problem",
+        "path": path.name,
+        "line": number,
+        "reason": reason,
+        "message": detail,
+    }
+    if problem not in LOG_PROBLEMS:
+        LOG_PROBLEMS.append(problem)
+    log.error("%s:%s: %s (%s) — line skipped", path, number, reason, detail)
+
+
+def log_problems() -> list[dict[str, Any]]:
+    """The skipped-line notices collected so far, for the run report."""
+    return list(LOG_PROBLEMS)
+
+
+def reset_log_problems() -> None:
+    """Clear the collected notices. Tests and long-lived processes call this."""
+    LOG_PROBLEMS.clear()
+
+
 def read_events(identity_key: str, events_dir: Path | None = None) -> list[Event]:
-    """Every event for one identity, in observation order (stable on ties)."""
+    """Every event for one identity, in observation order (stable on ties).
+
+    **Skip-and-report, never raise.** Two lines are refused and reported:
+
+    * one that is not a valid :class:`~harvest.models.Event` — truncated,
+      corrupt, or carrying a field this version does not know;
+    * one whose ``identity_key`` is not this identity's. A stranger's events
+      sitting in this file would otherwise be folded straight into this
+      record, which is exactly the corruption
+      :func:`append_event`'s collision guard exists to prevent (eventlog-03).
+      The guard covers the write path; this covers a hand-written log.
+    """
     path = event_path(identity_key, events_dir)
     if not path.exists():
         return []
@@ -144,9 +235,19 @@ def read_events(identity_key: str, events_dir: Path | None = None) -> list[Event
             if not line:
                 continue
             try:
-                events.append(Event.from_jsonl(line))
-            except (json.JSONDecodeError, ValueError) as exc:
-                raise ValueError(f"{path}:{number}: malformed event line: {exc}") from exc
+                event = Event.from_jsonl(line)
+            except Exception as exc:  # json, pydantic, anything a bad byte does
+                _log_problem(path, number, "malformed event line", str(exc))
+                continue
+            if event.identity_key != identity_key:
+                _log_problem(
+                    path,
+                    number,
+                    "event belongs to another identity",
+                    f"{event.identity_key!r} in the log of {identity_key!r}",
+                )
+                continue
+            events.append(event)
     return _in_order(events)
 
 
@@ -162,13 +263,22 @@ def iter_identity_keys(events_dir: Path | None = None) -> Iterator[str]:
     if not directory.exists():
         return
     for path in sorted(directory.glob("*.jsonl")):
-        with path.open("r", encoding="utf-8") as handle:
-            for line in handle:
-                line = line.strip()
-                if not line:
-                    continue
-                yield json.loads(line)["identity_key"]
-                break
+        identity_key = _identity_in_file(path)
+        if identity_key is None:
+            continue
+        if path.stem not in (slug_for_identity(identity_key), disambiguated_slug(identity_key)):
+            # A hand-written log whose filename renders neither the identity's
+            # plain slug nor its collision-disambiguated one. Left readable —
+            # the events are not lost — but reported, because a mismatch means
+            # the file the record materialises to is not the file the harvest
+            # would append to, and the two would silently diverge.
+            _log_problem(
+                path,
+                1,
+                "file name does not match its identity",
+                f"{identity_key!r} renders to {slug_for_identity(identity_key)!r}",
+            )
+        yield identity_key
 
 
 def read_all_events(events_dir: Path | None = None) -> dict[str, list[Event]]:
@@ -182,11 +292,18 @@ def last_event(
     event_type: str | None = None,
     source_system: str | None = None,
 ) -> Event | None:
-    """The most recent matching event, or ``None``."""
+    """The most recent matching event, or ``None``.
+
+    ``source_system`` is matched case-insensitively, to the same rule
+    :class:`~harvest.models.Event` normalises writes by (eventlog-08). A
+    caller asking about ``"Zenodo"`` must not miss ``zenodo``'s events and
+    conclude the source key has moved — that would re-emit every record.
+    """
+    wanted = source_system.strip().lower() if isinstance(source_system, str) else source_system
     for event in reversed(read_events(identity_key, events_dir)):
         if event_type and event.event_type != event_type:
             continue
-        if source_system and event.source_system != source_system:
+        if wanted and event.source_system != wanted:
             continue
         return event
     return None
@@ -235,7 +352,13 @@ def record_scrape(
     actor: str | None = None,
 ) -> Event:
     """Append a ``scraped`` event. Caller must already have checked
-    :func:`has_changed` — this function does not check for you."""
+    :func:`has_changed` — this function does not check for you.
+
+    ``source`` is sanitised here, not only in ``SourceNamespace``: this is
+    the write path, and it accepts a plain dict, so the URL-scheme
+    allow-list and the length caps have to live where every caller passes
+    through rather than where a well-behaved adapter happens to.
+    """
     event = Event(
         observed_at=observed_at or utcnow(),
         event_type="scraped",
@@ -243,7 +366,7 @@ def record_scrape(
         source_key=source_key,
         source_system=source_system,
         source_id=source_id,
-        source=source,
+        source=sanitise_payload(source),
         provenance=provenance or {},
         actor=actor or f"harvest/{source_system}",
     )
@@ -260,12 +383,15 @@ def annotate(
     events_dir: Path | None = None,
     observed_at: str | None = None,
 ) -> Event:
-    """Append an ``annotated`` event — an additive local change."""
+    """Append an ``annotated`` event — an additive local change.
+
+    Sanitised on the same terms as a scrape: a curator pastes URLs too.
+    """
     event = Event(
         observed_at=observed_at or utcnow(),
         event_type="annotated",
         identity_key=identity_key,
-        local=local,
+        local=sanitise_payload(local),
         provenance=provenance or {},
         actor=actor,
         note=note,
@@ -302,8 +428,8 @@ def raise_notice(
     observed_at: str | None = None,
     note: str | None = None,
 ) -> Event:
-    """Append a ``displacement_notice`` or ``pin_notice``."""
-    if event_type not in ("displacement_notice", "pin_notice"):
+    """Append a ``displacement_notice``, ``pin_notice`` or ``merge_proposal``."""
+    if event_type not in NOTICE_EVENT_TYPES:
         raise ValueError(f"not a notice event type: {event_type!r}")
     event = Event(
         observed_at=observed_at or utcnow(),
@@ -397,15 +523,26 @@ def resolve(
     local_provenance: dict[str, FieldProvenance] = {}
     source_provenance: dict[str, FieldProvenance] = {}
     notices: list[dict] = []
-    withdrawn = False
-    withdrawn_at: str | None = None
+    # Withdrawal is a *positive assertion by one source system*, and only that
+    # system can take it back (ADR-0027, eventlog-01). ``{system: observed_at}``
+    # — a manual ``withdraw()`` with no system is filed under "" and no scrape
+    # can clear it, because no scrape observed what the human observed.
+    withdrawn_by: dict[str, str] = {}
     first_seen: str | None = None
     last_seen: str | None = None
     last_scrape: Event | None = None
 
     for event in log_events:
-        first_seen = first_seen or event.observed_at
-        last_seen = event.observed_at
+        # "Seen" means seen UPSTREAM. A scrape is an observation of the
+        # artifact; so is a withdrawal, which is an observation of its absence.
+        # An annotation, a displacement notice or a merge proposal is the
+        # catalogue talking to itself, and letting one of those advance
+        # `last_seen` puts a date on the record page that no source vouched for
+        # — the reconciler noting a probable duplicate would read as "we
+        # checked upstream today".
+        if event.event_type in ("scraped", "withdrawn"):
+            first_seen = first_seen or event.observed_at
+            last_seen = event.observed_at
 
         if event.event_type == "scraped":
             system = event.source_system or "unknown"
@@ -426,10 +563,15 @@ def resolve(
                     update={"source_system": value.source_system or system}
                 )
             last_scrape = event
-            if event.source.get("withdrawn") is True:
-                withdrawn, withdrawn_at = True, event.observed_at
-            elif withdrawn and event.source.get("withdrawn") is False:
-                withdrawn, withdrawn_at = False, None
+            claim = event.source.get("withdrawn")
+            if claim is True:
+                withdrawn_by[system] = event.observed_at
+            elif claim is False:
+                # An explicit "I looked, and it is still there" from the system
+                # that withdrew it. An *absent* flag says nothing and clears
+                # nothing: an ordinary scrape from another source system must
+                # never resurrect a tombstoned record.
+                withdrawn_by.pop(system, None)
 
         elif event.event_type == "annotated":
             for key, value in event.local.items():
@@ -440,9 +582,9 @@ def resolve(
             local_provenance.update(event.provenance)
 
         elif event.event_type == "withdrawn":
-            withdrawn, withdrawn_at = True, event.observed_at
+            withdrawn_by[event.source_system or ""] = event.observed_at
 
-        elif event.event_type in ("displacement_notice", "pin_notice"):
+        elif event.event_type in NOTICE_EVENT_TYPES:
             notices.append(
                 {
                     "type": event.event_type,
@@ -451,6 +593,11 @@ def resolve(
                     **(event.notice or {}),
                 }
             )
+
+    withdrawn = bool(withdrawn_by)
+    #: The earliest still-standing withdrawal: when this record stopped being
+    #: available, not when the last system noticed.
+    withdrawn_at = min(withdrawn_by.values()) if withdrawn_by else None
 
     source = _compose_source(by_system, ranks)
 
@@ -478,14 +625,24 @@ def resolve(
         elif local_value is not None:
             effective[key] = local_value
 
+    # Local provenance fills the gaps the sources left; it never overwrites a
+    # source's account of where a value came from. That matters most on the
+    # set-valued fields: ``iea_task`` is a UNION, so when Zenodo's community
+    # slug contributed ``task-43`` and a curator added ``task-49``, stamping
+    # the whole field ``curator`` would erase the fact that a source stated
+    # part of it — the exact inversion of the honesty this provenance exists
+    # for. The source's claim is the stronger one and stays.
     provenance = {**source_provenance}
     for key, value in local_provenance.items():
-        if key not in effective or key in SET_VALUED_FIELDS or key not in source_provenance:
+        if key not in source_provenance:
             provenance[key] = value
 
     return ResolvedRecord(
         identity_key=identity_key,
-        slug=slug_for_identity(identity_key),
+        # From the event log, not from the key alone: if this identity lost a
+        # slug collision its record, its URL and its log file must all agree on
+        # the disambiguated name (site-07).
+        slug=event_path(identity_key, events_dir).stem,
         source=source,
         local=local,
         effective=effective,

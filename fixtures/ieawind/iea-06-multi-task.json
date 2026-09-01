@@ -136,12 +136,27 @@
     ],
     "doi": "10.5281/zenodo.11289823",
     "extra": {
+      "resolved_by": "datacite",
       "cited_on": [
         "https://iea-wind.org/task43/t43-publications/",
         "https://iea-wind.org/task49/publications/"
       ],
       "identifier_source": "page-doi-sweep",
-      "resolved_by": "datacite"
+      "page_classification": [
+        {
+          "url": "https://iea-wind.org/task43/t43-publications/",
+          "classified_as": "publication-list",
+          "method": "pattern",
+          "evidence": null
+        },
+        {
+          "url": "https://iea-wind.org/task49/publications/",
+          "classified_as": "publication-list",
+          "method": "pattern",
+          "evidence": null
+        }
+      ],
+      "llm_influenced": false
     },
     "iea_task": [
       "task-43",
@@ -180,8 +195,7 @@
     ],
     "title": "OpenOA: An Open-Source Codebase For Operational Analysis of Wind Farms",
     "url": "https://zenodo.org/doi/10.5281/zenodo.11289823",
-    "version": "v3.1.2",
-    "withdrawn": false
+    "version": "v3.1.2"
   },
   "source_id": "10.5281/zenodo.11289823",
   "source_key": "71e247b746edd770"

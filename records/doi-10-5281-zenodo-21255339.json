@@ -105,6 +105,7 @@
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-21255339",
   "notes": "<p>In this key-note presentation at the OSES2026 conference, I talked about how open innovation and data sharing can advance the deployment and operation of offshore energy and storage. I talked about:</p>\n<ul>\n<li>Digitalisation is about creating value from data. Through interviews with practitioners, we found that key needs are introducing common vocabulary and data models, fostering a digital organisational culture and digital skills, and providing platforms or opportunities to innovate together.</li>\n<li>The WeDoWind open innovation ecosystem attempts to address these needs by providing a platform to share data and code, and to work on common vocabularies and recommendations for sharing data, and to solve data-related industry problems collaboratively.</li>\n<li>WeDoWind is being expanded to WeDoEnergy, which focuses on general energy-related topics including offshore energy systems and storage.</li>\n</ul>",
+  "owner_org": "ost",
   "private": false,
   "resources": [
     {

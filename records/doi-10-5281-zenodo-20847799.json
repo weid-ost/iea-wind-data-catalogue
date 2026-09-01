@@ -105,6 +105,7 @@
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-20847799",
   "notes": "<p><span>In this key-note presentation at the TORQUE2026 conference, I</span><span> talked about how open innovation and data sharing can advance wind energy innovation, in particular related to Structural Health Monitoring. I talked about:</span></p>\n<p><span>(1) Digitalisation is about creating value from data. </span></p>\n<p><span>(2) Through interviews with practitioners, we found that key needs are introducing common vocabulary and data models, fostering a digital organisational culture and digital skills, and providing platforms or opportunities to innovate together.</span></p>\n<p><span>(3) The WeDoWind open innovation ecosystem attempts to address these needs </span><span>by providing a platform to share data and code, and to work on common vocabularies and recommendations for sharing data, and to solve data-related industry problems collaboratively.</span></p>",
+  "owner_org": "ost",
   "private": false,
   "resources": [
     {

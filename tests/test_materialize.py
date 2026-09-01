@@ -5,9 +5,17 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from harvest.events import annotate, record_scrape, withdraw
+from harvest.events import (
+    annotate,
+    event_path,
+    log_problems,
+    record_scrape,
+    reset_log_problems,
+    resolve,
+    withdraw,
+)
+from harvest.identity import disambiguated_slug
 from harvest.materialize import dump_record, materialize_all, to_ckan_package
-from harvest.events import resolve
 
 KEY = "10.5281/zenodo.1234"
 
@@ -222,33 +230,104 @@ class TestWithdrawalAndPruning:
 
 
 class TestValidationIsRunOnMaterialise:
-    def test_an_invalid_group_reference_fails_the_gate(
+    def test_an_unknown_group_is_dropped_with_a_notice_not_a_failed_run(
         self, repo: Path, events_dir: Path
     ) -> None:
+        """scrape-02: an unknown task must not wedge every future run.
+
+        ``events/`` is append-only, so a group name the register does not know
+        would fail the CKAN gate on this run *and on every run after it* —
+        blocking the deploy until a human edited ``groups.yaml``. A Zenodo
+        community slug is enough to trigger that, and anyone can make one. So
+        the group is dropped, loudly: the attribution survives in
+        ``extras.iea_task`` and in the event log, and adding the task to the
+        register brings the group back on the next materialise.
+        """
         seed(events_dir)
         annotate(KEY, {"iea_task": ["task-999"]}, events_dir=events_dir,
                  observed_at="2026-01-02T00:00:00Z")
+
         result = materialize_all(root=repo)
-        assert not result.ok
-        assert any("task-999" in str(v) for v in result.violations)
+
+        assert result.ok, result.violations
+        assert any(
+            notice["type"] == "unknown_group" and notice["group"] == "task-999"
+            for notice in result.notices
+        )
+        package = json.loads((repo / "records" / "doi-10-5281-zenodo-1234.json").read_text())
+        assert package["groups"] == []
+        extras = {extra["key"]: extra["value"] for extra in package["extras"]}
+        assert "task-999" in extras["iea_task"]
+
+    def test_the_gate_still_refuses_a_hand_edited_record_with_an_unknown_group(
+        self, repo: Path, events_dir: Path
+    ) -> None:
+        """Dropping at materialise is not an excuse to stop checking."""
+        from harvest.ckan_compat import validate_records
+
+        seed(events_dir)
+        materialize_all(root=repo)
+        path = repo / "records" / "doi-10-5281-zenodo-1234.json"
+        package = json.loads(path.read_text())
+        package["groups"] = [{"name": "task-999"}]
+        path.write_text(json.dumps(package), encoding="utf-8")
+
+        violations = validate_records(repo / "records", root=repo)
+
+        assert any("task-999" in str(v) for v in violations)
 
     def test_an_empty_catalogue_validates(self, repo: Path) -> None:
         assert materialize_all(root=repo).ok
 
-    def test_a_slug_collision_is_refused_at_the_event_log(self, events_dir: Path) -> None:
-        """Two identities rendering to one slug must never share an event file."""
-        import pytest
+    def test_two_identities_that_share_a_slug_never_share_an_event_file(
+        self, events_dir: Path
+    ) -> None:
+        """site-07: the slug is lossy, so the log must arbitrate, not collapse.
 
+        Interleaving two identities into one file would corrupt both records
+        invisibly. Refusing the second was the old defence and it cost a whole
+        record; disambiguating keeps both, and the incumbent's URL is untouched.
+        """
         record_scrape("zenodo|a.b", "zenodo", "x", "rev-1", {"title": "first"},
                       events_dir=events_dir, observed_at="2026-01-01T00:00:00Z")
-        with pytest.raises(ValueError, match="slug collision"):
-            record_scrape("zenodo|a-b", "zenodo", "x", "rev-1", {"title": "second"},
-                          events_dir=events_dir, observed_at="2026-01-01T00:00:00Z")
+        record_scrape("zenodo|a-b", "zenodo", "x", "rev-1", {"title": "second"},
+                      events_dir=events_dir, observed_at="2026-01-01T00:00:00Z")
 
-    def test_the_defence_in_depth_check_also_lives_in_materialize(
+        first = event_path("zenodo|a.b", events_dir)
+        second = event_path("zenodo|a-b", events_dir)
+        assert first != second
+        assert first.stem == "zenodo-a-b"          # incumbent keeps its name
+        assert second.stem == disambiguated_slug("zenodo|a-b")
+        assert resolve("zenodo|a.b", events_dir=events_dir).effective["title"] == "first"
+        assert resolve("zenodo|a-b", events_dir=events_dir).effective["title"] == "second"
+
+    def test_a_collision_costs_no_record_at_materialise(
         self, repo: Path, events_dir: Path
     ) -> None:
-        """Hand-written event files can still collide; materialize says so."""
+        """Both records are written, under distinct names, and the run is ok."""
+        record_scrape("zenodo|a.b", "zenodo", "x", "rev-1",
+                      {"title": "first", "url": "https://example.org/a"},
+                      events_dir=events_dir, observed_at="2026-01-01T00:00:00Z")
+        record_scrape("zenodo|a-b", "zenodo", "y", "rev-1",
+                      {"title": "second", "url": "https://example.org/b"},
+                      events_dir=events_dir, observed_at="2026-01-01T00:00:00Z")
+
+        result = materialize_all(root=repo)
+
+        assert result.ok, result.violations
+        written = {path.stem for path in (repo / "records").glob("*.json")}
+        assert written == {"zenodo-a-b", disambiguated_slug("zenodo|a-b")}
+
+    def test_a_misnamed_hand_written_log_is_read_and_reported(
+        self, repo: Path, events_dir: Path
+    ) -> None:
+        """Defence in depth: a file whose name renders neither slug is not lost.
+
+        The events still replay — throwing away a curator's hand-written log
+        because its filename surprised us would be the worse failure — but the
+        mismatch is reported so the layout gets fixed.
+        """
+        reset_log_problems()
         for stem, key in (("zenodo-a-b", "zenodo|a-b"), ("zenodo-a-b-2", "zenodo|a.b")):
             (events_dir / f"{stem}.jsonl").write_text(
                 json.dumps({
@@ -259,5 +338,13 @@ class TestValidationIsRunOnMaterialise:
                 encoding="utf-8",
             )
         result = materialize_all(root=repo)
-        assert not result.ok
-        assert any("slug collision" in str(v) for v in result.violations)
+
+        assert result.ok, result.violations
+        assert {path.stem for path in (repo / "records").glob("*.json")} == {
+            "zenodo-a-b", "zenodo-a-b-2"
+        }
+        assert any(
+            problem["reason"] == "file name does not match its identity"
+            and problem["path"] == "zenodo-a-b-2.jsonl"
+            for problem in log_problems()
+        )

@@ -113,8 +113,7 @@
       "https://wdh.energy.gov/ds/buoy/buoy.z01.00"
     ],
     "title": "Buoy - Virginia - Wind Sentinel Vindicator 3 (120) - Raw Data",
-    "url": "https://wdh.energy.gov/ds/buoy/buoy.z01.00",
-    "withdrawn": false
+    "url": "https://wdh.energy.gov/ds/buoy/buoy.z01.00"
   },
   "source_id": "buoy/buoy.z01.00",
   "source_key": "2022-09-27T00:37:07.000000Z"

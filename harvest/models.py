@@ -32,12 +32,29 @@ Collision, when the source later starts providing a field a curator had added:
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timezone
-from typing import Any, Literal
+from typing import Any, Literal, Mapping
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
+from harvest.urls import (
+    safe_links,
+    safe_related_identifiers,
+    safe_resources,
+    safe_url,
+    safe_urls,
+)
+
 __all__ = [
+    "normalise_task",
+    "sanitise_payload",
+    "truncate_text",
+    "MAX_TEXT_LENGTH",
+    "MAX_COLLECTION_ITEMS",
+    "TRUNCATION_MARKER",
+    "LOCAL_CURATOR_FIELDS",
+    "LOCAL_RECONCILER_FIELDS",
     "EventType",
     "ExtractionMethod",
     "SET_VALUED_FIELDS",
@@ -71,9 +88,10 @@ EventType = Literal[
     "withdrawn",            # the artifact vanished upstream; the record is retained
     "displacement_notice",  # a source value displaced a local scalar (§4.2)
     "pin_notice",           # a pinned Tier-3 extraction held while the page moved (§4.3)
+    "merge_proposal",       # the reconciler found a probable duplicate it will NOT merge
 ]
 
-ExtractionMethod = Literal["api", "pattern", "llm"]
+ExtractionMethod = Literal["api", "pattern", "llm", "curator"]
 
 #: Fields whose values are sets. Collisions on these UNION rather than displace.
 #: ``iea_task`` is the one ADR-0038 names explicitly; the rest follow the same
@@ -98,6 +116,112 @@ ACCESS_STATUSES = (
 LIFECYCLE_STATES = ("active", "archived", "withdrawn")
 
 CKAN_STATES = ("active", "deleted", "draft")
+
+
+#: ``Task 43``, ``TASK-43``, `` task-43 `` all name one group. The value is
+#: validated case- and whitespace-insensitively everywhere, so it must also be
+#: *stored* in one spelling — otherwise one task becomes several chips on the
+#: record page and several buckets in the task facet (eventlog-05). Alias
+#: resolution (19 -> 54) stays in :func:`harvest.config.canonical_group`, which
+#: needs the register; this is the register-free half and runs on every write.
+_TASK_RE = re.compile(r"^task[\s_-]*0*(\d{1,3})$", re.IGNORECASE)
+
+
+def normalise_task(value: Any) -> str:
+    """Normalise one ``iea_task`` value to its canonical spelling.
+
+    ``" Task 43 "`` -> ``"task-43"``. Anything that is not recognisably a task
+    number is lowercased and whitespace-collapsed but otherwise left alone, so
+    a name the catalogue does not know still reaches the CKAN gate, which is
+    where an unknown group is meant to be caught.
+    """
+    text = re.sub(r"\s+", " ", str(value or "")).strip()
+    match = _TASK_RE.match(text)
+    if match:
+        return f"task-{int(match.group(1))}"
+    return text.lower()
+
+
+#: The longest a single text field may be in a record, and the most items a
+#: collection may hold. Nothing in this catalogue enforced either, so one
+#: pathological upstream description wrote a 10 MB ``events/*.jsonl`` line and
+#: a 10 MB ``records/*.json`` file — both committed to git on every source-key
+#: change, then rendered as a 10 MB HTML page and indexed by Pagefind
+#: (scrape-07). 64 KiB is far more than any real abstract and far less than a
+#: problem; 500 items is more keywords or files than any real deposit has.
+MAX_TEXT_LENGTH = 64 * 1024
+MAX_COLLECTION_ITEMS = 500
+
+#: Appended where a value was cut, so the record page never implies the
+#: description simply ended there. Truncation is a fact about the record and is
+#: shown as one — the untruncated value stays in the event log.
+TRUNCATION_MARKER = " […truncated]"
+
+
+def truncate_text(value: Any, limit: int = MAX_TEXT_LENGTH) -> Any:
+    """Cap one text field, marking the cut. Non-strings pass through."""
+    if not isinstance(value, str) or len(value) <= limit:
+        return value
+    return value[: limit - len(TRUNCATION_MARKER)] + TRUNCATION_MARKER
+
+
+#: Which sanitising rule applies to which key, for payloads that arrive as
+#: plain dicts rather than as a validated namespace.
+_TEXT_FIELDS = ("title", "notes", "publisher", "container", "license_raw")
+_URL_FIELDS = ("url",)
+_URL_LIST_FIELDS = ("source_urls",)
+_LINK_LIST_FIELDS = ("resources", "links")
+_TASK_FIELDS = ("iea_task",)
+_CAPPED_LIST_FIELDS = ("keywords", "resources", "source_urls", "related_identifiers", "links")
+
+
+def sanitise_payload(payload: Any) -> dict[str, Any]:
+    """Apply the namespace safety rules to a raw ``source``/``local`` mapping.
+
+    :func:`harvest.events.record_scrape` and :func:`harvest.events.annotate`
+    accept plain dicts — that is what a runbook, a fixture and a hand-written
+    event all produce — so the ``SourceNamespace`` field validators, which are
+    where the URL-scheme allow-list, the length caps and the task
+    normalisation live, simply never ran on the write path. The filters were
+    only as strong as every caller remembering to build a model first.
+
+    This applies the same rules to the keys that are actually present, and
+    leaves absent keys absent: round-tripping through the model would stamp
+    empty-list defaults into every event line and change the serialisation of
+    the whole log.
+    """
+    if not isinstance(payload, Mapping):
+        return dict(payload or {})
+    out = dict(payload)
+    for key in _TEXT_FIELDS:
+        if key in out:
+            out[key] = truncate_text(out[key])
+    for key in _URL_FIELDS:
+        if out.get(key):
+            out[key] = safe_url(out[key])
+    for key in _URL_LIST_FIELDS:
+        if key in out:
+            out[key] = safe_urls(out[key])
+    for key in _LINK_LIST_FIELDS:
+        if key in out:
+            out[key] = safe_links(out[key])
+    if "related_identifiers" in out:
+        out["related_identifiers"] = safe_related_identifiers(out["related_identifiers"])
+    for key in _TASK_FIELDS:
+        if key in out:
+            seen: list[str] = []
+            for task in out[key] or []:
+                normalised = normalise_task(task)
+                if normalised and normalised not in seen:
+                    seen.append(normalised)
+            out[key] = seen
+    for key in _CAPPED_LIST_FIELDS:
+        value = out.get(key)
+        if isinstance(value, list) and len(value) > MAX_COLLECTION_ITEMS:
+            out[key] = value[:MAX_COLLECTION_ITEMS]
+    if isinstance(out.get("keywords"), list):
+        out["keywords"] = out["keywords"][:MAX_COLLECTION_ITEMS]
+    return out
 
 
 def utcnow() -> str:
@@ -130,6 +254,10 @@ class FieldProvenance(BaseModel):
                   ``confidence`` are **required** in that case, and the site
                   renders a visible "machine-inferred" badge (ADR-0028,
                   fixture ``x-05``).
+    ``curator`` — asserted by a human in ``annotations/`` or by the reconciler.
+                  No source stated it, so the record must not imply one did
+                  (eventlog-04). Deliberately *not* violet: violet stays
+                  exclusive to machine inference (ADR-0039 §4).
     """
 
     model_config = ConfigDict(extra="forbid", populate_by_name=True)
@@ -207,8 +335,56 @@ class SourceNamespace(BaseModel):
     resources: list[dict] = Field(default_factory=list)  # links only, never mirrors
     related_identifiers: list[dict] = Field(default_factory=list)
     iea_task: list[str] = Field(default_factory=list)    # when the source states it
-    withdrawn: bool = False
+    #: Tri-state, and the third state matters. ``None`` — the normal case — is
+    #: "this scrape says nothing about withdrawal", and serialises away
+    #: entirely (``exclude_none``). Only an explicit ``True`` withdraws, and
+    #: only an explicit ``False`` from **the same source system** that withdrew
+    #: can un-withdraw: an ordinary scrape from another system must never
+    #: resurrect a tombstoned record (ADR-0027, eventlog-01).
+    withdrawn: bool | None = None
+    owner_org: str | None = None        # institution slug; see harvest.institutions
     extra: dict[str, Any] = Field(default_factory=dict)
+
+    # -- safety filters, applied to every adapter's output at once ----------
+    @field_validator("title", "notes", "publisher", "container", "license_raw")
+    @classmethod
+    def _bounded_text(cls, value: str | None) -> str | None:
+        return truncate_text(value)
+
+    @field_validator("keywords")
+    @classmethod
+    def _bounded_keywords(cls, value: list[str]) -> list[str]:
+        return [str(word) for word in (value or [])][:MAX_COLLECTION_ITEMS]
+
+    @field_validator("url")
+    @classmethod
+    def _url_scheme(cls, value: str | None) -> str | None:
+        return safe_url(value) if value else value
+
+    @field_validator("source_urls")
+    @classmethod
+    def _source_url_schemes(cls, value: list[str]) -> list[str]:
+        return safe_urls(value)
+
+    @field_validator("resources")
+    @classmethod
+    def _resource_schemes(cls, value: list[dict]) -> list[dict]:
+        return safe_resources(value)[:MAX_COLLECTION_ITEMS]
+
+    @field_validator("related_identifiers")
+    @classmethod
+    def _related_schemes(cls, value: list[dict]) -> list[dict]:
+        return safe_related_identifiers(value)
+
+    @field_validator("iea_task")
+    @classmethod
+    def _tasks(cls, value: list[str]) -> list[str]:
+        out: list[str] = []
+        for task in value or []:
+            normalised = normalise_task(task)
+            if normalised and normalised not in out:
+                out.append(normalised)
+        return out
 
 
 class LocalNamespace(BaseModel):
@@ -229,6 +405,66 @@ class LocalNamespace(BaseModel):
     suppressed: bool = False            # noise; kept but not listed
     pinned: bool = False                # Tier-3 pinned extraction (§4.3)
     pin_source_key: str | None = None   # the content hash the pin was made against
+    owner_org: str | None = None        # institution slug, when the harvest cannot infer it
+
+    @field_validator("links")
+    @classmethod
+    def _link_schemes(cls, value: list[dict]) -> list[dict]:
+        """A link with no followable URL is not a link. Drop the whole entry."""
+        return safe_links(value)
+
+    @field_validator("curator_notes")
+    @classmethod
+    def _note_schemes(cls, value: list[dict]) -> list[dict]:
+        """A note is prose about a field; only its optional URL is filtered.
+
+        Dropping the note because the URL beside it was unlinkable would lose
+        the one thing on the record a human actually wrote.
+        """
+        return safe_related_identifiers(value)
+
+    @field_validator("source_urls")
+    @classmethod
+    def _local_url_schemes(cls, value: list[str]) -> list[str]:
+        return safe_urls(value)
+
+    @field_validator("iea_task")
+    @classmethod
+    def _tasks(cls, value: list[str]) -> list[str]:
+        out: list[str] = []
+        for task in value or []:
+            normalised = normalise_task(task)
+            if normalised and normalised not in out:
+                out.append(normalised)
+        return out
+
+
+#: The ``local.*`` fields an ``annotations/*.yaml`` file may set (ADR-0038,
+#: eventlog-04). A curator annotates: attribution, kind, access, notes, links,
+#: suppression, pins, institution. A curator does **not** assert what a source
+#: said — no ``license_id``, no ``publisher``, no ``title``, no ``doi``. Those
+#: are source claims, and a catalogue that lets an annotation invent an open
+#: licence with no ``license_raw`` behind it is asserting a fact nobody stated.
+#: A correction to a source value is expressed as a ``curator_notes`` entry
+#: rendered beside the wrong value (plan §4.3, fixture ``x-10``).
+LOCAL_CURATOR_FIELDS: frozenset[str] = frozenset(
+    {
+        "iea_task",
+        "resource_kind",
+        "access_status",
+        "curator_notes",
+        "links",
+        "source_urls",
+        "suppressed",
+        "pinned",
+        "pin_source_key",
+        "owner_org",
+    }
+)
+
+#: Fields the reconciler writes into ``local.*`` on a merge. Not curator-settable
+#: by hand: a merge is a decision the reconciler records, with its evidence.
+LOCAL_RECONCILER_FIELDS: frozenset[str] = frozenset({"merged_into", "merged_from"})
 
 
 # ---------------------------------------------------------------------------
@@ -295,6 +531,18 @@ class Event(BaseModel):
     notice: dict[str, Any] | None = None   # displacement_notice / pin_notice payload
     actor: str | None = None               # "harvest/zenodo", "curator:tom", "reconcile"
     note: str | None = None
+
+    @field_validator("source_system")
+    @classmethod
+    def _one_spelling(cls, value: str | None) -> str | None:
+        """``Zenodo`` and ``zenodo`` are one system, not two (eventlog-08).
+
+        ``source_system`` keys the per-system source block in
+        :func:`harvest.events.resolve` and lands verbatim in
+        ``extras.source_systems``; two spellings would compose as two systems
+        and print twice on the record page.
+        """
+        return value.strip().lower() or None if isinstance(value, str) else value
 
     def to_jsonl(self) -> str:
         """Serialise to one deterministic JSONL line (no trailing newline)."""

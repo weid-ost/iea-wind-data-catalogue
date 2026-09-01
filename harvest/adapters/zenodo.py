@@ -79,6 +79,7 @@ from typing import Any, Iterable, Iterator
 from urllib.parse import quote
 
 from harvest import DEFAULT_LIMIT
+from harvest import config as _config
 from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
 from harvest.doi import normalise_doi
 from harvest.http import HarvestClient
@@ -90,6 +91,7 @@ from harvest.models import (
     MappedObservation,
     RawObservation,
     SourceNamespace,
+    normalise_task,
 )
 from harvest.sanitize import sanitize_html
 
@@ -177,21 +179,54 @@ def access_status_for(access_right: Any) -> str:
     return ACCESS_STATUS_BY_RIGHT.get(str(access_right or "").strip().lower(), "unknown")
 
 
-def tasks_for_community(slug: str, declared: dict[str, list[str]] | None = None) -> list[str]:
+def tasks_for_community(
+    slug: str,
+    declared: dict[str, list[str]] | None = None,
+    known: set[str] | None = None,
+) -> list[str]:
     """IEA Wind task group names for a Zenodo community slug.
 
     ``declared`` is the ``sources.yaml`` mapping (which covers the slugs whose
     names carry no number — ``wakebench`` is Task 31). Slugs that do spell out a
     number are recognised by pattern, so the adapter still attributes a task
     when it is constructed with no config at all.
+
+    **A task the register does not know is dropped, not emitted** (scrape-02).
+    The community slug is attacker- and stranger-controlled: anyone can create
+    a Zenodo community called ``ieawindtask777``, and IEA Wind itself will one
+    day create a real ``ieawindtask66``. Either way an unknown ``task-N`` would
+    become a ``groups[].name`` that is not in ``groups.yaml``, which fails the
+    CKAN gate — and since ``events/`` is append-only, it would fail it on every
+    subsequent run too, blocking the deploy until a human edited the register.
+    OSTI's adapter has always filtered this way; this mirrors it.
     """
     slug = str(slug or "").strip()
     if not slug:
         return []
     if declared and slug in declared:
-        return list(declared[slug])
-    match = _TASK_FROM_SLUG_RE.search(_NON_ALNUM_RE.sub("", slug.lower()))
-    return [f"task-{int(match.group(1))}"] if match else []
+        tasks = [normalise_task(task) for task in declared[slug]]
+    else:
+        match = _TASK_FROM_SLUG_RE.search(_NON_ALNUM_RE.sub("", slug.lower()))
+        tasks = [f"task-{int(match.group(1))}"] if match else []
+
+    register = _config.group_names() if known is None else known
+    if not register:  # no register available: emit what we found, gate catches it
+        return tasks
+    kept: list[str] = []
+    for task in tasks:
+        canonical = _config.canonical_group(task)
+        if canonical in register:
+            if canonical not in kept:
+                kept.append(canonical)
+        else:
+            log.warning(
+                "zenodo community %r implies %r, which is not in groups.yaml; "
+                "dropping the attribution rather than writing a record the CKAN "
+                "gate would refuse",
+                slug,
+                canonical,
+            )
+    return kept
 
 
 def _file_format(entry: dict[str, Any]) -> str | None:
@@ -414,7 +449,12 @@ class ZenodoAdapter(Adapter):
             return self.client
         if self._client is None:
             self._client = HarvestClient(
-                respect_robots=bool(self.config.get("respect_robots", False)),
+                # Defaults to TRUE, and the documented opt-out must be an
+                # explicit `respect_robots: false` in sources.yaml. Defaulting
+                # to False meant that deleting the line — the obvious way to
+                # restore the safe behaviour — silently ignored robots.txt
+                # instead (compliance-05).
+                respect_robots=self.config.get("respect_robots", True) is not False,
                 min_interval=float(self.config.get("min_request_interval_seconds", 1.0)),
             )
             self._owns_client = True

@@ -108,7 +108,8 @@
     "state": "active",
     "tags": [],
     "title": "Probabilistic wake-loss estimation for large offshore arrays",
-    "url": "https://doi.org/10.11583/dtu.6000007"
+    "url": "https://doi.org/10.11583/dtu.6000007",
+    "owner_org": "dtu"
   },
   "expected_records": {
     "doi-10-11583-dtu-6000007": {
@@ -207,7 +208,8 @@
       "state": "active",
       "tags": [],
       "title": "Probabilistic wake-loss estimation for large offshore arrays",
-      "url": "https://doi.org/10.11583/dtu.6000007"
+      "url": "https://doi.org/10.11583/dtu.6000007",
+      "owner_org": "dtu"
     },
     "doi-10-5281-zenodo-6000006": {
       "extras": [
@@ -305,7 +307,8 @@
       "state": "active",
       "tags": [],
       "title": "Probabilistic wake loss estimation for large offshore arrays",
-      "url": "https://zenodo.org/records/6000006"
+      "url": "https://zenodo.org/records/6000006",
+      "owner_org": "zenodo-community"
     }
   },
   "expected_notices": [],
@@ -420,7 +423,8 @@
       "state": "active",
       "tags": [],
       "title": "Probabilistic wake-loss estimation for large offshore arrays",
-      "url": "https://doi.org/10.11583/dtu.6000007"
+      "url": "https://doi.org/10.11583/dtu.6000007",
+      "owner_org": "dtu"
     },
     "doi-10-5281-zenodo-6000006": {
       "extras": [
@@ -518,7 +522,8 @@
       "state": "active",
       "tags": [],
       "title": "Probabilistic wake loss estimation for large offshore arrays",
-      "url": "https://zenodo.org/records/6000006"
+      "url": "https://zenodo.org/records/6000006",
+      "owner_org": "zenodo-community"
     }
   }
 }

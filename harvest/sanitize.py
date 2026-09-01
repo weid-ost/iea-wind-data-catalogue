@@ -20,6 +20,8 @@ import re
 from html import escape
 from html.parser import HTMLParser
 
+from harvest.urls import safe_url
+
 __all__ = [
     "ALLOWED_TAGS",
     "ALLOWED_ATTRIBUTES",
@@ -56,24 +58,20 @@ VOID_TAGS: frozenset[str] = frozenset({"br"})
 #: Tags whose *content* is discarded along with the tag.
 _DROP_CONTENT = frozenset({"script", "style", "iframe", "object", "embed", "template", "svg"})
 
-_SCHEME_RE = re.compile(r"^\s*([a-z][a-z0-9+.-]*):", re.IGNORECASE)
 _WS_RE = re.compile(r"[ \t\r\f\v]+")
 _BLANKS_RE = re.compile(r"\n{3,}")
 
 
 def _safe_url(value: str) -> str | None:
-    """Return the URL if its scheme is allowed (or it is relative), else ``None``."""
-    candidate = (value or "").strip().replace("\x00", "")
-    if not candidate:
-        return None
-    # Strip whitespace that "javas\tcript:" style obfuscation relies on.
-    probe = "".join(candidate.split())
-    match = _SCHEME_RE.match(probe)
-    if match:
-        return candidate if match.group(1).lower() in ALLOWED_SCHEMES else None
-    if probe.startswith("//"):
-        return None  # protocol-relative: scheme unknown, so refuse
-    return candidate
+    """Return the URL if its scheme is allowed (or it is relative), else ``None``.
+
+    Delegates to :func:`harvest.urls.safe_url` so that the href policy inside a
+    description and the href policy on ``source.url`` are literally the same
+    code. That helper strips **every** C0 control and space before reading the
+    scheme, not just Python's idea of whitespace: browsers ignore a leading
+    ``\\x01``, so ``"\\x01javascript:"`` is ``javascript:`` and is refused.
+    """
+    return safe_url(value, allow_relative=True, schemes=ALLOWED_SCHEMES)
 
 
 class _Sanitizer(HTMLParser):

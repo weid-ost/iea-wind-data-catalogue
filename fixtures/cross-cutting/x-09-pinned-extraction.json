@@ -46,7 +46,7 @@
       },
       {
         "key": "provenance",
-        "value": "{\"resource_kind\":{\"confidence\":0.41,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"pinned\":true,\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.88,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+        "value": "{\"pin_source_key\":{\"extraction_method\":\"curator\"},\"pinned\":{\"extraction_method\":\"curator\"},\"resource_kind\":{\"confidence\":0.41,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"pinned\":true,\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.88,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
       },
       {
         "key": "resource_kind",
@@ -89,6 +89,7 @@
     "license_id": "notspecified",
     "name": "ieawind-task43-tools-wra-standard",
     "notes": "",
+    "owner_org": "unattributed",
     "private": false,
     "resources": [],
     "state": "active",
@@ -133,7 +134,7 @@
         },
         {
           "key": "provenance",
-          "value": "{\"resource_kind\":{\"confidence\":0.41,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"pinned\":true,\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.88,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+          "value": "{\"pin_source_key\":{\"extraction_method\":\"curator\"},\"pinned\":{\"extraction_method\":\"curator\"},\"resource_kind\":{\"confidence\":0.41,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"pinned\":true,\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.88,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
         },
         {
           "key": "resource_kind",
@@ -181,7 +182,8 @@
       "state": "active",
       "tags": [],
       "title": "Digital WRA Data Standard",
-      "url": "https://iea-wind.org/task43/tools/"
+      "url": "https://iea-wind.org/task43/tools/",
+      "owner_org": "unattributed"
     }
   },
   "expected_notices": [

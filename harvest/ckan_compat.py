@@ -31,7 +31,8 @@ from typing import Any, Iterable
 
 from harvest import config
 from harvest.licenses import LICENSE_IDS
-from harvest.models import CKAN_STATES
+from harvest.models import CKAN_STATES, MAX_COLLECTION_ITEMS, MAX_TEXT_LENGTH
+from harvest.urls import ALLOWED_URL_SCHEMES, is_safe_url
 
 __all__ = [
     "NAME_RE",
@@ -125,8 +126,15 @@ def validate_package(
         fail("title", "missing or empty")
 
     # --- notes ---------------------------------------------------------------
-    if package.get("notes") is not None and not isinstance(package.get("notes"), str):
+    notes = package.get("notes")
+    if notes is not None and not isinstance(notes, str):
         fail("notes", "must be a string")
+    elif isinstance(notes, str) and len(notes) > MAX_TEXT_LENGTH:
+        # The namespaces truncate on the way in; this refuses a record that got
+        # past them anyway. Without it, one upstream description inflates a
+        # record file, an HTML page and a Pagefind entry without limit, and all
+        # three are committed on every change (scrape-07).
+        fail("notes", f"{len(notes)} characters, over the {MAX_TEXT_LENGTH}-character cap")
 
     # --- licence -------------------------------------------------------------
     license_id = package.get("license_id")
@@ -139,6 +147,8 @@ def validate_package(
     tags = package.get("tags", [])
     if not isinstance(tags, list):
         fail("tags", "must be a list")
+    elif len(tags) > MAX_COLLECTION_ITEMS:
+        fail("tags", f"{len(tags)} tags, over the {MAX_COLLECTION_ITEMS}-item cap")
     else:
         seen_tags: set[str] = set()
         for index, tag in enumerate(tags):
@@ -181,24 +191,52 @@ def validate_package(
                     "(encode lists and objects as JSON strings)",
                 )
 
-    # --- resources -----------------------------------------------------------
+    # --- url and resources ---------------------------------------------------
+    # Defence in depth (scrape-03, eventlog-06). The namespaces filter URL
+    # schemes on the way in; this refuses a record that reached records/ with
+    # an unlinkable one anyway — a hand-edited file, a merge, a future adapter
+    # that builds a package dict directly. Escaping an href does not disarm
+    # `javascript:`, so the gate says no rather than the site rendering it.
+    url = package.get("url")
+    if url is not None and not is_safe_url(url):
+        fail("url", f"{url!r} is not an allowed URL scheme "
+                    f"(allowed: {', '.join(sorted(ALLOWED_URL_SCHEMES))})")
+
     resources = package.get("resources", [])
     if not isinstance(resources, list):
         fail("resources", "must be a list")
+    elif len(resources) > MAX_COLLECTION_ITEMS:
+        fail("resources", f"{len(resources)} resources, over the "
+                          f"{MAX_COLLECTION_ITEMS}-item cap")
     else:
         for index, resource in enumerate(resources):
             if not isinstance(resource, dict):
                 fail(f"resources[{index}]", "must be an object")
             elif not resource.get("url"):
                 fail(f"resources[{index}]", "resource has no url")
+            elif not is_safe_url(resource["url"]):
+                fail(
+                    f"resources[{index}]",
+                    f"{resource['url']!r} is not an allowed URL scheme "
+                    f"(allowed: {', '.join(sorted(ALLOWED_URL_SCHEMES))})",
+                )
 
     # --- org and groups ------------------------------------------------------
+    # REQUIRED, not optional. CKAN's `package_create` refuses a dataset with no
+    # owning organisation on a default install, so "POSTable to CKAN with no
+    # transformation" (ADR-0021) is only true if every record carries one — and
+    # ADR-0023's institution facet has nothing to count otherwise
+    # (product-e2e-02). `harvest.institutions.infer_owner_org` always returns a
+    # register entry, including a real `unattributed` entry for the records it
+    # honestly cannot attribute, so there is no legitimate reason to be here
+    # without one.
     owner_org = package.get("owner_org")
-    if owner_org is not None:
-        if not isinstance(owner_org, str) or not owner_org:
-            fail("owner_org", "must be a non-empty string when present")
-        elif known_orgs is not None and owner_org not in known_orgs:
-            fail("owner_org", f"{owner_org!r} is not in organizations.yaml")
+    if owner_org is None:
+        fail("owner_org", "missing — CKAN refuses a dataset with no owning organisation")
+    elif not isinstance(owner_org, str) or not owner_org:
+        fail("owner_org", "must be a non-empty string")
+    elif known_orgs is not None and owner_org not in known_orgs:
+        fail("owner_org", f"{owner_org!r} is not in organizations.yaml")
 
     groups = package.get("groups", [])
     if not isinstance(groups, list):

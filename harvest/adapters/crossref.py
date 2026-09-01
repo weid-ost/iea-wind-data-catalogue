@@ -99,8 +99,11 @@ What this adapter deliberately does not do
     * **No ``iea_task``.** Crossref never states task membership. A title
       saying "IEA Wind Task 43" is the *work* saying it, not the registry, and
       a pure ``map()`` cannot check the number against ``groups.yaml``.
-      Candidates are recorded in ``source.extra.iea_task_candidates`` for the
-      reconciler and the curator.
+      Candidates are recorded in ``source.extra.iea_task_candidates``, and
+      :func:`harvest.dedupe.promote_task_candidates` writes the ones that are
+      really in ``groups.yaml`` to ``local.iea_task`` with
+      ``extraction_method: pattern`` — machine inference, badged as such, never
+      passed off as something the registry stated.
 """
 
 from __future__ import annotations

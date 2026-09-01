@@ -391,3 +391,197 @@ class TestPins:
                       observed_at="2026-08-20T00:00:00Z")
         self._pin(events_dir, key, "aaaa")
         assert check_pins(events_dir, root=repo) == []
+
+
+# ---------------------------------------------------------------------------
+# eventlog-04 — an annotation adds; it does not assert a source claim
+# ---------------------------------------------------------------------------
+
+
+class TestWhatACuratorMayAssert:
+    """ADR-0038's "additive only", enforced rather than merely intended.
+
+    ``local`` was validated against ``LocalNamespace``, which carries every
+    field a *source* carries. So an annotation could write
+    ``license_id: cc-by`` — an open licence, on a record page, with no
+    ``license_raw`` behind it, no source that said it, and no way for a reader
+    to tell a human had asserted it. The catalogue's entire claim is that it
+    reports what upstream says and marks everything else; a field set this wide
+    made that claim unenforceable.
+
+    The remedy is a closed field set plus provenance on what remains.
+    """
+
+    @pytest.mark.parametrize(
+        "field,value",
+        [
+            ("license_id", "cc-by"),
+            ("license_raw", "CC BY 4.0"),
+            ("title", "A better title"),
+            ("doi", "10.5281/zenodo.9"),
+            ("publisher", "Zenodo"),
+            ("notes", "rewritten abstract"),
+            ("authors", [{"name": "Nobody"}]),
+        ],
+    )
+    def test_an_annotation_cannot_state_a_source_claim(
+        self, repo: Path, field: str, value: object
+    ) -> None:
+        path = write_annotation(
+            repo / "annotations", "bad.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {field: value}}]},
+        )
+        with pytest.raises(AnnotationError, match="annotations may not set"):
+            load_annotation_file(path, root=repo)
+
+    @pytest.mark.parametrize(
+        "field,value",
+        [
+            ("iea_task", ["task-43"]),
+            ("resource_kind", "dataset"),
+            ("access_status", "open"),
+            ("curator_notes", [{"field": "license_id", "note": "looks wrong"}]),
+            ("links", [{"url": "https://example.org/x", "label": "x"}]),
+            ("suppressed", True),
+            ("owner_org", "dtu"),
+        ],
+    )
+    def test_what_a_curator_may_add_still_works(
+        self, repo: Path, field: str, value: object
+    ) -> None:
+        path = write_annotation(
+            repo / "annotations", "good.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {field: value}}]},
+        )
+        [annotation] = load_annotation_file(path, root=repo)
+        assert field in annotation.local
+
+    def test_the_error_says_what_to_do_instead(self, repo: Path) -> None:
+        """A refusal that does not name the alternative just gets worked around."""
+        path = write_annotation(
+            repo / "annotations", "bad.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {"license_id": "cc-by"}}]},
+        )
+        with pytest.raises(AnnotationError, match="curator_notes"):
+            load_annotation_file(path, root=repo)
+
+    def test_an_unknown_owner_org_is_refused(self, repo: Path) -> None:
+        """It would fail the CKAN gate; say so at the annotation, not the gate."""
+        path = write_annotation(
+            repo / "annotations", "bad.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {"owner_org": "not-an-org"}}]},
+        )
+        with pytest.raises(AnnotationError, match="organizations.yaml"):
+            load_annotation_file(path, root=repo)
+
+    def test_what_a_curator_sets_is_badged_as_a_curator_assertion(
+        self, repo: Path, events_dir: Path
+    ) -> None:
+        """Otherwise an annotated `resource_kind` reads as an API's statement."""
+        seed_scrape(events_dir)
+        write_annotation(
+            repo / "annotations", "a.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {"resource_kind": "dataset"}}]},
+        )
+        apply_annotations(repo / "annotations", events_dir, root=repo)
+
+        provenance = resolve(KEY, events_dir=events_dir).provenance
+        assert provenance["resource_kind"].extraction_method == "curator"
+
+    def test_it_does_not_overwrite_what_a_source_already_accounted_for(
+        self, repo: Path, events_dir: Path
+    ) -> None:
+        """`iea_task` is a UNION. Stamping the union `curator` erases the source.
+
+        Zenodo's community slug contributed task-43 and the curator added
+        task-49; claiming the whole field is a human assertion is exactly the
+        inversion of the honesty the provenance exists for.
+        """
+        from harvest.models import FieldProvenance
+
+        record_scrape(
+            KEY, "zenodo", "1234567", "1",
+            {"title": "T", "iea_task": ["task-43"]},
+            provenance={"iea_task": FieldProvenance(extraction_method="pattern")},
+            events_dir=events_dir, observed_at="2026-08-24T03:11:07Z",
+        )
+        write_annotation(
+            repo / "annotations", "a.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-49"]}}]},
+        )
+        apply_annotations(repo / "annotations", events_dir, root=repo)
+
+        resolved = resolve(KEY, events_dir=events_dir)
+        assert sorted(resolved.effective["iea_task"]) == ["task-43", "task-49"]
+        assert resolved.provenance["iea_task"].extraction_method == "pattern"
+
+
+class TestTaskSpellingIsNormalisedOnStore:
+    """eventlog-05: validated case-insensitively, stored verbatim.
+
+    ``iea_task`` was checked against ``groups.yaml`` case- and
+    space-insensitively but written to the log exactly as the file spelled it.
+    ``Task 43`` and ``task-43`` therefore both validated and then became two
+    chips on the record page and two buckets in the task facet — one task
+    presented as two.
+    """
+
+    @pytest.mark.parametrize("spelling", ["Task 43", "TASK-43", " task-43 ", "task_43", "Task-043"])
+    def test_every_spelling_stores_as_one(self, repo: Path, spelling: str) -> None:
+        path = write_annotation(
+            repo / "annotations", "a.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {"iea_task": [spelling]}}]},
+        )
+        [annotation] = load_annotation_file(path, root=repo)
+        assert annotation.local["iea_task"] == ["task-43"]
+
+    def test_two_spellings_of_one_task_are_one_value(self, repo: Path) -> None:
+        path = write_annotation(
+            repo / "annotations", "a.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["Task 43", "task-43"]}}]},
+        )
+        [annotation] = load_annotation_file(path, root=repo)
+        assert annotation.local["iea_task"] == ["task-43"]
+
+    def test_the_record_shows_one_chip_not_two(self, repo: Path, events_dir: Path) -> None:
+        record_scrape(
+            KEY, "zenodo", "1234567", "1",
+            {"title": "T", "url": "https://zenodo.org/records/1234567",
+             "iea_task": ["TASK-43"]},
+            events_dir=events_dir, observed_at="2026-08-24T03:11:07Z",
+        )
+        write_annotation(
+            repo / "annotations", "a.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["Task 43"]}}]},
+        )
+        apply_annotations(repo / "annotations", events_dir, root=repo)
+        materialize_all(root=repo)
+
+        extras = extras_of(repo / "records", "doi-10-5281-zenodo-1234566")
+        assert json.loads(extras["iea_task"]) == ["task-43"]
+        package = json.loads(
+            (repo / "records" / "doi-10-5281-zenodo-1234566.json").read_text(encoding="utf-8")
+        )
+        assert [group["name"] for group in package["groups"]] == ["task-43"]
+
+
+class TestOneBadAnnotationFileDoesNotStopTheRun:
+    """compliance-04 / CONTRACT rule 5. A curator's typo is not a build break."""
+
+    def test_malformed_yaml_is_collected_not_raised(self, repo: Path, events_dir: Path) -> None:
+        seed_scrape(events_dir)
+        (repo / "annotations").mkdir(parents=True, exist_ok=True)
+        (repo / "annotations" / "broken.yaml").write_text(
+            "identity_key: x\nlocal: [unclosed\n", encoding="utf-8"
+        )
+        write_annotation(
+            repo / "annotations", "good.yaml",
+            {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-43"]}}]},
+        )
+
+        outcome = apply_annotations(repo / "annotations", events_dir, root=repo)
+
+        assert outcome.errors, "the broken file must be reported"
+        assert any("broken.yaml" in error for error in outcome.errors)
+        assert outcome.applied, "the good file must still apply"
+        assert resolve(KEY, events_dir=events_dir).effective["iea_task"] == ["task-43"]

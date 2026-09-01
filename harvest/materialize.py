@@ -22,7 +22,8 @@ from typing import Any, Iterable
 
 from harvest import config
 from harvest.ckan_compat import Violation, tagify, validate_records
-from harvest.events import iter_identity_keys, resolve
+from harvest.events import iter_identity_keys, log_problems, resolve
+from harvest.institutions import infer_owner_org
 from harvest.licenses import is_known_license, map_license
 from harvest.models import ResolvedRecord, json_extra
 
@@ -136,7 +137,11 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
         "source_url": source_urls[0] if source_urls else None,
         "source_urls": source_urls or None,
         "doi": effective.get("doi"),
-        "iea_task": sorted(effective.get("iea_task") or []) or None,
+        # Canonicalised and de-duplicated: one task is one chip and one facet
+        # bucket, whatever spelling (or renumbered alias) each source used.
+        "iea_task": sorted(
+            {config.canonical_group(task) for task in (effective.get("iea_task") or []) if task}
+        ) or None,
         "resource_kind": effective.get("resource_kind"),
         "access_status": effective.get("access_status"),
         "embargo_date": effective.get("embargo_date"),
@@ -181,8 +186,17 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
     return sorted(extras, key=lambda extra: extra["key"])
 
 
-def to_ckan_package(resolved: ResolvedRecord) -> dict[str, Any]:
-    """Shape a resolved record as a CKAN package dict, ready to POST."""
+def to_ckan_package(
+    resolved: ResolvedRecord,
+    root: Path | None = None,
+    notices: list[dict] | None = None,
+) -> dict[str, Any]:
+    """Shape a resolved record as a CKAN package dict, ready to POST.
+
+    ``notices`` collects anything dropped on the way (an unknown task group),
+    so the run report says what happened rather than the record quietly
+    differing from the event log.
+    """
     effective = resolved.effective
 
     license_id = effective.get("license_id")
@@ -195,9 +209,32 @@ def to_ckan_package(resolved: ResolvedRecord) -> dict[str, Any]:
         if tag and tag not in tags:
             tags.append(tag)
 
-    groups = sorted(
-        {config.canonical_group(task) for task in (effective.get("iea_task") or []) if task}
-    )
+    # A group name that is not in groups.yaml fails the CKAN gate, and because
+    # events/ is append-only it would fail it again on every subsequent run —
+    # one hostile or merely new upstream community would block every deploy
+    # (scrape-02). So an unknown group is DROPPED with a notice: the raw
+    # attribution stays in the event log and in extras.iea_task, and adding the
+    # task to groups.yaml brings it back on the next materialise.
+    known_groups = config.group_names(root)
+    groups: list[str] = []
+    for task in sorted({config.canonical_group(task, root) for task in (effective.get("iea_task") or []) if task}):
+        if not known_groups or task in known_groups:
+            groups.append(task)
+        else:
+            message = (
+                f"iea_task {task!r} is not in groups.yaml; the group was dropped from the "
+                "record (the attribution is kept in extras.iea_task and in the event log)"
+            )
+            log.warning("%s: %s", resolved.identity_key, message)
+            if notices is not None:
+                notices.append(
+                    {
+                        "type": "unknown_group",
+                        "identity_key": resolved.identity_key,
+                        "group": task,
+                        "message": message,
+                    }
+                )
 
     resources = []
     for resource in effective.get("resources") or []:
@@ -218,9 +255,11 @@ def to_ckan_package(resolved: ResolvedRecord) -> dict[str, Any]:
         "state": "active",
         "private": False,
     }
-    owner_org = effective.get("owner_org")
-    if owner_org:
-        package["owner_org"] = str(owner_org)
+    # ADR-0021: a record CKAN would refuse is not CKAN-compatible, and CKAN
+    # refuses an unowned dataset. infer_owner_org always returns a register
+    # entry, so owner_org is present on every record (product-e2e-02).
+    owner_org, _basis = infer_owner_org(effective, resolved.source_system, root)
+    package["owner_org"] = owner_org
     if effective.get("url"):
         package["url"] = effective["url"]
     if effective.get("version"):
@@ -272,15 +311,16 @@ def materialize_all(
     records_directory = records_directory or config.records_dir(root)
     result = MaterializeResult()
 
-    keys = list(identity_keys) if identity_keys is not None else list(
+    seen_keys = list(identity_keys) if identity_keys is not None else list(
         iter_identity_keys(events_directory)
     )
+    keys = list(dict.fromkeys(seen_keys))   # a key yielded twice is one record
 
     expected: set[str] = set()
     claimed: dict[str, str] = {}   # slug -> identity key, to catch collisions
     for identity_key in sorted(keys):
         resolved = resolve(identity_key, events_dir=events_directory)
-        package = to_ckan_package(resolved)
+        package = to_ckan_package(resolved, root=root, notices=result.notices)
         slug = package["name"]
         if slug in claimed and claimed[slug] != identity_key:
             # Two identities rendering to one slug would silently overwrite each
@@ -318,6 +358,11 @@ def materialize_all(
                 log.warning("pruning orphaned record with no events: %s", path.name)
                 path.unlink()
                 result.pruned.append(path.stem)
+
+    # A line the event log could not read is a fact about this run, not a
+    # reason to abort it (eventlog-02): it is reported here and in the run
+    # report, and every other identity still materialises.
+    result.notices.extend(log_problems())
 
     if validate:
         result.violations.extend(validate_records(records_directory, root=root))

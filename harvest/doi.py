@@ -1,10 +1,22 @@
 """DOI extraction, normalisation, and the resolve-or-drop rule.
 
 **The rule that makes an AI harvester safe:** no identifier a model produced is
-ever accepted on trust. Every DOI that reaches a record has been resolved
-against DataCite and then Crossref. A DOI that does not resolve causes the
-record to be **dropped and logged** — never silently discarded (fixtures
-``iea-05``, ``gh-03``).
+ever accepted on trust. Every DOI that an adapter *inferred* — read out of a
+page by the Tier-3 extractor, scraped from a README badge, or stated by a
+third party about somebody else's deposit — is resolved against DataCite and
+then Crossref before it reaches a record, and a DOI that does not resolve
+causes the record to be **dropped and logged**, never silently discarded
+(fixtures ``iea-05``, ``gh-03``). That is :func:`resolve_or_drop`, and
+``ieawind``, ``osti``, ``crossref`` and ``github``'s badge path all go through
+it.
+
+The exception, stated plainly so the invariant is not read wider than it is:
+``zenodo`` and ``datacite`` take the DOI **from the registry that minted it**,
+in the same response that describes the record. Re-resolving DataCite's own
+answer against DataCite proves nothing, so those two adapters normalise and
+trust. ``wdh`` states a third-party DOI and does *not* currently resolve it
+(scrape-12); the source is disabled by default in ``sources.yaml``, and this
+sentence is here rather than a claim that it does.
 
 Extraction handles the four shapes that appear on a task page (fixture
 ``iea-03``) plus the two classic bugs:
@@ -40,7 +52,17 @@ CROSSREF_ENDPOINT = "https://api.crossref.org/works/"
 
 # The DOI body: a "10." prefix, 4-9 registrant digits, a slash, then a suffix
 # drawn from the character set DOIs actually use in the wild.
-_DOI_BODY = r"10\.\d{4,9}/[-._;()/:A-Za-z0-9<>\[\]+*#]+"
+#
+# ``#`` is deliberately NOT in the class. DOI suffix syntax permits it, but in
+# the text this harvester reads a ``#`` after a DOI is a *URL fragment* far more
+# often than a suffix character — ``https://doi.org/10.1002/we.2745#abstract``
+# is one link to one paper. Including it produced ``10.1002/we.2745#abstract``,
+# which resolves 404, so resolve-or-drop threw the publication away (scrape-08).
+# ``?`` was already excluded for exactly this reason; fragments were an
+# oversight, not a policy. The cost is a hypothetical DOI with a literal ``#``
+# in its suffix, which no source in ``sources.yaml`` has ever emitted; the
+# benefit is that every fragment-linked citation is catalogued.
+_DOI_BODY = r"10\.\d{4,9}/[-._;()/:A-Za-z0-9<>\[\]+*]+"
 
 #: Matches a DOI with any of the four common prefixes, capturing the bare DOI.
 DOI_RE = re.compile(
@@ -62,11 +84,36 @@ _PREFIXES = (
     "dx.doi.org/",
     "info:doi/",
     "doi:",
-    "doi ",
+)
+
+#: The same prefixes, matched *before* embedded whitespace is collapsed, so the
+#: spaced spellings work too. ``DOI 10.5281/zenodo.10`` and ``DOI: 10.5281/…``
+#: are both ordinary in a reference list; the old ``"doi "`` entry in
+#: :data:`_PREFIXES` could never fire because the space had already been
+#: removed by the time the tuple was consulted (scrape-08, dead code).
+_PREFIX_RE = re.compile(
+    r"^\s*(?:"
+    r"https?://(?:dx\.|www\.)?doi\.org/"
+    r"|(?:dx\.|www\.)doi\.org/"
+    r"|doi\.org/"
+    r"|info:doi/"
+    r"|doi\s*:\s*"
+    r"|doi\s+(?=10\.)"
+    r")",
+    re.IGNORECASE,
 )
 
 #: Punctuation a DOI never legitimately ends with in running prose.
-_TRAILING_PUNCTUATION = ".,;:!?'\"”’)]}>»"
+#:
+#: ``/`` is in the set. A DOI's suffix may *contain* a slash but never ends
+#: with one, and ``10.5281/zenodo.4549875/`` — the spelling a copy-pasted
+#: browser URL produces — used to normalise to a *distinct identity* whose slug
+#: was byte-identical to the clean DOI's. Since DataCite answers 200 for the
+#: slashed form, resolve-or-drop let it through, it claimed
+#: ``events/doi-10-5281-zenodo-4549875.jsonl``, and the real record could then
+#: never be written: ``append_event``'s collision guard refused it forever
+#: (scrape-05). One citation with a stray slash squatted a record's slug.
+_TRAILING_PUNCTUATION = ".,;:!?'\"”’)]}>»/"
 
 # A line break inside a DOI is removed only when the break follows a "/" or a
 # "-", or follows a "." that is itself followed by a digit. That last clause is
@@ -149,7 +196,24 @@ def normalise_doi(value: str | None) -> str | None:
     text = str(value).strip()
     if not text:
         return None
+
+    # Prefixes first, while the spacing is still intact ("DOI 10.5281/…"), then
+    # again after the collapse, which catches a prefix split across a line break.
+    while True:
+        shortened = _PREFIX_RE.sub("", text, count=1)
+        if shortened == text:
+            break
+        text = shortened
+
     text = "".join(text.split())  # kill embedded whitespace and newlines
+
+    # A URL fragment or query string is part of the *link*, not of the DOI.
+    # Splitting here (rather than only excluding the characters from the body
+    # class) means the whole-string form normalises too, so
+    # normalise_doi("https://doi.org/10.1002/we.2745#abstract") is the paper
+    # rather than None (scrape-08).
+    for delimiter in ("#", "?"):
+        text = text.split(delimiter, 1)[0]
 
     lowered = text.lower()
     changed = True

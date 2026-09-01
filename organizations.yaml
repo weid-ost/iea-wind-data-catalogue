@@ -103,3 +103,12 @@ organizations:
     description: >-
       Owner of last resort. A record here is a curation task, not a failure —
       the run report counts them.
+
+  - name: iea-wind
+    title: IEA Wind TCP (Technology Collaboration Programme)
+    description: >-
+      The programme itself, and its Tasks, as a publisher. Several Task
+      deposits and repositories state the Task — not a member institution —
+      as the publishing body; this is where those hang. `aliases` includes the
+      two GitHub organisations the Tasks publish under.
+    aliases: ["IEA Wind", "IEA Wind TCP", "IEA Wind Technology Collaboration Programme", "IEAWindSystems", "IEA-Task-43"]

@@ -26,6 +26,7 @@
         "name": "wind-energy"
       }
     ],
+    "owner_org": "dtu",
     "extras": [
       {
         "key": "access_status",

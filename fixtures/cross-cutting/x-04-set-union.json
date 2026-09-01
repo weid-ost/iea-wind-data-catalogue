@@ -112,6 +112,7 @@
     "license_id": "cc-by",
     "name": "doi-10-5281-zenodo-4000004",
     "notes": "",
+    "owner_org": "zenodo-community",
     "private": false,
     "resources": [],
     "state": "active",
@@ -235,7 +236,8 @@
         }
       ],
       "title": "Digital WRA data standard — worked examples",
-      "url": "https://zenodo.org/records/4000005"
+      "url": "https://zenodo.org/records/4000005",
+      "owner_org": "zenodo-community"
     }
   },
   "expected_notices": []

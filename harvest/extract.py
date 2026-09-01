@@ -95,6 +95,7 @@ __all__ = [
     "resolve_endpoint",
     "resolve_model",
     "resolve_token",
+    "GITHUB_ENDPOINT_HOSTS",
     "max_extractions",
 ]
 
@@ -330,13 +331,74 @@ def resolve_model(model: str | None = None) -> str:
     return model or _env("HARVEST_LLM_MODEL", "MODEL_ID", "OPENAI_MODEL") or DEFAULT_MODEL
 
 
-def resolve_token(token: str | None = None) -> str | None:
-    """The credential, or ``None``.
+#: Hosts that are GitHub Models. ``GITHUB_TOKEN`` is only ever sent to one of
+#: these; ``OPENAI_API_KEY`` is never sent to one.
+GITHUB_ENDPOINT_HOSTS = (".github.ai", ".github.com", "github.ai", "github.com")
+
+
+def _is_github_endpoint(endpoint: str) -> bool:
+    from urllib.parse import urlsplit
+
+    host = (urlsplit(endpoint).hostname or "").lower()
+    return any(host == suffix.lstrip(".") or host.endswith(suffix) for suffix in GITHUB_ENDPOINT_HOSTS)
+
+
+def resolve_token(token: str | None = None, endpoint: str | None = None) -> str | None:
+    """The credential for **this endpoint**, or ``None``.
 
     ``None`` is the normal, supported state: CI without ``models: read``, a
     laptop with no key, a fork. It is not an error (ADR-0031).
+
+    **A credential is only ever sent to the provider it belongs to.** The token
+    and the endpoint are resolved as one unit, because they used to be resolved
+    from two disjoint families of environment variables: a machine with the
+    OpenAI SDK installed (``OPENAI_API_KEY`` set, no ``OPENAI_BASE_URL``) sent
+    the operator's OpenAI secret as a Bearer token to
+    ``https://models.github.ai`` on every ordinary harvest — a live credential
+    leak to a third party (product-e2e-01). So:
+
+    * an explicit argument, or ``HARVEST_LLM_TOKEN``, is this harvester's own
+      credential and goes wherever the harvester is pointed;
+    * ``OPENAI_API_KEY`` is used **only** when an endpoint was explicitly
+      configured for it (``HARVEST_LLM_ENDPOINT`` / ``OPENAI_BASE_URL`` /
+      ``OPENAI_API_BASE``) and that endpoint is not GitHub's;
+    * ``GITHUB_TOKEN`` is used **only** when the endpoint is GitHub's — the
+      mirror image, so a stray ``OPENAI_BASE_URL`` cannot walk a repository
+      token to a third-party inference host either.
+
+    A credential that is refused is logged once, at INFO, and the page queues.
     """
-    return token or _env("HARVEST_LLM_TOKEN", "OPENAI_API_KEY", "GITHUB_TOKEN")
+    if token:
+        return token
+    explicit = _env("HARVEST_LLM_TOKEN")
+    if explicit:
+        return explicit
+
+    base = resolve_endpoint(endpoint)
+    configured_endpoint = _env("HARVEST_LLM_ENDPOINT", "OPENAI_BASE_URL", "OPENAI_API_BASE")
+    github = _is_github_endpoint(base)
+
+    openai_key = _env("OPENAI_API_KEY")
+    if openai_key:
+        if configured_endpoint and not github:
+            return openai_key
+        log.info(
+            "OPENAI_API_KEY is set but the inference endpoint is %s, which it was not "
+            "issued for; not sending it. Set HARVEST_LLM_ENDPOINT (or OPENAI_BASE_URL) "
+            "to the endpoint that key belongs to, or set HARVEST_LLM_TOKEN.",
+            base,
+        )
+
+    github_token = _env("GITHUB_TOKEN")
+    if github_token:
+        if github:
+            return github_token
+        log.info(
+            "GITHUB_TOKEN is set but the inference endpoint is %s, which is not GitHub; "
+            "not sending it.",
+            base,
+        )
+    return None
 
 
 def max_extractions() -> int:
@@ -512,10 +574,15 @@ def lookup_cache(
     return None, primary
 
 
-def cache_path(key: str, cache_directory: Path | None = None) -> Path:
+def cache_path(key: str, cache_directory: Path | str | None = None) -> Path:
     from harvest import config
 
-    return (cache_directory or config.cache_dir()) / f"{key}.json"
+    # `Path(...)`, not the bare argument: `extract()` is documented as never
+    # raising, and a `str` cache directory used to blow up with a TypeError on
+    # the first line of the cache lookup — before any of the defensive
+    # try/except blocks could catch it (product-e2e-08).
+    directory = Path(cache_directory) if cache_directory is not None else config.cache_dir()
+    return directory / f"{key}.json"
 
 
 def read_cache(key: str, cache_directory: Path | None = None) -> ExtractionResult | None:
@@ -705,7 +772,8 @@ def extract(
         return cached
     STATS.misses += 1
 
-    credential = resolve_token(token)
+    base = resolve_endpoint(endpoint if endpoint != DEFAULT_ENDPOINT else None)
+    credential = resolve_token(token, endpoint=base)
     if not credential:
         log.info("no LLM credential available; queueing instead of extracting")
         return None
@@ -715,7 +783,6 @@ def extract(
         log.warning("MAX_EXTRACTIONS (%s) reached this run; queueing the rest", cap)
         return None
 
-    base = resolve_endpoint(endpoint if endpoint != DEFAULT_ENDPOINT else None)
     body = {
         "model": model_id,
         # Temperature at the minimum for stability. Determinism is NOT

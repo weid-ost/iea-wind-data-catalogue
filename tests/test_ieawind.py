@@ -613,6 +613,84 @@ class TestAPinnedExtraction:
         assert [n for n in adapter.notices if n["type"] == "pin_notice"] == []
 
 
+class TestACorruptCacheEntryIsAMiss:
+    """scrape-06: one bad committed cache entry must not kill the source.
+
+    ``cache/`` is committed, and the pinning runbook tells a curator to write
+    an entry by hand. An entry that parses as JSON but whose ``fields`` are not
+    a valid ``PageExtraction`` — a typo'd ``page_kind``, a ``confidence`` of
+    ``"high"`` — used to raise out of ``_classify_with_model`` and take the
+    whole ``ieawind`` source down with it, on this run and on every run after,
+    because the file is committed.
+
+    A cache is a convenience. A convenience that cannot be read is a miss.
+    """
+
+    def _bad_entry(self, repo: Path, content: str, fields: dict) -> None:
+        from harvest.extract import ExtractionResult, cache_key, write_cache
+
+        write_cache(
+            ExtractionResult(
+                key=cache_key(content),
+                model="openai/gpt-4o-mini",
+                prompt_version=PROMPT_VERSION,
+                content_sha256="irrelevant",
+                extracted_at="2026-08-31T22:15:04Z",
+                fields=fields,
+            ),
+            repo / "cache",
+        )
+
+    def test_an_unreadable_entry_does_not_raise(
+        self, repo: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        monkeypatch.setenv("HARVEST_ROOT", str(repo))
+        fixture = load("iea-09-workshop-page")
+        url, served = fixture["page_url"], html(fixture)
+        self._bad_entry(repo, main_text(served), {"page_kind": "not-a-kind"})
+
+        adapter = adapter_for(PageServer({url: served}), Resolver())
+        page = adapter._read(url, fixture["iea_task"], trusted=False)
+
+        assert page["record_bearing"] is False
+
+    def test_it_is_treated_as_a_miss_and_the_page_queues(
+        self, repo: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """ADR-0031: an unclassifiable page queues, exactly as it would with no cache."""
+        monkeypatch.setenv("HARVEST_ROOT", str(repo))
+        fixture = load("iea-09-workshop-page")
+        url, served = fixture["page_url"], html(fixture)
+        self._bad_entry(repo, main_text(served), {"page_kind": "not-a-kind"})
+
+        adapter = adapter_for(PageServer({url: served}), Resolver())
+        adapter._read(url, fixture["iea_task"], trusted=False)
+
+        kinds = {notice["type"] for notice in adapter.notices}
+        assert "cache_entry_invalid" in kinds, "the bad entry must be reported, not hidden"
+        assert "extraction_queued" in kinds
+
+    def test_the_rest_of_the_source_still_harvests(
+        self, repo: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """The whole point: one bad file costs one page, not thirty records."""
+        monkeypatch.setenv("HARVEST_ROOT", str(repo))
+        broken = load("iea-09-workshop-page")
+        healthy = load("iea-02-doi-punctuation")
+        self._bad_entry(repo, main_text(html(broken)), {"page_kind": "not-a-kind"})
+
+        adapter = adapter_for(
+            PageServer({broken["page_url"]: html(broken),
+                        healthy["page_url"]: html(healthy)}),
+            Resolver(),
+        )
+        adapter._read(broken["page_url"], broken["iea_task"], trusted=False)
+        page = adapter._read(healthy["page_url"], healthy["iea_task"], trusted=False)
+
+        assert page["record_bearing"] is True
+        assert page["dois"], "the healthy page still yields its DOIs"
+
+
 # ---------------------------------------------------------------------------
 # iea-10 — boilerplate
 # ---------------------------------------------------------------------------

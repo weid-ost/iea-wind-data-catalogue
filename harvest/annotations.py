@@ -67,7 +67,13 @@ from typing import Any, Iterable, Sequence
 
 from harvest import config
 from harvest.events import annotate, read_events
-from harvest.models import SET_VALUED_FIELDS, Event, LocalNamespace
+from harvest.models import (
+    LOCAL_CURATOR_FIELDS,
+    SET_VALUED_FIELDS,
+    Event,
+    FieldProvenance,
+    LocalNamespace,
+)
 
 __all__ = [
     "ANNOTATION_SUFFIXES",
@@ -80,6 +86,7 @@ __all__ = [
     "load_annotation_file",
     "load_annotations",
     "existing_fingerprints",
+    "curator_provenance",
     "apply_annotations",
     "check_pins",
 ]
@@ -216,12 +223,39 @@ def _validate_local(local: Any, where: str, root: Path | None = None) -> dict[st
     if not isinstance(local, dict) or not local:
         raise AnnotationError(f"{where}: 'local' must be a non-empty mapping")
 
+    # ADR-0038, eventlog-04: an annotation adds what no source stated. It does
+    # not get to *state* a source claim. `license_id: cc-by` in an annotation
+    # would put an open licence on a record page with no `license_raw` behind
+    # it and no way for a reader to tell a human asserted it — so the field set
+    # is closed, and the way to say "the stated licence looks wrong" is a
+    # curator_note rendered beside it.
+    unknown = sorted(set(local) - LOCAL_CURATOR_FIELDS)
+    if unknown:
+        raise AnnotationError(
+            f"{where}: annotations may not set {', '.join(repr(k) for k in unknown)} — "
+            f"an annotation adds only {', '.join(sorted(LOCAL_CURATOR_FIELDS))}. "
+            "A correction to a value the source states is a curator_notes entry, "
+            "not a local assertion (ADR-0038)"
+        )
+
     try:
-        LocalNamespace.model_validate(local)
+        validated = LocalNamespace.model_validate(local)
     except Exception as exc:  # pydantic ValidationError
         raise AnnotationError(f"{where}: not a valid local namespace: {exc}") from exc
 
-    tasks = local.get("iea_task") or []
+    if "owner_org" in local:
+        known_orgs = config.organization_names(root)
+        if known_orgs and str(local["owner_org"]) not in known_orgs:
+            raise AnnotationError(
+                f"{where}: owner_org {local['owner_org']!r} is not in organizations.yaml — "
+                "the CKAN gate would reject the record"
+            )
+
+    # Check the NORMALISED spelling, not the one the file happened to use:
+    # `Task-043` and `task-43` are one group, and the register only knows the
+    # canonical form. Reading the raw dict here meant a legal spelling was
+    # refused while the value that would actually be stored was fine.
+    tasks = validated.iea_task
     known = config.group_names(root)
     for task in tasks:
         canonical = config.canonical_group(str(task), root)
@@ -230,7 +264,24 @@ def _validate_local(local: Any, where: str, root: Path | None = None) -> dict[st
                 f"{where}: iea_task {task!r} resolves to {canonical!r}, which is not in "
                 "groups.yaml — the CKAN gate would reject the record"
             )
-    return dict(local)
+
+    # Store what the model normalised (task spellings, unsafe link schemes
+    # dropped), not what the file happened to say.
+    cleaned = validated.model_dump(mode="json", exclude_none=True)
+    return {key: cleaned[key] for key in local if key in cleaned}
+
+
+def curator_provenance(local: dict[str, Any]) -> dict[str, FieldProvenance]:
+    """One ``curator`` provenance entry per field the annotation sets.
+
+    Without this an annotated ``resource_kind`` is indistinguishable on the
+    record page from one an API stated. Provenance is the whole basis of the
+    catalogue's honesty claim, so a human assertion says so (eventlog-04).
+    """
+    return {
+        field_name: FieldProvenance(extraction_method="curator")
+        for field_name in sorted(local)
+    }
 
 
 def load_annotation_file(path: Path, root: Path | None = None) -> list[Annotation]:
@@ -239,7 +290,12 @@ def load_annotation_file(path: Path, root: Path | None = None) -> list[Annotatio
     Raises :class:`AnnotationError` on anything malformed — the caller collects
     the message rather than letting one bad file stop the replay.
     """
-    document = config.load_yaml(path)
+    try:
+        document = config.load_yaml(path)
+    except Exception as exc:
+        # A YAML syntax error is one curator's typo, not a reason for the whole
+        # run to die before it can write state/last-run.json (compliance-04).
+        raise AnnotationError(f"{path.name}: not valid YAML: {exc}") from exc
     if not isinstance(document, dict):
         raise AnnotationError(f"{path.name}: top level must be a mapping")
     if "source" in document:
@@ -306,7 +362,7 @@ def load_annotations(
             continue
         try:
             out.extend(load_annotation_file(path, root))
-        except AnnotationError as exc:
+        except Exception as exc:  # AnnotationError, and anything a bad file does
             log.error("%s", exc)
             if errors is not None:
                 errors.append(str(exc))
@@ -369,6 +425,7 @@ def apply_annotations(
                     annotation.local,
                     actor=annotation.actor,
                     note=annotation.note,
+                    provenance=curator_provenance(annotation.local),
                     events_dir=events_directory,
                     observed_at=annotation.observed_at,
                 )

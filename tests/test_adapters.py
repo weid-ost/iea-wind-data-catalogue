@@ -205,18 +205,31 @@ class TestDegradation:
         result = run_adapter(adapter, limit=5, events_dir=events_dir)
         assert (result.enabled, result.seen, result.changed) == (False, 0, 0)
 
-    def test_a_slug_collision_costs_one_record_not_the_run(self, events_dir: Path) -> None:
-        from harvest.events import record_scrape
+    def test_a_slug_collision_costs_no_record_at_all(self, events_dir: Path) -> None:
+        """site-07: a lossy slug must not be able to delete a record.
 
-        record_scrape("10.5281/zenodo.0", "zenodo", "0", "rev-1", {"title": "incumbent"},
+        Two identity keys can render to one slug — ``10.2314/KXP:1790028361``
+        and ``10.2314/KXP.1790028361`` do, and registries mint both shapes. The
+        log used to refuse the late arrival, so an upstream data change nobody
+        controls silently cost the catalogue a whole record. It now hands the
+        newcomer a disambiguated log and keeps both, with the incumbent's URL
+        untouched.
+        """
+        from harvest.events import record_scrape, resolve
+
+        incumbent, newcomer = "10.2314/KXP:1790028361", "10.2314/KXP.1790028361"
+        record_scrape(incumbent, "crossref", "0", "rev-1", {"title": "incumbent"},
                       events_dir=events_dir, observed_at="2026-01-01T00:00:00Z")
-        # Same slug, different identity string: the log refuses it, the run lives.
-        colliding = [{"id": "0", "rev": "r", "doi": "10.5281/zenodo.0 ", "title": "x"},
+        colliding = [{"id": "0", "rev": "r", "doi": newcomer, "title": "x"},
                      {"id": "1", "rev": "r", "doi": "10.5281/zenodo.1", "title": "y"}]
+
         result = run_adapter(FakeAdapter(colliding), limit=5, events_dir=events_dir)
+
         assert result.reachable is True
-        assert result.changed == 1
-        assert len(result.errors) == 1 and "slug collision" in result.errors[0]
+        assert result.changed == 2
+        assert result.errors == []
+        assert resolve(incumbent, events_dir=events_dir).effective["title"] == "incumbent"
+        assert resolve(newcomer, events_dir=events_dir).effective["title"] == "x"
 
     def test_close_is_always_called(self, events_dir: Path) -> None:
         adapter = FakeAdapter([], fail=RuntimeError("boom"))

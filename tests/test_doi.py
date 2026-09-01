@@ -139,3 +139,71 @@ class TestResolveOrDrop:
         kept = resolve_all(["10.5281/zenodo.good", "10.5281/zenodo.bad"], client, drops)
         assert [r.doi for r in kept] == ["10.5281/zenodo.good"]
         assert [d["doi"] for d in drops.as_notices()] == ["10.5281/zenodo.bad"]
+
+
+class TestATrailingSlashIsNotAnIdentity:
+    """scrape-05: one stray slash could permanently squat a record's slug.
+
+    ``/`` was inside the DOI character class and outside the trailing-punctuation
+    set, so ``10.5281/zenodo.4549875/`` — the spelling you get by copying a
+    browser URL — normalised to a *distinct identity key*. DataCite answers 200
+    for it, so resolve-or-drop waved it through; its slug is byte-identical to
+    the clean DOI's, so it claimed ``events/doi-10-5281-zenodo-4549875.jsonl``;
+    and from then on the real record could never be written, because
+    ``append_event``'s collision guard refused it. One citation on one task page
+    was enough to delete a record from the catalogue.
+    """
+
+    def test_a_trailing_slash_is_stripped(self) -> None:
+        assert normalise_doi("10.5281/zenodo.4549875/") == "10.5281/zenodo.4549875"
+
+    def test_the_slashed_and_clean_spellings_are_one_identity(self) -> None:
+        assert normalise_doi("https://doi.org/10.5281/zenodo.4549875/") == normalise_doi(
+            "10.5281/zenodo.4549875"
+        )
+
+    def test_the_sweep_extracts_the_clean_form(self) -> None:
+        text = "OpenOA is archived at https://doi.org/10.5281/zenodo.4549875/ and cited widely."
+        assert extract_dois(text) == ["10.5281/zenodo.4549875"]
+
+    def test_a_registrant_prefix_with_nothing_after_it_is_not_a_doi(self) -> None:
+        assert normalise_doi("10.5281/") is None
+
+
+class TestAUrlFragmentIsNotPartOfTheDoi:
+    """scrape-08: a fragment-linked citation was dropped instead of catalogued.
+
+    ``#`` was in the DOI character class, so
+    ``https://doi.org/10.1002/we.2745#abstract`` yielded
+    ``10.1002/we.2745#abstract``, which 404s at DataCite and Crossref — so
+    resolve-or-drop discarded a perfectly good publication. Query strings were
+    already handled, which is what shows fragments were an oversight rather
+    than a policy.
+    """
+
+    def test_a_fragment_is_stripped(self) -> None:
+        assert normalise_doi("https://doi.org/10.1002/we.2745#abstract") == "10.1002/we.2745"
+
+    def test_a_query_string_is_stripped(self) -> None:
+        assert normalise_doi("https://doi.org/10.1002/we.2745?utm_source=x") == "10.1002/we.2745"
+
+    def test_the_sweep_stops_at_the_fragment(self) -> None:
+        assert extract_dois("see https://doi.org/10.1002/we.2745#abstract now") == [
+            "10.1002/we.2745"
+        ]
+
+    def test_the_spaced_doi_prefix_is_no_longer_dead_code(self) -> None:
+        """`DOI 10.5281/...` is ordinary in a reference list.
+
+        The ``"doi "`` entry in the prefix table could never fire: whitespace
+        was collapsed before the table was consulted, so by then the string
+        read ``doi10.5281/...``.
+        """
+        assert normalise_doi("DOI 10.5281/zenodo.10") == "10.5281/zenodo.10"
+        assert normalise_doi("doi: 10.5281/zenodo.10") == "10.5281/zenodo.10"
+        assert normalise_doi("DOI:10.5281/zenodo.10") == "10.5281/zenodo.10"
+
+    def test_an_ordinary_doi_with_punctuation_in_its_suffix_is_untouched(self) -> None:
+        """The character class narrowed; it must not have narrowed too far."""
+        assert normalise_doi("10.2314/KXP:1790028361") == "10.2314/kxp:1790028361"
+        assert normalise_doi("10.1088/1742-6596/2265/2/022001") == "10.1088/1742-6596/2265/2/022001"

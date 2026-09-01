@@ -585,6 +585,36 @@ class TestCommunitiesAndTasks:
             for task in tasks_for_community(str(entry["slug"]), declared):
                 assert config.canonical_group(task) in groups, entry["slug"]
 
+    def test_an_unknown_community_contributes_no_group(self) -> None:
+        """scrape-02: the community slug is stranger-controlled, and it is a build input.
+
+        Anyone can create a Zenodo community called ``ieawindtask777``; IEA
+        Wind will one day create a real ``ieawindtask66``. Either way the
+        pattern turned it into ``task-777``, which is not in ``groups.yaml``,
+        which fails the CKAN gate. And because ``events/`` is append-only the
+        bad attribution is now permanent: every subsequent run fails the same
+        way and the deploy stays blocked until a human edits the register. A
+        stranger's community name must not be able to do that.
+        """
+        assert tasks_for_community("ieawindtask777") == []
+        assert tasks_for_community("ieawindtask66") == []
+
+    def test_a_declared_task_is_checked_against_the_register_too(self) -> None:
+        """Not just the pattern path: a typo in sources.yaml is caught as well."""
+        assert tasks_for_community("mytest", {"mytest": ["task-888"]}) == []
+        assert tasks_for_community("mytest", {"mytest": ["task-43"]}) == ["task-43"]
+
+    def test_a_renumbered_task_still_lands_on_its_real_group(self) -> None:
+        """Filtering must resolve aliases, not just compare strings."""
+        assert tasks_for_community("coldclimatewind", {"coldclimatewind": ["task-19"]}) == [
+            config.canonical_group("task-19")
+        ]
+
+    def test_the_spelling_is_normalised_before_it_is_checked(self) -> None:
+        """eventlog-05: `Task 43`, `TASK-43` and `task-43` are one group."""
+        assert tasks_for_community("x", {"x": [" Task 43 "]}) == ["task-43"]
+        assert tasks_for_community("x", {"x": ["TASK_43", "task-43"]}) == ["task-43"]
+
     def test_non_iea_communities_contribute_no_task(self) -> None:
         """zen-04's record is also in `openaccessost` and `wedowind` — not tasks."""
         fixture = fixture_by_id("zen-02-concept-vs-version")
@@ -857,6 +887,26 @@ class TestConfiguration:
         zenodo = config.load_sources()["zenodo"]
         assert zenodo["respect_robots"] is False
         assert zenodo["min_request_interval_seconds"] >= 1.0
+
+    def test_the_opt_out_must_be_explicit(self) -> None:
+        """compliance-05: deleting the line must RESTORE robots, not disable it.
+
+        The lookup was ``self.config.get("respect_robots", False)``, so an
+        absent key — which is what you get by deleting the documented opt-out,
+        or by adding a new source and not thinking about it — silently ignored
+        robots.txt. The safe value has to be the default; opting out has to be
+        something you wrote down.
+        """
+        from harvest.adapters.base import SourceConfig
+        from harvest.adapters.zenodo import ZenodoAdapter
+
+        absent = ZenodoAdapter(config=SourceConfig.from_mapping("zenodo", {}))
+        assert absent._ensure_client()._respect_robots is True
+
+        explicit = ZenodoAdapter(
+            config=SourceConfig.from_mapping("zenodo", {"respect_robots": False})
+        )
+        assert explicit._ensure_client()._respect_robots is False
 
     @pytest.mark.parametrize(
         "resource_type,expected",

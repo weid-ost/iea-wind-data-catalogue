@@ -27,6 +27,7 @@ const DESCRIPTION: Record<string, string> = {
   withdrawn: 'Artifact no longer available at the source',
   displacement_notice: 'A source value displaced a locally-added one',
   pin_notice: 'The page changed beneath a pinned extraction',
+  merge_proposal: 'The reconciler found a probable duplicate — awaiting review, not merged',
 };
 
 const ordered = [...events].sort((a, b) =>

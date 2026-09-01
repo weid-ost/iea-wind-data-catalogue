@@ -29,6 +29,7 @@ from harvest import USER_AGENT
 __all__ = [
     "USER_AGENT",
     "DEFAULT_TIMEOUT",
+    "MAX_RESPONSE_BYTES",
     "FetchResult",
     "RobotsCache",
     "HarvestClient",
@@ -38,6 +39,15 @@ __all__ = [
 log = logging.getLogger(__name__)
 
 DEFAULT_TIMEOUT = 30.0
+
+#: The largest response body this harvester will read into a record. Every
+#: byte fetched ends up in an ``events/*.jsonl`` line and a
+#: ``records/*.json`` file, both committed to git on every change, and then
+#: in a rendered HTML page and a Pagefind index entry. 8 MiB is an order of
+#: magnitude more than the largest real metadata response any of the seven
+#: sources returns, and small enough that a pathological or hostile upstream
+#: cannot inflate the repository (scrape-07, scrape-11).
+MAX_RESPONSE_BYTES = 8 * 1024 * 1024
 
 
 def build_client(timeout: float = DEFAULT_TIMEOUT, **kwargs: Any) -> httpx.Client:
@@ -170,6 +180,29 @@ class HarvestClient:
         if response.status_code == 304:
             return FetchResult(url=url, status_code=304, changed=False,
                                headers=dict(response.headers))
+
+        # Redirects are followed, so the URL that robots.txt was consulted for
+        # is not necessarily the URL that answered. Re-check the final one: a
+        # redirect onto a host that disallows us is exactly the case a polite
+        # crawler has to notice (scrape-11).
+        final = str(response.url)
+        if self._respect_robots and final != url and not self._robots.allowed(final):
+            log.warning("robots.txt disallows %s (redirected from %s); discarding", final, url)
+            return FetchResult(url=url, status_code=response.status_code, changed=False,
+                               error="disallowed-by-robots-after-redirect")
+
+        body = response.content
+        if len(body) > MAX_RESPONSE_BYTES:
+            # An unbounded body is an unbounded event line and an unbounded
+            # record file, committed to git on every change (scrape-07). A
+            # response this size is a bug or an attack, never wind metadata.
+            log.warning(
+                "%s returned %s bytes, over the %s-byte ceiling; treating it as unusable",
+                url, len(body), MAX_RESPONSE_BYTES,
+            )
+            return FetchResult(url=url, status_code=response.status_code, changed=False,
+                               error=f"response-too-large ({len(body)} bytes)")
+
         return FetchResult(
             url=url,
             status_code=response.status_code,

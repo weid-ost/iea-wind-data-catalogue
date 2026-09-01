@@ -101,6 +101,7 @@
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-21871066",
   "notes": "<p>The wind energy domain is moving, together with broader IEA and open data communities, towards semantic technologies and shared formal ontologies. When those are mature and adopted, existing information modelling efforts may need to map to them. The cost of that alignment depends heavily on decisions made today.</p>\n<p><br />As part of the Swiss-funded project “Exploring ORD practices with the IEA Wind Technology Collaboration Programme”, we are exploring how to better align information modelling efforts in the wind energy domain. In this document, we suggest some development steps for the WRA Data Model that we expect to make future alignment with domain ontologies much easier and cheaper.</p>\n<p><br />This document starts with a description of the added value of semantic alignment and then a summary of our recommendations for the WRA Data Model. These sections are followed by four sections explaining the recommendations in more detail, each consisting of our observation followed by concrete recommendations.</p>",
+  "owner_org": "ost",
   "private": false,
   "resources": [
     {

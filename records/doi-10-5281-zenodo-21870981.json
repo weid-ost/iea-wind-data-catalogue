@@ -101,6 +101,7 @@
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-21870981",
   "notes": "<p>As part of the swiss universities Open Science Programme II project “CHORD-IEA”, some wind energy datasets from IEA Wind TCP Tasks published on Zenodo, the Wind Data Hub or the Open Science Framework were assessed against the RDA FAIR Data Maturity Model indicators.</p>\n<p> </p>",
+  "owner_org": "ost",
   "private": false,
   "resources": [
     {

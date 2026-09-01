@@ -100,7 +100,8 @@
     "state": "active",
     "tags": [],
     "title": "Wind resource assessment for the Baltic Sea, intrim report",
-    "url": "https://iea-wind.org/task11/publications/"
+    "url": "https://iea-wind.org/task11/publications/",
+    "owner_org": "unattributed"
   },
   "expected_records": {
     "hash-58aa9ac5f00333d0": {
@@ -191,7 +192,8 @@
       "state": "active",
       "tags": [],
       "title": "Wind resource assessment for the Baltic Sea, intrim report",
-      "url": "https://iea-wind.org/task11/publications/"
+      "url": "https://iea-wind.org/task11/publications/",
+      "owner_org": "unattributed"
     },
     "hash-718ed9153ec70073": {
       "extras": [
@@ -281,7 +283,8 @@
       "state": "active",
       "tags": [],
       "title": "Wind resource assessment for the Baltic Sea, interim report",
-      "url": "https://iea-wind.org/task11/publications/"
+      "url": "https://iea-wind.org/task11/publications/",
+      "owner_org": "unattributed"
     }
   },
   "expected_notices": [],
@@ -388,7 +391,8 @@
       "state": "active",
       "tags": [],
       "title": "Wind resource assessment for the Baltic Sea, intrim report",
-      "url": "https://iea-wind.org/task11/publications/"
+      "url": "https://iea-wind.org/task11/publications/",
+      "owner_org": "unattributed"
     },
     "hash-718ed9153ec70073": {
       "extras": [
@@ -478,7 +482,8 @@
       "state": "active",
       "tags": [],
       "title": "Wind resource assessment for the Baltic Sea, interim report",
-      "url": "https://iea-wind.org/task11/publications/"
+      "url": "https://iea-wind.org/task11/publications/",
+      "owner_org": "unattributed"
     }
   }
 }

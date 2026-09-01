@@ -22,7 +22,8 @@ from harvest.dedupe import (
     read_proposals,
     write_proposals,
 )
-from harvest.events import record_scrape, resolve
+from harvest import config
+from harvest.events import read_events, record_scrape, resolve
 from harvest.materialize import materialize_all
 
 
@@ -333,3 +334,103 @@ class TestDegradation:
     def test_an_empty_log_is_not_an_error(self, repo: Path, events_dir: Path) -> None:
         result = dedupe(events_dir, root=repo, apply=True)
         assert result.merges == [] and result.proposals == [] and result.errors == []
+
+
+class TestTaskCandidatesArePromoted:
+    """scrape-10: the documented promotion that no code performed.
+
+    DataCite's and Crossref's docstrings both said the reconciler validates
+    ``source.extra.iea_task_candidates`` and writes ``local.iea_task``. Nothing
+    read the key: a grep across ``harvest/``, ``site/src``, ``docs/`` and
+    ``tests/`` found the two producers and one assertion, and no consumer. Every
+    DataCite and Crossref task attribution died in an unrendered extra.
+    """
+
+    def _seed(self, events_dir: Path, candidates: list[str], **extra) -> str:  # noqa: ANN003
+        key = "10.5281/zenodo.4242"
+        record_scrape(
+            key, "datacite", "4242", "rev-1",
+            {
+                "title": "A dataset from a task",
+                "url": "https://example.org/4242",
+                "extra": {"iea_task_candidates": candidates, **extra},
+            },
+            events_dir=events_dir, observed_at="2026-01-01T00:00:00Z",
+        )
+        return key
+
+    def test_a_registered_candidate_becomes_a_task(self, repo: Path, events_dir: Path) -> None:
+        key = self._seed(events_dir, ["task-43"])
+
+        dedupe(events_dir, root=repo, apply=True, observed_at="2026-02-01T00:00:00Z")
+
+        assert resolve(key, events_dir=events_dir).effective["iea_task"] == ["task-43"]
+
+    def test_it_is_badged_as_inference_not_as_something_a_registry_stated(
+        self, repo: Path, events_dir: Path
+    ) -> None:
+        key = self._seed(events_dir, ["task-43"])
+
+        dedupe(events_dir, root=repo, apply=True, observed_at="2026-02-01T00:00:00Z")
+
+        provenance = resolve(key, events_dir=events_dir).provenance["iea_task"]
+        assert provenance.extraction_method == "pattern"
+
+    def test_an_unregistered_candidate_stays_a_candidate(
+        self, repo: Path, events_dir: Path
+    ) -> None:
+        """The reason the adapters refused to write it themselves, still honoured."""
+        key = self._seed(events_dir, ["task-999"])
+
+        dedupe(events_dir, root=repo, apply=True, observed_at="2026-02-01T00:00:00Z")
+
+        resolved = resolve(key, events_dir=events_dir)
+        assert not resolved.effective.get("iea_task")
+        assert resolved.effective["extra"]["iea_task_candidates"] == ["task-999"]
+
+    def test_a_renumbered_candidate_lands_on_the_task_that_exists(
+        self, repo: Path, events_dir: Path
+    ) -> None:
+        key = self._seed(events_dir, ["task-19"])
+
+        dedupe(events_dir, root=repo, apply=True, observed_at="2026-02-01T00:00:00Z")
+
+        assert resolve(key, events_dir=events_dir).effective["iea_task"] == [
+            config.canonical_group("task-19")
+        ]
+
+    def test_the_promotion_is_reported(self, repo: Path, events_dir: Path) -> None:
+        self._seed(events_dir, ["task-43"])
+
+        result = dedupe(events_dir, root=repo, apply=True, observed_at="2026-02-01T00:00:00Z")
+
+        assert [notice["type"] for notice in result.promotions] == ["task_candidate_promoted"]
+        assert any(n["type"] == "task_candidate_promoted" for n in result.as_notices())
+
+    def test_a_preview_pass_writes_nothing(self, repo: Path, events_dir: Path) -> None:
+        key = self._seed(events_dir, ["task-43"])
+
+        result = dedupe(events_dir, root=repo, apply=False)
+
+        assert result.promotions, "a preview still says what it would do"
+        assert not resolve(key, events_dir=events_dir).effective.get("iea_task")
+
+    def test_promoting_twice_appends_once(self, repo: Path, events_dir: Path) -> None:
+        key = self._seed(events_dir, ["task-43"])
+        dedupe(events_dir, root=repo, apply=True, observed_at="2026-02-01T00:00:00Z")
+        before = len(read_events(key, events_dir))
+
+        again = dedupe(events_dir, root=repo, apply=True, observed_at="2026-03-01T00:00:00Z")
+
+        assert again.promotions == []
+        assert len(read_events(key, events_dir)) == before
+
+    def test_a_record_with_no_candidates_is_untouched(
+        self, repo: Path, events_dir: Path
+    ) -> None:
+        record_scrape(
+            "10.5281/zenodo.1", "zenodo", "1", "rev-1",
+            {"title": "T", "url": "https://example.org/1"},
+            events_dir=events_dir, observed_at="2026-01-01T00:00:00Z",
+        )
+        assert dedupe(events_dir, root=repo, apply=True).promotions == []

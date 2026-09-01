@@ -19,6 +19,7 @@
         "name": "instrumentation"
       }
     ],
+    "owner_org": "vtt",
     "extras": [
       {
         "key": "access_status",
