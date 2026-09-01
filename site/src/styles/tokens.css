@@ -55,7 +55,7 @@
   --color-violet-dark-border: #554568;
   --panel-bar-width: 3px;
   --panel-radius: 0px;
-  --font-family-sans: "IBM Plex Sans", Seravek, "Segoe UI", system-ui, sans-serif;
+  --font-family-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-family-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-size-caption: 0.75rem;
   --font-size-small: 0.875rem;

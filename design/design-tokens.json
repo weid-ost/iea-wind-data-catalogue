@@ -512,10 +512,13 @@
       "sans": {
         "$type": "fontFamily",
         "$value": [
-          "IBM Plex Sans",
-          "Seravek",
-          "Segoe UI",
+          "Inter",
           "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
           "sans-serif"
         ]
       },

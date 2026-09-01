@@ -31,8 +31,12 @@ h1,
 h2,
 h3 {
   margin: 0 0 var(--space-3);
-  font-weight: var(--font-weight-semibold);
+  /* Lighter and tighter with Inter: medium weight plus a touch of negative
+     tracking reads more editorial than a heavy semibold, and size still carries
+     the hierarchy (design §1: "type does the hierarchy"). */
+  font-weight: var(--font-weight-medium);
   line-height: var(--font-line-height-tight);
+  letter-spacing: -0.017em;
   text-wrap: balance;
   /* r-01: a 300-character title with a 47-character hyphenated token must wrap
      rather than push the page sideways. */
@@ -46,12 +50,19 @@ h3 { font-size: var(--font-size-h3); }
 p { margin: 0 0 var(--space-4); }
 p:last-child { margin-bottom: 0; }
 
+/* Links carry the link colour at rest and reveal the underline on hover/focus
+   only — a page of permanently-underlined links reads as cluttered. Keyboard
+   users get the same underline via :focus-visible so the affordance is not
+   mouse-only. */
 a {
   color: var(--text-link);
+  text-decoration: none;
   text-decoration-thickness: from-font;
   text-underline-offset: 0.15em;
 }
 
+a:hover,
+a:focus-visible { text-decoration: underline; }
 a:hover { color: var(--action-hover); }
 a:active { color: var(--action-active); }
 
