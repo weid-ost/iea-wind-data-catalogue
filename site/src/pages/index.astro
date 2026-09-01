@@ -40,11 +40,11 @@ const statusHref = withBase('/about/#status');
       <aside class="status" aria-label="Catalogue status">
         <p class="status__label">Status</p>
         {fresh.neverRun ? (
-          <p class="status__line"><a href={statusHref}>Not harvested yet →</a></p>
+          <p class="status__line"><a href={statusHref}>Not harvested yet</a></p>
         ) : (
           <>
             <p class="status__line">
-              <a href={statusHref}>Last updated {formatDate(fresh.finishedAt)} →</a>
+              <a href={statusHref}>Last updated {formatDate(fresh.finishedAt)}</a>
             </p>
             <p class="status__meta secondary">
               {fresh.ageDays === 0
@@ -115,8 +115,10 @@ const statusHref = withBase('/about/#status');
   }
 
   .catalogue__lead {
-    font-size: var(--font-size-lead);
     margin: 0;
+    font-size: var(--font-size-body);
+    /* Inter 300 (the light cut) — a step lighter and smaller than a lead. */
+    font-weight: 300;
   }
 
   /* A compact, barred status card — square corners, neutral surface, the accent

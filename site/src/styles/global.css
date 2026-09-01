@@ -185,6 +185,7 @@ pre,
 
 .site-nav {
   margin-inline-start: auto;
+  font-size: var(--font-size-small);
 }
 
 .site-nav ul {

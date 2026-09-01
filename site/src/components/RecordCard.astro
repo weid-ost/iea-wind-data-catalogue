@@ -123,6 +123,9 @@ const sourceUrl = extra(pkg, 'source_url') ?? sourceUrlsOf(pkg)[0];
   .card__summary {
     margin-bottom: var(--space-3);
     max-width: var(--font-measure-prose);
+    font-size: var(--font-size-small);
+    font-weight: 300; /* Inter light — a quieter working surface below the title */
+    color: var(--text-secondary);
   }
 
   .card__meta {

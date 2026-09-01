@@ -80,10 +80,12 @@ const hidden = collapse ? values.slice(VISIBLE_WHEN_COLLAPSED) : [];
 )}
 
 <style>
-  /* Vertical rhythm: all of the group spacing lives on the legend so the fieldset
-     quirks cannot muddy it. The subtitle sits a big gap BELOW the previous group
-     (its top padding + the divider) and a small gap ABOVE its own filters, so a
-     subtitle binds to the filters it labels — roughly 3:1, unambiguous. */
+  /* Vertical rhythm — the spacing lives on the FIELDSET, not the legend, because
+     a <legend> does not reliably honour padding-top in fieldset layout (that is
+     why the previous attempt read as evenly-spaced). Each group after the first
+     opens a generous gap with a divider in it, then the subtitle sits tight to
+     its own filters — big gap above, small gap below, so a subtitle binds to the
+     block it labels. */
   .facet {
     margin: 0;
     padding: 0;
@@ -91,13 +93,17 @@ const hidden = collapse ? values.slice(VISIBLE_WHEN_COLLAPSED) : [];
     min-inline-size: 0;
   }
 
+  .facet + .facet {
+    margin-block-start: var(--space-8);
+    padding-block-start: var(--space-6);
+    border-top: var(--border-width-hairline) solid var(--border-subtle);
+  }
+
   .facet__legend {
     display: block;
     width: 100%;
-    box-sizing: border-box;
-    margin: 0 0 var(--space-2);
-    padding: var(--space-6) 0 0;
-    border-top: var(--border-width-hairline) solid var(--border-subtle);
+    padding: 0;
+    margin: 0;
     color: var(--text-secondary);
     font-size: var(--font-size-caption);
     font-weight: var(--font-weight-semibold);
@@ -107,14 +113,14 @@ const hidden = collapse ? values.slice(VISIBLE_WHEN_COLLAPSED) : [];
   }
 
   .facet__list {
-    margin: 0;
+    margin-block-start: var(--space-1);
     padding: 0;
     list-style: none;
   }
 
   .facet__label {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: var(--space-2);
     /* WCAG 2.2 target size: the whole row is the hit area, >= 24px tall. */
     min-height: var(--space-6);

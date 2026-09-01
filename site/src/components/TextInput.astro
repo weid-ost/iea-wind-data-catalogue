@@ -58,6 +58,9 @@ const described = [describedBy, hintId].filter(Boolean).join(' ') || undefined;
     background: var(--surface-raised);
     color: var(--text-primary);
     font: inherit;
+    /* Match the companion Button's height exactly (same padding, border and
+       tight line-height), so the search box and its button line up. */
+    line-height: var(--font-line-height-tight);
   }
 
   /* Hover leaves the border alone — a colour change on hover read as a state

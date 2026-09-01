@@ -400,6 +400,12 @@ const shown = rows.length;
     gap: var(--space-2);
   }
 
+  /* Match the Search button's height to the pixel: same font size, so with the
+     shared tight line-height, padding and border both land at the same height. */
+  .search__query :global(.field__input) {
+    font-size: var(--font-size-small);
+  }
+
   /* "Search" reads as the same kind of section label as "Filter" — one small
      uppercase eyebrow system across the page (ITEM 2). The <label> keeps its
      job as the input's accessible name; only its appearance changes here. */
