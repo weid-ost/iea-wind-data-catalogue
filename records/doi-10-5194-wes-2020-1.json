@@ -1,0 +1,109 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Schepers\",\"given\":\"Gerard\",\"name\":\"Schepers, Gerard\"},{\"family\":\"van Dorp\",\"given\":\"Pim\",\"name\":\"van Dorp, Pim\",\"orcid\":\"0000-0002-8723-2319\"},{\"family\":\"Verzijlbergh\",\"given\":\"Remco\",\"name\":\"Verzijlbergh, Remco\"},{\"family\":\"Baas\",\"given\":\"Peter\",\"name\":\"Baas, Peter\"},{\"family\":\"Jonker\",\"given\":\"Harmen\",\"name\":\"Jonker, Harmen\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-2020-1"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:02:55Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-2020-1"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-47\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:02:55Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-02-13"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-2020-1"
+    },
+    {
+      "key": "source_key",
+      "value": "a14b62e62d76ecb2"
+    },
+    {
+      "key": "source_system",
+      "value": "ieawind"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"ieawind\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-2020-1"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-2020-1\",\"https://iea-wind.org/task47/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-47"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-2020-1",
+  "notes": "Abstract. In this article the aero-elastic loads on a 10 MW turbine in response to unconventional wind conditions selected from a year long Large Eddy Simulation on a site at the North Sea are evaluated. Thereto an assessment is made of the practical importance of these wind conditions within an aero-elastic context based on high fidelity wind modelling. Moreover the accuracy of BEM based methods for modelling such wind conditions is assessed. The study is carried out in a joint effort by the Energy Research Centre of the Netherlands ECN part of TNO and the Dutch meteorological consultancy company Whiffle.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "description": "Resolved landing page",
+      "name": "DOI",
+      "url": "https://doi.org/10.5194/wes-2020-1"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Aero-elastic loads on a 10 MW turbine exposed to extreme events\nselected from a year-long Large-Eddy Simulation over the North\nSea",
+  "url": "https://doi.org/10.5194/wes-2020-1"
+}

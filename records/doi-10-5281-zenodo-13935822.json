@@ -2,7 +2,7 @@
   "extras": [
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Universidad de la República - Facultad de Ingeniería - Uruguay\",\"family\":\"Garchitorena\",\"given\":\"Francisco\",\"name\":\"Garchitorena, Francisco\"},{\"affiliation\":\"Universidad de la República\",\"family\":\"Correa\",\"given\":\"Santiago\",\"name\":\"Correa, Santiago\",\"orcid\":\"0000-0002-8520-3047\"}]"
+      "value": "[{\"affiliation\":\"Universidad de la República - Facultad de Ingeniería - Uruguay\",\"family\":\"Garchitorena\",\"given\":\"Francisco\",\"name\":\"Garchitorena, Francisco\"},{\"affiliation\":\"Universidad de la República de Uruguay\",\"family\":\"Correa\",\"given\":\"Santiago\",\"name\":\"Correa, Santiago\",\"orcid\":\"0000-0002-8520-3047\"}]"
     },
     {
       "key": "doi",
@@ -22,7 +22,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-03T09:58:54Z"
     },
     {
       "key": "license_mapped",
@@ -62,7 +62,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-04-27T15:57:33Z"
+      "value": "2026-09-02T23:28:55Z"
     },
     {
       "key": "source_system",

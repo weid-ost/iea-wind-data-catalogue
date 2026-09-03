@@ -1,0 +1,102 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:34Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|OpenFoundationRenewableOperationGrids/rada-backend"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:34Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-01-28"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "OpenFoundationRenewableOperationGrids/rada-backend"
+    },
+    {
+      "key": "source_key",
+      "value": "659bf20ab9a2c30fdbb3bd4662328eacb2ddc9ab::791544d5a6d923b1"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/OpenFoundationRenewableOperationGrids/rada-backend"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/OpenFoundationRenewableOperationGrids/rada-backend\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-openfoundationrenewableoperationgrids-rada-backend",
+  "notes": "RADA (Renewable Assets Data Analytics)",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/OpenFoundationRenewableOperationGrids/rada-backend"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "bess"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "OpenFoundationRenewableOperationGrids/rada-backend",
+  "url": "https://github.com/OpenFoundationRenewableOperationGrids/rada-backend"
+}

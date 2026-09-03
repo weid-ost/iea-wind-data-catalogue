@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:23Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|api-evangelist/envision-energy"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:23Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-26"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "api-evangelist/envision-energy"
+    },
+    {
+      "key": "source_key",
+      "value": "9f0565cbe9fd8747713b20c9f2a79880395f3981::eed73f58e1b59d4c"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/api-evangelist/envision-energy"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/api-evangelist/envision-energy\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-api-evangelist-envision-energy",
+  "notes": "Envision Energy — independent third-party profile of a public API surface, by API Evangelist. Envision Energy is a Chinese green-technology company founded in 2007 by Lei Zhang and headquartered in Shanghai. It designs and manufactures smart wind turbines, operates one of the world's largest fleets of connected wind and solar assets, and builds net",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/api-evangelist/envision-energy"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "apis-json"
+    },
+    {
+      "name": "company"
+    },
+    {
+      "name": "energy"
+    },
+    {
+      "name": "energy-storage"
+    },
+    {
+      "name": "green-hydrogen"
+    },
+    {
+      "name": "iot"
+    },
+    {
+      "name": "net-zero"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "sustainability"
+    },
+    {
+      "name": "technology"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "api-evangelist/envision-energy",
+  "url": "https://github.com/api-evangelist/envision-energy"
+}

@@ -30,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:28Z"
+      "value": "2026-09-03T09:59:52Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -66,27 +66,27 @@
     },
     {
       "key": "source_id",
-      "value": "3862384"
+      "value": "IEA-Wind-Task-32/RP15-status-update"
     },
     {
       "key": "source_key",
-      "value": "9@10.5281/zenodo.3862384"
+      "value": "92c2e82ab4d1c1604024816d62eb41673dfa3c7e:1.0:630c7a935335679c"
     },
     {
       "key": "source_system",
-      "value": "zenodo"
+      "value": "github"
     },
     {
       "key": "source_systems",
-      "value": "[\"zenodo\"]"
+      "value": "[\"github\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/records/3862384"
+      "value": "https://github.com/IEA-Wind-Task-32/RP15-status-update"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/records/3862384\"]"
+      "value": "[\"https://github.com/IEA-Wind-Task-32/RP15-status-update\",\"https://zenodo.org/records/3862384\"]"
     },
     {
       "key": "withdrawn",
@@ -112,6 +112,12 @@
   ],
   "state": "active",
   "tags": [
+    {
+      "name": "iea-wind"
+    },
+    {
+      "name": "iea-wind-task-32"
+    },
     {
       "name": "recommended-practices"
     },

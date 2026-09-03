@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3414196"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T09:59:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3414196"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:03Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "NOASSERTION"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-10-07"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3414197\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEA-Wind-Task-32/wind-lidar-ontology"
+    },
+    {
+      "key": "source_key",
+      "value": "5582afb0213cacd68d59a8ca5ee01d9be44038bd::e8e996a39f87edd4"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEA-Wind-Task-32/wind-lidar-ontology"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEA-Wind-Task-32/wind-lidar-ontology\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-5281-zenodo-3414196",
+  "notes": "A glossary of terms for wind lidar",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEA-Wind-Task-32/wind-lidar-ontology"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "glossary"
+    },
+    {
+      "name": "ontology"
+    },
+    {
+      "name": "taxonomy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "IEA-Wind-Task-32/wind-lidar-ontology",
+  "url": "https://github.com/IEA-Wind-Task-32/wind-lidar-ontology"
+}

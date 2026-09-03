@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:22Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|NatLabRockies/sup3r"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:22Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "BSD-3-Clause"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-03"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "NatLabRockies/sup3r"
+    },
+    {
+      "key": "source_key",
+      "value": "7769bdd0b5ffce2f1e5ff07115c116ade215ba6d:v0.2.8:32885721e53b11d2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/NatLabRockies/sup3r"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/NatLabRockies/sup3r\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "bsd-3-clause",
+  "name": "github-natlabrockies-sup3r",
+  "notes": "The Super-Resolution for Renewable Resource Data (sup3r) software uses generative adversarial networks to create synthetic high-resolution wind and solar spatiotemporal data from coarse low-resolution inputs.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/NatLabRockies/sup3r"
+    },
+    {
+      "format": "release",
+      "name": "Release v0.2.8",
+      "url": "https://github.com/NatLabRockies/sup3r/releases/tag/v0.2.8"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "climate-change"
+    },
+    {
+      "name": "climate-data"
+    },
+    {
+      "name": "deep-learning"
+    },
+    {
+      "name": "downscaling"
+    },
+    {
+      "name": "generative-adversarial-network"
+    },
+    {
+      "name": "machine-learning"
+    },
+    {
+      "name": "reanalysis"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "severe-weather"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "tensorflow"
+    },
+    {
+      "name": "urban-heat-island"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "NatLabRockies/sup3r",
+  "url": "https://github.com/NatLabRockies/sup3r",
+  "version": "v0.2.8"
+}

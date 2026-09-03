@@ -1,0 +1,97 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T09:59:43Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEAWindTask52/LidarAssistedControl"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T09:59:43Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-03-16"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindTask52/LidarAssistedControl"
+    },
+    {
+      "key": "source_key",
+      "value": "45992f08c3c33bc2a7c283d88894519cdceb3c03::b8f94722f34071de"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindTask52/LidarAssistedControl"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindTask52/LidarAssistedControl\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "github-ieawindtask52-lidarassistedcontrol",
+  "notes": "",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindTask52/LidarAssistedControl"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindTask52/LidarAssistedControl",
+  "url": "https://github.com/IEAWindTask52/LidarAssistedControl"
+}

@@ -25,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-51\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-03T10:02:55Z"
     },
     {
       "key": "license_mapped",
@@ -42,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
     },
     {
       "key": "published_date",
@@ -62,15 +66,15 @@
     },
     {
       "key": "source_key",
-      "value": "2020-04-11T07:08:17Z"
+      "value": "cfdaffa14f7a7c3c"
     },
     {
       "key": "source_system",
-      "value": "crossref"
+      "value": "ieawind"
     },
     {
       "key": "source_systems",
-      "value": "[\"crossref\"]"
+      "value": "[\"crossref\",\"ieawind\"]"
     },
     {
       "key": "source_url",
@@ -78,20 +82,30 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://doi.org/10.1088/1742-6596/753/3/032042\",\"https://iopscience.iop.org/article/10.1088/1742-6596/753/3/032042\"]"
+      "value": "[\"https://doi.org/10.1088/1742-6596/753/3/032042\",\"https://iea-wind.org/task51/\",\"https://iopscience.iop.org/article/10.1088/1742-6596/753/3/032042\"]"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-51"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-1088-1742-6596-753-3-032042",
   "notes": "",
   "owner_org": "unattributed",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "description": "Resolved landing page",
+      "name": "DOI",
+      "url": "https://doi.org/10.1088/1742-6596/753/3/032042"
+    }
+  ],
   "state": "active",
   "tags": [],
   "title": "Wind power forecasting: IEA Wind Task 36 & future research issues",

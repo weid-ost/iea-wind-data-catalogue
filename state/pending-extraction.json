@@ -76,5 +76,29 @@
     "queued_at": "2026-09-01T23:25:46Z",
     "reason": "tier-3 page classification unavailable",
     "url": "https://iea-wind.org/task53/task-53-publications/"
+  },
+  {
+    "cache_key": "56ea4a6194f7f13ebe0daef16ea410dfe18a3b304d743858380a1276c7feaa06",
+    "queued_at": "2026-09-03T10:01:08Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task45/t45-publications/"
+  },
+  {
+    "cache_key": "4708bc076d88dfbbe8268773cd39c422b29a7f68d7266d6bfd58ddb58fc32926",
+    "queued_at": "2026-09-03T10:01:13Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task47/t47-publications/"
+  },
+  {
+    "cache_key": "516b2445a699b0275392eda835ba5a67e332ffa38eb0ce654685a706f48e71a5",
+    "queued_at": "2026-09-03T10:02:33Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task51/task51-publications/"
+  },
+  {
+    "cache_key": "65dc3a367d7cff7118bd47aa711c98e4afc800ba811959d011d70c8555565ace",
+    "queued_at": "2026-09-03T10:02:35Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task51/task51-publications/task51-articles-and-reports/"
   }
 ]

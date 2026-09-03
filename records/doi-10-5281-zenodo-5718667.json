@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:28Z"
+      "value": "2026-09-03T09:59:48Z"
     },
     {
       "key": "license_mapped",
@@ -50,7 +50,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -62,7 +62,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.5718667\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.5718668\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.5718667\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
     },
     {
       "key": "resource_kind",
@@ -70,27 +70,27 @@
     },
     {
       "key": "source_id",
-      "value": "5718668"
+      "value": "IEA-Wind-Task-32/2021-General-Meeting-Minutes"
     },
     {
       "key": "source_key",
-      "value": "6@10.5281/zenodo.5718668"
+      "value": "beaf5a3716fc814e8164d3766702bece1bbd41c3:1.0:35b7af17a367ed18"
     },
     {
       "key": "source_system",
-      "value": "zenodo"
+      "value": "github"
     },
     {
       "key": "source_systems",
-      "value": "[\"zenodo\"]"
+      "value": "[\"github\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/records/5718668"
+      "value": "https://github.com/IEA-Wind-Task-32/2021-General-Meeting-Minutes"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/records/5718668\"]"
+      "value": "[\"https://github.com/IEA-Wind-Task-32/2021-General-Meeting-Minutes\",\"https://zenodo.org/records/5718668\"]"
     },
     {
       "key": "withdrawn",
@@ -141,6 +141,12 @@
   ],
   "state": "active",
   "tags": [
+    {
+      "name": "lidar"
+    },
+    {
+      "name": "wind"
+    },
     {
       "name": "wind-energy"
     },

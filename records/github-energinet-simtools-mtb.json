@@ -1,0 +1,158 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:30Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Energinet-SimTools/MTB"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:30Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "NOASSERTION"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-18"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "Energinet-SimTools/MTB"
+    },
+    {
+      "key": "source_key",
+      "value": "3791f097338fc8af96bbe2d75d9bfbefe3af68d5:v1.1.2:ff5fed891489a49b"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Energinet-SimTools/MTB"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Energinet-SimTools/MTB\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-energinet-simtools-mtb",
+  "notes": "Energinet's Model Testbench. Automate gridcompliance studies in PSCAD and Powerfactory.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Energinet-SimTools/MTB"
+    },
+    {
+      "format": "release",
+      "name": "Release v1.1.2",
+      "url": "https://github.com/Energinet-SimTools/MTB/releases/tag/v1.1.2"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "dcc"
+    },
+    {
+      "name": "generator"
+    },
+    {
+      "name": "green-transition"
+    },
+    {
+      "name": "gridcompliance"
+    },
+    {
+      "name": "high-voltage"
+    },
+    {
+      "name": "hvdc"
+    },
+    {
+      "name": "power-electronics"
+    },
+    {
+      "name": "power2x"
+    },
+    {
+      "name": "powerfactory"
+    },
+    {
+      "name": "powergrid"
+    },
+    {
+      "name": "powersystem-simulation"
+    },
+    {
+      "name": "powersystems"
+    },
+    {
+      "name": "pscad"
+    },
+    {
+      "name": "ptx"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "rfg"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Energinet-SimTools/MTB",
+  "url": "https://github.com/Energinet-SimTools/MTB",
+  "version": "v1.1.2"
+}

@@ -1,0 +1,120 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:27Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|api-evangelist/skyspecs"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:27Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-01"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "api-evangelist/skyspecs"
+    },
+    {
+      "key": "source_key",
+      "value": "498c7868120339a1d2655afca981c4a30b37af26::acecb36964d1fd3b"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/api-evangelist/skyspecs"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/api-evangelist/skyspecs\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-api-evangelist-skyspecs",
+  "notes": "SkySpecs — independent third-party profile of a public API surface, by API Evangelist. SkySpecs is a renewable energy asset management company based in Ann Arbor, Michigan that combines autonomous drone inspections, condition-monitoring hardware, and its cloud-based Horizon software platform to help wind and solar operators manage the health and pe",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/api-evangelist/skyspecs"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "analytics"
+    },
+    {
+      "name": "apis-json"
+    },
+    {
+      "name": "asset-management"
+    },
+    {
+      "name": "company"
+    },
+    {
+      "name": "condition-monitoring"
+    },
+    {
+      "name": "drone-inspection"
+    },
+    {
+      "name": "energy"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "api-evangelist/skyspecs",
+  "url": "https://github.com/api-evangelist/skyspecs"
+}

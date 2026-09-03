@@ -1,0 +1,97 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T09:59:37Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEA-Task-43/Standards_Mapping"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T09:59:37Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-03-09"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEA-Task-43/Standards_Mapping"
+    },
+    {
+      "key": "source_key",
+      "value": "dda400dbcbde052b3c7f003087640a53541d1384::ef0e42e0d07180c4"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEA-Task-43/Standards_Mapping"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEA-Task-43/Standards_Mapping\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "github-iea-task-43-standards_mapping",
+  "notes": "Results of \"An Investigation of the Standards Landscape in the Wind Energy Sector\"",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEA-Task-43/Standards_Mapping"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA-Task-43/Standards_Mapping",
+  "url": "https://github.com/IEA-Task-43/Standards_Mapping"
+}

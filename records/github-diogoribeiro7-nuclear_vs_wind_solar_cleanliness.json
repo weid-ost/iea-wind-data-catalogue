@@ -1,0 +1,116 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:31Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|DiogoRibeiro7/nuclear_vs_wind_solar_cleanliness"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:31Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-27"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "DiogoRibeiro7/nuclear_vs_wind_solar_cleanliness"
+    },
+    {
+      "key": "source_key",
+      "value": "390886364061afb02a4d5344fea422aa2c58b494::ea86ef67096b2baa"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/DiogoRibeiro7/nuclear_vs_wind_solar_cleanliness"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/DiogoRibeiro7/nuclear_vs_wind_solar_cleanliness\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-diogoribeiro7-nuclear_vs_wind_solar_cleanliness",
+  "notes": "Analysis toolkit comparing nuclear, wind, and solar energy data with reproducible scripts and notebooks.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/DiogoRibeiro7/nuclear_vs_wind_solar_cleanliness"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "clean-energy"
+    },
+    {
+      "name": "energy-analytics"
+    },
+    {
+      "name": "nuclear-energy"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "DiogoRibeiro7/nuclear_vs_wind_solar_cleanliness",
+  "url": "https://github.com/DiogoRibeiro7/nuclear_vs_wind_solar_cleanliness"
+}

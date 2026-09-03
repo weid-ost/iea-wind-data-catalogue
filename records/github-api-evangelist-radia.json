@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|api-evangelist/radia"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:28Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-02"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "api-evangelist/radia"
+    },
+    {
+      "key": "source_key",
+      "value": "649f8238efa2c7d53fa5e8ac83823132d267441e::b8b319b93dabbedf"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/api-evangelist/radia"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/api-evangelist/radia\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-api-evangelist-radia",
+  "notes": "Radia — independent third-party profile of a public API surface, by API Evangelist. Radia is a dual-use aerospace company founded in 2016 by MIT-trained aerospace engineer Mark Lundstrom, headquartered in Boulder, Colorado with a second operating base in Italy led by Giuseppe Giordo.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/api-evangelist/radia"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "aerospace"
+    },
+    {
+      "name": "air-cargo"
+    },
+    {
+      "name": "apis-json"
+    },
+    {
+      "name": "aviation"
+    },
+    {
+      "name": "company"
+    },
+    {
+      "name": "defense"
+    },
+    {
+      "name": "logistics"
+    },
+    {
+      "name": "manufacturing"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "united-states"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "api-evangelist/radia",
+  "url": "https://github.com/api-evangelist/radia"
+}

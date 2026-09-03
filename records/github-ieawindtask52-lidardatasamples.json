@@ -1,0 +1,118 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T09:59:44Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEAWindTask52/LidarDataSamples"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T09:59:44Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-03-21"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindTask52/LidarDataSamples"
+    },
+    {
+      "key": "source_key",
+      "value": "b3982f65c2b3ae53b57b578dcab3b3bd8d4bcdb8::790dccf3008cf141"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindTask52/LidarDataSamples"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindTask52/LidarDataSamples\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "mit",
+  "name": "github-ieawindtask52-lidardatasamples",
+  "notes": "Links to lidar data samples with known provenance",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindTask52/LidarDataSamples"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "samples"
+    },
+    {
+      "name": "wind"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "IEAWindTask52/LidarDataSamples",
+  "url": "https://github.com/IEAWindTask52/LidarDataSamples"
+}

@@ -1,0 +1,111 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:18Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|api-evangelist/modular-wind-energy"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:18Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-31"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "api-evangelist/modular-wind-energy"
+    },
+    {
+      "key": "source_key",
+      "value": "4e00c6960451dcb92b715a9b84ade21401f2be88::13eb8ad59466af9e"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/api-evangelist/modular-wind-energy"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/api-evangelist/modular-wind-energy\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-api-evangelist-modular-wind-energy",
+  "notes": "Modular Wind Energy — independent third-party profile of a public API surface, by API Evangelist. Modular Wind Energy is a company surfaced as a portfolio company of battery-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/api-evangelist/modular-wind-energy"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "apis-json"
+    },
+    {
+      "name": "clean-energy"
+    },
+    {
+      "name": "company"
+    },
+    {
+      "name": "manufacturing"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-turbine-blades"
+    }
+  ],
+  "title": "api-evangelist/modular-wind-energy",
+  "url": "https://github.com/api-evangelist/modular-wind-energy"
+}

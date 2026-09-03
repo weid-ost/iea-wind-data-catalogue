@@ -1,0 +1,122 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:13Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|dofliu/windFarm-Go"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:13Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "NOASSERTION"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-20"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "dofliu/windFarm-Go"
+    },
+    {
+      "key": "source_key",
+      "value": "4264050d02661ad4977209858c9b60a0c995a0e0::f82b6ccb8383757a"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/dofliu/windFarm-Go"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/dofliu/windFarm-Go\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-dofliu-windfarm-go",
+  "notes": "離岸風場・運維傳說 — Offshore O&amp;M Legend: an educational, Uncharted-Waters-style game for offshore wind operations &amp; maintenance (React + TS + Vite).",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/dofliu/windFarm-Go"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "edtech"
+    },
+    {
+      "name": "education"
+    },
+    {
+      "name": "game"
+    },
+    {
+      "name": "offshore-wind"
+    },
+    {
+      "name": "react"
+    },
+    {
+      "name": "typescript"
+    },
+    {
+      "name": "vite"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "dofliu/windFarm-Go",
+  "url": "https://github.com/dofliu/windFarm-Go"
+}

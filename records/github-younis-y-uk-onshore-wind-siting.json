@@ -1,0 +1,128 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:08Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|younis-y/uk-onshore-wind-siting"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:08Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-09-02"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "younis-y/uk-onshore-wind-siting"
+    },
+    {
+      "key": "source_key",
+      "value": "c7381cb7106fac271920448dbdb815bae4a7b444::38cc642b5ae82873"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/younis-y/uk-onshore-wind-siting"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/younis-y/uk-onshore-wind-siting\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-younis-y-uk-onshore-wind-siting",
+  "notes": "Screening-level siting assessment for GB onshore wind: hard environmental constraints, then AHP-weighted multi-criteria suitability (CR = 0.008), then indicative LCOE and NPV for the surviving candidate zones.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/younis-y/uk-onshore-wind-siting"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "ahp"
+    },
+    {
+      "name": "geopandas"
+    },
+    {
+      "name": "gis"
+    },
+    {
+      "name": "lcoe"
+    },
+    {
+      "name": "multi-criteria-decision-analysis"
+    },
+    {
+      "name": "rasterio"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "site-selection"
+    },
+    {
+      "name": "spatial-analysis"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "younis-y/uk-onshore-wind-siting",
+  "url": "https://github.com/younis-y/uk-onshore-wind-siting"
+}

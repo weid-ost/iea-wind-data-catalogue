@@ -1,0 +1,111 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T09:59:34Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEA-Task-43/digital_wra_data_standard"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T09:59:34Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "BSD-3-Clause"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-16"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEA-Task-43/digital_wra_data_standard"
+    },
+    {
+      "key": "source_key",
+      "value": "14841ca8e8799149177e5591a8ee71ee649bb783:v1.4.0-2025.06:1841dd919bada8bd"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEA-Task-43/digital_wra_data_standard"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEA-Task-43/digital_wra_data_standard\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "bsd-3-clause",
+  "name": "github-iea-task-43-digital_wra_data_standard",
+  "notes": "IEA Task 43: pre-construction energy estimate data standard repository",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEA-Task-43/digital_wra_data_standard"
+    },
+    {
+      "format": "release",
+      "name": "Release v1.4.0-2025.06",
+      "url": "https://github.com/IEA-Task-43/digital_wra_data_standard/releases/tag/v1.4.0-2025.06"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA-Task-43/digital_wra_data_standard",
+  "url": "https://github.com/IEA-Task-43/digital_wra_data_standard",
+  "version": "v1.4.0-2025.06"
+}

@@ -1,0 +1,105 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T09:59:35Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEA-Task-43/glossary"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T09:59:35Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-09-08"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEA-Task-43/glossary"
+    },
+    {
+      "key": "source_key",
+      "value": "a2e75343da813ad8ee2b79313dc4f73f54684847::6a6642c9ca099f83"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEA-Task-43/glossary"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEA-Task-43/glossary\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "mit",
+  "name": "github-iea-task-43-glossary",
+  "notes": "Glossary of common information science terms used in wind energy: https://iea-task-43.gitbook.io/iea-task-43-glossary/",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEA-Task-43/glossary"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA-Task-43/glossary",
+  "url": "https://github.com/IEA-Task-43/glossary"
+}

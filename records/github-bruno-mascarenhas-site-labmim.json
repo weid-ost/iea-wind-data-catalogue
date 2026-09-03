@@ -1,0 +1,158 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:14Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Bruno-Mascarenhas/site-labmim"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:14Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-04-21"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "Bruno-Mascarenhas/site-labmim"
+    },
+    {
+      "key": "source_key",
+      "value": "3d3bfec49c9433fb8d6f6663574b4155acc4916e::53dee30627a17d19"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Bruno-Mascarenhas/site-labmim"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Bruno-Mascarenhas/site-labmim\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-bruno-mascarenhas-site-labmim",
+  "notes": "Static site generator for Brazilian meteorology labs (LabMiM/UFBA, LEAL/UFES): WRF forecast WebGIS, solar and wind potential maps, live station monitoring and all-sky sky-condition charts — plain HTML/CSS/JS, no backend.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Bruno-Mascarenhas/site-labmim"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "all-sky-imager"
+    },
+    {
+      "name": "atmospheric-science"
+    },
+    {
+      "name": "brazil"
+    },
+    {
+      "name": "chartjs"
+    },
+    {
+      "name": "data-visualization"
+    },
+    {
+      "name": "geojson"
+    },
+    {
+      "name": "geospatial"
+    },
+    {
+      "name": "javascript"
+    },
+    {
+      "name": "leaflet"
+    },
+    {
+      "name": "meteorology"
+    },
+    {
+      "name": "open-science"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "solar-irradiance"
+    },
+    {
+      "name": "static-site-generator"
+    },
+    {
+      "name": "ufba"
+    },
+    {
+      "name": "weather-forecast"
+    },
+    {
+      "name": "webgis"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wrf"
+    }
+  ],
+  "title": "Bruno-Mascarenhas/site-labmim",
+  "url": "https://github.com/Bruno-Mascarenhas/site-labmim"
+}

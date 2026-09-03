@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:20Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|api-evangelist/linearlabsinc"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:20Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-30"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "api-evangelist/linearlabsinc"
+    },
+    {
+      "key": "source_key",
+      "value": "c0fe261eea3daf7e8bd55d025a402c76bdb0e666::24cde6140faefb86"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/api-evangelist/linearlabsinc"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/api-evangelist/linearlabsinc\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-api-evangelist-linearlabsinc",
+  "notes": "Linear Labs — independent third-party profile of a public API surface, by API Evangelist. Linear Labs is an industrial motor technology company headquartered in Fort Worth, Texas, building high-torque motor systems for wind, nuclear, pumps, actuators, mining, and defense applications.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/api-evangelist/linearlabsinc"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "apis-json"
+    },
+    {
+      "name": "company"
+    },
+    {
+      "name": "defense"
+    },
+    {
+      "name": "electric-motors"
+    },
+    {
+      "name": "energy"
+    },
+    {
+      "name": "hardware"
+    },
+    {
+      "name": "industrial"
+    },
+    {
+      "name": "manufacturing"
+    },
+    {
+      "name": "mining"
+    },
+    {
+      "name": "nuclear"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "api-evangelist/linearlabsinc",
+  "url": "https://github.com/api-evangelist/linearlabsinc"
+}

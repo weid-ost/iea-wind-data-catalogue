@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Universidad de la República - Facultad de Ingeniería - Uruguay\",\"family\":\"Garchitorena\",\"given\":\"Francisco\",\"name\":\"Garchitorena, Francisco\"},{\"affiliation\":\"Universidad de la República\",\"family\":\"Correa\",\"given\":\"Santiago\",\"name\":\"Correa, Santiago\",\"orcid\":\"0000-0002-8520-3047\"}]"
+      "value": "[{\"affiliation\":\"Universidad de la República - Facultad de Ingeniería - Uruguay\",\"family\":\"Garchitorena\",\"given\":\"Francisco\",\"name\":\"Garchitorena, Francisco\"},{\"affiliation\":\"Universidad de la República de Uruguay\",\"family\":\"Correa\",\"given\":\"Santiago\",\"name\":\"Correa, Santiago\",\"orcid\":\"0000-0002-8520-3047\"}]"
     },
     {
       "key": "doi",
@@ -30,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:29Z"
+      "value": "2026-09-03T09:58:54Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -58,7 +58,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.13935821\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.13935821\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.13935822\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
     },
     {
       "key": "resource_kind",
@@ -66,15 +66,15 @@
     },
     {
       "key": "source_id",
-      "value": "13935822"
+      "value": "10.5281/zenodo.13935821"
     },
     {
       "key": "source_key",
-      "value": "6@10.5281/zenodo.13935822"
+      "value": "2026-09-02T23:28:56Z"
     },
     {
       "key": "source_system",
-      "value": "zenodo"
+      "value": "datacite"
     },
     {
       "key": "source_systems",

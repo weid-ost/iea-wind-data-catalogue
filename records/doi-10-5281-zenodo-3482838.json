@@ -1,0 +1,111 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3482838"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:00Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3482838"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:00Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-04-01"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3482839\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEA-Wind-Task-32/white-paper-Task32-overview"
+    },
+    {
+      "key": "source_key",
+      "value": "ab8c10143acd54c2b108175ddc535135e93d7ebf:1.0:35a415d7d66ebab5"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-5281-zenodo-3482838",
+  "notes": "An overview of all activities in IEA Wind Task 32",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview"
+    },
+    {
+      "format": "release",
+      "name": "Release 1.0",
+      "url": "https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview/releases/tag/1.0"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA-Wind-Task-32/white-paper-Task32-overview",
+  "url": "https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview",
+  "version": "1.0"
+}

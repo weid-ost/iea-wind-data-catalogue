@@ -1,0 +1,111 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T09:59:41Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEAWindTask52/Extract-lidar-ontology-concepts"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T09:59:41Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "CC0-1.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-07-03"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindTask52/Extract-lidar-ontology-concepts"
+    },
+    {
+      "key": "source_key",
+      "value": "461440ee80f7021ee4211a5257e08676120ce0c4:V_1.0:3532b402bf88ebd2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindTask52/Extract-lidar-ontology-concepts"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindTask52/Extract-lidar-ontology-concepts\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-zero",
+  "name": "github-ieawindtask52-extract-lidar-ontology-concepts",
+  "notes": "",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindTask52/Extract-lidar-ontology-concepts"
+    },
+    {
+      "format": "release",
+      "name": "Release V_1.0",
+      "url": "https://github.com/IEAWindTask52/Extract-lidar-ontology-concepts/releases/tag/V_1.0"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindTask52/Extract-lidar-ontology-concepts",
+  "url": "https://github.com/IEAWindTask52/Extract-lidar-ontology-concepts",
+  "version": "V_1.0"
+}

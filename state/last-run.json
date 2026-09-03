@@ -2,7 +2,7 @@
   "cache": {
     "hit_rate": 0.0,
     "hits": 0,
-    "misses": 10
+    "misses": 16
   },
   "dropped_dois": [
     {
@@ -96,17 +96,38 @@
       "reason": "did-not-resolve"
     }
   ],
-  "events_appended": 291,
-  "finished_at": "2026-09-01T23:28:59Z",
+  "events_appended": 43,
+  "finished_at": "2026-09-03T10:02:56Z",
   "harvest_version": "0.1.0",
-  "limit": 100,
+  "max_records": 50,
   "notices": [
     {
-      "detail": "The read operation timed out",
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/annual-report-2025/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
       "iea_task": "task-25",
       "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task25-63/"
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/annual-report-2025/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-25",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/publications/"
     },
     {
       "detail": "no cache entry and no model available",
@@ -137,11 +158,32 @@
       "url": "https://iea-wind.org/task41/t41-publications/danish-iea-task-41-eudp-funded-project/"
     },
     {
-      "detail": "The read operation timed out",
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task42/t42-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
       "iea_task": "task-42",
       "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task42/"
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task42/t42-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-42",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
     },
     {
       "detail": "no cache entry and no model available",
@@ -172,18 +214,32 @@
       "url": "https://iea-wind.org/task44/t44-publications/"
     },
     {
-      "detail": "The read operation timed out",
-      "iea_task": "task-45",
+      "detail": "no cache entry and no model available",
       "source": "ieawind",
-      "type": "page_unreachable",
+      "type": "extraction_queued",
       "url": "https://iea-wind.org/task45/t45-publications/"
     },
     {
-      "detail": "The read operation timed out",
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-45",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task45/t45-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task47/t47-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
       "iea_task": "task-47",
       "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task47/"
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task47/t47-publications/"
     },
     {
       "detail": "publication list appears to live in linked PDFs; PDF parsing is out of scope for v1 (fixture iea-11)",
@@ -228,36 +284,29 @@
       "detail": "no cache entry and no model available",
       "source": "ieawind",
       "type": "extraction_queued",
-      "url": "https://iea-wind.org/annual-report-2025/"
+      "url": "https://iea-wind.org/task51/task51-publications/"
     },
     {
       "confidence": 0.0,
       "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-49",
+      "iea_task": "task-51",
       "source": "ieawind",
       "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/annual-report-2025/"
+      "url": "https://iea-wind.org/task51/task51-publications/"
     },
     {
       "detail": "no cache entry and no model available",
       "source": "ieawind",
       "type": "extraction_queued",
-      "url": "https://iea-wind.org/publications/"
+      "url": "https://iea-wind.org/task51/task51-publications/task51-articles-and-reports/"
     },
     {
       "confidence": 0.0,
       "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-49",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/publications/"
-    },
-    {
-      "detail": "The read operation timed out",
       "iea_task": "task-51",
       "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task51/"
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task51/task51-publications/task51-articles-and-reports/"
     },
     {
       "detail": "no cache entry and no model available",
@@ -288,13 +337,6 @@
       "url": "https://iea-wind.org/task53/task-53-publications/"
     },
     {
-      "detail": "The read operation timed out",
-      "iea_task": "task-57",
-      "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task57/"
-    },
-    {
       "action": "review required — no merge was applied",
       "confidence": 1.0,
       "evidence": "title similarity 1.00 with the same first author (lozon) and year (2026); no shared DOI — REVIEW REQUIRED",
@@ -306,60 +348,58 @@
     }
   ],
   "ok": true,
-  "pending_extraction": 13,
+  "pending_extraction": 17,
   "records": {
     "pruned": 0,
-    "total": 291,
-    "unchanged": 22,
-    "written": 269
+    "total": 325,
+    "unchanged": 283,
+    "written": 42
   },
   "sources": {
     "crossref": {
-      "changed": 35,
+      "changed": 1,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 40,
-      "skipped_unchanged": 5
+      "skipped_unchanged": 39
     },
     "datacite": {
-      "changed": 95,
+      "changed": 3,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 100,
-      "skipped_unchanged": 5
+      "seen": 50,
+      "skipped_unchanged": 47
     },
     "github": {
-      "changed": 8,
-      "enabled": true,
-      "errors": [
-        "GitHub rate limit exhausted (resets at epoch 1788308451); set $GITHUB_TOKEN for 5,000 requests/hour"
-      ],
-      "implemented": true,
-      "reachable": false,
-      "seen": 13,
-      "skipped_unchanged": 5
-    },
-    "ieawind": {
-      "changed": 26,
+      "changed": 37,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 31,
-      "skipped_unchanged": 5
+      "seen": 50,
+      "skipped_unchanged": 13
+    },
+    "ieawind": {
+      "changed": 2,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 33,
+      "skipped_unchanged": 31
     },
     "osti": {
-      "changed": 32,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 37,
-      "skipped_unchanged": 5
+      "skipped_unchanged": 37
     },
     "wdh": {
       "changed": 0,
@@ -373,16 +413,16 @@
       "skipped_unchanged": 0
     },
     "zenodo": {
-      "changed": 95,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 100,
-      "skipped_unchanged": 5
+      "seen": 50,
+      "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-09-01T23:20:25Z",
+  "started_at": "2026-09-03T09:58:52Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",
@@ -413,10 +453,29 @@
       "identity_key": "10.34657/21591",
       "license_raw": "Creative Commons Attribution-NonDerivs 3.0 Germany",
       "name": "doi-10-34657-21591"
+    },
+    {
+      "identity_key": "10.5281/zenodo.3414196",
+      "license_raw": "NOASSERTION",
+      "name": "doi-10-5281-zenodo-3414196"
+    },
+    {
+      "identity_key": "github|AayushAswal27/wind-turbine-predictive-maintenance",
+      "license_raw": "NOASSERTION",
+      "name": "github-aayushaswal27-wind-turbine-predictive-maintenance"
+    },
+    {
+      "identity_key": "github|Energinet-SimTools/MTB",
+      "license_raw": "NOASSERTION",
+      "name": "github-energinet-simtools-mtb"
+    },
+    {
+      "identity_key": "github|dofliu/windFarm-Go",
+      "license_raw": "NOASSERTION",
+      "name": "github-dofliu-windfarm-go"
     }
   ],
   "unreachable_sources": [
-    "github",
     "wdh"
   ],
   "validation_violations": []

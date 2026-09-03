@@ -1,0 +1,114 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-03T10:00:17Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|api-evangelist/optoatmospherics"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-03T10:00:17Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-31"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "api-evangelist/optoatmospherics"
+    },
+    {
+      "key": "source_key",
+      "value": "5f47fd88c7f6b3638a9952e241934acbe31e2218::b802b671e82ba3e3"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/api-evangelist/optoatmospherics"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/api-evangelist/optoatmospherics\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-api-evangelist-optoatmospherics",
+  "notes": "OptoAtmospherics — independent third-party profile of a public API surface, by API Evangelist. OptoAtmospherics, Inc. is an Ann Arbor, Michigan company (founded 2009, spun out of Michigan Aerospace Corporation) that develops UV-based Light Detection and Ranging (LIDAR) systems for the wind energy industry.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/api-evangelist/optoatmospherics"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "apis-json"
+    },
+    {
+      "name": "atmospheric-sensing"
+    },
+    {
+      "name": "company"
+    },
+    {
+      "name": "hardware"
+    },
+    {
+      "name": "lidar"
+    },
+    {
+      "name": "michigan-aerospace"
+    },
+    {
+      "name": "remote-sensing"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "api-evangelist/optoatmospherics",
+  "url": "https://github.com/api-evangelist/optoatmospherics"
+}
