@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"name\":\"Creane, Shauna\"},{\"affiliation\":\"Danish Hydraulic Institute, Hørsholm (Denmark)\",\"name\":\"Santos, Pedro\"},{\"affiliation\":\"SINTEF Energy Research, Trondheim (Norway)\",\"name\":\"Kölle, Konstanze\"},{\"affiliation\":\"Ricerca sul Sistema Energetico - RSE S.p.A., Milan (Italy)\",\"name\":\"Airoldi, Davide\"},{\"affiliation\":\"Univ. of Bergen (Norway)\",\"name\":\"Bakhoday-Paskyabi, Mostafa\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Biglu, Michael\",\"orcid\":\"0009-0009-0012-3952\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"name\":\"Brown, William\"},{\"affiliation\":\"Univ. of Bergen (Norway)\",\"name\":\"Cheynet, Etienne\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"name\":\"Ecenarro Diaz-Tejeiro, Laura\"},{\"affiliation\":\"4subsea, Asker (Norway)\",\"name\":\"Frøyd, Lars\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Hagerman, George\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"Inst. for Advanced Engineering, Seoul (Korea, Republic of)\",\"name\":\"Kim, Yong-Yook\"},{\"affiliation\":\"Technical Univ. of Denmark, Roskilde (Denmark)\",\"name\":\"Larsén, Xiaoli Guo\"},{\"affiliation\":\"Univ. of Stavanger (Norway)\",\"name\":\"Li, Lin\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Lozon, Ericka\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"name\":\"Musialik, Mateusz\"},{\"affiliation\":\"Ricerca sul Sistema Energetico - RSE S.p.A., Milan (Italy)\",\"name\":\"Naldi, Roberto\"},{\"affiliation\":\"Inst. for Advanced Engineering, Seoul (Korea, Republic of)\",\"name\":\"Park, Miho\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Shields, Matt\",\"orcid\":\"0000-0002-0698-3816\"},{\"affiliation\":\"Danish Hydraulic Institute, Hørsholm (Denmark)\",\"name\":\"Tronfeldt Sorensen, Jacob\"},{\"affiliation\":\"Shimizu Corporation, Tokyo (Japan)\",\"name\":\"Tanemoto, Jun\"},{\"affiliation\":\"UlsanLab, Uslan (Korea, Republic of)\",\"name\":\"Yu, Young-Jae\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"name\":\"Zouaoui, Aimen\"}]"
+      "value": "[{\"name\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"family\":\"Creane\",\"given\":\"Shauna\",\"name\":\"Creane, Shauna\"},{\"name\":\"International Energy Agency Wind Technology Collaboration Programme (IEA Wind)\"},{\"name\":\"Sustainable Energy Authority of Ireland\"},{\"name\":\"Danish Energy Agency\"},{\"name\":\"Research Council of Norway\"},{\"name\":\"Research Fund for the Italian Electrical System\"},{\"name\":\"USDOE\"},{\"affiliation\":\"Danish Hydraulic Institute, Hørsholm (Denmark)\",\"family\":\"Santos\",\"given\":\"Pedro\",\"name\":\"Santos, Pedro\"},{\"affiliation\":\"SINTEF Energy Research, Trondheim (Norway)\",\"family\":\"Kölle\",\"given\":\"Konstanze\",\"name\":\"Kölle, Konstanze\"},{\"affiliation\":\"Ricerca sul Sistema Energetico - RSE S.p.A., Milan (Italy)\",\"family\":\"Airoldi\",\"given\":\"Davide\",\"name\":\"Airoldi, Davide\"},{\"affiliation\":\"Univ. of Bergen (Norway)\",\"family\":\"Bakhoday-Paskyabi\",\"given\":\"Mostafa\",\"name\":\"Bakhoday-Paskyabi, Mostafa\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Biglu\",\"given\":\"Michael\",\"name\":\"Biglu, Michael\",\"orcid\":\"0009-0009-0012-3952\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"family\":\"Brown\",\"given\":\"William\",\"name\":\"Brown, William\"},{\"affiliation\":\"Univ. of Bergen (Norway)\",\"family\":\"Cheynet\",\"given\":\"Etienne\",\"name\":\"Cheynet, Etienne\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"family\":\"Ecenarro Diaz-Tejeiro\",\"given\":\"Laura\",\"name\":\"Ecenarro Diaz-Tejeiro, Laura\"},{\"affiliation\":\"4subsea, Asker (Norway)\",\"family\":\"Frøyd\",\"given\":\"Lars\",\"name\":\"Frøyd, Lars\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Hagerman\",\"given\":\"George\",\"name\":\"Hagerman, George\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Hall\",\"given\":\"Matthew\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"Inst. for Advanced Engineering, Seoul (Korea, Republic of)\",\"family\":\"Kim\",\"given\":\"Yong-Yook\",\"name\":\"Kim, Yong-Yook\"},{\"affiliation\":\"Technical Univ. of Denmark, Roskilde (Denmark)\",\"family\":\"Larsén\",\"given\":\"Xiaoli\",\"name\":\"Larsén, Xiaoli\"},{\"affiliation\":\"Univ. of Stavanger (Norway)\",\"family\":\"Li\",\"given\":\"Lin\",\"name\":\"Li, Lin\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Lozon\",\"given\":\"Ericka\",\"name\":\"Lozon, Ericka\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"family\":\"Musialik\",\"given\":\"Mateusz\",\"name\":\"Musialik, Mateusz\"},{\"affiliation\":\"Ricerca sul Sistema Energetico - RSE S.p.A., Milan (Italy)\",\"family\":\"Naldi\",\"given\":\"Roberto\",\"name\":\"Naldi, Roberto\"},{\"affiliation\":\"Inst. for Advanced Engineering, Seoul (Korea, Republic of)\",\"family\":\"Park\",\"given\":\"Miho\",\"name\":\"Park, Miho\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Shields\",\"given\":\"Matt\",\"name\":\"Shields, Matt\",\"orcid\":\"0000-0002-0698-3816\"},{\"affiliation\":\"Danish Hydraulic Institute, Hørsholm (Denmark)\",\"family\":\"Tronfeldt Sorensen\",\"given\":\"Jacob\",\"name\":\"Tronfeldt Sorensen, Jacob\"},{\"affiliation\":\"Shimizu Corporation, Tokyo (Japan)\",\"family\":\"Tanemoto\",\"given\":\"Jun\",\"name\":\"Tanemoto, Jun\"},{\"affiliation\":\"UlsanLab, Uslan (Korea, Republic of)\",\"family\":\"Yu\",\"given\":\"Young-Jae\",\"name\":\"Yu, Young-Jae\"},{\"affiliation\":\"Gavin & Doherty Geosolutions, Dublin (Ireland)\",\"family\":\"Zouaoui\",\"given\":\"Aimen\",\"name\":\"Zouaoui, Aimen\"}]"
     },
     {
       "key": "doi",
@@ -30,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-08-31T23:03:05Z"
+      "value": "2026-09-01T23:28:59Z"
     },
     {
       "key": "lifecycle_state",
@@ -38,11 +38,15 @@
     },
     {
       "key": "provenance",
-      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
     },
     {
       "key": "published_date",
       "value": "2024-09-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Office of Scientific and Technical Information (OSTI)"
     },
     {
       "key": "related_identifiers",
@@ -58,27 +62,27 @@
     },
     {
       "key": "source_id",
-      "value": "2447928"
+      "value": "10.2172/2447928"
     },
     {
       "key": "source_key",
-      "value": "2026-08-21T15:07:11Z"
+      "value": "3a383a1fa7d41543"
     },
     {
       "key": "source_system",
-      "value": "osti"
+      "value": "ieawind"
     },
     {
       "key": "source_systems",
-      "value": "[\"osti\"]"
+      "value": "[\"crossref\",\"ieawind\",\"osti\"]"
     },
     {
       "key": "source_url",
-      "value": "https://www.osti.gov/biblio/2447928"
+      "value": "https://doi.org/10.2172/2447928"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://www.osti.gov/biblio/2447928\"]"
+      "value": "[\"https://doi.org/10.2172/2447928\",\"https://iea-wind.org/task49/\",\"https://www.osti.gov/biblio/2447928\"]"
     },
     {
       "key": "withdrawn",
@@ -126,5 +130,5 @@
     }
   ],
   "title": "IEA Wind TCP Task 49: Reference Site Conditions for Floating Wind Arrays",
-  "url": "https://www.osti.gov/biblio/2447928"
+  "url": "https://doi.org/10.2172/2447928"
 }

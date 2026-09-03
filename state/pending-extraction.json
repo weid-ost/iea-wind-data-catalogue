@@ -40,5 +40,41 @@
     "queued_at": "2026-08-31T23:03:27Z",
     "reason": "tier-3 page classification unavailable",
     "url": "https://iea-wind.org/task43/task-43-open-data/"
+  },
+  {
+    "cache_key": "7f306aed878d5a9f1a6383a11ed9c89671d28644bd882162009afe9270b80c74",
+    "queued_at": "2026-09-01T23:23:17Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task44/t44-publications/"
+  },
+  {
+    "cache_key": "65880f381ab05bf68db51783b19f7beeab2bde3456be4079b0a6180807a5490d",
+    "queued_at": "2026-09-01T23:24:52Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task48/t48-publications/"
+  },
+  {
+    "cache_key": "5b27701e90960525eeb474fd2aa690616c33efbd21b5197181a4125784a91bae",
+    "queued_at": "2026-09-01T23:24:54Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf"
+  },
+  {
+    "cache_key": "53a612805f0fc03062ff3e473fd68728fedac73f12344e8037c1f3a4c46117c1",
+    "queued_at": "2026-09-01T23:24:56Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/annual-report-2025/"
+  },
+  {
+    "cache_key": "c9f9e461162b5e6e27c0a927d38dd4c517e90971c282a71a8528c69c32807233",
+    "queued_at": "2026-09-01T23:25:34Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task52/t52-workplan-deliverables/"
+  },
+  {
+    "cache_key": "6ee4d5faba6403acc51a57e9a743ce741d37c11630c63b2aed5b509485dfc28e",
+    "queued_at": "2026-09-01T23:25:46Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/task53/task-53-publications/"
   }
 ]

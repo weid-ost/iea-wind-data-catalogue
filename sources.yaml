@@ -35,7 +35,7 @@ sources:
     enabled: true
     tier: 1
     precedence: 10
-    max_records: 5
+    max_records: 100
     source_key: "attributes.updated — reflects client metadata pushes"
     api: "https://api.datacite.org/dois"
     # Only `findable` DOIs become records (fixture dc-04). `registered` and
@@ -68,7 +68,7 @@ sources:
     enabled: true
     tier: 1
     precedence: 20
-    max_records: 5
+    max_records: 100
     source_key: "deposited.date-time — NOT indexed, which churns without content change"
     api: "https://api.crossref.org/works"
     # Land in the polite pool. The project User-Agent already carries the address.
@@ -111,7 +111,7 @@ sources:
     enabled: true
     tier: 1
     precedence: 30
-    max_records: 5
+    max_records: 100
     source_key: "revision (top-level int) + version DOI — field name VERIFIED live 2026-08-31"
     api: "https://zenodo.org/api/records"
     # zenodo.org/robots.txt carries `Disallow: /api`. That directive addresses
@@ -162,7 +162,7 @@ sources:
     enabled: true
     tier: 1
     precedence: 40
-    max_records: 5
+    max_records: 100
     source_key: "entry_date — OSTI's metadata entry/update stamp; else normalised payload hash"
     # Verified live 2026-08-31 (Track E): the v1 endpoint is public — no key, no
     # token — and answers 200 with a BARE JSON ARRAY of flat record objects,
@@ -183,7 +183,7 @@ sources:
     enabled: true
     tier: 2
     precedence: 50
-    max_records: 5
+    max_records: 100
     source_key: "dataset-updated field if provided, else normalised payload hash"
     base_url: "https://wdh.energy.gov"          # verified: 200
     legacy_hosts:                                # verified: 301 -> wdh.energy.gov
@@ -200,7 +200,7 @@ sources:
     enabled: true
     tier: 1
     precedence: 60
-    max_records: 5
+    max_records: 100
     source_key: "default-branch SHA + latest release tag + hash(description, topics, licence)"
     api: "https://api.github.com"
     # Authenticate with the Actions GITHUB_TOKEN: 5,000/hr vs 60/hr.
@@ -244,7 +244,7 @@ sources:
     enabled: true
     tier: 3
     precedence: 90
-    max_records: 5
+    max_records: 100
     source_key: "normalised main-content hash (= the LLM cache key input)"
     base_url: "https://iea-wind.org"
     # Verified live on 2026-08-31 from the iea-wind.org navigation. Note that

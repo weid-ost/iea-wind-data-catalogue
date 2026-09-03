@@ -1,7 +1,328 @@
 {
-  "merges": [],
+  "merges": [
+    {
+      "automatic": true,
+      "confidence": 0.95,
+      "evidence": "10.11583/dtu.31889632.v1 declares IsIdenticalTo 10.11583/dtu.31889632",
+      "kind": "related-identifier",
+      "primary": "10.11583/dtu.31889632",
+      "secondary": "10.11583/dtu.31889632.v1"
+    }
+  ],
   "note": "Fuzzy matches proposed by `python -m harvest dedupe`. Nothing here has been applied. Confirm one by writing the merge annotation (see docs/runbooks/correct-a-record.md); reject one by leaving it alone.",
   "proposals": [
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (deeney) and year (2023); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.10069849",
+      "secondary": "10.5281/zenodo.10069850"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (lutz) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.13225352",
+      "secondary": "10.5281/zenodo.13225353"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (castellano) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.13367814",
+      "secondary": "10.5281/zenodo.13367815"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (sheng) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.13367874",
+      "secondary": "10.5281/zenodo.13367875"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (quick) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.13367891",
+      "secondary": "10.5281/zenodo.13367892"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (quick) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.13367905",
+      "secondary": "10.5281/zenodo.13367906"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (quick) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.13376315",
+      "secondary": "10.5281/zenodo.13376316"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (garchitorena) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.13935821",
+      "secondary": "10.5281/zenodo.13935822"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (barber) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.15227103",
+      "secondary": "10.5281/zenodo.15227104"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.15290993",
+      "secondary": "10.5281/zenodo.15290994"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (hammer) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.15536581",
+      "secondary": "10.5281/zenodo.15536582"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (bodini) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.15623844",
+      "secondary": "10.5281/zenodo.15623845"
+    },
+    {
+      "automatic": false,
+      "confidence": 0.9552,
+      "evidence": "title similarity 0.96 with the same first author (bortolotti) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.15778456",
+      "secondary": "10.5281/zenodo.15784506"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (kainz) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.15880601",
+      "secondary": "10.5281/zenodo.15880602"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.16105259",
+      "secondary": "10.5281/zenodo.16105260"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (gottschall) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.16170991",
+      "secondary": "10.5281/zenodo.16170992"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (clark) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.16811307",
+      "secondary": "10.5281/zenodo.16811308"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (barber) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.16926007",
+      "secondary": "10.5281/zenodo.16926008"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.17541279",
+      "secondary": "10.5281/zenodo.17541280"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schicker) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.17605818",
+      "secondary": "10.5281/zenodo.17605819"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schicker) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.17605818",
+      "secondary": "10.5281/zenodo.17627028"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schicker) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.17605819",
+      "secondary": "10.5281/zenodo.17627028"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (grafe) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.17641605",
+      "secondary": "10.5281/zenodo.21964488"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (gottschall) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.17981013",
+      "secondary": "10.5281/zenodo.17981014"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (stokl) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.17981115",
+      "secondary": "10.5281/zenodo.17981116"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (barber) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.18935809",
+      "secondary": "10.5281/zenodo.18935810"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (rettenmeier) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.18967947",
+      "secondary": "10.5281/zenodo.21037963"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.18988933",
+      "secondary": "10.5281/zenodo.18988934"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.18988933",
+      "secondary": "10.5281/zenodo.19111787"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.18988934",
+      "secondary": "10.5281/zenodo.19111787"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19068332",
+      "secondary": "10.5281/zenodo.19068333"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (barber) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19081714",
+      "secondary": "10.5281/zenodo.19081715"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (black) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19195802",
+      "secondary": "10.5281/zenodo.19195803"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (rybchuk) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19686020",
+      "secondary": "10.5281/zenodo.19686021"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (dvorak) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19706900",
+      "secondary": "10.5281/zenodo.19706901"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (dvorak) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19707216",
+      "secondary": "10.5281/zenodo.19707217"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (dvorak) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19707442",
+      "secondary": "10.5281/zenodo.19707443"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (dvorak) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19707538",
+      "secondary": "10.5281/zenodo.19707539"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (yildirim) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.20211172",
+      "secondary": "10.5281/zenodo.20211173"
+    },
     {
       "automatic": false,
       "confidence": 1.0,
@@ -9,6 +330,86 @@
       "kind": "fuzzy-title",
       "primary": "10.5281/zenodo.20218022",
       "secondary": "10.5281/zenodo.20218023"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.20625930",
+      "secondary": "10.5281/zenodo.20625931"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (kwakye) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.20936216",
+      "secondary": "10.5281/zenodo.20936217"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (kamidelivand) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.21211759",
+      "secondary": "10.5281/zenodo.21211760"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (kamidelivand) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.21347445",
+      "secondary": "10.5281/zenodo.21347446"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (brandetti) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.21619014",
+      "secondary": "10.5281/zenodo.21619015"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (koller) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.21707789",
+      "secondary": "10.5281/zenodo.21707790"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.21728615",
+      "secondary": "10.5281/zenodo.21728616"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (kwakye) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.21873396",
+      "secondary": "10.5281/zenodo.21873397"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (clifton) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.22078127",
+      "secondary": "10.5281/zenodo.22078128"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (eisenhartrothe) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.5713971",
+      "secondary": "10.5281/zenodo.5714037"
     }
   ]
 }

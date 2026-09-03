@@ -89,7 +89,7 @@ const shown = rows.length;
     <noscript>
       <p class="secondary search__noscript">
         Filtering and pagination need JavaScript. The full catalogue —
-        all {shown} record{shown === 1 ? '' : 's'}, most recently updated first — is
+        all {shown} record{shown === 1 ? '' : 's'}, most recently published first — is
         listed below without it.
       </p>
     </noscript>
@@ -107,7 +107,7 @@ const shown = rows.length;
 
       <div class="search__results">
         <p class="search__count" role="status" aria-live="polite" data-search-count>
-          {shown} record{shown === 1 ? '' : 's'}, most recently updated first.
+          {shown} record{shown === 1 ? '' : 's'}, most recently published first.
         </p>
 
         <ul class="search__list" data-search-results>
@@ -307,7 +307,7 @@ const shown = rows.length;
             `${filtered.length} ${noun(filtered.length)} (filtered)${describe}${pageSuffix}. ` +
             `Total records available: ${total}.`;
         } else {
-          count.textContent = `${total} ${noun(total)}, most recently updated first${pageSuffix}.`;
+          count.textContent = `${total} ${noun(total)}, most recently published first${pageSuffix}.`;
         }
 
         updateCounts(sel, tokens);

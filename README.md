@@ -18,26 +18,8 @@ package, the event log, the materialiser, the CKAN-compat gate, the registers,
 Wind Data Hub), the Tier-3 extraction layer with its committed cache, the
 reconciliation layer, the Astro site with its design system and accessibility
 gate, and the CI workflows.
+**NEXT STEPS** TC to look at docs/harvest-anomalies.md and address the decisions there using `claude --resume bbdb6a80-6832-47fe-9c9e-ad91c2805634`
 
-The first coherent harvest ran on 2026-09-01 and is committed: **30 records**
-from six sources, five each, under the deliberate five-record cap. The seventh,
-Wind Data Hub, disabled itself behind its authentication wall and said so — the
-site shows that as a degradation notice rather than pretending. Seven
-iea-wind.org pages that needed a model to classify are sitting in
-`state/pending-extraction.json`, because the model was unavailable and the rule
-is that the harvest does not fail when that happens. Specifically: GitHub
-Models — the inference provider ADR-0030 chose because it needs no additional
-account — entered a scheduled retirement brownout and answers `410 Gone`. The
-run degraded exactly as [ADR-0031](docs/adrs/adr-0031-the-harvest-never-fails-on-llm-unavailability.md)
-requires, queued the pages, reported `ok: true`, and left Tier 1 untouched.
-Draining the queue needs a working OpenAI-compatible endpoint in
-`$HARVEST_LLM_ENDPOINT` — see
-[`docs/runbooks/drain-the-pending-extraction-queue.md`](docs/runbooks/drain-the-pending-extraction-queue.md).
-
-**There is a deliberate five-record cap per source.** `harvest.DEFAULT_LIMIT`
-is 5 and `sources.yaml` sets `max_records: 5` everywhere, so a stray run cannot
-hammer an upstream API or commit a catalogue nobody has looked at. Raise it
-consciously, per run: `make harvest LIMIT=50`.
 
 ## Quickstart
 

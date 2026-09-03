@@ -11,8 +11,8 @@ import { CATALOGUE_PAGE_SIZE } from '../lib/paginate';
 
 // The catalogue is the index: search box + filter sidebar + the whole record
 // set, server-rendered and paginated. `catalogue()` returns entries sorted by
-// their `last_seen` extra (the harvest's observation time) newest-first, which
-// is the "most recently updated" order the results default to.
+// their `published_date` extra newest-first, which is the "most recently
+// published" order the results default to.
 const entries = await catalogue();
 const sample = await usingFixtures();
 const fresh = freshness();

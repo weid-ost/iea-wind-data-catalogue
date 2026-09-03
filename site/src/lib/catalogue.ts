@@ -37,7 +37,7 @@ export interface EventLine {
 
 let cache: CatalogueEntry[] | undefined;
 
-/** Every record the site renders, sorted by last-seen date, newest first. */
+/** Every record the site renders, sorted by publication date, newest first. */
 export async function catalogue(): Promise<CatalogueEntry[]> {
   if (cache) return cache;
 
@@ -78,9 +78,19 @@ export async function byName(name: string): Promise<CatalogueEntry | undefined> 
   return (await catalogue()).find((entry) => entry.pkg.name === name);
 }
 
-function lastSeen(entry: CatalogueEntry): string {
-  return (entry.pkg.extras ?? []).find((e) => e.key === 'last_seen')?.value ?? '';
+function extraValue(entry: CatalogueEntry, key: string): string {
+  return (entry.pkg.extras ?? []).find((e) => e.key === key)?.value ?? '';
 }
 
+// Order by when the work was *published*, newest first — not by `last_seen`
+// (the harvest's observation time). A mass harvest stamps `last_seen` across the
+// whole corpus inside one run, so it barely varies and the "recency" sort
+// collapses to the title tiebreak, scattering genuinely recent work onto the
+// last page. `published_date` is present on every record and is what a reader
+// means by "most recent". ISO-ish dates sort lexicographically even at mixed
+// granularity (year-only sorts to the start of its year); `last_seen` then title
+// break ties deterministically. Undated records fall to the end.
 const byRecency = (a: CatalogueEntry, b: CatalogueEntry): number =>
-  lastSeen(b).localeCompare(lastSeen(a)) || a.pkg.title.localeCompare(b.pkg.title);
+  extraValue(b, 'published_date').localeCompare(extraValue(a, 'published_date')) ||
+  extraValue(b, 'last_seen').localeCompare(extraValue(a, 'last_seen')) ||
+  a.pkg.title.localeCompare(b.pkg.title);

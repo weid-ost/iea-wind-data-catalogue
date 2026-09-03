@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Robertson, Amy\"}]"
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"family\":\"Robertson\",\"given\":\"Amy\",\"name\":\"Robertson, Amy\"}]"
     },
     {
       "key": "doi",
@@ -30,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-08-31T23:03:04Z"
+      "value": "2026-09-01T23:20:26Z"
     },
     {
       "key": "lifecycle_state",
@@ -38,11 +38,15 @@
     },
     {
       "key": "provenance",
-      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
-      "value": "2026-08-13"
+      "value": "2021"
+    },
+    {
+      "key": "publisher",
+      "value": "Pacific Northwest National Laboratory"
     },
     {
       "key": "related_identifiers",
@@ -54,19 +58,19 @@
     },
     {
       "key": "source_id",
-      "value": "1574497"
+      "value": "10.21947/1574497"
     },
     {
       "key": "source_key",
-      "value": "2026-08-13T10:14:48Z"
+      "value": "2026-08-13T14:14:49Z"
     },
     {
       "key": "source_system",
-      "value": "osti"
+      "value": "datacite"
     },
     {
       "key": "source_systems",
-      "value": "[\"osti\"]"
+      "value": "[\"datacite\",\"osti\"]"
     },
     {
       "key": "source_url",
@@ -74,7 +78,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://www.osti.gov/biblio/1574497\",\"https://www.osti.gov/dataexplorer/biblio/dataset/1574497\"]"
+      "value": "[\"https://www.osti.gov/biblio/1574497\",\"https://www.osti.gov/dataexplorer/biblio/dataset/1574497\",\"https://www.osti.gov/servlets/purl/1574497\"]"
     },
     {
       "key": "withdrawn",
@@ -104,5 +108,5 @@
     }
   ],
   "title": "- Analysis of a suspended cylinder in a wave basin",
-  "url": "https://www.osti.gov/biblio/1574497"
+  "url": "https://www.osti.gov/servlets/purl/1574497"
 }

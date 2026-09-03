@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"name\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\"},{\"affiliation\":\"Technische Univ., Munich (Germany)\",\"family\":\"Kainz\",\"given\":\"Samuel\",\"name\":\"Kainz, Samuel\"},{\"name\":\"USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"family\":\"Quick\",\"given\":\"Julian\",\"name\":\"Quick, Julian\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"family\":\"Souza de Alencar\",\"given\":\"Mauricio\",\"name\":\"Souza de Alencar, Mauricio\"},{\"affiliation\":\"Delft Univ. of Technology (Netherlands)\",\"family\":\"Sanchez Perez Moreno\",\"given\":\"Sebastian\",\"name\":\"Sanchez Perez Moreno, Sebastian\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"family\":\"Dykes\",\"given\":\"Katherine\",\"name\":\"Dykes, Katherine\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Bay\",\"given\":\"Christopher\",\"name\":\"Bay, Christopher\",\"orcid\":\"0000-0002-2658-5559\"},{\"affiliation\":\"Delft Univ. of Technology (Netherlands)\",\"family\":\"Zaaijer\",\"given\":\"Michiel\",\"name\":\"Zaaijer, Michiel\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Bortolotti\",\"given\":\"Pietro\",\"name\":\"Bortolotti, Pietro\",\"orcid\":\"0000-0002-8515-9488\"}]"
     },
@@ -22,11 +26,11 @@
     },
     {
       "key": "iea_task",
-      "value": "[\"task-55\"]"
+      "value": "[\"task-37\",\"task-55\"]"
     },
     {
       "key": "last_seen",
-      "value": "2026-08-31T23:03:02Z"
+      "value": "2026-09-01T23:20:43Z"
     },
     {
       "key": "lifecycle_state",
@@ -34,7 +38,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
     },
     {
       "key": "published_date",
@@ -45,32 +49,40 @@
       "value": "Office of Scientific and Technical Information (OSTI)"
     },
     {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2333634\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/TP-5000-87923\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/TP-5000-87923"
+    },
+    {
       "key": "resource_kind",
       "value": "report"
     },
     {
       "key": "source_id",
-      "value": "10.2172/2333634"
+      "value": "2333634"
     },
     {
       "key": "source_key",
-      "value": "2026-08-21T18:52:31Z"
+      "value": "2026-08-21T14:52:25Z"
     },
     {
       "key": "source_system",
-      "value": "crossref"
+      "value": "osti"
     },
     {
       "key": "source_systems",
-      "value": "[\"crossref\"]"
+      "value": "[\"crossref\",\"osti\"]"
     },
     {
       "key": "source_url",
-      "value": "https://doi.org/10.2172/2333634"
+      "value": "https://www.osti.gov/biblio/2333634"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://doi.org/10.2172/2333634\",\"https://www.osti.gov/biblio/2333634\"]"
+      "value": "[\"https://www.osti.gov/biblio/2333634\",\"https://doi.org/10.2172/2333634\"]"
     },
     {
       "key": "withdrawn",
@@ -79,17 +91,47 @@
   ],
   "groups": [
     {
+      "name": "task-37"
+    },
+    {
       "name": "task-55"
     }
   ],
   "license_id": "notspecified",
   "name": "doi-10-2172-2333634",
-  "notes": "",
+  "notes": "This report describes the first version of the regular and irregular IEA-Wind 740-10MW Reference Offshore Wind Plants (v0.1). The two plants have been developed within the second work package of IEA Wind Task 37 on Wind Energy Systems Engineering: Integrated RD&amp;D. The plants aim at acting as reference for future research projects on wind energy, representing modern offshore wind plants. The designs are based on the Borssele III and IV offshore wind plant projects. The associated wind resource, allotted territory, and bathymetry measurements are used to define the site characteristics. 74 IEA 10-MW Reference Wind Turbines are arranged in two suggested layouts that are optimized for maximum annual energy production: one regular grid layout, one irregular layout. These reference wind plants have been described using the WindIO ontology and have been made available through an open-source repository on GitHub.",
   "owner_org": "nrel",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2333634"
+    }
+  ],
   "state": "active",
-  "tags": [],
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "740mw"
+    },
+    {
+      "name": "borssele"
+    },
+    {
+      "name": "iea-wind-task-37"
+    },
+    {
+      "name": "iea-wind-task-55"
+    },
+    {
+      "name": "reference-wind-plant"
+    },
+    {
+      "name": "refwind"
+    }
+  ],
   "title": "IEA Wind TCP Task 55: The IEA Wind 740-10-MW Reference Offshore Wind Plants",
   "url": "https://doi.org/10.2172/2333634"
 }
