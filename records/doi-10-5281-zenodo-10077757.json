@@ -1,0 +1,121 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"sowento GmbH\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"sowento GmbH\",\"name\":\"Raach, Steffen\",\"orcid\":\"0000-0002-1264-0422\"},{\"affiliation\":\"sowento GmbH\",\"name\":\"Lemmer, Frank\",\"orcid\":\"0000-0003-2395-9954\"}]"
+    },
+    {
+      "key": "container",
+      "value": "American Control Conference 2023"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.10077757"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.10077757"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-11-07"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10077757\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10077758"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.10077758"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/10077758"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/10077758\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-10077757",
+  "notes": "<p>Presentation at the American Control Conference 2023, San Diego, CA, USA.</p><p>Paper at <a href=\"https://doi.org/10.23919/ACC55779.2023.10156419\" rel=\"nofollow noopener\">https://doi.org/10.23919/ACC55779.2023.10156419 .</a></p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Schlipf2023a - A Tutorial on Lidar-Assisted Control for Floating Offshore Wind Turbines - Handout.pdf",
+      "url": "https://zenodo.org/records/10077758/files/Schlipf2023a%20-%20A%20Tutorial%20on%20Lidar-Assisted%20Control%20for%20Floating%20Offshore%20Wind%20Turbines%20-%20Handout.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "A Tutorial on Lidar-Assisted Control for Floating Offshore Wind Turbines",
+  "url": "https://zenodo.org/records/10077758"
+}

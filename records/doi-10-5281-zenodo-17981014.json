@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"},{\"family\":\"Sargin\",\"given\":\"Okan\",\"name\":\"Sargin, Okan\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.17981014"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.17981014"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-12-18"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.17981013\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.17981014"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-12-18T19:32:00Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.17981014"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.17981014\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-17981014",
+  "notes": "The Task 52 General Meeting was held on September 23-24, 2025 at Fraunhofer IEE, Joseph-Beuys-Straße 8, 34117 Kassel. The meeting focused on providing updates regarding the current status of wind lidartechnology, the progress of Task 52 working groups, and developments since the last General Meeting in2024. Task 52 was positioned as an evolution of Task 32, transitioning from a focus on “single-lidar technology”to “multiple lidars and their emerging use cases,” with a stronger emphasis on user involvement and theevidence required for developing standards. Another key focus was the preparation for a potential Phase 2(spanning four years), which is contingent on gathering sufficient evidence and securing stakeholder commitment by the end of Phase 1. The meeting included several presentations on the progress of the working groups and breakout sessions addressing challenges related to IEAWind Task 52.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Minutes from IEA Wind Task 52 General Meeting 2025",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.17981014"
+}

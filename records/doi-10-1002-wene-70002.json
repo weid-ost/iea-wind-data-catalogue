@@ -1,0 +1,115 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"LNEG - Laboratório Nacional de Energia e Geologia, Lisboa (Portugal)\",\"name\":\"Estanqueiro, Ana I.\",\"orcid\":\"0000-0002-0476-2526\"},{\"affiliation\":\"LNEG - Laboratório Nacional de Energia e Geologia, Lisboa (Portugal)\",\"name\":\"Algarvio, Hugo\"},{\"affiliation\":\"LNEG - Laboratório Nacional de Energia e Geologia, Lisboa (Portugal)\",\"name\":\"Couto, António\"},{\"affiliation\":\"Center for Processes, Renewable Energy and Energy Systems (PERSEE), Sophia Antipolis (France)\",\"name\":\"Michiorri, Andrea\"},{\"affiliation\":\"Center for Processes, Renewable Energy and Energy Systems (PERSEE), Sophia Antipolis (France)\",\"name\":\"Salas, Sergio\"},{\"affiliation\":\"Imperial College London (United Kingdom)\",\"name\":\"Pudjianto, Danny\"},{\"affiliation\":\"Svenska kraftnät, Sundbyberg (Sweden)\",\"name\":\"Hägglund, Per\"},{\"affiliation\":\"Fraunhofer Institute for Energy Economics and Energy System Technology IEE, Hessen (Germany)\",\"name\":\"Dobschinski, Jan\"},{\"affiliation\":\"Fraunhofer Institute for Energy Economics and Energy System Technology IEE, Hessen (Germany)\",\"name\":\"Bolgaryn, Roman\"},{\"affiliation\":\"Fraunhofer Institute for Energy Economics and Energy System Technology IEE, Hessen (Germany)\",\"name\":\"Kanefendt, Thomas\"},{\"affiliation\":\"Idaho National Laboratory (INL), Idaho Falls, ID (United States)\",\"name\":\"Gentle, Jake\"},{\"affiliation\":\"Idaho National Laboratory (INL), Idaho Falls, ID (United States)\",\"name\":\"Alam, S. M. Shafiul\"},{\"affiliation\":\"Idaho National Laboratory (INL), Idaho Falls, ID (United States)\",\"name\":\"Priest, Zachary M.\"},{\"affiliation\":\"Idaho National Laboratory (INL), Idaho Falls, ID (United States)\",\"name\":\"Abboud, Alexander W.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wiley Interdisciplinary Reviews. Energy and Environment"
+    },
+    {
+      "key": "doi",
+      "value": "10.1002/wene.70002"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:48Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1002/wene.70002"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:48Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-03-09"
+    },
+    {
+      "key": "publisher",
+      "value": "Wiley"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2575544\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"INL/JOU-25-83376\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/2575544\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "INL/JOU-25-83376"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "2575544"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-24T07:27:31Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2575544"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2575544\",\"https://www.osti.gov/pages/biblio/2575544\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1002-wene-70002",
+  "notes": "Most transmission system operators (TSOs) currently use seasonally steady-state models considering limiting weather conditions that serve as reference to compute the transmission capacity of overhead power lines. The use of dynamic line rating (DLR) models can avoid the construction of new lines, market splitting, false congestions, and the degradation of lines in a cost-effective way. DLR can also be used in the long run in grid extension and new power capacity planning. In the short run, it should be used to help operate power systems with congested lines. The operation of the power systems is planned to have the market trading into account; thus, it computes transactions hours ahead of real-time operation, using power flow forecasts affected by large errors. In the near future, within a “smart grid” environment, in real-time operation conditions, TSOs should be able to rapidly compute the capacity rating of overhead lines using DLR models and the most reliable weather information, forecasts, and line measurements, avoiding the current steady-state approach that, in many circumstances, assumes ampacities above the thermal limits of the lines. Here, this work presents a review of the line rating methodologies in several European countries and the United States. Furthermore, it presents the results of pilot projects and studies considering the application of DLR in overhead power lines, obtaining significant reductions in the congestion of internal networks and cross-border transmission lines.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2575544"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "29-energy-planning-policy-and-economy"
+    },
+    {
+      "name": "dynamic-line-rating"
+    }
+  ],
+  "title": "Dynamic Line Rating Models and Their Potential for a Cost‐Effective Transition to Carbon‐Neutral Power Systems",
+  "url": "https://www.osti.gov/biblio/2575544"
+}

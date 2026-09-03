@@ -1,0 +1,105 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:21:04Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEAWindSystems/WindPACT-RWT"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-37\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:21:04Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Apache-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2018-02-16"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindSystems/WindPACT-RWT"
+    },
+    {
+      "key": "source_key",
+      "value": "dfa5fb2b11030337cfebb422cdef66936ce1e686::c7f62e32ef9a4125"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindSystems/WindPACT-RWT"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindSystems/WindPACT-RWT\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-37"
+    }
+  ],
+  "license_id": "apache",
+  "name": "github-ieawindsystems-windpact-rwt",
+  "notes": "WindPACT Reference Turbines",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindSystems/WindPACT-RWT"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindSystems/WindPACT-RWT",
+  "url": "https://github.com/IEAWindSystems/WindPACT-RWT"
+}

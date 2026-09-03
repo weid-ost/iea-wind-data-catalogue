@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Ostschweizer Fachhochschule OST\",\"family\":\"Hammer\",\"given\":\"Florian\",\"name\":\"Hammer, Florian\"},{\"affiliation\":\"Ostschweizer Fachhochschule OST\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\"},{\"affiliation\":\"von Karman Institute for Fluid Dynamics\",\"family\":\"Venkatraman\",\"given\":\"Kartik\",\"name\":\"Venkatraman, Kartik\"},{\"affiliation\":\"Wobben Research and Development GmbH\",\"family\":\"Remmler\",\"given\":\"Sebastian\",\"name\":\"Remmler, Sebastian\"},{\"affiliation\":\"UTD Wind\",\"family\":\"Bernardoni\",\"given\":\"Federico\",\"name\":\"Bernardoni, Federico\"},{\"family\":\"Diez Sanchez\",\"given\":\"Gustavo Adolfo\",\"name\":\"Diez Sanchez, Gustavo Adolfo\"},{\"family\":\"Schubiger\",\"given\":\"Alain\",\"name\":\"Schubiger, Alain\"},{\"affiliation\":\"Von Karman Institute for Fluid Dynamics\",\"family\":\"Hågbo\",\"given\":\"Trond-Ola\",\"name\":\"Hågbo, Trond-Ola\"},{\"affiliation\":\"Von Karman Institute for Fluid Dynamics\",\"family\":\"Buckingham\",\"given\":\"Sophia\",\"name\":\"Buckingham, Sophia\"},{\"affiliation\":\"University of Stavanger\",\"family\":\"Giljarhus\",\"given\":\"Knut Erik\",\"name\":\"Giljarhus, Knut Erik\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15536582"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15536582"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-05-28"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15536581\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.15536582"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-05-28T15:37:55Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.15536582"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15536582\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15536582",
+  "notes": "The main goals of a wind resource assessment (WRA) at a given site are to estimate the wind speed and annual energy production (AEP) of the planned wind turbines. Several steps are involved in going from initial wind speed estimations of specific locations to a comprehensive full-scale AEP assessment. These steps differ significantly between the chosen tool and the individuals performing the task.\n\nIn this present work, the wide range of factors affecting AEP estimation accuracy and costs were investigated in a simulation challenge at the Perdigão site in Portugal. Results from nine different simulations from five different modellers are obtained via the \"IEA Wind Task 31 Comparison metrics simulation challenge for wind resource assessment in complex terrain\", consisting of a range of linear models, Reynolds-Averaged Navier-Stokes (RANS) computational fluid dynamics models and Large Eddy Simulations (LES). \n\nThe wind speed and AEP prediction errors for three different met mast positions across the site were investigated and further translated into relative \"skill\" and \"cost\" scores, using a method previously developed by the authors.It was found that the RANS simulations achieved very high prediction accuracy at relatively low costs for both wind speed and AEP estimations. The LES simulations achieved a high wind speed prediction accuracy for certain conditions, but at a much higher cost, which in turn reduced the number of possible simulations, leading to a decrease in AEP prediction accuracy in this case with the available resources. For some of the simulations, the forest canopy was explicitly modelled, which was shown to be beneficial for wind speed predictions at lower heights above the ground, but lead to under-estimations of wind speeds at higher heights, decreasing the AEP prediction accuracy. \n\nThe results highlight the many contributing factors that affect the wind speed and AEP prediction accuracy as well as the simulation costs for a given site.",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Comparison Metrics Microscale Simulation Challenge for Wind Resource Assessment",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15536582"
+}

@@ -1,0 +1,106 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"family\":\"Kwakye\",\"given\":\"Daniel\",\"name\":\"Kwakye, Daniel\",\"orcid\":\"0009-0001-9300-1365\"},{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.20936216"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.20936216"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-26"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.20936217\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.20936216"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-23T08:32:42Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.20936216"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.20936216\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-20936216",
+  "notes": "This poster presents a systematic review and architectural recommendations for accelerating the adoption of Knowledge Graphs (KGs) in the wind energy sector. Based on an analysis of 16 KG implementations in wind energy literature (2020–2025), the work identifies dominant application areas including fault diagnosis, condition monitoring, and digital twins and highlights key barriers to broader adoption, such as the lack of standardised ontologies, fragmented data silos, and limited semantic interoperability.\n\nThe poster introduces a proposed hybrid KG architecture that combines the query performance of Labelled Property Graphs (LPG/Neo4j) with the semantic interoperability of RDF/OWL through Ontology-Based Data Access (OBDA via Ontop) and RDF-star. It situates this architecture within a layered framework spanning physical data storage, semantic integration, and shared ontology layers — referencing standards such as SSN/SOSA, PROV-O, OWL-Time, and QUDT.\n\nRecommendations include the development of modular, community-driven ontologies through IEA Wind Task 43, stronger data governance frameworks, and dedicated conference tracks to address skill gaps in semantic technologies and FAIR data principles.\n\nPresented at the TORQUE 2026 conference. This work is part of the TWEED project, supported by Swiss SERI and co-funded by EU Horizon Europe.",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "knowledge-engineering"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "Accelerating Knowledge Graph Adoption in Wind Energy",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.20936216"
+}

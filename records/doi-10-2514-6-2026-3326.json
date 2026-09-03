@@ -1,0 +1,91 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Deutsches Zentrum fur Luft- und Raumfahrt DLR\",\"family\":\"Suryadi\",\"given\":\"Alexandre\",\"name\":\"Suryadi, Alexandre\"},{\"affiliation\":\"Deutsches Zentrum fur Luft- und Raumfahrt DLR\",\"family\":\"Herr\",\"given\":\"Michaela\",\"name\":\"Herr, Michaela\"},{\"affiliation\":\"Danmarks Tekniske Universitet\",\"family\":\"Fischer\",\"given\":\"Andreas\",\"name\":\"Fischer, Andreas\"},{\"affiliation\":\"Danmarks Tekniske Universitet\",\"family\":\"Lylloff\",\"given\":\"Oliver\",\"name\":\"Lylloff, Oliver\"},{\"affiliation\":\"Virginia Polytechnic Institute and State University\",\"family\":\"Intaratep\",\"given\":\"Nanyaporn\",\"name\":\"Intaratep, Nanyaporn\"}]"
+    },
+    {
+      "key": "container",
+      "value": "32nd AIAA/CEAS Aeroacoustics Conference (2026)"
+    },
+    {
+      "key": "doi",
+      "value": "10.2514/6.2026-3326"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2514/6.2026-3326"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-20"
+    },
+    {
+      "key": "publisher",
+      "value": "American Institute of Aeronautics and Astronautics"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2514/6.2026-3326"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-07-16T19:36:30Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2514/6.2026-3326"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2514/6.2026-3326\",\"https://arc.aiaa.org/doi/10.2514/6.2026-3326\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2514-6-2026-3326",
+  "notes": "",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Benchmarking Aeroacoustic Wind Tunnel Measurements in IEA Task 39",
+  "url": "https://doi.org/10.2514/6.2026-3326"
+}

@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Hannesdóttir\",\"given\":\"Ásta\",\"name\":\"Hannesdóttir, Ásta\",\"orcid\":\"0000-0003-3399-4526\"},{\"family\":\"Kelly\",\"given\":\"Mark\",\"name\":\"Kelly, Mark\",\"orcid\":\"0000-0003-2882-4450\"},{\"family\":\"Dimitrov\",\"given\":\"Nikolay\",\"name\":\"Dimitrov, Nikolay\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-4-325-2019"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-4-325-2019"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-06-03"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2018-12\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2018-12-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-12-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-12-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-4-325-2019"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-02-01T05:56:33Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-4-325-2019"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-4-325-2019\",\"https://wes.copernicus.org/articles/4/325/2019/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-4-325-2019",
+  "notes": "<p>Abstract. For measurements taken over a decade at the coastal Danish site Høvsøre, we find the variance associated with wind speed events from the offshore direction to exceed the prescribed extreme turbulence model (ETM) of the International Electrotechnical Commission (IEC) 61400-1 Edition 3 standard for wind turbine safety. The variance of wind velocity fluctuations manifested during these events is not due to extreme turbulence; rather, it is primarily caused by ramp-like increases in wind speed associated with larger-scale meteorological processes. The measurements are both linearly detrended and high-pass filtered in order to investigate how these events – and such commonly used filtering – affect the estimated 50-year return period of turbulence levels. High-pass filtering the measurements with a cutoff frequency of 1∕300 Hz reduces the 50-year turbulence levels below that of IEC ETM class C, whereas linear detrending does not. This is seen as the high-pass filtering more effectively removes variance associated with the ramp-like events. The impact of the observed events on a wind turbine are investigated using aeroelastic simulations that are driven by constrained turbulence simulation fields. Relevant wind turbine component loads from the simulations are compared with the extreme turbulence load case prescribed by the IEC standard. The loads from the event simulations are on average lower for all considered load components, with one exception: ramp-like events at wind speeds between 8 and 16 m s−1, at which the wind speed rises to exceed rated wind speed, can lead to high thrust on the rotor, resulting in extreme tower-base fore–aft loads that exceed the extreme turbulence load case of the IEC standard.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Extreme wind fluctuations: joint statistics, extreme turbulence, and impact on wind turbine loads",
+  "url": "https://doi.org/10.5194/wes-4-325-2019"
+}

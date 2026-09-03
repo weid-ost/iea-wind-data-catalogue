@@ -1,0 +1,104 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Sandia National Lab. (SNL-NM), Albuquerque, NM (United States)\",\"name\":\"Klise, Geoffrey Taylor\"},{\"affiliation\":\"Sandia National Lab. (SNL-NM), Albuquerque, NM (United States)\",\"name\":\"Johnson, Nicholas Aaron\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/2429988"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:48Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/2429988"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:48Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-08-17"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2429988\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"SAND-2024-03571R\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "SAND-2024-03571R"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "2429988"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T15:02:47Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2429988"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2429988\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-2429988",
+  "notes": "This report summarizes Fiscal Year 2023 accomplishments from Sandia National Laboratories Wind Energy Program. The portfolio consists of funding provided by the DOE EERE Wind Energy Technologies Office (WETO), Advanced Research Projects Agency-Energy (ARPA-E), Advanced Manufacturing Office (AMO), the Sandia Laboratory Directed Research and Development (LDRD) program, and private industry. These accomplishments were made possible through capabilities investments by WETO, internal Sandia investment, and partnerships between Sandia and other national laboratories, universities, and research institutions around the world. Sandia’s Wind Energy Program is primarily built around core capabilities as expressed in the strategic plan thrust areas, with 29 staff members in the Wind Energy Design and Experimentation department and the Wind Energy Computational Sciences department leading and supporting R&amp;D at the time of this report. Staff from other departments at Sandia support the program by leveraging Sandia’s unique capabilities in other disciplines.",
+  "owner_org": "sandia",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2429988"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    }
+  ],
+  "title": "Sandia Wind Energy Program - FY23 Accomplishments",
+  "url": "https://www.osti.gov/biblio/2429988"
+}

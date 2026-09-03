@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Davies, Ryan\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Lekkala, Malakonda Reddy\"},{\"affiliation\":\"University of Illinois at Urbana Champaign\",\"name\":\"Michaloliakos, Anargyros\"},{\"affiliation\":\"University of Michigan-Ann Arbor\",\"name\":\"Wong, Wei-Ying\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"University of Illinois at Urbana Champaign\",\"name\":\"Vakakis, Alexander\"},{\"affiliation\":\"University of Michigan-Ann Arbor\",\"name\":\"Zuo, Lei\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Fluids and Structures"
+    },
+    {
+      "key": "doi",
+      "value": "10.1016/j.jfluidstructs.2026.104651"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:44Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1016/j.jfluidstructs.2026.104651"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:44Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-16"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3412014\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-92241\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/3412014\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-92241"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3412014"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-15T05:00:19Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3412014"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3412014\",\"https://www.osti.gov/pages/biblio/3412014\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1016-j-jfluidstructs-2026-104651",
+  "notes": "Vortex-induced vibration (VIV) is a phenomenon known to decrease the fatigue life of dynamic power cables used in floating offshore wind systems through increased bending loading cycles. A variety of modeling solutions have been proposed to study this, but none enable fully-coupled simulations leveraging open-source tools. To address this, a time-domain VIV model has been successfully implemented into the open-source mooring dynamics model MoorDyn. The semi-empirical VIV model describes a lift force acting on segments of a flexible cylinder, making it well suited for implementation into MoorDyn. The new capability successfully predicted the frequencies and magnitudes of strain in both steady and oscillating flows when compared to the original validation results and matched peak spectral response when compared to experimental results, verifying successful implementation. MoorDyn with VIV was then leveraged to simulate a 15 MW floating turbine with a dynamic power cable in the Gulf of Maine using OpenFAST for six return periods of combined wind, wave, and current conditions. Increased curvature and tension fluctuations in higher flow speeds were observed when simulating VIV. Maximum tensions and curvatures also increased, with the 500 year conditions violating the curvature factor of safety of 2.0. These results highlight the importance of considering VIV when designing dynamic power cables for the Gulf of Maine, and indicate that cost effective mitigation strategies should be explored for the area. They also demonstrate the utility of this new modeling capability, which provides the first open-source tool for fully coupled time-domain floating offshore wind simulations with dynamic power cable VIV.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3412014"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "dynamic-power-cable"
+    },
+    {
+      "name": "floating-offshore-wind"
+    },
+    {
+      "name": "gulf-of-maine"
+    },
+    {
+      "name": "lumped-mass-model"
+    },
+    {
+      "name": "moordyn"
+    },
+    {
+      "name": "vortex-induced-vibration"
+    }
+  ],
+  "title": "Time-Domain Vortex Induced Vibration Modeling of Reference Dynamic Power Cable for the Gulf of Maine",
+  "url": "https://www.osti.gov/biblio/3412014"
+}

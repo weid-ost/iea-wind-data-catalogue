@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Netherlands Organisation for Applied Scientific Research\",\"family\":\"Schepers\",\"given\":\"J.G.\",\"name\":\"Schepers, J.G.\"},{\"affiliation\":\"Netherlands Organisation for Applied Scientific Research\",\"family\":\"Boorsma\",\"given\":\"K.\",\"name\":\"Boorsma, K.\"},{\"affiliation\":\"Fachhochscule OST\",\"family\":\"Deparday\",\"given\":\"J.\",\"name\":\"Deparday, J.\"},{\"affiliation\":\"Sandia National Laboratories California\",\"family\":\"Kelley\",\"given\":\"C\",\"name\":\"Kelley, C\"},{\"affiliation\":\"Ecole de Nantes\",\"family\":\"Braud\",\"given\":\"C.\",\"name\":\"Braud, C.\"},{\"affiliation\":\"Fachhochschule Kiel\",\"family\":\"Schaffarczyk,\",\"given\":\"A.P.\",\"name\":\"Schaffarczyk,, A.P.\"},{\"affiliation\":\"SGRE\",\"family\":\"Gomez Gonzales\",\"given\":\"A\",\"name\":\"Gomez Gonzales, A\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Madsen\",\"given\":\"H.A.\",\"name\":\"Madsen, H.A.\"},{\"affiliation\":\"Netherlands Organisation for Applied Scientific Research\",\"family\":\"Fritz\",\"given\":\"E.\",\"name\":\"Fritz, E.\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.19068332"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.19068332"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-07-01"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.19068333\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.19068332"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-03-17T14:02:05Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.19068332"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19068332\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-19068332",
+  "notes": "This report describes D1.7 from the IEA Wind Task 47 'TURBINIA'. It addresses various recommendations and guidelines for  doing aerodynamic field measurements on wind turbines",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Recommendations for performing aerodynamic field measurements on wind turbine rotors",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.19068332"
+}

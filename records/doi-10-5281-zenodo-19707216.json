@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Dvorak\",\"given\":\"Ota\",\"name\":\"Dvorak, Ota\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Bohan\",\"given\":\"Greg\",\"name\":\"Bohan, Greg\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.19707216"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.19707216"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-07"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.19707216\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.19707216"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-04-23T10:45:48Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.19707216"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19707216\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-19707216",
+  "notes": "This report was prepared as the second deliverable for Work Package (WP) 4 of the International\n\nEnergy Agency (IEA) Wind Task 49 - Integrated Design on Floating wind Arrays (IDeA), with lead\n\ncontributions coming from the IDEA-IRL project. IDEA-IRL is an SEAI-funded project which funds\n\nIreland’s contribution to the IEA Wind Task 49. Both projects are aligned in terms of scope, work\n\npackages and deliverables, and will collectively be referred to as IDEA in this report.\n\nThis report updates on consultation and research undertaken primarily over the course of 2023 to\n\ngain a deeper understanding of key markets for floating offshore wind (FLOW) globally, work done in\n\nrelation to marine spatial planning (MSP), and areas designated for the future development of\n\nfloating offshore wind internationally.\n\nThe markets assessed were the USA, France, Germany, Ireland, Italy, the Netherlands, Norway, South\n\nKorea, the UK, Portugal, Spain and Japan. Interviews were undertaken with representatives from\n\neach of these countries, with the end goal of speaking to a floating offshore wind expert and a marine\n\nspatial planning expert in each country.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "offshore-wind"
+    }
+  ],
+  "title": "The IEA Wind Task 49 MSP and Market Consultation Year 1 Report",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.19707216"
+}

@@ -1,0 +1,117 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Nergica, Canada\",\"name\":\"Godreau, Charles\"},{\"affiliation\":\"Nergica, Canada\",\"name\":\"Paquet, Yannick\"},{\"affiliation\":\"Meteotest (Switzerland)\",\"name\":\"Froidevaux, Paul\"},{\"affiliation\":\"Energiewerkstatt, Austria\",\"name\":\"Krenn, Andreas\"},{\"affiliation\":\"Vattenfall (Sweden)\",\"name\":\"Wickman, Helena\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15281424"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15281424"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-54\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-10-21"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15281424\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "15281425"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.15281425"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15281425"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15281425\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-54"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15281424",
+  "notes": "<p>In this document, the IEA Wind TCP Task19 defines guidelines for ice detection methods developed for wind energy applications.<br />The document provides background information on ice detection and its practical applications in wind energy and proposes a classification of available methods. The objective of this classification is to pave the way for the optimization, standardization and synchronization of ice detection as it is performed by different methods and systems:<br /> We discuss which ice detection methods appear to be best suited for different applications.<br /> We propose standardized metrics to evaluate the performance of ice detection systems.  We review how ice detection systems are currently certified.<br /> Lastly, we discuss the main risks and challenges associated with ice detection for wind energy applications.<br />The performance of ice detection methods is not evaluated herein and no specific ice detection system is mentioned.<br />This paper is intended as a step towards the standardization and synchronization of ice detection for wind energy. By presenting a framework for general considerations, the essence of this document is to be regularly discussed and updated by the various stakeholders of the cold climate community who endeavour to make the best use of all available ice detection methods for wind energy applications.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Task-19-Technical-Report-on-Ice-Detection-Guidelines-for-Wind-Energy-Applications.pdf",
+      "url": "https://zenodo.org/records/15281425/files/Task-19-Technical-Report-on-Ice-Detection-Guidelines-for-Wind-Energy-Applications.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Ice Detection Guidelines for Wind Energy Applications",
+  "url": "https://zenodo.org/records/15281425"
+}

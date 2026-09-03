@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"},{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Marykovskiy, Yuriy\",\"orcid\":\"0000-0002-6570-6966\"},{\"affiliation\":\"Teraom\",\"name\":\"Vallarampara, Jagadish\"},{\"affiliation\":\"Technical University of Munich\",\"name\":\"Hoghooghi, Hadi\",\"orcid\":\"0000-0002-4676-532X\"},{\"affiliation\":\"University of Strathclyde\",\"name\":\"Hoi-Yin Yung, Kobe\"},{\"affiliation\":\"Aalborg University\",\"name\":\"Khodam, Ali\"},{\"affiliation\":\"KUDO Software\",\"name\":\"Jonsson, Christian\",\"orcid\":\"0009-0001-8891-1276\"},{\"affiliation\":\"Suzlon\",\"name\":\"Rodriguez, Carlos\"},{\"affiliation\":\"Memorial University of Newfoundland\",\"name\":\"Wanasinghe, Thumeera R\"},{\"affiliation\":\"Memorial University of Newfoundland\",\"name\":\"Don, Mihiran Galagedarage\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.16961583"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.16961583"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.16961583\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "18938647"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.18938647"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/18938647"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/18938647\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-16961583",
+  "notes": "<p>List of digital twin use cases in wind energy, used in the IEA Wind / EAWE Joint Best Practices for Classifying and Valuing Digital Twins in Wind Energy</p>\n<p> </p>",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [
+    {
+      "format": "xlsx",
+      "name": "Task43_DT_usecases_20260310.xlsx",
+      "url": "https://zenodo.org/records/18938647/files/Task43_DT_usecases_20260310.xlsx"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digital-twin"
+    },
+    {
+      "name": "use-cases"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Digital twin use cases in wind energy",
+  "url": "https://zenodo.org/records/18938647"
+}

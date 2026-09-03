@@ -1,0 +1,124 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Danish Hydraulic Institute\",\"family\":\"Santos\",\"given\":\"Pedro\",\"name\":\"Santos, Pedro\",\"orcid\":\"0000-0003-2962-1364\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Creane\",\"given\":\"Shauna\",\"name\":\"Creane, Shauna\",\"orcid\":\"0000-0002-9637-1636\"},{\"affiliation\":\"SINTEF\",\"family\":\"Kölle\",\"given\":\"Konstanze\",\"name\":\"Kölle, Konstanze\",\"orcid\":\"0000-0002-6680-5392\"},{\"affiliation\":\"Ricerca sul Sistema Energetico (Italy)\",\"family\":\"Airoldi\",\"given\":\"Davide\",\"name\":\"Airoldi, Davide\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Biglu\",\"given\":\"Michael\",\"name\":\"Biglu, Michael\"},{\"affiliation\":\"University of Bergen\",\"family\":\"Cheynet\",\"given\":\"Etienne\",\"name\":\"Cheynet, Etienne\",\"orcid\":\"0000-0002-4854-1469\"},{\"affiliation\":\"4Subsea (Norway)\",\"family\":\"Frøyd\",\"given\":\"Lars\",\"name\":\"Frøyd, Lars\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Hall\",\"given\":\"Matthew\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"Institute for Advanced Engineering\",\"family\":\"Kim\",\"given\":\"Yong-Yook\",\"name\":\"Kim, Yong-Yook\"},{\"affiliation\":\"Ricerca sul Sistema Energetico (Italy)\",\"family\":\"Lanni\",\"given\":\"Francesco\",\"name\":\"Lanni, Francesco\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Larsén\",\"given\":\"Xiaoli Guo\",\"name\":\"Larsén, Xiaoli Guo\"},{\"affiliation\":\"University of Stavanger\",\"family\":\"Li\",\"given\":\"Lin\",\"name\":\"Li, Lin\",\"orcid\":\"0000-0001-9654-8318\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Lozon\",\"given\":\"Ericka\",\"name\":\"Lozon, Ericka\"},{\"affiliation\":\"University of Bergen\",\"family\":\"Paskyabi\",\"given\":\"Mostafa Bakhoday\",\"name\":\"Paskyabi, Mostafa Bakhoday\"},{\"affiliation\":\"Ashikaga University\",\"family\":\"Yamagushi\",\"given\":\"Atsushi\",\"name\":\"Yamagushi, Atsushi\"},{\"affiliation\":\"University of Ulsan\",\"family\":\"You\",\"given\":\"Young-Jae\",\"name\":\"You, Young-Jae\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.11073986"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:28:59Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.11073986"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:28:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-04-26"
+    },
+    {
+      "key": "publisher",
+      "value": "International Energy Agency"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10048048\",\"identifier_type\":\"DOI\",\"relation\":\"Requires\"},{\"identifier\":\"10.5281/zenodo.7057407\",\"identifier_type\":\"DOI\",\"relation\":\"Requires\"},{\"identifier\":\"10.5281/zenodo.8375735\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.11073986"
+    },
+    {
+      "key": "source_key",
+      "value": "3a383a1fa7d41543"
+    },
+    {
+      "key": "source_system",
+      "value": "ieawind"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"ieawind\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.11073986"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.11073986\",\"https://iea-wind.org/task49/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-11073986",
+  "notes": "IEA Task 49: Integrated Design of Floating Wind Arrays\n\nThis dataset contains atmospheric and oceanographic data of 11 locations around the globe of future floating offshore wind farms.Each dataset was used to perform a metocean analysis for preliminary design, published in the Work Package 1 Report of IEA Task 49.\n\n\n\n\n\n\n\n\n\n\n\n\n4COffshore ID\nName\nLatitude [deg]\nLongitude [deg]\nWater Depth [m] (GEBCO)\nDistance from shore [m]\nCountry\nDataset curated by\n\n\nIT95                \nHannibal            \n\n\n37.842\n\n\n\n12.0722\n\n\n\n -353\n\n\n\n 35\n\nItaly            \nRSE\n\n\nUS0W            \n Humboldt\n\n\n 40.928\n\n\n\n-124.708\n\n\n\n -707\n\n\n\n 43.8\n\nUSA\nNREL\n\n\nKR0R          \nUlsan           \n\n\n 35.449\n\n\n\n 129.949\n\n\n\n -188\n\n\n\n 32\n\nSouth Korea \nUOU\n\n\nIE34               \nMoneypoint One\n\n\n 52.519\n\n\n\n-10.276\n\n\n\n -102 \n\n\n\n 23.4\n\nIreland      \nGDG\n\n\nUK6L             \nHavbredey       \n\n\n58.862\n\n\n\n\n\n\n\n-5.54\n\n\n\n\n\n\n\n\n\n -91\n\n\n\n\n\n\n\n\n\n 41.6\n\n\n\nScotland    \nDHI\n\n\nJP06              \nFukushima\n\n\n37.311\n\n\n\n141.251\n\n\n\n -90\n\n\n\n 19.4\n\nJapan            \nAIT\n\n\nNO44         \nUtsira nord*\n\n\n59.276\n\n\n\n4.541\n\n\n\n -273\n\n\n\n 42.4\n\nNorway            \n4subsea / UiS,UiB*\n\n\nUSZ3                \nGulf of Maine\n\n\n43.25\n\n\n\n-69.5\n\n\n\n -148\n\n\n\n 138\n\nUSA                \nNREL\n\n\nKR88                 \nGeomundo**\n\n\n34.039\n\n\n\n126.901\n\n\n\n -70\n\n\n\n 47\n\nSouth Korea \nIAE**\n\n\nFR87                \nSud de la Bretagne II\n\n\n47.325\n\n\n\n-3.659\n\n\n\n -94\n\n\n\n 30.7\n\nFrance            \nUiB\n\n\nNO66\nSørlige Nordsjø II***\n\n\n 56.78 \n\n\n\n 4.92 \n\n\n\n -60\n\n\n\n 180\n\nNorway\n4subsea / UiS,UiB***\n\n\n\n\n* Suplementary dataset published at: https://doi.org/10.5281/zenodo.10048048\n\n** Dataset is confidential, for details of usage reach out to the contact person.\n\n*** Suplementary dataset published at: https://doi.org/10.5281/zenodo.7057407",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "description": "Resolved landing page",
+      "name": "DOI",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.11073986"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "metocean"
+    },
+    {
+      "name": "offshore-wind"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Reference site conditions for floating wind arrays: dataset of reference sites",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.11073986",
+  "version": "1.0.0"
+}

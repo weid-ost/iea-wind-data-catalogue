@@ -1,0 +1,91 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"DTU Wind Energy, Risø, Denmark\",\"family\":\"Giebel\",\"given\":\"G.\",\"name\":\"Giebel, G.\"},{\"affiliation\":\"PNNL, Richland (WA), USA\",\"family\":\"Shaw\",\"given\":\"W.\",\"name\":\"Shaw, W.\"},{\"affiliation\":\"DWD, Offenbach, Germany\",\"family\":\"Frank\",\"given\":\"H.\",\"name\":\"Frank, H.\"},{\"affiliation\":\"NREL, Golden (CO), USA\",\"family\":\"Draxl\",\"given\":\"C.\",\"name\":\"Draxl, C.\"},{\"affiliation\":\"UL Services Group LLC, Troy, USA\",\"family\":\"Zack\",\"given\":\"J.\",\"name\":\"Zack, J.\"},{\"affiliation\":\"DTU Management, Lyngby, Denmark\",\"family\":\"Pinson\",\"given\":\"P.\",\"name\":\"Pinson, P.\"},{\"affiliation\":\"WEPROG, Assens, Denmark\",\"family\":\"Möhrlen\",\"given\":\"C.\",\"name\":\"Möhrlen, C.\"},{\"affiliation\":\"MINES ParisTech, Sophia Antipolis, France\",\"family\":\"Kariniotakis\",\"given\":\"G.\",\"name\":\"Kariniotakis, G.\"},{\"affiliation\":\"INESC TEC, Porto, Portugal\",\"family\":\"Bessa\",\"given\":\"R.\",\"name\":\"Bessa, R.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "IET Conference Proceedings"
+    },
+    {
+      "key": "doi",
+      "value": "10.1049/icp.2021.2605"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1049/icp.2021.2605"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2022-03-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Institution of Engineering and Technology (IET)"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.1049/icp.2021.2605"
+    },
+    {
+      "key": "source_key",
+      "value": "2024-11-12T17:45:22Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.1049/icp.2021.2605"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.1049/icp.2021.2605\",\"http://digital-library.theiet.org/doi/10.1049/icp.2021.2605\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1049-icp-2021-2605",
+  "notes": "",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Games and other news from IEA wind task 36 forecasting for wind energy",
+  "url": "https://doi.org/10.1049/icp.2021.2605"
+}

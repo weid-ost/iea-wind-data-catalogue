@@ -1,0 +1,118 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Ramboll\",\"name\":\"Borisade, Friedemann\"},{\"affiliation\":\"Ramboll\",\"name\":\"Karch, Michael\"},{\"affiliation\":\"Ramboll\",\"name\":\"Wendt, Fabian\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.21222817"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:33Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.21222817"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-56\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:33Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-06"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21222817\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "21222818"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.21222818"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/21222818"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/21222818\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-56"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-21222817",
+  "notes": "<p>Archive containing the statics, modal and timeseries results (*.csv or *.txt) of package WP2.2 from the OC7 project Phase II.</p>\n<p>Load cases included: LC2.1-2.5, LC3.1-3.6, LC4.1, LC5.1-5.2, LC6.1-6.3, LC7.1-7.3</p>\n<p>The load cases are defined in the definition document [<a href=\"https://doi.org/10.5281/zenodo.21220820\" rel=\"nofollow noopener\">https://doi.org/10.5281/zenodo.21220820</a>]:<br />.\\01_DEF\\OC7_WP2p2_Description_REV12.xlsx</p>\n<table>\n<tbody>\n<tr>\n<td>LC2.1</td>\n<td>Static Hub Load Check</td>\n</tr>\n<tr>\n<td>LC2.2</td>\n<td>Static Gravity Load Check</td>\n</tr>\n<tr>\n<td>LC2.3</td>\n<td>Static Freely Floating Check - linear stiffness in x, y and around z</td>\n</tr>\n<tr>\n<td>LC2.4</td>\n<td>Static Freely Floating Check - with mooring</td>\n</tr>\n<tr>\n<td>LC2.5</td>\n<td>Static Current Drag Load - with mooring</td>\n</tr>\n<tr>\n<td>LC3.1</td>\n<td>Natural Frequency Analysis - unconstrained - Floater only</td>\n</tr>\n<tr>\n<td>LC3.2</td>\n<td>Natural Frequency Analysis - unconstrained - Floater and WTG</td>\n</tr>\n<tr>\n<td>LC3.3a</td>\n<td>Natural Frequency Analysis - floating in water - with mooring - rigid hull</td>\n</tr>\n<tr>\n<td>LC3.3b</td>\n<td>Natural Frequency Analysis - floating in water - with mooring - flexible hull</td>\n</tr>\n<tr>\n<td>LC3.4</td>\n<td>Free Decay Surge</td>\n</tr>\n<tr>\n<td>LC3.5</td>\n<td>Free Decay Heave</td>\n</tr>\n<tr>\n<td>LC3.6</td>\n<td>Free Decay Pitch</td>\n</tr>\n<tr>\n<td>LC4.1</td>\n<td>Time Varying RNA Load</td>\n</tr>\n<tr>\n<td>LC5.1</td>\n<td>Regular Waves - Constrained </td>\n</tr>\n<tr>\n<td>LC5.2</td>\n<td>Regular Waves - Freely Floating</td>\n</tr>\n<tr>\n<td>LC6.1</td>\n<td>Irregular Waves - Waves Only - Constrained</td>\n</tr>\n<tr>\n<td>LC6.2</td>\n<td>Irregular Waves - Waves Only - Freely Floating</td>\n</tr>\n<tr>\n<td>LC6.3</td>\n<td>Irregular Waves - Waves + RNA Load - Freely Floating</td>\n</tr>\n<tr>\n<td>LC7.1</td>\n<td>Irregular Waves - Waves Only - Constrained</td>\n</tr>\n<tr>\n<td>LC7.2</td>\n<td>Irregular Waves - Waves Only - Freely Floating</td>\n</tr>\n<tr>\n<td>LC7.3</td>\n<td>Irregular Waves - Waves + RNA Load - Freely Floating</td>\n</tr>\n</tbody>\n</table>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "oc7-wp22_results.zip",
+      "url": "https://zenodo.org/records/21222818/files/oc7-wp22_results.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "OC7 Project Phase II: Results (Statics, Modal, Timeseries) for WP2.2 on Global-to-Local Load Transfer Approaches in Floating Structures",
+  "url": "https://zenodo.org/records/21222818",
+  "version": "V1.0"
+}

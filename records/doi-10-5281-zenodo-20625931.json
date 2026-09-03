@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"sowento\",\"family\":\"van den Broek\",\"given\":\"Maarten\",\"name\":\"van den Broek, Maarten\",\"orcid\":\"0000-0001-7396-4001\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Weich\",\"given\":\"Simon\",\"name\":\"Weich, Simon\",\"orcid\":\"0009-0009-5300-6151\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Preuschoff\",\"given\":\"Julius\",\"name\":\"Preuschoff, Julius\",\"orcid\":\"0009-0006-8537-3931\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.20625931"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.20625931"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.20625930\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.20625931"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-27T02:18:04Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.20625931"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.20625931\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-20625931",
+  "notes": "Presentation at the IEA Wind Task 52 Working Group on Lidar-Assisted Control\n\nFollowing the success of the Lidar-Assisted-Control (LAC) Summer Games in 2024, the 2025 edition [1] builds on the lessons learned that were presented at the Wind Energy Science Conference in June 2025 [2]. This presentations summarizes the results and lessons learned from the Lidar-Assisted Control Summer Games 2025 as well as the updates on LAC Open Source Tools.\n\n[1] Schlipf, D., Guo, F., van den Broek, M., &amp; Weich, S. (2025). IEA Wind Task 52 LAC Summer Games 2025. Zenodo. https://doi.org/10.5281/zenodo.17541280.\n\n[2] Schlipf, D., Weich, S., Raach, S., &amp; Guo, F. (2025). Evaluation and Lessons Learned from the Lidar-Assisted Control Summer Games 2024. Zenodo. https://doi.org/10.5281/zenodo.16105260.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Evaluation of the Lidar-Assisted Control Summer Games 2025 and Update on LAC Open Source Tools",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.20625931"
+}

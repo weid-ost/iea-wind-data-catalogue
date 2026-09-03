@@ -1,0 +1,87 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Hall\",\"given\":\"Matthew\",\"name\":\"Hall, Matthew\"},{\"family\":\"Lozon\",\"given\":\"Ericka\",\"name\":\"Lozon, Ericka\"},{\"family\":\"Mcauliffe\",\"given\":\"Fiona Devoy\",\"name\":\"Mcauliffe, Fiona Devoy\"},{\"family\":\"Bessone\",\"given\":\"Matteo Baudino\",\"name\":\"Bessone, Matteo Baudino\"},{\"family\":\"Bowie\",\"given\":\"Malcolm\",\"name\":\"Bowie, Malcolm\"},{\"family\":\"Bozonnet\",\"given\":\"Pauline\",\"name\":\"Bozonnet, Pauline\"},{\"family\":\"Michel\",\"given\":\"France\",\"name\":\"Michel, France\"},{\"name\":\"Castagné Ifpen\"},{\"family\":\"Feng\",\"given\":\"France Ju\",\"name\":\"Feng, France Ju\"},{\"family\":\"Housner\",\"given\":\"Stein\",\"name\":\"Housner, Stein\"},{\"family\":\"Janocha\",\"given\":\"Marek Jan\",\"name\":\"Janocha, Marek Jan\"},{\"name\":\"Zhiyu Jiang\"},{\"family\":\"Kim\",\"given\":\"Yong Yook\",\"name\":\"Kim, Yong Yook\"},{\"name\":\"Donghee Ko\"},{\"family\":\"Sintef\",\"given\":\"Konstanze Kölle\",\"name\":\"Sintef, Konstanze Kölle\"},{\"name\":\"Norway Chern\"},{\"name\":\"Fong Lee\"},{\"name\":\"Malakonda Reddy Lekkala\"},{\"name\":\"Guodong Liang\"},{\"family\":\"Mahfouz\",\"given\":\"Mohammad Youssef\",\"name\":\"Mahfouz, Mohammad Youssef\"},{\"name\":\"Madhan Mohan\"},{\"family\":\"Muk\",\"given\":\"Chen\",\"name\":\"Muk, Chen\"},{\"name\":\"Ong\"},{\"family\":\"Prieur\",\"given\":\"Julien\",\"name\":\"Prieur, Julien\"},{\"family\":\"Schnepf\",\"given\":\"Anja\",\"name\":\"Schnepf, Anja\"},{\"family\":\"Thurston-Keller\",\"given\":\"Jean\",\"name\":\"Thurston-Keller, Jean\"},{\"family\":\"Wright\",\"given\":\"Chris\",\"name\":\"Wright, Chris\"},{\"name\":\"Doherty Geosolutions\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.13140/rg.2.2.25536.55041"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.13140/rg.2.2.25536.55041"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024"
+    },
+    {
+      "key": "publisher",
+      "value": "Unpublished"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.13140/rg.2.2.25536.55041"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-10-22T00:12:09Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.researchgate.net/doi/10.13140/RG.2.2.25536.55041"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.researchgate.net/doi/10.13140/RG.2.2.25536.55041\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-13140-rg-2-2-25536-55041",
+  "notes": "",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP Task 49 The IEA Wind Task 49 Reference Floating Wind Array Design Basis Prepared for the IEA Wind TCP",
+  "url": "https://www.researchgate.net/doi/10.13140/RG.2.2.25536.55041"
+}

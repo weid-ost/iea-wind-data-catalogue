@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Mittelmeier\",\"given\":\"Niko\",\"name\":\"Mittelmeier, Niko\",\"orcid\":\"0000-0003-1190-5895\"},{\"family\":\"Kühn\",\"given\":\"Martin\",\"name\":\"Kühn, Martin\",\"orcid\":\"0000-0003-0506-9288\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-3-395-2018"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-3-395-2018"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2018-06-14"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2018-26\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2018-26-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-26-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-26-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-26-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-3-395-2018"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-02-07T10:38:54Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-3-395-2018"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-3-395-2018\",\"https://wes.copernicus.org/articles/3/395/2018/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-3-395-2018",
+  "notes": "<p>Abstract. Upwind horizontal axis wind turbines need to be aligned with the main wind direction to maximize energy yield. Attempts have been made to improve the yaw alignment with advanced measurement equipment but most of these techniques introduce additional costs and rely on alignment tolerances with the rotor axis or the true north. Turbines that are well aligned after commissioning may suffer an alignment degradation during their operational lifetime. Such changes need to be detected as soon as possible to minimize power losses. The objective of this paper is to propose a three-step methodology to improve turbine alignment and detect changes during operational lifetime with standard nacelle metrology (met) mast instruments (here: two cup anemometer and one wind vane). In step one, a reference turbine and an external undisturbed reference wind signal, e.g., met mast or lidar are used to determine flow corrections for the nacelle wind direction instruments to obtain a turbine alignment with optimal power production. Secondly a nacelle wind speed correction enables the application of the previous step without additional external measurement equipment. Step three is a monitoring application and allows the detection of alignment changes on the wind direction measurement device by means of a flow equilibrium between the two anemometers behind the rotor. The three steps are demonstrated at two 2 MW turbines together with a ground-based lidar. A first-order multilinear regression model gives sufficient correction of the flow distortion behind the rotor for our purposes and two wind vane alignment changes are detected with an accuracy of ±1.4∘ within 3 days of operation after the change is introduced. We show that standard turbine equipment is able to align a turbine with sufficient accuracy and changes to its alignment can be detected in a reasonably short time, which helps to minimize power losses.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Determination of optimal wind turbine alignment into the wind and detection of alignment changes with SCADA data",
+  "url": "https://doi.org/10.5194/wes-3-395-2018"
+}

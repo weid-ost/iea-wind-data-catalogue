@@ -1,0 +1,125 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Fraunhofer IWES\",\"name\":\"Gottschall, Julia\",\"orcid\":\"0000-0001-7129-9247\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5158570"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5158570"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-07-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5158570\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "5163487"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.5163487"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5163487"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5163487\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5158570",
+  "notes": "<p>IEA Wind Task 32 on wind lidar for wind energy applications is planning a new phase, starting in 2022. This PDF contains an overview of the concept for the phase. It was presented at a Task 32 workshop on 4th August 2021.</p>\n\n<p>The participants in the workshop were split into breakout rooms where they added feedback and new ideas to the slides for each of the four themes. This input is included in slides 21 to 35.</p>\n\n<p>A previous workshop on the next phase of Task 32 took place on 15th July 2021. Results from the first workshop are available <a href=\"https://doi.org/10.5281/zenodo.5158571\" rel=\"nofollow noopener\">here</a>.</p>",
+  "owner_org": "fraunhofer-iwes",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "2021 08 04 IEA Wind Task 32 - Concept for a follow-up phase COMPLETED.pptx.pdf",
+      "url": "https://zenodo.org/records/5163487/files/2021%2008%2004%20IEA%20Wind%20Task%2032%20-%20Concept%20for%20a%20follow-up%20phase%20COMPLETED.pptx.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "Concept for the 2022-2025 operating phase of IEA Wind Task 32",
+  "url": "https://zenodo.org/records/5163487",
+  "version": "2021 August 04"
+}

@@ -1,0 +1,113 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"},{\"family\":\"Bray\",\"given\":\"Andrew\",\"name\":\"Bray, Andrew\"},{\"family\":\"Enevoldsen\",\"given\":\"Peter\",\"name\":\"Enevoldsen, Peter\"},{\"family\":\"Fields\",\"given\":\"Jason\",\"name\":\"Fields, Jason\"},{\"family\":\"Sempreviva\",\"given\":\"Anna Maria\",\"name\":\"Sempreviva, Anna Maria\",\"orcid\":\"0000-0003-4124-9040\"},{\"family\":\"Williams\",\"given\":\"Lindy\",\"name\":\"Williams, Lindy\"},{\"family\":\"Quick\",\"given\":\"Julian\",\"name\":\"Quick, Julian\",\"orcid\":\"0000-0002-1460-9808\"},{\"family\":\"Purdue\",\"given\":\"Mike\",\"name\":\"Purdue, Mike\"},{\"family\":\"Totaro\",\"given\":\"Philip\",\"name\":\"Totaro, Philip\"},{\"family\":\"Ding\",\"given\":\"Yu\",\"name\":\"Ding, Yu\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-8-947-2023"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:28:59Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-8-947-2023"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:28:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-06-07"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-8-947-2023"
+    },
+    {
+      "key": "source_key",
+      "value": "56a50f704dc5d65b"
+    },
+    {
+      "key": "source_system",
+      "value": "ieawind"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"ieawind\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-8-947-2023"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-8-947-2023\",\"https://iea-wind.org/task43/t43-publications/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-8-947-2023",
+  "notes": "Abstract. The availability of large amounts of data is starting to impact how the\nwind energy community works. From turbine design to plant layout,\nconstruction, commissioning, and maintenance and operations, new\nprocesses and business models are springing up. This is the process of\ndigitalisation, and it promises improved efficiency and greater insight,\nultimately leading to increased energy capture and significant savings\nfor wind plant operators, thus reducing the levelised cost of energy.\nDigitalisation is also impacting research, where it is both easing and\nspeeding up collaboration, as well as making research results more\naccessible. This is the basis for innovations that can be taken up by\nend users. But digitalisation faces barriers. This paper uses a\nliterature survey and the results from an expert elicitation to identify\nthree common industry-wide barriers to the digitalisation of wind\nenergy. Comparison with other networked industries and past and ongoing\ninitiatives to foster digitalisation show that these barriers can only\nbe overcome by wide-reaching strategic efforts, and so we see these as\n“grand challenges” in the digitalisation of wind energy. They are,\nfirst, creating FAIR data frameworks; secondly, connecting people and data to foster innovation; and finally, enabling collaboration and competition between organisations. The grand challenges in the digitalisation of wind energy thus include a mix of technical, cultural, and business aspects that\nwill need collaboration between businesses, academia, and government to\nsolve. Working to mitigate them is the beginning of a dynamic process\nthat will position wind energy as an essential part of a global clean\nenergy future.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "description": "Resolved landing page",
+      "name": "DOI",
+      "url": "https://doi.org/10.5194/wes-8-947-2023"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Grand challenges in the digitalisation of wind energy",
+  "url": "https://doi.org/10.5194/wes-8-947-2023"
+}

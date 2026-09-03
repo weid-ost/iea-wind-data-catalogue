@@ -1,0 +1,118 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Alcayaga, Leonardo\",\"orcid\":\"0000-0003-4175-9024\"},{\"name\":\"Floors, Rogier\",\"orcid\":\"0000-0002-9363-4699\"},{\"name\":\"Santos, Pedro\",\"orcid\":\"0000-0003-2962-1364\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3908474"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3908474"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-06-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3908474\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3909488"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.3909488"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3909488"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3909488\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-3908474",
+  "notes": "<p>This is a summary of the ``Filtering lidar data'' webinar given by Rogier Floors and Leonardo Alcayaga on 7 April 2020 in the IEA Wind Task 32 webinar series.</p>\n\n<p> </p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Task_32_WebinarSummary_FilteringPulsedLidarData_26June2020.pdf",
+      "url": "https://zenodo.org/records/3909488/files/Task_32_WebinarSummary_FilteringPulsedLidarData_26June2020.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Approaches in filtering data from pulsed wind lidar",
+  "url": "https://zenodo.org/records/3909488",
+  "version": "26 June 2020"
+}

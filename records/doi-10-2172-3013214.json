@@ -1,0 +1,116 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Lab., Golden, CO (United States)\",\"name\":\"Sirkis, Leah\"},{\"affiliation\":\"National Renewable Energy Lab., Golden, CO (United States)\",\"name\":\"Hall, Matt\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"National Renewable Energy Lab., Golden, CO (United States)\",\"name\":\"Lozon, Ericka\"},{\"affiliation\":\"National Renewable Energy Lab., Golden, CO (United States)\",\"name\":\"Housner, Stein\",\"orcid\":\"0000-0002-5427-9962\"},{\"affiliation\":\"National Renewable Energy Lab., Golden, CO (United States)\",\"name\":\"Moreno, Felipe\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/3013214"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:40Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/3013214"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:40Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-11-25"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3013214\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/PR-5000-93618\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/PR-5000-93618"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3013214"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-03-03T13:47:20Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3013214"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3013214\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-3013214",
+  "notes": "While there are many tools for designing and modeling a single floating turbine, array level design and modeling has much more to consider. Designing floating wind arrays requires a coupled approach considering many variables, from bathymetry to installation and maintenance to failure and risk analysis. With all of these considerations, an array-level modeling tool is needed to quickly evaluate array designs. The Floating Array Model (FAModel) tool developed at the National Renewable Energy Laboratory was created to fill this gap in low-fidelity array modeling. FAModel is a python framework created to streamline holistic low-fidelity floating wind modeling for array-level analysis. FAModel integrates site data and models with a variety of open-source modeling tools developed by NREL, including FLORIS, RAFT, MoorPy, and anchor capacity models. The integration of these tools allows users to quickly and holistically design an array by considering forces, area analysis, visualization, annual energy production, failure modeling, and component costs.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3013214"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "97-mathematics-and-computing"
+    },
+    {
+      "name": "array-modeling"
+    },
+    {
+      "name": "floating-array"
+    },
+    {
+      "name": "floating-wind"
+    }
+  ],
+  "title": "Floating Wind Array Ontology and Modeling Framework",
+  "url": "https://www.osti.gov/biblio/3013214"
+}

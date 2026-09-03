@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"GeoSphere Austria\",\"family\":\"Schicker\",\"given\":\"Irene\",\"name\":\"Schicker, Irene\",\"orcid\":\"0000-0001-6401-2412\"},{\"affiliation\":\"AustroControl Digital Services GmbH\",\"family\":\"Strauss\",\"given\":\"Lukas\",\"name\":\"Strauss, Lukas\",\"orcid\":\"0000-0001-8275-0806\"},{\"affiliation\":\"WEB Wind Energy GmbH\",\"family\":\"Mader\",\"given\":\"Florian\",\"name\":\"Mader, Florian\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.17627028"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.17627028"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-11-11"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.17605818\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.17627028"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-11-17T05:28:41Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.17627028"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.17627028\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-17627028",
+  "notes": "The 2nd IEA Task 51 Austria Workshop “Weather-Driven Extreme Events in the Energy System” was held on 11 November 2025 at the Austro Tower in Vienna and brought together 125 experts from the energy sector, grid operation, meteorology, research, and public authorities. The workshop focused on the growing risks posed by weather-driven extreme events and their impacts on renewable energy generation, electricity markets, grid stability, and operational decision-making.\n\nThe event was organized by GeoSphere Austria in cooperation with Austro Control Digital Services, with support from the Austrian Federal Ministry for Innovation, Mobility and Infrastructure (BMIMI) and the Austrian Research Promotion Agency (FFG).\n\nThe programme covered a broad spectrum of topics, including:\n\n\n\n\n\nExtreme weather processes in the Alpine region and impacts on energy infrastructure\n\n\n\n\nForecast errors and the limits of predictability\n\n\n\n\nEarly warning systems and operational decision support\n\n\n\n\nChallenges in energy trading and grid management\n\n\n\n\nDigital twins, nowcasting systems, AI-driven forecasting, and meteorological risk indicators\n\n\n\n\nWeather-induced impacts on critical infrastructure (transmission and distribution grids, Austrian Railways, airport operations)\n\n\n\nThis Zenodo record contains:\n\n\n\n\n\nWorkshop programme (PDF)\n\n\n\n\nAll presentations (PDF) as individual files\n\n\n\n\nOutputs from the interactive sessions (A–D)\n\n\n\n\nOptional: A ZIP archive containing all presentations in a single package\n\n\n\nAll materials are part of the national Austrian activities within IEA Wind TCP Task 51: Forecasting for the Weather-Driven Energy System.\n\n \n\nContributors (Presenters)\n\n\n\n\n\nSabine Mitter (BMIMI)\n\n\n\n\nBernhard Niedermoser (GeoSphere Austria)\n\n\n\n\nFlorian Mader (WEB Windenergie)\n\n\n\n\nGernot Waldsam (Austro Control Digital Services)\n\n\n\n\nLukas Strauss (Austro Control Digital Services)\n\n\n\n\nIrene Schicker (GeoSphere Austria)\n\n\n\n\nPhilipp Piber (Austro Control)\n\n\n\n\nHorst Brandlmaier (OeMAG)\n\n\n\nShort Talks – Energy Sector\n\n\n\n\n\nAndreas Nehls (Burgenland Energie Trading)\n\n\n\n\nAndreas Forster (oekostrom AG)\n\n\n\n\nAnna-Maria Tilg (Austrian Power Grid)\n\n\n\n\nBernhard Spitzer (Energienetze Steiermark)\n\n\n\n\nRobert Grassinger (ÖBB Infrastruktur)\n\n\n\n\nPhilipp Geier (Energie Steiermark Green Power)\n\n\n\nShort Talks – Research &amp; Weather\n\n\n\n\n\nLaura Essl (Disaster Competence Network Austria – DCNA)\n\n\n\n\nIrene Schicker (GeoSphere Austria)\n\n\n\n\nClemens Weiß (ACDS)\n\n\n\n\nAnton Fuxjäger (Enlite AI)\n\n\n\n\nMichael Kernitzkyi (JOANNEUM RESEARCH)\n\n\n\nInteractive Sessions\n\n\n\n\n\nSession A + D: Lukas Strauss\n\n\n\n\nSession B + C: Irene Schicker",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP Task 51 \"Forecasting for the weather driven energy system\" - 2nd Austrian Workshop",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.17627028"
+}

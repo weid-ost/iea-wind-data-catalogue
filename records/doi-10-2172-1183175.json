@@ -1,0 +1,87 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)\"},{\"affiliation\":\"National Renewable Energy Lab. (NREL), Golden, CO (United States)\",\"family\":\"Lantz\",\"given\":\"Eric\",\"name\":\"Lantz, Eric\"},{\"name\":\"USDOE Office of Science (SC)\"},{\"name\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\"},{\"name\":\"IEA Wind Energy Agreement, Paris (France)\"},{\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"family\":\"Wiser\",\"given\":\"Ryan\",\"name\":\"Wiser, Ryan\"},{\"affiliation\":\"National Renewable Energy Lab. (NREL), Golden, CO (United States)\",\"family\":\"Hand\",\"given\":\"Maureen\",\"name\":\"Hand, Maureen\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/1183175"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/1183175"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2012-05-24"
+    },
+    {
+      "key": "publisher",
+      "value": "Office of Scientific and Technical Information (OSTI)"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2172/1183175"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T15:56:04Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2172/1183175"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2172/1183175\",\"https://www.osti.gov/biblio/1183175\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-1183175",
+  "notes": "",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "WP2 IEA Wind Task 26:The Past and Future Cost of Wind Energy",
+  "url": "https://doi.org/10.2172/1183175"
+}

@@ -1,0 +1,122 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Fraunhofer IWES\",\"name\":\"Santos, Pedro\",\"orcid\":\"0000-0003-2962-1364\"},{\"affiliation\":\"Fraunhofer IWES\",\"name\":\"Gottschall, Julia\",\"orcid\":\"0000-0001-7129-9247\"},{\"affiliation\":\"GEO-NET\",\"name\":\"Becker, Johannes\"},{\"affiliation\":\"GEO-NET\",\"name\":\"Schempf, Linda\",\"orcid\":\"0000-0003-2004-9525\"},{\"affiliation\":\"GEO-NET\",\"name\":\"Knörr, Ute\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5713043"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5713043"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-11-23"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5713043\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "5722362"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.5722362"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5722362"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5722362\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5713043",
+  "notes": "<p>Presentation at WindEurope 2021: Resource Assessment Quickfires on the first commercial scanning lidar campaign for wind resource assessment in mountainous terrain.</p>",
+  "owner_org": "fraunhofer-iwes",
+  "private": false,
+  "resources": [
+    {
+      "format": "pptx",
+      "name": "20211123_WindEurope_quickfire_final2.pptx",
+      "url": "https://zenodo.org/records/5722362/files/20211123_WindEurope_quickfire_final2.pptx"
+    },
+    {
+      "format": "pdf",
+      "name": "20211123_WindEurope_quickfire_final2.pdf",
+      "url": "https://zenodo.org/records/5722362/files/20211123_WindEurope_quickfire_final2.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "A business case for wind resource assessment using scanning wind lidars",
+  "url": "https://zenodo.org/records/5722362"
+}

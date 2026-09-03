@@ -1,0 +1,135 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "metadata-only"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Giebel, Gregor\"},{\"name\":\"Draxl, Caroline\",\"orcid\":\"0000-0001-5532-6268\"},{\"name\":\"Frank, Helmut\"},{\"name\":\"Zack, John\"},{\"name\":\"Mohrlen, Corinna\"},{\"name\":\"Kariniotakis, George\"},{\"name\":\"Browell, Jethro\"},{\"name\":\"Bessa, Ricardo\"},{\"name\":\"Lenaghan, David\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.1049/icp.2022.2830"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:47Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1049/icp.2022.2830"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-36\",\"task-51\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:47Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-05-05"
+    },
+    {
+      "key": "publisher",
+      "value": "Piscataway, NJ: Institute of Electrical and Electronics Engineers (IEEE)"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"1995466\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/CP-5000-87175\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/1995466\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/CP-5000-87175"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "1995466"
+    },
+    {
+      "key": "source_key",
+      "value": "2023-08-18T22:44:33Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/1995466"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/1995466\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-36"
+    },
+    {
+      "name": "task-51"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-1049-icp-2022-2830",
+  "notes": "The energy system needs a range of forecast types for its operation in addition to the narrow wind power forecast that has been the focus of considerable recent attention. Therefore, the group behind the former IEA Wind Task 36 Forecasting for Wind Energy has initiated a new IEA Wind Task with a much broader perspective, which includes prospective interaction with other IEA Technology Collaboration Programmes such as the ones for PV, hydropower, system integration, hydrogen etc. In the new IEA Wind Task 51 (entitled \"Foreacsting for the Weather Drive Energy System\") the existing Work Packages (WPs) are complemented by work streams in a matrix structure. The Task is divided in three WPs according to the stakeholders: WP1 is mainly aimed at meteorologists, providing the weather forecast basis for the power forecasts. In WP2, the forecast service vendors are the main stakeholders, while the end users populate WP3. The new Task 51 started in January 2022. Planned activities include 4 workshops. The first will focus on the state of the art in forecasting for the energy system plus related research issues and be held during September 2022 in Dublin. The other three workshops will be held later during the 4-year Task period and address (1) seasonal forecasting with emphasis on Dunkelflaute, storage and hydro, (2) minute-scale forecasting, and (3) extreme power system events. The issues and conclusions of each of the workshops will be documented by a published paper. Additionally, the Recommended Practice on Forecast Solution Selection will be updated to reflect the broader perspective.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "geophysics-computing"
+    },
+    {
+      "name": "offshore-installations"
+    },
+    {
+      "name": "power-engineering-computing"
+    },
+    {
+      "name": "power-transmission-and-distribution"
+    },
+    {
+      "name": "weather-forecasting"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-power-plants"
+    }
+  ],
+  "title": "Forecasting for the Weather Driven Energy System - A New Task under IEA Wind",
+  "url": "https://www.osti.gov/biblio/1995466"
+}

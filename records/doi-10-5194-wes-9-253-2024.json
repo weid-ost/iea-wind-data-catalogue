@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Smith\",\"given\":\"Ronald B.\",\"name\":\"Smith, Ronald B.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-9-253-2024"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-9-253-2024"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-01-29"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2023-56\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2023-56-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2023-56-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2023-56-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2023-56-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2023-56-ac3\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-9-253-2024"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-01-22T15:14:46Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-9-253-2024"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-9-253-2024\",\"https://wes.copernicus.org/articles/9/253/2024/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-9-253-2024",
+  "notes": "<p>Abstract. The disturbed atmospheric pressure near a wind farm arises from the turbine drag forces in combination with vertical confinement associated with atmospheric stability. These pressure gradients slow the wind upstream, deflect the air laterally, weaken the flow deceleration over the farm, and modify the farm wake recovery. Here, we describe the airflow and pressure disturbance near a wind farm under typical stability conditions and, alternatively, with the simplifying assumption of a rigid lid. The rigid lid case clarifies the cause of the pressure disturbance and its close relationship to wind farm drag. The key to understanding the rigid lid model is the proof that the pressure field p(x,y) is a harmonic function almost everywhere. It follows that the maximum and minimum pressure occur at the front and back edge of the farm. Over the farm, the favorable pressure gradient is constant and significantly offsets the turbine drag. Upwind and downwind of the farm, the pressure field is a dipole given by p(x,y)≈Axr-2, where the coefficient A is proportional to the total farm drag. Two derivations of this law are given. Field measurements of pressure can be used to find the coefficient A and thus to estimate total farm drag.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "The wind farm pressure field",
+  "url": "https://doi.org/10.5194/wes-9-253-2024"
+}

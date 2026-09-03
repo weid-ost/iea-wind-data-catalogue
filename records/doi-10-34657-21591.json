@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Hübner\",\"given\":\"Gundula\",\"name\":\"Hübner, Gundula\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.34657/21591"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.34657/21591"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "Creative Commons Attribution-NonDerivs 3.0 Germany"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-05-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Hannover : Technische Informationsbibliothek"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.34657/21591"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-04-22T10:13:20Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://oa.tib.eu/renate/handle/123456789/22574"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://oa.tib.eu/renate/handle/123456789/22574\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-34657-21591",
+  "notes": "[no abstract available]",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "100-philosophie-und-psychologie"
+    }
+  ],
+  "title": "Verbundvorhaben: Fortführung der deutschen Beteiligung an dem IEA Wind TCP Task 28 - Social of wind energy acceptance (Phase 4); Teilvorhaben MSH Medical School Hamburg",
+  "url": "https://oa.tib.eu/renate/handle/123456789/22574"
+}

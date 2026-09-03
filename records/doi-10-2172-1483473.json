@@ -1,0 +1,87 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"family\":\"Stehly\",\"given\":\"Tyler J.\",\"name\":\"Stehly, Tyler J.\"},{\"affiliation\":\"Offshore Renewable Energy Catapult (United Kingdom)\",\"family\":\"Noonan\",\"given\":\"Miriam\",\"name\":\"Noonan, Miriam\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"family\":\"Mora\",\"given\":\"David\",\"name\":\"Mora, David\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"family\":\"Kitzing\",\"given\":\"Lena\",\"name\":\"Kitzing, Lena\"},{\"affiliation\":\"Offshore Renewable Energy Catapult (United Kingdom)\",\"family\":\"Smart\",\"given\":\"Gavin\",\"name\":\"Smart, Gavin\"},{\"affiliation\":\"Fraunhofer Institute (Germany)\",\"family\":\"Berkhout\",\"given\":\"Volker\",\"name\":\"Berkhout, Volker\"},{\"affiliation\":\"Univ. of Tokyo (Japan)\",\"family\":\"Kikuchi\",\"given\":\"Yuka\",\"name\":\"Kikuchi, Yuka\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/1483473"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/1483473"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2018-11-21"
+    },
+    {
+      "key": "publisher",
+      "value": "Office of Scientific and Technical Information (OSTI)"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2172/1483473"
+    },
+    {
+      "key": "source_key",
+      "value": "2020-01-23T12:40:09Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2172/1483473"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2172/1483473\",\"http://www.osti.gov/servlets/purl/1483473/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-1483473",
+  "notes": "",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP Task 26: Offshore Wind Energy International Comparative Analysis",
+  "url": "https://doi.org/10.2172/1483473"
+}

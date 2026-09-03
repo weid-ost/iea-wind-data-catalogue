@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Universidad de la República - Facultad de Ingeniería - Uruguay\",\"family\":\"Garchitorena\",\"given\":\"Francisco\",\"name\":\"Garchitorena, Francisco\"},{\"affiliation\":\"Universidad de la República\",\"family\":\"Correa\",\"given\":\"Santiago\",\"name\":\"Correa, Santiago\",\"orcid\":\"0000-0002-8520-3047\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.13935821"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.13935821"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-10-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.13935821\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "13935822"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.13935822"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/13935822"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/13935822\",\"https://zenodo.org/doi/10.5281/zenodo.13935821\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-13935821",
+  "notes": "This work presents a solution for the IEA Wind Task 52 LAC Summer Games, specifically targeting the “30s Sprint” discipline. The objective is to enhance the response of a Lidar-assisted control system for wind turbines when subjected to a 12 m/s extreme operational gust (EOG). The proposed approach integrates a multivariable feedforward control strategy with a neural network-based pitch angle prediction. The controller modifies a conventional feedforward pitch system to maintain constant generator torque by using LIDAR to anticipate wind speed variations. The neural network is trained to predict the required pitch angle based on the Tip Speed Ratio (TSR) and thrust coefficient to reduce the fore-aft moment. Simulations using the OpenFAST aeroelastic model demonstrate significant improvements over baseline controllers, achieving a 67.9 % reduction in rotor speed deviation and a 90 % reduction in tower base fore-aft bending moment deviation. Additionally, the controller reduces rotor thrust by 22.4% compared to traditional feedback systems. These results indicate that the proposed multivariable feedforward controller, complemented by a deep neural network, provides a robust solution for improving wind turbine performance under extreme wind conditions.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Summer_Games_Correa_Garchitorena_2024.pdf",
+      "url": "https://zenodo.org/records/13935822/files/Summer_Games_Correa_Garchitorena_2024.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "iea-wind-task-52"
+    },
+    {
+      "name": "lac"
+    },
+    {
+      "name": "summer-games-2024"
+    }
+  ],
+  "title": "LAC Summer Games -  2024- Correa & Garchitorena",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.13935821"
+}

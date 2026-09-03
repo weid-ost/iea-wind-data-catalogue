@@ -1,0 +1,122 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Danish Technical University\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Sciences\",\"name\":\"Gottschall, Julia\"},{\"affiliation\":\"Black & Veatch\",\"name\":\"Clive, Peter\",\"orcid\":\"0000-0002-1365-0243\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"Wüerth, Ines\"},{\"affiliation\":\"Danish Technical University\",\"name\":\"Wagner, Rozenn\"},{\"affiliation\":\"Orsted\",\"name\":\"Nygaard, Nicolai\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3374354"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3374354"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-09-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3374354\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "4030701"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.4030701"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4030701"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4030701\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-3374354",
+  "notes": "<p>IEA Wind Task 32 coordinates a range of research and development activities for wind lidar for wind energy applications. In order to help Task members and others keep an overview of what's happening in the Task, we have created a visual road map showing these activities. To find out more about specific activities, see the Task 32 website at <a href=\"https://community.ieawind.org/task32/home\" rel=\"nofollow noopener\">https://community.ieawind.org/task32/home</a>.</p>\n\n<p>This repository includes a PDF of the roadmap as <a href=\"https://zenodo.org/record/3604290/files/IEA_Wind_Task_32__Collaborative_RD_Roadmap.pdf?download=1\" rel=\"nofollow noopener\">\"IEA_Wind_Task_32__Collaborative_RD_Roadmap.pdf\"</a></p>\n\n<p>The files required to produce the roadmap using the LaTeX document preparation system can be obtained from our repository at <a href=\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-RnD-roadmap/releases/tag/1.1\" rel=\"nofollow noopener\">GitHub.com</a>. </p>\n\n<p>Please note that this document will be updated regularly. Please check for new versions at <a href=\"https://doi.org/10.5281/zenodo.3374354\" rel=\"nofollow noopener\">https://doi.org/10.5281/zenodo.3374354</a>. </p>\n\n<p><strong>We welcome feedback on the document</strong>. Please go to <a href=\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-RnD-roadmap\" rel=\"nofollow noopener\">https://github.com/IEA-Wind-Task-32/white-paper-Task32-RnD-roadmap</a> to find out how you can help improve this document.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA_Wind_Task_32__Collaborative_RD_Roadmap.pdf",
+      "url": "https://zenodo.org/records/4030701/files/IEA_Wind_Task_32__Collaborative_RD_Roadmap.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-lidar-roadmap"
+    }
+  ],
+  "title": "IEA Wind Task 32: Collaborative R&D Roadmap",
+  "url": "https://zenodo.org/records/4030701",
+  "version": "2020 September 15"
+}

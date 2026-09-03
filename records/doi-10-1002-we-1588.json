@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Fraunhofer Institute for Wind Energy and Energy System Technology IWES Bremerhaven Germany\",\"family\":\"Vorpahl\",\"given\":\"Fabian\",\"name\":\"Vorpahl, Fabian\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy and Energy System Technology IWES Bremerhaven Germany\",\"family\":\"Strobel\",\"given\":\"Michael\",\"name\":\"Strobel, Michael\"},{\"affiliation\":\"National Renewable Energy Laboratory Golden, Colorado USA\",\"family\":\"Jonkman\",\"given\":\"Jason M.\",\"name\":\"Jonkman, Jason M.\"},{\"affiliation\":\"Risø DTU National Laboratory for Sustainable Energy Roskilde Denmark\",\"family\":\"Larsen\",\"given\":\"Torben J.\",\"name\":\"Larsen, Torben J.\"},{\"affiliation\":\"Rambøll Wind Energy Esbjerg Denmark\",\"family\":\"Passon\",\"given\":\"Patrik\",\"name\":\"Passon, Patrik\"},{\"affiliation\":\"GL Garrad Hassan Bristol UK\",\"family\":\"Nichols\",\"given\":\"James\",\"name\":\"Nichols, James\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy"
+    },
+    {
+      "key": "doi",
+      "value": "10.1002/we.1588"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1002/we.1588"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2013-03-18"
+    },
+    {
+      "key": "publisher",
+      "value": "Wiley"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.1002/we.1588"
+    },
+    {
+      "key": "source_key",
+      "value": "2023-10-04T22:46:46Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.1002/we.1588"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.1002/we.1588\",\"https://onlinelibrary.wiley.com/doi/10.1002/we.1588\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1002-we-1588",
+  "notes": "ABSTRACT<p>This work presents the results of a benchmark study on aero‐servo‐hydro‐elastic codes for offshore wind turbine dynamic simulation. The codes verified herein account for the coupled dynamic systems including the wind inflow, aerodynamics, elasticity and controls of the turbine, along with the incident waves, sea current, hydrodynamics and foundation dynamics of the support structure.</p><p>A large set of time series simulation results such as turbine operational characteristics, external conditions, and load and displacement outputs was compared and interpreted. Load cases were defined and run with increasing complexity to trace back differences in simulation results to the underlying error sources. This led to a deeper understanding of the underlying physical systems. In four subsequent phases—dealing with a 5‐MW turbine on a monopile with a fixed foundation, a monopile with a flexible foundation, a tripod and a floating spar buoy—the latest support structure developments in the offshore wind energy industry are covered, and an adaptation of the codes to those developments was initiated.</p><p>The comparisons, in general, agreed quite well. Differences existed among the predictions were traced back to differences in the model fidelity, aerodynamic implementation, hydrodynamic load discretization and numerical difficulties within the codes. The comparisons resulted in a more thorough understanding of the modeling techniques and better knowledge of when various approximations are not valid. More importantly, the lessons learned from this exercise have been used to further develop and improve the codes of the participants and increase the confidence in the codes’ accuracy and the correctness of the results, hence improving the standard of offshore wind turbine modeling and simulation.</p><p>One purpose of this paper is to summarize the lessons learned and present results that code developers can compare to. The set of benchmark load cases defined and simulated during the course of this project—the raw data for this paper—is available to the offshore wind turbine simulation community and is already being used for testing newly developed software tools. Despite that no measurements are included, the large number of participants and the—in general—very fine level of agreement indicate high trustworthy results within the physical assumptions of the codes and the simulation cases chosen. Other cases, such as large prebend flexible blades, large wind shear, large yaw error or transient maneuvers, may not show the same level of agreement. These cases were deliberately left out because the focus is on the specific offshore application. Further on, this benchmark study includes participating codes and organizations by name (contrary to several previous benchmark studies) that gives the reader a chance to find results from one particular code of interest.Copyright © 2013 John Wiley &amp; Sons, Ltd.</p>",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Verification of aero‐elastic offshore wind turbine design codes under IEA Wind Task XXIII",
+  "url": "https://doi.org/10.1002/we.1588"
+}

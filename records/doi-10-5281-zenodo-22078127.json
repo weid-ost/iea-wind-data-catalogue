@@ -1,0 +1,124 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Enerlace GmbH\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Blue Ocean Consulting Ltd\",\"family\":\"Calverley\",\"given\":\"Mark\",\"name\":\"Calverley, Mark\",\"orcid\":\"0009-0001-2356-6352\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Systems\",\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\",\"orcid\":\"0000-0001-7129-9247\"},{\"affiliation\":\"ZX Lidars\",\"family\":\"Medley\",\"given\":\"John\",\"name\":\"Medley, John\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"SSE Renewables\",\"family\":\"Warrier\",\"given\":\"Preethy\",\"name\":\"Warrier, Preethy\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.22078127"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.22078127"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-09-01"
+    },
+    {
+      "key": "publisher",
+      "value": "IEA Wind Task 52"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.22078127\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.22078128\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "22078128"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.22078128"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/22078128"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/22078128\",\"https://zenodo.org/doi/10.5281/zenodo.22078127\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-22078127",
+  "notes": "With the continued growth of wind energy and corresponding growth in the use of wind lidar, IEA Wind Task 52 was formed to investigate the challenges associated with large-scale deployment of wind lidar – framed as a 10x increase in the number of lidar in use.\n\nDigitalisation will likely be a crucial part of managing many more wind lidar than are in use today. IEA Wind Task 52 therefore established a Digitalisation Working Group to explore the opportunities and challenges for the digitalisation of wind lidar. The working group found multiple active and potential use cases for digitalisation, ranging from lidar manufacturing, to training, supporting installation and commissioning, and speeding up data processing and evaluation.\n\nA key finding was that many wind lidar digitalisation use cases are not unique to wind lidar or even wind energy; mature solutions often exist in other networked industries like IoT and smartphone ecosystems. These external sectors offer valuable lessons for managing dispersed infrastructure, large data, and stakeholder networks, having navigated challenges like market fragmentation and the need for standards.\n\nThe working group concluded that while wind-lidar specific applications are valuable, truly transformative solutions require a broader, cross-sectoral approach.",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEAWindTask52_LidarDigitalisation_Report_DATE20260901.pdf",
+      "url": "https://zenodo.org/records/22078128/files/IEAWindTask52_LidarDigitalisation_Report_DATE20260901.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digitalisation"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "Perspectives on Wind Lidar Digitalisation",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.22078127"
+}

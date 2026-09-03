@@ -1,0 +1,128 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical Univ. of Denmark, Roskilde (Denmark)\",\"name\":\"Zahle, Frederik\"},{\"affiliation\":\"Technical Univ. of Denmark, Roskilde (Denmark)\",\"name\":\"Barlas, Thanasis\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Bortolotti, Pietro\",\"orcid\":\"0000-0002-8515-9488\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Zalkind, Daniel\"},{\"affiliation\":\"DNV, Bristol (United Kingdom)\",\"name\":\"Collier, William\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/2409185"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:50Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/2409185"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:50Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06-06"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2409185\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/PR-5000-89807\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/PR-5000-89807"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "2409185"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T15:01:08Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2409185"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2409185\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-2409185",
+  "notes": "The presentation will be used in a public webinar to introduce the newly developed 22 megawatt offshore reference wind turbine designed within the International Energy Agency Wind Technology Commercialization Programme Task 55 Reference Wind Turbines and Plants. The turbine was designed collaboratively by two teams at the Denmark Technical University and at the National Renewable Energy Laboratory. Reference turbines serve an important purpose in the wind energy community, since they provide openly available data for models representative of current wind turbine technology, which can be used by practitioners for a variety of modeling purposes, ranging from aerodynamic, structural, and aeroelastic turbine modeling to wind farm flow modeling, across a range of fidelities. The IEA 22 RWT aims to model machines with projected installation in the 2025-2030 time frame. The turbine has a rotor diameter of 284 meters and a hub height of 170 meters. It is a class 1-B machine with a rotor specific power nearing 350 W m-2 and it is mounted on either a fixed-bottom offshore foundation or a semi-submersible floating platform.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2409185"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "22mw"
+    },
+    {
+      "name": "42-engineering"
+    },
+    {
+      "name": "iea"
+    },
+    {
+      "name": "iea22"
+    },
+    {
+      "name": "offshore"
+    },
+    {
+      "name": "reference-wind-turbine"
+    },
+    {
+      "name": "refwind"
+    },
+    {
+      "name": "webinar"
+    }
+  ],
+  "title": "International Energy Agency 22 MW Offshore Reference Wind Turbine",
+  "url": "https://www.osti.gov/biblio/2409185"
+}

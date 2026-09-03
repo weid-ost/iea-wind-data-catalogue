@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Kitzing\",\"given\":\"Lena\",\"name\":\"Kitzing, Lena\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Ioannou\",\"given\":\"Anastasia\",\"name\":\"Ioannou, Anastasia\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.11583/dtu.31889632"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.11583/dtu.31889632"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Technical University of Denmark"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"https://orbit.dtu.dk/en/publications/common-fallacies-in-calculating-levelised-cost-of-energy-lcoe/\",\"identifier_type\":\"URL\",\"relation\":\"IsSupplementTo\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.11583/dtu.31889632"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-03-30T12:22:10Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://data.dtu.dk/articles/dataset/_b_Common_Fallacies_in_b_b_Calculating_Levelised_b_b_Cost_of_Energy_LCOE_-_Examples_b_/31889632"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://data.dtu.dk/articles/dataset/_b_Common_Fallacies_in_b_b_Calculating_Levelised_b_b_Cost_of_Energy_LCOE_-_Examples_b_/31889632\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-11583-dtu-31889632",
+  "notes": "This is the accompanying Excel file of the report \"Common Fallacies in Calculating Levelised Cost of Energy (LCOE)\" developed in the context of the IEA TCP Wind Task 53 Wind Energy Economics project.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "applied-economics-not-elsewhere-classified"
+    }
+  ],
+  "title": "<b>Common Fallacies in </b><b>Calculating Levelised </b><b>Cost of Energy (LCOE) - Examples</b>",
+  "url": "https://data.dtu.dk/articles/dataset/_b_Common_Fallacies_in_b_b_Calculating_Levelised_b_b_Cost_of_Energy_LCOE_-_Examples_b_/31889632"
+}

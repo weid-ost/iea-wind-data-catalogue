@@ -1,0 +1,113 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"WUR\",\"family\":\"Meuwissen\",\"given\":\"Miranda\",\"name\":\"Meuwissen, Miranda\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4541328"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:28:59Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4541328"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:28:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-02-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"https://www.surefarmproject.eu/wordpress/wp-content/uploads/2021/02/D6.3-Infographic.pdf\",\"identifier_type\":\"URL\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://zenodo.org/record/4541311#.YCprxmhKjIU\",\"identifier_type\":\"URL\",\"relation\":\"IsSupplementTo\"},{\"identifier\":\"10.5281/zenodo.4541329\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/surefarmproject\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.4541328"
+    },
+    {
+      "key": "source_key",
+      "value": "56a50f704dc5d65b"
+    },
+    {
+      "key": "source_system",
+      "value": "ieawind"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"ieawind\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/4541328"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/4541328\",\"https://iea-wind.org/task43/t43-publications/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4541328",
+  "notes": "An institutional and socio-economic environment that fosters resilience is crucial for the future of EU farming systems. SURE-Farm has integrated much of its previous work into a set of 6 key principles for a resilience enabling environment. These are (1) to use resources to help the FS to deal with a shock only to buy time while working on structural solutions; (2) to devote enough resources to building anticipating and responsive capacities when shocks happen; (3) to detect long term trends and their potential impact on the FS; (4) to foster a diversity of potential options; (5) to develop a sufficient degree of ambidexterity; and (6) to do in-depth analysis of root causes of challenges and the FS’s vulnerability to them. Implementing these principles into concrete actions and strategies requires social learning and concerted efforts by all actors involved.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "description": "Resolved landing page",
+      "name": "DOI",
+      "url": "https://zenodo.org/record/4541328"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Guiding principles for a resilience-enabling environment",
+  "url": "https://zenodo.org/record/4541328"
+}

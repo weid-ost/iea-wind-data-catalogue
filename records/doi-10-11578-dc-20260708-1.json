@@ -1,0 +1,120 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Sirkis\",\"given\":\"Leah\",\"name\":\"Sirkis, Leah\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Hall\",\"given\":\"Matthew\",\"name\":\"Hall, Matthew\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Housner\",\"given\":\"Stein\",\"name\":\"Housner, Stein\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Moreno\",\"given\":\"Felipe\",\"name\":\"Moreno, Felipe\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Alkarem\",\"given\":\"Rudy\",\"name\":\"Alkarem, Rudy\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Lozon\",\"given\":\"Ericka\",\"name\":\"Lozon, Ericka\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Biglu\",\"given\":\"Michael\",\"name\":\"Biglu, Michael\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Slack\",\"given\":\"Emma\",\"name\":\"Slack, Emma\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Lekkala\",\"given\":\"Malakonda Reddy\",\"name\":\"Lekkala, Malakonda Reddy\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Carmo\",\"given\":\"Lucas\",\"name\":\"Carmo, Lucas\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Davies\",\"given\":\"Ryan\",\"name\":\"Davies, Ryan\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Coughlan\",\"given\":\"Katherine\",\"name\":\"Coughlan, Katherine\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Radwan\",\"given\":\"Ahmed\",\"name\":\"Radwan, Ahmed\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Duong\",\"given\":\"Brian\",\"name\":\"Duong, Brian\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Peterson\",\"given\":\"Lily\",\"name\":\"Peterson, Lily\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"family\":\"Negrete\",\"given\":\"Carolina\",\"name\":\"Negrete, Carolina\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.11578/dc.20260708.1"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.11578/dc.20260708.1"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:47Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "BSD 3-clause \"New\" or \"Revised\" License"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026"
+    },
+    {
+      "key": "publisher",
+      "value": "National Renewable Energy Laboratory (NREL), Golden, CO (United States)"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"code-184713\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"FAD-Toolset\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "FAD-Toolset"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "code-184713"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-07-16T00:00:00Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/code-184713"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/code-184713\",\"https://www.osti.gov/doecode/biblio/184713\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-11578-dc-20260708-1",
+  "notes": "The Floating Array Design (FAD) Toolset is a collection of tools for modeling and designing arrays of floating offshore structures. It was originally designed for floating wind systems but has applicability for many offshore applications.\n\nA core part of the FAD Toolset is the floating array model, which serves as a high-level library for efficiently modeling a floating array, such as a floating wind array. It combines site condition information and a description of the floating array design, and contains functions for evaluating the array's behavior considering the site conditions. For example, it combines information about site soil conditions, mooring line loads, and an array's anchor characteristics to estimate the holding capacity of each anchor.\n\nThe library works in conjunction with the tools RAFT, MoorPy, and FLORIS to model floating platforms, wind turbines, mooring systems, power cables, and array wakes respectively.\n\nLayered on top of the floating array model is a set of design tools that can be used for algorithmically adjusting or optimizing parts of the a floating array. Specific tools existing for mooring lines, shared mooring systems, dynamic power cables, static power cable routing, and overall array layout. These capabilities work with the design representation and evaluation functions in the floating array model, and they can be applied by users in various combinations to suit different purposes.\n\nIn addition to standalone uses of the FAD Toolset, a coupling has been made with Ard, (https://github.com/NLRWindSystems/Ard) a sophisticated and flexible wind farm optimization tool. This coupling allows Ard to use certain mooring system capabilities from FAD to perform layout optimization of floating wind farms with Ard's more advanced layout optimization capabilities.\n\nThe FAD Toolset works with the IEA Wind Task 49 Ontology (https://github.com/IEAWindTask49/Ontology), which provides a standardized format for describing floating wind farm sites and designs.\n\nSee example use cases in our examples folder (https://github.com/NLRWindSystems/FAD-Toolset/blob/main/examples/README.md)\n\nFor working with the library, it is important to understand the floating array model structure, which is described more here: https://github.com/NLRWindSystems/FAD-Toolset/blob/main/fad/README.md.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/code-184713"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "FAD-Toolset (Floating Array Design Toolset) [SWR-26-056]",
+  "url": "https://www.osti.gov/doecode/biblio/184713"
+}

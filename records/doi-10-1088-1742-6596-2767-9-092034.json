@@ -1,0 +1,121 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Bodini, Nicola\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Abraham, A.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Doubrawa, P.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Letizia, S.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Thedin, R.\"},{\"affiliation\":\"Univ. of Colorado, Boulder, CO (United States)\",\"name\":\"Agarwal, N.\"},{\"affiliation\":\"Univ. of Sao Paulo (Brazil)\",\"name\":\"Carmo, B.\"},{\"affiliation\":\"Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)\",\"name\":\"Cheung, L.\"},{\"affiliation\":\"Univ. of Sao Paulo (Brazil)\",\"name\":\"Radünz, W. Corrêa\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Gupta, A.\"},{\"affiliation\":\"Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)\",\"name\":\"Goldberger, L.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Hamilton, N.\"},{\"affiliation\":\"Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)\",\"name\":\"Herges, T.\"},{\"affiliation\":\"Texas Tech Univ., Lubbock, TX (United States)\",\"name\":\"Hirth, B.\"},{\"affiliation\":\"Univ. of Texas at Dallas, TX (United States)\",\"name\":\"Iungo, G. V.\"},{\"affiliation\":\"Univ. of Oklahoma, Norman, OK (United States)\",\"name\":\"Jordan, A.\"},{\"affiliation\":\"Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)\",\"name\":\"Kaul, C.\"},{\"affiliation\":\"Univ. of Oklahoma, Norman, OK (United States)\",\"name\":\"Klein, P.\"},{\"affiliation\":\"Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)\",\"name\":\"Krishnamurthy, R.\"},{\"affiliation\":\"Univ. of Colorado, Boulder, CO (United States); National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Lundquist, J. K.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Maric, E.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Moriarty, P.\"},{\"affiliation\":\"Univ. of Texas at Dallas, TX (United States)\",\"name\":\"Moss, C.\"},{\"affiliation\":\"Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)\",\"name\":\"Newsom, R.\"},{\"affiliation\":\"Univ. of Colorado, Boulder, CO (United States); National Oceanic and Atmospheric Administration (NOAA), Boulder, CO (United States)\",\"name\":\"Pichugina, Y.\"},{\"affiliation\":\"Lawrence Livermore National Laboratory (LLNL), Livermore, CA (United States)\",\"name\":\"Puccioni, M.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Quon, E.\"},{\"affiliation\":\"Univ. of Texas at Dallas, TX (United States)\",\"name\":\"Roy, S.\"},{\"affiliation\":\"Univ. of Colorado, Boulder, CO (United States)\",\"name\":\"Rosencrans, D.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Gomez, M. Sanchez\"},{\"affiliation\":\"Portland State Univ., OR (United States); National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Scott, R.\"},{\"affiliation\":\"Univ. of Texas at Dallas, TX (United States)\",\"name\":\"Solari, M. Shams\"},{\"affiliation\":\"Univ. of Colorado, Boulder, CO (United States)\",\"name\":\"Taylor, T. J.\"},{\"affiliation\":\"Lawrence Livermore National Laboratory (LLNL), Livermore, CA (United States)\",\"name\":\"Wharton, S.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics. Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/2767/9/092034"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:49Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/2767/9/092034"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:49Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06-01"
+    },
+    {
+      "key": "publisher",
+      "value": "IOP Publishing"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2394621\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/JA-5000-88585\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/2394621\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/JA-5000-88585"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "2394621"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T14:58:59Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2394621"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2394621\",\"https://www.osti.gov/pages/biblio/2394621\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1088-1742-6596-2767-9-092034",
+  "notes": "This article introduces the first benchmark study within the International Energy Agency Wind Task 57 framework, focusing on wind plant wakes. Leveraging data from the American WAKE ExperimeNt (AWAKEN), the benchmark aims to assess the accuracy of simulation tools in modeling wind plant wakes and their impact on the downstream flow under diverse inflow conditions. The AWAKEN field campaign, conducted in Oklahoma from 2022 to 2024, provides unprecedented observations of wind plant-atmosphere interactions, thus offering a large dataset to validate numerical models of different complexity. The benchmark will include three phases—code calibration, blind comparison, and iteration—allowing participants to refine their numerical models based on the feedback from the benchmark team. This article describes the benchmark case study selected from observations providing details on atmospheric conditions, wake evidence, and wind turbine operation. The benchmark’s structure and timeline, along with the expected publication of results, are discussed as well. This collaborative effort aims to enhance the accuracy of wind plant wake simulations, thus contributing to the improvement of wind energy production estimates.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2394621"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "awaken"
+    },
+    {
+      "name": "benchmark"
+    },
+    {
+      "name": "wind-plant-wakes"
+    }
+  ],
+  "title": "An international benchmark for wind plant wakes from the American WAKE ExperimeNt (AWAKEN)",
+  "url": "https://www.osti.gov/biblio/2394621"
+}

@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Weich\",\"given\":\"Simon\",\"name\":\"Weich, Simon\",\"orcid\":\"0009-0009-5300-6151\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schedat\",\"given\":\"Marcel\",\"name\":\"Schedat, Marcel\",\"orcid\":\"0009-0009-0491-0187\"},{\"affiliation\":\"EKSH\",\"family\":\"Albornoz\",\"given\":\"Cristian\",\"name\":\"Albornoz, Cristian\",\"orcid\":\"0000-0002-5476-2508\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.19111787"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.19111787"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-06"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.18988933\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.19111787"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-03-19T13:26:47Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.19111787"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19111787\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-19111787",
+  "notes": "Research Seminar and Workshop\n\nThe Quiet and Seeing Wind Turbine\n\nThis two-day research seminar together with a workshop of the IEA Wind Task 52 Working Group on Lidar-Assisted Control took place on March 3 and 4, 2026 at the Wind Energy Technology Institute. This seminar brought together experts from academia and industry to strengthen collaboration at the interface of wind turbine acoustics and lidar-assisted control. It covered why quieter turbines matter for project planning and turbine development, key strategies to reduce acoustic emissions, and how lidar systems can improve turbine operation by sensing inflow conditions, with a focus on load simulations and field testing. \n\nThe seminar was supported by the Schleswig-Holstein Society for Energy and Climate Protection (EKSH) and the Ministry of Education, Science, Research, and Culture (MBWFK).\n\nBuilding on the seminar discussions, the workshop wasa collaborative session to apply insights and contribute to the IEA Wind Task 52 LAC working group’s Recommended Practices document.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Research Seminar \"The Quiet and Seeing Wind Turbine\" and Workshop of the IEA Wind Task 52 Working group on Lidar-Assisted Control",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.19111787"
+}

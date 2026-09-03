@@ -1,0 +1,87 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Preprint A Robertson\"},{\"name\":\"J Jonkman\"},{\"name\":\"F Vorpahl\"},{\"name\":\"W Popko\"},{\"name\":\"J Qvist\"},{\"name\":\"L Frøyd\"},{\"name\":\"X Chen\"},{\"name\":\"J Azcona\"},{\"name\":\"E Uzungoglu\"},{\"name\":\"Guedes Soares\"},{\"name\":\"C Luan\"},{\"name\":\"H Yutong\"},{\"name\":\"F Pengcheng\"},{\"name\":\"A Yde\"},{\"name\":\"T Larsen\"},{\"name\":\"J Nichols\"},{\"name\":\"R Buils\"},{\"name\":\"L Lei\"},{\"name\":\"T Anders Nygard\"},{\"name\":\"D Manolas\"},{\"name\":\"A Heege\"},{\"name\":\"S Ringdalen Vatne\"},{\"name\":\"H Ormberg\"},{\"name\":\"T Duarte\"},{\"name\":\"C Godreau\"},{\"name\":\"H Fabricius\"},{\"name\":\"Wedel Nielsen\"},{\"name\":\"H Riber\"},{\"name\":\"C Le Cunff\"},{\"name\":\"R Abele\"},{\"name\":\"F Beyer\"},{\"name\":\"A Yamaguchi\"},{\"name\":\"K Jin Jung\"},{\"name\":\"H Shin\"},{\"name\":\"W Shi\"},{\"name\":\"H Park\"},{\"name\":\"M Alves\"},{\"name\":\"M Guérinel\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.13140/2.1.2822.9121"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.13140/2.1.2822.9121"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2014"
+    },
+    {
+      "key": "publisher",
+      "value": "Unpublished"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.13140/2.1.2822.9121"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-10-01T23:24:42Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.researchgate.net/doi/10.13140/2.1.2822.9121"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.researchgate.net/doi/10.13140/2.1.2822.9121\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-13140-2-1-2822-9121",
+  "notes": "",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Offshore Code Comparison Collaboration Continuation Within IEA Wind Task 30: Phase II Results Regarding a Floating Semisubmersible Wind System",
+  "url": "https://www.researchgate.net/doi/10.13140/2.1.2822.9121"
+}

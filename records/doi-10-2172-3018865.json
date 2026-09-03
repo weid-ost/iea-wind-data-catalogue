@@ -1,0 +1,100 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)\",\"name\":\"Maniaci, David Charles\",\"orcid\":\"0000-0002-6888-8005\"},{\"affiliation\":\"Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)\",\"name\":\"Hsieh, Alan Sean Ker\",\"orcid\":\"0009-0005-2898-1693\"},{\"affiliation\":\"Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)\",\"name\":\"deVelder, Nathaniel\",\"orcid\":\"0000-0003-2916-9793\"},{\"affiliation\":\"Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)\",\"name\":\"Paquette, Joshua\",\"orcid\":\"0009-0008-8455-9480\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/3018865"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:45Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/3018865"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:45Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-02-01"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3018865\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"SAND2025-01305C\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "SAND2025-01305C"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3018865"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-02-18T15:06:55Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3018865"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3018865\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-3018865",
+  "notes": "",
+  "owner_org": "sandia",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3018865"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Variation of Erosion Power Loss with Turbine Model",
+  "url": "https://www.osti.gov/biblio/3018865"
+}

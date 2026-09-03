@@ -1,0 +1,121 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Stuttgart Wind Energy, University of Stuttgart\",\"name\":\"Würth, Ines\",\"orcid\":\"0000-0002-1365-0243\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4629674"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4629674"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-03-23"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4629674\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4629675"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.4629675"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4629675"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4629675\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4629674",
+  "notes": "<p>In 2018 DTU, Fraunhofer IEE and others published the report from their e-WindLidar project (<a href=\"https://doi.org/10.5281/zenodo.2478051\" rel=\"nofollow noopener\">https://doi.org/10.5281/zenodo.2478051</a>) in which they introduced a common format for wind lidars. Up to now, lidars from different manufacturers spit out data in different formats using different variables. In Stuttgart we therefore developed different code for each lidar in order to process the data.</p>\n\n<p>The common format brings only advantages: in Stuttgart we implemented it in our code and now only have one data processing routine for different lidar systems. Collaboration is facilitated because exchange of code and data is very easy. Interfaces where data is exchanged are clearly defined. Therefore we believe that the common data format is the basis for a digitized lidar infrastructure of the future.</p>\n\n<p>This presentation was given at the IEA Wind Task 32 Workshop on Digitalization of Wind Lidar on March 17th, 2021</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "LidarDataFormatAtUniStuttgart.pdf",
+      "url": "https://zenodo.org/records/4629675/files/LidarDataFormatAtUniStuttgart.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-lidar-digitalization-common-data-format-wind-energy"
+    }
+  ],
+  "title": "How the common lidar data format improved our data processing routine",
+  "url": "https://zenodo.org/records/4629675"
+}

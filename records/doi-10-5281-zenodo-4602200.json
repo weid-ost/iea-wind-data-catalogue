@@ -1,0 +1,138 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Kovtonyuk\",\"given\":\"Nataliya\",\"name\":\"Kovtonyuk, Nataliya\"},{\"family\":\"Durand-Andro\",\"given\":\"Véronique\",\"name\":\"Durand-Andro, Véronique\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4602200"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:28:59Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4602200"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:28:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-07-01"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5252/adansonia2019v41a9\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"},{\"identifier\":\"http://publication.plazi.org/id/DF797328C45DAD6FFFD0FFAED4219935\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/record/4602183\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"10.5281/zenodo.10527161\",\"identifier_type\":\"DOI\",\"relation\":\"IsCitedBy\"},{\"identifier\":\"http://treatment.plazi.org/id/23400B50C454AD66FC07FCBBD7BD9C38\",\"identifier_type\":\"URL\",\"relation\":\"IsCitedBy\"},{\"identifier\":\"10.5281/zenodo.4602201\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.4602200"
+    },
+    {
+      "key": "source_key",
+      "value": "56a50f704dc5d65b"
+    },
+    {
+      "key": "source_system",
+      "value": "ieawind"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"ieawind\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.4602200"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.4602200\",\"https://iea-wind.org/task43/t43-publications/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4602200",
+  "notes": "FIG. 9. — Lectotype of Primula ovalifolia Franch. (P04567168).",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "description": "Resolved landing page",
+      "name": "DOI",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.4602200"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "biodiversity"
+    },
+    {
+      "name": "ericales"
+    },
+    {
+      "name": "magnoliopsida"
+    },
+    {
+      "name": "plantae"
+    },
+    {
+      "name": "primula"
+    },
+    {
+      "name": "primulaceae"
+    },
+    {
+      "name": "taxonomy"
+    },
+    {
+      "name": "tracheophyta"
+    }
+  ],
+  "title": "FIG. 9 in Typification of Primula L. taxa names (Primulaceae), described by A. Franchet in 1886 from China and Eastern Tibet",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.4602200"
+}

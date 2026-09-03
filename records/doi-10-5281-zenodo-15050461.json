@@ -1,0 +1,122 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Energiewerkstatt Verein\",\"name\":\"Krenn, Andreas\"},{\"affiliation\":\"Energiewerkstatt Verein\",\"name\":\"Stökl, Alexander\"},{\"affiliation\":\"Energiewerkstatt Verein\",\"name\":\"Rittinghaus, Claas\"},{\"affiliation\":\"Enercon (Germany)\",\"name\":\"Rodriguez, Hector\"},{\"affiliation\":\"Enercon (Germany)\",\"name\":\"Schürmann, Gregor\"},{\"affiliation\":\"TÜV SÜD (Germany)\",\"name\":\"Weidl, Thorsten\"},{\"affiliation\":\"TÜV SÜD (Germany)\",\"name\":\"Jenssen, Ullrich\"},{\"affiliation\":\"Norconsult (Norway)\",\"name\":\"Bredesen, Rolv\"},{\"affiliation\":\"Norconsult (Norway)\",\"name\":\"Ingebrigsten, Karl-Ove\"},{\"affiliation\":\"Renewable Energy Systems Limited\",\"name\":\"Derrick, Alan\"},{\"affiliation\":\"Fluid & Energy Engineering GmbH & Co. KG\",\"name\":\"Hahm, Thomas\"},{\"name\":\"Mäusling, Sliva\"},{\"affiliation\":\"TÜV Nord (Germany)\",\"name\":\"Cromm, Nikolas\"},{\"affiliation\":\"TÜV Nord (Germany)\",\"name\":\"Lautenschalger, Frederik\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15050461"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15050461"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-54\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2022-04-01"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15050461\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "15050462"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.15050462"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15050462"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15050462\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-54"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15050461",
+  "notes": "<p>The aim of these recommendations is to collect the current knowledge of ice fall and ice throw from wind turbines and best-practices from the industry in order to lay the foundation to a more uniform approach and methodologies in the creation of ice fall and ice throw risk assessments internationally. The document at hand therefore covers the main building blocks required to assess the risk of ice fragments to cause harm to persons under or near the wind turbine. This comprises suitable numerical procedures, observational data (in particular on the number and properties and of ice fragments), conceptual approaches for the definition of acceptable risk levels, and possible risk reduction measures.<br />In terms of applicable information and conclusions, the contents of these international recommendations includes the following points:</p>\n<ul>\n<li>The spatial distribution of ice fragments falling or being thrown from the turbine shall be computed from a statistical model.</li>\n<li>The model for calculating the trajectories of ice fragments shall include gravity and aerodynamic drag and consider turbine parameters, operational mode, and site topography.</li>\n<li>Site-specific wind data in at least 10 minutes intervals shall be used.</li>\n<li>The total amount of ice and the number of ice pieces shall be determined from either: scaling of site observations, ice load distribution formulae, or ice accretion simulations.</li>\n<li>The size and mass distributions of the ice pieces need to be considered.</li>\n<li>Long term representativeness of the icing conditions shall be ensured.</li>\n<li>Societal and individual risks shall be considered and taken into account for defining measures.</li>\n<li>The exposure of persons and road traffic to ice fall shall be considered.</li>\n<li>The treatment of uncertainties shall be clearly discussed in the assessment.</li>\n<li>The selection and adoption of risk reduction measures shall be decided on a site-specific basis.</li>\n</ul>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Task-19-Technical-Report-on-International-Recommendations-for-Ice-Fall-and-Ice-Throw-Risk-Assessments.pdf",
+      "url": "https://zenodo.org/records/15050462/files/Task-19-Technical-Report-on-International-Recommendations-for-Ice-Fall-and-Ice-Throw-Risk-Assessments.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "International Recommendations for Ice Fall and Ice Throw Risk Assessments",
+  "url": "https://zenodo.org/records/15050462",
+  "version": "2022"
+}

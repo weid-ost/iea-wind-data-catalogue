@@ -1,0 +1,95 @@
+{
+  "extras": [
+    {
+      "key": "container",
+      "value": "IEA Wind Recommended Practice for the Implementation of Renewable Energy Forecasting Solutions"
+    },
+    {
+      "key": "doi",
+      "value": "10.1016/b978-0-44-318681-3.00047-7"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1016/b978-0-44-318681-3.00047-7"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023"
+    },
+    {
+      "key": "publisher",
+      "value": "Elsevier"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.1016/b978-0-44-318681-3.00047-7"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-09-05T07:29:04Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.1016/b978-0-44-318681-3.00047-7"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.1016/b978-0-44-318681-3.00047-7\",\"https://linkinghub.elsevier.com/retrieve/pii/B9780443186813000477\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-nc-nd",
+  "name": "doi-10-1016-b978-0-44-318681-3-00047-7",
+  "notes": "",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "About the IEA Wind TCP and Task 36 and 51",
+  "url": "https://doi.org/10.1016/b978-0-44-318681-3.00047-7"
+}

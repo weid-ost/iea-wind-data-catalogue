@@ -1,0 +1,122 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Vaisala (United States)\",\"family\":\"Black\",\"given\":\"Andrew\",\"name\":\"Black, Andrew\",\"orcid\":\"0000-0002-2319-4384\"},{\"family\":\"Keefe-Reitzel\",\"given\":\"Dylan\",\"name\":\"Keefe-Reitzel, Dylan\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Letizia\",\"given\":\"Stefano\",\"name\":\"Letizia, Stefano\",\"orcid\":\"0000-0001-5999-0131\"},{\"affiliation\":\"Enel Green Power\",\"family\":\"Valldecabres Sanmartin\",\"given\":\"Laura\",\"name\":\"Valldecabres Sanmartin, Laura\",\"orcid\":\"0000-0002-6943-2018\"},{\"affiliation\":\"DNV\",\"family\":\"Dexter\",\"given\":\"Reesa\",\"name\":\"Dexter, Reesa\"},{\"affiliation\":\"ZX Lidars\",\"family\":\"Medley\",\"given\":\"John\",\"name\":\"Medley, John\"},{\"affiliation\":\"Enel Green Power\",\"family\":\"Pedrayes\",\"given\":\"Maria Jose\",\"name\":\"Pedrayes, Maria Jose\"},{\"affiliation\":\"Bureau Veritas\",\"family\":\"Chang\",\"given\":\"Andy\",\"name\":\"Chang, Andy\"},{\"affiliation\":\"Bureau Veritas\",\"family\":\"Bernadett\",\"given\":\"Dan\",\"name\":\"Bernadett, Dan\"},{\"affiliation\":\"Nordex (Germany)\",\"family\":\"Giyanani\",\"given\":\"Ashim\",\"name\":\"Giyanani, Ashim\"},{\"affiliation\":\"Siemens Gamesa Renewable Energy (Spain)\",\"family\":\"Termignoni\",\"given\":\"Luiza\",\"name\":\"Termignoni, Luiza\"},{\"affiliation\":\"Energie Baden-Württemberg (Germany)\",\"family\":\"Reichert\",\"given\":\"Jens\",\"name\":\"Reichert, Jens\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.19195803"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.19195803"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-23"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.19195802\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.19195803"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-06-23T19:17:58Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.19195803"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19195803\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-19195803",
+  "notes": "This whitepaper describes a new methodology for nacelle-mounted lidar (NML) power performance tests of wind turbines in moderately complex terrain, or as its now known \"Simple+\" Terrain. The methods in this document represent industry consensus with contributions from wind farm developers, independent engineers, wind turbine OEMs, and lidar OEMs. The work was carried out via the International Energy Agency Wind Task 52: Large-scale Deployment of Wind Lidar. Contact Andrew H. Black at andrew.hastingsblack@vaisala.com.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "iea"
+    },
+    {
+      "name": "iea-wind"
+    },
+    {
+      "name": "iea-wind-task-52"
+    },
+    {
+      "name": "lidar"
+    },
+    {
+      "name": "nacelle-mounted-lidar"
+    },
+    {
+      "name": "power-performance-testing"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "IEA Wind Task 52 - Simple+ Whitepaper",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.19195803",
+  "version": "1.0"
+}

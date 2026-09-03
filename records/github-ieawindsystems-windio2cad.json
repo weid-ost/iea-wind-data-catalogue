@@ -1,0 +1,111 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:21:03Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEAWindSystems/windio2cad"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-37\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:21:03Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Apache-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-06-28"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindSystems/windio2cad"
+    },
+    {
+      "key": "source_key",
+      "value": "3a11b38d2c4003c13c9907cbed42f541fa057d9d:v1.1.0:4b2446f55aa313c3"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindSystems/windio2cad"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindSystems/windio2cad\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-37"
+    }
+  ],
+  "license_id": "apache",
+  "name": "github-ieawindsystems-windio2cad",
+  "notes": "",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindSystems/windio2cad"
+    },
+    {
+      "format": "release",
+      "name": "Release v1.1.0",
+      "url": "https://github.com/IEAWindSystems/windio2cad/releases/tag/v1.1.0"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindSystems/windio2cad",
+  "url": "https://github.com/IEAWindSystems/windio2cad",
+  "version": "v1.1.0"
+}

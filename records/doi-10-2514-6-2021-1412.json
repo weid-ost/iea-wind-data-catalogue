@@ -1,0 +1,91 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark\",\"family\":\"McWilliam\",\"given\":\"Michael K.\",\"name\":\"McWilliam, Michael K.\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Zahle\",\"given\":\"Frederik\",\"name\":\"Zahle, Frederik\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Dykes\",\"given\":\"Katherine\",\"name\":\"Dykes, Katherine\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Bortolotti\",\"given\":\"Pietro\",\"name\":\"Bortolotti, Pietro\"},{\"affiliation\":\"Brigham Young University\",\"family\":\"Ning\",\"given\":\"Andrew\",\"name\":\"Ning, Andrew\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Gaertner\",\"given\":\"Evan\",\"name\":\"Gaertner, Evan\"},{\"affiliation\":\"University of Bristol\",\"family\":\"Macquart\",\"given\":\"Terence\",\"name\":\"Macquart, Terence\"},{\"affiliation\":\"SINTEF\",\"family\":\"Merz\",\"given\":\"Karl\",\"name\":\"Merz, Karl\"},{\"affiliation\":\"National Renewable Energy Centre\",\"family\":\"Ruiz\",\"given\":\"Ainara I.\",\"name\":\"Ruiz, Ainara I.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "AIAA Scitech 2021 Forum"
+    },
+    {
+      "key": "doi",
+      "value": "10.2514/6.2021-1412"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2514/6.2021-1412"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-01-04"
+    },
+    {
+      "key": "publisher",
+      "value": "American Institute of Aeronautics and Astronautics"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2514/6.2021-1412"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-05-05T21:17:34Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2514/6.2021-1412"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2514/6.2021-1412\",\"https://arc.aiaa.org/doi/10.2514/6.2021-1412\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2514-6-2021-1412",
+  "notes": "",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Energy Task 37 - System Engineering - Aerodynamic Optimization Case Study",
+  "url": "https://doi.org/10.2514/6.2021-1412"
+}

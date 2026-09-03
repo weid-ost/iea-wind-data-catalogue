@@ -1,0 +1,117 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"TNO\",\"name\":\"Engels, Wouter\"},{\"affiliation\":\"TNO\",\"name\":\"Rotteveel, Roel\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.8318208"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.8318208"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-09-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.8318208\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "8318209"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.8318209"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/8318209"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/8318209\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-8318208",
+  "notes": "<p><strong>Presentation at the Wind Energy Science Conference 2023 as part of the Mini Symposium \"IEA Wind Task 52: Lidar-Assisted Control, Turbulence Estimation, and Digitalization</strong></p>\n\n<p>Scanning LIDARs can provide detailed data on the wind field in a wind farm. This data may then be post processed to understand what the wind conditions were at each wind turbine, and to identify where the wakes ended up. However, ideally, one would be able to use the scanning lidar data to predict the wind field in the wind farm. Ultimately such predictions could be used in a wind farm controller to yaw and pitch just to the extent that is necessary to achieve the required amount of wake steering.<br />\nIn the research presented here, we endeavour to predict the wind conditions around the wind turbine based on a purely data-driven approach based on earlier scanning lidar measurements. Other research on data-driven approaches for wakes have so far involved 2D, simulated data (e.g [2,3]) or have focussed on identifying which bit of the measured data is a wake [4]. In contrast, we will not try to find the wakes as such, but to predict future scans after a series of scans.<br />\nThe research is based on the ECN-NORCOWE measurement campaign acquired at the ECN Wind Turbine Test Station Wieringermeer (EWTW). A Windcube® lidar was positioned such that the image covered the wakes of 3 of the Nordex N-80 turbines and, depending on the wind direction, occasionally the wakes of other turbines can be seen.<br />\nThe approach used here is a staged approach, as is shown in figure 1. First, a convolutional autoencoder (see, e.g. [5]) is trained to decrease the number of measuring points in a scan to a more manageable latent space, while still being able to reproduce an acceptable reproduction of what happens near the wind turbines. This effectively is a form of data compression.<br />\nThe second step is then to train an Long Short-Term Memory [6] with this reduced dataset and use it to predict future latent spaces, that can then be decoded using the auto-encoder.<br />\nThe results so far indicate that this approach shows potential: it outperforms static predictions and simpler approaches (figure 2). For instance, a change in wind direction was predicted several steps ahead (figure 3). However, there is still significant room for improvement.</p>",
+  "owner_org": "tno",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA task minisymposium - Wouter Engels - Using scanning lidar data to predict future wind.pdf",
+      "url": "https://zenodo.org/records/8318209/files/IEA%20task%20minisymposium%20-%20Wouter%20Engels%20-%20Using%20scanning%20lidar%20data%20to%20predict%20future%20wind.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Using scanning lidar data to predict future wind flows",
+  "url": "https://zenodo.org/records/8318209"
+}

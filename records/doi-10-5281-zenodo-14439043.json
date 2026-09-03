@@ -1,0 +1,157 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Meteotest (Switzerland)\",\"name\":\"Froidevaux, Paul\"},{\"affiliation\":\"Nergica\",\"name\":\"Godreau, Charles\",\"orcid\":\"0000-0002-3889-878X\"},{\"name\":\"Rittinghaus, Claas\"},{\"name\":\"Roberge, Patrice\"},{\"name\":\"Bégin-Drolet, André\",\"orcid\":\"0000-0003-3963-5284\"},{\"name\":\"Petterson, Jennifer\"},{\"affiliation\":\"Meteotest (Switzerland)\",\"name\":\"Gerber, Franziska\",\"orcid\":\"0009-0007-2989-1344\"},{\"affiliation\":\"Meteotest (Switzerland)\",\"name\":\"Kopp, Jérôme\",\"orcid\":\"0000-0003-1853-9648\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.14439043"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.14439043"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-54\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "odc-odbl"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-12-13"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.14439043\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "14447171"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.14447171"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/14447171"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/14447171\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-54"
+    }
+  ],
+  "license_id": "odc-odbl",
+  "name": "doi-10-5281-zenodo-14439043",
+  "notes": "<p>The IEA Wind TCP Task 54 deals with \"Cold Climate Wind Power\". Worldwide, most of the major challenges faced by wind turbines in cold climate are related to the icing of rotor blades. In fact, rotor icing can lead to safety risks, production losses and turbine lifetime reduction.</p>\n<p>Today, the vast majority of concrete information on wind turbine icing events is kept confidential for various reasons. Task 54 believes that a concrete and detailed public presentation of icing events will raise awareness among a wide range of stakeholders of the importance and impact of icing on the operation of wind turbines as well as the development of new projects in cold climate areas. Hence, <strong>the icing event database is publicly accessible free of charge.</strong></p>\n<p><strong>Any contribution showing direct or indirect measurements of icing is welcomed!</strong></p>\n<p><span>Contributions should fulfil the criteria listed in the document \"call for contributions.pdf\".</span></p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Read me.pdf",
+      "url": "https://zenodo.org/records/14447171/files/Read%20me.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "PaulFroidevaux_IWAIS2024_Task54_public_icing_events_database.pdf",
+      "url": "https://zenodo.org/records/14447171/files/PaulFroidevaux_IWAIS2024_Task54_public_icing_events_database.pdf"
+    },
+    {
+      "format": "txt",
+      "name": "TermsOfServices.txt",
+      "url": "https://zenodo.org/records/14447171/files/TermsOfServices.txt"
+    },
+    {
+      "format": "zip",
+      "name": "UniLaval_Eastern_Canada.zip",
+      "url": "https://zenodo.org/records/14447171/files/UniLaval_Eastern_Canada.zip"
+    },
+    {
+      "format": "xlsx",
+      "name": "IEAwindT54_IcingEventsDB_Register.xlsx",
+      "url": "https://zenodo.org/records/14447171/files/IEAwindT54_IcingEventsDB_Register.xlsx"
+    },
+    {
+      "format": "pdf",
+      "name": "Call for contributions.pdf",
+      "url": "https://zenodo.org/records/14447171/files/Call%20for%20contributions.pdf"
+    },
+    {
+      "format": "zip",
+      "name": "Nergica_Eastern_Canada.zip",
+      "url": "https://zenodo.org/records/14447171/files/Nergica_Eastern_Canada.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Meteotest_Germany.zip",
+      "url": "https://zenodo.org/records/14447171/files/Meteotest_Germany.zip"
+    },
+    {
+      "format": "zip",
+      "name": "WP3 Performance Envelopes Model.zip",
+      "url": "https://zenodo.org/records/14447171/files/WP3%20Performance%20Envelopes%20Model.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind T54 Public Icing Event Database",
+  "url": "https://zenodo.org/records/14447171"
+}

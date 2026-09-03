@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Pryor\",\"given\":\"Sara C.\",\"name\":\"Pryor, Sara C.\",\"orcid\":\"0000-0003-4847-3440\"},{\"family\":\"Shepherd\",\"given\":\"Tristan J.\",\"name\":\"Shepherd, Tristan J.\",\"orcid\":\"0000-0001-8627-6419\"},{\"family\":\"Barthelmie\",\"given\":\"Rebecca J.\",\"name\":\"Barthelmie, Rebecca J.\",\"orcid\":\"0000-0003-0403-6046\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-3-651-2018"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-3-651-2018"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2018-09-24"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2018-48\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2018-48-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-48-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-48-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-48-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5281/zenodo.1257144\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-3-651-2018"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-02-01T10:27:06Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-3-651-2018"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-3-651-2018\",\"https://wes.copernicus.org/articles/3/651/2018/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-3-651-2018",
+  "notes": "<p>Abstract. The interannual variability (IAV) of expected annual energy production (AEP) from proposed wind farms plays a key role in dictating project financing. IAV in preconstruction projected AEP and the difference in 50th and 90th percentile (P50 and P90) AEP derive in part from variability in wind climates. However, the magnitude of IAV in wind speeds at or close to wind turbine hub heights is poorly defined and may be overestimated by assuming annual mean wind speeds are Gaussian distributed with a standard deviation (σ) of 6 %, as is widely applied within the wind energy industry. There is a need for improved understanding of the long-term wind resource and the IAV therein in order to generate more robust predictions of the financial value of a wind energy project. Long-term simulations of wind speeds near typical wind turbine hub heights over the eastern USA indicate median gross capacity factors (computed using 10 min wind speeds close to wind turbine hub heights and the power curve of the most common wind turbine deployed in the region) that are in good agreement with values derived from operational wind farms. The IAV of annual mean wind speeds at or near typical wind turbine hub heights in these simulations and AEP computed using the power curve of the most commonly deployed wind turbine is lower than is implied by assuming σ=6 %. Indeed, rather than 9 out of 10 years exhibiting AEP within 0.9 and 1.1 times the long-term mean AEP as implied by assuming a Gaussian distribution with σ of 6 %, the results presented herein indicate that in over 90 % of the area in the eastern USA that currently has operating wind turbines, simulated AEP lies within 0.94 and 1.06 of the long-term average. Further, the IAV of estimated AEP is not substantially larger than IAV in mean wind speeds. These results indicate it may be appropriate to reduce the IAV applied to preconstruction AEP estimates to account for variability in wind climates, which would decrease the cost of capital for wind farm developments.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Interannual variability of wind climates and wind turbine annual energy production",
+  "url": "https://doi.org/10.5194/wes-3-651-2018"
+}

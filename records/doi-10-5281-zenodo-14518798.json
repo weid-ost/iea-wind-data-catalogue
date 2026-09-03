@@ -1,0 +1,147 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Gottschall, Julia\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.14518798"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.14518798"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-12-18"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.14518798\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "14518799"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.14518799"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/14518799"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/14518799\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-14518798",
+  "notes": "<p>Advancements in wind lidars and remote sensing technology allowed our research community to gain an unprecedented insight into the aerodynamics of wind turbines and their interaction with the atmospheric processes. The International Energy Agency (IEA) Wind Technology Collaboration Program (TCP) Task 52 focuses on the development of integration lidar systems and the creation of guidelines to enhance the penetration of this technology into the wind energy industry at a large scale. To achieve this overarching goal,</p>\n<p>For the first time, the NAWEA/WindTech Conference 2024 hosted a side meeting for Task 52 on Tuesday, Oct 29<sup>th</sup>, 8am – 12pm ET. World experts in lidar and remote sensing convened to touch base on the status of the Task and discuss the latest scientific endeavors. The main goals of the meeting have been to foster the engagement of US-based industry, national labs, and academia, explore the potential of new remote sensing technologies for wind energy, and reassess the future steps of Task 52 in light of the new scientific, technological, and social landscape.</p>\n<p>Agenda:</p>\n<ul>\n<li>Julia Gottschall (Task 52 Operating Agent / Fraunhofer IWES): Welcome note, overview of Task 52 and subgroups (see <em>20241029_NAWEA_Task-52_side-event_Gottschall.pdf</em>)</li>\n<li>Pat Moriarty (NREL): Overview of lidar efforts in US (see <em>20241029_NAWEA_Task-52_side-event_Moriarty.pdf</em>)</li>\n<li>Sonia Wharton and Matteo Puccioni (LLNL): Wind resource assessment over complex terrain based on LiDAR measurements (see <em>20241029_NAWEA_Task-52_side-event_Puccioni.pdf</em>)</li>\n<li>Jakob Mann (DTU): Future plans ~ wind lidar at DTU </li>\n<li>Griffin Modjeski (UND): Lidar Deployments during SWEX and WFIP-3 Field Campaigns (see <em>20241029_NAWEA_Task-52_side-event_Modjeski.pdf</em>)</li>\n<li>Robert Jackson (ANL): An adaptive system for detecting rotor layer turbulence using Edge computing (see <em>20241029_NAWEA_Task-52_side-event_Jackson.pdf</em>)</li>\n<li>Storm Mata (MIT): Wind Profile Reconstruction in the Atmospheric Boundary Layer with Conditional Diffusion Model</li>\n<li>Normal Wildman (DLR): Turbulence and gust retrievals with profiling Doppler wind lidar, new retrievals and validation at the WiValdi research park (see <em>20241029_NAWEA_Task-52_side-event_Wildmann.pdf</em>)</li>\n<li>Stefano Letizia (NREL): Quick demo - LiDARGO, LiSBOA lidar processing codes (see <em>20241029_NAWEA_Task-52_side-event_Letizia.pdf</em>) </li>\n</ul>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "20241029_NAWEA_Task-52_side-event_Puccioni.pdf",
+      "url": "https://zenodo.org/records/14518799/files/20241029_NAWEA_Task-52_side-event_Puccioni.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20241029_NAWEA_Task-52_side-event_Wildmann.pdf",
+      "url": "https://zenodo.org/records/14518799/files/20241029_NAWEA_Task-52_side-event_Wildmann.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20241029_NAWEA_Task-52_side-event_Letizia.pdf",
+      "url": "https://zenodo.org/records/14518799/files/20241029_NAWEA_Task-52_side-event_Letizia.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20241029_NAWEA_Task-52_side-event_Gottschall.pdf",
+      "url": "https://zenodo.org/records/14518799/files/20241029_NAWEA_Task-52_side-event_Gottschall.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20241029_NAWEA_Task-52_side-event_Jackson.pdf",
+      "url": "https://zenodo.org/records/14518799/files/20241029_NAWEA_Task-52_side-event_Jackson.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20241029_NAWEA_Task-52_side-event_Modjeski.pdf",
+      "url": "https://zenodo.org/records/14518799/files/20241029_NAWEA_Task-52_side-event_Modjeski.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20241029_NAWEA_Task-52_side-event_Moriarty.pdf",
+      "url": "https://zenodo.org/records/14518799/files/20241029_NAWEA_Task-52_side-event_Moriarty.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "NAWEA WindTech 2024 Side Event - IEA Wind Task 52",
+  "url": "https://zenodo.org/records/14518799"
+}

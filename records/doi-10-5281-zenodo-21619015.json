@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Brandetti\",\"given\":\"L.\",\"name\":\"Brandetti, L.\"},{\"family\":\"Cavalli\",\"given\":\"M.\",\"name\":\"Cavalli, M.\"},{\"family\":\"Chattopadhyay\",\"given\":\"S.\",\"name\":\"Chattopadhyay, S.\"},{\"family\":\"Cressall\",\"given\":\"S.\",\"name\":\"Cressall, S.\"},{\"family\":\"Eichelmann\",\"given\":\"T.\",\"name\":\"Eichelmann, T.\"},{\"family\":\"Fruehmann\",\"given\":\"R. K.\",\"name\":\"Fruehmann, R. K.\"},{\"family\":\"Haghshenas\",\"given\":\"A.\",\"name\":\"Haghshenas, A.\"},{\"family\":\"Hansen\",\"given\":\"A.\",\"name\":\"Hansen, A.\"},{\"family\":\"Macdonald\",\"given\":\"E.\",\"name\":\"Macdonald, E.\"},{\"family\":\"Parker\",\"given\":\"Z.\",\"name\":\"Parker, Z.\"},{\"family\":\"Rabhi\",\"given\":\"H.\",\"name\":\"Rabhi, H.\"},{\"family\":\"Steudel\",\"given\":\"D.\",\"name\":\"Steudel, D.\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.21619015"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.21619015"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21619014\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.21619015"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-07-27T06:52:45Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.21619015"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.21619015\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-21619015",
+  "notes": "This white paper presents a new set of performance metrics for assessing the ability of vertical profiling lidar systems to measure turbulence intensity (TI) for wind turbine load assessment applications. In contrast to existing approaches, which typically rely on correlations of 10-minute averaged TI values, the proposed methodology applies load-relevant metrics — namely effective turbulence intensity, damage index, and representative TI based on the 90% quantile—directly when comparing lidar-derived TI to collocated reference measurements from cup anemometers. By evaluating the same derived quantities that are used in wind turbine load calculations, the approach removes the ambiguity inherent in correlation-based assessments and provides a clearer link between measurement performance and downstream application relevance. In addition, the paper proposes a testing framework that supports the incremental compilation of a database of TI assessment results over time. Rather than requiringa single, exhaustive test campaign, this framework enables new products — such as TI correction methodologies or updated reconstruction algorithms — to be introduced with an initially limited scope of validated conditions that can be systematically expanded as further evidence becomes available.This pragmatic approach acknowledges the uncontrollable nature of environmental conditions during free-field testing while promoting transparency, comparability, and confidence in the use of lidar-derived TI for wind turbine load assessments. The paper reflects the consensus findings of an IEA Task 52 working group, based on collective discussions and complementary investigations carried out by individual members.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 52 WG1: A proposal for new metrics to evaluate lidar-measured TI (White Paper)",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.21619015"
+}

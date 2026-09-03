@@ -1,0 +1,95 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Ramya Niranjan\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.17632/vskgsgnwj8"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.17632/vskgsgnwj8"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2022-05-31T12:35:31.111"
+    },
+    {
+      "key": "publisher",
+      "value": "Mendeley"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.17632/vskgsgnwj8"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-05-01T06:35:32Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://data.mendeley.com/datasets/vskgsgnwj8"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://data.mendeley.com/datasets/vskgsgnwj8\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-17632-vskgsgnwj8",
+  "notes": "This dataset contains the input files to perform the time-domain coupled simulations described in our paper [1] to obtain the dynamic response of the recently released International Energy Agency 15 MW reference wind turbine [2] supported by UMaine Volturn US-S semi-submersible platform [3] using open-source code OpenFAST v2.4.0 [4]. We have carried out extensive simulations as per International Electrochemical Commission standards 61400-1 and 61400-3 to compute the design loads and response. Firstly, to obtain the full-system natural frequencies, linearization was carried out using OpenFAST (version pull 537). The data files for performing linearization are shared in the folder named 15MW_linearization. After performing linearization, the full-system natural frequencies were obtained using the multi-blade coordinate (MBC) transformation followed by eigenanalysis which is implemented in python code, pyMBC3 and is publicly made available in the Github repository [5]. To obtain the platform stiffness, damping, added mass, first and second order excitation forces, numerical simulation was carried out using ANSYS AQWA, boundary element method based solver. All the above parameters are computed with different wave angle of attacks (-30,0,+30). Static equilibrium analysis for checking the stability of the floating offshore wind turbine was carried out and the respective input data files are shared in the folder named 15MW_static. The dynamic analysis was carried out for design load cases (DLCs) power production (1.1, 1.3, 1.4, 1.5, 1.6), power production+fault (2.1, 2.3), parked (6.1, 6.2, 6.3), parked+fault (7.1). The data files for different DLCs are located in the folders named as 15MW_DLCXX_YY, where XX denotes the DLC serial number and YY denotes the wind velocity. Also, a readme text file describing the parameters used in all the simulations is shared. \nReferences\n1)\tNiranjan, R. and Ramisetti, S.B., 2022. Insights from detailed numerical investigation of 15 MW offshore semi-submersible wind turbine using aero-hydro-servo-elastic code. Ocean Engineering, 251, p.111024.\n2)\tGaertner, E., Rinker, J., Sethuraman, L., Zahle, F., Anderson, B., Barter, G.E., Abbas, N.J., Meng, F., Bortolotti, P., Skrzypinski, W. and Scott, G.N., 2020. IEA wind TCP task 37: definition of the IEA 15-megawatt offshore reference wind turbine (No. NREL/TP-5000-75698). National Renewable Energy Lab.(NREL), Golden, CO (United States).\n3)\tAllen, C., Viscelli, A., Dagher, H., Goupee, A., Gaertner, E., Abbas, N., Hall, M. and Barter, G., 2020. Definition of the UMaine VolturnUS-S reference platform developed for the IEA Wind 15-megawatt offshore reference wind turbine (No. NREL/TP-5000-76773). National Renewable Energy Lab.(NREL), Golden, CO (United States).\n4)\tNREL, 2021b. OpenFAST. NREL, URL: https://github.com/OpenFAST/openfast.\n5)\tRamisetti, S.B., 2020. pyMBC3: MBC3 in Python. URL: https://github.com/ramisetti/pyMBC3.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Data for insights from detailed numerical investigation of 15 MW offshore semi-submersible wind turbine using aero-hydro-servo-elastic code",
+  "url": "https://data.mendeley.com/datasets/vskgsgnwj8"
+}

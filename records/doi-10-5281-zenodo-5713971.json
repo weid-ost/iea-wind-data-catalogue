@@ -1,0 +1,121 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"DNV\",\"name\":\"Jakob von Eisenhart-Rothe\"},{\"affiliation\":\"OWC\",\"name\":\"Jens Riechert\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"name\":\"David Schlipf\",\"orcid\":\"0000-0002-0189-6422\"},{\"name\":\"Bastian Schmidt\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5713971"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5713971"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-11-19"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5713971\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "5713972"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.5713972"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5713972"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5713972\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5713971",
+  "notes": "<p>Documentation on IEA Wind Task 32 Round Robin on Nacelle-based lidar TI</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "20211111_IEA Task 32 - Nacelle Lidar TI RR - Documentation.pdf",
+      "url": "https://zenodo.org/records/5713972/files/20211111_IEA%20Task%2032%20-%20Nacelle%20Lidar%20TI%20RR%20-%20Documentation.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "lidar-wind-energy-turbulence-intensity"
+    }
+  ],
+  "title": "Round Robin on turbulence estimates from nacelle mounted Lidar systems",
+  "url": "https://zenodo.org/records/5713972"
+}

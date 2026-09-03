@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"sowento GmbH\",\"name\":\"Thomas, Florian\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"sowento GmbH\",\"name\":\"Raach, Steffen\",\"orcid\":\"0000-0002-1264-0422\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science Conference 2021"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5004523"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5004523"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-06-21"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5004523\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "5004524"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.5004524"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5004524"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5004524\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5004523",
+  "notes": "<p><strong>Presentation at the Wind Energy Science Conference 2021</strong></p>\n\n<p>Lidar-assisted control (LAC) has been so far successfully tested for onshore wind turbines and shows promising potential to reduce the LCOE of large offshore wind turbines [1]. This approach is also considered promising for floating offshore wind turbines (FOWT) [3]. However, due to the high motion of the whole system and the blockage of laser beams by the blades, the baseline lidar data processing (LDP) algorithms currently implemented on lidar devices provide a highly disturbed wind speed preview signal. This work aims to outline the possibilities of smart lidar systems on FOWT and show the benefits of an improved LDP algorithm including motion compensation and blade ghost avoidance.</p>\n\n<p>The work is conducted within the VAMOS project, a German-French research project for deep-water offshore wind energy. The main objective of this project is to close knowledge gaps in the measurement and simulation of FOWT systems for commercial use.</p>\n\n<p>As lidar devices only detect the relative velocity, the measurements are affected by the movement of the system itself due to waves and wind [2]. In order to compensate the influence of this motion on the measured line-of-sight velocities, data from an inertial measurement unit (IMU) located in the turbine's nacelle is used. First, in order to derive the correct longitudinal wind component, the actual lidar measurement location is calculated using the Euler angles of the IMU. Second, this information is combined with the velocity measurements from the IMU in order to deduct the velocity induced by the turbine motion from the measured line-of-sight wind velocity [5].</p>\n\n<p>Subsequently, the consecutive measurements of one full scan are combined to one estimate of the rotor-effective wind speed (REWS). If one or more measurements of the current scan are unavailable, the averaging becomes unbalanced. As nacelle-based lidar systems are mainly located on top of the nacelle behind the rotor plane, the main source of unavailability is the blockage of the lidar beams by the bypassing rotor planes, causing interferences, which we named the blade ghost effect. In this work the LDP has been extended by a blade ghost avoidance algorithm, which uses an interpolated or previous value of the same beam, if the measurement from the current scan is unavailable [4].</p>\n\n<p>The described algorithms are implemented on an additional PC in the nacelle, processing Dynamic Link Libraries which can be also loaded in aero-elastic tools [5], following the \"Smart Lidar\" concept. Results demonstrate that the influences of the blade ghost effect and the movement of the system could both be significantly reduced. The motion compensation almost completely eliminates the wave-induced peak in the spectrum of the raw REWS estimate. The blade ghost avoidance additionally leads to a significant reduction of interferences in higher frequencies. Overall, the spectrum of the final signal fits well to the theoretical lidar spectrum based on turbulence models, indicating that it mostly contains wind information and can be used for LAC.</p>\n\n<p>Further works will include the application of an extended multi-distance LDP algorithm and the inclusion of these measurements in the turbine's control loop by a feed-forward controller.</p>\n\n<p> </p>\n\n<p><strong>References:</strong></p>\n\n<p>[1] H. Canet, S. Loew, and C. L. Bottasso. What are the benefits of lidar-assisted control in the design of a wind turbine? \"Wind Energy Science Discussions\", 2020:1-23, 2020. doi:10.5194/wes-2020-131.</p>\n\n<p>[2] F. Kelberlau, V. Neshaug, L. Lonseth, T. Bracchi, and J. Mann. Taking the motion out of floating lidar: Turbulence intensity estimates with a continuous-wave wind lidar. \"Remote Sensing\", 12(5), 2020. doi:10.3390/rs12050898.</p>\n\n<p>[3] D. Schlipf, E. Simley, F. Lemmer, L. Pao, and P. W. Cheng. Collective pitch feedforward control of floating wind turbines using LIDAR. \"Journal of Ocean and Wind Energy\", 2(4):440-447, July 2015. doi:10.17736/jowe.2015.arr04.</p>\n\n<p>[4] D. Schlipf, S. Raach, and F. Haizmann. Control system for controlling a turbine, method for controlling a turbine, and wind turbine, 2019. Patent WO2019097092A2.</p>\n\n<p>[5] D. Schlipf, F. Lemmer, S. Raach, et al. Multi-variable feedforward control for floating wind turbines using lidar. In \"The 30th International Ocean and Polar Engineering Conference\". International Society of Offshore and Polar Engineers, 2020. doi:10.18419/opus-11067.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "WESC2021_SmartLidarFOWT_Handout.pdf",
+      "url": "https://zenodo.org/records/5004524/files/WESC2021_SmartLidarFOWT_Handout.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "smart-lidar-motion-compensation-lidar-data-processing-floating-wind-turbine-lidar-assisted-control"
+    }
+  ],
+  "title": "Smart Lidar Systems for Floating Offshore Wind Turbines",
+  "url": "https://zenodo.org/records/5004524",
+  "version": "1.0"
+}

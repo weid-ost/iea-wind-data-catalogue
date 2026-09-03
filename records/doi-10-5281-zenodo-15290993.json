@@ -1,0 +1,187 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Simley\",\"given\":\"Eric\",\"name\":\"Simley, Eric\",\"orcid\":\"0000-0002-1027-9848\"},{\"affiliation\":\"Goldwind (China Beijing)\",\"family\":\"Bing\",\"given\":\"Wang\",\"name\":\"Bing, Wang\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15290993"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15290993"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-04-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15290993\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.15290994\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "15290994"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.15290994"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15290994"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15290994\",\"https://zenodo.org/doi/10.5281/zenodo.15290993\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15290993",
+  "notes": "Workshop on Advancing Wind Farm Flow Control through Sensors and Algorithms\n\nOn October 14 and 15, the IEA Wind Task 44/Task 52 Workshop on “Advancing Wind Farm Flow Control through Sensors and Algorithms” took place at the Goldwind Science &amp; Technology Park in Beijing. Around 30 participants from Europe, America and Asia attended in person and more than 30 participants joined online. Workshop participants presented the latest research results, industrial needs and challenges related to optimizing wind farm operation and discussed opportunities for improving wind farm flow control using sensors and algorithms.\n\nBackground\n\nWind farm flow control is a control strategy in which individual wind turbines are controlled to achieve plant-level objectives, such as increasing energy production or reducing structural loads, by mitigating the impact of wake interactions. Although commercial adoption of wind farm flow control (e.g., wake steering) is growing, determining the most effective use of sensors and algorithms for maximizing the benefits of the technology is still an active area of research.\n\nThe aim of this workshop is to combine the experience of wind farm owners and the wind farm control and wind energy sensor communities to identify how sensors and algorithms can be used to improve the performance of wind farm flow control. Although lidars are one of the most widely deployed types of wind sensors in the wind industry, a wide variety of sensors will be considered in the workshop, including lidar, radar, nacelle instrumentation, blade sensors, pressure sensors, sound emission sensors, and more. Further, algorithms that use the measurements from these sensors to improve wind farm flow control performance will be discussed as well.\n\nObjective\n\n\n\n\nThe objectives of the workshop are to bring together researchers and industry experts to address the following questions:\n\n\n\nWhat are the challenges and needs for wind farm operation?\n\nWhat information is needed to improve the effectiveness of wind farm control?\n\nWhat are the capabilities and experience with available sensors and algorithms for wind farm control?\n\nHow can we improve sensors and algorithms for wind farm control?\n\n\nAgenda Monday, October 14, 2024\n\n09:00-09:30: Registration at venue (in-person)09:30-09:45: Opening address by Goldwind leader (in-person)09:45-10:30: Presentations: What are the challenges and needs for optimizing wind farm operation? (hybrid)\n\n\n\nMa ZhiYuan, Wind Power Innovation Center of SPIC (In person)\n\nLi ChuanFeng, Goldwind, \"Goldwind's Exploration of Intelligent Wind Turbines\" (In person)\n\nEric Simley, National Renewable Energy Laboratory, \"Overview of wind farm control\" (Online)\n\n\n10:30-10:45: Break10:45-11:45: Presentations: What are opportunities for sensors to improve wind farm control? (hybrid)\n\n\n\nPaul Fleming, National Renewable Energy Laboratory, \"Consensus wind direction estimation and yaw control using wind turbine information sharing\" (Online)\n\nDavid Schlipf, Flensburg University of Applied Sciences,\"Lidar-assisted control by retrofitting wind farms\" (In person)\n\nJie Yan, North China Electric Power University, \"Wind Prediction based on Lidar for Wind Farm Wake Control\" (In person)\n\nWang Bin, Goldwind, \"Application of Intelligent Optimization Technology for Power Generation Improvement\" (In person)\n\n\n11:45-12:00: Break12:00-13:00: Presentations: What are opportunities for sensors to improve wind farm control? (hybrid)\n\n\n\nMichael Hoppe, IAV, \"How to make use of model predictive turbine control on wind farm level\" (Online)\n\nLuuk Sengers, Fraunhofer IWES, \"Increased power gains from wake steering control using preview wind direction information\" (Online)\n\nSteffen Raach, sowento, \"Next generation lidar-assisted control\" (Online)\n\n\n13:00-13:30: Group discussion (hybrid)13:30-14:20: Lunch14:30-15:30: Goldwind Smart Energy Park visit (in-person)16:00-17:30: Group discussion (hybrid)\n\nAgenda Tuesday, October 15, 2024\n\n10:00-11:00: Presentations: What are the capabilities and experience with available sensors and algorithms for wind farm control? Part 1 (hybrid)\n\n\n\nZhi Liang, Vaisala, \"Measurement capability and potential applications of wind Lidars for wind farm operation\" (In person)\n\nFeng Guo, Shanghai Jiao Tong University, \"On wind directions estimated by nacelle-lidar under different wind field reconstruction methods\" (In person)\n\nLiu Zhixin, Molas, \"Application of laser technology in wind farms\" (In person)\n\n\n11:00-11:15: Break11:15-12:30: Presentations: What are the capabilities and experience with available sensors and algorithms for wind farm control? Part 2 (hybrid)\n\n\n\nSusumu Shimada, AIST, \"Near-shore wind measurement using scanning LiDARs\" (Online)\n\nCarlo Bottasso, Technical University of Munich, “The rotor as a sensor” (Online)\n\nPaolino Tona, IFP Energies nouvelles, “Benefits of reducing uncertainty in free-flow wind estimation for wake steering control via an innovative nacelle-mounted multi-sensor” (Online)\n\n\n12:30-13:00: Group discussion (hybrid)",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Liang2024 - Measurement capability and potential applications of wind Lidars for wind farm operation.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Liang2024%20-%20Measurement%20capability%20and%20potential%20applications%20of%20wind%20Lidars%20for%20wind%20farm%20operation.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Shimada2024 - Near-shore wind measurement using scanning LiDARs.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Shimada2024%20-%20Near-shore%20wind%20measurement%20using%20scanning%20LiDARs.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Raach2024 - Next generation lidar-assisted control.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Raach2024%20-%20Next%20generation%20lidar-assisted%20control.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Liu2024 - Application of laser technology in wind farms.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Liu2024%20-%20Application%20of%20laser%20technology%20in%20wind%20farms.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Hoppe2024 - How to make use of model predictive turbine control on wind farm level.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Hoppe2024%20-%20How%20to%20make%20use%20of%20model%20predictive%20turbine%20control%20on%20wind%20farm%20level.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Schlipf2024c -Lidar-Assisted Control by Retrofitting Wind Farms.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Schlipf2024c%20-Lidar-Assisted%20Control%20by%20Retrofitting%20Wind%20Farms.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Yan2024 - 1-minute ahead wind prediction for wind farm wake steering control.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Yan2024%20-%201-minute%20ahead%20wind%20prediction%20for%20wind%20farm%20wake%20steering%20control.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Bottasso2024 - The rotor as a sensor.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Bottasso2024%20-%20The%20rotor%20as%20a%20sensor.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Tona2024 - Benefits of reducing uncertainty in free-flow wind estimation for wake steering control via an innovative nacelle-mounted multi-sensor.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Tona2024%20-%20Benefits%20of%20reducing%20uncertainty%20in%20free-flow%20wind%20estimation%20for%20wake%20steering%20control%20via%20an%20innovative%20nacelle-mounted%20multi-sensor.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Bin2024 - Application of Intelligent Optimization Technology for Power Generation Improvement.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Bin2024%20-%20Application%20of%20Intelligent%20Optimization%20Technology%20for%20Power%20Generation%20Improvement.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Chuanfeng2024 - Goldwind's Exploration of Intelligent Wind Turbines.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Chuanfeng2024%20-%20Goldwind%27s%20Exploration%20of%20Intelligent%20Wind%20Turbines.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Fleming2024 - Consensus wind direction estimation and yaw control using wind turbine information sharing.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Fleming2024%20-%20Consensus%20wind%20direction%20estimation%20and%20yaw%20control%20using%20wind%20turbine%20information%20sharing.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Sengers2024 - Increased power gains from wake steering control.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Sengers2024%20-%20Increased%20power%20gains%20from%20wake%20steering%20control.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Simley2024 - Overview of Wind Farm Flow Control.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Simley2024%20-%20Overview%20of%20Wind%20Farm%20Flow%20Control.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Guo2024 - On wind directions estimated by nacelle-lidar under different wind field reconstruction methods.pdf",
+      "url": "https://zenodo.org/records/15290994/files/Guo2024%20-%20On%20wind%20directions%20estimated%20by%20nacelle-lidar%20under%20different%20wind%20field%20reconstruction%20methods.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 44 and 52 Workshop on Advancing Wind Farm Flow Control through Sensors and Algorithms",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15290993"
+}

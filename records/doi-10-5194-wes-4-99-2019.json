@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Stanley\",\"given\":\"Andrew P. J.\",\"name\":\"Stanley, Andrew P. J.\"},{\"family\":\"Ning\",\"given\":\"Andrew\",\"name\":\"Ning, Andrew\",\"orcid\":\"0000-0003-2190-823X\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-4-99-2019"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-4-99-2019"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-01-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2018-54\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2018-54-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-54-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-54-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-54-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2018-54-ac3\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5281/zenodo.2530839\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-4-99-2019"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-02-01T08:21:18Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-4-99-2019"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-4-99-2019\",\"https://wes.copernicus.org/articles/4/99/2019/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-4-99-2019",
+  "notes": "<p>Abstract. In this study, wind farms were optimized to show the benefit of coupling complete turbine design and layout optimization as well as including two different turbine designs in a fixed 1-to-1 ratio in a single wind farm. For our purposes, the variables in each turbine optimization include hub height, rotor diameter, rated power, tower diameter, tower shell thickness, and implicit blade chord-and-twist distributions. A 32-turbine wind farm and a 60-turbine wind farm were both considered, as well as a variety of turbine spacings and wind shear exponents. Structural constraints as well as turbine costs were considered in the optimization. Results indicate that coupled turbine design and layout optimization is superior to sequentially optimizing turbine design, then turbine layout. Coupled optimization results in an additional 2 %–5 % reduction in the cost of energy compared to optimizing sequentially for wind farms with turbine spacings of 8.5–11 rotor diameters. Smaller wind farms benefit even more from coupled optimization. Furthermore, wind farms with closely spaced wind turbines can greatly benefit from nonuniform turbine design throughout the farm. Some of these wind farms with heterogeneous turbine design have an additional 10 % cost-of-energy reduction compared to wind farms with identical turbines throughout the farm.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Coupled wind turbine design and layout optimization with nonhomogeneous wind turbines",
+  "url": "https://doi.org/10.5194/wes-4-99-2019"
+}

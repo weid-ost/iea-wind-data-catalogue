@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Lehmann\",\"given\":\"Felix\",\"name\":\"Lehmann, Felix\",\"orcid\":\"0009-0008-7434-2616\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"University of Warwick\",\"family\":\"ZHANG\",\"given\":\"Jincheng\",\"name\":\"ZHANG, Jincheng\",\"orcid\":\"0000-0003-3319-2478\"},{\"affiliation\":\"Universidad de la República\",\"family\":\"Correa\",\"given\":\"Santiago\",\"name\":\"Correa, Santiago\",\"orcid\":\"0000-0002-8520-3047\"},{\"affiliation\":\"sowento GmbH\",\"family\":\"Pérez Brovia\",\"given\":\"Santiago\",\"name\":\"Pérez Brovia, Santiago\",\"orcid\":\"0009-0003-6602-4419\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schedat\",\"given\":\"Marcel\",\"name\":\"Schedat, Marcel\",\"orcid\":\"0009-0009-0491-0187\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Weich\",\"given\":\"Simon\",\"name\":\"Weich, Simon\",\"orcid\":\"0009-0009-5300-6151\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.21728616"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.21728616"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-31"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21728615\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.21728616"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-07-31T21:49:43Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.21728616"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.21728616\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-21728616",
+  "notes": "Following the success of the Lidar-Assisted-Control (LAC) Summer Games in 2024 and 2025, this new edition builds on the lessons learned that were presented at the Wind Energy Science Conference in June 2025 [1] and at the LAC working group meeting [2].  From an educational perspective, the Summer Games 2024 proved to be a great opportunity for problem-based learning and encouraging collaboration between universities and professionals from industry. In total, 15 contributions from students and professionals across 6 countries have been submitted to three different disciplines. From the 15 contributions, 7 detailed descriptions have been uploaded to the IEA Wind Task 52 community on Zenodo. The Summer Games 2025 focused more on Students and on updated scenarios and more realistic wind conditions. In total, 7 student contributions from across 3 countries have been submitted to two different disciplines. From all contributions, detailed descriptions have been uploaded to Zenodo. At the same time, the experience showed how challenging it is to design LAC exercises that are realistic enough to be meaningful, yet manageable within a limited timeframe. For the Summer Games 2026, we want to continue this collaborative format with a challenge focusing on real world data.\n\n[1]         Schlipf, D., Weich, S., Raach, S., and Guo. F.: Evaluation and Lessons Learned from the Lidar-Assisted Control Summer Games 2024. Presentation at Wind Energy Science Conference. DOI: 10.5281/zenodo.16105260, 2025.\n\n[2]         Schlipf, D., Guo, F., van den Broek, M., Weich, S. and Preuschoff, J.: Evaluation of the Lidar-Assisted Control Summer Games 2025 and Update on LAC Open Source Tools. Zenodo. DOI: 10.5281/zenodo.20625931, 2026.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 52 LAC Summer Games 2026",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.21728616"
+}

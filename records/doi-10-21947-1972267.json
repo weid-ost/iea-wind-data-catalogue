@@ -1,0 +1,100 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Bergua, Roger\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.21947/1972267"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:40Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.21947/1972267"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:40Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-12"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"1972267\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "1972267"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-12T18:17:33Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/1972267"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/1972267\",\"https://www.osti.gov/dataexplorer/biblio/dataset/1972267\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-21947-1972267",
+  "notes": "Campaign IV of the Floating Offshore-wind Controls Advanced Laboratory Experimental Program (FOCAL) aimed to generate a dataset enabling the validation of a floating offshore wind turbine with turbine and hull controls. The turbine considered in this campaign is the scaled IEA 15MW Reference Wind Turbine similar to the setup considered in FOCAL Campaign I. This turbine is mounted on the VolturnUS platform with integrated hull controls similar to the hull considered in FOCAL Campaign II/III. This system is deployed for a fully-coupled wind and wave testing campaign at the University of Maine's Harold Alfond Wind and Wave (W2) facility. System dynamics and turbine characteristics are measured to determine global performance and assess the effect of the control strategies employed. NREL's reference open-source controller (ROSCO) is used for active blade pitch control and hull structural control is examined through the use of tuned mass dampers (TMD's) tuned to the systems pitch and tower-bending natural frequency.\n\nThe naming convention of the load cases considered are described in the data details section.\n\nDetailed properties on the modeled system are found in the following reference: Lenfest E., Floating Offshore-wind Controls Advanced Laboratory (FOCAL) Experimental Program - Campaign IV: 1:70 Model-scale Testing of the IEA-Wind 15MW Reference Turbine and the VolturnUS-S Platform. UMaine ASCC Report Number 23-57-1183.",
+  "owner_org": "pnnl",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/1972267"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    }
+  ],
+  "title": "FOCAL Campaign IV: Integrated System Control: Turbine + Hull",
+  "url": "https://www.osti.gov/biblio/1972267"
+}

@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States). National Wind Technology Center\",\"name\":\"Bergua, R.\",\"orcid\":\"0000-0003-4703-4729\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States). National Wind Technology Center\",\"name\":\"Carmo, L.\",\"orcid\":\"0000-0001-8744-1391\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States). National Wind Technology Center\",\"name\":\"Jonkman, J.\",\"orcid\":\"0000-0003-2990-7362\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States). National Wind Technology Center\",\"name\":\"Robertson, A.\",\"orcid\":\"0000-0001-7448-4632\"},{\"affiliation\":\"Bureau Veritas Marine & Offshore (BVMO), Paris (France)\",\"name\":\"Tessier, L.\"},{\"affiliation\":\"Bureau Veritas Marine & Offshore (BVMO), Paris (France)\",\"name\":\"de Lauzon, J.\"},{\"affiliation\":\"Centre Internacional de Mètodes Numèrics a l’Enginyeria (CIMNE), Barcelona (Spain)\",\"name\":\"Berdugo-Parada, I.\"},{\"affiliation\":\"Universidad Politécnica de Madrid (UPM) (Spain)\",\"name\":\"Garcia-Espinosa, J.\"},{\"affiliation\":\"Centre Internacional de Mètodes Numèrics a l’Enginyeria (CIMNE), Barcelona (Spain)\",\"name\":\"Servan-Camas, B.\"},{\"affiliation\":\"DNV, Shanghai (China)\",\"name\":\"Yu, J.\"},{\"affiliation\":\"Norwegian University of Science and Technology (NTNU), Trondheim (Norway)\",\"name\":\"Rajasree, V. R. N.\"},{\"affiliation\":\"Norwegian University of Science and Technology (NTNU), Trondheim (Norway)\",\"name\":\"Abdelmoteleb, S. -E.\"},{\"affiliation\":\"Norwegian University of Science and Technology (NTNU), Trondheim (Norway)\",\"name\":\"Bachynski-Polić, E.\"},{\"affiliation\":\"Marine Offshore Renewable Energy Laboratory (PLTO), Torino (Italy)\",\"name\":\"Niosi, F.\"},{\"affiliation\":\"Marine Offshore Renewable Energy Laboratory (PLTO), Torino (Italy)\",\"name\":\"Dell’Edera, O.\"},{\"affiliation\":\"Marine Offshore Renewable Energy Laboratory (PLTO), Torino (Italy)\",\"name\":\"Bracco, G.\"},{\"affiliation\":\"PRINCIPIA, La Ciotat (France)\",\"name\":\"Nicolini, T.\"},{\"affiliation\":\"PRINCIPIA, La Ciotat (France)\",\"name\":\"Heurtier, J. M.\"},{\"affiliation\":\"PRINCIPIA, La Ciotat (France)\",\"name\":\"Cunff, C. Le\"},{\"affiliation\":\"Shanghai Jiao Tong Univ. (China)\",\"name\":\"Cheng, Z.\"},{\"affiliation\":\"Shanghai Jiao Tong Univ. (China)\",\"name\":\"Shao, W.\"},{\"affiliation\":\"Shanghai Jiao Tong Univ. (China)\",\"name\":\"Zhou, W.\"},{\"affiliation\":\"sowento GmbH, Stuttgart (Germany)\",\"name\":\"Albers, M.\"},{\"affiliation\":\"sowento GmbH, Stuttgart (Germany)\",\"name\":\"Lemmer, F.\"},{\"affiliation\":\"Technische Univ. Berlin (Germany)\",\"name\":\"Marten, D.\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Rahman, S.\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Sarker, D.\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Ngo, T.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics. Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/3224/8/082024"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:39Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/3224/8/082024"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:39Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-01"
+    },
+    {
+      "key": "publisher",
+      "value": "IOP Publishing"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3376224\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-98761\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/3376224\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-98761"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3376224"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-25T14:27:23Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3376224"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3376224\",\"https://www.osti.gov/pages/biblio/3376224\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1088-1742-6596-3224-8-082024",
+  "notes": "This paper presents results from Phase II of the OC7 project, focusing on hydroelastic modeling and member-level load prediction for a flexible floating offshore structure. Numerical predictions from 11 academic and industrial partners are validated against experimental measurements obtained from a 1:70-scale test of the VolturnUS-S semisubmersible platform. A comprehensive set of verification and validation cases is examined. The results demonstrate that hydrodynamic added mass has a significant impact on predicted elastic natural frequencies. Under regular wave excitation, the numerical models reproduce platform motions and mooring line tensions with good accuracy. Member-level loads are also predicted with reasonable accuracy. Some discrepancies are observed for potential-flow models not accounting for higher-order effects associated with the instantaneous wetted surface.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3376224"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "floating-structures"
+    },
+    {
+      "name": "hydroelastic"
+    },
+    {
+      "name": "member-level"
+    },
+    {
+      "name": "oc7-project"
+    },
+    {
+      "name": "validation"
+    }
+  ],
+  "title": "OC7 Project Phase II: Code Comparison and Experimental Validation of Hydroelastic Effects and Member-Level Loads in Floating Structures",
+  "url": "https://www.osti.gov/biblio/3376224"
+}

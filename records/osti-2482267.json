@@ -1,0 +1,108 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:47Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "osti|2482267"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:47Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-12-12"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2482267\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/MP-5000-92324\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/MP-5000-92324"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "2482267"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-03-03T08:34:54Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2482267"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2482267\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "osti-2482267",
+  "notes": "As the largest source of clean, renewable power generation in the United States and one of the fastest growing sources of new electricity supply, wind energy will play a large role in the nation's energy future. In Fiscal Year (FY) 2024, scientists, engineers, analysts, and support professionals at the U.S. Department of Energy's (DOE's) National Renewable Energy Laboratory (NREL) worked to accelerate the pace of innovation in wind energy science and technology, advance grid systems integration, and develop sustainable solutions to deployment challenges. Much of NREL's research, development, and deployment work aligns with addressing the Grand Challenges of Wind Energy. Beginning in 2019, DOE's Wind Energy Technologies Office partnered with the International Energy Agency to identify the barriers to greater wind energy deployment and related research gaps. The world's leading wind energy scientists and engineers identified five research areas as critical to advancing wind energy deployment: wind atmospheric science, wind turbine systems, wind plants and grid, environmental co-design, and social science. In FY 2024, NREL's accomplishments helped narrow the research gaps in these critical areas. This report provides details on those accomplishments.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2482267"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "accomplishments"
+    },
+    {
+      "name": "electricity-supply"
+    },
+    {
+      "name": "energy-planning-policy-and-economy"
+    },
+    {
+      "name": "power-generation"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Wind Energy Accomplishments and Year-End Performance Report: Fiscal Year 2024",
+  "url": "https://www.osti.gov/biblio/2482267"
+}

@@ -1,0 +1,121 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Marykovskiy, Yuriy\",\"orcid\":\"0000-0002-6570-6966\"},{\"affiliation\":\"Delft University of Technology\",\"name\":\"Jain, Avni\",\"orcid\":\"0000-0001-9150-9600\"},{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"}]"
+    },
+    {
+      "key": "container",
+      "value": "WindEurope Annual Event 2026"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.20556469"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.20556469"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-05"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.20556469\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "20556470"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.20556470"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/20556470"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/20556470\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-20556469",
+  "notes": "\n<p>Digital twins are being increasingly used in wind energy for a wide number of applications including simulating wind patterns and energy yield to identify optimal locations, creating digital replicas of turbines for anomaly detection and diagnostics, testing new blade shapes in a digital wind tunnel, and simulating financial performance under multiple environmental, regulatory, and operational scenarios to assess investment risk and optimise portfolio decisions [1].   However, digital twins are still at the early adoption stage in the wind energy sector. Adoption is uneven across markets, and value quantification is still challenging. This is due to the complex, long-term benefits, the lack of standardised metrics, the dynamic technology landscape, and the difficulty of separating the impact of the digital twin from other concurrent improvements [2]. The first step towards value quantification, and increased adoption, is to agree upon a method of digital twin classification. This would provide clarity and consistency in a field where terms such as “digital model,” “digital shadow,” and “digital twin” are often used ambiguously. By positioning digital twins along dimensions such as automation, fidelity, lifecycle stage, and functionality, their maturity can be benchmarked. This supports clearer valuation and return-on-investment assessments and guides development roadmaps by showing how digital twins can evolve from prototypes to high-value operational tools. Standardised categories improve interoperability across assets and enable concise communication of scope and capabilities, facilitating decision-making and accelerating adoption.   In this work, we introduce the Digital Twins Taxonomy (DITTA), a lightweight, SKOS-based ontology that describes digital twin types.  We then make a suggestion for high-potential digital twin use cases, and suggest the dimensions of the digital twin type from the DITTA for each use case. This forms the basis for a new Recommended Practice on the Classification and Valuation of Digital Twins in Wind Energy.</p>\n\n",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "WindEurope2026_PO008_DiTTa.pdf",
+      "url": "https://zenodo.org/records/20556470/files/WindEurope2026_PO008_DiTTa.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Valuation of digital twins in wind energy through a common classification system",
+  "url": "https://zenodo.org/records/20556470"
+}

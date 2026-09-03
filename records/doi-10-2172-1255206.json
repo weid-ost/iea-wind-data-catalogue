@@ -1,0 +1,87 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\"},{\"affiliation\":\"Univ. of Oldenburg (Germany)\",\"family\":\"Kuhn\",\"given\":\"Martin\",\"name\":\"Kuhn, Martin\"},{\"name\":\"USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Wind Energy Technologies Office\"},{\"name\":\"USDOE Office of Energy Efficiency and Renewable Energy (EERE), Renewable Power Office. Water Power Technologies Office\"},{\"affiliation\":\"Univ. of Oldenburg (Germany)\",\"family\":\"Trabucchi\",\"given\":\"Davide\",\"name\":\"Trabucchi, Davide\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States). National Wind Technology Center\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark). Wind Energy Department\",\"family\":\"Courtney\",\"given\":\"Mike\",\"name\":\"Courtney, Mike\"},{\"affiliation\":\"Univ. of Stuttgart (Germany)\",\"family\":\"Rettenmeier\",\"given\":\"Andreas\",\"name\":\"Rettenmeier, Andreas\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/1255206"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/1255206"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2016-05-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Office of Scientific and Technical Information (OSTI)"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.2172/1255206"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-26T15:39:56Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.2172/1255206"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.2172/1255206\",\"https://www.osti.gov/biblio/1255206\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-1255206",
+  "notes": "",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Task 32: Wind Lidar Systems for Wind Energy Deployment (LIDAR)",
+  "url": "https://doi.org/10.2172/1255206"
+}

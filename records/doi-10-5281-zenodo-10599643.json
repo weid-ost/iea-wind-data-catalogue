@@ -1,0 +1,117 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Costa, Francisco\",\"orcid\":\"0000-0003-1318-9677\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.10599643"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:30Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.10599643"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:30Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-01-31"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10599643\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10599644"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.10599644"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/10599644"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/10599644\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-10599643",
+  "notes": "<p>Presentation of the wind lidar ontology viewer available at <a title=\"here\" href=\"https://data.windenergy.dtu.dk/ontologies/view/ontolidar/en/\" rel=\"nofollow noopener\">Wind lidar ontology viewer</a>. In this presentation a lidar ontology application tool, available at <a href=\"https://github.com/IEAWindTask52/Extract-lidar-ontology-concepts\" rel=\"nofollow noopener\">GitHub Lidar Ontology Tool</a>, is referenced. It provides insights into how this application enhances the understanding and utilization of wind lidar ontology concepts.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA-Wind-Task52_OntologyGroup.pdf",
+      "url": "https://zenodo.org/records/10599644/files/IEA-Wind-Task52_OntologyGroup.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP Task 52 General Meeting 2023. Working Group 7 - The wind lidar ontolgy group",
+  "url": "https://zenodo.org/records/10599644"
+}

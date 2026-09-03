@@ -1,0 +1,105 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:59Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEAWindSystems/IEA-Wind-740-10-ROWP"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-37\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Apache-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-02-06"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindSystems/IEA-Wind-740-10-ROWP"
+    },
+    {
+      "key": "source_key",
+      "value": "cdfe28819ab5f10c1a4f91a9448bcb0d89340b6b::803f85eb7bced864"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindSystems/IEA-Wind-740-10-ROWP"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindSystems/IEA-Wind-740-10-ROWP\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-37"
+    }
+  ],
+  "license_id": "apache",
+  "name": "github-ieawindsystems-iea-wind-740-10-rowp",
+  "notes": "IEA Wind 740MW Reference Offshore Wind Plants Made of IEA10MW RWT",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindSystems/IEA-Wind-740-10-ROWP"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindSystems/IEA-Wind-740-10-ROWP",
+  "url": "https://github.com/IEAWindSystems/IEA-Wind-740-10-ROWP"
+}

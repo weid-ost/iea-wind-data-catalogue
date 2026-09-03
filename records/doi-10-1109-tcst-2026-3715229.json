@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Frederik, Joeri\"}]"
+    },
+    {
+      "key": "container",
+      "value": "IEEE Transactions on Control Systems Technology"
+    },
+    {
+      "key": "doi",
+      "value": "10.1109/tcst.2026.3715229"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:40Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1109/tcst.2026.3715229"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:40Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-27"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3484706\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-96253\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/3484706\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-96253"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3484706"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-29T05:00:10Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3484706"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3484706\",\"https://www.osti.gov/pages/biblio/3484706\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1109-tcst-2026-3715229",
+  "notes": "Wind turbine active wake mixing (AWM) is an exciting new field of research where dynamic actuation, usually on the blade pitch angles, is used to increase wind farm-wide power production. From a controls perspective, the current state-of-the-art AWM strategies are very simple: a dynamic, usually periodic, reference signal is prescribed to actuators in an open-loop (OL) fashion. The actuation is then presumed to have a certain desired effect on the system, i.e., the wind turbine and the flow it affects. However, this system is highly nonlinear and experiences disturbances in the form of wind variations that are not known a priori. As a result, the OL approach might not yield optimal results. In this article, a novel approach is presented, which closes the loop on AWM controllers. A feedback loop is implemented, which uses measurements of the individual blade bending moments that are widely available on modern wind turbines to determine the individual blade pitch angles. A proof of concept of this implementation is presented in this article, and a thorough comparison with the OL method is executed using high-fidelity flow simulations. These simulations show that the novel closed-loop controller does not substantially increase wake mixing but achieves similar performance as the OL controller while reducing fatigue loads on the controlled turbine.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3484706"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "active-wake-mixing-awm"
+    },
+    {
+      "name": "helix-approach"
+    },
+    {
+      "name": "park-transformation"
+    },
+    {
+      "name": "proportional-resonant-pr-controller"
+    },
+    {
+      "name": "wind-farm-control"
+    },
+    {
+      "name": "wind-turbine-control"
+    }
+  ],
+  "title": "Closed-Loop Wind Turbine Controllers for Active Wake Mixing Strategies",
+  "url": "https://www.osti.gov/biblio/3484706"
+}

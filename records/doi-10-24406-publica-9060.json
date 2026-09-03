@@ -1,0 +1,87 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Jonsson\",\"given\":\"Christian\",\"name\":\"Jonsson, Christian\"},{\"family\":\"Hansen\",\"given\":\"Mikael Sonne\",\"name\":\"Hansen, Mikael Sonne\"},{\"family\":\"Wilson\",\"given\":\"Jennifer J.\",\"name\":\"Wilson, Jennifer J.\"},{\"family\":\"Farren\",\"given\":\"Des\",\"name\":\"Farren, Des\"},{\"family\":\"Dethlefs\",\"given\":\"Nina\",\"name\":\"Dethlefs, Nina\"},{\"family\":\"Chatterjee\",\"given\":\"Joyjit\",\"name\":\"Chatterjee, Joyjit\"},{\"family\":\"Draper\",\"given\":\"John\",\"name\":\"Draper, John\"},{\"family\":\"Donnelly\",\"given\":\"Ronald\",\"name\":\"Donnelly, Ronald\"},{\"family\":\"Dimopoulos\",\"given\":\"Aris\",\"name\":\"Dimopoulos, Aris\"},{\"family\":\"Wiens\",\"given\":\"Marcus\",\"name\":\"Wiens, Marcus\"},{\"family\":\"Marykovskiy\",\"given\":\"Yuriy\",\"name\":\"Marykovskiy, Yuriy\"},{\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\"},{\"name\":\":unav\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.24406/publica-9060"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.24406/publica-9060"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-01"
+    },
+    {
+      "key": "publisher",
+      "value": "Fraunhofer-Gesellschaft"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.24406/publica-9060"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-06-24T01:30:27Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://publica.fraunhofer.de/handle/publica/518740"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://publica.fraunhofer.de/handle/publica/518740\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-24406-publica-9060",
+  "notes": "In wind farm operations, the full value of operational data is not realised due to obstacles in understanding and integration. With vast amounts of data in operational silos, reference ontologies provide a common framework for describing and connecting heterogeneous data, establishing a shared meaning that is machine-readable, human-understandable and a foundation for applying AI. As part of IEA Wind Task 43 and within the WeDoWind ecosystem, we have formed a public working group of experts across multiple disciplines to develop a foundational ontology of operations. Starting with foundational entities in the field of operations and maintenance, such as maintenance process and alarm system, we develop a section of the Operations Ontology (OpOn), focusing on a demonstration use case involving diagnostics and troubleshooting of rotor over-speed protection alarms. Here we illustrate how data annotation and integration become more intuitive and efficient with the use of the ontology, and we describe how this builds a solid foundation for the use of modern AI.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Laying the foundations for context-aware and AI-ready fault diagnosis with the Operations Ontology",
+  "url": "https://publica.fraunhofer.de/handle/publica/518740"
+}

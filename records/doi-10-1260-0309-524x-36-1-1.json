@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Northern Arizona University, PO Box 15600, Flagstaff AZ USA 86011\",\"family\":\"Acker\",\"given\":\"Thomas L.\",\"name\":\"Acker, Thomas L.\"},{\"affiliation\":\"Hydro-Québec Production, 75 boul René Lévesque Ouest 9e étage, Montréal, Québec, Canada, H2Z 1A4\",\"family\":\"Robitaille\",\"given\":\"André\",\"name\":\"Robitaille, André\"},{\"affiliation\":\"VTT Technical Research Centre of Finland, P.O. Box 1000, 02044 VTT, Finland\",\"family\":\"Holttinen\",\"given\":\"Hannele\",\"name\":\"Holttinen, Hannele\"},{\"affiliation\":\"Hydro Tasmania, Hobart, Australia\",\"family\":\"Piekutowski\",\"given\":\"Marian\",\"name\":\"Piekutowski, Marian\"},{\"affiliation\":\"SINTEF Energi AS, 7465 Trondheim, Norway\",\"family\":\"Tande\",\"given\":\"John Olav Giæver\",\"name\":\"Tande, John Olav Giæver\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Engineering"
+    },
+    {
+      "key": "doi",
+      "value": "10.1260/0309-524x.36.1.1"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1260/0309-524x.36.1.1"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2012-02"
+    },
+    {
+      "key": "publisher",
+      "value": "SAGE Publications"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.1260/0309-524x.36.1.1"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-03-10T23:16:55Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.1260/0309-524x.36.1.1"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.1260/0309-524x.36.1.1\",\"https://journals.sagepub.com/doi/10.1260/0309-524X.36.1.1\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1260-0309-524x-36-1-1",
+  "notes": "<p> In May of 2004, the IEA Wind Implementing Agreement (IA) established R&amp;D Task 24, “Integration of Wind and Hydropower Systems.” Australia, Canada, Finland, Norway, Sweden, Switzerland, and the United States joined Task 24 with the goal of collaborating in the study of wind integration in a variety of electrical system configurations (load, generation, and transmission); hydro system configurations and characteristics; and market and operational configurations. Representing these countries were utilities and research organizations with the intent to understand the potential for and limiting factors in integrating wind into systems with hydropower. Case studies that analyze the feasibility, benefits, detriments, and costs of specific wind-hydro integration projects were the mechanism through which the goals of the task were addressed. The purpose of this article is to summarize the framework within which these studies were performed, and to present the key results and the general conclusions of the Task. </p>",
+  "owner_org": "vtt",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Integration of Wind and Hydropower Systems: Results of IEA Wind Task 24",
+  "url": "https://doi.org/10.1260/0309-524x.36.1.1"
+}

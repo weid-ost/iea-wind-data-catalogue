@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Buster, Grant\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Roberts, Owen\",\"orcid\":\"0000-0002-8945-3967\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Williams, Travis\",\"orcid\":\"0000-0003-0973-1865\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Stehly, Tyler\",\"orcid\":\"0000-0001-6352-6657\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy"
+    },
+    {
+      "key": "doi",
+      "value": "10.1002/we.70144"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:42Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1002/we.70144"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:42Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-23"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3412018\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-6A20-96779\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/3412018\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-6A20-96779"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3412018"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-15T05:00:18Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3412018"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3412018\",\"https://www.osti.gov/pages/biblio/3412018\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1002-we-70144",
+  "notes": "Wind power is a growing source of energy generation that relies on complex global atmospheric and earth system processes. There has been evidence of reductions in average wind speeds over land in North America since the 1980s, and several models project that average wind speeds will continue to decrease. Concurrently, the cost of wind energy systems in the United States has been decreasing since around 2010, a trend also projected to continue. There is considerable uncertainty in these future projections, with quantitative estimates of future wind resource and system costs varying widely. To study this, we run wind energy models with possible future system costs, turbine designs, and meteorological inputs from multiple downscaled earth system models over the contiguous United States. Changes in mean annual energy production from 2000-2019 to 2040-2059 can be as high as +10% in South Texas or as low as -20% in Iowa. Larger turbines and moderate reductions in system costs can offset the largest projected decreases in wind resource, but much uncertainty remains in the extent to which wind resources will change and to what extent system costs can be reduced. An analysis of variance shows, in several states in the Midwest, uncertainty in future wind resources can influence the cost of wind energy nearly as much as uncertainty in future system costs.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3412018"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "97-mathematics-and-computing"
+    },
+    {
+      "name": "geospatial-data"
+    },
+    {
+      "name": "techno-economic-analysis"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-resource"
+    }
+  ],
+  "title": "An Analysis of Future Wind Energy Resources and Cost Uncertainties Across the United States",
+  "url": "https://www.osti.gov/biblio/3412018"
+}

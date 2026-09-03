@@ -1,0 +1,124 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Thedin, Regis\",\"orcid\":\"0000-0001-5336-7875\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Barter, Garrett\",\"orcid\":\"0000-0001-7757-8853\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Jonkman, Jason\",\"orcid\":\"0000-0003-2990-7362\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Mudafort, Rafael\",\"orcid\":\"0000-0001-5426-4210\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Bay, Christopher J.\",\"orcid\":\"0000-0002-2658-5559\"},{\"affiliation\":\"Shell International Exploration and Production, Houston, TX (United States)\",\"name\":\"Shaler, Kelsey\",\"orcid\":\"0000-0002-7563-3377\"},{\"affiliation\":\"Shell Global Solutions International B.V. (Netherlands)\",\"name\":\"Kreeft, Jasper\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science (Online)"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-10-1033-2025"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:44Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-10-1033-2025"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:44Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus Publications"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2573904\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/JA-5000-90681\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/2573904\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/JA-5000-90681"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "2573904"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-24T07:26:31Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2573904"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2573904\",\"https://www.osti.gov/pages/biblio/2573904\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-5194-wes-10-1033-2025",
+  "notes": "Wake steering strategies are employed to increase the overall power production of wind farms by deflecting wakes of upstream turbines away from downstream ones. The gain in net power comes at the expense of increased fatigue loads experienced by downstream turbines. In this work we investigate performance and fatigue loading characteristics of a small farm consisting of five aligned International Energy Agency Wind Technology Collaboration Programme 15 MW wind turbines. A parametric study is performed where, for every wind direction from −20 to 20°, the yaw misalignment angle varies from −25 to 25°. This setup allows us to investigate asymmetries and identify optimal conditions for a given wind direction. In general, we find that positive yaw configurations are preferred and that yaw configurations that result in attractive power differences when compared to a baseline no-yaw scenario (25 %) come with significant increase in fatigue loading (we use the standard deviation and damage-equivalent load (DEL) of the blade-root, low-speed shaft, and tower-base moments as proxies for fatigue load). We find that for any given positive wind inflow angle, yaw angles between −2.5 and 15° yield power differences of 10 %–20 % over a no-yaw baseline, and positive yaw is preferred because of lower fatigue loading. For any given negative wind inflow angles, positive yaw also results in lower magnitudes of standard deviation and DEL for the channels investigated. A small power loss of up to 2 % is observed for some positive yaw angles under negative wind directions (as compared to symmetric negative yaw and positive wind cases), but improvements in terms of loads exceed 25 % and may be enough to justify a positive yaw configuration under negative winds as well. We show that such behavior can be explained by partial waking and the direction of the rotation of the rotor.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2573904"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "fast.farm"
+    },
+    {
+      "name": "wake-steering"
+    },
+    {
+      "name": "wind-farm-loads"
+    },
+    {
+      "name": "wind-farm-performance"
+    }
+  ],
+  "title": "Load assessment of a wind farm considering negative and positive yaw misalignment for wake steering",
+  "url": "https://www.osti.gov/biblio/2573904"
+}

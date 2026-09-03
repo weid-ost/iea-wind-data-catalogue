@@ -1,0 +1,136 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Sempreviva, Anna Maria\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Clerc, Jeff\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science Conference 2025"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15751955"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15751955"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15751955\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "15751956"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.15751956"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15751956"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15751956\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15751955",
+  "notes": "<p>Digitalisation is widely recognised as a key enabler for accelerating global wind energy deployment, through its potential<br />to improve efficiency, create insights, and develop products and services. However, digital technologies<br />can create tension between old values and new ones, making so-called “digital organisational culture” a prerequisite<br />for the success of these technologies. “Digital organisational culture” refers to aspects of organisational<br />culture that specifically influence digitalisation, such as a culture of digital innovation and a transparent digital<br />strategy. A recent study showed that organisational culture is one of the three main challenges to digitalisation<br />in wind energy, and that aspects of organisational culture such as open feedback processes, positive handling of<br />failures, creativity, and innovation can have a large impact on digitalisation. At the same time, particular challenges<br />in the wind energy sector such as extreme siloed attitudes, lack of data sharing and metadata standards, and the<br />high volume and complexity of data, make implementing a digital organisational culture difficult. This<br />work therefore studies how organisational culture can influence digitalisation in the wind energy sector.</p>",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "WESC2025_presentation_Culture_Sarah_20250626.pdf",
+      "url": "https://zenodo.org/records/15751956/files/WESC2025_presentation_Culture_Sarah_20250626.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "WESC2025_Abstract_Culture.pdf",
+      "url": "https://zenodo.org/records/15751956/files/WESC2025_Abstract_Culture.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digitalisation"
+    },
+    {
+      "name": "organisational-culture"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "The influence of organisational culture on digitalisation in the wind energy sector",
+  "url": "https://zenodo.org/records/15751956"
+}

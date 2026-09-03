@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Campagnolo\",\"given\":\"Filippo\",\"name\":\"Campagnolo, Filippo\",\"orcid\":\"0000-0003-3511-7981\"},{\"family\":\"Weber\",\"given\":\"Robin\",\"name\":\"Weber, Robin\"},{\"family\":\"Schreiber\",\"given\":\"Johannes\",\"name\":\"Schreiber, Johannes\"},{\"family\":\"Bottasso\",\"given\":\"Carlo L.\",\"name\":\"Bottasso, Carlo L.\",\"orcid\":\"0000-0002-9931-4389\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-5-1273-2020"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-5-1273-2020"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-10-08"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2020-70\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2020-70-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2020-70-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2020-70-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-5-1273-2020"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-01-31T15:26:40Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-5-1273-2020"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-5-1273-2020\",\"https://wes.copernicus.org/articles/5/1273/2020/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-5-1273-2020",
+  "notes": "<p>Abstract. The performance of an open-loop wake-steering controller is investigated with a new unique set of wind tunnel experiments. A cluster of three scaled wind turbines, placed on a large turntable, is exposed to a turbulent inflow and dynamically changing wind directions, resulting in dynamically varying wake interactions. The changes in wind direction were sourced and scaled from a field-measured time history and mirrored onto the movement of the turntable. Exploiting the known, repeatable, and controllable conditions of the wind tunnel, this study investigates the following effects: fidelity of the model used for synthesizing the controller, assumption of steady-state vs. dynamic plant behavior, wind direction uncertainty, the robustness of the formulation in regard to this uncertainty, and a finite yaw rate. The results were analyzed for power production of the cluster, fatigue loads, and yaw actuator duty cycle. The study highlights the importance of using a robust formulation and plant flow models of appropriate fidelity and the existence of possible margins for improvement by the use of dynamic controllers.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Wind tunnel testing of wake steering with dynamic wind direction changes",
+  "url": "https://doi.org/10.5194/wes-5-1273-2020"
+}

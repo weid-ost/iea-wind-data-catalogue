@@ -1,0 +1,135 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Flensburg University of Applied Science\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4817724"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4817724"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-05-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4817724\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4817725"
+    },
+    {
+      "key": "source_key",
+      "value": "7@10.5281/zenodo.4817725"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4817725"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4817725\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4817724",
+  "notes": "<p>Wind lidar is one of the biggest changes to occur in wind energy in recent decades. The use of lasers to measure wind vectors remotely has enabled many new developments, including lidar-assisted control of wind turbines and wind plants, and has directly contributed to the growth of offshore wind. </p>\n\n<p>In this contribution we consider several case studies of how wind lidar technologies were developed or adapted for new applications, and commercialised. </p>\n\n<p>These case studies include:</p>\n\n<ul>\n\t<li>\n\t<p>Vertical profiling wind lidar for ground-based resource assessment. Initially launched as a commercial product in the mid 2000’s, wind lidar were initially seen as research devices that could measure up to the rotor tip, reducing the need for wind profile extrapolation and thus reducing uncertainty. Early adopters sought to standardise their use for resource assessment (i.e., vertically-resolved wind speed and direction profiles) through IEA Wind Task 11. In 2011 IEA Wind Task 32 started developing a Recommended Practices document that was adopted in 2013. In 2017 an IEC Standard (IEC 61400-12-1) provided a framework for their use in some applications. Since then, the “Consortium for the advancement of remote sensing” (CFARS) has been actively promoting the use of wind lidar, backed up with evidence from industry users. Now, in 2021, wind lidar are widely accepted for use in flat terrain. The focus over the past few years has shifted to the potential for wind lidar to completely replace met masts. As a result, there is great interest in their ability to measure turbulence, and in their ability to be used in all terrain. These remain the major themes of research at this time.</p>\n\t</li>\n\t<li>\n\t<p>Forward-looking lidar for wind turbine control offers the potential to reduce turbine loads and fatigue, and would enable larger wind turbines in future. Lidar-assisted controls may also be key to improve the control performance of floating offshore wind turbines. And, due to collaboration between multiple stakeholders the advantages of designing a wind turbine with feed-forward lidar control are becoming clearer. Despite their potential benefits, the adoption of wind lidar for feed-forward control has been slower than other applications; this stems from the general complexity and difficulty of reliably and safely integrating a wind lidar into the wind turbine control system in such a way that the turbine can still be certified. Work continues to generate evidence for the safe and reliable deployment of lidar for this application</p>\n\t</li>\n</ul>\n\n<p>For each case study we identify some of the main drivers for the adoption of wind lidar, some of the challenges that were experienced on the way, and discuss what steps remain. Our goal is to familiarise the wind energy research and development community with the process of technology transfer and the various actors that are involved.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Task 32 WESC 2021 - Tech Transfer.pdf",
+      "url": "https://zenodo.org/records/4817725/files/Task%2032%20WESC%202021%20-%20Tech%20Transfer.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digitalisation"
+    },
+    {
+      "name": "open-science"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "Wind lidar technology development and transfer",
+  "url": "https://zenodo.org/records/4817725",
+  "version": "2021 May 27"
+}

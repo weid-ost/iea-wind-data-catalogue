@@ -1,0 +1,124 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Tran, Dung\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Sarker, Doyal\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Mohsin, Kazi\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Rahman, Saad\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Sakif, Md\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Ngo, Tri\",\"orcid\":\"0000-0002-6748-7170\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"name\":\"Bergua, Roger\",\"orcid\":\"0000-0003-4703-4729\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"name\":\"Zalkind, Daniel\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"name\":\"Jonkman, Jason\"},{\"affiliation\":\"Univ. of Central Florida, Orlando, FL (United States)\",\"name\":\"Das, Tuhin\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy"
+    },
+    {
+      "key": "doi",
+      "value": "10.1002/we.70115"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:42Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1002/we.70115"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:42Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-04-06"
+    },
+    {
+      "key": "publisher",
+      "value": "Wiley"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3031071\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-95507\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/3031071\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-95507"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3031071"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-07-01T13:13:14Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3031071"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3031071\",\"https://www.osti.gov/pages/biblio/3031071\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1002-we-70115",
+  "notes": "This paper presents the acausal modeling, validation, and control of floating offshore wind turbines (FOWTs). The model simulates the IEA‐15 MW reference turbine and the semi‐submersible VolturnUS‐S platform utilizing a Control‐oriented, Reconfigurable, and Acausal Floating Turbine Simulator (CRAFTS), which integrates the key coupled aero‐hydro‐elasto‐servo dynamics and is being developed by authors at the University of Central Florida. Verification and validation are conducted using numerical data from the industry‐standard simulation platform OpenFAST and experimental data from the Floating Offshore‐wind and Controls Advanced Laboratory (FOCAL) project, in which the authors were involved. Numerical results demonstrate the model's ability to qualitatively capture loads and responses across various load cases, highlighting the impact of the control system under different wind and wave conditions and opening new opportunities for optimizing FOWT designs. This paper provides wind turbine researchers with valuable insights into system characteristics, system frequencies, damping effects, and internal reaction forces, serving as a reference for future studies in FOWT modeling and control.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3031071"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "acausal-modeling"
+    },
+    {
+      "name": "floating-offshore-wind-turbine"
+    },
+    {
+      "name": "model-validation"
+    },
+    {
+      "name": "platform-stabilization"
+    }
+  ],
+  "title": "Modeling, Validation, and Control of the IEA‐15 MW Reference Wind Turbine and VolturnUS‐S Platform",
+  "url": "https://www.osti.gov/biblio/3031071"
+}

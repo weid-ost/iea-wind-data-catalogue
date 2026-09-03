@@ -1,0 +1,133 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3923536"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3923536"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\",\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-nc-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-06-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3923536\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "3923537"
+    },
+    {
+      "key": "source_key",
+      "value": "9@10.5281/zenodo.3923537"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3923537"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3923537\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    },
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-nc",
+  "name": "doi-10-5281-zenodo-3923536",
+  "notes": "<p>Since 2017 the <em>e-WindLidar</em> initiative has been pursuing the goal of including expert lidar knowledge in tools that will facilitate the application of lidar technology. The initiative yielded several open-source tools such as<em> campaign-planning-tool</em>, <em>YADDUM</em> and <em>mocalum,</em> which are provided as Python packages.</p>\n\n<p><a href=\"https://github.com/niva83/campaign-planning-tool\" rel=\"nofollow noopener\"><strong><em>campaign-planning-tool</em></strong></a><em> is a result of experience and knowledge accumulated </em><a href=\"https://zenodo.org/record/1442592\" rel=\"nofollow noopener\"><em>a</em><em>fter almost a decade of planning and configuring scanning lidar measurement campaigns</em></a><em>.</em> <em>It</em><em> provides users with a set of methods that will allow them to</em><em> o</em><em>ptimize measurement positions</em><em>, g</em><em>enerate GIS layers which facilitate placement of lidars</em><em>, o</em><em>ptimize and synchronize trajectories for multiple lidars</em><em>, e</em><em>xport results in human and machine-readable formats</em><em>,</em><em> and more</em><em>.</em></p>\n\n<p><a href=\"https://github.com/niva83/YADDUM\" rel=\"nofollow noopener\"><strong><em>YADDUM</em></strong></a><em> (Yet Another Dual-Doppler Uncertainty Model) </em><em>is focused on delivering a simple yet effective dual-Doppler uncertainty model. The model is based on the <a href=\"https://www.bipm.org/utils/common/documents/jcgm/JCGM_100_2008_E.pdf\" rel=\"nofollow noopener\">law of propagation of uncertainties</a>. YADDUM is applicable for <a href=\"https://www.mdpi.com/2072-4292/8/11/896\" rel=\"nofollow noopener\">wind lidars</a> and <a href=\"https://www.mdpi.com/2072-4292/10/11/1701\" rel=\"nofollow noopener\">radars</a>.</em></p>\n\n<p><a href=\"https://github.com/niva83/mocalum\" rel=\"nofollow noopener\"><strong><em>mocalum</em></strong></a> is a package for Monte-Carlo based lidar uncertainty modeling. It preforms fast Monte-Carlo simulations. It can simulate both single and multi lidar configurations. <strong><em>mocalum</em></strong> handles arbitrary trajectories (i.e., complex trajectories) as well IVAP (sector-scan) trajectories. It provides means to generate 3D or 4D, uniform or turbulent flow fields and has a built-in 2nd order kinematic model for calculation of trajectory timing. Results of the <strong><em>mocalum</em></strong> simulations are provided as <a href=\"http://xarray.pydata.org/en/stable/\" rel=\"nofollow noopener\">xarray</a> datasets enriched with metadata ready to be exported as NetCDF files, shared and published for reuse.</p>\n\n<p>In this talk, we will present the above describe tools and show examples on how to interact with them.</p>",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "e-WindLidar_toolbox.pdf",
+      "url": "https://zenodo.org/records/3923537/files/e-WindLidar_toolbox.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digitalization"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "uncertainty"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "e-WindLidar toolbox",
+  "url": "https://zenodo.org/records/3923537"
+}

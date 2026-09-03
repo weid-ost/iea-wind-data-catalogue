@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Mahfouz\",\"given\":\"Mohammad Youssef\",\"name\":\"Mahfouz, Mohammad Youssef\",\"orcid\":\"0000-0002-3057-270X\"},{\"family\":\"Molins\",\"given\":\"Climent\",\"name\":\"Molins, Climent\"},{\"family\":\"Trubat\",\"given\":\"Pau\",\"name\":\"Trubat, Pau\",\"orcid\":\"0000-0001-8292-8272\"},{\"family\":\"Hernández\",\"given\":\"Sergio\",\"name\":\"Hernández, Sergio\"},{\"family\":\"Vigara\",\"given\":\"Fernando\",\"name\":\"Vigara, Fernando\"},{\"family\":\"Pegalajar-Jurado\",\"given\":\"Antonio\",\"name\":\"Pegalajar-Jurado, Antonio\",\"orcid\":\"0000-0002-1374-5912\"},{\"family\":\"Bredmose\",\"given\":\"Henrik\",\"name\":\"Bredmose, Henrik\",\"orcid\":\"0000-0001-6961-0753\"},{\"family\":\"Salari\",\"given\":\"Mohammad\",\"name\":\"Salari, Mohammad\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-6-867-2021"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-6-867-2021"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-06-08"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2021-11\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2021-11-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2021-11-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2021-11-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2021-11-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2021-11-rc3\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2021-11-ac3\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5281/zenodo.4322446\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"},{\"identifier\":\"10.5281/zenodo.4322585\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-6-867-2021"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-01-23T22:13:00Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-6-867-2021"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-6-867-2021\",\"https://wes.copernicus.org/articles/6/867/2021/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-6-867-2021",
+  "notes": "<p>Abstract. The EU Horizon 2020 project COREWIND (COst REduction and increase performance of floating WIND technology) has developed two floating platforms for the new International Energy Agency (IEA) Wind 15 MW reference wind turbine. One design – “WindCrete” – is a spar floater, and the other – “Activefloat” – is a semi-submersible floater; both designs are made of concrete. In this work the design of the floaters is introduced with their aero–hydro–servo-elastic numerical models, and the responses of both floaters in both static and dynamic simulations are investigated. The static displacements and natural frequencies are simulated and discussed. Additionally, the effects of the mean wave drift forces and second-order difference-frequency wave forces on the systems' responses are presented. The increase in the turbine's power capacity to 15 MW in IEA Wind model leads to an increase in inertial forces and aerodynamic thrust force when compared to similar floating platforms coupled to the Technical University of Denmark (DTU) 10 MW reference model. The goal of this work is to investigate the floaters' responses for different load cases. The results in this paper suggest that at mild wave loads the motion responses of the 15 MW floating offshore wind turbines (FOWTs) are dominated by low-frequency forces. Therefore, motions are dominated by the wind forces and second-order wave forces rather than the first-order wave forces. After assessing and understanding the models' responses, the two 15 MW FOWT numerical reference models are publicly available to be used in the research and development of floating wind energy.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Response of the International Energy Agency (IEA) Wind 15 MW WindCrete and Activefloat floating wind turbines to wind and second-order waves",
+  "url": "https://doi.org/10.5194/wes-6-867-2021"
+}

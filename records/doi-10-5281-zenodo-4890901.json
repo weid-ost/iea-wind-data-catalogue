@@ -1,0 +1,122 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"WETI\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"WETI\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"SWE\",\"name\":\"Chen, Yiyin\",\"orcid\":\"0000-0002-1343-0654\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4890901"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4890901"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-05-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4890901\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4890902"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.4890902"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4890902"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4890902\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4890901",
+  "notes": "<p><strong>Presentation at the Wind Energy Science Conference 2021 </strong></p>\n\n<p>Nacelle-based lidar systems are cost-effective alternatives to conventional wind measurements with cup anemometers on meteorological masts [1]. For power performance testing of wind turbines, the knowledge of the uncertainties in the measurement is crucial. Traditional cup anemometers measure the horizontal wind speed directly. On contrary, lidar systems need to estimate the horizontal wind speed from the measured line-of-sight wind speeds using wind field reconstruction methods assuming a wind flow model. Therefore, the uncertainty in lidar measurements is often assumed to be higher than the one from cup anemometers, which is justified when focusing on a point measurement.<br />\nFor power performance testing, however, it is important to obtain a precise value of the wind speed not only at a single point, but representing the effect of the wind flow over the full rotor disc, e.g. by using several cups on different heights [2]. The relevance of this approach is reported to depend also on turbine dimensions and wind shear [3]. In this work, we extend the modeling of lidar uncertainties to capture the rotor-effective wind speed based on spectral wind models [4] with recent knowledge from wind evolution investigations [5] and apply the same approach to cup anemometers to compare both devices. We considered a wind turbine with a rotor diameter D = 130 m [6]. In this first investigation, the turbine is assumed to be always perfectly aligned with the mean wind direction. For the comparison, the nacelle-based lidar is modelled as a commercial, pulsed lidar measuring with 4 beams, a probe<br />\nvolume of 30 m, and a horizontal/vertical opening angle of 30/10 deg in 2.5 D (see Figure 1). Further,the cup anemometer is assumed to be installed at hub height on a meteorological mast 2.5 D north of the wind turbine.<br />\nUsually, homogeneous flow over the rotor is assumed to reconstruct the wind speed from lidar line-of-sight wind speeds. However, wind is not constant in all measurement points as assumed, but turbulent as defined by spectral models. This leads to uncertainties in both lidar and cup measurements, when relating the measurement to the rotor-effective wind speed, which here is<br />\nassumed to be the mean of the longitudinal wind speed over the rotor. The uncertainty of the lidar wind speed estimate is modelled via the auto- and cross-spectra as well as the frequency representation of a 10 minute moving average [4]. With a mean wind speed of 16 m/s, a IEC Kaimal spectral model, and a medium wind evolution decay parameter of 2 [5], the uncertainty is determined to be 0.5 m/s, independent of the wind direction (see Figure 2). The uncertainty of the cup anemometer is calculated with the same approach. The result is comparable to the uncertainty of the lidar, when cup and turbine are aligned (northerly as well as southerly wind, since no wake effects are considered). For east and west wind however, the uncertainty is more than 3 times higher due to the large lateral turbulence coherence decay.Similar effects on scatter in power curves has been reported in [1].<br />\nIn future work, we will extend the uncertainty model with additional effects such as error propagation, Mann turbulence, and yaw misalignment. We further plan to investigate how lidar scans can be optimized to reduce the uncertainty.</p>\n\n<p><strong>References</strong>:<br />\n[1] R. Wagner, T.F. Pedersen, M. Courtney, I. Antoniou, S. Davoust, R.L. Rivera, Power curve measurement with a nacelle<br />\nmounted lidar, Wind Energy, vol. 17, no. 9, pp. 1441-1453, 2014, DOI: 10.1002/we.1643.<br />\n[2] R. Wagner, M. Courtney, J. Gottschall, P. Lindelöw-Marsden, Accounting for the speed shear in wind turbine power<br />\nperformance measurement, WindEnergy, vol. 11, no. 8, pp. 993-1004, 2011 , DOI: 10.1002/we.509.<br />\n[3] W.G.J.H.M. Van Sark, H.C. Van der Velde, J.P. Coelingh, W.A.A.M. Bierbooms, Do we really need rotor equivalent wind<br />\nspeed?, Wind Energy, vol. 22, no. 6, pp. 745-763, 2019, DOI: 10.1002/we.2319.<br />\n[4] D. Schlipf, M. Koch, S. Raach, Modeling Uncertainties of Wind Field Reconstruction Using Lidar, NAWEA conference,<br />\nAmherst, MA, USA, October 2019, Journal of Physics: Conference Series, DOI: 10.1088/1742-6596/1452/1/012088.<br />\n[5] Y. Chen, D. Schlipf, P.W. Cheng, Parameterization of wind evolution using lidar, Wind Energy Science, 6, 61–91, 2021,<br />\nDOI: 10.5194/wes-6-61-2021.<br />\n[6] P. Bortolotti, H. Canet Tarres, K. Dykes, K. Merz, L. Sethuraman, D. Verelst, F. Zahle. IEA wind task 37 on systems<br />\nengineering in wind energy - WP2.1 reference wind turbines. Technical report, International Energy Agency, 2019.</p>\n\n<p> </p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Comparison of uncertainties in measurements from cup anemometers and lidar systems.pdf",
+      "url": "https://zenodo.org/records/4890902/files/Comparison%20of%20uncertainties%20in%20measurements%20from%20cup%20anemometers%20and%20lidar%20systems.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "lidar-uncertainty-power-performance-wind-field-reconstruction-wind-evolution"
+    }
+  ],
+  "title": "Comparison of uncertainties in measurements from cup anemometers and lidar systems",
+  "url": "https://zenodo.org/records/4890902",
+  "version": "1"
+}

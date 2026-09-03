@@ -1,0 +1,97 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:21:06Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|IEA-Task-43/awesome-wind"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:21:06Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2022-04-20"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEA-Task-43/awesome-wind"
+    },
+    {
+      "key": "source_key",
+      "value": "3132ea112100bd71162f89e9f0f7d3de92cfe74f::28b9bbe4956c464d"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEA-Task-43/awesome-wind"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEA-Task-43/awesome-wind\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "github-iea-task-43-awesome-wind",
+  "notes": "Awesome open source software and resources for the wind industry",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEA-Task-43/awesome-wind"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA-Task-43/awesome-wind",
+  "url": "https://github.com/IEA-Task-43/awesome-wind"
+}

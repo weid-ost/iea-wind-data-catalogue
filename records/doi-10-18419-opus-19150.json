@@ -1,0 +1,109 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Schlipf, David\"},{\"name\":\"Hille, Nikolai\"},{\"name\":\"Raach, Steffen\"},{\"name\":\"Scholbrock, Andrew\"},{\"name\":\"Simley, Eric\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.18419/opus-19150"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.18419/opus-19150"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "CC BY"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2018"
+    },
+    {
+      "key": "publisher",
+      "value": "Universität Stuttgart"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.18419/opus-19150"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-07-27T05:00:48Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://elib.uni-stuttgart.de/handle/11682/19169"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://elib.uni-stuttgart.de/handle/11682/19169\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-18419-opus-19150",
+  "notes": "Lidar-assisted control is a promising technology for reducing structural loads on wind turbines. Guidelines for certifying wind turbines with this technology are important for its widespread adoption. As a first step, an IEA Wind Task 32 workshop was held, bringing together wind turbine manufacturers, lidar suppliers, certifiers, consultants, and researchers to identify barriers to certification with lidar-assisted control and ideas for mitigating the barriers. This paper builds on the outcome of the workshop by providing an analysis of the areas affected and the remaining challenges. Further, initial best practices are given to address the challenges, covering the lidar system, control and protection systems, design loads, and type testing.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "333.7"
+    },
+    {
+      "name": "550"
+    },
+    {
+      "name": "620"
+    }
+  ],
+  "title": "IEA Wind Task 32 : best practices for the certification of lidar-assisted control applications",
+  "url": "https://elib.uni-stuttgart.de/handle/11682/19169"
+}

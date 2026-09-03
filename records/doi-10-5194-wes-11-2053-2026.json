@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Pedersen\",\"given\":\"Mads Greve\",\"name\":\"Pedersen, Mads Greve\",\"orcid\":\"0000-0003-1061-8923\"},{\"family\":\"Rinker\",\"given\":\"Jennifer Marie\",\"name\":\"Rinker, Jennifer Marie\"},{\"family\":\"Alcover\",\"given\":\"Isaac Farreras\",\"name\":\"Alcover, Isaac Farreras\"},{\"family\":\"Høgsberg\",\"given\":\"Jan\",\"name\":\"Høgsberg, Jan\",\"orcid\":\"0000-0002-1098-3245\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-11-2053-2026"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-11-2053-2026"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-12"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2025-89\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2025-89-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-89-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-89-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-89-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.11583/dtu.24460090.v3\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-11-2053-2026"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-06-12T05:07:14Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-11-2053-2026"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-11-2053-2026\",\"https://wes.copernicus.org/articles/11/2053/2026/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-11-2053-2026",
+  "notes": "<p>Abstract. Offshore wind turbines (OWTs) are increasingly susceptible to fatigue damage, motivating structure-wide stress monitoring for asset integrity management and life extension. Virtual sensing methodologies, such as multi-band modal decomposition and expansion (MDE), offer a solution to the above by extrapolating measurements from a few sensors at accessible locations to the global structure. However, most MDE studies model the rotor nacelle assembly (RNA) as a lumped-mass inertia, thereby ignoring rotor flexibility. This can lead to errors in estimated strains or stresses arising from erroneous mode shapes and the omission of relevant rotor modes from the estimates. The present paper quantifies these errors using HAWC2 simulations of the IEA 15 MW reference wind turbine (RWT). Multi-band MDE estimates of section moments are compared to true responses in terms of damage equivalent load (DEL) and stress (DES). Long-term estimates show that MDE accuracy depends on both the design load case and the elevation considered on the RWT support structure, with the MDE exhibiting notable errors near the tower top and at ±15 m around mean sea level (MSL). Furthermore, the error in the MDE estimates exhibits wind speed dependency, which underlines the inherent limitation of the MDE, assuming a linear and time-invariant response. In conclusion, multi-band MDE provides accurate estimates of section moments across most of the IEA 15 MW RWT support structure. However, improvements to the MDE may be achieved by the inclusion of rotor flexibility in the RNA model and environmental variability in the wave load Ritz vector.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Performance of multi-band MDE-based virtual sensing for estimating lifetime fatigue damage equivalent loads for the IEA 15 MW reference wind turbine",
+  "url": "https://doi.org/10.5194/wes-11-2053-2026"
+}

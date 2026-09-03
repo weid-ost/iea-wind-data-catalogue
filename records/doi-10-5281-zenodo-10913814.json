@@ -1,0 +1,167 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Fraunhofer IWES\",\"name\":\"Gottschall, Julia\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.10913814"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.10913814"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-04-03"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10913814\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10913815"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.10913815"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/10913815"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/10913815\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-10913814",
+  "notes": "<p>This is the material presented during the  IEA Wind Task 52 Lunch Seminar Series 2024, which was held online on between 26 February and 1 March 2024 (all days 13-14 CET).</p>\n<p>The seminars were opened with an introduction by the Operating Agent, see <em>a_20240226_IEA-Wind-Task52_lunch-seminar-INTRO.pdf</em>, followed by these presentations:</p>\n<p>Day 1 - focus on Lidar-Assisted Control (LAC)</p>\n<ul>\n<li>Yao Shigang on \"GoldWind’s Experience after 7 years of Lidar Assisted Control\" (b)</li>\n<li>Renni Rinker on \"Turbulence-field estimation for LAC / Ongoing research from the CONTINUE project\" (c) </li>\n<li>David Schlipf on \"IEA Wind Task 52 LAC Summer Games 2024\" (d)</li>\n</ul>\n<p>Day 2 - focus on Standardization of Lidar Measurements</p>\n<ul>\n<li>Nikolai Hille on \"New approaches to increase the acceptance of lidar measured TI in standardization\" (e)</li>\n<li>Peter Clive on \"From fixed masts to floating lidars / A journey through wind measurement standards\" (f)</li>\n</ul>\n<p>Day 3 - focus on Lidar in Cold Climate</p>\n<ul>\n<li>Pekko Tuominen on \"Vaisala CL61 and the potential of measuring depolarization in wind energy applications\" (g)</li>\n<li>Alexander Stökl on \"Comparative data availability of LiDAR measurements at Alpine sites\" (h)</li>\n</ul>\n<p>Day 4 - focus on Connecting Wind Lidar</p>\n<ul>\n<li>Yuriy Marykovskiy on “Wind Energy Domain Semantics Overview” (no presentation available)</li>\n<li>Francisco Costa on \"Making lidar ontology concepts available and reusable\" (i)</li>\n</ul>\n<p>Day 5 - focus on Nacelle Lidar on Complex Terrain</p>\n<ul>\n<li>Niels Troldborg on \"How does complex terrain change the power curve of a wind turbine?\" (j)</li>\n<li>Steffen Raach on \"Nacelle-based lidar measurements in the induction zone for power curve analysis\" (k)</li>\n</ul>\n<p>Please note that each document or presentation may have its own license. If in doubt about reusing or citing any of the material presented here, please contact the authors.</p>",
+  "owner_org": "fraunhofer-iwes",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "c_dtu_lac_research.pdf",
+      "url": "https://zenodo.org/records/10913815/files/c_dtu_lac_research.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "h_Task 52 Lunch Seminar 2024-02-28 LiDAR availability at Alpine sites.pdf",
+      "url": "https://zenodo.org/records/10913815/files/h_Task%2052%20Lunch%20Seminar%202024-02-28%20LiDAR%20availability%20at%20Alpine%20sites.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "b_GoldWind’s Experience after 7 years of Lidar Assisted Control-IEATask52.pdf",
+      "url": "https://zenodo.org/records/10913815/files/b_GoldWind%E2%80%99s%20Experience%20after%207%20years%20of%20Lidar%20Assisted%20Control-IEATask52.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "k_20240301-sowento-IEATASK52-LunchSeminar-Nacelle-based lidar measurements in the induction zone for power performance testing.pdf",
+      "url": "https://zenodo.org/records/10913815/files/k_20240301-sowento-IEATASK52-LunchSeminar-Nacelle-based%20lidar%20measurements%20in%20the%20induction%20zone%20for%20power%20performance%20testing.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "f_IEA Task 52 Webinar - 2024-02-27.pdf",
+      "url": "https://zenodo.org/records/10913815/files/f_IEA%20Task%2052%20Webinar%20-%202024-02-27.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "d_SummerGames2024_LunchSeminar.pdf",
+      "url": "https://zenodo.org/records/10913815/files/d_SummerGames2024_LunchSeminar.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "e_DNV-RP-0661_IEA_Task52_webinar_20240227.pdf",
+      "url": "https://zenodo.org/records/10913815/files/e_DNV-RP-0661_IEA_Task52_webinar_20240227.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "j_IEA52_lunchmeeting.pdf",
+      "url": "https://zenodo.org/records/10913815/files/j_IEA52_lunchmeeting.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "a_20240226_IEA-Wind-Task52_lunch-seminar-INTRO.pdf",
+      "url": "https://zenodo.org/records/10913815/files/a_20240226_IEA-Wind-Task52_lunch-seminar-INTRO.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "g_Vaisala CL61 and the potential of measuring depolarization in wind energy applications.pdf",
+      "url": "https://zenodo.org/records/10913815/files/g_Vaisala%20CL61%20and%20the%20potential%20of%20measuring%20depolarization%20in%20wind%20energy%20applications.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "i_Task52_The_Lidar_Ontology_FranciscoCosta.pdf",
+      "url": "https://zenodo.org/records/10913815/files/i_Task52_The_Lidar_Ontology_FranciscoCosta.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 52 Lunch Seminar Series (February/March 2024)",
+  "url": "https://zenodo.org/records/10913815"
+}

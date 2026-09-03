@@ -1,0 +1,112 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Octue\",\"family\":\"Clark\",\"given\":\"Thomas\",\"name\":\"Clark, Thomas\"},{\"affiliation\":\"Danmarks Tekniske Universitetet\",\"family\":\"Quick\",\"given\":\"Julian\",\"name\":\"Quick, Julian\"},{\"affiliation\":\"ServusNet Informatics (Ireland)\",\"family\":\"Farren\",\"given\":\"Des\",\"name\":\"Farren, Des\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Sempreviva\",\"given\":\"Anna Maria\",\"name\":\"Sempreviva, Anna Maria\",\"orcid\":\"0000-0003-4124-9040\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"sheng\",\"given\":\"shawn\",\"name\":\"sheng, shawn\",\"orcid\":\"0000-0003-0134-0907\"},{\"affiliation\":\"Ostschweizer Fachhochschule OST\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.16811308"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.16811308"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-08-12"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.16811307\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.16811308"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-08-12T09:32:38Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.16811308"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.16811308\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-16811308",
+  "notes": "In this report, we highlight the steps in the evolution of the wind energy sector towards frictionless and sustainable data usage, and provide organisations with concrete suggestions for how to focus and prioritise their efforts. We understand frictionless and sustainable data usage to mean “removing data usage barriers between different stakeholders and between data lifecycle stages in the long-term”. We see frictionless and sustainable data usage as an important component of unlocking the full value of wind energy through digital transformation, which is the goal of IEA Wind Task 43. Frictionless and sustainable data usage is key for increasing data maturity, and for ultimately creating intelligent, automated, scalable AI-based systems for increasing the value and impact of wind energy.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data-exchange"
+    },
+    {
+      "name": "digitalisation"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "IEA Wind Task 43 Technical Report - Evolving the Wind Energy Sector Towards Frictionless and Sustainable Data Usage",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.16811308"
+}

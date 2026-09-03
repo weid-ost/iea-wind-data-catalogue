@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Rouholahnejad\",\"given\":\"Farkhondeh (Hanie)\",\"name\":\"Rouholahnejad, Farkhondeh (Hanie)\",\"orcid\":\"0009-0007-2266-1386\"},{\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\",\"orcid\":\"0000-0001-7129-9247\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-10-143-2025"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-10-143-2025"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-01-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2023-178\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2023-178-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2023-178-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2023-178-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.24381/cds.bd0915c6\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-10-143-2025"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-01-22T10:39:13Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-10-143-2025"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-10-143-2025\",\"https://wes.copernicus.org/articles/10/143/2025/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-10-143-2025",
+  "notes": "<p>Abstract. Accurate wind speed determination at the height of the rotor swept area is critical for resource assessments. ERA5 data combined with short-term measurements through the “measure, correlate, predict” (MCP) method are commonly used for offshore applications in this context. However, ERA5 poses limitations in capturing site-specific wind speed variability due to its low resolution. To address this, we developed random forest models extending near-surface wind speed up to 200 m, focusing on the Dutch part of the North Sea. Based on public 2-year floating lidar data collected at four locations, the 15 % testing subset shows that the random forest model trained on the remaining 85 % of site-specific wind profiles outperforms the MCP-corrected ERA5 wind profiles in accuracy, bias, and correlation. In the absence of rotor height measurements, a model trained within a 200 km region handles vertical extension effectively, albeit with increased bias. Our regionally trained random forest model exhibits superior accuracy in capturing wind speed variations and local effects, with an average deviation below 5 % compared to corrected ERA5 with a 20 % deviation from measurements. The 10 min random-forest-predicted wind speeds capture the mesoscale section of the power spectrum where ERA5 shows degradation. For stable conditions the root mean squared error and bias are 12 % and 29 % larger, respectively, compared to unstable conditions, which can be attributed to the decoupling effect at higher heights from the surface during stable stratification. Our study highlights the potential enhancement in wind resource assessment by means of machine learning methods, specifically random forest. Future research may explore extending the random forest methodology for higher heights, benefiting a new generation of offshore wind turbines, and investigating cluster wakes in the North Sea through a multinational network of floating lidars, contingent on data availability.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Characterization of local wind profiles: a random forest approach for enhanced wind profile extrapolation",
+  "url": "https://doi.org/10.5194/wes-10-143-2025"
+}

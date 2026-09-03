@@ -1,0 +1,117 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Doubrawa, Paula\",\"orcid\":\"0000-0002-0660-7212\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.10815517"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:34Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.10815517"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-57\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:34Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-03-12"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10815517\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10815518"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.10815518"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/10815518"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/10815518\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-57"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-10815517",
+  "notes": "<p>Slides presented at the IEA Wind Task 57 JAM virtual kickoff on March 12 2024.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "MAR-12-2024-VIRTUAL-KICKOFF.pdf",
+      "url": "https://zenodo.org/records/10815518/files/MAR-12-2024-VIRTUAL-KICKOFF.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "JAM VIRTUAL KICKOFF",
+  "url": "https://zenodo.org/records/10815518"
+}

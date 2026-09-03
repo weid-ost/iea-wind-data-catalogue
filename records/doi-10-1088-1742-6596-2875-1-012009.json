@@ -1,0 +1,149 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Creane\",\"given\":\"Shauna\",\"name\":\"Creane, Shauna\"},{\"family\":\"Santos\",\"given\":\"Pedro\",\"name\":\"Santos, Pedro\"},{\"family\":\"Kölle\",\"given\":\"Konstanze\",\"name\":\"Kölle, Konstanze\"},{\"family\":\"Ecenarro Diaz-Tejeiro\",\"given\":\"Laura\",\"name\":\"Ecenarro Diaz-Tejeiro, Laura\"},{\"family\":\"Zouaoui\",\"given\":\"Aimen\",\"name\":\"Zouaoui, Aimen\"},{\"family\":\"Airoldi\",\"given\":\"Davide\",\"name\":\"Airoldi, Davide\"},{\"family\":\"Bakhoday-Paskyabi\",\"given\":\"Mostafa\",\"name\":\"Bakhoday-Paskyabi, Mostafa\"},{\"family\":\"Biglu\",\"given\":\"Michael\",\"name\":\"Biglu, Michael\"},{\"family\":\"Brown\",\"given\":\"William\",\"name\":\"Brown, William\"},{\"family\":\"Frøyd\",\"given\":\"Lars\",\"name\":\"Frøyd, Lars\"},{\"family\":\"Li\",\"given\":\"Lin\",\"name\":\"Li, Lin\"},{\"family\":\"Cheynet\",\"given\":\"Etienne\",\"name\":\"Cheynet, Etienne\"},{\"family\":\"Hagerman\",\"given\":\"George\",\"name\":\"Hagerman, George\"},{\"family\":\"Hall\",\"given\":\"Matthew\",\"name\":\"Hall, Matthew\"},{\"family\":\"Kim\",\"given\":\"Yong-Yook\",\"name\":\"Kim, Yong-Yook\"},{\"family\":\"Guo Larsén\",\"given\":\"Xiaoli\",\"name\":\"Guo Larsén, Xiaoli\"},{\"family\":\"Musialik\",\"given\":\"Mateusz\",\"name\":\"Musialik, Mateusz\"},{\"family\":\"Park\",\"given\":\"Miho\",\"name\":\"Park, Miho\"},{\"family\":\"Tronfeldt Sørensen\",\"given\":\"Jacob\",\"name\":\"Tronfeldt Sørensen, Jacob\"},{\"family\":\"Tanemoto\",\"given\":\"Jun\",\"name\":\"Tanemoto, Jun\"},{\"family\":\"You\",\"given\":\"Young-Jae\",\"name\":\"You, Young-Jae\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics: Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/2875/1/012009"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/2875/1/012009"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:45Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-11-01"
+    },
+    {
+      "key": "publisher",
+      "value": "IOP Publishing"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2481280\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/JA-5000-90290\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/2481280\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/JA-5000-90290"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "2481280"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T15:13:54Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\",\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2481280"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2481280\",\"https://www.osti.gov/pages/biblio/2481280\",\"https://doi.org/10.1088/1742-6596/2875/1/012009\",\"https://iopscience.iop.org/article/10.1088/1742-6596/2875/1/012009\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-1088-1742-6596-2875-1-012009",
+  "notes": "Abstract <p>The commercial-scale deployment of floating offshore wind (FOW) projects is expected to take place in a diverse range of sites that may differ significantly from existing fixed-bottom projects. FOW farms are particularly sensitive to the water depth and the meteorological and oceanographic (metocean) and geotechnical conditions at the project site due to the wave-induced system motions and loads as well as the anchoring system constraints imposed by the seafloor conditions. Uncertainty around the site conditions will permeate through all aspects of project design, leading to suboptimal and overly conservative designs, increased costs, and adversely affected performance. As FOW expands into a global industry, metocean and geotechnical conditions will increasingly vary for projects located in different geographic regions or in far-from-shore, deep-water sites. This study represents the outputs of work package 1 of International Energy Agency Wind Task 49, which focuses on the integrated design of floating wind arrays. The primary goal of this study is to establish the type of parameters and constraints required to characterize FOW array reference sites; provide a realistic and publicly available set of reference site conditions to the FOW community as a baseline set of data for individual research projects; identify and categorize any critical gaps in the existing data or methodologies required to define reference site characteristics; and inform and support the design of reference FOW arrays. A building block concept was developed for synthesizing reference sites for the design of FOW arrays. The building blocks include three classes of site conditions focusing on the techno-economic design of FOW projects: metocean conditions, seabed conditions, and coastal infrastructure. All reference site data produced and collected in this study are publicly available.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2481280"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "coastal-infrastructure"
+    },
+    {
+      "name": "floating-offshore-wind"
+    },
+    {
+      "name": "iea-wind-task-49"
+    },
+    {
+      "name": "metocean-conditions"
+    },
+    {
+      "name": "reference-site-conditions"
+    },
+    {
+      "name": "seabed-conditions"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "IEA Wind Task 49: Reference Site Conditions for Floating Wind Arrays",
+  "url": "https://doi.org/10.1088/1742-6596/2875/1/012009"
+}

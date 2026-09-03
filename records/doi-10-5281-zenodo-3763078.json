@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Simley, Eric\",\"orcid\":\"0000-0002-1027-9848\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Scholbrock, Andrew\",\"orcid\":\"0000-0003-1241-6356\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3763078"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3763078"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "other-closed"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-04-22"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3763078\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "3764556"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.3764556"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3764556"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3764556\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "other-closed",
+  "name": "doi-10-5281-zenodo-3763078",
+  "notes": "<p>The use of nacelle lidar measurements for wind turbine control applications has been widely studied in the research community and is beginning to be adopted by industry. Successful implementation of lidar-assisted control to reduce the cost of wind energy involves several design choices, including lidar scan pattern selection, lidar data processing, and controller design.</p>\n\n<p>In this webinar, Eric Simley and Andrew Scholbrock from the National Renewable Energy Laboratory (NREL), and David Schlipf (Flensburg University of Applied Sciences) presented an overview of lidar-assisted control applications, answering the following questions:</p>\n\n<ol>\n\t<li><strong>How can we obtain useful information for controls from lidar systems?</strong> Topics: wind field reconstruction, scan pattern optimization, lidar data processing. Presented by Eric Simley.</li>\n\t<li><strong>How can these lidar measurements be used to improve wind turbine control?</strong> Topics: feedforward pitch control, yaw control, multivariate control. Presented by David Schlipf.</li>\n\t<li><strong>What are some practical considerations when implementing lidar-assisted control in the field?</strong> Topics: lidar availability, calibration, certification challenges. Presented by Andrew Scholbrock.</li>\n</ol>\n\n<p>The webinar was moderated by Andy Clifton.</p>\n\n<p>This webinar expanded on the presentation Eric and Andrew Scholbrock gave on “Nacelle-Mounted Lidar for Wind Energy Applications” as part of NREL’s Wind Workforce Development webinar series. A recording of that presentation is available at <a href=\"https://youtu.be/yQIMDoYmFno\" rel=\"nofollow noopener\">https://youtu.be/yQIMDoYmFno.</a></p>",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "2020-04-22 - An Overview of Lidar-Assisted Control Part I - Simley.pdf",
+      "url": "https://zenodo.org/records/3764556/files/2020-04-22%20-%20An%20Overview%20of%20Lidar-Assisted%20Control%20Part%20I%20-%20Simley.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "2020-04-22 - An Overview of Lidar-Assisted Control Part III - Scholbrock.pdf",
+      "url": "https://zenodo.org/records/3764556/files/2020-04-22%20-%20An%20Overview%20of%20Lidar-Assisted%20Control%20Part%20III%20-%20Scholbrock.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "2020-04-22 - An Overview of Lidar-Assisted Control Part II - Schlipf.pdf",
+      "url": "https://zenodo.org/records/3764556/files/2020-04-22%20-%20An%20Overview%20of%20Lidar-Assisted%20Control%20Part%20II%20-%20Schlipf.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "2020-04-22 - An Overview of Lidar-Assisted Control Introduction - Clifton.pdf",
+      "url": "https://zenodo.org/records/3764556/files/2020-04-22%20-%20An%20Overview%20of%20Lidar-Assisted%20Control%20Introduction%20-%20Clifton.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "lidar-assisted-control"
+    },
+    {
+      "name": "webinar"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "An Overview of Lidar-Assisted Control",
+  "url": "https://zenodo.org/records/3764556",
+  "version": "23 April 2020"
+}

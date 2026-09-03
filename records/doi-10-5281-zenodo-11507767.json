@@ -1,0 +1,142 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Doubrawa, Paula\",\"orcid\":\"0000-0002-0660-7212\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Thedin, Regis\",\"orcid\":\"0000-0001-5336-7875\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Moriarty, Patrick\",\"orcid\":\"0000-0001-7122-5993\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Bodini, Nicola\",\"orcid\":\"0000-0002-2550-9853\"},{\"name\":\"Knaus, Hermann\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.11507767"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:34Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.11507767"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-57\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:34Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06-06"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.11507767\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "11507768"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.11507768"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/11507768"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/11507768\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-57"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-11507767",
+  "notes": "<p><strong>International Energy Agency (IEA) Wind Technology Collaboration Program (TCP)</strong></p>\n<p><strong>Task 57 - Joint Assessment of Models (JAM)</strong></p>\n<p><strong>In-Person Kickoff Meeting,1<sup>st</sup> In-Person Meeting</strong></p>\n<p>28<sup>th</sup> May 2024</p>\n<p>Florence, Italy</p>\n<p> </p>\n<p><strong>Agenda</strong></p>\n<table>\n<tbody>\n<tr>\n<td>\n<p>13:00</p>\n</td>\n<td>\n<p>Welcome &amp; Introductions</p>\n</td>\n<td>\n<p>Everyone</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>13:30</p>\n</td>\n<td>\n<p>Task Overview &amp; Status</p>\n</td>\n<td>\n<p>Paula Doubrawa, NREL</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>13:45</p>\n</td>\n<td>\n<p>Benchmark Survey &amp; Blueprint</p>\n</td>\n<td>\n<p>Regis Thedin, NREL</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>14:15</p>\n</td>\n<td>\n<p>AWAKEN Benchmark Launch</p>\n</td>\n<td>\n<p>Nicola Bodini, NREL</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>15:00</p>\n</td>\n<td>\n<p>WINSENT Benchmark</p>\n</td>\n<td>\n<p>Hermann Knaus, Esslingen</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>15:30</p>\n</td>\n<td>\n<p>Coffee Break </p>\n</td>\n<td>\n<p>Everyone</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>16:00</p>\n</td>\n<td>\n<p>Future Benchmarks</p>\n</td>\n<td>\n<p>Regis Thedin, NREL</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>16:20</p>\n</td>\n<td>\n<p>Collaborations</p>\n</td>\n<td>\n<p>Paula Doubrawa, NREL</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>16:30</p>\n</td>\n<td>\n<p>Future Field Campaigns</p>\n</td>\n<td>\n<p>Pat Moriarty, NREL</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>17:00</p>\n</td>\n<td>\n<p>Group Picture &amp; End</p>\n</td>\n<td>\n<p>Everyone</p>\n</td>\n</tr>\n</tbody>\n</table>\n \n<p> </p>",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "04 KNAUS.pdf",
+      "url": "https://zenodo.org/records/11507768/files/04%20KNAUS.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "02 THEDIN.pdf",
+      "url": "https://zenodo.org/records/11507768/files/02%20THEDIN.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "05 MORIARTY.pdf",
+      "url": "https://zenodo.org/records/11507768/files/05%20MORIARTY.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "01 DOUBRAWA.pdf",
+      "url": "https://zenodo.org/records/11507768/files/01%20DOUBRAWA.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "03 BODINI.pdf",
+      "url": "https://zenodo.org/records/11507768/files/03%20BODINI.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Main points.pdf",
+      "url": "https://zenodo.org/records/11507768/files/Main%20points.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "JAM In-Person Kickoff Meeting",
+  "url": "https://zenodo.org/records/11507768"
+}

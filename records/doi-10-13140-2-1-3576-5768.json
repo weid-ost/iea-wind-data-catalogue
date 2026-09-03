@@ -1,0 +1,87 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Nrel\"},{\"name\":\"Preprint J Jonkman\"},{\"name\":\"T Larsen\"},{\"name\":\"A Hansen\"},{\"name\":\"T Nygaard\"},{\"name\":\"K Maus\"},{\"name\":\"M Karimirad\"},{\"name\":\"Z Gao\"},{\"name\":\"T Moan\"},{\"name\":\"I Fylling\"},{\"name\":\"Norway J Marintek\"},{\"name\":\"Nichols\"},{\"name\":\"M Kohlmeier\"},{\"name\":\"J Pascual Vergara\"},{\"name\":\"D Merino\"},{\"name\":\"W Shi\"},{\"name\":\"H Park\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.13140/2.1.3576.5768"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.13140/2.1.3576.5768"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2010"
+    },
+    {
+      "key": "publisher",
+      "value": "Unpublished"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.13140/2.1.3576.5768"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-10-01T23:25:41Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.researchgate.net/doi/10.13140/2.1.3576.5768"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.researchgate.net/doi/10.13140/2.1.3576.5768\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-13140-2-1-3576-5768",
+  "notes": "",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Conference Paper Offshore Code Comparison Collaboration within IEA Wind Task 23: Phase IV Results Regarding Floating Wind Turbine Modeling",
+  "url": "https://www.researchgate.net/doi/10.13140/2.1.3576.5768"
+}

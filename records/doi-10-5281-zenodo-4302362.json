@@ -1,0 +1,139 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Vaisala\",\"name\":\"Black, Andrew\"},{\"affiliation\":\"Leosphere\",\"name\":\"Mazoyer, Paul\"},{\"affiliation\":\"ZX LIdars\",\"name\":\"Wylie, Scott\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Debnath, Mishu\",\"orcid\":\"0000-0002-9446-4310\"},{\"affiliation\":\"Pattern Development\",\"name\":\"Lammers, Andrew\"},{\"affiliation\":\"Natural Power\",\"name\":\"Spalding, Taurin\"},{\"affiliation\":\"RWE\",\"name\":\"Schultz, Robert\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4302362"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4302362"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-12-02"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4302362\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4302363"
+    },
+    {
+      "key": "source_key",
+      "value": "10@10.5281/zenodo.4302363"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4302363"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4302363\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4302362",
+  "notes": "<p>As part of its mission to reduce the uncertainty of preconstruction wind resource estimates, the Consortium for the Advancement for Remote Sensing (CFARS) is engaged in a survey of correction techniques for remote wind sensing devices in complex terrain.</p>\n\n<p>This webinar presented and compared correction techniques from several suppliers (Leosphere, WindSim, Meteodyn) when applied to data collected by the most prominent sensing devices (Triton, WindCube, ZX). All techniques show similar results: uncorrected RSD wind speeds differ from cup measurement by 2%-5% and corrected data are all within ±1%. This study also examines anemometer biases due to flow inclination. The webinar goes beyond the CFARS presentation to AWEA 2020, providing further detail on the datasets, terrain classification and methods used to compare mast and lidars.</p>\n\n<p>Andrew Hastings Black, Scott Wylie, and Paul Mazoyer presented the survey results. The discussion was moderated by Andy Clifton from IEA Wind Task 32.</p>\n\n<p>This repository includes the following files:</p>\n\n<ul>\n\t<li>An introduction by Task 32 (\"2020 12 08...\")</li>\n\t<li>The main presentation (\"CFARS_...\").</li>\n</ul>",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "2020 12 08 Task 32 introduction.pdf",
+      "url": "https://zenodo.org/records/4302363/files/2020%2012%2008%20Task%2032%20introduction.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "CFARS_Survey of Correction Techniques for Remote Sensing Devices in Complex Flow_IEATask32_2020.pdf",
+      "url": "https://zenodo.org/records/4302363/files/CFARS_Survey%20of%20Correction%20Techniques%20for%20Remote%20Sensing%20Devices%20in%20Complex%20Flow_IEATask32_2020.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "complex-flow"
+    },
+    {
+      "name": "complex-terrain"
+    },
+    {
+      "name": "resource-assessment"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "Survey of Correction Techniques for Remote Sensing Devices in Complex Flow",
+  "url": "https://zenodo.org/records/4302363",
+  "version": "2020 December 08"
+}

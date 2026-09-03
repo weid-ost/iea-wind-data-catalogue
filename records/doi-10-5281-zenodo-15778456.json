@@ -1,0 +1,100 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"NWTC\",\"family\":\"Pietro Bortolotti\",\"name\":\"Pietro Bortolotti\"},{\"affiliation\":\"@NREL\",\"family\":\"Rafael M Mudafort\",\"name\":\"Rafael M Mudafort\"},{\"family\":\"Julian Quick\",\"name\":\"Julian Quick\"},{\"family\":\"kenloen\",\"name\":\"kenloen\"},{\"family\":\"Frederik Zahle\",\"name\":\"Frederik Zahle\"},{\"affiliation\":\"National Renewable Energy Lab\",\"family\":\"Chris Bay\",\"name\":\"Chris Bay\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Garrett Barter\",\"name\":\"Garrett Barter\"},{\"family\":\"dzalkind\",\"name\":\"dzalkind\"},{\"family\":\"rsmouradi\",\"name\":\"rsmouradi\"},{\"family\":\"amirarasteh1990\",\"name\":\"amirarasteh1990\"},{\"family\":\"mathieu7an\",\"name\":\"mathieu7an\"},{\"family\":\"Maxime Lejeune\",\"name\":\"Maxime Lejeune\"},{\"affiliation\":\"Fraunhofer IWES\",\"family\":\"Jonas Schulte\",\"name\":\"Jonas Schulte\"},{\"family\":\"madsmpedersen\",\"name\":\"madsmpedersen\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15778456"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15778456"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "apache-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"https://github.com/IEAWindSystems/windIO/tree/2.0\",\"identifier_type\":\"URL\",\"relation\":\"IsSupplementTo\"},{\"identifier\":\"10.5281/zenodo.15191296\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.15778456"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-06-30T22:13:25Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.15778456"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15778456\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "apache",
+  "name": "doi-10-5281-zenodo-15778456",
+  "notes": "The 2.0 release marks the formal completion of the development work that occurred during the past year within IEA Wind Task 55 REFWIND. The development targeted several weaknesses:\n\n\n\nSupport to aero-servo-hydro-elastic solvers\n\nMore rigorous definition of blade outer shape and blade inner structure\n\nMore rigorous documentation\n\nStronger software backend\n\n\nMany thanks to the entire development team for the outstanding achievement.\n\nDevelopment work will not stop here and 14 issues remain open. These are however minor and will be targeted in 2.x releases in the coming weeks and months",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindSystems/windIO: windIO 2.0",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15778456",
+  "version": "2.0"
+}

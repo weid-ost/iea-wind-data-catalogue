@@ -1,0 +1,122 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"ProPlanEn\",\"name\":\"Schlez, Wolfgang\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4288323"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:35Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4288323"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:35Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-11-24"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4288323\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4288324"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.4288324"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4288324"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4288324\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4288323",
+  "notes": "<p>A discussion paper defining the challenge and reviewing publications in the area of wind farm induction aka blockage.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "White Paper 3017DHDW01C Wind Farm Induction.pdf",
+      "url": "https://zenodo.org/records/4288324/files/White%20Paper%203017DHDW01C%20Wind%20Farm%20Induction.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-energy-wind-turbine-wind-farm-induction-axial-momentum-wake-blockage"
+    }
+  ],
+  "title": "Unlocking Blockage  -  white paper on wind farm induction",
+  "url": "https://zenodo.org/records/4288324",
+  "version": "C"
+}

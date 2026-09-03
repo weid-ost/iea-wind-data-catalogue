@@ -1,0 +1,211 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"GeoSphere Austria\",\"family\":\"Schicker\",\"given\":\"Irene\",\"name\":\"Schicker, Irene\",\"orcid\":\"0000-0001-6401-2412\"},{\"affiliation\":\"AustroControl Digital Services GmbH\",\"family\":\"Strauss\",\"given\":\"Lukas\",\"name\":\"Strauss, Lukas\",\"orcid\":\"0000-0001-8275-0806\"},{\"affiliation\":\"WEB Wind Energy GmbH\",\"family\":\"Mader\",\"given\":\"Florian\",\"name\":\"Mader, Florian\"}]"
+    },
+    {
+      "key": "container",
+      "value": "IEA Wind TCP Task 51 \"Forecasting for the weather driven energy system\" - 2nd Austrian Workshop"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.17605818"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.17605818"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-51\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:32Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-11-11"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.17605818\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.17605819\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.17627028\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "17627028"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.17627028"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/17627028"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/17627028\",\"https://zenodo.org/doi/10.5281/zenodo.17605818\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-51"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-17605818",
+  "notes": "The 2nd IEA Task 51 Austria Workshop “Weather-Driven Extreme Events in the Energy System” was held on 11 November 2025 at the Austro Tower in Vienna and brought together 125 experts from the energy sector, grid operation, meteorology, research, and public authorities. The workshop focused on the growing risks posed by weather-driven extreme events and their impacts on renewable energy generation, electricity markets, grid stability, and operational decision-making.\n\nThe event was organized by GeoSphere Austria in cooperation with Austro Control Digital Services, with support from the Austrian Federal Ministry for Innovation, Mobility and Infrastructure (BMIMI) and the Austrian Research Promotion Agency (FFG).\n\nThe programme covered a broad spectrum of topics, including:\n\n\n\n\n\nExtreme weather processes in the Alpine region and impacts on energy infrastructure\n\n\n\n\nForecast errors and the limits of predictability\n\n\n\n\nEarly warning systems and operational decision support\n\n\n\n\nChallenges in energy trading and grid management\n\n\n\n\nDigital twins, nowcasting systems, AI-driven forecasting, and meteorological risk indicators\n\n\n\n\nWeather-induced impacts on critical infrastructure (transmission and distribution grids, Austrian Railways, airport operations)\n\n\n\nThis Zenodo record contains:\n\n\n\n\n\nWorkshop programme (PDF)\n\n\n\n\nAll presentations (PDF) as individual files\n\n\n\n\nOutputs from the interactive sessions (A–D)\n\n\n\n\nOptional: A ZIP archive containing all presentations in a single package\n\n\n\nAll materials are part of the national Austrian activities within IEA Wind TCP Task 51: Forecasting for the Weather-Driven Energy System.\n\n \n\nContributors (Presenters)\n\n\n\n\n\nSabine Mitter (BMIMI)\n\n\n\n\nBernhard Niedermoser (GeoSphere Austria)\n\n\n\n\nFlorian Mader (WEB Windenergie)\n\n\n\n\nGernot Waldsam (Austro Control Digital Services)\n\n\n\n\nLukas Strauss (Austro Control Digital Services)\n\n\n\n\nIrene Schicker (GeoSphere Austria)\n\n\n\n\nPhilipp Piber (Austro Control)\n\n\n\n\nHorst Brandlmaier (OeMAG)\n\n\n\nShort Talks – Energy Sector\n\n\n\n\n\nAndreas Nehls (Burgenland Energie Trading)\n\n\n\n\nAndreas Forster (oekostrom AG)\n\n\n\n\nAnna-Maria Tilg (Austrian Power Grid)\n\n\n\n\nBernhard Spitzer (Energienetze Steiermark)\n\n\n\n\nRobert Grassinger (ÖBB Infrastruktur)\n\n\n\n\nPhilipp Geier (Energie Steiermark Green Power)\n\n\n\nShort Talks – Research &amp; Weather\n\n\n\n\n\nLaura Essl (Disaster Competence Network Austria – DCNA)\n\n\n\n\nIrene Schicker (GeoSphere Austria)\n\n\n\n\nClemens Weiß (ACDS)\n\n\n\n\nAnton Fuxjäger (Enlite AI)\n\n\n\n\nMichael Kernitzkyi (JOANNEUM RESEARCH)\n\n\n\nInteractive Sessions\n\n\n\n\n\nSession A + D: Lukas Strauss\n\n\n\n\nSession B + C: Irene Schicker",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "12_IEAT51AT_WS2025_Geier.pdf",
+      "url": "https://zenodo.org/records/17627028/files/12_IEAT51AT_WS2025_Geier.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "06_IEAT51AT_WS2025_Brandlmaier.pdf",
+      "url": "https://zenodo.org/records/17627028/files/06_IEAT51AT_WS2025_Brandlmaier.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "11_IEAT51AT_WS2025_Grassinger.pdf",
+      "url": "https://zenodo.org/records/17627028/files/11_IEAT51AT_WS2025_Grassinger.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "01_IEAT51AT_WS2025_Strauss.pdf",
+      "url": "https://zenodo.org/records/17627028/files/01_IEAT51AT_WS2025_Strauss.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "17_IEAT51AT_WS2025_Kernitzkyi.pdf",
+      "url": "https://zenodo.org/records/17627028/files/17_IEAT51AT_WS2025_Kernitzkyi.pdf"
+    },
+    {
+      "format": "zip",
+      "name": "ALL_PRESENTATIONS.zip",
+      "url": "https://zenodo.org/records/17627028/files/ALL_PRESENTATIONS.zip"
+    },
+    {
+      "format": "pdf",
+      "name": "15_IEAT51AT_WS2025_Weiß.pdf",
+      "url": "https://zenodo.org/records/17627028/files/15_IEAT51AT_WS2025_Wei%C3%9F.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "16_IEAT51AT_WS2025_Fuxjäger_Zahlner.pdf",
+      "url": "https://zenodo.org/records/17627028/files/16_IEAT51AT_WS2025_Fuxj%C3%A4ger_Zahlner.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "10_IEAT51AT_WS2025_Spitzer.pdf",
+      "url": "https://zenodo.org/records/17627028/files/10_IEAT51AT_WS2025_Spitzer.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "03_IEAT51AT_WS2025_Mader.pdf",
+      "url": "https://zenodo.org/records/17627028/files/03_IEAT51AT_WS2025_Mader.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "14_IEAT51AT_WS2025_Schicker.pdf",
+      "url": "https://zenodo.org/records/17627028/files/14_IEAT51AT_WS2025_Schicker.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "08_IEAT51AT_WS2025_Forster.pdf",
+      "url": "https://zenodo.org/records/17627028/files/08_IEAT51AT_WS2025_Forster.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13_IEAT51AT_WS2025_Essl.pdf",
+      "url": "https://zenodo.org/records/17627028/files/13_IEAT51AT_WS2025_Essl.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "00_IEAT51AT_WS2025_Titelfolie.pdf",
+      "url": "https://zenodo.org/records/17627028/files/00_IEAT51AT_WS2025_Titelfolie.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "07_IEAT51AT_WS2025_Nehls.pdf",
+      "url": "https://zenodo.org/records/17627028/files/07_IEAT51AT_WS2025_Nehls.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "02_IEAT51AT_WS2025_Schicker.pdf",
+      "url": "https://zenodo.org/records/17627028/files/02_IEAT51AT_WS2025_Schicker.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "04_IEAT51AT_WS2025_Niedermoser.pdf",
+      "url": "https://zenodo.org/records/17627028/files/04_IEAT51AT_WS2025_Niedermoser.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "05_IEAT51AT_WS2025_Piber.pdf",
+      "url": "https://zenodo.org/records/17627028/files/05_IEAT51AT_WS2025_Piber.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "09_IEAT51AT_WS2025_Tilg.pdf",
+      "url": "https://zenodo.org/records/17627028/files/09_IEAT51AT_WS2025_Tilg.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP Task 51 \"Forecasting for the weather driven energy system\" - 2nd Austrian Workshop",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.17605818"
+}

@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Icetek\",\"name\":\"Roberge, Patrice\"},{\"affiliation\":\"Vattenfall (Sweden)\",\"name\":\"Petterson, Jennifer\"},{\"name\":\"Rittinghaus, Claas\"},{\"affiliation\":\"Nergica\",\"name\":\"Godreau, Charles\",\"orcid\":\"0000-0002-3889-878X\"},{\"affiliation\":\"Meteotest (Switzerland)\",\"name\":\"Froidevaux, Paul\"},{\"affiliation\":\"Meteotest (Switzerland)\",\"name\":\"Gerber, Franziska\"},{\"affiliation\":\"Borealis Wind, Canada\",\"name\":\"Roeper, Daniela\"},{\"affiliation\":\"Wicetec, Finland\",\"name\":\"Wallenius, Tomas\"},{\"affiliation\":\"Université Laval\",\"name\":\"Bégin-Drolet, André\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15058133"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15058133"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-54\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "bsd-3-clause"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-03-20"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15058133\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "source_id",
+      "value": "15058134"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.15058134"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15058134"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15058134\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-54"
+    }
+  ],
+  "license_id": "bsd-3-clause",
+  "name": "doi-10-5281-zenodo-15058133",
+  "notes": "<p>With the model code for blade heating system performance envelopes, IEA Task 54, an international<br />expert group for wind energy in cold climate, is proposing a simplified theoretical<br />model for simulating performance envelopes of an active blade heating system’s efficiency<br />for various operational boundaries. The model is based on python code and comes with an<br />executable file to provide a user-friendly interface.<br />For wind energy projects being developed and operated in cold climate conditions, an IPS<br />(Ice Protection System) - often including a blade heating system - can be required both due<br />to financial aspects as well as legal aspects. Production losses from icing can easily amount<br />to the largest fraction of losses for a wind farm in cold climate conditions. Thus, projection<br />and assessment of the performance of technical solutions designed to mitigate icing losses is<br />of high importance. As of today, there is limited available knowledge on how to select a wellfitting<br />system for a specific turbine as well as for a specific location. Hence, IEA Wind Task<br />54 provides a tool to model the performance according to turbine specifics and meteorological<br />conditions.<br />The purpose of the tool is for the end-user to model different blade heating system performance<br />envelopes to either project if a specific system would be a suitable choice for the respective<br />meteorological conditions of a project location, or to use on existing turbines with blade<br />heating system to evaluate the system’s performance and respective limits. As the complexity<br />of simulating all the phenomena for a rotating turbine blade in a natural environment with a<br />variety of thermodynamic effects is too advanced, the methodology of the presented model<br />is based on the assumption of keeping the blade ice-free and does not incorporate the actual<br />effect of ice build-up and melting. On the other hand, this reflects the goal of implementing a<br />blade heating system quite well.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Task54_Subtask_Envelope_Model.pdf",
+      "url": "https://zenodo.org/records/15058134/files/Task54_Subtask_Envelope_Model.pdf"
+    },
+    {
+      "format": "exe",
+      "name": "modelUI.exe",
+      "url": "https://zenodo.org/records/15058134/files/modelUI.exe"
+    },
+    {
+      "format": "py",
+      "name": "bladeModelSimplified.py",
+      "url": "https://zenodo.org/records/15058134/files/bladeModelSimplified.py"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Task 54 Blade heating Envelope model",
+  "url": "https://zenodo.org/records/15058134"
+}

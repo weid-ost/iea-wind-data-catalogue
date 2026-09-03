@@ -1,0 +1,87 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Kelly\",\"given\":\"Mark\",\"name\":\"Kelly, Mark\",\"orcid\":\"0000-0003-2882-4450\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.11581/923d05cd-ac6c-43dd-8777-c5c3323f0e15"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.11581/923d05cd-ac6c-43dd-8777-c5c3323f0e15"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024"
+    },
+    {
+      "key": "publisher",
+      "value": "DTU Wind and Energy Systems"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.11581/923d05cd-ac6c-43dd-8777-c5c3323f0e15"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-06-25T08:08:29Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://orbit.dtu.dk/en/publications/923d05cd-ac6c-43dd-8777-c5c3323f0e15"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://orbit.dtu.dk/en/publications/923d05cd-ac6c-43dd-8777-c5c3323f0e15\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-11581-923d05cd-ac6c-43dd-8777-c5c3323f0e15",
+  "notes": "",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Agglomerated metrics for small wind: from normalized boundary conditions to atmospheric turbulence",
+  "url": "https://orbit.dtu.dk/en/publications/923d05cd-ac6c-43dd-8777-c5c3323f0e15"
+}

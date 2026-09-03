@@ -1,0 +1,117 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Thedin, Regis\",\"orcid\":\"0000-0001-5336-7875\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Rybchuk, Alex\",\"orcid\":\"0000-0003-4433-3993\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy and Energy System\",\"name\":\"Lukas, Vollmer\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Moriarty, Patrick\",\"orcid\":\"0000-0001-7122-5993\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Bodini, Nicola\",\"orcid\":\"0000-0002-2550-9853\"},{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)\",\"name\":\"Rettenmeier, Andreas\",\"orcid\":\"0000-0002-9953-5392\"},{\"affiliation\":\"Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)\",\"name\":\"Wildmann, Norman\",\"orcid\":\"0000-0001-9475-4206\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15692919"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:34Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15692919"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-57\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:34Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-17"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15692919\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "15692920"
+    },
+    {
+      "key": "source_key",
+      "value": "3@10.5281/zenodo.15692920"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15692920"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15692920\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-57"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15692919",
+  "notes": "<p>International Energy Agency (IEA) Wind Technology Collaboration Program (TCP)</p>\n<p>Task 57 - Joint Assessment of Models (JAM)</p>\n<p> </p>\n<p>Slides presented during the 2025 General Annual Meeting, held on June 17, 2025.</p>\n<p> </p>\n<table>\n<tbody>\n<tr>\n<td><strong>Topic</strong></td>\n<td><strong>Lead</strong></td>\n</tr>\n<tr>\n<td>Introduction &amp; Task Updates</td>\n<td>Regis Thedin, NREL</td>\n</tr>\n<tr>\n<td>AWAKEN Benchmark</td>\n<td>Nicola Bodini, NREL</td>\n</tr>\n<tr>\n<td>RAAW Single-turbine Benchmark</td>\n<td>Alex Rybchuk, NREL</td>\n</tr>\n<tr>\n<td>WINSENT Benchmark</td>\n<td>Andreas Rettenmeier, ZSW</td>\n</tr>\n<tr>\n<td>WiValdi Benchmark</td>\n<td>Norman Wildmann, DLR</td>\n</tr>\n<tr>\n<td>Uncertainty Quantification Activities</td>\n<td>Lukas Vollmer, IWES</td>\n</tr>\n</tbody>\n</table>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "JAM_annualmeeting_20250617.pdf",
+      "url": "https://zenodo.org/records/15692920/files/JAM_annualmeeting_20250617.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "JAM Annual General Meeting 2025",
+  "url": "https://zenodo.org/records/15692920"
+}

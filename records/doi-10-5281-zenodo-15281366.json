@@ -1,0 +1,117 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Nergica\",\"name\":\"Godreau, Charles\",\"orcid\":\"0000-0002-3889-878X\"},{\"affiliation\":\"Vattenfall (Sweden)\",\"name\":\"Wickman, Helena\"},{\"affiliation\":\"VTT Technical Research Centre of Finland\",\"name\":\"Karlsson, Timo\",\"orcid\":\"0000-0002-5568-8768\"},{\"affiliation\":\"DNV (Norway)\",\"name\":\"Söderberg, Stefan\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15281366"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15281366"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-54\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:31Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-09-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15281366\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "15281367"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.15281367"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15281367"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15281367\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-54"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15281366",
+  "notes": "<p>IEA Wind Task 19 considers wind turbine performance testing in icing climates as a key<br />element to mitigate risks when developing wind farms in cold climates and for accelerating<br />wind turbine technology improvements in cold climate conditions. The first edition of the<br />Performance Warranty guidelines for wind turbines in icing climates was published in May<br />2018. The aim of this second edition is to present and further detail the most promising<br />available options on how wind turbines with icing climate adaptations can be warranted and<br />tested with affordable and reasonably accurate test methods.<br />It is recommended that an ice protection system (“IPS”) should be considered as part of the<br />procurement process within the turbine contract and to include a turbine performance warranty<br />for icing climates. The IPS should be viewed as an integral sub-system of the turbine, subject<br />to similar level of expectations and service as for any other sub-system in the wind turbine and<br />as such should carry the same warranty protection as the turbine (e.g., related to product<br />performance and availability).<br />A turbine performance warranty for a wind turbine in icing climate should define a test method<br />designed for measuring a clearly defined performance criteria within the IPS’s operational<br />envelope at reasonable cost, accuracy and test duration. The performance criteria may differ<br />depending on the chosen test method. Consequences for failed tests should be aimed firstly at<br />rectifying and improving turbine performance and secondly at providing liability coverage.<br />Three different turbine-level IPS performance test methods have been identified as the most<br />promising and commonly used in the industry. The three turbine performance warranty tests<br />are:</p>\n<p> </p>\n<ul>\n<li>The turbine self-comparison test – self-comparison of a test turbines performance<br />during icing events and outside of icing events .</li>\n<li>The side-by-side comparison test – comparison of two or more turbines positioned in<br />similar locations, with similar wind and icing climate, where one wind turbine is run<br />with an active IPS and the other with a deactivated IPS.</li>\n<li>The power performance test – similar to IEC 61400-12, based on the standard power<br />curve testing standard.</li>\n</ul>",
+  "owner_org": "vtt",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Performance Warranty Guidelines for Wind Turbines in Icing Climates.pdf",
+      "url": "https://zenodo.org/records/15281367/files/Performance%20Warranty%20Guidelines%20for%20Wind%20Turbines%20in%20Icing%20Climates.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Performance Warranty Guidelines for Wind Turbines in Icing Climates",
+  "url": "https://zenodo.org/records/15281367"
+}

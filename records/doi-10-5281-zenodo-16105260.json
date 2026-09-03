@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Weich\",\"given\":\"Simon\",\"name\":\"Weich, Simon\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"sowento GmbH\",\"family\":\"Raach\",\"given\":\"Steffen\",\"name\":\"Raach, Steffen\",\"orcid\":\"0000-0002-1264-0422\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.16105260"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.16105260"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.16105259\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.16105260"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-06-10T11:09:33Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.16105260"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.16105260\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-16105260",
+  "notes": "Abstract and Presentation from the Wind Energy Science Conference 2025 in Nantes. Wind characteristics are inherently dynamic, direction, and turbulence. Consequently, wind turbines are highly dynamic systems and must be designed to handle changes in the wind acting on the rotor. Traditional controllers react only after the wind changes have affected the wind turbine, resulting in an offset operation until the controller handles the disturbance. In contrast, lidar-assisted control (LAC) concepts use preview information of the wind to anticipate changes, hence reacting before the disturbanceapproaches the rotor and therefore improving the operation of the turbine.The mission of our IEA Wind Task 52 working group is to push forward the lidar-assisted control technology and simplify its application by recommended practices, open-source tools and joined exercises. In line with our mission, we organized the LAC Summer Games 2024 to encourage students and professionals in the art of designing and deploying lidar data processing algorithms and lidar-assisted controllers [7]. The full source code, a discussion forum and the results presented here can be found athttps://github.com/IEAWindTask52/LidarAssistedControl. In this work, we present the evaluation of the contributions and provide lessons learned and new ideas.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Evaluation and Lessons Learned from the Lidar-Assisted Control Summer Games 2024",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.16105260"
+}

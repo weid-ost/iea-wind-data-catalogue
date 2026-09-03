@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Conti\",\"given\":\"Davide\",\"name\":\"Conti, Davide\",\"orcid\":\"0000-0002-3615-7750\"},{\"family\":\"Pettas\",\"given\":\"Vasilis\",\"name\":\"Pettas, Vasilis\",\"orcid\":\"0000-0001-9985-9031\"},{\"family\":\"Dimitrov\",\"given\":\"Nikolay\",\"name\":\"Dimitrov, Nikolay\"},{\"family\":\"Peña\",\"given\":\"Alfredo\",\"name\":\"Peña, Alfredo\",\"orcid\":\"0000-0002-7900-9651\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-6-841-2021"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-6-841-2021"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-06-07"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2020-104\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2020-104-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2020-104-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2020-104-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2020-104-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5281/zenodo.4889772\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"},{\"identifier\":\"10.5281/zenodo.4896514\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-6-841-2021"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-01-23T22:12:55Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-6-841-2021"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-6-841-2021\",\"https://wes.copernicus.org/articles/6/841/2021/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-6-841-2021",
+  "notes": "<p>Abstract. This study proposes two methodologies for improving the accuracy of wind turbine load assessment under wake conditions by combining nacelle-mounted lidar measurements with wake wind field reconstruction techniques. The first approach consists of incorporating wind measurements of the wake flow field, obtained from nacelle lidars, into random, homogeneous Gaussian turbulence fields generated using the Mann spectral tensor model. The second approach imposes wake deficit time series, which are derived by fitting a bivariate Gaussian shape function to lidar observations of the wake field, on the Mann turbulence fields. The two approaches are numerically evaluated using a virtual lidar simulator, which scans the wake flow fields generated with the dynamic wake meandering (DWM) model, i.e., the target fields. The lidar-reconstructed wake fields are then input into aeroelastic simulations of the DTU 10 MW wind turbine for carrying out the load validation analysis. The power and load time series, predicted with lidar-reconstructed fields, exhibit a high correlation with the corresponding target simulations, thus reducing the statistical uncertainty (realization-to-realization) inherent to engineering wake models such as the DWM model. We quantify a reduction in power and loads' statistical uncertainty by a factor of between 1.2 and 5, depending on the wind turbine component, when using lidar-reconstructed fields compared to the DWM model results. Finally, we show that the number of lidar-scanned points in the inflow and the size of the lidar probe volume are critical aspects for the accuracy of the reconstructed wake fields, power, and load predictions.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Wind turbine load validation in wakes using wind field reconstruction techniques and nacelle lidar wind retrievals",
+  "url": "https://doi.org/10.5194/wes-6-841-2021"
+}

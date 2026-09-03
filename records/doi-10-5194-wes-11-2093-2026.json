@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Faccioni\",\"given\":\"Matteo\",\"name\":\"Faccioni, Matteo\",\"orcid\":\"0009-0005-7959-1222\"},{\"family\":\"Kiehn\",\"given\":\"Daniel\",\"name\":\"Kiehn, Daniel\",\"orcid\":\"0000-0001-7383-0740\"},{\"family\":\"Vrancken\",\"given\":\"Patrick\",\"name\":\"Vrancken, Patrick\",\"orcid\":\"0000-0003-2364-5576\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-11-2093-2026"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-11-2093-2026"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-06-18"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2025-221\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2025-221-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-221-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-221-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-221-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-11-2093-2026"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-06-18T04:26:19Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-11-2093-2026"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-11-2093-2026\",\"https://wes.copernicus.org/articles/11/2093/2026/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-11-2093-2026",
+  "notes": "<p>Abstract. In this publication a new method to generate stochastic representations of homogeneous and isotropic wind fields is presented. In contrast to the typically employed algorithm, the new approach is based on the wind speed correlation tensor. This allows for the simulation of a homogeneous and isotropic turbulent wind field with very high accuracy, achieving a deviation of the obtained dataset's structure function from the theoretical one that is at least 1 order of magnitude lower than that of the commonly used method. A compensation method to decrease this error even further is proposed. Moreover, being a generic method, it can be used to simulate other Gaussian phenomena (e.g., temperature or index of refraction fluctuations) in various spatial domains with uniformly spaced rectangular grid shapes. The motivation for this paper is to develop an algorithm that is able to synthesize high-fidelity homogeneous and isotropic wind speed datasets within an arbitrary model domain geometry without the need for optimizing weighting parameters. This is achieved by eliminating the band-pass effect of the discrete Fourier transform inherent to the typically used algorithm.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Generating high-fidelity wind fields from the wind speed correlation tensor",
+  "url": "https://doi.org/10.5194/wes-11-2093-2026"
+}

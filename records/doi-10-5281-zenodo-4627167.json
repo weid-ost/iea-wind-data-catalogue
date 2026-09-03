@@ -1,0 +1,122 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"WETI\",\"name\":\"David Schlipf\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"WETI\",\"name\":\"Feng Guo\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"sowento\",\"name\":\"Steffen Raach\",\"orcid\":\"0000-0002-1264-0422\"},{\"affiliation\":\"MOLAS\",\"name\":\"Hailong Zhu\",\"orcid\":\"0000-0001-6545-1345\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4627167"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4627167"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-03-17"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4627167\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4627168"
+    },
+    {
+      "key": "source_key",
+      "value": "7@10.5281/zenodo.4627168"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4627168"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4627168\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4627167",
+  "notes": "<p><strong>Presentation at the IEA Wind Task 32 Workshop on Digitalization on March 17, 2021</strong></p>\n\n<p>We believe that lidar systems will follow the general trend of technology by adapting to their environment and becoming more adjustable. Here, the “smart lidar” concept intents to provide a helpful framework. The presentation shows the main advantages, current advances, and new opportunities for various stakeholders in the lidar community.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "The Smart Lidar Concept - New Opportunities for the Lidar Community.pdf",
+      "url": "https://zenodo.org/records/4627168/files/The%20Smart%20Lidar%20Concept%20-%20New%20Opportunities%20for%20the%20Lidar%20Community.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "lidar-wind-turbine-control-iea-wind-task-32"
+    }
+  ],
+  "title": "The Smart Lidar Concept - New Opportunities for the Lidar Community",
+  "url": "https://zenodo.org/records/4627168",
+  "version": "1"
+}

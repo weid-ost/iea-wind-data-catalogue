@@ -1,0 +1,100 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Kröhnert, Hanna\"},{\"name\":\"Frehner, Alena\"},{\"name\":\"Stucki, Matthias\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.21256/zhaw-34162"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.21256/zhaw-34162"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025"
+    },
+    {
+      "key": "publisher",
+      "value": "ZHAW Zurich University of Applied Sciences"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.21256/zhaw-34162"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-03T05:27:34Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://digitalcollection.zhaw.ch/handle/11475/34162"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://digitalcollection.zhaw.ch/handle/11475/34162\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-21256-zhaw-34162",
+  "notes": "Introduction: Wind energy is playing an increasingly relevant role in the electricity mixes worldwide. In Europe, the installed capacity doubled from 148 GW to 285 GW in the last decade, covering 19% of the electricity demand in 2024. In addition, the average nominal capacity of newly installed wind turbines, both onshore and offshore, increased considerably. Despite these advancements, recent environmental assessments of wind energy still largely relied on outdated inventory data. This work therefore provides up-to-date inventories for wind energy for the Swiss Life Cycle Inventories database. The overall objective of the study was to provide up-to-date inventory for the European electricity mix from wind energy and the Swiss electricity from wind energy. These electricity datasets will serve to update national European electricity mixes and can be used for reliable comparisons within different energy technologies as well as for reliable background data for supply chain inventory. Outcomes of the work will feed into the IEA Wind Task 60 CYCLEWIND.\nMethodology: The established life cycle inventory (LCI) data considers all life cycle stages of electricity produced from wind energy, including component manufacturing, installation, operation and maintenance (O&amp;M) and decommissioning &amp; waste treatment (Figure 1). Separate infrastructure datasets were created for the wind turbines and the Electrical Balance of Plant (EBoP). Infrastructure datasets for wind turbines consist of a dataset for the moving parts (including blades, hub and nacelle), a dataset for the tower and a dataset for the foundation/substructure. The EBoP is divided into four separate infrastructure datasets in the case of offshore wind power, being array cable, export cable, land-based substation and offshore substation. In the case of onshore wind power, the EBoP consists of two infrastructure datasets being array and export cable combined and the substation. Each infrastructure dataset includes manufacturing transportation, installation, decommissioning and waste treatments for original and replaced components, according to their relative shares.\nEnvironmental impacts:\n• Greenhouse gas (GHG) emissions are dominated by the infrastructure of the wind turbine (moving parts, tower and foundation), with a contribution of between 77-93% to the overall GHG emissions (Figure 2).\n• The higher environmental impacts of electricity produced by offshore wind farms can primarily be explained by the impacts from vessel activities.\n• The Swiss and European wind electricity mix show GHG emissions of 18.1 and 15.0 g of CO2-eq/kWh, respectively.\n• Total environmental impact and cumulative energy demand are 13-16% higher in the Swiss electricity mix compared to the European electricity mix.\nTechnology comparison:\n• Total environmental impact of Swiss wind power is 8.8 times lower compared to the average consumer mix in Switzerland, while the total environmental impacts of European wind power are 19 times lower compared to the ENTSO-E mix.\n• In comparison to the Swiss production mix, the GWP of Swiss wind power is 5.8 times lower, while the GWP of European wind power is 31 times lower than the GWP of the ENTSO-E mix.\nConclusion: Wind power, along with hydropower, is one of the electricity products with the lowest environmental impact.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "333.79-energie"
+    },
+    {
+      "name": "lca"
+    },
+    {
+      "name": "life-cycle-inventory"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Bringing wind energy models up to speed : updated life cycle inventory data for on- and offshore wind energy generation",
+  "url": "https://digitalcollection.zhaw.ch/handle/11475/34162"
+}

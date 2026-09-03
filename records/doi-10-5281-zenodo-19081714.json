@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Ostschweizer Fachhochschule OST\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"},{\"family\":\"Marykovskiy\",\"given\":\"Yuriy\",\"name\":\"Marykovskiy, Yuriy\",\"orcid\":\"0000-0002-6570-6966\"},{\"affiliation\":\"Teraom\",\"family\":\"Vallarampara\",\"given\":\"Jagadish\",\"name\":\"Vallarampara, Jagadish\"},{\"family\":\"Hoghooghi\",\"given\":\"Hadi\",\"name\":\"Hoghooghi, Hadi\",\"orcid\":\"0000-0002-4676-532X\"},{\"affiliation\":\"University of Strathclyde\",\"family\":\"Hoi-Yin Yung\",\"given\":\"Kobe\",\"name\":\"Hoi-Yin Yung, Kobe\"},{\"affiliation\":\"Aalborg University\",\"family\":\"Khodam\",\"given\":\"Ali\",\"name\":\"Khodam, Ali\"},{\"affiliation\":\"KUDO Software\",\"family\":\"Jonsson\",\"given\":\"Christian\",\"name\":\"Jonsson, Christian\",\"orcid\":\"0009-0001-8891-1276\"},{\"affiliation\":\"Suzlon\",\"family\":\"Rodriguez\",\"given\":\"Carlos\",\"name\":\"Rodriguez, Carlos\"},{\"affiliation\":\"Memorial University of Newfoundland\",\"family\":\"Wanasinghe\",\"given\":\"Thumeera R.\",\"name\":\"Wanasinghe, Thumeera R.\"},{\"affiliation\":\"Memorial University of Newfoundland\",\"family\":\"Don\",\"given\":\"Mihiran Galagedarage\",\"name\":\"Don, Mihiran Galagedarage\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.19081714"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.19081714"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-18"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.19081714\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.18938647\",\"identifier_type\":\"DOI\",\"relation\":\"isSupplementedBy\"},{\"identifier\":\"10.5281/zenodo.18938647\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementedBy\"},{\"identifier\":\"10.5281/zenodo.19081715\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "19081715"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.19081715"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/19081715"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/19081715\",\"https://zenodo.org/doi/10.5281/zenodo.19081714\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-19081714",
+  "notes": "In wind energy, digital twins have the potential to maximise the value of data by providing real-time monitoring of physical systems, integrating predictive models, enabling autonomous operations and creating actionable insights. However, digital twins remain a nebulous concept, and the expression “digital twin” is applied to an enormous range of implementations at different maturity and complexity levels. This makes it difficult to understand and quantify their value, and ultimately to make investment decisions that weigh up potential complexity and value. Quantifying the value of digital twins in wind energy is essential for investment justification, forecasting and maintenance strategy development, standardisation, and policy alignment.\n\nThe purpose of this document is to provide practitioners in the wind energy sector with guidance for classifying and valuing digital twins. This will help them make investment decisions that weigh up the potential complexity and value of a given digital twin implementation. In this document, we first present a digital twin classification scheme based on existing classifications from the literature, then we introduce a table of high-potential digital twin use cases and suggest how each of these use cases could be classified. Next, we present a “System functionality value matrix template” for assessing the potential complexity and value of different functional capabilities of wind energy digital twins for a particular activity, and we present an example application. Each section includes a number of related Best Practices, which are summarised at the end.\n\nThe document is a result of a collaboration between IEA Wind Task 43 and the European Academy of Wind Energy.",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Task43_Recommended_Practice_DTs_20250429.docx.pdf",
+      "url": "https://zenodo.org/records/19081715/files/Task43_Recommended_Practice_DTs_20250429.docx.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digital-twin"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "IEA Wind Task 43 Joint Best Practice on Classifying and Valuing Digital Twins in  Wind Energy",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.19081714"
+}

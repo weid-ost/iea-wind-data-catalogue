@@ -1,0 +1,162 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Rybchuk, Alex\",\"orcid\":\"0000-0003-4433-3993\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Letizia, Stefano\",\"orcid\":\"0000-0001-5999-0131\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15747683"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:34Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15747683"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-57\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:34Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-26"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15747683\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "15747684"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.15747684"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15747684"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15747684\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-57"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15747683",
+  "notes": "<p>Data to be used as constraints for the rotor inflow benchmarks (stable cases) as defined in https://rotor-inflow-benchmark.readthedocs.io/<br /><br />UVW*.csv : high-frequency (20 Hz) time series of three-dimensional wind velocity vector over 24 hours centered on the periods of interest, obtained from meteorological tower sonic anemometers</p>\n<p>NL*.nc: low-frequency (1 Hz) time series of longitudinal wind velocity over each period, obtained from nacelle-mounted scanning lidar after quality control, temporal upsampling, interpolation to a regular grid and the use of a machine learning model to fill in gaps introduced by blade passage in front of the lidar</p>\n<p>LES*.nc: low-frequency (1 Hz) time series of longitudinal wind velocity over each period, obtained from large-eddy simulations performed to match the experimental field measurements</p>\n<p>UVW_les*.csv: high-frequency (25 Hz) time series of three-dimensional wind velocity vector at two heights for the 704 seconds of the large-eddy simulations</p>\n<p>optional-lidar-ppi-scans.zip: This contains the 1 Hz horizontal lidar scans that are the basis for the NL*.nc files. We include this optional dataset to explore the question: how different are reconstructed inflows when using the PPI scans versus the heavily processed inflow plane data as a constraint?</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "csv",
+      "name": "UVW_les1.csv",
+      "url": "https://zenodo.org/records/15747684/files/UVW_les1.csv"
+    },
+    {
+      "format": "nc",
+      "name": "LES_stable_benchmark_case3_constraint.nc",
+      "url": "https://zenodo.org/records/15747684/files/LES_stable_benchmark_case3_constraint.nc"
+    },
+    {
+      "format": "nc",
+      "name": "NL_stable_benchmark_case0530_ens0_constraint.nc",
+      "url": "https://zenodo.org/records/15747684/files/NL_stable_benchmark_case0530_ens0_constraint.nc"
+    },
+    {
+      "format": "nc",
+      "name": "NL_stable_benchmark_case0600_ens0_constraint.nc",
+      "url": "https://zenodo.org/records/15747684/files/NL_stable_benchmark_case0600_ens0_constraint.nc"
+    },
+    {
+      "format": "nc",
+      "name": "LES_stable_benchmark_case1_constraint.nc",
+      "url": "https://zenodo.org/records/15747684/files/LES_stable_benchmark_case1_constraint.nc"
+    },
+    {
+      "format": "nc",
+      "name": "LES_stable_benchmark_case2_constraint.nc",
+      "url": "https://zenodo.org/records/15747684/files/LES_stable_benchmark_case2_constraint.nc"
+    },
+    {
+      "format": "zip",
+      "name": "optional-lidar-ppi-scans.zip",
+      "url": "https://zenodo.org/records/15747684/files/optional-lidar-ppi-scans.zip"
+    },
+    {
+      "format": "csv",
+      "name": "UVW_les2.csv",
+      "url": "https://zenodo.org/records/15747684/files/UVW_les2.csv"
+    },
+    {
+      "format": "csv",
+      "name": "UVW_real_stable_benchmark.csv",
+      "url": "https://zenodo.org/records/15747684/files/UVW_real_stable_benchmark.csv"
+    },
+    {
+      "format": "csv",
+      "name": "UVW_les3.csv",
+      "url": "https://zenodo.org/records/15747684/files/UVW_les3.csv"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Constraints for Rotor Inflow Benchmarks - Stable Cases",
+  "url": "https://zenodo.org/records/15747684"
+}

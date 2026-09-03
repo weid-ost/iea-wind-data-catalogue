@@ -1,0 +1,130 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"name\":\"Sanz Rodrigo, J.\",\"orcid\":\"0000-0003-0291-6429\"},{\"affiliation\":\"CENER\",\"name\":\"Borbón Guillén, F.\"},{\"affiliation\":\"CENER\",\"name\":\"Fernandes Correia, P. M.\"},{\"affiliation\":\"CENER\",\"name\":\"García Hevia, B.\"},{\"affiliation\":\"ProPlanEn\",\"name\":\"Schlez, W.\"},{\"affiliation\":\"ProPlanEn\",\"name\":\"Schmidt, S.\"},{\"affiliation\":\"TU-Delft\",\"name\":\"Basu, S.\"},{\"affiliation\":\"TU-Delft\",\"name\":\"Li, B.\"},{\"affiliation\":\"EMD International\",\"name\":\"Nielsen, P.\"},{\"affiliation\":\"IFP Energies Nouvelles\",\"name\":\"Cathelain, M\"},{\"affiliation\":\"EDF Renewables\",\"name\":\"Dall'Ozzo C.\"},{\"affiliation\":\"Lloyd's Register\",\"name\":\"Grignon, L.\"},{\"affiliation\":\"Lloyd's Register\",\"name\":\"Pullinger, D.\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4321053"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:35Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4321053"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:35Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-06-17"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4321053\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.3773129\",\"identifier_type\":\"DOI\",\"relation\":\"references\"},{\"identifier\":\"10.5281/zenodo.3715198\",\"identifier_type\":\"DOI\",\"relation\":\"references\"},{\"identifier\":\"10.1088/1742-6596/1618/6/062044\",\"identifier_type\":\"DOI\",\"relation\":\"references\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4321054"
+    },
+    {
+      "key": "source_key",
+      "value": "2@10.5281/zenodo.4321054"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4321054"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4321054\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4321053",
+  "notes": "<p>Presentation at Wakebench3 meeting of the final results from the Offshore Wind Accelerator (OWA) Wake Modelling Challenge on the prediction of array efficiency at 5 offshore wind farms. Evaluation scripts and additional results available at the <a href=\"https://zenodo.org/record/3773129\" rel=\"nofollow noopener\">GitHub</a> and <a href=\"https://zenodo.org/record/3715198\" rel=\"nofollow noopener\">simulation data</a> repositories. </p>",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "pptx",
+      "name": "OWAWakeModellingChallenge_jun-20.pptx",
+      "url": "https://zenodo.org/records/4321054/files/OWAWakeModellingChallenge_jun-20.pptx"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "array-efficiency"
+    },
+    {
+      "name": "meso-wake"
+    },
+    {
+      "name": "owa"
+    },
+    {
+      "name": "wake-model"
+    }
+  ],
+  "title": "OWA Wake Modelling Challenge",
+  "url": "https://zenodo.org/records/4321054"
+}

@@ -1,0 +1,132 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Gottschall, Julia\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.16173522"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.16173522"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-07-19"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.16173522\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "16173523"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.16173523"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/16173523"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/16173523\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-16173522",
+  "notes": "<p>The mini-symposium (co-chaired by Stefano Letizia and Julia Gottschall) was held on 25 June 2025, and comprised the following individual presentations:</p>\n<ul>\n<li>\"Sensitivity of the turbulence measurements from ground-based lidars to the beam orientation\" by Abdul H. Syed (a)</li>\n<li>\"A Comprehensive Sensitivity Analysis of Wind Lidar Uncertainty Using a Fiber Optic Bench and Monte Carlo Simulation\" ny Andrew Black (b)</li>\n<li>\"LARGE-EDDY-SIMULATION-BASED PERFORMANCE EVALUATION OF FLOATING LIDARS - MOTION CORRECTION &amp; WIND PROPERTIES RECONSTRUCTION\" by Benjamin Bouvier (c)</li>\n<li>\"Wind Field Reconstruction Using Single Doppler Lidar: A Lagrangian Approach\" by Ignace Ransquin (d)</li>\n</ul>\n<p>Please note that each document or presentation may have its own license. If in doubt about reusing or citing any of the material presented here, please contact the authors.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "d_WESC2025_Presentation_IgnaceRansquin_Share.pdf",
+      "url": "https://zenodo.org/records/16173523/files/d_WESC2025_Presentation_IgnaceRansquin_Share.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "c_WESC2025_MS01.8_LES-based_performance_eval_of_floating_lidars_IFPEN_Ocergy_R6_Zenodo.pdf",
+      "url": "https://zenodo.org/records/16173523/files/c_WESC2025_MS01.8_LES-based_performance_eval_of_floating_lidars_IFPEN_Ocergy_R6_Zenodo.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "b_WESC2025_LidarFiberOpticMonteCarloSensitivity_IEATasks52and57_AndrewBLACK.pdf",
+      "url": "https://zenodo.org/records/16173523/files/b_WESC2025_LidarFiberOpticMonteCarloSensitivity_IEATasks52and57_AndrewBLACK.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "a_WESC2025Presentation_Syed.pdf",
+      "url": "https://zenodo.org/records/16173523/files/a_WESC2025Presentation_Syed.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "WESC 2025 Mini-Symposium MS#01.8 \"Lidars In and Out of Simulations – a collaboration between IEA Tasks 52 and 57\"",
+  "url": "https://zenodo.org/records/16173523"
+}

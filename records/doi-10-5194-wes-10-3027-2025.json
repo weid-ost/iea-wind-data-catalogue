@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Carmo, Lucas\",\"orcid\":\"0000-0001-8744-1391\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Lozon, Ericka\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science (Online)"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-10-3027-2025"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:43Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-10-3027-2025"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:43Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-12-19"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus Publications"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3014976\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-93111\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/3014976\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-93111"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3014976"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-24T07:38:49Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3014976"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3014976\",\"https://www.osti.gov/pages/biblio/3014976\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-5194-wes-10-3027-2025",
+  "notes": "A frequency-domain model for floating wind turbine dynamics has been extended to model floating wind farms with couplings from shared mooring systems. The model, called RAFT, could previously calculate the mean offsets and wave-induced response spectra for single floating wind turbines. Now, the model supports multiple floating wind turbines, each with their own properties and responses, along with mooring lines that run directly between floating wind turbines in the array, meaning that shared mooring lines or fully suspended dynamic power cables can be included. This capability is achieved by setting up an array-level solution of the system mean offsets and assembling the full system matrices for solving the dynamic response. The quasi-static mooring model MoorPy is used to linearize the mooring system properties. To compute the floating wind turbine relative motions, phase offsets are applied to each turbine's response as a function of wave frequency based on the wavelength and relative positions in the array. These differential motions are then applied to mooring system tension Jacobians to compute the tension loads in the shared mooring lines. Overall, the capability provides a frequency-domain analog to the modeling capabilities of the floating support structure in FAST.Farm. Mean offsets and power spectral density plots of responses are compared between RAFT and FAST.Farm to verify the implementation. The results indicate good agreement within the expectations of a frequency-domain modeling approach and suggest correct implementation of the shared mooring aspects. Additionally, a unique comb-like frequency response in the shared mooring line tensions has been observed. This phenomenon has a clear physical basis and may be an important design consideration for future shared mooring systems.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3014976"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "floating-array"
+    },
+    {
+      "name": "floating-wind"
+    },
+    {
+      "name": "frequency-domain"
+    },
+    {
+      "name": "shared-mooring"
+    },
+    {
+      "name": "wind-farm"
+    }
+  ],
+  "title": "Frequency-domain modeling of floating wind arrays with shared mooring lines",
+  "url": "https://www.osti.gov/biblio/3014976"
+}

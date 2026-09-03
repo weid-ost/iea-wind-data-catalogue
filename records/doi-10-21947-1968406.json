@@ -1,0 +1,100 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Bergua, Roger\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.21947/1968406"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:41Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.21947/1968406"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:41Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-12"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"1968406\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "1968406"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-12T18:17:23Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/1968406"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/1968406\",\"https://www.osti.gov/dataexplorer/biblio/dataset/1968406\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-21947-1968406",
+  "notes": "Campaign II and III of the Floating Offshore-wind Controls Advanced Laboratory Experimental Program (FOCAL) aimed to generate a dataset enabling the validation of the performance and loads of a scaled hull, with and without structural hull control. The floating platform was subjected to a variety of wave environments and controlled using tuned-mass dampers (TMDs) tuned to two of the systems natural frequencies (Platform Pitch and Tower-bending). The floating platform is fully instrumented to record a variety of parameters in real time such as platform dynamics, accelerations, and loads at different points in the structure. The test data considered was generated at the University of Maine's Harold Alfond Wind and Wave (W2) testing facility. This testing was focused only on validation of wave loading, and wind conditions were not considered. As such the platform does not support a working turbine, and instead supports a structure designed to have the same mass properties as the 1:70 IEA 15MW Reference turbine. \n\nThe Load Cases (LC) considered in this testing campaign are as follows: LC 1.X - Platform Static Offset (TMD off); LC 2.X - Platform Free-decays (TMD off); LC 3.X - Wave Cases (Regular Wave, Irregular Wave, Pink Noise Wave) with and without TMDs active.\n\nDetailed properties on the model system are found in the following reference: Lenfest E., Floating Offshore-wind Controls Advanced Laboratory (FOCAL) Experimental Program - Campaigns 2 and 3: 1:70 Model-scale Testing of the IEA-Wind 15MW Reference Turbine and the VolturnUS-S Hull. UMaine ASCC Report Number 23-56-1183.\n\n",
+  "owner_org": "pnnl",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/1968406"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    }
+  ],
+  "title": "FOCAL Campaign II/III: Applying Active Hull Controls Using Tuned-mass Dampers/Hull Flexibility and Internal Loads",
+  "url": "https://www.osti.gov/biblio/1968406"
+}

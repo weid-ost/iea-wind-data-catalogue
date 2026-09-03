@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Giebel\",\"given\":\"G\",\"name\":\"Giebel, G\"},{\"family\":\"Cline\",\"given\":\"J\",\"name\":\"Cline, J\"},{\"family\":\"Frank\",\"given\":\"H\",\"name\":\"Frank, H\"},{\"family\":\"Shaw\",\"given\":\"W\",\"name\":\"Shaw, W\"},{\"family\":\"Pinson\",\"given\":\"P\",\"name\":\"Pinson, P\"},{\"family\":\"Hodge\",\"given\":\"B-M\",\"name\":\"Hodge, B-M\"},{\"family\":\"Kariniotakis\",\"given\":\"G\",\"name\":\"Kariniotakis, G\"},{\"family\":\"Madsen\",\"given\":\"J\",\"name\":\"Madsen, J\"},{\"family\":\"Möhrlen\",\"given\":\"C\",\"name\":\"Möhrlen, C\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics: Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/753/3/032042"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/753/3/032042"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "http://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2016-09"
+    },
+    {
+      "key": "publisher",
+      "value": "IOP Publishing"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.1088/1742-6596/753/3/032042"
+    },
+    {
+      "key": "source_key",
+      "value": "2020-04-11T07:08:17Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.1088/1742-6596/753/3/032042"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.1088/1742-6596/753/3/032042\",\"https://iopscience.iop.org/article/10.1088/1742-6596/753/3/032042\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-1088-1742-6596-753-3-032042",
+  "notes": "",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Wind power forecasting: IEA Wind Task 36 & future research issues",
+  "url": "https://doi.org/10.1088/1742-6596/753/3/032042"
+}

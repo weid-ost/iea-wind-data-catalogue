@@ -1,0 +1,147 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"DNV Services UK Limited (United Kingdom)\",\"name\":\"Collier, W.\"},{\"affiliation\":\"DNV Services UK Limited (United Kingdom)\",\"name\":\"Ors, D.\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"name\":\"Barlas, T.\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"name\":\"Zahle, F.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Bortolotti, P.\",\"orcid\":\"0000-0002-8515-9488\"},{\"affiliation\":\"Technical Univ. of Berlin (Germany)\",\"name\":\"Marten, D.\"},{\"affiliation\":\"DNV Services UK Limited (United Kingdom)\",\"name\":\"Jensen, C. S. L.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Branlard, E.\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Zalkind, D.\"},{\"affiliation\":\"Technical Univ. of Denmark, Lyngby (Denmark)\",\"name\":\"Lønbæk, K.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics. Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/2767/5/052042"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:49Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/2767/5/052042"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-55\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:49Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06-10"
+    },
+    {
+      "key": "publisher",
+      "value": "IOP Publishing"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2395895\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NREL/JA-5000-88685\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/2395895\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NREL/JA-5000-88685"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "2395895"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-21T14:59:04Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2395895"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2395895\",\"https://www.osti.gov/pages/biblio/2395895\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-55"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-1088-1742-6596-2767-5-052042",
+  "notes": "Reference wind turbine designs and the associated aeroelastic models are widely used in both research and industry. Reference models representing future concepts are of particular interest. Current state of the art aeroelastic tools are relied upon to design the next generation of large wind turbines. However, modelling assumptions may be invalidated by upcoming very large turbines, and different aeroelastic tools may give inconsistent results. A 22MW turbine model has been defined as part of International Energy Agency (IEA) Wind Task 55 on Reference Wind Turbines and Farms to represent future turbines to be deployed in the 2030s. In this study, an aeroelastic model of this turbine has been created in four tools; Bladed, HAWC2, OpenFAST, and QBlade. Code comparisons are presented for steady state operation, linear stability analysis, and time domain power production simulations in steady and turbulent wind. Generally, the codes show a good agreement, but with some differences present in the linear stability analysis, periodic azimuthal variation, and time domain simulations. The models are a good basis for further study with the IEA 22MW turbine, and further code comparison exercises.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2395895"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "aeroelastic-comparison"
+    },
+    {
+      "name": "aeroelasticity"
+    },
+    {
+      "name": "bladed"
+    },
+    {
+      "name": "hawc2"
+    },
+    {
+      "name": "hawcstab2"
+    },
+    {
+      "name": "iea-22"
+    },
+    {
+      "name": "openfast"
+    },
+    {
+      "name": "qblade"
+    },
+    {
+      "name": "reference-wind-turbine"
+    }
+  ],
+  "title": "Aeroelastic code comparison using the IEA 22MW reference turbine",
+  "url": "https://www.osti.gov/biblio/2395895"
+}

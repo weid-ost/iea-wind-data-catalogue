@@ -1,0 +1,133 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"Costa, Francisco\",\"orcid\":\"0000-0001-7822-3317\"},{\"affiliation\":\"Danish Technical University\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5046719"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5046719"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-06-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5046719\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "5046720"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.5046720"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5046720"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5046720\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5046719",
+  "notes": "<p>Adopting wind lidar means learning new words and concepts. Sometimes it can be confusing for new entrants to understand what is meant, or why certain terms are used. And, the lack of well-defined common terms can make it hard to swap exchange between users.</p>\n\n<p>That's where ontologies come in. They are controlled vocabularies - glossaries - that include structure and relationships between terms. They can be used to help educate people, or even to build software because they enable digital twins.</p>\n\n<p>Because they are so important for the community, Task 32 has started work on a wind lidar ontology. You can find the working version  of the ontology <a href=\"http://vocab.ieawindtask32.org/ontolidar/en/\" rel=\"nofollow noopener\">here</a>.</p>\n\n<p>In this presentation Francisco Costa provided more background about the idea, how we've implemented it in Task 32, and how people can use it.</p>",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Task32_06302021_FCG_LidarTaxonomyForModularLidarDesigns.pdf",
+      "url": "https://zenodo.org/records/5046720/files/Task32_06302021_FCG_LidarTaxonomyForModularLidarDesigns.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "IEA Wind Task 32 Lidar Ontologies 2021 06 30.pdf",
+      "url": "https://zenodo.org/records/5046720/files/IEA%20Wind%20Task%2032%20Lidar%20Ontologies%202021%2006%2030.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data"
+    },
+    {
+      "name": "ontology"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "A wind lidar ontology to help information exchange",
+  "url": "https://zenodo.org/records/5046720",
+  "version": "2021 June 30"
+}

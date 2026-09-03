@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Schelbergen\",\"given\":\"Mark\",\"name\":\"Schelbergen, Mark\"},{\"family\":\"Kalverla\",\"given\":\"Peter C.\",\"name\":\"Kalverla, Peter C.\",\"orcid\":\"0000-0002-5025-7862\"},{\"family\":\"Schmehl\",\"given\":\"Roland\",\"name\":\"Schmehl, Roland\",\"orcid\":\"0000-0002-4112-841X\"},{\"family\":\"Watson\",\"given\":\"Simon J.\",\"name\":\"Watson, Simon J.\",\"orcid\":\"0000-0001-6694-3149\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-5-1097-2020"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-5-1097-2020"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-08-24"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2019-108\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2019-108-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2019-108-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2019-108-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2019-108-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-5-1097-2020"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-01-31T16:40:03Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-5-1097-2020"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-5-1097-2020\",\"https://wes.copernicus.org/articles/5/1097/2020/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-5-1097-2020",
+  "notes": "<p>Abstract. Airborne wind energy (AWE) systems harness energy at heights beyond the reach of tower-based wind turbines. To estimate the annual energy production (AEP), measured or modelled wind speed statistics close to the ground are commonly extrapolated to higher altitudes, introducing substantial uncertainties. This study proposes a clustering procedure for obtaining wind statistics for an extended height range from modelled datasets that include the variation in the wind speed and direction with height. K-means clustering is used to identify a set of wind profile shapes that characterise the wind resource. The methodology is demonstrated using the Dutch Offshore Wind Atlas for the locations of the met masts IJmuiden and Cabauw, 85 km off the Dutch coast in the North Sea and in the centre of the Netherlands, respectively. The cluster-mean wind profile shapes and the corresponding temporal cycles, wind properties, and atmospheric stability are in good agreement with the literature. Finally, it is demonstrated how a set of wind profile shapes is used to estimate the AEP of a small-scale pumping AWE system located at Cabauw, which requires the derivation of a separate power curve for each wind profile shape. Studying the relationship between the estimated AEP and the number of site-specific clusters used for the calculation shows that the difference in AEP relative to the converged value is less than 3 % for four or more clusters.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Clustering wind profile shapes to estimate airborne wind energy production",
+  "url": "https://doi.org/10.5194/wes-5-1097-2020"
+}

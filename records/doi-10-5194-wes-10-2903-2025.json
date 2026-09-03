@@ -1,0 +1,130 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Norwegian Univ. of Science and Technology, Trondheim (Norway)\",\"name\":\"Krathe, Veronica Liverud\",\"orcid\":\"0009-0000-5906-7646\"},{\"affiliation\":\"National Renewable Energy Laboratory (NREL), Golden, CO (United States)\",\"name\":\"Jonkman, Jason\",\"orcid\":\"0000-0003-2990-7362\"},{\"affiliation\":\"Norwegian Univ. of Science and Technology, Trondheim (Norway)\",\"name\":\"Bachynski-Polić, Erin E.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science (Online)"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-10-2903-2025"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:45Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-10-2903-2025"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:45Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-12-08"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus Publications"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3014929\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-94827\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/3014929\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-94827"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3014929"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-24T07:38:44Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3014929"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3014929\",\"https://www.osti.gov/pages/biblio/3014929\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-5194-wes-10-2903-2025",
+  "notes": "To reduce costs, offshore wind turbines are expected to be designed with significantly increased rotor diameters. Larger turbines become more flexible and span a larger portion of the atmospheric boundary layer. With these changes, the validity of traditional modeling assumptions should be investigated. This work challenges two common assumptions: (1) that the drivetrain can be considered rigid (except in torsion) and does not couple with the rotor and tower and 2) that wind directional change with height (veer) does not greatly influence the fatigue damage in the tower, blades and drivetrain. Two large semi-submersible floating wind turbines are considered: a 15 and a 22 MW reference turbine. Both use direct-drive generators. Aero-hydro-servo-elastic simulations are performed using OpenFAST, with drivetrain bending flexibility and main bearing response implemented in the coupled analysis. The turbines are subjected to a set of load cases at below-, near- and above-rated mean wind speeds, assembled based on the 3 km Norwegian reanalysis (NORA3) hourly wind and wave hindcast data for Utsira Nord, off the coast of Norway. In each load case, conditions with and without veer are simulated to evaluate the influence of veer on damage equivalent loads (DELs) of the turbine tower, blades and main bearings. Further, these load cases are applied to evaluate the influence of drivetrain flexibility on aero-elastic turbine response. The results indicate that, depending on the veer gradient, mean wind speed, operating regime and turbine size, veer can be very important for tower-top DELs and the fluctuations of main bearing radial loads, while main bearing and blade-root flapwise DELs are less affected. Considering these specific load cases and turbine models, drivetrain flexibility is found to significantly influence tower-top DELs of the largest turbine: the tower-top fore-aft and torsional damage equivalent moments of the 22 MW turbine are reduced by more than 20 % at near-rated wind speeds when the drivetrain is modeled as flexible.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3014929"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "drivetrain-dynamics"
+    },
+    {
+      "name": "fatigue-loads"
+    },
+    {
+      "name": "iea-wind-15-mw-rwt"
+    },
+    {
+      "name": "iea-wind-22-mw-rwt"
+    },
+    {
+      "name": "openfast"
+    },
+    {
+      "name": "wind-veer"
+    }
+  ],
+  "title": "The influence of wind veer and drivetrain flexibility on fatigue loading for large floating wind turbines",
+  "url": "https://www.osti.gov/biblio/3014929"
+}

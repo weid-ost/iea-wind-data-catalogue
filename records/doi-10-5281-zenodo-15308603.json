@@ -1,0 +1,118 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Marykovskiy, Yuriy\",\"orcid\":\"0000-0002-6570-6966\"},{\"affiliation\":\"KUDO Software\",\"name\":\"Jonsson, Christian\"},{\"affiliation\":\"ServusNet Informatics (Ireland)\",\"name\":\"Farren, Des\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"MaGill, Charles\"},{\"affiliation\":\"HES-SO University of Applied Sciences and Arts Western Switzerland\",\"name\":\"Calbimonte, Jean-Paul\",\"orcid\":\"0000-0002-0364-6945\"},{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15308603"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15308603"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:27Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-04-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15308603\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "15308604"
+    },
+    {
+      "key": "source_key",
+      "value": "12@10.5281/zenodo.15308604"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15308604"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15308604\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15308603",
+  "notes": "<p><span>Digitalisation of the wind energy sector is essential for reducing the costs and increasing the deployment of wind energy, having the potential to improve wind farm design and site selection, facilitate predictive maintenance, enhance performance monitoring and optimisation, improve energy forecasting and grid integration, enhance safety, create more efficient supply chains, and improve environmental compliance. Improving interoperability and data sharing among stakeholders is required to support advancements in technologies such as Intelligent Digital Twins and Artificial Intelligence (AI). The current lack of common, community-adopted information models hinders seamless information exchange and knowledge management.<br /></span><span>This Recommended Practice first introduces ontologies – with different degrees of expressivity and comprehensiveness – as tools that allow experts to represent wind energy domain knowledge, and outlines several use cases. It details a collaborative, community-driven approach for ontology development, drawing on the existing </span><span>Methontology,</span><span> </span><span>Ontology Development 101</span><span>, and </span><span>BFO Community</span><span> methodologies and leveraging open-source practices for sustainable development and community engagement. Existing software tools are presented and put into perspective to streamline the modelling and publishing process, minimising overhead in terms of manual effort and technical complexity, while ensuring adherence to FAIR principles. The Recommended Practice is intended as a step-by-step guide for the creation, publication, and maintenance of information models formalised as ontologies, contributing to industry-wide improvements in data management, data engineering, artificial intelligence systems development, and decision-making.</span></p>",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Recommended Practice - Ontology Development - IEA Wind.pdf",
+      "url": "https://zenodo.org/records/15308604/files/Recommended%20Practice%20-%20Ontology%20Development%20-%20IEA%20Wind.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Recommended Practice: Ontology creation, publication, and maintenance for wind energy domain experts",
+  "url": "https://zenodo.org/records/15308604",
+  "version": "Draft"
+}

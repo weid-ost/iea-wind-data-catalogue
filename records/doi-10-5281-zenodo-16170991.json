@@ -1,0 +1,162 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.16170991"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.16170991"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-07-19"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.16170991\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.16170992\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "16170992"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.16170992"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/16170992"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/16170992\",\"https://zenodo.org/doi/10.5281/zenodo.16170991\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-16170991",
+  "notes": "This is the material presented during the  IEA Wind Task 52 Lunch Seminar Series 2025, which was held online between 30 June and 4 July 2025 (all days 13-14 CEST).\n\nThe seminars were opened with an introduction by the Operating Agent - see presentation slides \"a\" - followed by these presentations:\n\nDay 1 - Topic: Standardisation of lidar measurements\n\n\n\nPeter Clive (Black &amp; Veatch, UK) on \"Wind Measurement: An Update on the IEC 61400-50 Series of Standards\" (b)\n\nAndy Oldroyd (Oldbaum Services, UK) on \"Extending pre-normative guidance on how to test and assess the accuracy of turbulence intensity (TI) obtained from floating lidars\" (c) \n\n\nDay 2 - Topic: Lidar testing\n\n\n\nAnnika Baltzer (Pavana, Germany) and Johannes Becker (GEO-NET, Germany) on \"New insights on lidar measurement performance from 200-m met masts\" (d)\n\nMaxime Thiébaut (France Energies Marines, France) on \"Dual-lidar profilers for measuring atmospheric turbulence\" (e)\n\n\nDay 3 - Topic: Lidar in a digital world\n\n\n\nAndy Clifton (enerlace, Germany) on \"Wind Monitoring Made Easy – A Case Study in Digitalisation\" (f)\n\nStephen Holleran (brightwind, Ireland) on \"Benefits of teh WRA Data Model for automation, a live demonstration\" (g)\n\n\nDay 4 - Topic: Complex flows and terrain\n\n\n\nAndrew Black (Vaisala, France) on \"NML-X-travaganza: Updates from the Nacelle-Mounted Lidar Complex Terrain Working Group\" (no presentation uploaded yet)\n\nStefano Letizia (NREL, USA) on \"The largest collection of nacelle-mounted lidar observations: the AWAKEN dataset\" (i)\n\n\nDay 5 - Topic: Focus on floating lidar\n\n\n\nShogo Uchiyama (Kobe University, Japan) on \"Empirical FLS TI Correction with Single Motion Parameter\" (j)\n\nWarren Watson (Fraunhofer IWES, Germany) on \"Evaluating the Impact of Motion Compensation on Turbulence Intensity Measurements from Continuous-Wave and Pulsed Floating Lidars\" (k)\n\n\nPlease note that each document or presentation may have its own license. If in doubt about reusing or citing any of the material presented here, please contact the authors.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "f_enerlace_WindLidarMonitoring_IEAWindTask52_DATE20250702.pdf",
+      "url": "https://zenodo.org/records/16170992/files/f_enerlace_WindLidarMonitoring_IEAWindTask52_DATE20250702.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "c_IEA lunch time seminar meeting 300625.pdf",
+      "url": "https://zenodo.org/records/16170992/files/c_IEA%20lunch%20time%20seminar%20meeting%20300625.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "a_20250630_IEAWind-Task52_Lunch-seminar-series_GotJul.pdf",
+      "url": "https://zenodo.org/records/16170992/files/a_20250630_IEAWind-Task52_Lunch-seminar-series_GotJul.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "i_Task52_AWAKEN_lidar_webinar.pdf",
+      "url": "https://zenodo.org/records/16170992/files/i_Task52_AWAKEN_lidar_webinar.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "d_GEO-NET-Task52-Lunch-Series-Day2_LiDAR-Verification-Correction.pdf",
+      "url": "https://zenodo.org/records/16170992/files/d_GEO-NET-Task52-Lunch-Series-Day2_LiDAR-Verification-Correction.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "e_IEA_Task52_Dual_lidar_profilers_MT.pdf",
+      "url": "https://zenodo.org/records/16170992/files/e_IEA_Task52_Dual_lidar_profilers_MT.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "g_2025-07-02_IEA Wind Task 52 WRA Data Model automation demo.pdf",
+      "url": "https://zenodo.org/records/16170992/files/g_2025-07-02_IEA%20Wind%20Task%2052%20WRA%20Data%20Model%20automation%20demo.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "j_20250704_IEA_Wind_Task52_Lunch_Seminar_SU.pdf",
+      "url": "https://zenodo.org/records/16170992/files/j_20250704_IEA_Wind_Task52_Lunch_Seminar_SU.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "k_20250704_IEA_Task_52_Evaluating_the_impact_of_motion_compensation_on_FLS_TI_watwar.pdf",
+      "url": "https://zenodo.org/records/16170992/files/k_20250704_IEA_Task_52_Evaluating_the_impact_of_motion_compensation_on_FLS_TI_watwar.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "b_IEC Task 52 - 2025-06-30.pdf",
+      "url": "https://zenodo.org/records/16170992/files/b_IEC%20Task%2052%20-%202025-06-30.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 52 Lunch Seminar Series (30 June - 4 July 2025)",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.16170991"
+}

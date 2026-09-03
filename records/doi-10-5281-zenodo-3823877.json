@@ -1,0 +1,124 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3823877"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3823877"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-nc"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-05-13"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3823877\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "3823878"
+    },
+    {
+      "key": "source_key",
+      "value": "9@10.5281/zenodo.3823878"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3823878"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3823878\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-nc",
+  "name": "doi-10-5281-zenodo-3823877",
+  "notes": "<p>This is a presentation about <code>mocalum</code><em>: </em></p>\n\n<p><a href=\"https://github.com/niva83/mocalum\" rel=\"nofollow noopener\">https://github.com/niva83/mocalum</a></p>\n\n<p><code>mocalum</code> is a python package for Monte Carlo based lidar uncertainty modeling. It has the following features:</p>\n\n<ul>\n\t<li>Fast Monte Carlo uncertainty modeling</li>\n\t<li>Simulation of single or multi lidar configurations</li>\n\t<li>Configuration of arbitrary trajectories for single and multi lidars</li>\n\t<li>Configuration of <a href=\"https://journals.ametsoc.org/doi/10.1175/JTECH2047.1\" rel=\"nofollow noopener\">IVAP</a> (sector-scan) trajectory for single lidar</li>\n\t<li>3D or 4D / uniform or turbulent flow field generation</li>\n\t<li>Sampling of correlated or uncorrelated uncertainty terms</li>\n\t<li>Built-in 2nd order kinematic model for calculation of trajectory timing</li>\n\t<li>3D or 4D interpolation/projection of flow on lidar(s) line-of-sight(s)</li>\n\t<li><a href=\"http://xarray.pydata.org/en/stable/#\" rel=\"nofollow noopener\">xarray</a> datasets enriched with metadata</li>\n</ul>\n\n<p> </p>",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "mocalum_intro.pdf",
+      "url": "https://zenodo.org/records/3823878/files/mocalum_intro.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "monte-carlo-simulations"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "mocalum: python package for Monte-Carlo lidar uncertainty modeling",
+  "url": "https://zenodo.org/records/3823878"
+}

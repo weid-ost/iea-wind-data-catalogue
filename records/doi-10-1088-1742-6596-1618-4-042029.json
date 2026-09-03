@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Simley\",\"given\":\"Eric\",\"name\":\"Simley, Eric\"},{\"family\":\"Bortolotti\",\"given\":\"Pietro\",\"name\":\"Bortolotti, Pietro\"},{\"family\":\"Scholbrock\",\"given\":\"Andrew\",\"name\":\"Scholbrock, Andrew\"},{\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\"},{\"family\":\"Dykes\",\"given\":\"Katherine\",\"name\":\"Dykes, Katherine\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics: Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/1618/4/042029"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/1618/4/042029"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "http://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-09-01"
+    },
+    {
+      "key": "publisher",
+      "value": "IOP Publishing"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.1088/1742-6596/1618/4/042029"
+    },
+    {
+      "key": "source_key",
+      "value": "2022-02-02T04:26:19Z"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.1088/1742-6596/1618/4/042029"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.1088/1742-6596/1618/4/042029\",\"https://iopscience.iop.org/article/10.1088/1742-6596/1618/4/042029\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-1088-1742-6596-1618-4-042029",
+  "notes": "Abstract <p>Lidar-assisted control is a promising technology for reducing the levelized cost of energy from wind turbines, but quantifying its impact at the overall system level requires sophisticated systems engineering analysis and optimization frameworks. The joint workshop on Optimizing Wind Turbines with Lidar-Assisted Control Using Systems Engineering was held by the International Energy Agency Wind Task 32 (Lidar) and Task 37 (Systems Engineering) in October 2019 to address this challenge. This paper summarizes the outcome of the workshop and presents a road map for further research. The most promising applications of lidar-assisted control identified at the workshop and discussed here include 1) increasing annual energy production, 2) decreasing capital expenditure costs by reducing design loads, 3) extending turbine lifetime by reducing operating loads, and 4) enabling wind turbine class upgrades. For each application, we review the state of the art and highlight remaining research needs. Finally, we discuss strategies for addressing these research needs by conducting high-fidelity systems engineering optimizations.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 32 and Task 37: Optimizing Wind Turbines with Lidar-Assisted Control Using Systems Engineering",
+  "url": "https://doi.org/10.1088/1742-6596/1618/4/042029"
+}

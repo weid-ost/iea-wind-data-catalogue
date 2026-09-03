@@ -1,0 +1,103 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"family\":\"Kwakye\",\"given\":\"Daniel\",\"name\":\"Kwakye, Daniel\"},{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.21873397"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.21873397"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21873396\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.21873397"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-10T12:40:21Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.21873397"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.21873397\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-21873397",
+  "notes": "The goal of the IEA-CHORD project is to improve the FAIRness and transparency of IEA Wind TCP activities. For IEA Wind Task 55 – REFWIND – we examined how windIO fits into the wind energy semantic artefact landscape, and what can be done to improve interoperability and alignment with other initiatives. \n\nThe FAIR principles were conceived to improve the reusability of data exchange artefacts i.e. datasets published for discovery, access, and reuse by others, typically in repositories such as Zenodo or domain data hubs (i.e. exchange of data between both humans and machines). windIO is a fundamentally different class of artefact: a simulation configuration schema, whose purpose is to pass structured parameter inputs between some simulation tools (WISDEM, OpenFAST, FLORIS, HAWC2).\n\nIt was found that applying FAIR data exchange recommendations such as URI-safe unit strings, nested {value, unit} objects, persistent identifiers, and observation-oriented vocabularies (CF Standard Names, SOSA/SSN) to windIO conflates these two roles and try to address problems windIO was not designed to solve.However, if windIO files are published as reference datasets (e.g. the IEA 15 MW reference turbine on Zenodo), they cross into data exchange territory and FAIR recommendations become relevant. In that context, attaching a sidecar YAML-LD file (e.g. using RO-Crate) mapping windIO fields to engineering design ontologies is recommended. See [4] for more details about publishing FAIR data.",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "IEA Wind Task 55 – windIO and interoperability",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.21873397"
+}

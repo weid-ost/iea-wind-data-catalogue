@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Program in Atmospheric and Oceanic Sciences, Princeton University, Princeton, New Jersey\",\"name\":\"Rios, Gabriel\",\"orcid\":\"0000-0003-4828-1924\"},{\"affiliation\":\"Lawrence Livermore National Laboratory, Livermore, California\",\"name\":\"Arthur, Robert S.\"},{\"affiliation\":\"Lawrence Livermore National Laboratory, Livermore, California\",\"name\":\"Wharton, Sonia\"},{\"affiliation\":\"Pacific Northwest National Laboratory, Richland, Washington\",\"name\":\"Fast, Jerome D.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Weather and Forecasting"
+    },
+    {
+      "key": "doi",
+      "value": "10.1175/waf-d-24-0146.1"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:50Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1175/waf-d-24-0146.1"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:50Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-10-01"
+    },
+    {
+      "key": "publisher",
+      "value": "American Meteorological Society (AMS)"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"2588481\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"LLNL-JRNL-866781; PNNL-SA-213980\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/2588481\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "LLNL-JRNL-866781; PNNL-SA-213980"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "2588481"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-24T07:30:55Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/2588481"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/2588481\",\"https://www.osti.gov/pages/biblio/2588481\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1175-waf-d-24-0146-1",
+  "notes": "The performance of the NOAA High-Resolution Rapid Refresh (HRRR) model for capturing low-level winds near a wind energy production site during summer 2019 is evaluated. This study catalogs the ability of HRRR to predict boundary layer dynamics relevant to wind energy interests over complex terrain, which has presented challenges for weather and energy forecasting. Performance is evaluated by comparing HRRR output to wind-profiling Doppler lidars at Lawrence Livermore National Laboratory Site 300. HRRR captured the diurnal profile of horizontal winds in the observed 150-m layer, despite strong underpredictions (∼4 m s<sup>−1</sup>) during evening and nighttime hours. These underpredictions may be a result of local speedup flows observed by the lidars, which were unresolved in HRRR due to their small spatial extent. HRRR bias magnitude relative to observations was found to be minimal during days with synoptic-scale troughs and strong 850-hPa geopotential gradients, while bias magnitude was maximal during days with synoptic ridging and weak 850-hPa geopotential gradients. To translate wind speed predictions to energy forecasting, generic turbine models were used to estimate power generation for turbines characteristic of the nearby Altamont Pass Wind Resource Area. Results show that HRRR-based energy estimates predicted daytime power generation adequately relative to lidar-based estimates with an 18-h lead time (bias magnitude &lt; 0.4 MW from 0900 to 1400 LT) but overpredicted power during the rest of the diurnal cycle (bias &gt; 1 MW). These results demonstrate conditions under which HRRR performs well for wind energy applications in complex terrain, while highlighting biases that require further investigation to support usage of a high-resolution model for wind energy forecasts.",
+  "owner_org": "pnnl",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/2588481"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "boundary-layer"
+    },
+    {
+      "name": "complex-terrain"
+    },
+    {
+      "name": "forecast-verification-skill"
+    },
+    {
+      "name": "north-america"
+    },
+    {
+      "name": "numerical-weather-prediction-forecasting"
+    },
+    {
+      "name": "wind-profilers"
+    }
+  ],
+  "title": "Lidar-Based Evaluation of HRRR Performance in California’s Diablo Range",
+  "url": "https://www.osti.gov/biblio/2588481"
+}

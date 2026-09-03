@@ -1,0 +1,107 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Cornell Univ., Ithaca, NY (United States)\",\"name\":\"Pryor, Sara C.\"},{\"affiliation\":\"Cornell Univ., Ithaca, NY (United States)\",\"name\":\"Barthelmie, Rebecca J.\"},{\"affiliation\":\"Technical Univ. of Denmark, Roskilde (Denmark)\",\"name\":\"Hasager, Charlotte B.\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.2172/3369031"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:39Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.2172/3369031"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:39Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-02-01"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3369031\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"SAND2026-21958R\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "SAND2026-21958R"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "3369031"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-06T09:23:48Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3369031"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3369031\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-2172-3369031",
+  "notes": "Leading edge erosion (LEE) of wind turbine blades has been identified as a major factor in decreased wind turbine blade lifetimes and energy output over time. Accordingly, the International Energy Agency Wind Technology Collaboration Programme (IEA Wind TCP) has created the Task 46 Phase 2 to undertake cooperative research in the key topic of blade erosion. The purpose of Task 46 Erosion Phase 2 is to further improve understanding of erosion driving factors, develop datasets and model tools to enhance prediction of leading-edge erosion likelihood, identify damage at the earliest possible stage and advance potential solutions. The scope of work covers several technical areas, reflecting the multidisciplinary nature of the challenge. Participants in the task are given in Table 1.",
+  "owner_org": "sandia",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3369031"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "42-engineering"
+    }
+  ],
+  "title": "Phenomena Identification and Ranking Tables (PIRT) analysis of wind turbine blade leading edge erosion",
+  "url": "https://www.osti.gov/biblio/3369031"
+}

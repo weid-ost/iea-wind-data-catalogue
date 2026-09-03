@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Kamidelivand\",\"given\":\"Mitra\",\"name\":\"Kamidelivand, Mitra\",\"orcid\":\"0000-0002-3888-1769\"},{\"family\":\"Yildirim\",\"given\":\"Bursa\",\"name\":\"Yildirim, Bursa\",\"orcid\":\"0000-0003-1204-9066\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.21211760"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.21211760"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-01T23:20:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-06"
+    },
+    {
+      "key": "publisher",
+      "value": "IEA Wind Task 49"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21211759\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.21211760"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-01T07:33:13Z"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.21211760"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.21211760\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-21211760",
+  "notes": "This dataset contains the mitigation‑strategy results developed in Work Package 3 (WP3) of IEA Wind TCP Task 49: Integrated Design of Floating Wind Arrays. It provides structured mitigation scoring for 46 farm‑level failure modes previously identified across five major subsystems: Tower, Transition Piece, Floater, Mooring System, and Dynamic Cable. These failure modes were selected because they can propagate across multiple turbines, affect shared infrastructure, or cause cascading array‑level impacts.\n\nThe mitigation assessment applies a harmonised expert‑elicitation framework using four criteria: Effectiveness, Technology Readiness Level (TRL), Cost Impact, and Array Scalability to evaluate predefined and expert‑added mitigation options. Experts also provided qualitative comments referencing standards, modelling considerations, and monitoring practices. The results highlight cross‑subsystem themes such as the importance of high‑fidelity AHSE modelling, structural health monitoring, QA/QC improvements, and expanded design‑basis considerations for extreme environmental conditions.\n\nThis database complements the previously published Failure Risk Evaluation report, which identified and prioritised array‑level failure modes using FMEA scoring (Occurrence, Detectability, Severity). The original risk‑evaluation report is available at: https://doi.org/10.5281/zenodo.20211172",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Failure Risk Mitigation for Floating Offshore Wind Arrays",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.21211760"
+}
