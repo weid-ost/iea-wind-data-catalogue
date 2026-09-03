@@ -75,13 +75,13 @@ omission.
 
 **Checkable**, in two halves, because the claim has two halves.
 
-- *The record side.* `fixtures/cross-cutting/x-05-low-confidence.json` holds
+- *The record side.* `data/fixtures/cross-cutting/x-05-low-confidence.json` holds
   fields the model extracted at 0.42 and 0.38 beside one pattern-extracted
   field, and `tests/test_crosscutting.py` asserts the badge lands on exactly the
   two `llm` fields, that neither is hidden, and that `iea_task` carries no badge
   at all.
 - *The rendered side.* `/dev/components` draws
-  `fixtures/rendering/rep-05-llm-inferred.json` — the same case as a record page
+  `data/fixtures/rendering/rep-05-llm-inferred.json` — the same case as a record page
   — so the badge is audited by the a11y gate along with everything else
   ([[run-the-a11y-gate]]).
 

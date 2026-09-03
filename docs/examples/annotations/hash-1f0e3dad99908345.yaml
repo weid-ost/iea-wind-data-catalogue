@@ -1,8 +1,8 @@
 # ILLUSTRATIVE TEMPLATE — this file is NOT replayed.
 #
-# It lives under docs/examples/annotations/, not annotations/, because the
-# identity it names has never been harvested. Copy it into annotations/ and
-# change the identity_key to one that exists in records/ before using it.
+# It lives under docs/examples/annotations/, not data/annotations/, because the
+# identity it names has never been harvested. Copy it into data/annotations/ and
+# change the identity_key to one that exists in data/records/ before using it.
 #
 # Sample annotation — suppression, on a fragile-identity record.
 #

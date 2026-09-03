@@ -1,11 +1,11 @@
-"""Replay the event log into ``records/*.json``, then run the CKAN gate.
+"""Replay the event log into ``data/records/*.json``, then run the CKAN gate.
 
-``records/`` is a **derived** directory (ADR-0037): delete it and
+``data/records/`` is a **derived** directory (ADR-0037): delete it and
 ``make materialize`` reproduces it exactly. "Exactly" is load-bearing —
 materialisation is byte-stable (sorted keys, fixed separators, two-space
 indent, trailing newline), so a run in which nothing changed produces no diff
-in ``records/`` and the only churn in the heartbeat commit is
-``state/last-run.json``.
+in ``data/records/`` and the only churn in the heartbeat commit is
+``data/state/last-run.json``.
 
 Withdrawn records are materialised, not deleted (ADR-0027). See
 :class:`~harvest.models.CkanPackage` for why withdrawal is not CKAN's
@@ -210,7 +210,7 @@ def to_ckan_package(
             tags.append(tag)
 
     # A group name that is not in groups.yaml fails the CKAN gate, and because
-    # events/ is append-only it would fail it again on every subsequent run —
+    # data/events/ is append-only it would fail it again on every subsequent run —
     # one hostile or merely new upstream community would block every deploy
     # (scrape-02). So an unknown group is DROPPED with a notice: the raw
     # attribution stays in the event log and in extras.iea_task, and adding the
@@ -300,7 +300,7 @@ def materialize_all(
     validate: bool = True,
     identity_keys: Iterable[str] | None = None,
 ) -> MaterializeResult:
-    """Replay every identity into ``records/``, then run the CKAN-compat gate.
+    """Replay every identity into ``data/records/``, then run the CKAN-compat gate.
 
     ``prune`` removes record files with no backing events — the only sanctioned
     deletion, and it can only ever fire for an identity whose events were

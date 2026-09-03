@@ -94,8 +94,8 @@ the log.
 ## 5. What must never happen
 
 ```sh
-rm records/doi-10-5072-zenodo-1234566.json     # NO
-rm events/doi-10-5072-zenodo-1234566.jsonl     # NO — this is the source of truth
+rm data/records/doi-10-5072-zenodo-1234566.json     # NO
+rm data/events/doi-10-5072-zenodo-1234566.jsonl     # NO — this is the source of truth
 ```
 
 Deleting the record file achieves nothing: `make materialize` recreates it from
@@ -105,8 +105,8 @@ the orphaned record file into the *only* case where `materialize_all(prune=True)
 deletes anything — you will see `pruning orphaned record with no events` in the
 log, and by then it is too late.
 
-`make clean` is safe: it removes `records/*.json`, `.pytest_cache`, `site/dist`
-and `site/.astro`, and explicitly never touches `events/`.
+`make clean` is safe: it removes `data/records/*.json`, `.pytest_cache`, `site/dist`
+and `site/.astro`, and explicitly never touches `data/events/`.
 
 ## 6. Commit
 

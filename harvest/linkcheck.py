@@ -13,12 +13,12 @@ means the *page* moved, not that the artifact stopped existing — plan §4.4 an
 inference drawn from an HTTP status by a link checker. Fixture ``iea-12`` is the
 shape of it: *existing records retained; source marked unreachable*.
 
-**Why the result is not written into ``records/``.** Records are byte-stable by
+**Why the result is not written into ``data/records/``.** Records are byte-stable by
 contract (``harvest/CONTRACT.md`` §7): a run in which nothing changed produces
 no diff. HTTP status is the least stable thing in the system — one flaky 503
-would rewrite a record, and a weekly run would churn ``records/`` forever for no
+would rewrite a record, and a weekly run would churn ``data/records/`` forever for no
 change in what any source said. So link status lives in
-``state/link-check.json`` (keyed by record name, for the site to read) and in
+``data/state/link-check.json`` (keyed by record name, for the site to read) and in
 the run report's ``notices``, which is the curator's short monthly list.
 
 ``check_records`` takes an injected client, which is why the whole test suite
@@ -129,7 +129,7 @@ class LinkCheckReport:
         )
 
     def as_notices(self) -> list[dict]:
-        """Dead links, shaped for ``state/last-run.json`` → ``notices``."""
+        """Dead links, shaped for ``data/state/last-run.json`` → ``notices``."""
         by_record = self.dead_by_record()
         notices: list[dict] = []
         for name, urls in by_record.items():
@@ -334,7 +334,7 @@ def check_records(
 
 
 def link_report_path(root: Path | None = None) -> Path:
-    """``state/link-check.json``."""
+    """``data/state/link-check.json``."""
     return config.state_dir(root) / "link-check.json"
 
 

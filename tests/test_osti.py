@@ -1,7 +1,7 @@
 """Track E — the OSTI adapter.
 
 Everything here runs offline. ``map()`` is pure by contract, so the fixture
-tests call it directly on the verbatim payloads in ``fixtures/osti/raw/``;
+tests call it directly on the verbatim payloads in ``data/fixtures/osti/raw/``;
 ``harvest()`` is exercised against an injected fake client that answers both
 the OSTI listing and the DOI resolvers, so nothing in this file touches
 www.osti.gov, DataCite or Crossref.
@@ -358,12 +358,12 @@ class TestOsti05ReportNumber:
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
         payload = payload_of("osti-05-report-number")
         client = FakeOstiClient(records=[payload])
-        result = run_adapter(adapter_with(client), max_records=5, events_dir=repo / "events")
+        result = run_adapter(adapter_with(client), max_records=5, events_dir=repo / "data" / "events")
         assert result.changed == 1
 
         materialized = materialize_all(root=repo)
         assert materialized.violations == []
-        record = json.loads((repo / "records" / "osti-1891471.json").read_text("utf-8"))
+        record = json.loads((repo / "data" / "records" / "osti-1891471.json").read_text("utf-8"))
         extras = {extra["key"]: extra["value"] for extra in record["extras"]}
         assert extras["report_number"] == "NREL/PR-5C00-80872"
         assert record["groups"] == [{"name": "task-25"}]
@@ -584,14 +584,14 @@ class TestEndToEnd:
 
     def test_a_first_run_writes_one_event_per_record(self, repo: Path) -> None:
         result = run_adapter(adapter_with(self._client()), max_records=5,
-                             events_dir=repo / "events")
+                             events_dir=repo / "data" / "events")
         assert (result.seen, result.changed, result.skipped_unchanged) == (5, 5, 0)
-        assert len(list((repo / "events").glob("*.jsonl"))) == 5
-        assert len(read_events("10.2172/2447928", repo / "events")) == 1
+        assert len(list((repo / "data" / "events").glob("*.jsonl"))) == 5
+        assert len(read_events("10.2172/2447928", repo / "data" / "events")) == 1
 
     def test_a_second_run_writes_nothing_at_all(self, repo: Path) -> None:
         """ADR-0026: an unchanged entry_date means no event, not an empty one."""
-        events = repo / "events"
+        events = repo / "data" / "events"
         run_adapter(adapter_with(self._client()), max_records=5, events_dir=events)
         before = {path: path.read_bytes() for path in sorted(events.glob("*.jsonl"))}
         result = run_adapter(adapter_with(self._client()), max_records=5, events_dir=events)
@@ -599,7 +599,7 @@ class TestEndToEnd:
         assert {path: path.read_bytes() for path in sorted(events.glob("*.jsonl"))} == before
 
     def test_a_moved_entry_date_appends(self, repo: Path) -> None:
-        events = repo / "events"
+        events = repo / "data" / "events"
         run_adapter(adapter_with(self._client()), max_records=5, events_dir=events)
         moved = self._payloads()
         moved[0] = {**moved[0], "entry_date": "2027-01-01T00:00:00Z"}
@@ -619,7 +619,7 @@ class TestEndToEnd:
         from harvest.materialize import materialize_all
 
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "events")
+        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "data" / "events")
         result = materialize_all(root=repo)
         assert result.violations == []
         assert len(result.written) == 5
@@ -630,7 +630,7 @@ class TestEndToEnd:
         from harvest.materialize import materialize_all
 
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "events")
+        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "data" / "events")
         materialize_all(root=repo)
         again = materialize_all(root=repo)
         assert again.written == [] and len(again.unchanged) == 5
@@ -641,9 +641,9 @@ class TestEndToEnd:
         from harvest.materialize import materialize_all
 
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "events")
+        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "data" / "events")
         materialize_all(root=repo)
-        record = json.loads((repo / "records" / "osti-2323276.json").read_text("utf-8"))
+        record = json.loads((repo / "data" / "records" / "osti-2323276.json").read_text("utf-8"))
         extras = {extra["key"]: extra["value"] for extra in record["extras"]}
         assert extras["access_status"] == "metadata-only"
         assert record["resources"] == []

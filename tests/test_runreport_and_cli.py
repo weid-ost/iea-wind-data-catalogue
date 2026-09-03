@@ -1,4 +1,4 @@
-"""``state/last-run.json`` and the CLI.
+"""``data/state/last-run.json`` and the CLI.
 
 The report is the cron keepalive (plan §3.3): it must be written on **every**
 run, including a run in which nothing changed and every source failed, or the
@@ -114,7 +114,7 @@ class TestCli:
 
     def test_run_writes_the_heartbeat_even_when_nothing_happens(self, repo: Path) -> None:
         main(["--root", str(repo), "run", *only_stubs()])
-        assert (repo / "state" / "last-run.json").exists()
+        assert (repo / "data" / "state" / "last-run.json").exists()
 
     def test_run_defaults_to_the_default_max_records(self, repo: Path) -> None:
         from harvest import DEFAULT_MAX_RECORDS
@@ -145,20 +145,20 @@ class TestCli:
 class TestTheHeartbeatSurvivesTheRunFailing:
     """eventlog-02 / compliance-04 / CONTRACT rule 5, at the CLI boundary.
 
-    ``state/last-run.json`` is the cron keepalive: GitHub disables a scheduled
+    ``data/state/last-run.json`` is the cron keepalive: GitHub disables a scheduled
     workflow after 60 days with no commits, and this file is what every run
     commits. It is also the site's freshness banner. So a run that dies in the
     middle is the worst possible time *not* to write it — a frozen heartbeat
     beside a cron that is still firing is the one failure nobody would notice,
     because the page still says a date and the workflow still shows green.
 
-    Before this, a single truncated line in ``events/`` or one malformed
-    ``annotations/*.yaml`` raised out of ``cmd_run`` before ``report.write()``.
+    Before this, a single truncated line in ``data/events/`` or one malformed
+    ``data/annotations/*.yaml`` raised out of ``cmd_run`` before ``report.write()``.
     """
 
     def _corrupt_event_log(self, repo: Path) -> None:
-        (repo / "events").mkdir(exist_ok=True)
-        (repo / "events" / "doi-10-5281-zenodo-1.jsonl").write_text(
+        (repo / "data" / "events").mkdir(exist_ok=True)
+        (repo / "data" / "events" / "doi-10-5281-zenodo-1.jsonl").write_text(
             '{"observed_at": "2026-01-01T00:00:00Z", "event_type": "scraped", '
             '"identity_key": "10.5281/zenodo.1", "source": {"title": "ok", '
             '"url": "https://example.org/1"}}\n'
@@ -171,7 +171,7 @@ class TestTheHeartbeatSurvivesTheRunFailing:
 
         main(["--root", str(repo), "run", *only_stubs()])
 
-        assert (repo / "state" / "last-run.json").exists()
+        assert (repo / "data" / "state" / "last-run.json").exists()
 
     def test_the_skipped_line_is_named_in_the_run_report(self, repo: Path) -> None:
         """Skipping quietly would be worse than crashing. It must be loud."""
@@ -187,18 +187,18 @@ class TestTheHeartbeatSurvivesTheRunFailing:
 
         main(["--root", str(repo), "run", *only_stubs()])
 
-        assert (repo / "records" / "doi-10-5281-zenodo-1.json").exists()
+        assert (repo / "data" / "records" / "doi-10-5281-zenodo-1.json").exists()
 
     def test_a_malformed_annotation_file_does_not_stop_the_heartbeat(
         self, repo: Path
     ) -> None:
-        (repo / "annotations").mkdir(exist_ok=True)
-        (repo / "annotations" / "broken.yaml").write_text(
+        (repo / "data" / "annotations").mkdir(exist_ok=True)
+        (repo / "data" / "annotations" / "broken.yaml").write_text(
             "identity_key: x\nannotations: [unclosed\n", encoding="utf-8"
         )
 
         assert main(["--root", str(repo), "run", *only_stubs()]) == 0
-        assert (repo / "state" / "last-run.json").exists()
+        assert (repo / "data" / "state" / "last-run.json").exists()
 
     def test_an_unexpected_crash_still_leaves_a_report_behind(
         self, repo: Path, monkeypatch

@@ -4,6 +4,11 @@ Every path is resolved relative to the repository root, which is the parent of
 this package unless ``$HARVEST_ROOT`` overrides it. Tests override it with a
 ``tmp_path`` so nothing in this module ever writes into the real repo.
 
+Everything the harvest reads or writes lives under ``data/`` — the catalogue's
+whole state, in one subtree, separable from the code that produces it. The
+registers (``sources.yaml`` and friends) stay at the root: they are hand-edited
+configuration, not harvested data.
+
 Nothing here does I/O at import time.
 """
 
@@ -18,6 +23,7 @@ import yaml
 
 __all__ = [
     "repo_root",
+    "data_dir",
     "events_dir",
     "records_dir",
     "cache_dir",
@@ -49,34 +55,43 @@ def repo_root() -> Path:
     return Path(__file__).resolve().parent.parent
 
 
+def data_dir(root: Path | None = None) -> Path:
+    """``data/`` — every directory the harvest reads or writes, and nothing else.
+
+    One subtree for the whole catalogue state, so that "what is the data" and
+    "what is the code" are answerable by looking at the top level.
+    """
+    return (root or repo_root()) / "data"
+
+
 def events_dir(root: Path | None = None) -> Path:
-    """``events/`` — append-only JSONL, one file per identity (source of truth)."""
-    return (root or repo_root()) / "events"
+    """``data/events/`` — append-only JSONL, one file per identity (the truth)."""
+    return data_dir(root) / "events"
 
 
 def records_dir(root: Path | None = None) -> Path:
-    """``records/`` — derived CKAN package dicts, one JSON per record."""
-    return (root or repo_root()) / "records"
+    """``data/records/`` — derived CKAN package dicts, one JSON per record."""
+    return data_dir(root) / "records"
 
 
 def cache_dir(root: Path | None = None) -> Path:
-    """``cache/`` — committed LLM extraction cache (ADR-0025)."""
-    return (root or repo_root()) / "cache"
+    """``data/cache/`` — committed LLM extraction cache (ADR-0025)."""
+    return data_dir(root) / "cache"
 
 
 def state_dir(root: Path | None = None) -> Path:
-    """``state/`` — run report and the pending-extraction queue."""
-    return (root or repo_root()) / "state"
+    """``data/state/`` — run report and the pending-extraction queue."""
+    return data_dir(root) / "state"
 
 
 def annotations_dir(root: Path | None = None) -> Path:
-    """``annotations/`` — local additions only; source fields are never edited."""
-    return (root or repo_root()) / "annotations"
+    """``data/annotations/`` — local additions only; source is never edited."""
+    return data_dir(root) / "annotations"
 
 
 def fixtures_dir(root: Path | None = None) -> Path:
-    """``fixtures/`` — the test and gallery fixture set."""
-    return (root or repo_root()) / "fixtures"
+    """``data/fixtures/`` — the test and gallery fixture set."""
+    return data_dir(root) / "fixtures"
 
 
 def sources_path(root: Path | None = None) -> Path:

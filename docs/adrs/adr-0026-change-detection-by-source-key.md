@@ -74,11 +74,11 @@ done at record granularity where it is cheap. The two models from turns 11 and
 
 **Good**
 
-- Growth of `events/` stays proportional to real change — roughly 3,000 events
+- Growth of `data/events/` stays proportional to real change — roughly 3,000 events
   at seeding and a few hundred a year afterwards, against ~300 MB/year if every
   record were snapshotted every week.
-- A no-op weekly run produces no diff in `events/` or `records/`; the only churn
-  is `state/last-run.json`, which is exactly what the heartbeat needs
+- A no-op weekly run produces no diff in `data/events/` or `data/records/`; the only churn
+  is `data/state/last-run.json`, which is exactly what the heartbeat needs
   ([[adr-0029-scheduling-and-the-heartbeat-commit]]).
 - Adapters are simple: yield a token, and the shared runner does the rest, once,
   for everybody. The rule cannot be implemented inconsistently seven times.
@@ -98,9 +98,9 @@ done at record granularity where it is cheap. The two models from turns 11 and
   systems has four independent keys and four independent replacement cycles.
   That is intentional: see the composition rules in [[record-format]] §3.1.
 
-**Checkable.** `state/last-run.json` reports `seen`, `changed` and
+**Checkable.** `data/state/last-run.json` reports `seen`, `changed` and
 `skipped_unchanged` per source. A second identical run must report
-`changed: 0` for every source and leave `events/` untouched.
+`changed: 0` for every source and leave `data/events/` untouched.
 
 ## Source
 

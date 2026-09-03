@@ -12,7 +12,7 @@ finding the site shipped with:
   catalogue, so a record that holds data must be typed ``Dataset``.
 * **site-03** — DCAT expects a licence IRI, and a human label is not one.
 * **product-e2e-05** — link rot is the failure mode the catalogue exists to
-  fight, and ``state/link-check.json`` was rendered nowhere.
+  fight, and ``data/state/link-check.json`` was rendered nowhere.
 * **product-e2e-06** — "5 softwares · 2 others": slugs are not English.
 * **product-e2e-07 / site-08** — the sitemap declares the catalogue's real
   locations. Search and browse were merged into the index (``/``), whose
@@ -54,9 +54,9 @@ class TestTheSixFacets:
 
     def test_every_record_carries_an_owning_organisation(self) -> None:
         """Without `owner_org` the facet is filtered out and vanishes silently."""
-        records = sorted((config.repo_root() / "records").glob("*.json"))
+        records = sorted(config.records_dir().glob("*.json"))
         if not records:
-            pytest.skip("records/ is empty in this checkout")
+            pytest.skip("data/records/ is empty in this checkout")
         orgless = [
             path.name
             for path in records

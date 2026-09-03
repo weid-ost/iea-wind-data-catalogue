@@ -1,6 +1,6 @@
 ---
 /**
- * "Last updated", from `state/last-run.json` (plan §3.3.3).
+ * "Last updated", from `data/state/last-run.json` (plan §3.3.3).
  *
  * Past 45 days it becomes a warning (fixture r-08). This is deliberately on the
  * front page rather than in the Actions tab: nobody checks a CI dashboard for a
@@ -29,7 +29,7 @@ const icon = neverRun ? 'ℹ' : stale ? '⚠' : '✓';
   {neverRun ? (
     <p>
       No harvest has run in this checkout yet. Run <code>make harvest</code> to
-      populate <code>records/</code>.
+      populate <code>data/records/</code>.
     </p>
   ) : (
     <p>

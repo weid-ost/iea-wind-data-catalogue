@@ -2,7 +2,7 @@
 
 Everything here is offline. ``map()`` is pure by contract, and the two things
 that are not — GitHub itself and the DOI resolver — are injected as fakes, so
-this suite never touches the network and never touches the real ``events/``.
+this suite never touches the network and never touches the real ``data/events/``.
 """
 
 from __future__ import annotations

@@ -12,7 +12,7 @@ import { validatePackage } from '../src/ckan.mjs';
 
 const repo = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const fixture = JSON.parse(
-  readFileSync(join(repo, 'fixtures', 'cross-cutting', 'x-08-ckan-invalid.json'), 'utf8')
+  readFileSync(join(repo, 'data', 'fixtures', 'cross-cutting', 'x-08-ckan-invalid.json'), 'utf8')
 );
 
 const result = validatePackage(fixture.record);

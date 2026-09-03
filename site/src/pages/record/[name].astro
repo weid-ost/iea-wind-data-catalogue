@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const { pkg, fixtureEvents } = Astro.props as { pkg: CkanPackage; fixtureEvents: EventLine[] };
 
-// `events/` is the source of truth; a fixture's hand-written log only stands in
+// `data/events/` is the source of truth; a fixture's hand-written log only stands in
 // when the real log has not been written yet.
 const logged = readEvents(pkg.name);
 const events = (logged.length > 0 ? logged : fixtureEvents) as EventLine[];

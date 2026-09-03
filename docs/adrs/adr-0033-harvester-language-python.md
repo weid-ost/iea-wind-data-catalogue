@@ -28,7 +28,7 @@ that a pinned C-extension package has no wheel for the runner's newer
 interpreter, tries to build from source, and dies.
 
 **The framing that lowers the stakes:** the durable artifact is the *data*, not
-the code. `records/*.json` and `cache/*.json` are plain committed JSON. If the
+the code. `data/records/*.json` and `data/cache/*.json` are plain committed JSON. If the
 harvester rots completely, the site still builds and still serves, and someone
 rewrites the harvester in whatever is fashionable in 2032 against a record
 format that has not changed. This decision is lower-stakes than it feels.

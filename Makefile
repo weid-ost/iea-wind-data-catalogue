@@ -26,13 +26,13 @@ sync:  ## install the pinned Python environment (uv sync --frozen)
 harvest:  ## harvest every enabled source (MAX_RECORDS=N overrides the default cap) and materialize
 	$(UV) run python -m harvest run $(if $(MAX_RECORDS),--max-records $(MAX_RECORDS))
 
-materialize:  ## replay events/ into records/ (derived; safe to delete and rebuild)
+materialize:  ## replay data/events/ into data/records/ (derived; safe to delete and rebuild)
 	$(UV) run python -m harvest materialize
 
-validate:  ## CKAN-compat gate over records/ — exits non-zero listing every violation
+validate:  ## CKAN-compat gate over data/records/ — exits non-zero listing every violation
 	$(UV) run python -m harvest validate
 
-annotations:  ## replay annotations/*.yaml into annotated events (idempotent)
+annotations:  ## replay data/annotations/*.yaml into annotated events (idempotent)
 	$(UV) run python -m harvest annotations
 
 dedupe:  ## find cross-source duplicates; propose merges (add APPLY=1 to record them)
@@ -44,7 +44,7 @@ linkcheck:  ## check every record's outbound links; dead links are reported, nev
 test:  ## run the test suite
 	$(UV) run pytest
 
-extract:  ## drain state/pending-extraction.json through the LLM (human-operated)
+extract:  ## drain data/state/pending-extraction.json through the LLM (human-operated)
 	$(UV) run python -m harvest extract
 
 build-tokens:  ## regenerate the palette and re-verify WCAG contrast
@@ -59,6 +59,6 @@ gates:  ## everything CI enforces: tests, CKAN compat, tokens, a11y
 	$(MAKE) build-tokens
 	cd site && $(NPM) run gates
 
-clean:  ## remove derived artifacts (NEVER touches events/, which is the truth)
-	rm -rf records/*.json .pytest_cache site/dist site/.astro
+clean:  ## remove derived artifacts (NEVER touches data/events/, which is the truth)
+	rm -rf data/records/*.json .pytest_cache site/dist site/.astro
 	find . -name '__pycache__' -type d -prune -exec rm -rf {} +

@@ -5,7 +5,7 @@ controls their own DataCite ``attributes.url``, their Zenodo file links and
 their OSTI full-text hrefs, and the site renders every one of them into an
 ``href``. Before this, no layer in the pipeline looked at the scheme
 (scrape-03, scrape-04, eventlog-06, site-01, site-02): a hostile
-``source.url`` travelled from the API response into ``records/*.json``, past
+``source.url`` travelled from the API response into ``data/records/*.json``, past
 the CKAN gate, and onto the record page.
 
 The defence is one allow-list applied three times — on the way in, on merge,

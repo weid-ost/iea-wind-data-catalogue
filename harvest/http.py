@@ -41,8 +41,8 @@ log = logging.getLogger(__name__)
 DEFAULT_TIMEOUT = 30.0
 
 #: The largest response body this harvester will read into a record. Every
-#: byte fetched ends up in an ``events/*.jsonl`` line and a
-#: ``records/*.json`` file, both committed to git on every change, and then
+#: byte fetched ends up in an ``data/events/*.jsonl`` line and a
+#: ``data/records/*.json`` file, both committed to git on every change, and then
 #: in a rendered HTML page and a Pagefind index entry. 8 MiB is an order of
 #: magnitude more than the largest real metadata response any of the seven
 #: sources returns, and small enough that a pathological or hostile upstream

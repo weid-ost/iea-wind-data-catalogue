@@ -1,0 +1,31 @@
+{
+  "_comment": "INVENTED. Not a capture — shaped like the API response it imitates so the expectation beside it is consistent, but no upstream artifact carries this payload. Identifiers use the reserved 10.5072 DataCite test prefix and the Zenodo sandbox host, so no real work is implicated. See data/fixtures/rendering/README.md.",
+  "id": 90000005,
+  "doi": "10.5072/zenodo.90000005",
+  "conceptdoi": "10.5072/zenodo.90000005",
+  "revision": 3,
+  "links": {
+    "self_html": "https://sandbox.zenodo.org/records/90000005"
+  },
+  "metadata": {
+    "title": "Turbine loads database from the OC6 Phase III validation campaign",
+    "description": "<p>Simulated and measured loads for the OC6 Phase III rotor.</p>",
+    "publication_date": "2021-09-02",
+    "resource_type": {
+      "type": "dataset"
+    },
+    "access_right": "closed",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "creators": [
+      {
+        "name": "Ashworth, Nadia"
+      },
+      {
+        "name": "Vasquez, Emil"
+      }
+    ]
+  },
+  "removal_reason": "record withdrawn by the depositor"
+}

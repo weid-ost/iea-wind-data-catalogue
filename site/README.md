@@ -1,7 +1,7 @@
 # site/
 
 The Astro renderer. **It renders; it does not own the data** (ADR-0032).
-`records/*.json` are canonical CKAN package dicts produced by `harvest/`; this
+`data/records/*.json` are canonical CKAN package dicts produced by `harvest/`; this
 directory reads them by glob and never writes to them.
 
 Operating instructions live in the docs vault — [run the site
@@ -62,7 +62,7 @@ the only change needed.
 
 ## Render safety
 
-Everything in `records/` is somebody else's text. `harvest/sanitize.py` and
+Everything in `data/records/` is somebody else's text. `harvest/sanitize.py` and
 `harvest/urls.py` clean it on the way in; `src/safety.mjs` refuses it again on
 the way out, because the renderer is what turns a string into markup:
 
@@ -91,7 +91,7 @@ They stay discoverable through the sitemap and `/catalog.jsonld`.
 
 ## Things that will bite you
 
-- **`records/` empty?** The site falls back to `fixtures/rendering/` and says so
+- **`data/records/` empty?** The site falls back to `data/fixtures/rendering/` and says so
   on the homepage. One real record and the fixtures disappear.
 - **Search does nothing under `npm run dev`.** Pagefind indexes `dist/`, so the
   index is a build artifact. Use `npm run build && npm run preview`.

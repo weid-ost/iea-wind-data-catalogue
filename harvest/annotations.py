@@ -1,9 +1,9 @@
-"""``annotations/`` — curatorial intent, replayed into ``annotated`` events.
+"""``data/annotations/`` — curatorial intent, replayed into ``annotated`` events.
 
 The runbook [[correct-a-record]] says two things about this directory, and both
 are implemented here:
 
-1. ``annotations/<slug>.yaml`` is *the human-readable record of curatorial
+1. ``data/annotations/<slug>.yaml`` is *the human-readable record of curatorial
    intent* — what a curator did and why, kept next to the events it produced.
 2. Replaying it into ``annotated`` events must be **idempotent**: running
    ``python -m harvest materialize`` a hundred times appends the annotation
@@ -125,7 +125,7 @@ class Annotation:
 
 @dataclass
 class AnnotationResult:
-    """What one replay of ``annotations/`` did."""
+    """What one replay of ``data/annotations/`` did."""
 
     applied: list[Annotation] = field(default_factory=list)
     skipped: list[Annotation] = field(default_factory=list)
@@ -137,7 +137,7 @@ class AnnotationResult:
         return not self.errors
 
     def as_notices(self) -> list[dict]:
-        """Errors and pending annotations, for ``state/last-run.json`` → ``notices``."""
+        """Errors and pending annotations, for ``data/state/last-run.json`` → ``notices``."""
         notices: list[dict] = [
             {"type": "annotation_error", "message": message} for message in self.errors
         ]
@@ -222,7 +222,7 @@ def existing_fingerprints(identity_key: str, events_dir: Path | None = None) -> 
 def _relative_path(path: Path, root: Path | None = None) -> str:
     """A repo-relative path string for the run report.
 
-    ``state/last-run.json`` is committed to a public repo, so an absolute
+    ``data/state/last-run.json`` is committed to a public repo, so an absolute
     developer path (``/Users/…/annotations/foo.yaml``) both leaks the author's
     filesystem and makes the file machine-dependent (compliance-11). Fall back
     to the basename when the file sits outside the resolved root.
@@ -300,7 +300,7 @@ def curator_provenance(local: dict[str, Any]) -> dict[str, FieldProvenance]:
 
 
 def load_annotation_file(path: Path, root: Path | None = None) -> list[Annotation]:
-    """Parse one ``annotations/*.yaml`` into its declared annotations.
+    """Parse one ``data/annotations/*.yaml`` into its declared annotations.
 
     Raises :class:`AnnotationError` on anything malformed — the caller collects
     the message rather than letting one bad file stop the replay.
@@ -309,7 +309,7 @@ def load_annotation_file(path: Path, root: Path | None = None) -> list[Annotatio
         document = config.load_yaml(path)
     except Exception as exc:
         # A YAML syntax error is one curator's typo, not a reason for the whole
-        # run to die before it can write state/last-run.json (compliance-04).
+        # run to die before it can write data/state/last-run.json (compliance-04).
         raise AnnotationError(f"{path.name}: not valid YAML: {exc}") from exc
     if not isinstance(document, dict):
         raise AnnotationError(f"{path.name}: top level must be a mapping")
@@ -362,7 +362,7 @@ def load_annotations(
     root: Path | None = None,
     errors: list[str] | None = None,
 ) -> list[Annotation]:
-    """Every annotation declared under ``annotations/``, in file order.
+    """Every annotation declared under ``data/annotations/``, in file order.
 
     A file that cannot be parsed is logged and appended to ``errors`` rather
     than raising: one malformed annotation must not stop the others being
@@ -396,10 +396,10 @@ def apply_annotations(
     dry_run: bool = False,
     annotations: Sequence[Annotation] | None = None,
 ) -> AnnotationResult:
-    """Replay ``annotations/`` into ``annotated`` events, idempotently.
+    """Replay ``data/annotations/`` into ``annotated`` events, idempotently.
 
     Called by ``python -m harvest materialize`` and ``python -m harvest run``
-    before the replay, so a curator's YAML reaches ``records/`` in one command.
+    before the replay, so a curator's YAML reaches ``data/records/`` in one command.
     Returns the outcome; never raises.
     """
     result = AnnotationResult()

@@ -10,7 +10,7 @@ last_executed: 2026-09-01
 
 # Runbook — materialise and validate
 
-**Goal:** rebuild `records/` from `events/` and prove it would be accepted by
+**Goal:** rebuild `data/records/` from `data/events/` and prove it would be accepted by
 CKAN.
 **Prerequisites:** [[local-dev-setup]] done.
 **Governed by:** [[adr-0037-events-are-the-source-of-truth]],
@@ -20,12 +20,12 @@ CKAN.
 
 ## 1. The acceptance test for ADR-0037
 
-`records/` is derived. Prove it, regularly:
+`data/records/` is derived. Prove it, regularly:
 
 ```sh
-rm -f records/*.json
+rm -f data/records/*.json
 make materialize
-git status --short records/
+git status --short data/records/
 ```
 
 **Expect no changes.** Materialisation is byte-stable — sorted keys, fixed
@@ -50,7 +50,7 @@ make materialize                                   # = uv run python -m harvest 
 uv run python -m harvest materialize --no-prune    # keep record files with no backing events
 ```
 
-**On pruning.** By default `materialize_all` removes `records/*.json` files that
+**On pruning.** By default `materialize_all` removes `data/records/*.json` files that
 have no backing events. That is the **only sanctioned deletion in the system**,
 and it can only ever fire for an identity whose events were removed by hand.
 Withdrawn identities keep their events and therefore keep their records
@@ -95,7 +95,7 @@ The gate checks exactly what CKAN's API would refuse. Full table in
 | `'foo' is not in organizations.yaml` | an `owner_org` that has no register entry | add the institution, or use `unattributed` |
 | `slug collision: identities … both render to …` | two identity keys render to one slug | disambiguate the `source_id`; do not loosen the slugifier |
 
-**The fix always goes upstream of `records/`.** Never edit a file in `records/`
+**The fix always goes upstream of `data/records/`.** Never edit a file in `data/records/`
 — it is generated, and your edit is gone at the next materialisation. Fix the
 adapter's `map()`, or append an annotation event
 ([[correct-a-record]]), then materialise again.
@@ -107,7 +107,7 @@ Adding a custom field is a three-file change, and a test enforces two of them:
 1. add the key to `harvest.materialize.EXTRA_KEYS`,
 2. document it in `schema/ckan-scheming.json`,
 3. add or update a fixture that exercises it
-   (`fixtures/fixtures-catalogue.md` is the inventory).
+   (`data/fixtures/fixtures-catalogue.md` is the inventory).
 
 Then:
 
@@ -119,7 +119,7 @@ make validate
 
 ## 6. Working safely
 
-Use a scratch root rather than the real `events/` while experimenting:
+Use a scratch root rather than the real `data/events/` while experimenting:
 
 ```sh
 mkdir -p /tmp/drill/schema
@@ -134,7 +134,7 @@ suite keeps out of the real event log, and it should be how you do too.
 
 ## 7. Before promotion day
 
-The gate is the promotion contract. If it is green, `records/*.json` can be
+The gate is the promotion contract. If it is green, `data/records/*.json` can be
 POSTed to CKAN `package_create` unmodified. Drill: [[promote-to-ckan]].
 
 ---
@@ -144,6 +144,6 @@ an empty checkout. `uv run python -m harvest materialize` reports
 `30 record(s) (0 written, 30 unchanged, 0 pruned)` and
 `uv run python -m harvest validate` reports `validate-ckan-compat: OK — 30
 record(s)`, both exit 0. Replay is byte-stable: materialising twice in a row
-leaves every file in `records/` unchanged, checked by hashing the tree either
+leaves every file in `data/records/` unchanged, checked by hashing the tree either
 side. The annotate → materialise → validate cycle in [[correct-a-record]]
 produced a valid record under `$HARVEST_ROOT`.

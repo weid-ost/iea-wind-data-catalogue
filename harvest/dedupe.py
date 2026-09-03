@@ -3,7 +3,7 @@
 **Most deduplication in this catalogue never reaches this module**, and that is
 by design. When Zenodo, DataCite, GitHub and an iea-wind.org citation all
 describe one DOI, all four adapters derive the *same* identity key (the DOI), so
-all four write to one ``events/<slug>.jsonl`` and
+all four write to one ``data/events/<slug>.jsonl`` and
 :func:`harvest.events.resolve` composes them into one record with four
 ``source_urls`` — fixture ``x-01``, no reconciliation code involved.
 
@@ -38,7 +38,7 @@ opposite annotation. Merges are applied only by an explicit
 
 A fuzzy match is a guess about the world, and a wrong merge hides a real record
 behind a suppression flag. So the fuzzy pass emits **proposals**: they land in
-``state/merge-proposals.json`` and in the run report's ``notices``, which is the
+``data/state/merge-proposals.json`` and in the run report's ``notices``, which is the
 short list a curator reads monthly. ``--apply`` does not apply them; a human
 turns one into a merge by writing the annotation, or into a rejection by doing
 nothing. Buckets are keyed on (first-author surname, year), so an artifact with
@@ -199,7 +199,7 @@ def load_resolved(
     events_dir: Path | None = None,
     root: Path | None = None,
 ) -> dict[str, ResolvedRecord]:
-    """Resolve every identity in the event log. Offline; no records/ needed."""
+    """Resolve every identity in the event log. Offline; no data/records/ needed."""
     directory = events_dir if events_dir is not None else config.events_dir(root)
     return {
         key: resolve(key, events_dir=directory)
@@ -677,9 +677,9 @@ def _record_proposal(
 ) -> bool:
     """Put a merge *proposal* in the append-only log. Idempotent.
 
-    A proposal lived only in ``state/merge-proposals.json``, which is rewritten
+    A proposal lived only in ``data/state/merge-proposals.json``, which is rewritten
     wholesale on every pass — so the reconciler's judgement about two records
-    was not durable in ``events/``, the artifact ADR-0037 designates the source
+    was not durable in ``data/events/``, the artifact ADR-0037 designates the source
     of truth, and the spec requires proposals to be *recorded* rather than
     applied silently (compliance-10). Recording it also puts it on the record
     page, which is where the human who can decide it will be looking.
@@ -757,7 +757,7 @@ def dedupe(
 
 
 def proposals_path(root: Path | None = None) -> Path:
-    """``state/merge-proposals.json`` — the curator's review queue."""
+    """``data/state/merge-proposals.json`` — the curator's review queue."""
     return config.state_dir(root) / "merge-proposals.json"
 
 

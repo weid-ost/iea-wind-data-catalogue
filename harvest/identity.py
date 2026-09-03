@@ -13,8 +13,8 @@ derived by a strict three-step preference order:
                                  Fixture ``x-06`` exists to keep this honest.
 
 A **slug** is the filesystem- and CKAN-safe rendering of an identity key. It is
-the CKAN ``package.name``, the record filename stem (``records/<slug>.json``),
-the event-log filename stem (``events/<slug>.jsonl``) and the site URL segment
+the CKAN ``package.name``, the record filename stem (``data/records/<slug>.json``),
+the event-log filename stem (``data/events/<slug>.jsonl``) and the site URL segment
 (``/record/<slug>/``). It is derived from the identity key **and nothing else**,
 so it is stable across metadata edits: a retitled dataset keeps its URL.
 

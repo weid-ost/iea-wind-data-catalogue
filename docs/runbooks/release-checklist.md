@@ -40,7 +40,7 @@ individually while iterating.
 |---|---|---|---|
 | 1 | tests | `make test` | `2080 passed, 476 skipped` or better; **no new skips without a reason**. The skips are the fixture-kind parametrisations stepping over fixtures of the other kinds, which is by design |
 | 2 | CKAN-compat | `make validate` | `validate-ckan-compat: OK — N record(s)` |
-| 3 | replay determinism | `rm -f records/*.json && make materialize && git status --short records/` | **no changes** — the acceptance test for ADR-0037 |
+| 3 | replay determinism | `rm -f data/records/*.json && make materialize && git status --short data/records/` | **no changes** — the acceptance test for ADR-0037 |
 | 4 | palette + contrast | `make build-tokens` | every pair reports `PASS`; **`design/palette.json` unchanged** unless a colour was deliberately altered |
 | 5 | token discipline | `cd site && npm run gates` | no hex literals, raw `px` colours or off-scale spacing outside `tokens.css` |
 | 6 | accessibility | `cd site && npm run gates` | `pa11y-ci` green over the URL list, **in both themes** |
@@ -103,9 +103,9 @@ was last done.
 
 ## 3. Content checks
 
-- [ ] `state/last-run.json` → `finished_at` is recent, and the freshness banner
+- [ ] `data/state/last-run.json` → `finished_at` is recent, and the freshness banner
       is **not** in its warning state (past 45 days).
-- [ ] `state/last-run.json` → `notices` read and understood. This is the
+- [ ] `data/state/last-run.json` → `notices` read and understood. This is the
       curator's short monthly job: displacement and pin notices, not a log.
 - [ ] `unmapped_licenses` is empty, or every entry is a known upstream oddity.
       **Never infer an open licence** to clear this.

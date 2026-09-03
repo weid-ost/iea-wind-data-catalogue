@@ -21,12 +21,12 @@ known-wrong upstream licence, a related link, the two scalar additions
 | `github-iea-task-43-digital-wra-data-standard.yaml` | `github\|org/repo` | scalar additions and a Tier-3 pin |
 | `hash-1f0e3dad99908345.yaml` | `hash\|…` (fragile) | suppression, which is never deletion |
 
-## Why they are here and not in `annotations/`
+## Why they are here and not in `data/annotations/`
 
-They name identities nothing has harvested, so `annotations/` would report each
+They name identities nothing has harvested, so `data/annotations/` would report each
 of them as `annotation_pending` on every run, forever — eight notices in
-`state/last-run.json` that carried no information and drowned out the signal the
-field exists to give (compliance-11). `annotations/` is now empty of samples, so
+`data/state/last-run.json` that carried no information and drowned out the signal the
+field exists to give (compliance-11). `data/annotations/` is now empty of samples, so
 a non-zero pending count always means a real curator is waiting on a real
 harvest.
 
@@ -34,11 +34,11 @@ harvest.
 
 ```sh
 cp docs/examples/annotations/doi-10-5072-zenodo-1234566.yaml \
-   annotations/<slug-of-a-real-record>.yaml
+   data/annotations/<slug-of-a-real-record>.yaml
 ```
 
 Then **change `identity_key`** to a key that exists — take it from
-`records/<slug>.json` → `extras.identity_key` — and change the notes to say what
+`data/records/<slug>.json` → `extras.identity_key` — and change the notes to say what
 you actually did and why. `uv run python -m harvest annotations --dry-run` says
 what would happen; `make materialize` applies it. The replay is idempotent:
 running it a hundred times appends each annotation once.

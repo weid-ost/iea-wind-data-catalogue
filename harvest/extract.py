@@ -13,13 +13,13 @@ personally has.
 
 ADR-0025 — **the cache is committed.** Key is
 ``sha256(content + prompt_version + model_id)``; the entry is written to
-``cache/<key>.json`` and committed. A rebuild replays the cache rather than
+``data/cache/<key>.json`` and committed. A rebuild replays the cache rather than
 re-inferring, which is the only reason "rebuild from the repo" and "AI
 harvester" are not in direct conflict. Cache entries are byte-stable JSON.
 
 ADR-0031 — **the harvest never fails because the LLM is unavailable.** Key
 expired, rate limited, provider outage, no token at all: :func:`extract`
-returns ``None``, the page is appended to ``state/pending-extraction.json``,
+returns ``None``, the page is appended to ``data/state/pending-extraction.json``,
 and the run continues and succeeds (fixture ``x-07``). Someone drains the
 queue later with ``make extract`` on their own machine.
 
@@ -44,7 +44,7 @@ Three further rules:
 
 ``MAX_EXTRACTIONS`` caps calls per run so a site redesign that invalidates
 three thousand cache entries drains over weeks rather than arriving as one
-surprise bill. The remaining backlog is reported in ``state/last-run.json``.
+surprise bill. The remaining backlog is reported in ``data/state/last-run.json``.
 """
 
 from __future__ import annotations
@@ -121,7 +121,7 @@ MAX_EXTRACTIONS = 200
 #: :data:`DEFAULT_MODEL` must still replay them byte-identically, so the lookup
 #: falls back through this list before it decides it has a miss.
 #:
-#: ``claude-fable-5`` is the backfill lineage that seeded ``cache/`` — see
+#: ``claude-fable-5`` is the backfill lineage that seeded ``data/cache/`` — see
 #: ``docs/runbooks/drain-the-pending-extraction-queue.md`` §5. Override with
 #: ``$HARVEST_LLM_CACHE_LINEAGE`` (comma-separated) if you seed another.
 BACKFILL_MODELS: tuple[str, ...] = ("claude-fable-5",)
@@ -243,7 +243,7 @@ class PageExtraction(BaseModel):
 
 @dataclass
 class ExtractionResult:
-    """One page's extraction, as stored in ``cache/<key>.json``."""
+    """One page's extraction, as stored in ``data/cache/<key>.json``."""
 
     key: str
     model: str
@@ -295,7 +295,7 @@ class ExtractionStats:
         return round(self.hits / total, 4) if total else 0.0
 
 
-#: Process-wide counters. ``state/last-run.json`` reports these.
+#: Process-wide counters. ``data/state/last-run.json`` reports these.
 STATS = ExtractionStats()
 
 
@@ -671,7 +671,7 @@ def write_pending(entries: list[dict], state_directory: Path | None = None) -> P
 
 def queue_pending(url: str, key: str, reason: str,
                   state_directory: Path | None = None) -> None:
-    """Append a cache miss to ``state/pending-extraction.json`` (fixture ``x-07``).
+    """Append a cache miss to ``data/state/pending-extraction.json`` (fixture ``x-07``).
 
     The queue is a list of ``{url, cache_key, reason, queued_at}``, deduped on
     ``cache_key``. Its length is reported next to the freshness banner.

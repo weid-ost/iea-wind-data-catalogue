@@ -450,7 +450,7 @@ class IeaWindAdapter(Adapter):
 
     def __init__(self, *args: Any, resolver: Any = None, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
-        #: Every dropped DOI, for ``state/last-run.json -> dropped_dois`` (``iea-05``).
+        #: Every dropped DOI, for ``data/state/last-run.json -> dropped_dois`` (``iea-05``).
         self.drop_log = DoiDropLog()
         #: Coverage gaps and page failures, for the run report (``iea-11``, ``iea-12``).
         self.notices: list[dict] = []
@@ -665,7 +665,7 @@ class IeaWindAdapter(Adapter):
             except Exception as exc:
                 # A committed cache entry whose fields do not validate is a
                 # MISS, never a hard failure (scrape-06). The runbook tells a
-                # curator to edit cache/<key>.json by hand; one typo there must
+                # curator to edit data/cache/<key>.json by hand; one typo there must
                 # cost this page, not the whole source.
                 log.warning("cache entry for %s is not a valid extraction: %s", url, exc)
                 self._note(

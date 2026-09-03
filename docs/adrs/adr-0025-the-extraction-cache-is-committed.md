@@ -20,7 +20,7 @@ tags: [llm, cache, reproducibility]
 "Rebuild from the repository" and "AI harvester" are in direct conflict unless
 something resolves them. A model is not a pure function: same page, same prompt,
 different day, possibly different output. If a rebuild re-infers, then
-`records/` is not reproducible from `events/`, the byte-stability that makes a
+`data/records/` is not reproducible from `data/events/`, the byte-stability that makes a
 no-op run produce no diff is lost, and the heartbeat commit becomes noise.
 
 There is also a cost dimension. Most pages do not change between weekly runs, so
@@ -34,7 +34,7 @@ re-inferring them is money and rate limit spent on nothing.
    in `harvest.extract.cache_key` — which is *not* a stub, precisely because the
    Tier-3 source key derives from the same normalised content and the adapters
    and the reconciler must agree on it.
-2. Entries live at `cache/<key>.json`, are byte-stable JSON, and are
+2. Entries live at `data/cache/<key>.json`, are byte-stable JSON, and are
    **committed to the repository**.
 3. **A rebuild replays the committed cache rather than re-inferring**, and
    therefore produces byte-identical output.
@@ -45,7 +45,7 @@ re-inferring them is money and rate limit spent on nothing.
 5. `model_id` is in the key too, so a change of model is a visible, auditable
    cache-lineage split rather than a silent quality change.
 6. Cache hit and miss counts, and the resulting hit rate, are reported in
-   `state/last-run.json` under `cache`.
+   `data/state/last-run.json` under `cache`.
 
 Note the second job the content hash does: for Tier-3 pages it **is** the source
 key ([[adr-0026-change-detection-by-source-key]]). One hash, two purposes, no

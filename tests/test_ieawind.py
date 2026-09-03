@@ -543,7 +543,7 @@ class TestIea09NotARecord:
         assert page["classification"].method == "pattern"
         assert page["classification"].confidence == 0.0
 
-        queued = read_pending(repo / "state")
+        queued = read_pending(repo / "data" / "state")
         assert len(queued) == 1
         assert queued[0]["url"] == url
         assert "classification unavailable" in queued[0]["reason"]
@@ -575,7 +575,7 @@ class TestAPinnedExtraction:
                 pin_source_key=content_hash(pinned_against),
                 pin_url=url,
             ),
-            repo / "cache",
+            repo / "data" / "cache",
         )
 
     def test_a_redesigned_page_keeps_the_human_judgement_and_raises_a_notice(
@@ -616,7 +616,7 @@ class TestAPinnedExtraction:
 class TestACorruptCacheEntryIsAMiss:
     """scrape-06: one bad committed cache entry must not kill the source.
 
-    ``cache/`` is committed, and the pinning runbook tells a curator to write
+    ``data/cache/`` is committed, and the pinning runbook tells a curator to write
     an entry by hand. An entry that parses as JSON but whose ``fields`` are not
     a valid ``PageExtraction`` — a typo'd ``page_kind``, a ``confidence`` of
     ``"high"`` — used to raise out of ``_classify_with_model`` and take the
@@ -638,7 +638,7 @@ class TestACorruptCacheEntryIsAMiss:
                 extracted_at="2026-08-31T22:15:04Z",
                 fields=fields,
             ),
-            repo / "cache",
+            repo / "data" / "cache",
         )
 
     def test_an_unreadable_entry_does_not_raise(
@@ -782,7 +782,7 @@ class TestIea12DeadPage:
     def test_existing_records_are_untouched_by_a_dead_page(
         self, repo: Path, events_dir: Path
     ) -> None:
-        records = repo / "records"
+        records = repo / "data" / "records"
         (records / "doi-10-5194-wes-9-883-2024.json").write_text("{}", encoding="utf-8")
         before = (records / "doi-10-5194-wes-9-883-2024.json").read_bytes()
 

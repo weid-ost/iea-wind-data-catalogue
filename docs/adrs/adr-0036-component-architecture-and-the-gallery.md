@@ -82,7 +82,7 @@ hundred lines, zero new dependencies, builds with the same command as everything
 else, reviewable in a browser exactly like Storybook.
 
 It is also *better* in one specific way: the gallery renders **real records
-pulled from `records/`, plus the deliberately pathological `fixtures/` set** —
+pulled from `data/records/`, plus the deliberately pathological `data/fixtures/` set** —
 missing DOI, 300-character title, no description, withdrawn record,
 low-confidence LLM-extracted fields, a record belonging to five tasks at once.
 That exercises the actual data shape, which is where the bugs will be. Storybook

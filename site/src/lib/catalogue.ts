@@ -1,13 +1,13 @@
 /**
  * Loading the catalogue.
  *
- * `records/*.json` is canonical and derived from `events/` (ADR-0037). Astro
+ * `data/records/*.json` is canonical and derived from `data/events/` (ADR-0037). Astro
  * globs it through the content collection, whose Zod schema is the CKAN-compat
  * gate — a malformed record fails the build.
  *
- * Before the first harvest, `records/` is empty. Rather than build an empty
+ * Before the first harvest, `data/records/` is empty. Rather than build an empty
  * site (which would hide every rendering bug until the day it matters) the
- * catalogue falls back to `fixtures/rendering/`, and says so on the homepage.
+ * catalogue falls back to `data/fixtures/rendering/`, and says so on the homepage.
  * The fallback is all-or-nothing: one real record and the fixtures disappear.
  */
 import { getCollection } from 'astro:content';
@@ -21,7 +21,7 @@ export interface CatalogueEntry {
   fixtureId?: string;
   fixtureCase?: string;
   fixtureNote?: string;
-  /** Hand-written event log carried by a fixture, when `events/` has none. */
+  /** Hand-written event log carried by a fixture, when `data/events/` has none. */
   events: EventLine[];
 }
 

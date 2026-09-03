@@ -2,10 +2,10 @@
 
 Two layers, deliberately:
 
-* **the fixtures** (``fixtures/crossref/``) are captured from the live API and
+* **the fixtures** (``data/fixtures/crossref/``) are captured from the live API and
   lock the whole mapping down as a regression test;
 * **the behavioural tests** below say, in prose and assertions, what each
-  fixture in ``fixtures/fixtures-catalogue.md`` is *for*, so that a change that
+  fixture in ``data/fixtures/fixtures-catalogue.md`` is *for*, so that a change that
   silently regenerates a fixture still has to answer to the specification.
 
 Nothing here touches the network. ``map()`` is pure by contract, and every
@@ -572,11 +572,11 @@ class TestCr07Retraction:
         """ADR-0027: kept, never deleted; CKAN `state` stays active and the
         withdrawal lives in the extras the site renders the banner from."""
         adapter = _adapter_over(["cr-07-retraction"])
-        run_adapter(adapter, max_records=5, events_dir=repo / "events")
+        run_adapter(adapter, max_records=5, events_dir=repo / "data" / "events")
         result = materialize_all(root=repo)
         assert result.violations == []
         record = json.loads(
-            (repo / "records" / "doi-10-1002-we-2194.json").read_text(encoding="utf-8")
+            (repo / "data" / "records" / "doi-10-1002-we-2194.json").read_text(encoding="utf-8")
         )
         extras = {extra["key"]: extra["value"] for extra in record["extras"]}
         assert record["state"] == "active"
@@ -797,7 +797,7 @@ class TestRegistration:
 class TestEndToEnd:
     def test_harvest_materialize_and_the_ckan_gate(self, repo: Path) -> None:
         adapter = _adapter_over([f["fixture_id"] for f in ALL_FIXTURES])
-        result = run_adapter(adapter, max_records=5, events_dir=repo / "events")
+        result = run_adapter(adapter, max_records=5, events_dir=repo / "data" / "events")
         assert result.changed == 5 and result.errors == []
 
         materialized = materialize_all(root=repo)
@@ -805,18 +805,18 @@ class TestEndToEnd:
         assert len(materialized.written) == 5
 
     def test_materialisation_is_byte_stable(self, repo: Path) -> None:
-        run_adapter(_adapter_over(["cr-01-canonical"]), max_records=5, events_dir=repo / "events")
+        run_adapter(_adapter_over(["cr-01-canonical"]), max_records=5, events_dir=repo / "data" / "events")
         materialize_all(root=repo)
-        before = (repo / "records" / "doi-10-5194-wes-9-1173-2024.json").read_bytes()
+        before = (repo / "data" / "records" / "doi-10-5194-wes-9-1173-2024.json").read_bytes()
         again = materialize_all(root=repo)
-        after = (repo / "records" / "doi-10-5194-wes-9-1173-2024.json").read_bytes()
+        after = (repo / "data" / "records" / "doi-10-5194-wes-9-1173-2024.json").read_bytes()
         assert before == after and again.written == []
 
     def test_the_record_is_a_postable_ckan_package(self, repo: Path) -> None:
-        run_adapter(_adapter_over(["cr-01-canonical"]), max_records=5, events_dir=repo / "events")
+        run_adapter(_adapter_over(["cr-01-canonical"]), max_records=5, events_dir=repo / "data" / "events")
         materialize_all(root=repo)
         record = json.loads(
-            (repo / "records" / "doi-10-5194-wes-9-1173-2024.json").read_text(encoding="utf-8")
+            (repo / "data" / "records" / "doi-10-5194-wes-9-1173-2024.json").read_text(encoding="utf-8")
         )
         assert record["name"] == "doi-10-5194-wes-9-1173-2024"
         assert record["license_id"] == "cc-by"
@@ -828,7 +828,7 @@ class TestEndToEnd:
         assert extras["container"] == "Wind Energy Science"
 
     def test_an_unmapped_licence_reaches_the_run_report(self, repo: Path) -> None:
-        run_adapter(_adapter_over(["cr-05-markup-in-title"]), max_records=5, events_dir=repo / "events")
+        run_adapter(_adapter_over(["cr-05-markup-in-title"]), max_records=5, events_dir=repo / "data" / "events")
         result = materialize_all(root=repo)
         assert [entry["license_raw"] for entry in result.unmapped_licenses] == [
             "http://onlinelibrary.wiley.com/termsAndConditions#vor"

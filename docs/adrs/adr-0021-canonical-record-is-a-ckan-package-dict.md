@@ -37,7 +37,7 @@ That claim is only worth making if it is continuously true.
 ## Decision
 
 **The canonical record is a CKAN `package` dict**, serialised as JSON, one file
-per record in `records/<slug>.json`, directly POSTable to `package_create`
+per record in `data/records/<slug>.json`, directly POSTable to `package_create`
 **with no transformation**.
 
 1. `harvest/materialize.py` shapes every record; `harvest/models.py`
@@ -53,7 +53,7 @@ per record in `records/<slug>.json`, directly POSTable to `package_create`
    documents the custom fields, and it is the input CKAN needs on promotion day.
    A test enforces that it and `harvest.materialize.EXTRA_KEYS` agree.
 4. **No framework-specific field may ever enter the record format.** Astro
-   globs `records/*.json` and renders them; it does not own them
+   globs `data/records/*.json` and renders them; it does not own them
    ([[adr-0032-site-framework-astro]]).
 5. Structured custom fields are carried as JSON strings inside `extras`,
    because CKAN extras are string-valued. Details in [[record-format]] §4.2.

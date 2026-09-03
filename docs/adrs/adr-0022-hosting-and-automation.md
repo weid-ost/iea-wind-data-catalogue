@@ -52,7 +52,7 @@ annotations  ──┤
       GitHub Actions (cron: weekly + workflow_dispatch)
                │  harvest → extract (cached) → reconcile → validate
                ▼
-      records/*.json  +  cache/*.json   ──commit──► repo
+      data/records/*.json  +  data/cache/*.json   ──commit──► repo
                │
                ▼
       build (Astro + Pagefind index) ──► GitHub Pages ──► HTTPS, custom domain

@@ -6,7 +6,7 @@
 
   "notes": [
     "Every custom field below is stored as a CKAN EXTRA with a STRING value. Fields whose logical type is a list or an object are JSON-encoded inside that string, compactly, with sorted keys. CKAN accepts nothing else in extras unless declared here, which is exactly what this file declares.",
-    "Records are never edited in place. `source.*` metadata is replaced wholesale on a source-key change; `local.*` annotation is additive (ADR-0038). The event log in events/ is the source of truth; records/*.json is a derived view.",
+    "Records are never edited in place. `source.*` metadata is replaced wholesale on a source-key change; `local.*` annotation is additive (ADR-0038). The event log in data/events/ is the source of truth; data/records/*.json is a derived view.",
     "Withdrawal is NOT CKAN `state: deleted` — that would hide and permit purging a record ADR-0027 requires be retained. Withdrawal is `lifecycle_state`, `withdrawn` and `withdrawn_at` below."
   ],
 

@@ -1,6 +1,6 @@
-"""Track A — the Zenodo adapter, against ``fixtures/zenodo/``.
+"""Track A — the Zenodo adapter, against ``data/fixtures/zenodo/``.
 
-Every payload under ``fixtures/zenodo/raw/`` except ``zen-01`` (the foundation's
+Every payload under ``data/fixtures/zenodo/raw/`` except ``zen-01`` (the foundation's
 reference), ``zen-06`` and ``zen-07`` was captured verbatim from
 ``https://zenodo.org/api/records`` on 2026-08-31; the invented ones say so in
 their own ``invented`` field. Nothing in this module touches the network:
@@ -148,7 +148,7 @@ def listing(*payloads: dict[str, Any]) -> dict[str, Any]:
 
 class TestTheFixtureSet:
     def test_every_catalogue_row_has_a_fixture(self) -> None:
-        """``fixtures/fixtures-catalogue.md`` lists zen-01 .. zen-12. All of them."""
+        """``data/fixtures/fixtures-catalogue.md`` lists zen-01 .. zen-12. All of them."""
         stems = {path.stem for path in FIXTURES.glob("zen-*.json")}
         prefixes = {stem.split("-")[0] + "-" + stem.split("-")[1] for stem in stems}
         assert prefixes == {f"zen-{n:02d}" for n in range(1, 13)}
@@ -616,7 +616,7 @@ class TestCommunitiesAndTasks:
         Anyone can create a Zenodo community called ``ieawindtask777``; IEA
         Wind will one day create a real ``ieawindtask66``. Either way the
         pattern turned it into ``task-777``, which is not in ``groups.yaml``,
-        which fails the CKAN gate. And because ``events/`` is append-only the
+        which fails the CKAN gate. And because ``data/events/`` is append-only the
         bad attribution is now permanent: every subsequent run fails the same
         way and the deploy stays blocked until a human edits the register. A
         stranger's community name must not be able to do that.

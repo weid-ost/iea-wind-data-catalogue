@@ -1,4 +1,4 @@
-"""``annotations/`` — ADR-0038's full matrix, driven through the core replay.
+"""``data/annotations/`` — ADR-0038's full matrix, driven through the core replay.
 
 Every test here builds a throwaway repository root, appends real events through
 ``harvest.events``, replays real YAML through ``harvest.annotations``, and reads
@@ -69,7 +69,7 @@ def extras_of(records_dir: Path, slug: str) -> dict[str, str]:
 class TestParsing:
     def test_a_well_formed_file_parses(self, repo: Path) -> None:
         path = write_annotation(
-            repo / "annotations",
+            repo / "data" / "annotations",
             "sample.yaml",
             {
                 "identity_key": KEY,
@@ -87,7 +87,7 @@ class TestParsing:
     def test_a_file_that_tries_to_edit_source_is_refused(self, repo: Path) -> None:
         """The one rule: source metadata is never edited, only annotated."""
         path = write_annotation(
-            repo / "annotations",
+            repo / "data" / "annotations",
             "bad.yaml",
             {
                 "identity_key": KEY,
@@ -100,7 +100,7 @@ class TestParsing:
 
     def test_a_per_entry_source_block_is_refused_too(self, repo: Path) -> None:
         path = write_annotation(
-            repo / "annotations",
+            repo / "data" / "annotations",
             "bad.yaml",
             {
                 "identity_key": KEY,
@@ -112,7 +112,7 @@ class TestParsing:
 
     def test_a_scalar_where_a_list_belongs_fails_here_not_downstream(self, repo: Path) -> None:
         path = write_annotation(
-            repo / "annotations",
+            repo / "data" / "annotations",
             "bad.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"iea_task": "task-49"}}]},
         )
@@ -123,7 +123,7 @@ class TestParsing:
         self, repo: Path
     ) -> None:
         path = write_annotation(
-            repo / "annotations",
+            repo / "data" / "annotations",
             "bad.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-999"]}}]},
         )
@@ -133,21 +133,21 @@ class TestParsing:
     def test_a_renumbered_task_alias_is_accepted(self, repo: Path) -> None:
         """19 -> 54 and 34 -> 59 are real renumberings; both spellings are legal."""
         path = write_annotation(
-            repo / "annotations",
+            repo / "data" / "annotations",
             "alias.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-19"]}}]},
         )
         assert load_annotation_file(path, root=repo)
 
     def test_one_broken_file_does_not_stop_the_others(self, repo: Path) -> None:
-        write_annotation(repo / "annotations", "a-bad.yaml", {"annotations": []})
+        write_annotation(repo / "data" / "annotations", "a-bad.yaml", {"annotations": []})
         write_annotation(
-            repo / "annotations",
+            repo / "data" / "annotations",
             "b-good.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"suppressed": True}}]},
         )
         errors: list[str] = []
-        loaded = load_annotations(repo / "annotations", root=repo, errors=errors)
+        loaded = load_annotations(repo / "data" / "annotations", root=repo, errors=errors)
         assert len(loaded) == 1
         assert errors and "identity_key" in errors[0]
 
@@ -164,7 +164,7 @@ class TestIdempotence:
     def test_replaying_twice_appends_once(self, repo: Path, events_dir: Path) -> None:
         seed_scrape(events_dir)
         write_annotation(
-            repo / "annotations",
+            repo / "data" / "annotations",
             "sample.yaml",
             {
                 "identity_key": KEY,
@@ -172,9 +172,9 @@ class TestIdempotence:
                 "annotations": [{"local": {"iea_task": ["task-49"]}, "note": "workshop list"}],
             },
         )
-        first = apply_annotations(repo / "annotations", events_dir, root=repo)
-        second = apply_annotations(repo / "annotations", events_dir, root=repo)
-        third = apply_annotations(repo / "annotations", events_dir, root=repo)
+        first = apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
+        second = apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
+        third = apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
 
         assert len(first.applied) == 1
         assert second.applied == [] and len(second.skipped) == 1
@@ -190,7 +190,7 @@ class TestIdempotence:
 
     def test_a_changed_note_is_a_new_annotation(self, repo: Path, events_dir: Path) -> None:
         seed_scrape(events_dir)
-        directory = repo / "annotations"
+        directory = repo / "data" / "annotations"
         write_annotation(directory, "s.yaml", {
             "identity_key": KEY,
             "annotations": [{"local": {"iea_task": ["task-49"]}, "note": "first reason"}],
@@ -205,10 +205,10 @@ class TestIdempotence:
 
     def test_dry_run_writes_nothing(self, repo: Path, events_dir: Path) -> None:
         seed_scrape(events_dir)
-        write_annotation(repo / "annotations", "s.yaml", {
+        write_annotation(repo / "data" / "annotations", "s.yaml", {
             "identity_key": KEY, "annotations": [{"local": {"suppressed": True}}],
         })
-        result = apply_annotations(repo / "annotations", events_dir, root=repo, dry_run=True)
+        result = apply_annotations(repo / "data" / "annotations", events_dir, root=repo, dry_run=True)
         assert len(result.applied) == 1
         assert not [e for e in read_events(KEY, events_dir) if e.event_type == "annotated"]
 
@@ -218,10 +218,10 @@ class TestPendingAnnotations:
         self, repo: Path, events_dir: Path
     ) -> None:
         """Applying it would materialise a record with no source at all."""
-        write_annotation(repo / "annotations", "s.yaml", {
+        write_annotation(repo / "data" / "annotations", "s.yaml", {
             "identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-49"]}}],
         })
-        result = apply_annotations(repo / "annotations", events_dir, root=repo)
+        result = apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
         assert result.applied == [] and len(result.pending) == 1
         assert not (events_dir / "doi-10-5072-zenodo-1234566.jsonl").exists()
         assert result.as_notices()[0]["type"] == "annotation_pending"
@@ -229,21 +229,21 @@ class TestPendingAnnotations:
     def test_it_applies_itself_once_the_record_exists(
         self, repo: Path, events_dir: Path
     ) -> None:
-        write_annotation(repo / "annotations", "s.yaml", {
+        write_annotation(repo / "data" / "annotations", "s.yaml", {
             "identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-49"]}}],
         })
-        apply_annotations(repo / "annotations", events_dir, root=repo)
+        apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
         seed_scrape(events_dir)
-        result = apply_annotations(repo / "annotations", events_dir, root=repo)
+        result = apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
         assert len(result.applied) == 1
 
     def test_allow_new_is_the_explicit_opt_out(self, repo: Path, events_dir: Path) -> None:
-        write_annotation(repo / "annotations", "s.yaml", {
+        write_annotation(repo / "data" / "annotations", "s.yaml", {
             "identity_key": KEY,
             "allow_new": True,
             "annotations": [{"local": {"iea_task": ["task-49"]}}],
         })
-        result = apply_annotations(repo / "annotations", events_dir, root=repo)
+        result = apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
         assert len(result.applied) == 1
 
 
@@ -297,8 +297,8 @@ class TestTheCollisionMatrix:
             source={"title": "t", "iea_task": ["task-43"]},
             events_dir=events_dir, observed_at="2026-08-26T00:00:00Z",
         )
-        materialize_all(events_dir, repo / "records", root=repo)
-        extras = extras_of(repo / "records", "doi-10-5072-zenodo-1234566")
+        materialize_all(events_dir, repo / "data" / "records", root=repo)
+        extras = extras_of(repo / "data" / "records", "doi-10-5072-zenodo-1234566")
         assert json.loads(extras["iea_task"]) == ["task-43", "task-49"]
 
     def test_x10_a_curator_note_sits_beside_a_verbatim_wrong_value(
@@ -310,9 +310,9 @@ class TestTheCollisionMatrix:
             {"curator_notes": [{"field": "license_id", "note": "OST note: source is wrong"}]},
             actor="curator:tom", events_dir=events_dir, observed_at="2026-08-25T00:00:00Z",
         )
-        materialize_all(events_dir, repo / "records", root=repo)
+        materialize_all(events_dir, repo / "data" / "records", root=repo)
         package = json.loads(
-            (repo / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
+            (repo / "data" / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
         )
         assert package["license_id"] == "cc-by", "the wrong upstream value is kept, verbatim"
         extras = {extra["key"]: extra["value"] for extra in package["extras"]}
@@ -323,9 +323,9 @@ class TestTheCollisionMatrix:
     ) -> None:
         seed_scrape(events_dir)
         annotate(KEY, {"suppressed": True}, actor="curator:tom", events_dir=events_dir)
-        materialize_all(events_dir, repo / "records", root=repo)
-        assert (repo / "records" / "doi-10-5072-zenodo-1234566.json").exists()
-        assert extras_of(repo / "records", "doi-10-5072-zenodo-1234566")["suppressed"] == "true"
+        materialize_all(events_dir, repo / "data" / "records", root=repo)
+        assert (repo / "data" / "records" / "doi-10-5072-zenodo-1234566.json").exists()
+        assert extras_of(repo / "data" / "records", "doi-10-5072-zenodo-1234566")["suppressed"] == "true"
 
 
 # ---------------------------------------------------------------------------
@@ -428,7 +428,7 @@ class TestWhatACuratorMayAssert:
         self, repo: Path, field: str, value: object
     ) -> None:
         path = write_annotation(
-            repo / "annotations", "bad.yaml",
+            repo / "data" / "annotations", "bad.yaml",
             {"identity_key": KEY, "annotations": [{"local": {field: value}}]},
         )
         with pytest.raises(AnnotationError, match="annotations may not set"):
@@ -450,7 +450,7 @@ class TestWhatACuratorMayAssert:
         self, repo: Path, field: str, value: object
     ) -> None:
         path = write_annotation(
-            repo / "annotations", "good.yaml",
+            repo / "data" / "annotations", "good.yaml",
             {"identity_key": KEY, "annotations": [{"local": {field: value}}]},
         )
         [annotation] = load_annotation_file(path, root=repo)
@@ -459,7 +459,7 @@ class TestWhatACuratorMayAssert:
     def test_the_error_says_what_to_do_instead(self, repo: Path) -> None:
         """A refusal that does not name the alternative just gets worked around."""
         path = write_annotation(
-            repo / "annotations", "bad.yaml",
+            repo / "data" / "annotations", "bad.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"license_id": "cc-by"}}]},
         )
         with pytest.raises(AnnotationError, match="curator_notes"):
@@ -468,7 +468,7 @@ class TestWhatACuratorMayAssert:
     def test_an_unknown_owner_org_is_refused(self, repo: Path) -> None:
         """It would fail the CKAN gate; say so at the annotation, not the gate."""
         path = write_annotation(
-            repo / "annotations", "bad.yaml",
+            repo / "data" / "annotations", "bad.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"owner_org": "not-an-org"}}]},
         )
         with pytest.raises(AnnotationError, match="organizations.yaml"):
@@ -480,10 +480,10 @@ class TestWhatACuratorMayAssert:
         """Otherwise an annotated `resource_kind` reads as an API's statement."""
         seed_scrape(events_dir)
         write_annotation(
-            repo / "annotations", "a.yaml",
+            repo / "data" / "annotations", "a.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"resource_kind": "dataset"}}]},
         )
-        apply_annotations(repo / "annotations", events_dir, root=repo)
+        apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
 
         provenance = resolve(KEY, events_dir=events_dir).provenance
         assert provenance["resource_kind"].extraction_method == "curator"
@@ -506,10 +506,10 @@ class TestWhatACuratorMayAssert:
             events_dir=events_dir, observed_at="2026-08-24T03:11:07Z",
         )
         write_annotation(
-            repo / "annotations", "a.yaml",
+            repo / "data" / "annotations", "a.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-49"]}}]},
         )
-        apply_annotations(repo / "annotations", events_dir, root=repo)
+        apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
 
         resolved = resolve(KEY, events_dir=events_dir)
         assert sorted(resolved.effective["iea_task"]) == ["task-43", "task-49"]
@@ -529,7 +529,7 @@ class TestTaskSpellingIsNormalisedOnStore:
     @pytest.mark.parametrize("spelling", ["Task 43", "TASK-43", " task-43 ", "task_43", "Task-043"])
     def test_every_spelling_stores_as_one(self, repo: Path, spelling: str) -> None:
         path = write_annotation(
-            repo / "annotations", "a.yaml",
+            repo / "data" / "annotations", "a.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"iea_task": [spelling]}}]},
         )
         [annotation] = load_annotation_file(path, root=repo)
@@ -537,7 +537,7 @@ class TestTaskSpellingIsNormalisedOnStore:
 
     def test_two_spellings_of_one_task_are_one_value(self, repo: Path) -> None:
         path = write_annotation(
-            repo / "annotations", "a.yaml",
+            repo / "data" / "annotations", "a.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["Task 43", "task-43"]}}]},
         )
         [annotation] = load_annotation_file(path, root=repo)
@@ -551,16 +551,16 @@ class TestTaskSpellingIsNormalisedOnStore:
             events_dir=events_dir, observed_at="2026-08-24T03:11:07Z",
         )
         write_annotation(
-            repo / "annotations", "a.yaml",
+            repo / "data" / "annotations", "a.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["Task 43"]}}]},
         )
-        apply_annotations(repo / "annotations", events_dir, root=repo)
+        apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
         materialize_all(root=repo)
 
-        extras = extras_of(repo / "records", "doi-10-5072-zenodo-1234566")
+        extras = extras_of(repo / "data" / "records", "doi-10-5072-zenodo-1234566")
         assert json.loads(extras["iea_task"]) == ["task-43"]
         package = json.loads(
-            (repo / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
+            (repo / "data" / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
         )
         assert [group["name"] for group in package["groups"]] == ["task-43"]
 
@@ -570,16 +570,16 @@ class TestOneBadAnnotationFileDoesNotStopTheRun:
 
     def test_malformed_yaml_is_collected_not_raised(self, repo: Path, events_dir: Path) -> None:
         seed_scrape(events_dir)
-        (repo / "annotations").mkdir(parents=True, exist_ok=True)
-        (repo / "annotations" / "broken.yaml").write_text(
+        (repo / "data" / "annotations").mkdir(parents=True, exist_ok=True)
+        (repo / "data" / "annotations" / "broken.yaml").write_text(
             "identity_key: x\nlocal: [unclosed\n", encoding="utf-8"
         )
         write_annotation(
-            repo / "annotations", "good.yaml",
+            repo / "data" / "annotations", "good.yaml",
             {"identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-43"]}}]},
         )
 
-        outcome = apply_annotations(repo / "annotations", events_dir, root=repo)
+        outcome = apply_annotations(repo / "data" / "annotations", events_dir, root=repo)
 
         assert outcome.errors, "the broken file must be reported"
         assert any("broken.yaml" in error for error in outcome.errors)

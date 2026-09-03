@@ -8,7 +8,7 @@
 # The gates, numbered as in docs/runbooks/release-checklist.md §1:
 #   1  tests            uv run pytest
 #   2  CKAN-compat      uv run python -m harvest validate
-#   3  replay           rm -f records/*.json && materialize -> no diff (ADR-0037)
+#   3  replay           rm -f data/records/*.json && materialize -> no diff (ADR-0037)
 #   4  palette          design/gen.py reproduces design/palette.json exactly
 #   5  token discipline cd site && npm run gates  (the hardcoded-value grep)
 #   6  accessibility    cd site && npm run gates  (pa11y-ci, BOTH themes)
@@ -75,16 +75,16 @@ jobs:
         run: uv run python -m harvest validate
 
       - name: Gate 3 — replay determinism
-        # records/ is DERIVED from events/ and must be regenerable byte-for-byte.
+        # data/records/ is DERIVED from data/events/ and must be regenerable byte-for-byte.
         # This is the acceptance test for ADR-0037.
         run: |
           set -euo pipefail
-          rm -f records/*.json
+          rm -f data/records/*.json
           uv run python -m harvest materialize
-          if [ -n "$(git status --porcelain -- records/)" ]; then
-            echo "::error::replay is not byte-stable — records/ changed after a rebuild from events/"
-            git status --porcelain -- records/
-            git --no-pager diff -- records/
+          if [ -n "$(git status --porcelain -- data/records/)" ]; then
+            echo "::error::replay is not byte-stable — data/records/ changed after a rebuild from data/events/"
+            git status --porcelain -- data/records/
+            git --no-pager diff -- data/records/
             exit 1
           fi
           echo "replay: byte-stable"

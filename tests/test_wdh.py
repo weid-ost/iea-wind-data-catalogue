@@ -3,7 +3,7 @@
 The **primary** path is ``wdh-07``: the listing endpoint is walled, so the
 adapter disables itself, the run report gains one honest line, and every other
 source finishes. Spike 4's probes are captured verbatim in
-``fixtures/wdh/raw/wdh-07-auth-wall.json``.
+``data/fixtures/wdh/raw/wdh-07-auth-wall.json``.
 
 The mapping tests run against real dataset payloads captured from the site, so
 ``map()`` is verified against WDH's actual shape even though ``harvest()``
@@ -106,7 +106,7 @@ class TestWdh07TheAuthWall:
         assert list(events_dir.glob("*.jsonl")) == [], "a disabled source appends no events"
 
     def test_existing_records_are_untouched(self, repo: Path, events_dir: Path) -> None:
-        record = repo / "records" / "doi-10-21947-1406992.json"
+        record = repo / "data" / "records" / "doi-10-21947-1406992.json"
         record.write_text('{"name": "doi-10-21947-1406992"}\n', encoding="utf-8")
         before = record.read_bytes()
 

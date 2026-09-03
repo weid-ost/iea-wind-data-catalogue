@@ -2,10 +2,10 @@
 
 The harvest is a pipeline of four deterministic stages:
 
-    harvest  ->  events/     (append-only, append-on-change, source of truth)
-    replay   ->  records/     (derived CKAN package dicts, regenerable)
+    harvest  ->  data/events/     (append-only, append-on-change, source of truth)
+    replay   ->  data/records/     (derived CKAN package dicts, regenerable)
     validate ->  CKAN-compat gate (plan §2.2, fixture x-08)
-    report   ->  state/last-run.json (written every run, even a no-op)
+    report   ->  data/state/last-run.json (written every run, even a no-op)
 
 Read ``harvest/CONTRACT.md`` before writing an adapter. It is the interface
 document the parallel tracks build against.

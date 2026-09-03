@@ -70,10 +70,10 @@ class TestIdentityDoesMostOfIt:
                source_urls=["https://iea-wind.org/task43/outputs/"],
                observed_at="2026-08-24T03:14:00Z")
 
-        materialize_all(events_dir, repo / "records", root=repo)
-        assert len(list((repo / "records").glob("*.json"))) == 1
+        materialize_all(events_dir, repo / "data" / "records", root=repo)
+        assert len(list((repo / "data" / "records").glob("*.json"))) == 1
 
-        extras = extras_of(repo / "records", "doi-10-5072-zenodo-1234566")
+        extras = extras_of(repo / "data" / "records", "doi-10-5072-zenodo-1234566")
         assert len(json.loads(extras["source_urls"])) == 4
         assert json.loads(extras["source_systems"]) == [
             "datacite", "github", "ieawind", "zenodo"
@@ -82,7 +82,7 @@ class TestIdentityDoesMostOfIt:
         # the record's landing page is the DOI, not the GitHub repo that also
         # described it.
         package = json.loads(
-            (repo / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
+            (repo / "data" / "records" / "doi-10-5072-zenodo-1234566.json").read_text(encoding="utf-8")
         )
         assert package["url"] == "https://doi.org/10.5072/zenodo.1234566"
         assert package["license_id"] == "cc-by"
@@ -263,31 +263,31 @@ class TestApplying:
         result = dedupe(events_dir, root=repo, apply=True)
         assert len(result.applied) == 1
 
-        materialize_all(events_dir, repo / "records", root=repo)
-        names = sorted(p.stem for p in (repo / "records").glob("*.json"))
+        materialize_all(events_dir, repo / "data" / "records", root=repo)
+        names = sorted(p.stem for p in (repo / "data" / "records").glob("*.json"))
         assert names == ["doi-10-1088-1742-6596-2265-2-022001", "osti-1854723"], (
             "both records are retained; a merge is a suppression, never a deletion"
         )
 
-        primary = extras_of(repo / "records", "doi-10-1088-1742-6596-2265-2-022001")
+        primary = extras_of(repo / "data" / "records", "doi-10-1088-1742-6596-2265-2-022001")
         assert "https://www.osti.gov/biblio/1854723" in json.loads(primary["source_urls"])
         assert "suppressed" not in primary
 
-        secondary = extras_of(repo / "records", "osti-1854723")
+        secondary = extras_of(repo / "data" / "records", "osti-1854723")
         assert secondary["suppressed"] == "true"
         assert "10.1088" in secondary["local_links"]
 
     def test_applying_twice_changes_nothing(self, repo: Path, events_dir: Path) -> None:
         self._osti_pair(events_dir)
         dedupe(events_dir, root=repo, apply=True)
-        materialize_all(events_dir, repo / "records", root=repo)
-        before = {p.name: p.read_text() for p in (repo / "records").glob("*.json")}
+        materialize_all(events_dir, repo / "data" / "records", root=repo)
+        before = {p.name: p.read_text() for p in (repo / "data" / "records").glob("*.json")}
 
         second = dedupe(events_dir, root=repo, apply=True)
         assert second.applied == []
         assert len(second.already_merged) == 1
-        materialize_all(events_dir, repo / "records", root=repo)
-        after = {p.name: p.read_text() for p in (repo / "records").glob("*.json")}
+        materialize_all(events_dir, repo / "data" / "records", root=repo)
+        after = {p.name: p.read_text() for p in (repo / "data" / "records").glob("*.json")}
         assert before == after
 
     def test_without_apply_nothing_is_written(self, repo: Path, events_dir: Path) -> None:

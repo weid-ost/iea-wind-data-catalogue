@@ -88,8 +88,8 @@ uv run python -m harvest validate
 # validate-ckan-compat: OK — 30 record(s)
 ```
 
-Thirty on a fresh clone, because `records/` is committed: it is *derived* from
-`events/` — delete it and `make materialize` rebuilds it byte-for-byte — but the
+Thirty on a fresh clone, because `data/records/` is committed: it is *derived* from
+`data/events/` — delete it and `make materialize` rebuilds it byte-for-byte — but the
 2026-09-01 harvest is in the tree, so a clone has a catalogue in it and the site
 builds without harvesting anything. On a foundation-only checkout, before any
 adapter had run, the same command printed `OK — 0 record(s)`, and that was
@@ -105,14 +105,14 @@ make            # the help target — lists every command with its description
 |---|---|
 | `make sync` | install the pinned environment (`uv sync --frozen --dev`) |
 | `make harvest` | harvest every enabled source (`MAX_RECORDS=N` overrides the default cap) and materialise |
-| `make materialize` | replay `events/` into `records/` |
+| `make materialize` | replay `data/events/` into `data/records/` |
 | `make validate` | the CKAN-compat gate alone |
 | `make test` | `uv run pytest` |
-| `make extract` | drain `state/pending-extraction.json` |
+| `make extract` | drain `data/state/pending-extraction.json` |
 | `make build-tokens` | regenerate the palette and re-verify WCAG contrast |
 | `make site` | `cd site && npm ci && npm run build` |
 | `make gates` | everything CI enforces: tests, CKAN compat, tokens, a11y |
-| `make clean` | remove derived artifacts — **never touches `events/`** |
+| `make clean` | remove derived artifacts — **never touches `data/events/`** |
 
 The underlying CLI, if you prefer it:
 
@@ -136,7 +136,7 @@ pinned version and the commands.
 
 | Variable | Effect |
 |---|---|
-| `HARVEST_ROOT` | overrides the repository root everywhere — how the tests keep out of the real `events/` |
+| `HARVEST_ROOT` | overrides the repository root everywhere — how the tests keep out of the real `data/events/` |
 | `HARVEST_LLM_ENDPOINT` | Tier-3 inference endpoint (default: GitHub Models) |
 | `HARVEST_LLM_TOKEN` | your personal key, for a local backfill or queue drain |
 | `HARVEST_LLM_MODEL` | model id, e.g. `openai/gpt-4o-mini` |

@@ -41,7 +41,7 @@ Identity
     identity is the **published** article's DOI — see below.
 
 Fixtures owned
-    ``cr-01`` .. ``cr-07`` in ``fixtures/crossref/``, plus the ``b`` variants
+    ``cr-01`` .. ``cr-07`` in ``data/fixtures/crossref/``, plus the ``b`` variants
     that pin down a second real shape of the same behaviour.
 
 The seven behaviours, and how they are implemented

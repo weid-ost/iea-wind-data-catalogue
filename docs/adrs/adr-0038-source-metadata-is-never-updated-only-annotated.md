@@ -130,7 +130,7 @@ audience, and it keeps the pressure where it belongs: on the source (fixture
 
 **Procedure.** [[correct-a-record]] works the full matrix with runnable
 examples. Terminology note: the plan's `corrections/` directory was renamed
-`annotations/` in turn 12, precisely because "correction" implies editing.
+`data/annotations/` in turn 12, precisely because "correction" implies editing.
 
 ## Source
 

@@ -116,7 +116,7 @@ class SourceConfig:
 
 @dataclass
 class SourceResult:
-    """One source's contribution to ``state/last-run.json``."""
+    """One source's contribution to ``data/state/last-run.json``."""
 
     source: str
     enabled: bool = True
@@ -235,7 +235,7 @@ def run_adapter(
     """Harvest one source: map, detect change, append events. Never raises.
 
     Every failure mode becomes a line in the returned :class:`SourceResult`,
-    which becomes a line in ``state/last-run.json``. That is the whole
+    which becomes a line in ``data/state/last-run.json``. That is the whole
     degradation story (fixture ``wdh-07``).
     """
     result = SourceResult(source=adapter.source_name, enabled=adapter.config.enabled)

@@ -11,14 +11,14 @@
 #
 # Binding decisions implemented here:
 #   ADR-0022  GitHub Actions + GitHub Pages; permissions scoped per job.
-#   ADR-0029  Weekly cron + workflow_dispatch; state/last-run.json committed
+#   ADR-0029  Weekly cron + workflow_dispatch; data/state/last-run.json committed
 #             EVERY run, unconditionally, inline (never a Marketplace keepalive
 #             action) — this is what keeps the cron alive past GitHub's 60-day
 #             dormancy rule.
 #   ADR-0030  LLM = GitHub Models via the built-in GITHUB_TOKEN with
 #             `permissions: models: read`. No PAT, no API key, no repo secret.
 #   ADR-0031  The run must SUCCEED when models are unavailable: extract()
-#             returns None and the page queues to state/pending-extraction.json.
+#             returns None and the page queues to data/state/pending-extraction.json.
 #             Only validate-ckan-compat fails the run.
 #   ADR-0034  Pinned everything: ubuntu-24.04 (never a floating runner label),
 #             actions pinned to commit SHAs, uv pinned, `uv sync --frozen`,
@@ -177,11 +177,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # events/ is the source of truth; records/ is derived but committed
-          # (it is what the site globs and what CKAN receives on promotion day);
-          # state/ carries the heartbeat; cache/ is the committed extraction
-          # cache (ADR-0025). Same set as run-a-harvest-locally §8.
-          git add -A events records state cache
+          # Everything the harvest touches lives under data/, so one path
+          # covers all of it: data/events/ is the source of truth; data/records/
+          # is derived but committed (it is what the site globs and what CKAN
+          # receives on promotion day); data/state/ carries the heartbeat;
+          # data/cache/ is the committed extraction cache (ADR-0025). Same set
+          # as run-a-harvest-locally §8.
+          git add -A data
 
           stamp="$(date -u +'%Y-%m-%dT%H:%MZ')"
           if git diff --cached --quiet; then
@@ -216,11 +218,11 @@ jobs:
           {
             echo "## Harvest run"
             echo ""
-            if [ -f state/last-run.json ]; then
-              echo '<details><summary>state/last-run.json</summary>'
+            if [ -f data/state/last-run.json ]; then
+              echo '<details><summary>data/state/last-run.json</summary>'
               echo ""
               echo '```json'
-              cat state/last-run.json
+              cat data/state/last-run.json
               echo '```'
               echo ""
               echo '</details>'

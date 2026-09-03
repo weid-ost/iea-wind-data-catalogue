@@ -105,7 +105,7 @@ out of v1 and stop listing it as enabled?
 
 The Tier-3 `ieawind` adapter is deterministic first; anything it can't classify
 by pattern queues for the LLM. **No model was available this run**, so 13 pages
-queued to `state/pending-extraction.json` and none were extracted (cache
+queued to `data/state/pending-extraction.json` and none were extracted (cache
 hit-rate 0%). This is the designed degradation, but the initial run therefore
 *under-collects iea-wind.org*. Observed notice types:
 
@@ -215,7 +215,7 @@ markdown seam. Extraction is at `harvest/adapters/ieawind.py:634`. Reproduced:
 `_DOI_BODY`) before validation, or set `include_links=False` for the DOI sweep?
 
 ### E2. The bug caused **real, invisible data loss** — 7 publications lost ⚠️
-**What:** of the 16 over-captured drops, 9 also reached `records/` via a
+**What:** of the 16 over-captured drops, 9 also reached `data/records/` via a
 cleaner link on the same page, but **7 have no record anywhere**:
 `10.1016/j.egyr.2026.109072` (Energy Reports), `10.1088/1742-6596/2767/6/062019`,
 `…/2875/1/012039`, `…/2875/1/012048` (J. Phys. Conf. Ser.),
@@ -237,7 +237,7 @@ curator can't tell "our parser broke" from "this DOI isn't registered."
 ### E4. Two clean Zenodo DOIs genuinely failed — and a transport error silently drops
 **What:** the only 2 non-junk drops — `10.5281/zenodo.10176528`,
 `10.5281/zenodo.3524532` (both from `task43/t43-publications/`) — are well-formed
-and absent from `records/`. The run was cold (`cache hits 0 / misses 10`), so a
+and absent from `data/records/`. The run was cold (`cache hits 0 / misses 10`), so a
 transient DataCite/Crossref hiccup is plausible, and `doi.py:271-272` treats
 *any* transport error as continue→drop (no retry).
 **Decision needed:** re-resolve these two by hand (genuine-absence vs transient);
@@ -291,7 +291,7 @@ yet `license_id = notspecified`. `map_license()` on that exact string returns
 (`:217-225`). **How common:** 1 — the only record where
 `map_license(license_raw) != stored license_id` across all 291.
 **Decision needed:** stale record from before the alias existed, or a live OSTI
-adapter wiring bug? Re-replay from `events/` and confirm it becomes
+adapter wiring bug? Re-replay from `data/events/` and confirm it becomes
 `bsd-3-clause` — yes/no?
 
 ### F2. Licence-vs-access contradictions
@@ -533,14 +533,14 @@ source-system contradictions). The dedup story, however, has one systemic gap
 that explains most of the §G2/§H3 duplication.
 
 ### I1. The merge-review queue is stale — 1 proposal on disk, 51 detectable ⚠️
-**What:** `state/merge-proposals.json` lists 1 proposal (from the earlier
+**What:** `data/state/merge-proposals.json` lists 1 proposal (from the earlier
 30-record run) with `"merges": []`. Re-running the shipped detector over the
-*current* `events/` returns **51 candidates: 50 fuzzy-title + 1 automatic
+*current* `data/events/` returns **51 candidates: 50 fuzzy-title + 1 automatic
 related-identifier merge**. `run` does not invoke `dedupe` (separate verb), so the
 queue was never regenerated after the 291-record harvest — the curator's review
 list shows 2% of what the code flags.
 **Decision needed / action:** ✅ **Done** — I re-ran `python -m harvest dedupe`
-(no `--apply`); `state/merge-proposals.json` now holds **50 fuzzy-title proposals +
+(no `--apply`); `data/state/merge-proposals.json` now holds **50 fuzzy-title proposals +
 1 automatic (DTU) merge candidate**, reflecting the full 291-record corpus. Nothing
 was merged (no `--apply`).
 
@@ -593,7 +593,7 @@ similarity?
 adapters (expected per ADR-0026), but `doi-10-5281-zenodo-18967947` carries a
 source_key `3@10.5281/zenodo.21037963` — pointing at a *different* DOI (its
 sibling version). Looks like a leaked version marker, not a change token. Churn is
-otherwise low (max 4 events/log; no runaway re-scrape). **Decision needed:**
+otherwise low (max 4 data/events/log; no runaway re-scrape). **Decision needed:**
 investigate `3@…` — valid key or Zenodo-adapter version-handling bug?
 
 ### I8. 33 DOIs are pattern-extracted (regex), not API-returned

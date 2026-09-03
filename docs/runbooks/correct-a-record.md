@@ -29,9 +29,9 @@ add a **curator note** so both truths appear on the page.
 
 Three things follow, and they are the whole runbook:
 
-- **Never edit `records/*.json`.** It is generated. Your edit disappears at the
+- **Never edit `data/records/*.json`.** It is generated. Your edit disappears at the
   next `make materialize`.
-- **Never edit a line in `events/*.jsonl`.** It is append-only.
+- **Never edit a line in `data/events/*.jsonl`.** It is append-only.
 - **Append an annotation event, then materialise.** That is the only path.
 
 ## 1. The matrix — what you are allowed to do
@@ -51,13 +51,13 @@ Three things follow, and they are the whole runbook:
 Anything not in that table is either a source's job or a bug in an adapter's
 `map()`.
 
-## 2. Record the intent in `annotations/`
+## 2. Record the intent in `data/annotations/`
 
-`annotations/` is the human-readable record of curatorial intent — what you did
+`data/annotations/` is the human-readable record of curatorial intent — what you did
 and why — kept next to the events it produced. One file per identity, named
 after the slug:
 
-`annotations/doi-10-5281-zenodo-20847799.yaml`   ← one file per identity, named after the record's slug
+`data/annotations/doi-10-5281-zenodo-20847799.yaml`   ← one file per identity, named after the record's slug
 
 ```yaml
 identity_key: "10.5281/zenodo.20847799"
@@ -80,11 +80,11 @@ annotations:
 Replaying this directory into `annotated` events is **implemented and
 idempotent** — the same annotation is appended once however many times you run
 it. `python -m harvest materialize` and `python -m harvest run` do the replay
-before rebuilding `records/`, so the whole loop is one command:
+before rebuilding `data/records/`, so the whole loop is one command:
 
 ```sh
 uv run python -m harvest annotations --dry-run   # say what would be appended
-make materialize                                 # replay, then rebuild records/
+make materialize                                 # replay, then rebuild data/records/
 ```
 
 Three rules the replay enforces, so a typo fails here rather than three steps
@@ -101,7 +101,7 @@ downstream:
 **An annotation for an identity nothing has harvested yet waits.** Applying it
 would materialise a record whose title is its own identity key and whose every
 other field is empty. It is reported as `annotation_pending` in
-`state/last-run.json` → `notices`, and applies itself on the run that first sees
+`data/state/last-run.json` → `notices`, and applies itself on the run that first sees
 the record. A file that genuinely means to create an identity from nothing says
 `allow_new: true`.
 
@@ -112,10 +112,10 @@ what an append-only log means.
 
 The worked examples live in **`docs/examples/annotations/`** — three files, one
 per identity kind, covering every row of the matrix above. They are *templates*,
-not residents: they sit outside `annotations/` because the identities they name
+not residents: they sit outside `data/annotations/` because the identities they name
 have never been harvested, and a permanently-pending sample makes a genuinely
 pending curator annotation invisible in the noise (compliance-11). Copy one in
-and repoint its `identity_key`. `annotations/README.md` is the file-format
+and repoint its `identity_key`. `data/annotations/README.md` is the file-format
 reference.
 
 ## 3. Append the annotation
@@ -128,8 +128,8 @@ The working path is `harvest.events.annotate`. Each call appends exactly one
 > identity nothing has harvested, it creates the event log anyway, and the next
 > `make materialize` produces a contentless record — title equal to the key,
 > empty notes, no tags, no resources (compliance-02). Copy the key out of
-> `records/<slug>.json` → `extras.identity_key`, or route through
-> `annotations/` and let the replay refuse it for you. The `KEY` below is the
+> `data/records/<slug>.json` → `extras.identity_key`, or route through
+> `data/annotations/` and let the replay refuse it for you. The `KEY` below is the
 > **invented** zen-01 fixture identity; substitute a real one before running it.
 
 ```sh
@@ -139,7 +139,7 @@ from harvest.models import utcnow
 
 KEY = "10.5072/zenodo.1234566"      # the IDENTITY KEY, not the slug
                                     # (this one is the zen-01 FIXTURE identity —
-                                    #  substitute a real key from records/)
+                                    #  substitute a real key from data/records/)
 
 annotate(
     KEY,
@@ -155,7 +155,7 @@ Then rebuild and check:
 ```sh
 make materialize
 make validate
-git diff records/
+git diff data/records/
 ```
 
 ### 3.1 Add a task attribution (set-valued — unions)
@@ -220,7 +220,7 @@ NOTICE: {'type': 'displacement', 'identity_key': 'zenodo|999',
          'source_value': 'software', 'implicit': True}
 ```
 
-The notice reaches `state/last-run.json` → `notices`, which is the short list a
+The notice reaches `data/state/last-run.json` → `notices`, which is the short list a
 curator reads monthly. **This is why a noisy source key is a nuisance rather
 than a disaster**: it can never clobber a human edit, only outrank a human
 scalar and say so.
@@ -285,7 +285,7 @@ fires**. A human then decides whether the pin is still right. **Verified**:
 `pinned` lands as `extras.pinned = "true"`.
 
 The corrected object should also replace the cache entry and be marked pinned.
-Edit `cache/<key>.json` in place — it is committed on purpose, so this is a
+Edit `data/cache/<key>.json` in place — it is committed on purpose, so this is a
 reviewable diff — and set three fields:
 
 ```jsonc
@@ -303,7 +303,7 @@ first site refresh, silently. `harvest.extract.find_pin` looks a pin up by the
 one handle the page keeps, and `harvest.extract.lookup_cache(..., url=…)`
 serves it whatever the page says today. **Verified**: after such an edit the
 `ieawind` adapter serves the pinned classification and raises one `pin_notice`
-in `state/last-run.json` naming both hashes.
+in `data/state/last-run.json` naming both hashes.
 
 See [[drain-the-pending-extraction-queue]] §6.
 
@@ -362,7 +362,7 @@ record and its GitHub repository, an OSTI deposit of an already-published
 article, a preprint and its published version.
 
 ```sh
-uv run python -m harvest dedupe            # propose; writes state/merge-proposals.json
+uv run python -m harvest dedupe            # propose; writes data/state/merge-proposals.json
 uv run python -m harvest dedupe --apply    # record the automatic ones as annotations
 make materialize
 ```
@@ -380,7 +380,7 @@ Re-running `--apply` changes nothing; the merge is already in the log. To
 reverse one, append the opposite annotation — never delete the events.
 
 **Fuzzy** matches (title + first-author surname + year, no shared DOI, fixture
-`dc-08`) are **proposals only**. They appear in `state/merge-proposals.json` and
+`dc-08`) are **proposals only**. They appear in `data/state/merge-proposals.json` and
 in the run report's `notices`; `--apply` will not touch them. A wrong automatic
 merge hides a real record behind a suppression flag, which is worse than two
 records a human can see. Confirm one by writing the merge annotation by hand;
@@ -389,12 +389,12 @@ reject one by leaving it alone.
 ## 7. Link rot
 
 ```sh
-uv run python -m harvest linkcheck         # writes state/link-check.json
+uv run python -m harvest linkcheck         # writes data/state/link-check.json
 ```
 
 Every record's landing page, `source_urls`, curator links and resource URLs are
 checked with the project's usual etiquette. Dead links are **reported, never
-acted on**: the result goes to `state/link-check.json` and the run report's
+acted on**: the result goes to `data/state/link-check.json` and the run report's
 `notices`, and no record is edited, withdrawn or deleted. Two reasons:
 
 1. A 404 means the *page* moved, not that the artifact stopped existing.
@@ -402,11 +402,11 @@ acted on**: the result goes to `state/link-check.json` and the run report's
    ([[handle-a-withdrawn-record]]), never a link checker's inference from an
    HTTP status.
 2. Records are byte-stable by contract. Writing HTTP status into a record would
-   make one flaky 503 rewrite it, and a weekly run would churn `records/`
+   make one flaky 503 rewrite it, and a weekly run would churn `data/records/`
    forever for no change in what any source said.
 
 `python -m harvest run --linkcheck` folds the same check into a run and puts the
-notices in `state/last-run.json`. It is off by default: an unattended weekly job
+notices in `data/state/last-run.json`. It is off by default: an unattended weekly job
 should not add a few hundred requests to seven upstreams without being asked.
 
 ---

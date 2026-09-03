@@ -38,7 +38,7 @@ quietly stopped eleven months ago" is the realistic death, not a crash.
 
 Four measures, in the order they matter:
 
-1. **Always commit, even on a no-op run.** `state/last-run.json` is written
+1. **Always commit, even on a no-op run.** `data/state/last-run.json` is written
    **every time** — timestamp, per-source counts, displacement and pin notices,
    cache hit rate, pending backlog — so a run where nothing upstream changed
    still produces a diff. This is the whole fix and it costs three lines.
@@ -87,7 +87,7 @@ Two mechanical requirements that follow:
 **Costs**
 
 - A commit per week forever. Small, and the alternative is worse.
-- `state/last-run.json` is in the repository and changes constantly, so it is a
+- `data/state/last-run.json` is in the repository and changes constantly, so it is a
   perpetual source of merge conflicts on long-lived branches. Resolve by taking
   the newer file and re-running; it is generated.
 - The freshness banner is a *user-visible* consequence of an operational

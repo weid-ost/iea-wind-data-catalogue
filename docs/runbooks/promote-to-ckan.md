@@ -27,7 +27,7 @@ are separate people and both are required
 catalogue running at $0 and revisit.
 
 Note that promotion **adds** a renderer; it does not replace one. The static site
-and `records/*.json` remain. CKAN buys exactly one thing:
+and `data/records/*.json` remain. CKAN buys exactly one thing:
 [[adr-0020-aggregation-only]]'s missing half — a multi-institution ownership and
 permissions model — and it costs roughly $90/month plus a patch upgrade every
 few months.
@@ -44,7 +44,7 @@ make validate
 ```
 
 **`validate-ckan-compat: OK` is the go/no-go.** The gate checks precisely what
-CKAN's API refuses ([[record-format]] §4.5). If it is green, `records/*.json`
+CKAN's API refuses ([[record-format]] §4.5). If it is green, `data/records/*.json`
 POSTs unmodified.
 
 **On `owner_org`, which nearly falsified that sentence.** CKAN's
@@ -130,7 +130,7 @@ package can reference them:
 Then load every record **unmodified**:
 
 ```sh
-for f in records/*.json; do
+for f in data/records/*.json; do
   curl -sS -X POST "$CKAN_URL/api/3/action/package_create" \
        -H "Authorization: $CKAN_API_TOKEN" \
        -H 'Content-Type: application/json' \
@@ -153,21 +153,21 @@ Things that must work first time, and will if the gate was green:
 
 ## 5. Verify
 
-- Record count in CKAN == `ls records/*.json | wc -l`.
-- Spot-check one record against its `records/*.json` field by field.
+- Record count in CKAN == `ls data/records/*.json | wc -l`.
+- Spot-check one record against its `data/records/*.json` field by field.
 - `search-index rebuild` completes (expect well under 60 seconds at this scale).
 - DCAT output is served by `ckanext-dcat`.
 - A withdrawn record is present and visible, not hidden.
 
 ## 6. Afterwards
 
-The static site does **not** get switched off. `events/` remains the source of
-truth, `records/` remains derived, and CKAN becomes a second renderer of the
+The static site does **not** get switched off. `data/events/` remains the source of
+truth, `data/records/` remains derived, and CKAN becomes a second renderer of the
 same files. The harvest continues to write records; a load step pushes them to
 CKAN.
 
 The one thing a rebuild cannot regenerate is human curation — which in this
-architecture is already in `events/` and `annotations/` in the repository
+architecture is already in `data/events/` and `data/annotations/` in the repository
 (`plans/01-ckan-plan.md` §5.6 had to invent an export job for this; here it is
 the design).
 

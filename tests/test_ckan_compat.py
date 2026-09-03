@@ -163,7 +163,7 @@ class TestValidateRecordsDirectory:
         assert "name" in captured.err and "license_id" in captured.err
 
     def test_cli_exits_zero_on_an_empty_catalogue(self, repo: Path, capsys) -> None:  # noqa: ANN001
-        assert main(["--records", str(repo / "records"), "--root", str(repo)]) == 0
+        assert main(["--records", str(repo / "data" / "records"), "--root", str(repo)]) == 0
         assert "OK" in capsys.readouterr().out
 
 
@@ -194,5 +194,5 @@ class TestTagify:
 
 
 def test_format_violations_is_readable() -> None:
-    rendered = format_violations([Violation("rec", "name", "bad", path="records/rec.json")])
-    assert "records/rec.json" in rendered and "bad" in rendered
+    rendered = format_violations([Violation("rec", "name", "bad", path="data/records/rec.json")])
+    assert "data/records/rec.json" in rendered and "bad" in rendered

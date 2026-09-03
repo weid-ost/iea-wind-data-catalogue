@@ -24,7 +24,7 @@ turn-6 recommendation of a single prepaid provider.
 >
 > **Nothing is broken by this, and that is the point.** ADR-0031 is now proven
 > in production rather than in a test: the run degrades, queues the pages to
-> `state/pending-extraction.json`, reports `ok: true`, exits 0, and leaves
+> `data/state/pending-extraction.json`, reports `ok: true`, exits 0, and leaves
 > Tier 1 completely untouched. Do not debug the 410 as a bug — it is the
 > documented failure mode behaving as designed.
 >

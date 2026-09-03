@@ -153,19 +153,19 @@ class TestCheckRecords:
             events_dir=events_dir,
             observed_at="2026-08-24T03:14:00Z",
         )
-        materialize_all(events_dir, repo / "records", root=repo)
+        materialize_all(events_dir, repo / "data" / "records", root=repo)
 
     def test_iea12_a_dead_page_is_reported_and_the_record_is_untouched(
         self, repo: Path, events_dir: Path
     ) -> None:
         self._repo_with_a_record(repo, events_dir)
-        before = {p.name: p.read_text() for p in (repo / "records").glob("*.json")}
+        before = {p.name: p.read_text() for p in (repo / "data" / "records").glob("*.json")}
 
         client = FakeHttp({
             "https://iea-wind.org/task11/publications/": 404,
             "https://iea-wind.org/wp-content/uploads/task11-final.pdf": 404,
         })
-        report = check_records(repo / "records", client, root=repo)
+        report = check_records(repo / "data" / "records", client, root=repo)
 
         assert sorted(report.dead_urls) == [
             "https://iea-wind.org/task11/publications/",
@@ -174,12 +174,12 @@ class TestCheckRecords:
         assert report.dead_by_record()["doi-10-5281-zenodo-8000008"]
         assert report.unreachable_hosts() == ["iea-wind.org"]
 
-        after = {p.name: p.read_text() for p in (repo / "records").glob("*.json")}
+        after = {p.name: p.read_text() for p in (repo / "data" / "records").glob("*.json")}
         assert after == before, "a link checker never edits, withdraws or deletes a record"
 
     def test_a_healthy_catalogue_reports_nothing(self, repo: Path, events_dir: Path) -> None:
         self._repo_with_a_record(repo, events_dir)
-        report = check_records(repo / "records", FakeHttp(), root=repo)
+        report = check_records(repo / "data" / "records", FakeHttp(), root=repo)
         assert report.dead == [] and report.as_notices() == []
 
     def test_each_url_is_requested_once_however_many_records_share_it(
@@ -187,13 +187,13 @@ class TestCheckRecords:
     ) -> None:
         self._repo_with_a_record(repo, events_dir)
         client = FakeHttp()
-        check_records(repo / "records", client, root=repo)
+        check_records(repo / "data" / "records", client, root=repo)
         assert len(client.calls) == len(set(client.calls))
 
     def test_the_limit_caps_the_records_examined(self, repo: Path, events_dir: Path) -> None:
         self._repo_with_a_record(repo, events_dir)
         client = FakeHttp()
-        report = check_records(repo / "records", client, root=repo, limit=0)
+        report = check_records(repo / "data" / "records", client, root=repo, limit=0)
         assert client.calls == [] and report.records == {}
 
     def test_a_partially_dead_host_is_not_called_unreachable(self) -> None:
@@ -218,9 +218,9 @@ class TestCheckRecords:
         assert notices[1]["type"] == "source_unreachable"
 
     def test_an_unreadable_record_file_is_skipped_not_fatal(self, repo: Path) -> None:
-        (repo / "records").mkdir(exist_ok=True)
-        (repo / "records" / "broken.json").write_text("{not json", encoding="utf-8")
-        assert check_records(repo / "records", FakeHttp(), root=repo).records == {}
+        (repo / "data" / "records").mkdir(exist_ok=True)
+        (repo / "data" / "records" / "broken.json").write_text("{not json", encoding="utf-8")
+        assert check_records(repo / "data" / "records", FakeHttp(), root=repo).records == {}
 
 
 class TestTheStateFile:

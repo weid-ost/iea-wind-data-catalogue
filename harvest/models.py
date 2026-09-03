@@ -3,7 +3,7 @@
 Three shapes matter, and they are strictly ordered:
 
     RawObservation  --map()-->  Event(source=..., local=...)  --replay()-->  CKAN package dict
-       adapter                       events/<slug>.jsonl                      records/<slug>.json
+       adapter                       data/events/<slug>.jsonl                      data/records/<slug>.json
      (verbatim)                     (source of truth)                          (derived)
 
 **ADR-0038 — two namespaces, and the rules that govern them.**
@@ -144,8 +144,8 @@ def normalise_task(value: Any) -> str:
 
 #: The longest a single text field may be in a record, and the most items a
 #: collection may hold. Nothing in this catalogue enforced either, so one
-#: pathological upstream description wrote a 10 MB ``events/*.jsonl`` line and
-#: a 10 MB ``records/*.json`` file — both committed to git on every source-key
+#: pathological upstream description wrote a 10 MB ``data/events/*.jsonl`` line and
+#: a 10 MB ``data/records/*.json`` file — both committed to git on every source-key
 #: change, then rendered as a 10 MB HTML page and indexed by Pagefind
 #: (scrape-07). 64 KiB is far more than any real abstract and far less than a
 #: problem; 500 items is more keywords or files than any real deposit has.
@@ -234,7 +234,7 @@ def json_extra(value: Any) -> str:
 
     CKAN extras are string-valued. Structured custom fields (``iea_task``,
     ``source_urls``, ``provenance``, ...) are therefore carried as JSON *inside*
-    a string. Sorted keys and fixed separators keep ``records/*.json``
+    a string. Sorted keys and fixed separators keep ``data/records/*.json``
     byte-stable across runs.
     """
     return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
@@ -254,7 +254,7 @@ class FieldProvenance(BaseModel):
                   ``confidence`` are **required** in that case, and the site
                   renders a visible "machine-inferred" badge (ADR-0028,
                   fixture ``x-05``).
-    ``curator`` — asserted by a human in ``annotations/`` or by the reconciler.
+    ``curator`` — asserted by a human in ``data/annotations/`` or by the reconciler.
                   No source stated it, so the record must not imply one did
                   (eventlog-04). Deliberately *not* violet: violet stays
                   exclusive to machine inference (ADR-0039 §4).
@@ -439,7 +439,7 @@ class LocalNamespace(BaseModel):
         return out
 
 
-#: The ``local.*`` fields an ``annotations/*.yaml`` file may set (ADR-0038,
+#: The ``local.*`` fields an ``data/annotations/*.yaml`` file may set (ADR-0038,
 #: eventlog-04). A curator annotates: attribution, kind, access, notes, links,
 #: suppression, pins, institution. A curator does **not** assert what a source
 #: said — no ``license_id``, no ``publisher``, no ``title``, no ``doi``. Those
@@ -476,7 +476,7 @@ class RawObservation(BaseModel):
     """One artifact as an adapter found it, before any interpretation.
 
     ``payload`` is the upstream response **verbatim**. It is what
-    ``fixtures/<source>/raw/<id>.json`` holds, and what ``map()`` is tested
+    ``data/fixtures/<source>/raw/<id>.json`` holds, and what ``map()`` is tested
     against offline.
     """
 
@@ -510,11 +510,11 @@ class MappedObservation(BaseModel):
 
 
 class Event(BaseModel):
-    """One line of ``events/<slug>.jsonl``.
+    """One line of ``data/events/<slug>.jsonl``.
 
     Append-only, append-on-change, ordered by *our* observation time. A scrape
     whose source key is unchanged writes **nothing** (ADR-0026) — the run is
-    still recorded, in ``state/last-run.json``.
+    still recorded, in ``data/state/last-run.json``.
     """
 
     model_config = ConfigDict(extra="forbid")
@@ -596,7 +596,7 @@ class CkanResource(BaseModel):
 
 
 class CkanPackage(BaseModel):
-    """The canonical record. ``records/*.json`` must be POSTable, unmodified,
+    """The canonical record. ``data/records/*.json`` must be POSTable, unmodified,
     to CKAN ``package_create``.
 
     **On ``state``.** CKAN's ``state`` is its own row lifecycle: ``deleted``
@@ -628,7 +628,7 @@ class CkanPackage(BaseModel):
         return {extra.key: extra.value for extra in self.extras}
 
     def to_json_dict(self) -> dict[str, Any]:
-        """The exact dict written to ``records/<name>.json``."""
+        """The exact dict written to ``data/records/<name>.json``."""
         payload = self.model_dump(mode="json", exclude_none=True)
         payload["extras"] = sorted(payload.get("extras", []), key=lambda e: e["key"])
         payload["tags"] = sorted(payload.get("tags", []), key=lambda t: t["name"])

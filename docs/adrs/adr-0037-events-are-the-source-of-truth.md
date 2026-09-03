@@ -1,7 +1,7 @@
 ---
 type: adr
 id: ADR-0037
-title: events/ is the source of truth; records/ is a derived materialised view
+title: data/events/ is the source of truth; data/records/ is a derived materialised view
 status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
@@ -9,7 +9,7 @@ related: [adr-0026-change-detection-by-source-key, adr-0038-source-metadata-is-n
 tags: [data-model, events, provenance]
 ---
 
-# ADR-0037 — `events/` is the source of truth; `records/` is derived
+# ADR-0037 — `data/events/` is the source of truth; `data/records/` is derived
 
 ## Status
 
@@ -22,14 +22,14 @@ Turn 11 asked for a history chain:
 > "So basically you're saving an event stream of scrape / edit events in time
 > order … We can always surface history as part of the actual UI later."
 
-The immediate question is which artifact is authoritative. If `records/` is
+The immediate question is which artifact is authoritative. If `data/records/` is
 authoritative and events are a log, then the log can drift from the record and
 nobody notices. If events are authoritative and records are generated, the two
 cannot disagree, because one is a pure function of the other.
 
 ## Decision
 
-**`events/<slug>.jsonl` is the source of truth. `records/<slug>.json` is a
+**`data/events/<slug>.jsonl` is the source of truth. `data/records/<slug>.json` is a
 materialised view of it, and is regenerable by replay.**
 
 1. **Append-only.** Events are written only through
@@ -38,23 +38,23 @@ materialised view of it, and is regenerable by replay.**
    rewrites or reorders a line.
 2. **Append-on-change only.** A scrape whose source key is unchanged writes
    nothing at all ([[adr-0026-change-detection-by-source-key]]); the fact that
-   the run happened is recorded in `state/last-run.json`.
+   the run happened is recorded in `data/state/last-run.json`.
 3. **Ordered by *our* observation time**, not by any source-provided timestamp.
    Source timestamps are unreliable across exactly these sources; the
    source-provided timestamp and the source key are carried as payload instead.
-4. **`records/` is derived and disposable.** Delete it and
+4. **`data/records/` is derived and disposable.** Delete it and
    `uv run python -m harvest materialize` rebuilds it byte-for-byte.
-   `make clean` deletes `records/` and explicitly **never touches `events/`**.
+   `make clean` deletes `data/records/` and explicitly **never touches `data/events/`**.
 5. **Materialisation is byte-stable**: sorted keys, fixed separators, two-space
    indent, one trailing newline. A run in which nothing changed produces no diff
-   in `records/`.
+   in `data/records/`.
 6. **`resolve()` is the fold**: it turns an identity's event list into a
    `ResolvedRecord` (source, local, effective, provenance, notices), and
    `replay()` shapes that into the CKAN package dict. Both accept an in-memory
    event list, which is how the reconciliation tests avoid the filesystem
    entirely.
 
-**Filenames.** This ADR is written as `events/<identity-key>.jsonl`. An identity
+**Filenames.** This ADR is written as `data/events/<identity-key>.jsonl`. An identity
 key contains `/` and `|`, so in practice the file *stem* is the slug and the
 unabbreviated `identity_key` is a field on every line — the same thing, spelled
 so it can exist on a filesystem. See [[record-format]] §1.2.
@@ -80,7 +80,7 @@ notices for the run report.
 
 **Costs**
 
-- `events/` is the one directory that must never be lost, and it is the one
+- `data/events/` is the one directory that must never be lost, and it is the one
   directory with no automated backup beyond git. Treat a force-push over it as
   data loss.
 - Hand-editing an event log is possible and occasionally necessary, and it is
@@ -90,7 +90,7 @@ notices for the run report.
   "just fix the record". The answer is always: append an event, then
   materialise. See [[correct-a-record]].
 
-**Checkable.** `rm -f records/*.json && make materialize && git diff --stat` must
+**Checkable.** `rm -f data/records/*.json && make materialize && git diff --stat` must
 report no changes. That is the acceptance test for this ADR and it is the first
 step of [[materialize-and-validate]].
 

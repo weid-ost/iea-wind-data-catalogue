@@ -193,7 +193,7 @@ def validate_package(
 
     # --- url and resources ---------------------------------------------------
     # Defence in depth (scrape-03, eventlog-06). The namespaces filter URL
-    # schemes on the way in; this refuses a record that reached records/ with
+    # schemes on the way in; this refuses a record that reached data/records/ with
     # an unlinkable one anyway — a hand-edited file, a merge, a future adapter
     # that builds a package dict directly. Escaping an href does not disarm
     # `javascript:`, so the gate says no rather than the site rendering it.
@@ -264,7 +264,7 @@ def validate_records(
     known_orgs: set[str] | None = None,
     known_groups: set[str] | None = None,
 ) -> list[Violation]:
-    """Validate every ``records/*.json``, including cross-record uniqueness."""
+    """Validate every ``data/records/*.json``, including cross-record uniqueness."""
     records_directory = records_directory or config.records_dir(root)
     known_orgs = known_orgs if known_orgs is not None else config.organization_names(root)
     known_groups = known_groups if known_groups is not None else config.group_names(root)
@@ -323,7 +323,7 @@ def main(argv: list[str] | None = None) -> int:
 
     parser = argparse.ArgumentParser(
         prog="python -m harvest validate",
-        description="Validate records/*.json against CKAN's package_create rules.",
+        description="Validate data/records/*.json against CKAN's package_create rules.",
     )
     parser.add_argument("--records", type=Path, default=None, help="records directory")
     parser.add_argument("--root", type=Path, default=None, help="repository root")

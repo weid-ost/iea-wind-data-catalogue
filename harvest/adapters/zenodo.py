@@ -52,7 +52,7 @@ robots.txt
     source as unreachable rather than fetching anything.
 
 Fixtures owned
-    ``zen-01`` .. ``zen-12`` under ``fixtures/zenodo/``. All but ``zen-06``,
+    ``zen-01`` .. ``zen-12`` under ``data/fixtures/zenodo/``. All but ``zen-06``,
     ``zen-07`` and the ``zen-01`` reference are real payloads captured verbatim
     from the live API; the invented ones say so in their ``invented`` field.
 
@@ -196,7 +196,7 @@ def tasks_for_community(
     a Zenodo community called ``ieawindtask777``, and IEA Wind itself will one
     day create a real ``ieawindtask66``. Either way an unknown ``task-N`` would
     become a ``groups[].name`` that is not in ``groups.yaml``, which fails the
-    CKAN gate — and since ``events/`` is append-only, it would fail it on every
+    CKAN gate — and since ``data/events/`` is append-only, it would fail it on every
     subsequent run too, blocking the deploy until a human edited the register.
     OSTI's adapter has always filtered this way; this mirrors it.
     """

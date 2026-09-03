@@ -1,6 +1,6 @@
 // Render safety — the last line, applied where a harvested string becomes markup.
 //
-// Everything in `records/*.json` is somebody else's text: a registrant's title,
+// Everything in `data/records/*.json` is somebody else's text: a registrant's title,
 // an author's description, a curator's pasted link. `harvest/sanitize.py` and
 // `harvest/urls.py` already clean those on the way *in*, and they are the right
 // place for it. This file is the belt to that pair of braces, because the

@@ -125,7 +125,7 @@ class MySourceAdapter(Adapter):
   you forget, but forgetting is still a bug.
 - `payload` is the upstream response **verbatim**. No cleaning, no
   interpretation, no mapping — what you yield here is what
-  `fixtures/<source>/raw/<id>.json` holds.
+  `data/fixtures/<source>/raw/<id>.json` holds.
 - Use `harvest.http.HarvestClient`. It sends the project User-Agent, honours
   `robots.txt` per host, throttles to 5 req/s, sends conditional-GET headers,
   and **never raises** on a transport error. Network etiquette is not yours to
@@ -167,19 +167,19 @@ one record loses that record, not the source.
 **Every harvest change ships with its fixture. New behaviour without one is not
 finished.**
 
-`fixtures/README.md` describes the layout; `fixtures/fixtures-catalogue.md` is
+`data/fixtures/README.md` describes the layout; `data/fixtures/fixtures-catalogue.md` is
 the inventory and **is a specification you do not edit**. Capture the real
 payload rather than inventing one:
 
 ```sh
-mkdir -p fixtures/mysource/raw
+mkdir -p data/fixtures/mysource/raw
 curl -sS -H 'Accept: application/json' \
   -A 'iea-wind-data-catalogue/0.1 (+https://github.com/weid-ost/iea-wind-data-catalogue; tom@octue.com)' \
   https://example.org/api/records/123 \
-  | python -m json.tool > fixtures/mysource/raw/mys-01-canonical.json
+  | python -m json.tool > data/fixtures/mysource/raw/mys-01-canonical.json
 ```
 
-Then write the expectation, `fixtures/mysource/mys-01-canonical.json`:
+Then write the expectation, `data/fixtures/mysource/mys-01-canonical.json`:
 
 ```jsonc
 {
@@ -216,7 +216,7 @@ def test_map(fixture):
 ```
 
 Cover the canonical case **and** the edge cases the catalogue names for your
-source — for an existing source, the rows in `fixtures/fixtures-catalogue.md`
+source — for an existing source, the rows in `data/fixtures/fixtures-catalogue.md`
 are the required set, not a menu. The catalogue is checked in both directions
 (`tests/test_fixtures.py::TestTheCatalogueMatchesTheTree`), so a new fixture
 without a row fails the suite just as a row without a fixture does. **Add the
@@ -240,7 +240,7 @@ make materialize && make validate
 ```
 
 Then run it **twice** and confirm the second run reports `changed: 0` and leaves
-`events/` untouched. If it does not, your source key includes something that
+`data/events/` untouched. If it does not, your source key includes something that
 churns — go back to §1.3.
 
 ## 6. Checklist

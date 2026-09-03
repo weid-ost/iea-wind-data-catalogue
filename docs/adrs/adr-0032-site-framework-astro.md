@@ -33,7 +33,7 @@ inherits.
 Three reasons on merits:
 
 1. **It fits the record contract without distorting it.** Astro's content layer
-   reads plain JSON off disk via a glob loader, so `records/*.json` stays the
+   reads plain JSON off disk via a glob loader, so `data/records/*.json` stays the
    canonical CKAN-shaped artifact and Astro is a pure *renderer*.
    **Guard this boundary**: no frontmatter-flavoured schemas, no
    framework-specific fields, nothing that would stop the CKAN loader POSTing
@@ -47,7 +47,7 @@ Three reasons on merits:
    search. Which leads to the point that actually matters for a project that
    might sit dormant for years: **the built artifact outlives the build
    toolchain.** If Astro stops building cleanly in 2030 because Node moved on,
-   the deployed site keeps serving and `records/*.json` is still the catalogue.
+   the deployed site keeps serving and `data/records/*.json` is still the catalogue.
    Toolchain rot costs "can't rebuild until someone spends an afternoon on
    dependencies", not "the catalogue is gone".
 
@@ -76,7 +76,7 @@ Pagefind runs after `astro build`, indexing `dist/`
 **Good**
 
 - The record format is protected by architecture rather than by discipline: if
-  Astro never writes to `records/`, it cannot corrupt it.
+  Astro never writes to `data/records/`, it cannot corrupt it.
 - Zero-JS output is what makes Google Dataset Search indexing work, which is the
   single biggest discovery win of going static.
 - A rebuild failure is recoverable and bounded; a data loss would not be.

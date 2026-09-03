@@ -456,10 +456,10 @@ class TestThePendingQueue:
 
     def test_x07_a_miss_with_no_model_queues_and_the_run_continues(self, tmp_path: Path) -> None:
         """Fixture ``x-07`` end to end, at this layer."""
-        cache_directory = tmp_path / "cache"
-        state_directory = tmp_path / "state"
-        cache_directory.mkdir()
-        state_directory.mkdir()
+        cache_directory = tmp_path / "data" / "cache"
+        state_directory = tmp_path / "data" / "state"
+        cache_directory.mkdir(parents=True, exist_ok=True)
+        state_directory.mkdir(parents=True, exist_ok=True)
 
         result = extract(CONTENT, cache_directory=cache_directory)
         assert result is None
@@ -472,7 +472,7 @@ class TestThePendingQueue:
         # …and nothing raised, which is the entire point.
 
     def test_x07_the_fixture_file_drives_the_same_path(self, tmp_path: Path) -> None:
-        """The same case, driven from ``fixtures/cross-cutting/x-07-cache-miss-no-llm``.
+        """The same case, driven from ``data/fixtures/cross-cutting/x-07-cache-miss-no-llm``.
 
         ADR-0031 §3 says "fixture x-07 exists to hold this line" and the fixture
         catalogue has always listed it, but for a while no such file existed —
@@ -501,10 +501,10 @@ class TestThePendingQueue:
         # Deterministic classification declines, so the page escalates.
         assert classify_page(fixture["page_url"], content, trusted=fixture["trusted"]) is None
 
-        cache_directory = tmp_path / "cache"
-        state_directory = tmp_path / "state"
-        cache_directory.mkdir()
-        state_directory.mkdir()
+        cache_directory = tmp_path / "data" / "cache"
+        state_directory = tmp_path / "data" / "state"
+        cache_directory.mkdir(parents=True, exist_ok=True)
+        state_directory.mkdir(parents=True, exist_ok=True)
 
         assert extract(content, cache_directory=cache_directory) is fixture[
             "expected_extraction_result"
@@ -542,10 +542,10 @@ class TestTheDrain:
         assert drain_pending(state_directory=tmp_path, cache_directory=tmp_path) == 0
 
     def test_a_cached_page_drains_offline(self, tmp_path: Path) -> None:
-        cache_directory = tmp_path / "cache"
-        state_directory = tmp_path / "state"
-        cache_directory.mkdir()
-        state_directory.mkdir()
+        cache_directory = tmp_path / "data" / "cache"
+        state_directory = tmp_path / "data" / "state"
+        cache_directory.mkdir(parents=True, exist_ok=True)
+        state_directory.mkdir(parents=True, exist_ok=True)
         html = f"<html><body><article><p>{CONTENT}</p></article></body></html>"
         content = main_text(html)
         write_cache(

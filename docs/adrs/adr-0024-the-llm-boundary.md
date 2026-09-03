@@ -60,7 +60,7 @@ Five rules, all enforceable:
 3. **Resolve or drop.** Every extracted DOI is resolved against DataCite or
    Crossref (`harvest.doi.resolve_or_drop`) before the record is accepted. If it
    does not resolve, **the record is dropped and logged** — in
-   `state/last-run.json` under `dropped_dois`, never silently discarded
+   `data/state/last-run.json` under `dropped_dois`, never silently discarded
    (fixture `iea-05`). Combined with rule 2, hallucinated identifiers become
    structurally impossible rather than merely unlikely.
 4. **Structured output only.** JSON-schema-constrained responses, validated on
@@ -85,7 +85,7 @@ Three supporting requirements:
 - **Cap calls per run.** `harvest.extract.MAX_EXTRACTIONS = 200`, so a task site
   redesign that invalidates three thousand cache entries drains over weeks
   rather than arriving as one surprise bill. The remaining backlog is reported
-  in `state/last-run.json`.
+  in `data/state/last-run.json`.
 
 Small model by default, escalating only when validation fails or confidence is
 low. Temperature at minimum for stability — but determinism is not guaranteed

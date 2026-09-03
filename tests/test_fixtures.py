@@ -1,10 +1,10 @@
 """The fixture convention itself.
 
-Every fixture in ``fixtures/<source>/`` must be loadable and well-formed. This
+Every fixture in ``data/fixtures/<source>/`` must be loadable and well-formed. This
 test is deliberately generic: as each track adds its fixtures, this suite grows
 with them and catches a malformed fixture before an adapter test does.
 
-See ``fixtures/README.md`` for the layout and ``fixtures/fixtures-catalogue.md``
+See ``data/fixtures/README.md`` for the layout and ``data/fixtures/fixtures-catalogue.md``
 for the inventory.
 """
 
@@ -69,7 +69,7 @@ ALL = fixture_files()
 def test_the_fixture_tree_exists() -> None:
     assert FIXTURES.exists()
     assert (FIXTURES / "fixtures-catalogue.md").exists()
-    assert ALL, "no fixtures found — each track adds its own under fixtures/<source>/"
+    assert ALL, "no fixtures found — each track adds its own under data/fixtures/<source>/"
 
 
 @pytest.mark.parametrize("path", ALL, ids=ident)
@@ -224,7 +224,7 @@ def rendering_files() -> list[Path]:
 def test_rendering_fixtures_only_cite_reserved_identifiers(path: Path) -> None:
     """No invented record may be hung on a real work's identifier.
 
-    Every record under ``fixtures/rendering/`` is hand-built: the 300-character
+    Every record under ``data/fixtures/rendering/`` is hand-built: the 300-character
     title, the five-task record, the retraction, the withdrawal. They were
     originally bound to live third-party DOIs, which meant the gallery published
     a retraction flag over a real, unretracted Wind Energy paper and a

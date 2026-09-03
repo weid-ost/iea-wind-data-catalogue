@@ -87,7 +87,7 @@ class TestTheHostileFixture:
 
     def test_it_exists(self) -> None:
         assert FIXTURE.exists(), (
-            "fixtures/rendering/rep-09-hostile-markup.json is the renderer's hostile-input "
+            "data/fixtures/rendering/rep-09-hostile-markup.json is the renderer's hostile-input "
             "case — correct it, never delete it"
         )
 

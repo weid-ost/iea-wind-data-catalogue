@@ -32,7 +32,7 @@ thousands" — which is what removes every argument for a search server.
 
 **Pagefind**, run after `astro build` over `dist/`.
 
-1. The index is a **build artifact**, regenerated from `records/` on every
+1. The index is a **build artifact**, regenerated from `data/records/` on every
    build. There is no index to keep in sync and no runtime to operate.
 2. Pagefind chunks its index, so the browser downloads only the fragments a
    query needs and index size stops mattering.

@@ -40,7 +40,7 @@ import { facetsFor } from '../../lib/facets';
 import { freshness, uiFixture, type LastRun, type LinkCheck } from '../../lib/state';
 import { provenanceOf, curatorNotesOf, retractionOf, extra } from '../../lib/record';
 
-// The gallery renders real records from `records/` when they exist, plus the
+// The gallery renders real records from `data/records/` when they exist, plus the
 // pathological fixtures always. Storybook stories use synthetic args; this
 // exercises the actual data shape, which is where the bugs will be.
 const fixtureEntries = await fixtures();
@@ -75,8 +75,8 @@ const curated = pick('rep-07-curator-note');
       <h1>Component gallery</h1>
       <p class="prose">
         Every component, in every state, rendered against
-        <code>fixtures/rendering/</code> — the deliberately awkward records, not
-        synthetic args. {real.length > 0 && `${real.length} real record${real.length === 1 ? '' : 's'} from records/ are included below.`}
+        <code>data/fixtures/rendering/</code> — the deliberately awkward records, not
+        synthetic args. {real.length > 0 && `${real.length} real record${real.length === 1 ? '' : 's'} from data/records/ are included below.`}
         This page is <code>noindex</code> and <code>data-pagefind-ignore</code>.
       </p>
       <p class="prose secondary">
@@ -369,7 +369,7 @@ const curated = pick('rep-07-curator-note');
       ))}
       {real.length > 0 && (
         <div class="case">
-          <h3>Real records from <code>records/</code></h3>
+          <h3>Real records from <code>data/records/</code></h3>
           <div class="stack">
             {real.slice(0, 3).map((entry) => <RecordCard pkg={entry.pkg} headingLevel="h4" />)}
           </div>

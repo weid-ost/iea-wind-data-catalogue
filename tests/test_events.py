@@ -80,7 +80,7 @@ class TestACorruptLogIsSurvivable:
 
     A truncated line is the ordinary residue of a killed append — the process
     died between ``write`` and the newline. Raising on it used to abort the
-    whole pipeline before ``state/last-run.json`` could be written, which
+    whole pipeline before ``data/state/last-run.json`` could be written, which
     silently freezes the heartbeat the cron keepalive and the site's freshness
     banner both depend on (eventlog-02, ADR-0029/0031).
     """

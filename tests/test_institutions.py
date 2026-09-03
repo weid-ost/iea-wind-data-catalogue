@@ -151,7 +151,7 @@ class TestEveryRecordCarriesOne:
 
         assert result.ok, result.violations
         package = json.loads(
-            (repo / "records" / "doi-10-5281-zenodo-1234.json").read_text(encoding="utf-8")
+            (repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text(encoding="utf-8")
         )
         assert package["owner_org"] == "dtu"
         assert validate_package(package, known_orgs=config.organization_names(repo)) == []

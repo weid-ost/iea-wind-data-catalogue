@@ -10,12 +10,12 @@
     uv run python -m harvest report
 
 ``run`` does the whole pipeline: harvest every enabled source, append events on
-change only, replay ``annotations/`` into ``annotated`` events, replay
-everything into ``records/``, validate, and write ``state/last-run.json`` —
+change only, replay ``data/annotations/`` into ``annotated`` events, replay
+everything into ``data/records/``, validate, and write ``data/state/last-run.json`` —
 **always**, including when a source failed, because that file is the cron
 keepalive (plan §3.3).
 
-``materialize`` and ``run`` both replay ``annotations/`` first, idempotently, so
+``materialize`` and ``run`` both replay ``data/annotations/`` first, idempotently, so
 a curator writes one YAML file and runs one command
 ([[correct-a-record]] §2). ``dedupe`` and ``linkcheck`` are separate verbs
 because one writes merge decisions and the other talks to seven upstreams;
@@ -67,22 +67,22 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--dry-run", action="store_true",
                      help="harvest and report, but append no events")
     run.add_argument("--no-materialize", action="store_true",
-                     help="skip the replay into records/")
+                     help="skip the replay into data/records/")
     run.add_argument("--no-annotations", action="store_true",
-                     help="skip replaying annotations/ into annotated events")
+                     help="skip replaying data/annotations/ into annotated events")
     run.add_argument("--linkcheck", action="store_true",
                      help="check every record's outbound links and report the dead ones")
 
-    materialize = sub.add_parser("materialize", help="replay events/ into records/")
+    materialize = sub.add_parser("materialize", help="replay data/events/ into data/records/")
     materialize.add_argument("--no-prune", action="store_true",
                              help="keep record files that have no backing events")
     materialize.add_argument("--no-annotations", action="store_true",
-                             help="skip replaying annotations/ into annotated events")
+                             help="skip replaying data/annotations/ into annotated events")
 
-    sub.add_parser("validate", help="run the CKAN-compat gate over records/")
+    sub.add_parser("validate", help="run the CKAN-compat gate over data/records/")
 
     annotations = sub.add_parser(
-        "annotations", help="replay annotations/*.yaml into annotated events (idempotent)"
+        "annotations", help="replay data/annotations/*.yaml into annotated events (idempotent)"
     )
     annotations.add_argument("--dry-run", action="store_true",
                              help="say what would be appended, append nothing")
@@ -100,7 +100,7 @@ def build_parser() -> argparse.ArgumentParser:
     linkcheck.add_argument("--limit", type=int, default=None,
                            help="max records to check this pass")
 
-    extract = sub.add_parser("extract", help="drain state/pending-extraction.json (Tier 3)")
+    extract = sub.add_parser("extract", help="drain data/state/pending-extraction.json (Tier 3)")
     extract.add_argument("--limit", type=int, default=None, help="max extractions this pass")
 
     sub.add_parser("report", help="print the last run report")
@@ -124,7 +124,7 @@ def _configure_logging(verbose: bool) -> None:
 def cmd_run(args: argparse.Namespace) -> int:
     """The whole pipeline. Returns non-zero on a validation violation.
 
-    **``state/last-run.json`` is written whatever happens** (ADR-0029 §1,
+    **``data/state/last-run.json`` is written whatever happens** (ADR-0029 §1,
     CONTRACT rule 5). It is the cron keepalive and the site's freshness
     banner, so a crash anywhere in the pipeline must still leave a report
     behind saying the run happened and what broke — a frozen heartbeat with a
@@ -356,7 +356,7 @@ def cmd_extract(args: argparse.Namespace) -> int:
     print(f"extract: resolved {resolved} pending extraction(s)")
     remaining = len(extraction.read_pending(state_directory))
     if remaining:
-        print(f"extract: {remaining} still queued (see state/pending-extraction.json)")
+        print(f"extract: {remaining} still queued (see data/state/pending-extraction.json)")
     return 0
 
 

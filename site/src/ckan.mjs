@@ -32,7 +32,7 @@ const unique = (values, what) => ({
   check: new Set(values).size === values.length,
 });
 
-/** A CKAN `package` dict, exactly as `records/*.json` holds it. */
+/** A CKAN `package` dict, exactly as `data/records/*.json` holds it. */
 export const ckanPackage = z
   .object({
     name: z.string().regex(NAME_RE, "not a legal CKAN slug (a-z, 0-9, '-', '_', 2-100 chars)"),

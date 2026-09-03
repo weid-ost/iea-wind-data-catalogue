@@ -31,8 +31,8 @@ uv run python -m harvest run --max-records 5
 ```
 
 That performs the whole pipeline in one pass: harvest every enabled source →
-change detection → append events on change only → replay into `records/` →
-validate → write `state/last-run.json`.
+change detection → append events on change only → replay into `data/records/` →
+validate → write `data/state/last-run.json`.
 
 **Exit codes.** `0` means the run completed and the CKAN gate passed. `1` means
 the gate failed, and every violation is printed to stderr. An unreachable source
@@ -66,13 +66,13 @@ this. Blank means the default. In CI, run the workflow by hand and fill in
 uv run python -m harvest run --source zenodo                  # one source
 uv run python -m harvest run --source zenodo --source github  # repeatable
 uv run python -m harvest run --dry-run                        # harvest and report, append NO events
-uv run python -m harvest run --no-materialize                 # skip the replay into records/
+uv run python -m harvest run --no-materialize                 # skip the replay into data/records/
 uv run python -m harvest run -v                               # debug logging
 ```
 
 `--dry-run` is the safe first move against a source you have just changed: it
 exercises `harvest()` and `map()`, counts what *would* change, and writes
-nothing to `events/`. It still writes `state/last-run.json`, because that file is
+nothing to `data/events/`. It still writes `data/state/last-run.json`, because that file is
 written on every run without exception.
 
 ## 4. Read the report
@@ -81,7 +81,7 @@ written on every run without exception.
 uv run python -m harvest report
 ```
 
-Prints `state/last-run.json`. What to look at, in order:
+Prints `data/state/last-run.json`. What to look at, in order:
 
 | Field | Means |
 |---|---|
@@ -122,19 +122,19 @@ other sources harvest normally, and existing records are untouched.
 ## 5. Prove change detection works
 
 Run twice in a row. The second run must report `changed: 0` for every source and
-leave `events/` byte-identical:
+leave `data/events/` byte-identical:
 
 ```sh
 make harvest
-git status --short events/     # expect: nothing
+git status --short data/events/     # expect: nothing
 make harvest
-git status --short events/     # expect: still nothing new
-git status --short             # expect: only state/last-run.json
+git status --short data/events/     # expect: still nothing new
+git status --short             # expect: only data/state/last-run.json
 ```
 
-**Only `state/last-run.json` changes on a no-op run.** That single-file diff is
+**Only `data/state/last-run.json` changes on a no-op run.** That single-file diff is
 the cron heartbeat ([[adr-0029-scheduling-and-the-heartbeat-commit]]). If
-`records/` also churns on a no-op run, materialisation has stopped being
+`data/records/` also churns on a no-op run, materialisation has stopped being
 byte-stable and that is a bug.
 
 ## 6. Etiquette — non-negotiable while harvesting
@@ -175,7 +175,7 @@ git add events records state cache
 git commit -m "harvest: <what changed>"
 ```
 
-`events/` and `state/last-run.json` are always part of the commit. `records/` is
+`data/events/` and `data/state/last-run.json` are always part of the commit. `data/records/` is
 derived but **is** committed, because it is what the site globs and what CKAN
 would receive on promotion day.
 
@@ -194,13 +194,13 @@ Two things worth knowing before you repeat it:
   Models, so Tier-3 pages that miss the cache will attempt live inference. On
   this run the endpoint answered `410 github_models_retirement_brownout` and the
   degradation path took over exactly as specified: seven pages queued to
-  `state/pending-extraction.json`, one notice each, run still exit 0. If you
+  `data/state/pending-extraction.json`, one notice each, run still exit 0. If you
   want the deterministic path only, do not export `GITHUB_TOKEN`.
-- **The committed `cache/` entries did not hit.** They are keyed on page
+- **The committed `data/cache/` entries did not hit.** They are keyed on page
   content, and the two pages they were captured from are not among the five
   `--max-records 5` reaches. `cache.hit_rate: 0.0` on a first run is therefore not a
   fault; it means the crawl went somewhere else.
 
 A second `run --max-records 5` immediately afterwards reported `changed: 0` for every
-source, `events_appended: 0`, and left only `state/last-run.json` modified —
+source, `events_appended: 0`, and left only `data/state/last-run.json` modified —
 the change-detection and heartbeat proof in §5, performed.

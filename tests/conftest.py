@@ -2,7 +2,7 @@
 
 Every test that touches the filesystem works in a throwaway repository root
 built by the ``repo`` fixture. Nothing in the suite writes into the real
-``events/``, ``records/`` or ``state/``, and nothing touches the network — the
+``data/events/``, ``data/records/`` or ``data/state/``, and nothing touches the network — the
 DOI resolver and every adapter take an injected client for exactly that reason.
 """
 
@@ -118,18 +118,18 @@ def repo(tmp_path: Path) -> Path:
     for name in ("organizations.yaml", "groups.yaml", "sources.yaml"):
         shutil.copy(REAL_ROOT / name, tmp_path / name)
     for name in ("events", "records", "state", "cache"):
-        (tmp_path / name).mkdir()
+        (tmp_path / "data" / name).mkdir(parents=True)
     return tmp_path
 
 
 @pytest.fixture
 def events_dir(repo: Path) -> Path:
-    return repo / "events"
+    return repo / "data" / "events"
 
 
 @pytest.fixture
 def records_dir(repo: Path) -> Path:
-    return repo / "records"
+    return repo / "data" / "records"
 
 
 class FakeResponse:
@@ -178,7 +178,7 @@ def load_fixtures(source: str, pattern: str = "*.json") -> list[dict]:
     ``docs/runbooks/add-a-source-adapter.md`` §4 — written against a shared
     ``load_fixtures(source)`` — could not be pasted and run (compliance-10).
     This is that helper. It skips ``raw/`` by construction: expectations live in
-    ``fixtures/<source>/``, payloads one directory down.
+    ``data/fixtures/<source>/``, payloads one directory down.
 
     >>> load_fixtures("osti")[0]["fixture_id"]
     'osti-01-canonical'

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Astro renderer for the IEA Wind Data Catalogue. Records stay canonical CKAN JSON in ../records; this package never writes to them (ADR-0032).",
+  "description": "Astro renderer for the IEA Wind Data Catalogue. Records stay canonical CKAN JSON in ../data/records; this package never writes to them (ADR-0032).",
   "engines": {
     "node": "22.21.1"
   },

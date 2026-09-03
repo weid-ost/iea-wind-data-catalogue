@@ -23,7 +23,7 @@ Spike 4 — answered, live, 2026-08-31
     So :meth:`WindDataHubAdapter.harvest` raises
     :class:`~harvest.adapters.base.SourceUnreachable`, which
     :func:`~harvest.adapters.base.run_adapter` turns into one
-    ``unreachable_sources`` line in ``state/last-run.json``. Existing records
+    ``unreachable_sources`` line in ``data/state/last-run.json``. Existing records
     are untouched, the run succeeds, every other source finishes. That is the
     whole of ADR-0031 in one adapter, and it is the **primary tested path**.
 

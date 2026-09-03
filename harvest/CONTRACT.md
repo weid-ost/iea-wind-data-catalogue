@@ -18,22 +18,22 @@ sources.yaml ──► Adapter.harvest()  ──►  RawObservation
                         │
                  Adapter.map()      ──►  MappedObservation (identity + source.* + provenance)
                         │
-                 run_adapter()      ──►  events/<slug>.jsonl        ← SOURCE OF TRUTH
+                 run_adapter()      ──►  data/events/<slug>.jsonl        ← SOURCE OF TRUTH
                         │                (append-only, append-on-change)
                  resolve() / replay()
                         │
-                 materialize_all()  ──►  records/<slug>.json        ← DERIVED, regenerable
+                 materialize_all()  ──►  data/records/<slug>.json        ← DERIVED, regenerable
                         │                (CKAN package dicts, byte-stable)
                  validate_records() ──►  the CKAN-compat gate
                         │
-                 RunReport.write()  ──►  state/last-run.json        ← WRITTEN EVERY RUN
+                 RunReport.write()  ──►  data/state/last-run.json        ← WRITTEN EVERY RUN
                         │
                      Astro          ──►  the site
 ```
 
 Six rules that override anything you might otherwise reason your way into:
 
-1. **`events/` is the truth; `records/` is derived.** Delete `records/` and
+1. **`data/events/` is the truth; `data/records/` is derived.** Delete `data/records/` and
    `make materialize` rebuilds it byte-for-byte.
 2. **Source metadata is never edited, only annotated** (ADR-0038).
 3. **Unchanged source key ⇒ no event at all** (ADR-0026).
@@ -91,7 +91,7 @@ you do — `run_adapter` always calls it, including on failure.
 ### `harvest(limit)` — talk to the source
 
 Yields `RawObservation`s. **Verbatim.** No cleaning, no interpretation, no
-mapping. What you yield here is what `fixtures/<source>/raw/<id>.json` holds.
+mapping. What you yield here is what `data/fixtures/<source>/raw/<id>.json` holds.
 
 ```python
 class RawObservation(BaseModel):
@@ -250,8 +250,8 @@ from harvest.identity import identity_key, slug_for_identity, slugify
 **the same string** for all four of these, which is the point:
 
 * the CKAN `package.name`
-* `records/<slug>.json`
-* `events/<slug>.jsonl`
+* `data/records/<slug>.json`
+* `data/events/<slug>.jsonl`
 * the site URL `/record/<slug>/`
 
 | identity key | slug |
@@ -276,7 +276,7 @@ refusal into one logged, skipped record, not a failed run. If you hit this,
 your `source_id` needs disambiguating, not the slugifier loosening.
 
 > **Note for anyone reading ADR-0037 literally.** It says
-> `events/<identity-key>.jsonl`. An identity key contains `/` and `|`, so the
+> `data/events/<identity-key>.jsonl`. An identity key contains `/` and `|`, so the
 > file *stem* is the slug and the unabbreviated `identity_key` is a field on
 > every line. Same thing, spelled so it can exist on a filesystem.
 
@@ -364,7 +364,7 @@ correct even if nobody remembered to append a `displacement_notice` event.
 
 ## 6. The event log
 
-`events/<slug>.jsonl`, one JSON object per line, append-only, ordered by *our*
+`data/events/<slug>.jsonl`, one JSON object per line, append-only, ordered by *our*
 observation time. Written **only** through `harvest.events.append_event` and
 the convenience writers `record_scrape` / `annotate` / `withdraw` /
 `raise_notice`.
@@ -392,7 +392,7 @@ Serialisation is `sort_keys=True, separators=(",", ":"), ensure_ascii=False`,
 ### A full `scraped` line
 
 Written as one line; shown pretty here. This is real output from
-`fixtures/zenodo/zen-01-canonical.json`.
+`data/fixtures/zenodo/zen-01-canonical.json`.
 
 > `zen-01` is a hand-built reference payload, and its `source_key` of `"3"` is
 > the bare revision. A payload harvested from the live API produces
@@ -488,11 +488,11 @@ A CKAN `package` dict, one JSON file per record, **directly POSTable to
 Written by `harvest.materialize.dump_record`:
 `indent=2, sort_keys=True, ensure_ascii=False, separators=(",", ": ")`, one
 trailing newline. **Byte-stable**: materialise twice, get identical bytes; a
-run in which nothing changed produces no diff in `records/`.
+run in which nothing changed produces no diff in `data/records/`.
 
 ### A full record
 
-`records/doi-10-5072-zenodo-1234566.json`, from the scrape and annotation above:
+`data/records/doi-10-5072-zenodo-1234566.json`, from the scrape and annotation above:
 
 ```json
 {
@@ -624,19 +624,19 @@ infer an open licence.**
 
 ## 9. Fixtures
 
-Layout and capture instructions: `fixtures/README.md`. Inventory:
-`fixtures/fixtures-catalogue.md` (specification — do not edit).
+Layout and capture instructions: `data/fixtures/README.md`. Inventory:
+`data/fixtures/fixtures-catalogue.md` (specification — do not edit).
 
 ```
-fixtures/<source>/raw/<id>.json     the upstream payload, VERBATIM
-fixtures/<source>/<id>.json         the expectation
+data/fixtures/<source>/raw/<id>.json     the upstream payload, VERBATIM
+data/fixtures/<source>/<id>.json         the expectation
 ```
 
 The expectation declares `"fixture_kind": "source_namespace"` (what `map()`
 should produce: `identity_key`, `source_key`, `source`, `provenance`) or
 `"record"` (a whole CKAN package). Reference implementations:
-`fixtures/zenodo/zen-01-canonical.json` and
-`fixtures/cross-cutting/x-08-ckan-invalid.json`.
+`data/fixtures/zenodo/zen-01-canonical.json` and
+`data/fixtures/cross-cutting/x-08-ckan-invalid.json`.
 
 `tests/test_fixtures.py` already walks the whole tree and validates every
 fixture generically, so a malformed fixture fails immediately. Parametrize your
@@ -664,7 +664,7 @@ not finished.
 
 Three modules sit on top of the event log and never bypass it.
 
-**`harvest/annotations.py`** replays `annotations/*.yaml` into `annotated`
+**`harvest/annotations.py`** replays `data/annotations/*.yaml` into `annotated`
 events, **idempotently** — the fingerprint is a hash of
 `identity_key + actor + note + local`, deliberately excluding `observed_at`, so
 a replay never depends on the clock. It refuses a file that sets `source:`,
@@ -682,13 +682,13 @@ two `annotated` events with `actor: "reconcile"` — the primary gains the other
 `local.suppressed: true`. **Nothing is deleted and no identity key is
 rewritten.** Automatic kinds need an explicit join key (`shared-doi`,
 `related-identifier`, `preprint-pair`); the fuzzy kind (`fuzzy-title`, `dc-08`)
-is **proposed only**, into `state/merge-proposals.json` and the run report, and
+is **proposed only**, into `data/state/merge-proposals.json` and the run report, and
 `--apply` will not touch it.
 
 **`harvest/linkcheck.py`** checks every record's outbound URLs with the usual
-etiquette and writes `state/link-check.json`. It never edits, withdraws or
+etiquette and writes `data/state/link-check.json`. It never edits, withdraws or
 deletes a record: a 404 means the page moved, and HTTP status in a byte-stable
-record would churn `records/` every run.
+record would churn `data/records/` every run.
 
 ---
 
@@ -708,10 +708,10 @@ Track H's. The boundary, restated because it is the easiest thing to erode:
   `trafilatura`. Prompt injection through a harvested page is a live attack
   surface for a system that then writes records.
 * **The run never fails on LLM unavailability** (ADR-0031). `extract()`
-  returns `None`; the page goes on `state/pending-extraction.json`; the run
+  returns `None`; the page goes on `data/state/pending-extraction.json`; the run
   succeeds (fixture `x-07`). Somebody runs `make extract` later, or never.
 * Cache key is `sha256(content + prompt_version + model_id)`, entries live in
-  `cache/` and are **committed** — a rebuild replays the cache instead of
+  `data/cache/` and are **committed** — a rebuild replays the cache instead of
   re-inferring, which is the only reason a reproducible rebuild and an AI
   harvester can coexist.
 
@@ -719,7 +719,7 @@ Track H's. The boundary, restated because it is the easiest thing to erode:
 
 ## 11. What the site reads
 
-Astro is a **renderer**. It never writes into `records/`, and no
+Astro is a **renderer**. It never writes into `data/records/`, and no
 framework-specific field ever enters the record format (ADR-0032). The record
 you glob is the record CKAN will receive.
 
@@ -737,15 +737,15 @@ const records = defineCollection({
 
 | what | where | for |
 |---|---|---|
-| records | `records/*.json` via glob | list, record pages, JSON-LD, Pagefind index |
-| freshness | `state/last-run.json` → `finished_at` | "last updated" banner; **warning state past 45 days** (fixture `r-08`) |
-| backlog | `state/last-run.json` → `pending_extraction` | shown next to the freshness banner |
-| unreachable sources | `state/last-run.json` → `unreachable_sources` | honest degradation notice |
-| notices | `state/last-run.json` → `notices` | the curator's short monthly read |
+| records | `data/records/*.json` via glob | list, record pages, JSON-LD, Pagefind index |
+| freshness | `data/state/last-run.json` → `finished_at` | "last updated" banner; **warning state past 45 days** (fixture `r-08`) |
+| backlog | `data/state/last-run.json` → `pending_extraction` | shown next to the freshness banner |
+| unreachable sources | `data/state/last-run.json` → `unreachable_sources` | honest degradation notice |
+| notices | `data/state/last-run.json` → `notices` | the curator's short monthly read |
 | tasks | `groups.yaml` | task chips, task pages, facet labels |
 | institutions | `organizations.yaml` | institution facet |
-| dead links | `state/link-check.json` → `dead_by_record` | optional "source link unreachable" note. **Never** in the record: HTTP status would churn byte-stable records |
-| merge proposals | `state/merge-proposals.json` | curator review queue; not rendered publicly |
+| dead links | `data/state/link-check.json` → `dead_by_record` | optional "source link unreachable" note. **Never** in the record: HTTP status would churn byte-stable records |
+| merge proposals | `data/state/merge-proposals.json` | curator review queue; not rendered publicly |
 
 `extras.suppressed == "true"` means **retained but not listed** — the record
 page and its URL still exist, and the record is excluded from listings, facets
@@ -776,13 +776,13 @@ uv sync --frozen --dev                       # the pinned environment (ADR-0034)
 uv run pytest                                # tests
 uv run python -m harvest run --max-records 5 # harvest → events → records → validate → report
 uv run python -m harvest run --source zenodo # one source
-uv run python -m harvest materialize         # replay annotations/ + events/ into records/
+uv run python -m harvest materialize         # replay data/annotations/ + data/events/ into data/records/
 uv run python -m harvest validate            # the CKAN gate alone
-uv run python -m harvest annotations         # replay annotations/*.yaml (idempotent)
+uv run python -m harvest annotations         # replay data/annotations/*.yaml (idempotent)
 uv run python -m harvest dedupe [--apply]    # propose / record cross-source merges
 uv run python -m harvest linkcheck           # check every record's outbound links
 uv run python -m harvest extract             # drain the Tier-3 pending queue
-uv run python -m harvest report              # print state/last-run.json
+uv run python -m harvest report              # print data/state/last-run.json
 uv run python -m harvest sources             # what is configured, and its adapter
 ```
 
@@ -790,7 +790,7 @@ uv run python -m harvest sources             # what is configured, and its adapt
 wrap the same things.
 
 `$HARVEST_ROOT` overrides the repository root everywhere, which is how the
-tests keep out of the real `events/`.
+tests keep out of the real `data/events/`.
 
 ---
 
@@ -819,7 +819,7 @@ If you are certain you need a fifth, that is an ADR, not a commit.
 | F | iea-wind.org (Tier 3) | `harvest/adapters/ieawind.py` |
 | G | Wind Data Hub | `harvest/adapters/wdh.py` |
 | H | LLM extraction, cache, pending queue | `harvest/extract.py` |
-| I | Reconciliation, merges, notices, link checking, `annotations/` replay | `harvest/dedupe.py`, `harvest/annotations.py`, `harvest/linkcheck.py` |
+| I | Reconciliation, merges, notices, link checking, `data/annotations/` replay | `harvest/dedupe.py`, `harvest/annotations.py`, `harvest/linkcheck.py` |
 | J | The Astro site | `site/` |
 
 Each stub's docstring names its source key, its identity rule, its fixtures and

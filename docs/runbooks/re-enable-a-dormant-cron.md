@@ -34,7 +34,7 @@ catches up completely.
 | "Scheduled workflow disabled due to repository inactivity" email | the repository owner's inbox |
 | the workflow shows **"This workflow was disabled because…"** | Actions → the harvest workflow |
 | the homepage freshness banner is in its **warning state** | the site — past 45 days since `finished_at` |
-| `state/last-run.json` → `finished_at` is old | `uv run python -m harvest report` |
+| `data/state/last-run.json` → `finished_at` is old | `uv run python -m harvest report` |
 
 The banner is the one you will actually notice, which is why it exists: nobody
 checks a CI dashboard for a dormant project.
@@ -46,7 +46,7 @@ checks a CI dashboard for a dormant project.
 3. Run it once by hand: **Run workflow** (`workflow_dispatch`, which exists
    alongside the cron for exactly this). Leave **skip_harvest** unticked: a
    skipped harvest makes no commit, so it is not a keepalive.
-4. Confirm the run **committed** `state/last-run.json`. If it did not, the
+4. Confirm the run **committed** `data/state/last-run.json`. If it did not, the
    heartbeat is broken and re-enabling has bought you 60 days, not a fix — go
    to §4.
 
@@ -58,16 +58,16 @@ Ask, in order:
    weekly failures reach 60 days. You would have had eight failure emails, so
    check whether they were going somewhere nobody reads — a personal mailbox
    that has been forwarded, or a filter.
-2. **Did the heartbeat stop producing a diff?** `state/last-run.json` must be
+2. **Did the heartbeat stop producing a diff?** `data/state/last-run.json` must be
    written on **every** run, including a total no-op and including a failed run.
    Verify locally:
 
    ```sh
    make harvest
-   git status --short          # expect state/last-run.json, and normally nothing else
+   git status --short          # expect data/state/last-run.json, and normally nothing else
    ```
 
-   If `state/last-run.json` is unchanged after a run, that is the bug.
+   If `data/state/last-run.json` is unchanged after a run, that is the bug.
 3. **Did the workflow stop committing?** A run that writes the file but does not
    `git commit && git push` is not activity. Check the commit step's condition —
    a common mistake is `if: steps.harvest.outputs.changed == 'true'`, which
@@ -85,7 +85,7 @@ to verify after any change to it:
 - **`runs-on: ubuntu-24.04`** — never `ubuntu-latest`
   ([[adr-0034-toolchain-pinning-and-no-auto-updates]]).
 - `uv sync --frozen --dev`, then `uv run python -m harvest run`, with `--max-records N` when the dispatch input is set.
-- **Commit `state/last-run.json` on every run, unconditionally**, including when
+- **Commit `data/state/last-run.json` on every run, unconditionally**, including when
   a source failed and including when nothing changed. Inline `git` commands —
   **never a Marketplace keepalive action**, which would put a third party inside
   a workflow that has repository write permissions.
@@ -127,6 +127,6 @@ detects changed source keys, appends only what changed, and materialises. See
 what does not exist is a run of it. A workflow cannot be executed locally and
 this one has deliberately not been pushed, so its own header says so too. The
 local half of §3.2 was verified on 2026-08-31: `harvest run` writes
-`state/last-run.json` unconditionally, and a no-op run leaves everything else
+`data/state/last-run.json` unconditionally, and a no-op run leaves everything else
 untouched. §2 — the "re-enable the dormant schedule" steps — is the part that
 has never been exercised, because nothing has yet been dormant.

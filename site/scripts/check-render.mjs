@@ -39,10 +39,10 @@ const walk = (dir) =>
 
 // ============================================================ A. the helpers
 
-const HOSTILE_FIXTURE = join(repoRoot, 'fixtures', 'rendering', 'rep-09-hostile-markup.json');
+const HOSTILE_FIXTURE = join(repoRoot, 'data', 'fixtures', 'rendering', 'rep-09-hostile-markup.json');
 if (!existsSync(HOSTILE_FIXTURE)) {
   fail(
-    'fixtures/rendering/rep-09-hostile-markup.json is missing — it is the input this gate ' +
+    'data/fixtures/rendering/rep-09-hostile-markup.json is missing — it is the input this gate ' +
       'exists to prove is neutralised (scrape-01). Never delete it to make the gate pass.'
   );
 }
@@ -207,8 +207,8 @@ if (!existsSync(cataloguePage)) {
 
 // B.5 — every record that holds data is typed `Dataset` (compliance-03), and
 //        a withdrawn record offers no downloads (product-e2e-04).
-const recordsDir = join(repoRoot, 'records');
-const fixturesDir = join(repoRoot, 'fixtures', 'rendering');
+const recordsDir = join(repoRoot, 'data', 'records');
+const fixturesDir = join(repoRoot, 'data', 'fixtures', 'rendering');
 const recordFiles = existsSync(recordsDir)
   ? readdirSync(recordsDir).filter((f) => f.endsWith('.json')).map((f) => join(recordsDir, f))
   : [];
@@ -275,10 +275,10 @@ for (const pkg of recordFiles.map((path) => JSON.parse(read(path)))) {
 
 // B.6 — link rot reaches a human (product-e2e-05). The gallery renders the
 //        note from fixture r-09; if the fixture's dead URL is not on the page,
-//        `state/link-check.json` is being written and read by nobody.
-const rotFixture = join(repoRoot, 'fixtures', 'rendering', 'ui', 'r-09-dead-link.json');
+//        `data/state/link-check.json` is being written and read by nobody.
+const rotFixture = join(repoRoot, 'data', 'fixtures', 'rendering', 'ui', 'r-09-dead-link.json');
 if (!existsSync(rotFixture)) {
-  fail('fixtures/rendering/ui/r-09-dead-link.json is missing — the link-rot note is then rendered nowhere');
+  fail('data/fixtures/rendering/ui/r-09-dead-link.json is missing — the link-rot note is then rendered nowhere');
 } else {
   const { link_check: check } = JSON.parse(read(rotFixture));
   const urls = Object.values(check.dead_by_record ?? {}).flat();
@@ -289,7 +289,7 @@ if (!existsSync(rotFixture)) {
   const rendered = existsSync(gallery) ? read(gallery) : '';
   for (const url of urls) {
     if (!rendered.includes(url)) {
-      fail(`/dev/components/ does not render the dead link ${url} — state/link-check.json reaches no reader (product-e2e-05)`);
+      fail(`/dev/components/ does not render the dead link ${url} — data/state/link-check.json reaches no reader (product-e2e-05)`);
     }
   }
 }

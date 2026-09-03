@@ -1,4 +1,4 @@
-// Astro is a RENDERER (ADR-0032). It reads `records/*.json` by glob and never
+// Astro is a RENDERER (ADR-0032). It reads `data/records/*.json` by glob and never
 // writes to them; no framework-specific field is permitted in the record format.
 //
 // The Zod schema below is the CKAN-compat gate: a malformed record fails
@@ -11,7 +11,7 @@ import { z } from 'astro/zod';
 import { ckanPackage } from './ckan.mjs';
 
 const records = defineCollection({
-  loader: glob({ pattern: '*.json', base: '../records' }),
+  loader: glob({ pattern: '*.json', base: '../data/records' }),
   schema: ckanPackage,
 });
 
@@ -19,7 +19,7 @@ const records = defineCollection({
 // first harvest has run. The same gate applies to the record inside the
 // wrapper: a rendering fixture CKAN would refuse is a broken fixture.
 const rendering = defineCollection({
-  loader: glob({ pattern: '*.json', base: '../fixtures/rendering' }),
+  loader: glob({ pattern: '*.json', base: '../data/fixtures/rendering' }),
   schema: z
     .object({
       fixture_id: z.string(),
@@ -28,7 +28,7 @@ const rendering = defineCollection({
       note: z.string().optional(),
       record: ckanPackage,
       // Optional hand-written event log, so the event-history component has
-      // something to render before `events/` is populated.
+      // something to render before `data/events/` is populated.
       events: z.array(z.record(z.any())).default([]),
     })
     .passthrough(),

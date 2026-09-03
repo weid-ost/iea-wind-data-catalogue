@@ -146,7 +146,8 @@ class TestPaths:
     def test_harvest_root_env_override(self, monkeypatch, tmp_path: Path) -> None:  # noqa: ANN001
         monkeypatch.setenv("HARVEST_ROOT", str(tmp_path))
         assert config.repo_root() == tmp_path.resolve()
-        assert config.events_dir() == tmp_path.resolve() / "events"
+        assert config.data_dir() == tmp_path.resolve() / "data"
+        assert config.events_dir() == tmp_path.resolve() / "data" / "events"
 
     def test_missing_register_is_empty_not_an_error(self, tmp_path: Path) -> None:
         assert config.load_sources(tmp_path) == {}

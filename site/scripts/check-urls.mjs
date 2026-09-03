@@ -40,10 +40,10 @@ const pages = walk(dist).filter((p) => p.endsWith('.html'));
 
 // ---------------------------------------------------------------- the corpus
 //
-// `records/` when it has anything in it, `fixtures/rendering/` otherwise —
+// `data/records/` when it has anything in it, `data/fixtures/rendering/` otherwise —
 // exactly the fallback `src/lib/catalogue.ts` applies, so this checks what was
 // actually rendered.
-const recordsDir = join(repoRoot, 'records');
+const recordsDir = join(repoRoot, 'data', 'records');
 const recordFiles = existsSync(recordsDir)
   ? readdirSync(recordsDir).filter((f) => f.endsWith('.json')).map((f) => join(recordsDir, f))
   : [];
@@ -55,22 +55,22 @@ for (const path of recordFiles) {
   try {
     name = JSON.parse(readFileSync(path, 'utf8')).name;
   } catch (error) {
-    failures.push(`records/${stem}.json: not readable as JSON (${error.message})`);
+    failures.push(`data/records/${stem}.json: not readable as JSON (${error.message})`);
     continue;
   }
   if (name !== stem) {
     failures.push(
-      `records/${stem}.json: name is "${name}" but the filename stem is "${stem}" — ` +
+      `data/records/${stem}.json: name is "${name}" but the filename stem is "${stem}" — ` +
         'the slug is the URL, and the two must be the same string'
     );
   }
   if (seen.has(name)) {
     failures.push(
-      `records/${stem}.json: duplicate name "${name}" (also in ${seen.get(name)}) — ` +
+      `data/records/${stem}.json: duplicate name "${name}" (also in ${seen.get(name)}) — ` +
         'one record would silently overwrite the other at /record/' + name + '/'
     );
   } else {
-    seen.set(name, `records/${stem}.json`);
+    seen.set(name, `data/records/${stem}.json`);
   }
 }
 

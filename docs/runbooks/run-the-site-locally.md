@@ -80,7 +80,7 @@ started it, which is the wrong lifecycle for the a11y gate to drive.
 
 | URL | Why |
 |---|---|
-| `/` | the freshness banner from `state/last-run.json` → `finished_at`; the pending backlog beside it |
+| `/` | the freshness banner from `data/state/last-run.json` → `finished_at`; the pending backlog beside it |
 | `/record/<slug>/` | a canonical record: provenance badges, task chips, source links, JSON-LD |
 | `/search/` (or the home search island) | Pagefind, and its six filters |
 | `/browse/` | the static, paginated, no-JavaScript path |
@@ -94,8 +94,8 @@ domain is `SITE_BASE=/ SITE_URL=https://your.domain/ npm run build`.
 Records are loaded by **glob from `../records/*.json`**, so if the site shows
 nothing, run `make materialize` first ([[materialize-and-validate]]).
 
-**Before the first harvest** `records/` is empty, and rather than build an empty
-site the catalogue falls back to `fixtures/rendering/` and says so on the
+**Before the first harvest** `data/records/` is empty, and rather than build an empty
+site the catalogue falls back to `data/fixtures/rendering/` and says so on the
 homepage. One real record and the fixtures disappear.
 
 ## 4. Requirements the site build must satisfy
@@ -110,7 +110,7 @@ of the system.
 - **The Zod collection schema *is* the `validate-ckan-compat` gate**: slug
   rules, tag charset, licence register. A malformed record **fails the build**.
   Fixture `x-08-ckan-invalid` exists to prove it does.
-- Astro never writes into `records/`, and **no framework-specific field ever
+- Astro never writes into `data/records/`, and **no framework-specific field ever
   enters the record format**.
 
 **Per-record rendering**
@@ -139,7 +139,7 @@ of the system.
 **The gallery**
 
 - `/dev/components` imports every component and renders it against **real
-  records from `records/` plus the pathological `fixtures/` set**.
+  records from `data/records/` plus the pathological `data/fixtures/` set**.
 - It is `data-pagefind-ignore` **and** `noindex`.
 - Every component appears in it. A component that does not is not finished.
 
@@ -176,7 +176,7 @@ first**.
 pages** and **6 filters**. `npm run gates` green: 14/14 URLs, both themes,
 0 errors.
 
-Those numbers move with `records/`, so read them as a shape rather than a
+Those numbers move with `data/records/`, so read them as a shape rather than a
 constant: 30 indexed pages is one per record, 36 built pages is those plus the
 home, search, browse, about and gallery pages. The sixth filter is
 `institution`, which `src/lib/facets.ts` derives from `pkg.owner_org`; it was

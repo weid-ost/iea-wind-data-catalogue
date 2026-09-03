@@ -4,7 +4,7 @@ Everything here runs offline. ``map()`` is pure by contract, and ``harvest()``
 is exercised against a fake client that replays the captured payloads, so the
 suite never touches api.datacite.org.
 
-The fixture inventory these tests enforce is ``fixtures/fixtures-catalogue.md``
+The fixture inventory these tests enforce is ``data/fixtures/fixtures-catalogue.md``
 rows ``dc-01`` .. ``dc-09``; ``dc-08`` is a reconciliation case (fuzzy merge
 across two registrations of one work) rather than a mapping one and belongs to
 the reconciler track.
@@ -379,7 +379,7 @@ class TestDoiCaseNormalisation:
         ]
 
     def test_a_case_variant_writes_no_second_event(self, tmp_path: Path) -> None:
-        events = tmp_path / "events"
+        events = tmp_path / "data" / "events"
         for fixture_id in ("dc-01-canonical", "dc-05-case-variant"):
             adapter = adapter_with([listing(fixture_id)])
             run_adapter(adapter, max_records=5, events_dir=events)
@@ -464,8 +464,8 @@ class TestRights:
         assert map_license(mapped.source.license_raw) == ("notspecified", False)
 
     def test_the_run_report_flags_it(self, tmp_path: Path) -> None:
-        events = tmp_path / "events"
-        records = tmp_path / "records"
+        events = tmp_path / "data" / "events"
+        records = tmp_path / "data" / "records"
         run_adapter(adapter_with([listing("dc-09-nonstandard-rights")]),
                     max_records=5, events_dir=events)
         outcome = materialize_all(events_directory=events, records_directory=records,
@@ -587,7 +587,7 @@ class TestEndToEnd:
     ]
 
     def _run(self, tmp_path: Path, fixture_ids: list[str]):
-        events = tmp_path / "events"
+        events = tmp_path / "data" / "events"
         return run_adapter(adapter_with([listing(*fixture_ids)]), max_records=5, events_dir=events)
 
     def test_a_second_identical_run_writes_no_event(self, tmp_path: Path) -> None:
@@ -595,18 +595,18 @@ class TestEndToEnd:
         assert first.changed == len(self.CAPPED) - 1     # dc-05 is dc-01 shouted
 
         before = sorted(
-            (p.name, p.read_bytes()) for p in (tmp_path / "events").glob("*.jsonl")
+            (p.name, p.read_bytes()) for p in (tmp_path / "data" / "events").glob("*.jsonl")
         )
         second = self._run(tmp_path, self.CAPPED)
         after = sorted(
-            (p.name, p.read_bytes()) for p in (tmp_path / "events").glob("*.jsonl")
+            (p.name, p.read_bytes()) for p in (tmp_path / "data" / "events").glob("*.jsonl")
         )
         assert second.changed == 0
         assert second.skipped_unchanged == first.changed
         assert before == after
 
     def test_a_new_source_key_appends_exactly_one_event(self, tmp_path: Path) -> None:
-        events = tmp_path / "events"
+        events = tmp_path / "data" / "events"
         run_adapter(adapter_with([listing("dc-01-canonical")]), max_records=5, events_dir=events)
 
         bumped = copy.deepcopy(raw_payload(fixture_by_id("dc-01-canonical")))
@@ -624,8 +624,8 @@ class TestEndToEnd:
         assert events_written[-1].source["title"].endswith("(corrected)")
 
     def test_records_pass_the_ckan_gate(self, tmp_path: Path) -> None:
-        events = tmp_path / "events"
-        records = tmp_path / "records"
+        events = tmp_path / "data" / "events"
+        records = tmp_path / "data" / "records"
         run_adapter(adapter_with([listing(*self.CAPPED)]), max_records=5, events_dir=events)
 
         outcome = materialize_all(events_directory=events, records_directory=records)
@@ -643,8 +643,8 @@ class TestEndToEnd:
             assert package["groups"] == []
 
     def test_materialisation_is_byte_stable(self, tmp_path: Path) -> None:
-        events = tmp_path / "events"
-        records = tmp_path / "records"
+        events = tmp_path / "data" / "events"
+        records = tmp_path / "data" / "records"
         run_adapter(adapter_with([listing("dc-01-canonical")]), max_records=5, events_dir=events)
         materialize_all(events_directory=events, records_directory=records)
         first = {p.name: p.read_bytes() for p in records.glob("*.json")}

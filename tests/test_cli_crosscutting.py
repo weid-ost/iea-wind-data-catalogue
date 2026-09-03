@@ -1,6 +1,6 @@
 """The CLI verbs this track adds, and the ones it wires itself into.
 
-``materialize`` and ``run`` replay ``annotations/`` first, so a curator writes
+``materialize`` and ``run`` replay ``data/annotations/`` first, so a curator writes
 one YAML file and runs one command. ``dedupe`` and ``linkcheck`` stay separate
 verbs: one writes merge decisions, the other talks to seven upstreams, and
 neither belongs in an unattended weekly run without being asked for.
@@ -33,13 +33,13 @@ def seed(repo: Path, key: str = KEY, **source) -> None:
     record_scrape(
         identity_key=key, source_system="zenodo", source_id="1234567",
         source_key=source.pop("source_key", "1"), source=payload,
-        events_dir=repo / "events", observed_at="2026-08-24T03:11:07Z",
+        events_dir=repo / "data" / "events", observed_at="2026-08-24T03:11:07Z",
     )
 
 
 def write_annotation(repo: Path, document: dict, name: str = "sample.yaml") -> None:
-    (repo / "annotations").mkdir(exist_ok=True)
-    (repo / "annotations" / name).write_text(
+    (repo / "data" / "annotations").mkdir(exist_ok=True)
+    (repo / "data" / "annotations" / name).write_text(
         yaml.safe_dump(document, sort_keys=False), encoding="utf-8"
     )
 
@@ -56,7 +56,7 @@ class TestAnnotationsVerb:
         assert "applied 1" in capsys.readouterr().out
         assert main(["--root", str(repo), "annotations"]) == 0
         assert "applied 0" in capsys.readouterr().out
-        annotated = [e for e in read_events(KEY, repo / "events")
+        annotated = [e for e in read_events(KEY, repo / "data" / "events")
                      if e.event_type == "annotated"]
         assert len(annotated) == 1
 
@@ -67,7 +67,7 @@ class TestAnnotationsVerb:
         })
         assert main(["--root", str(repo), "annotations", "--dry-run"]) == 0
         assert "would apply 1" in capsys.readouterr().out
-        assert not [e for e in read_events(KEY, repo / "events")
+        assert not [e for e in read_events(KEY, repo / "data" / "events")
                     if e.event_type == "annotated"]
 
     def test_a_bad_file_exits_nonzero_and_names_the_problem(
@@ -94,7 +94,7 @@ class TestMaterializeAppliesAnnotations:
             "annotations": [{"local": {"iea_task": ["task-49"]}, "note": "workshop list"}],
         })
         assert main(["--root", str(repo), "materialize"]) == 0
-        package = json.loads((repo / "records" / f"{SLUG}.json").read_text(encoding="utf-8"))
+        package = json.loads((repo / "data" / "records" / f"{SLUG}.json").read_text(encoding="utf-8"))
         extras = {extra["key"]: extra["value"] for extra in package["extras"]}
         assert json.loads(extras["iea_task"]) == ["task-49"]
         assert package["groups"] == [{"name": "task-49"}]
@@ -105,7 +105,7 @@ class TestMaterializeAppliesAnnotations:
             "identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-49"]}}],
         })
         assert main(["--root", str(repo), "materialize", "--no-annotations"]) == 0
-        package = json.loads((repo / "records" / f"{SLUG}.json").read_text(encoding="utf-8"))
+        package = json.loads((repo / "data" / "records" / f"{SLUG}.json").read_text(encoding="utf-8"))
         assert package["groups"] == []
 
     def test_materialising_twice_produces_no_diff(self, repo: Path) -> None:
@@ -114,9 +114,9 @@ class TestMaterializeAppliesAnnotations:
             "identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-49"]}}],
         })
         main(["--root", str(repo), "materialize"])
-        before = (repo / "records" / f"{SLUG}.json").read_text(encoding="utf-8")
+        before = (repo / "data" / "records" / f"{SLUG}.json").read_text(encoding="utf-8")
         main(["--root", str(repo), "materialize"])
-        assert (repo / "records" / f"{SLUG}.json").read_text(encoding="utf-8") == before
+        assert (repo / "data" / "records" / f"{SLUG}.json").read_text(encoding="utf-8") == before
 
     def test_run_replays_annotations_too_and_still_writes_the_heartbeat(
         self, repo: Path
@@ -126,8 +126,8 @@ class TestMaterializeAppliesAnnotations:
             "identity_key": KEY, "annotations": [{"local": {"iea_task": ["task-49"]}}],
         })
         assert main(["--root", str(repo), "run"]) == 0
-        assert (repo / "state" / "last-run.json").exists()
-        package = json.loads((repo / "records" / f"{SLUG}.json").read_text(encoding="utf-8"))
+        assert (repo / "data" / "state" / "last-run.json").exists()
+        package = json.loads((repo / "data" / "records" / f"{SLUG}.json").read_text(encoding="utf-8"))
         assert package["groups"] == [{"name": "task-49"}]
 
     def test_a_pending_annotation_reaches_the_run_report(self, repo: Path) -> None:
@@ -149,7 +149,7 @@ class TestDedupeVerb:
             source={"title": "Nacelle Lidar Validation",
                     "doi": "10.1088/1742-6596/2265/2/022001",
                     "url": "https://www.osti.gov/biblio/1854723", "license_id": "cc-by"},
-            events_dir=repo / "events", observed_at="2026-08-24T03:15:00Z",
+            events_dir=repo / "data" / "events", observed_at="2026-08-24T03:15:00Z",
         )
 
     def test_without_apply_it_reports_and_writes_the_proposal_file(
@@ -159,15 +159,15 @@ class TestDedupeVerb:
         assert main(["--root", str(repo), "dedupe"]) == 0
         out = capsys.readouterr().out
         assert "would merge" in out and "--apply" in out
-        payload = json.loads((repo / "state" / "merge-proposals.json").read_text())
+        payload = json.loads((repo / "data" / "state" / "merge-proposals.json").read_text())
         assert payload["merges"][0]["kind"] == "shared-doi"
 
     def test_apply_records_the_merge(self, repo: Path, capsys) -> None:  # noqa: ANN001
         self._pair(repo)
         assert main(["--root", str(repo), "dedupe", "--apply"]) == 0
         assert "merged" in capsys.readouterr().out
-        materialize_all(repo / "events", repo / "records", root=repo)
-        package = json.loads((repo / "records" / "osti-1854723.json").read_text())
+        materialize_all(repo / "data" / "events", repo / "data" / "records", root=repo)
+        package = json.loads((repo / "data" / "records" / "osti-1854723.json").read_text())
         extras = {extra["key"]: extra["value"] for extra in package["extras"]}
         assert extras["suppressed"] == "true"
 
@@ -192,8 +192,8 @@ class TestLinkcheckVerb:
         self, repo: Path, capsys, monkeypatch
     ) -> None:  # noqa: ANN001
         seed(repo)
-        materialize_all(repo / "events", repo / "records", root=repo)
-        before = (repo / "records" / f"{SLUG}.json").read_text(encoding="utf-8")
+        materialize_all(repo / "data" / "events", repo / "data" / "records", root=repo)
+        before = (repo / "data" / "records" / f"{SLUG}.json").read_text(encoding="utf-8")
 
         class FakeResponse:
             status_code = 404
@@ -208,9 +208,9 @@ class TestLinkcheckVerb:
         assert main(["--root", str(repo), "linkcheck"]) == 0
         out = capsys.readouterr().out
         assert "DEAD" in out and "record retained" in out
-        payload = json.loads((repo / "state" / "link-check.json").read_text())
+        payload = json.loads((repo / "data" / "state" / "link-check.json").read_text())
         assert payload["dead"][0]["status_code"] == 404
-        assert (repo / "records" / f"{SLUG}.json").read_text(encoding="utf-8") == before
+        assert (repo / "data" / "records" / f"{SLUG}.json").read_text(encoding="utf-8") == before
 
     def test_an_empty_catalogue_is_fine(self, repo: Path) -> None:
         assert main(["--root", str(repo), "linkcheck"]) == 0
@@ -233,13 +233,13 @@ class TestLinkcheckVerb:
         assert main(["--root", str(repo), "run", "--linkcheck"]) == 0
         report = read_run_report(root=repo)
         assert any(notice["type"] == "dead_link" for notice in report["notices"])
-        assert (repo / "state" / "link-check.json").exists()
+        assert (repo / "data" / "state" / "link-check.json").exists()
 
     def test_run_does_not_link_check_by_default(self, repo: Path) -> None:
         """A weekly unattended job must not add hundreds of requests unasked."""
         seed(repo)
         assert main(["--root", str(repo), "run"]) == 0
-        assert not (repo / "state" / "link-check.json").exists()
+        assert not (repo / "data" / "state" / "link-check.json").exists()
 
 
 class TestTheExistingVerbsStillWork:

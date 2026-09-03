@@ -14,7 +14,7 @@ generated from it.
 
 ```
 RawObservation  --map()-->  Event  --replay()-->  CKAN package dict
-   adapter              events/<slug>.jsonl        records/<slug>.json
+   adapter              data/events/<slug>.jsonl        data/records/<slug>.json
   (verbatim)            (SOURCE OF TRUTH)              (DERIVED)
 ```
 
@@ -37,7 +37,7 @@ Related: [[architecture]] · [[adr-0021-canonical-record-is-a-ckan-package-dict]
 identity throughout this document is `10.5072/zenodo.1234566`, which is the
 **invented** `zen-01-canonical` fixture: `10.5072` is DataCite's reserved test
 prefix and does not resolve, so nothing here is a claim about a real work
-(`fixtures/README.md`). Real records use their real prefixes.
+(`data/fixtures/README.md`). Real records use their real prefixes.
 
 | # | Rule | Example | `identity_kind()` |
 |---|---|---|---|
@@ -63,8 +63,8 @@ propose a merge.
 is **the same string** in four places — that is the point:
 
 - the CKAN `package.name`
-- `records/<slug>.json`
-- `events/<slug>.jsonl`
+- `data/records/<slug>.json`
+- `data/events/<slug>.jsonl`
 - the site URL `/record/<slug>/`
 
 | identity key | slug |
@@ -95,7 +95,7 @@ disambiguating; the slugifier does not need loosening.
 
 ## 2. The event log
 
-`events/<slug>.jsonl`. One JSON object per line, append-only, ordered by *our*
+`data/events/<slug>.jsonl`. One JSON object per line, append-only, ordered by *our*
 observation time. Written **only** through `harvest.events.append_event` and
 the convenience writers `record_scrape` / `annotate` / `withdraw` /
 `raise_notice`.
@@ -122,11 +122,11 @@ class Event(BaseModel):
 
 **Append-on-change only.** A scrape whose source key matches the last
 `scraped` event *for that same source system* writes nothing at all; the fact
-that the run happened is recorded in `state/last-run.json`
+that the run happened is recorded in `data/state/last-run.json`
 ([[adr-0026-change-detection-by-source-key]]). Growth stays proportional to
 real change.
 
-> ADR-0037 speaks of `events/<identity-key>.jsonl`. An identity key contains
+> ADR-0037 speaks of `data/events/<identity-key>.jsonl`. An identity key contains
 > `/` and `|`, so the file *stem* is the slug and the unabbreviated
 > `identity_key` is a field on every line. Same thing, spelled so it can exist
 > on a filesystem.
@@ -134,7 +134,7 @@ real change.
 ### 2.1 A `scraped` line, annotated
 
 Written as one line; shown pretty here. This is the shape
-`fixtures/zenodo/zen-01-canonical.json` describes.
+`data/fixtures/zenodo/zen-01-canonical.json` describes.
 
 ```jsonc
 {
@@ -294,12 +294,12 @@ enforces it on every run.
 Written by `harvest.materialize.dump_record`:
 `indent=2, sort_keys=True, ensure_ascii=False, separators=(",", ": ")`, one
 trailing newline. **Byte-stable**: materialise twice, get identical bytes; a
-run in which nothing changed produces no diff in `records/`, so the only churn
-in a no-op heartbeat commit is `state/last-run.json`.
+run in which nothing changed produces no diff in `data/records/`, so the only churn
+in a no-op heartbeat commit is `data/state/last-run.json`.
 
 ### 4.1 A full record, annotated
 
-`records/doi-10-5072-zenodo-1234566.json`, produced by the scrape in §2.1 plus
+`data/records/doi-10-5072-zenodo-1234566.json`, produced by the scrape in §2.1 plus
 the annotation in §2.2. This is real output — the procedure that generates it
 is [[correct-a-record]].
 
@@ -430,16 +430,16 @@ Licences map through `harvest.licenses.map_license(raw) -> (license_id, mapped)`
 
 ## 5. What the site is allowed to read
 
-Astro is a renderer. It never writes into `records/`, and no framework-specific
+Astro is a renderer. It never writes into `data/records/`, and no framework-specific
 field ever enters the record format
 ([[adr-0032-site-framework-astro]]).
 
 | what | where | for |
 |---|---|---|
-| records | `records/*.json` via glob | list, record pages, JSON-LD, Pagefind index |
-| freshness | `state/last-run.json` → `finished_at` | "last updated" banner; warning past 45 days (`r-08`) |
-| backlog | `state/last-run.json` → `pending_extraction` | shown next to the freshness banner |
-| unreachable sources | `state/last-run.json` → `unreachable_sources` | honest degradation notice |
-| notices | `state/last-run.json` → `notices` | the curator's short monthly read |
+| records | `data/records/*.json` via glob | list, record pages, JSON-LD, Pagefind index |
+| freshness | `data/state/last-run.json` → `finished_at` | "last updated" banner; warning past 45 days (`r-08`) |
+| backlog | `data/state/last-run.json` → `pending_extraction` | shown next to the freshness banner |
+| unreachable sources | `data/state/last-run.json` → `unreachable_sources` | honest degradation notice |
+| notices | `data/state/last-run.json` → `notices` | the curator's short monthly read |
 | tasks | `groups.yaml` | task chips, task pages, facet labels |
 | institutions | `organizations.yaml` | institution facet |

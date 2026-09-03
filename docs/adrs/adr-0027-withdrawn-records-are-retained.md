@@ -51,7 +51,7 @@ explanation.
    implements exactly that.
 
 The **only** sanctioned deletion in the whole system is
-`materialize_all(prune=True)` removing a `records/*.json` file that has no
+`materialize_all(prune=True)` removing a `data/records/*.json` file that has no
 backing events at all, which can only ever fire for an identity whose events
 were removed by hand. Withdrawn identities keep their events and therefore keep
 their records.
@@ -72,7 +72,7 @@ their records.
 - The record count only ever grows, and some of it is tombstones. Mitigated by
   `extras.suppressed` for noise records (retained but not listed) and by the
   lifecycle facet.
-- Anyone reading `records/` must handle withdrawn records: never imply a
+- Anyone reading `data/records/` must handle withdrawn records: never imply a
   download, never present a withdrawn record as current, and never let one lead
   a search result list unremarked.
 - `state: "active"` on a withdrawn record surprises people who know CKAN. It is

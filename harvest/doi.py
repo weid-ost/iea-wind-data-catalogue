@@ -110,7 +110,7 @@ _PREFIX_RE = re.compile(
 #: browser URL produces — used to normalise to a *distinct identity* whose slug
 #: was byte-identical to the clean DOI's. Since DataCite answers 200 for the
 #: slashed form, resolve-or-drop let it through, it claimed
-#: ``events/doi-10-5281-zenodo-4549875.jsonl``, and the real record could then
+#: ``data/events/doi-10-5281-zenodo-4549875.jsonl``, and the real record could then
 #: never be written: ``append_event``'s collision guard refused it forever
 #: (scrape-05). One citation with a stray slash squatted a record's slug.
 _TRAILING_PUNCTUATION = ".,;:!?'\"”’)]}>»/"
@@ -147,7 +147,7 @@ class DoiDropLog:
     """Collects every dropped DOI so the run report can list them.
 
     Dropping is never silent: each drop is logged at WARNING *and* appended
-    here, and :meth:`as_notices` feeds ``state/last-run.json``.
+    here, and :meth:`as_notices` feeds ``data/state/last-run.json``.
     """
 
     drops: list[dict] = field(default_factory=list)

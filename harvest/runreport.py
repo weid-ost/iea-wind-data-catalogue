@@ -1,4 +1,4 @@
-"""``state/last-run.json`` — the heartbeat, and the only run-level output.
+"""``data/state/last-run.json`` — the heartbeat, and the only run-level output.
 
 It does two jobs at once, and the second is the reason it is non-negotiable:
 
@@ -32,7 +32,7 @@ __all__ = ["RunReport", "write_run_report", "read_run_report"]
 
 @dataclass
 class RunReport:
-    """The run report. Every field ends up in ``state/last-run.json``."""
+    """The run report. Every field ends up in ``data/state/last-run.json``."""
 
     started_at: str = field(default_factory=utcnow)
     finished_at: str | None = None
@@ -114,7 +114,7 @@ class RunReport:
         )
 
     def write(self, path: Path | None = None, root: Path | None = None) -> Path:
-        """Write ``state/last-run.json``. Call this even when the run failed."""
+        """Write ``data/state/last-run.json``. Call this even when the run failed."""
         target = path or config.last_run_path(root)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(self.to_json(), encoding="utf-8")

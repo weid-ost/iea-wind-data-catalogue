@@ -30,7 +30,7 @@ you do not need Python 3.12 installed.
 make sync        # install the pinned environment (uv sync --frozen --dev)
 make test        # 2080 passed, 476 skipped
 make harvest     # harvest every enabled source (MAX_RECORDS=N to override the cap) → events → records → validate → report
-make materialize # replay annotations/ + events/ into records/ (derived; delete it freely)
+make materialize # replay data/annotations/ + data/events/ into data/records/ (derived; delete it freely)
 make validate    # the CKAN-compat gate
 make site        # build the static site + Pagefind index
 make gates       # everything CI enforces: tests, CKAN gate, palette, tokens, a11y
@@ -48,14 +48,14 @@ The underlying CLI is `uv run python -m harvest
 | `organizations.yaml` / `groups.yaml` | CKAN-shaped institutions and IEA Wind Tasks; canonical data, not config |
 | `schema/ckan-scheming.json` | the written definition of the custom fields; CKAN needs it on promotion day |
 | `harvest/` | adapters, event log, materialiser, CKAN gate. **Read `harvest/CONTRACT.md` first** |
-| `events/` | **the source of truth.** Append-only JSONL, one file per identity |
-| `records/` | derived CKAN package dicts. Regenerable — `make materialize` rebuilds them byte-for-byte |
-| `annotations/` | the human-readable record of curatorial intent. Deliberately empty of samples — the worked templates are in `docs/examples/annotations/`, so a pending annotation here always means a curator is waiting on a harvest |
-| `cache/` | committed LLM extraction cache, content-hash keyed |
-| `state/last-run.json` | the run report, and the cron heartbeat — written on every run |
+| `data/events/` | **the source of truth.** Append-only JSONL, one file per identity |
+| `data/records/` | derived CKAN package dicts. Regenerable — `make materialize` rebuilds them byte-for-byte |
+| `data/annotations/` | the human-readable record of curatorial intent. Deliberately empty of samples — the worked templates are in `docs/examples/annotations/`, so a pending annotation here always means a curator is waiting on a harvest |
+| `data/cache/` | committed LLM extraction cache, content-hash keyed |
+| `data/state/last-run.json` | the run report, and the cron heartbeat — written on every run |
 | `site/` | the Astro renderer and Pagefind index build |
 | `design/` | DTCG design tokens, the palette derivation script, the design system |
-| `fixtures/` | test and gallery fixtures; `fixtures-catalogue.md` is the specification |
+| `data/fixtures/` | test and gallery fixtures; `fixtures-catalogue.md` is the specification |
 | `docs/` | the documentation vault — ADRs, runbooks, architecture |
 | `plans/` | the two plan documents |
 
@@ -78,7 +78,7 @@ Underneath the vault:
 
 ## Two things to know before changing anything
 
-1. **`events/` is the truth; `records/` is derived.** Never edit a record file —
+1. **`data/events/` is the truth; `data/records/` is derived.** Never edit a record file —
    append an event and re-materialise. See
    [`docs/runbooks/correct-a-record.md`](docs/runbooks/correct-a-record.md).
 2. **Source metadata is never edited, only annotated.** The catalogue reports

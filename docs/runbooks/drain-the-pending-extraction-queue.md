@@ -22,7 +22,7 @@ machine, with whatever key you personally have.
 
 The delta is roughly fifteen pages a week. **That does not need to be
 automated.** CI runs Tier 1 deterministically, queues every Tier-3 cache miss
-into `state/pending-extraction.json`, and stops. Whenever someone cares —
+into `data/state/pending-extraction.json`, and stops. Whenever someone cares —
 monthly, quarterly, never — they run this and commit the resulting cache.
 
 The LLM is therefore **a tool, not a system dependency**. Zero accounts attached
@@ -39,7 +39,7 @@ uv run python -m harvest report | python3 -m json.tool | grep -E 'pending_extrac
 ```
 
 `pending_extraction` is the queue length. The queue itself is
-`state/pending-extraction.json`: a list of `{url, cache_key, reason, queued_at}`,
+`data/state/pending-extraction.json`: a list of `{url, cache_key, reason, queued_at}`,
 deduped on `cache_key`.
 
 A sudden jump of hundreds means either a task site redesigned (invalidating its
@@ -78,7 +78,7 @@ Expected output:
 
 ```
 extract: resolved N pending extraction(s)
-extract: M still queued (see state/pending-extraction.json)
+extract: M still queued (see data/state/pending-extraction.json)
 ```
 
 It exits **0** whether or not anything drained. An entry stays queued when the
@@ -91,13 +91,13 @@ implemented and covered by `tests/test_extract.py`:
 - `extract()` returns `None` — never raises — on no token, rate limit, outage,
   unparseable JSON or schema-validation failure (fixture `x-07`).
 - a cache miss with no model appends `{url, cache_key, reason, queued_at}` to
-  `state/pending-extraction.json`, deduped on `cache_key` with `queued_at`
+  `data/state/pending-extraction.json`, deduped on `cache_key` with `queued_at`
   pinned to the first sighting, and the run succeeds.
-- cache entries are `cache/<key>.json`, byte-stable, where
+- cache entries are `data/cache/<key>.json`, byte-stable, where
   `key == sha256(content + prompt_version + model_id)`. `cache_key` is
   unchanged from the foundation: the Tier-3 source key derives from the same
   normalised content, and the adapters and the reconciler have to agree.
-- `state/last-run.json` carries real `cache.hits`, `cache.misses` and
+- `data/state/last-run.json` carries real `cache.hits`, `cache.misses` and
   `pending_extraction`.
 - no more than `MAX_EXTRACTIONS` model calls per invocation.
 - content reaching `extract()` is `trafilatura` main content through
@@ -165,7 +165,7 @@ a page rewrite mints a new key; a pin found only by content would be reverted
 by the next site refresh without anybody noticing. `find_pin` looks it up by
 URL, `lookup_cache(..., url=…)` serves it whatever the page says today, and when
 the content hash no longer matches `pin_source_key` **the pin holds and a
-`pin_notice` fires** into `state/last-run.json` so a human revisits it.
+`pin_notice` fires** into `data/state/last-run.json` so a human revisits it.
 
 Check for held pins in the monthly read:
 

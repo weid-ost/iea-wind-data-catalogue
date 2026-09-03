@@ -41,10 +41,10 @@ roughly fifteen pages a week. That does not need to be automated.
    at all ([[adr-0025-the-extraction-cache-is-committed]]).
 3. **On a cache miss with no working model**, `harvest.extract.extract` returns
    **`None`** — not an exception. `None` is not an error. The caller appends the
-   page to `state/pending-extraction.json` via
+   page to `data/state/pending-extraction.json` via
    `harvest.extract.queue_pending` and moves on. **`extract()` must never raise
    for an LLM-side reason.** Fixture
-   `fixtures/cross-cutting/x-07-cache-miss-no-llm` exists to hold this line, and
+   `data/fixtures/cross-cutting/x-07-cache-miss-no-llm` exists to hold this line, and
    `tests/test_extract.py::TestTheQueue` drives it: the page it holds is
    deliberately unclassifiable by pattern, so it escalates, and Tier 3 then has
    neither a cache entry nor a credential. This stopped being hypothetical on
@@ -53,7 +53,7 @@ roughly fifteen pages a week. That does not need to be automated.
    live harvest takes exactly this path today, and reports `ok: true`.
 4. **The run succeeds.** The site renders normally; only new task-site records
    stop appearing.
-5. **The backlog is visible.** `state/last-run.json` → `pending_extraction`
+5. **The backlog is visible.** `data/state/last-run.json` → `pending_extraction`
    carries the queue length, and the site shows it next to the freshness banner
    ([[adr-0029-scheduling-and-the-heartbeat-commit]]).
 6. **The queue is drained by a human, whenever they care** — monthly, quarterly,
@@ -68,7 +68,7 @@ cost nothing and neither requires an account anyone has to administer.
 
 The same rule generalises to the rest of the harvest, and `run_adapter`
 implements it: an unreachable source, an auth wall, an upstream schema change or
-a 500 becomes a line in the `SourceResult` and then in `state/last-run.json`,
+a 500 becomes a line in the `SourceResult` and then in `data/state/last-run.json`,
 and the other six sources finish (fixtures `wdh-07`, `iea-12`). **An exception
 escaping `run_adapter` is a bug in `run_adapter`.**
 
@@ -87,7 +87,7 @@ escaping `run_adapter` is a bug in `run_adapter`.**
 
 - Silent partial coverage. The mitigation is that the backlog is a number on the
   homepage rather than a line in a log, and that
-  `state/last-run.json` → `unreachable_sources` is rendered as an honest
+  `data/state/last-run.json` → `unreachable_sources` is rendered as an honest
   degradation notice.
 - "Never fails" makes genuine bugs harder to notice, because everything is a
   report rather than an exit code. The countermeasure is that the run report is

@@ -37,7 +37,7 @@ years.
 | compute | GitHub Actions, free on a public repo, built-in `GITHUB_TOKEN` |
 | hosting + TLS + custom domain | GitHub Pages, included |
 | database | there is none |
-| object storage | there is none — `records/` and `cache/` are in the repo |
+| object storage | there is none — `data/records/` and `data/cache/` are in the repo |
 | LLM inference in CI | GitHub Models via the built-in `GITHUB_TOKEN` with `permissions: models: read` — **no PAT, no API key, no repo secret, no vendor account, no card** |
 | GitHub API rate limit for the harvest | the same built-in `GITHUB_TOKEN` (5,000/hr rather than 60/hr) |
 | LLM inference for a local backfill or queue drain | **the operator's own key**, in their own shell, never in the repo |

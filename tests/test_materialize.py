@@ -53,7 +53,7 @@ class TestCkanShape:
         result = materialize_all(root=repo)
         assert result.ok, result.violations
 
-        package = json.loads((repo / "records" / "doi-10-5281-zenodo-1234.json").read_text())
+        package = json.loads((repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text())
         assert package["name"] == "doi-10-5281-zenodo-1234"
         assert package["title"] == SOURCE["title"]
         assert package["license_id"] == "cc-by"
@@ -67,7 +67,7 @@ class TestCkanShape:
         annotate(KEY, {"iea_task": ["task-43"]}, events_dir=events_dir,
                  observed_at="2026-01-02T00:00:00Z")
         materialize_all(root=repo)
-        package = json.loads((repo / "records" / "doi-10-5281-zenodo-1234.json").read_text())
+        package = json.loads((repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text())
         assert all(isinstance(extra["value"], str) for extra in package["extras"])
 
     def test_structured_extras_are_json_in_a_string(self, repo: Path, events_dir: Path) -> None:
@@ -75,7 +75,7 @@ class TestCkanShape:
         annotate(KEY, {"iea_task": ["task-49", "task-43"]}, events_dir=events_dir,
                  observed_at="2026-01-02T00:00:00Z")
         materialize_all(root=repo)
-        package = json.loads((repo / "records" / "doi-10-5281-zenodo-1234.json").read_text())
+        package = json.loads((repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text())
         extras = {extra["key"]: extra["value"] for extra in package["extras"]}
         assert json.loads(extras["iea_task"]) == ["task-43", "task-49"]   # sorted
         assert json.loads(extras["source_urls"]) == [SOURCE["url"]]
@@ -95,7 +95,7 @@ class TestCkanShape:
             events_dir=events_dir, observed_at="2026-01-02T00:00:00Z",
         )
         materialize_all(root=repo)
-        package = json.loads((repo / "records" / "doi-10-5281-zenodo-1234.json").read_text())
+        package = json.loads((repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text())
         extras = {extra["key"]: extra["value"] for extra in package["extras"]}
         assert package["license_id"] == "cc-by", "the source value is displayed verbatim"
         note = json.loads(extras["curator_notes"])[0]
@@ -115,7 +115,7 @@ class TestCkanShape:
             events_dir=events_dir, observed_at="2026-01-01T00:00:00Z",
         )
         materialize_all(root=repo)
-        package = json.loads((repo / "records" / "doi-10-5281-zenodo-1234.json").read_text())
+        package = json.loads((repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text())
         extras = {extra["key"]: extra["value"] for extra in package["extras"]}
         provenance = json.loads(extras["provenance"])
         assert provenance["title"] == {"extraction_method": "api", "source_system": "zenodo"}
@@ -128,7 +128,7 @@ class TestCkanShape:
         result = materialize_all(root=repo)
         assert result.ok
         assert result.unmapped_licenses[0]["license_raw"] == "Free for academic use"
-        package = json.loads((repo / "records" / "doi-10-5281-zenodo-1234.json").read_text())
+        package = json.loads((repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text())
         assert package["license_id"] == "notspecified"
 
     def test_diacritics_survive_in_display_and_transliterate_in_the_slug(
@@ -137,9 +137,9 @@ class TestCkanShape:
         """zen-10, from both ends."""
         seed(events_dir)
         materialize_all(root=repo)
-        text = (repo / "records" / "doi-10-5281-zenodo-1234.json").read_text(encoding="utf-8")
+        text = (repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text(encoding="utf-8")
         assert "Østerild" in text and "Søren" in text
-        assert (repo / "records" / "doi-10-5281-zenodo-1234.json").exists()
+        assert (repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").exists()
 
 
 class TestByteStability:
@@ -148,10 +148,10 @@ class TestByteStability:
         annotate(KEY, {"iea_task": ["task-43"]}, events_dir=events_dir,
                  observed_at="2026-01-02T00:00:00Z")
         materialize_all(root=repo)
-        first = (repo / "records" / "doi-10-5281-zenodo-1234.json").read_bytes()
+        first = (repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_bytes()
 
         second_result = materialize_all(root=repo)
-        second = (repo / "records" / "doi-10-5281-zenodo-1234.json").read_bytes()
+        second = (repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_bytes()
 
         assert first == second
         assert second_result.written == [], "an unchanged record must not be rewritten"
@@ -160,10 +160,10 @@ class TestByteStability:
     def test_rebuilding_from_scratch_reproduces_the_same_bytes(
         self, repo: Path, events_dir: Path
     ) -> None:
-        """records/ is derived: delete it and it comes back identical."""
+        """data/records/ is derived: delete it and it comes back identical."""
         seed(events_dir)
         materialize_all(root=repo)
-        path = repo / "records" / "doi-10-5281-zenodo-1234.json"
+        path = repo / "data" / "records" / "doi-10-5281-zenodo-1234.json"
         original = path.read_bytes()
         path.unlink()
         materialize_all(root=repo)
@@ -202,7 +202,7 @@ class TestWithdrawalAndPruning:
         withdraw(KEY, "zenodo", events_dir=events_dir, observed_at="2026-03-01T00:00:00Z")
         result = materialize_all(root=repo)
 
-        path = repo / "records" / "doi-10-5281-zenodo-1234.json"
+        path = repo / "data" / "records" / "doi-10-5281-zenodo-1234.json"
         assert path.exists()
         assert result.pruned == []
         package = json.loads(path.read_text())
@@ -214,19 +214,19 @@ class TestWithdrawalAndPruning:
     def test_a_record_with_no_events_is_pruned(self, repo: Path, events_dir: Path) -> None:
         seed(events_dir)
         materialize_all(root=repo)
-        (repo / "records" / "orphan.json").write_text('{"name": "orphan"}\n')
+        (repo / "data" / "records" / "orphan.json").write_text('{"name": "orphan"}\n')
         result = materialize_all(root=repo)
         assert result.pruned == ["orphan"]
-        assert not (repo / "records" / "orphan.json").exists()
+        assert not (repo / "data" / "records" / "orphan.json").exists()
 
     def test_pruning_can_be_disabled(self, repo: Path, events_dir: Path) -> None:
         seed(events_dir)
-        (repo / "records" / "orphan.json").write_text(
+        (repo / "data" / "records" / "orphan.json").write_text(
             '{"name": "orphan", "title": "T", "license_id": "notspecified"}\n'
         )
         result = materialize_all(root=repo, prune=False)
         assert result.pruned == []
-        assert (repo / "records" / "orphan.json").exists()
+        assert (repo / "data" / "records" / "orphan.json").exists()
 
 
 class TestValidationIsRunOnMaterialise:
@@ -235,7 +235,7 @@ class TestValidationIsRunOnMaterialise:
     ) -> None:
         """scrape-02: an unknown task must not wedge every future run.
 
-        ``events/`` is append-only, so a group name the register does not know
+        ``data/events/`` is append-only, so a group name the register does not know
         would fail the CKAN gate on this run *and on every run after it* —
         blocking the deploy until a human edited ``groups.yaml``. A Zenodo
         community slug is enough to trigger that, and anyone can make one. So
@@ -254,7 +254,7 @@ class TestValidationIsRunOnMaterialise:
             notice["type"] == "unknown_group" and notice["group"] == "task-999"
             for notice in result.notices
         )
-        package = json.loads((repo / "records" / "doi-10-5281-zenodo-1234.json").read_text())
+        package = json.loads((repo / "data" / "records" / "doi-10-5281-zenodo-1234.json").read_text())
         assert package["groups"] == []
         extras = {extra["key"]: extra["value"] for extra in package["extras"]}
         assert "task-999" in extras["iea_task"]
@@ -267,12 +267,12 @@ class TestValidationIsRunOnMaterialise:
 
         seed(events_dir)
         materialize_all(root=repo)
-        path = repo / "records" / "doi-10-5281-zenodo-1234.json"
+        path = repo / "data" / "records" / "doi-10-5281-zenodo-1234.json"
         package = json.loads(path.read_text())
         package["groups"] = [{"name": "task-999"}]
         path.write_text(json.dumps(package), encoding="utf-8")
 
-        violations = validate_records(repo / "records", root=repo)
+        violations = validate_records(repo / "data" / "records", root=repo)
 
         assert any("task-999" in str(v) for v in violations)
 
@@ -315,7 +315,7 @@ class TestValidationIsRunOnMaterialise:
         result = materialize_all(root=repo)
 
         assert result.ok, result.violations
-        written = {path.stem for path in (repo / "records").glob("*.json")}
+        written = {path.stem for path in (repo / "data" / "records").glob("*.json")}
         assert written == {"zenodo-a-b", disambiguated_slug("zenodo|a-b")}
 
     def test_a_misnamed_hand_written_log_is_read_and_reported(
@@ -340,7 +340,7 @@ class TestValidationIsRunOnMaterialise:
         result = materialize_all(root=repo)
 
         assert result.ok, result.violations
-        assert {path.stem for path in (repo / "records").glob("*.json")} == {
+        assert {path.stem for path in (repo / "data" / "records").glob("*.json")} == {
             "zenodo-a-b", "zenodo-a-b-2"
         }
         assert any(

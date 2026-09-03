@@ -1,4 +1,4 @@
-"""``fixtures/cross-cutting/`` — every fixture, replayed end to end.
+"""``data/fixtures/cross-cutting/`` — every fixture, replayed end to end.
 
 Each fixture's ``raw/<id>.json`` holds the **inputs**: a hand-written event
 stream, optionally the curator YAML a human would have written, optionally the
@@ -67,23 +67,23 @@ def build_root(tmp_path: Path) -> Path:
     for name in ("organizations.yaml", "groups.yaml", "sources.yaml"):
         shutil.copy(REAL_ROOT / name, root / name)
     for name in ("events", "records", "annotations", "state"):
-        (root / name).mkdir()
+        (root / "data" / name).mkdir(parents=True)
     return root
 
 
 def replay(raw: dict, root: Path) -> Path:
     """Append the fixture's events, replaying its annotations at the declared point."""
-    events_dir = root / "events"
+    events_dir = root / "data" / "events"
     annotations = raw.get("annotations_yaml")
     cut = raw.get("annotations_applied_before_event_index")
 
     def apply_now() -> None:
         if annotations is None:
             return
-        (root / "annotations" / "sample.yaml").write_text(
+        (root / "data" / "annotations" / "sample.yaml").write_text(
             yaml.safe_dump(annotations, sort_keys=False), encoding="utf-8"
         )
-        outcome = apply_annotations(root / "annotations", events_dir, root=root)
+        outcome = apply_annotations(root / "data" / "annotations", events_dir, root=root)
         assert not outcome.errors, outcome.errors
         assert outcome.applied, "the fixture's annotations must actually apply"
 
@@ -100,11 +100,11 @@ def replay(raw: dict, root: Path) -> Path:
 
 
 def materialised(root: Path) -> dict[str, dict]:
-    result = materialize_all(root / "events", root / "records", root=root)
+    result = materialize_all(root / "data" / "events", root / "data" / "records", root=root)
     assert not result.violations, [str(v) for v in result.violations]
     return {
         path.stem: json.loads(path.read_text(encoding="utf-8"))
-        for path in sorted((root / "records").glob("*.json"))
+        for path in sorted((root / "data" / "records").glob("*.json"))
     }
 
 
@@ -117,7 +117,7 @@ def notices_for(root: Path, keys: list[str]) -> list[dict]:
     """
     out: list[dict] = []
     for key in keys:
-        out.extend(resolve(key, events_dir=root / "events").notices)
+        out.extend(resolve(key, events_dir=root / "data" / "events").notices)
     return out
 
 
@@ -141,16 +141,16 @@ class TestEveryCrossCuttingFixture:
         root = build_root(tmp_path)
         replay(raw, root)
         materialised(root)
-        assert validate_records(root / "records", root=root) == []
+        assert validate_records(root / "data" / "records", root=root) == []
 
     def test_materialisation_is_byte_stable(self, fixture_id: str, tmp_path: Path) -> None:
         fixture, raw = load(fixture_id)
         root = build_root(tmp_path)
         replay(raw, root)
         materialised(root)
-        before = {p.name: p.read_text(encoding="utf-8") for p in (root / "records").glob("*.json")}
+        before = {p.name: p.read_text(encoding="utf-8") for p in (root / "data" / "records").glob("*.json")}
         materialised(root)
-        after = {p.name: p.read_text(encoding="utf-8") for p in (root / "records").glob("*.json")}
+        after = {p.name: p.read_text(encoding="utf-8") for p in (root / "data" / "records").glob("*.json")}
         assert after == before
 
     def test_the_dedupe_outcome_matches(self, fixture_id: str, tmp_path: Path) -> None:
@@ -182,7 +182,7 @@ class TestEveryCrossCuttingFixture:
         replay(raw, root)
         records = materialised(root)
 
-        report = check_records(root / "records", FakeHttp(raw["http_responses"]), root=root)
+        report = check_records(root / "data" / "records", FakeHttp(raw["http_responses"]), root=root)
         expected = fixture["expected_link_check"]
         assert sorted(report.dead_urls) == expected["dead_urls"]
         assert report.dead_by_record() == expected["dead_by_record"]
@@ -322,7 +322,7 @@ class TestX08EndToEnd:
 
     ``x-08`` is a record CKAN would refuse. It is a *fixture*, never a committed
     record: the point of the CKAN-compat gate is that such a thing can never
-    reach ``records/`` unnoticed.
+    reach ``data/records/`` unnoticed.
     """
 
     def test_it_is_not_and_never_becomes_a_committed_record(self) -> None:
@@ -342,11 +342,11 @@ class TestX08EndToEnd:
         )
         # The filename stem must be legal even though the record's name is not,
         # or the file could never have been written by materialize in the first place.
-        (repo / "records" / "x-08-ckan-invalid.json").write_text(
+        (repo / "data" / "records" / "x-08-ckan-invalid.json").write_text(
             json.dumps(fixture["record"], indent=2), encoding="utf-8"
         )
 
-        violations = validate_records(repo / "records", root=repo)
+        violations = validate_records(repo / "data" / "records", root=repo)
         fields = {violation.field for violation in violations}
         assert {"name", "license_id", "tags[0]", "owner_org", "groups[0]", "state"} <= fields
         assert any("must be a string" in v.message for v in violations)
@@ -360,15 +360,15 @@ class TestX08EndToEnd:
         _, raw = load("x-01-four-way-merge")
         for payload in raw["events"]:
             event = Event.model_validate(payload)
-            append_event(event.identity_key, event, repo / "events")
-        materialize_all(repo / "events", repo / "records", root=repo)
+            append_event(event.identity_key, event, repo / "data" / "events")
+        materialize_all(repo / "data" / "events", repo / "data" / "records", root=repo)
         assert main(["--root", str(repo), "validate"]) == 0
 
 
 class TestDefensiveLimits:
     """scrape-07 / scrape-11: nothing upstream may inflate this repository.
 
-    ``events/*.jsonl`` and ``records/*.json`` are committed on every change and
+    ``data/events/*.jsonl`` and ``data/records/*.json`` are committed on every change and
     then rendered as HTML and indexed by Pagefind. With no cap anywhere, one
     upstream description of ten million characters produced a 10 MB event line,
     a 10 MB record, a 10 MB page and a Pagefind entry to match — and the CKAN
@@ -430,12 +430,12 @@ class TestDefensiveLimits:
             {"title": "T", "url": "https://example.org/1",
              "notes": "A" * 10_000_000,
              "keywords": [f"kw-{n}" for n in range(5000)]},
-            events_dir=root / "events", observed_at="2026-01-01T00:00:00Z",
+            events_dir=root / "data" / "events", observed_at="2026-01-01T00:00:00Z",
         )
 
-        result = materialize_all(root / "events", root / "records", root=root)
+        result = materialize_all(root / "data" / "events", root / "data" / "records", root=root)
 
         assert not result.violations, [str(v) for v in result.violations]
-        record = root / "records" / "doi-10-5281-zenodo-1.json"
+        record = root / "data" / "records" / "doi-10-5281-zenodo-1.json"
         assert record.stat().st_size < 1_000_000
-        assert (root / "events" / "doi-10-5281-zenodo-1.jsonl").stat().st_size < 1_000_000
+        assert (root / "data" / "events" / "doi-10-5281-zenodo-1.jsonl").stat().st_size < 1_000_000

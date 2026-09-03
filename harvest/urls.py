@@ -14,7 +14,7 @@ applied at three depths:
 2. **On merge** — :func:`harvest.dedupe.apply_merge` re-filters what it copies
    from a secondary record onto a primary.
 3. **At the gate** — ``validate-ckan-compat`` re-asserts it on ``url`` and
-   ``resources[].url``, so a hand-edited ``records/*.json`` is refused too.
+   ``resources[].url``, so a hand-edited ``data/records/*.json`` is refused too.
 
 Dropping an unsafe URL is not an edit of source metadata (ADR-0038): the
 verbatim value stays in the event log, exactly as a ``<script>`` tag stripped

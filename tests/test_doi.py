@@ -148,7 +148,7 @@ class TestATrailingSlashIsNotAnIdentity:
     set, so ``10.5281/zenodo.4549875/`` — the spelling you get by copying a
     browser URL — normalised to a *distinct identity key*. DataCite answers 200
     for it, so resolve-or-drop waved it through; its slug is byte-identical to
-    the clean DOI's, so it claimed ``events/doi-10-5281-zenodo-4549875.jsonl``;
+    the clean DOI's, so it claimed ``data/events/doi-10-5281-zenodo-4549875.jsonl``;
     and from then on the real record could never be written, because
     ``append_event``'s collision guard refused it. One citation on one task page
     was enough to delete a record from the catalogue.

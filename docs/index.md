@@ -37,7 +37,7 @@ If you are about to change something:
 5. `harvest/CONTRACT.md` — the interface document the code is written against.
    Where this vault and `CONTRACT.md` disagree about the code, `CONTRACT.md`
    and then the code win; fix the vault in the same change.
-6. `fixtures/fixtures-catalogue.md` — new behaviour requires a new fixture.
+6. `data/fixtures/fixtures-catalogue.md` — new behaviour requires a new fixture.
 
 If you want to know *why*:
 
@@ -58,16 +58,16 @@ If you want to know *why*:
 | `schema/ckan-scheming.json` | the written definition of the custom fields; CKAN needs it on promotion day | with `EXTRA_KEYS` |
 | `harvest/` | adapters, event log, materialiser, CKAN gate, extraction stub | the harvest tracks |
 | `harvest/CONTRACT.md` | **the interface document** — read before writing an adapter | whoever finds it ambiguous |
-| `events/` | **the source of truth.** Append-only JSONL, one file per identity | never by hand, except deliberately |
-| `records/` | derived CKAN package dicts. Delete them and `make materialize` rebuilds them | never — it is generated |
-| `annotations/` | the human-readable record of curatorial intent. Holds no samples on purpose, so a non-zero pending count always means something | curator |
-| `docs/examples/annotations/` | the three worked annotation templates, one per identity kind — copy into `annotations/` and repoint the key | everyone |
-| `cache/` | committed LLM extraction cache, content-hash keyed | generated, committed |
-| `state/last-run.json` | the run report **and** the cron heartbeat | generated every run |
-| `state/pending-extraction.json` | Tier-3 cache misses waiting for someone with a key | generated |
+| `data/events/` | **the source of truth.** Append-only JSONL, one file per identity | never by hand, except deliberately |
+| `data/records/` | derived CKAN package dicts. Delete them and `make materialize` rebuilds them | never — it is generated |
+| `data/annotations/` | the human-readable record of curatorial intent. Holds no samples on purpose, so a non-zero pending count always means something | curator |
+| `docs/examples/annotations/` | the three worked annotation templates, one per identity kind — copy into `data/annotations/` and repoint the key | everyone |
+| `data/cache/` | committed LLM extraction cache, content-hash keyed | generated, committed |
+| `data/state/last-run.json` | the run report **and** the cron heartbeat | generated every run |
+| `data/state/pending-extraction.json` | Tier-3 cache misses waiting for someone with a key | generated |
 | `site/` | the Astro renderer and the Pagefind index build | the site track |
 | `design/` | DTCG tokens, the derivation script, the design system | with `design/gen.py` re-run |
-| `fixtures/` | test and gallery fixtures; the catalogue is the specification | every harvest change |
+| `data/fixtures/` | test and gallery fixtures; the catalogue is the specification | every harvest change |
 | `docs/` | this vault | everyone |
 | `plans/` | the two plan documents. Historical record + binding architecture | not without a decision |
 
@@ -83,7 +83,7 @@ Twenty ADRs, 0020–0039, expanded from `plans/02-static-plan.md` §8. ADRs
 
 - [[adr-0020-aggregation-only]] — the catalogue asks nothing of anyone
 - [[adr-0021-canonical-record-is-a-ckan-package-dict]] — the promotion contract
-- [[adr-0037-events-are-the-source-of-truth]] — `events/` is truth, `records/` derived
+- [[adr-0037-events-are-the-source-of-truth]] — `data/events/` is truth, `data/records/` derived
 - [[adr-0038-source-metadata-is-never-updated-only-annotated]] — the two namespaces
 - [[adr-0026-change-detection-by-source-key]] — one change token per source
 - [[adr-0027-withdrawn-records-are-retained]] — link rot is the enemy
@@ -123,7 +123,7 @@ your job to update it.
 
 - [[local-dev-setup]] — clone to green test suite
 - [[run-a-harvest-locally]] — including the record cap and how to lift it
-- [[materialize-and-validate]] — rebuild `records/` and pass the CKAN gate
+- [[materialize-and-validate]] — rebuild `data/records/` and pass the CKAN gate
 - [[run-the-site-locally]] — `site/` build and dev server
 
 **Changing things**

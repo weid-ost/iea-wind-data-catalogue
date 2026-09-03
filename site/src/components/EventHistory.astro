@@ -3,7 +3,7 @@
  * The event log for this record, as a real list with meaningful text rather
  * than icon soup (design §6).
  *
- * `events/` is the source of truth and `records/` is derived from it
+ * `data/events/` is the source of truth and `data/records/` is derived from it
  * (ADR-0037), so this is the audit trail: when we first saw the artifact, every
  * time upstream changed, every local annotation, and the withdrawal if there
  * was one. Append-only and append-on-change — a run in which nothing changed
@@ -40,7 +40,7 @@ const ordered = [...events].sort((a, b) =>
 
   {ordered.length === 0 ? (
     <p class="secondary">
-      No event log is available for this record in this checkout. `events/` is the
+      No event log is available for this record in this checkout. `data/events/` is the
       source of truth; run <code>make harvest</code> to populate it.
       {firstSeen && <> First seen {formatDate(firstSeen)}.</>}
       {lastSeen && <> Last confirmed {formatDate(lastSeen)}.</>}

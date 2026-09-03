@@ -1,5 +1,5 @@
 /**
- * `state/last-run.json` — the heartbeat the harvest writes on every run
+ * `data/state/last-run.json` — the heartbeat the harvest writes on every run
  * (ADR-0029), and the only reason anyone finds out the catalogue has gone
  * quiet. Plan §3.3.3: "Nobody checks a CI dashboard for a dormant project; a
  * stale banner on the front page is seen by whoever next visits."
@@ -42,7 +42,7 @@ export interface Freshness {
 }
 
 export function readLastRun(): LastRun | undefined {
-  const path = join(repoRoot, 'state', 'last-run.json');
+  const path = join(repoRoot, 'data', 'state', 'last-run.json');
   if (!existsSync(path)) return undefined;
   try {
     return JSON.parse(readFileSync(path, 'utf8')) as LastRun;
@@ -70,7 +70,7 @@ export function freshness(lastRun = readLastRun(), now = new Date()): Freshness 
 }
 
 /**
- * `state/link-check.json` — what `harvest linkcheck` last found.
+ * `data/state/link-check.json` — what `harvest linkcheck` last found.
  *
  * Link rot is the failure mode a catalogue exists to fight, so the result is
  * rendered on the record it belongs to rather than left in a state file nobody
@@ -94,7 +94,7 @@ export interface LinkCheck {
 }
 
 export function readLinkCheck(): LinkCheck | undefined {
-  const path = join(repoRoot, 'state', 'link-check.json');
+  const path = join(repoRoot, 'data', 'state', 'link-check.json');
   if (!existsSync(path)) return undefined;
   try {
     return JSON.parse(readFileSync(path, 'utf8')) as LinkCheck;
@@ -111,9 +111,9 @@ export function deadLinksFor(name: string, check = readLinkCheck()): DeadLink[] 
   return urls.map((url) => byUrl.get(url) ?? { url });
 }
 
-/** The event log for one record, if `events/` has been populated. */
+/** The event log for one record, if `data/events/` has been populated. */
 export function readEvents(slug: string): Record<string, unknown>[] {
-  const path = join(repoRoot, 'events', `${slug}.jsonl`);
+  const path = join(repoRoot, 'data', 'events', `${slug}.jsonl`);
   if (!existsSync(path)) return [];
   return readFileSync(path, 'utf8')
     .split('\n')
@@ -127,14 +127,14 @@ export function readEvents(slug: string): Record<string, unknown>[] {
     });
 }
 
-/** A rendering fixture from `fixtures/rendering/ui/` (r-07, r-08). */
+/** A rendering fixture from `data/fixtures/rendering/ui/` (r-07, r-08). */
 export function uiFixture<T>(id: string): T {
   return JSON.parse(
-    readFileSync(join(repoRoot, 'fixtures', 'rendering', 'ui', `${id}.json`), 'utf8')
+    readFileSync(join(repoRoot, 'data', 'fixtures', 'rendering', 'ui', `${id}.json`), 'utf8')
   ) as T;
 }
 
 export function hasRecords(): boolean {
-  const dir = join(repoRoot, 'records');
+  const dir = join(repoRoot, 'data', 'records');
   return existsSync(dir) && readdirSync(dir).some((f) => f.endsWith('.json'));
 }
