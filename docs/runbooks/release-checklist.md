@@ -135,7 +135,13 @@ was last done.
 Deployment is the harvest workflow, not a separate action: **build and deploy
 run in the same workflow run as the harvest**, because pushes made with
 `GITHUB_TOKEN` do not trigger further workflows. Trigger it with
-`workflow_dispatch` if you need it now.
+`workflow_dispatch` if you need it now. To publish what is already on `main`
+without harvesting (a site-only change, say), tick **skip_harvest**: build and
+deploy run alone. That path makes no heartbeat commit.
+
+The repository's Pages setting must be **GitHub Actions** (workflow-based
+deployment), not "deploy from a branch". The built site is a workflow
+artifact and is never committed.
 
 After deploying:
 

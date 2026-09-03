@@ -28,7 +28,6 @@ class TestSources:
         entry = config.load_sources()[name]
         assert isinstance(entry["enabled"], bool)
         assert entry["tier"] in (1, 2, 3)
-        assert entry["max_records"] == 5, "the prototype cap is five"
         assert entry["source_key"], "the change token's semantics must be documented"
         assert isinstance(entry["precedence"], int)
 

@@ -2,7 +2,7 @@
 
 An adapter does exactly two things, and deliberately not a third:
 
-``harvest(limit) -> Iterable[RawObservation]``
+``harvest(max_records) -> Iterable[RawObservation]``
     Talk to the source. Yield what it said, **verbatim**, wrapped with the
     identifiers and the change token. No interpretation, no cleaning.
 
@@ -18,8 +18,8 @@ inconsistently seven times.
 
 **Three rules an adapter must not break.**
 
-1. **The limit is honoured.** ``harvest(limit)`` yields at most ``limit``
-   observations. The default is five (see :data:`harvest.DEFAULT_LIMIT`).
+1. **``max_records`` is honoured.** ``harvest(max_records)`` yields at most that many
+   observations. The default is :data:`harvest.DEFAULT_MAX_RECORDS`.
 2. **Change detection is the source key** (ADR-0026). The adapter chooses the
    token and owns its semantics; ``run_adapter`` compares it and skips
    unchanged records **writing no event at all**. Where no trustworthy token
@@ -41,7 +41,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, ClassVar, Iterable, Iterator
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest import config as _config
 from harvest.events import has_changed, record_scrape
 from harvest.models import MappedObservation, RawObservation
@@ -93,7 +93,6 @@ class SourceConfig:
     name: str
     enabled: bool = True
     tier: int = 1
-    max_records: int = DEFAULT_LIMIT
     precedence: int | None = None
     source_key: str = ""            # human description of the key's semantics
     options: dict[str, Any] = field(default_factory=dict)
@@ -101,12 +100,11 @@ class SourceConfig:
     @classmethod
     def from_mapping(cls, name: str, mapping: dict[str, Any] | None) -> "SourceConfig":
         mapping = dict(mapping or {})
-        known = {"enabled", "tier", "max_records", "precedence", "source_key"}
+        known = {"enabled", "tier", "precedence", "source_key"}
         return cls(
             name=name,
             enabled=bool(mapping.get("enabled", True)),
             tier=int(mapping.get("tier", 1)),
-            max_records=int(mapping.get("max_records", DEFAULT_LIMIT)),
             precedence=mapping.get("precedence"),
             source_key=str(mapping.get("source_key", "")),
             options={k: v for k, v in mapping.items() if k not in known},
@@ -158,8 +156,8 @@ class Adapter(ABC):
 
     # -- the two methods every adapter implements --------------------------
     @abstractmethod
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
-        """Yield at most ``limit`` raw observations from the source."""
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
+        """Yield at most ``max_records`` raw observations from the source."""
 
     @abstractmethod
     def map(self, raw: RawObservation) -> MappedObservation:
@@ -219,18 +217,18 @@ def available_adapters() -> dict[str, type[Adapter]]:
     return dict(ADAPTERS)
 
 
-def _iter_limited(iterable: Iterable[RawObservation], limit: int) -> Iterator[RawObservation]:
+def _iter_capped(iterable: Iterable[RawObservation], max_records: int) -> Iterator[RawObservation]:
     """Enforce the cap even if an adapter forgets to."""
     for index, item in enumerate(iterable):
-        if index >= limit:
-            log.warning("adapter yielded more than the limit of %s; truncating", limit)
+        if index >= max_records:
+            log.warning("adapter yielded more than max_records=%s; truncating", max_records)
             return
         yield item
 
 
 def run_adapter(
     adapter: Adapter,
-    limit: int = DEFAULT_LIMIT,
+    max_records: int = DEFAULT_MAX_RECORDS,
     events_dir: Path | None = None,
     dry_run: bool = False,
 ) -> SourceResult:
@@ -247,7 +245,7 @@ def run_adapter(
         return result
 
     try:
-        observations = _iter_limited(adapter.harvest(limit=limit), limit)
+        observations = _iter_capped(adapter.harvest(max_records=max_records), max_records)
         for raw in observations:
             result.seen += 1
             try:

@@ -111,7 +111,7 @@ def adapter_with(responses: list[FetchResult], **options: object) -> DataCiteAda
         **options,
     }
     return DataCiteAdapter(
-        config=SourceConfig.from_mapping("datacite", {"max_records": 5, **settings}),
+        config=SourceConfig.from_mapping("datacite", {**settings}),
         client=FakeClient(responses),
     )
 
@@ -322,7 +322,7 @@ class TestFindableOnly:
     def test_harvest_skips_it_and_logs(self, caplog: pytest.LogCaptureFixture) -> None:
         adapter = adapter_with([listing("dc-01-canonical", "dc-04-non-findable")])
         with caplog.at_level(logging.WARNING, logger="harvest.adapters.datacite"):
-            observations = list(adapter.harvest(limit=5))
+            observations = list(adapter.harvest(max_records=5))
         assert [o.source_id for o in observations] == ["10.5281/zenodo.20218022"]
         assert any("registered" in record.getMessage() for record in caplog.records)
 
@@ -332,7 +332,7 @@ class TestFindableOnly:
         payload["attributes"]["state"] = state
         response = FetchResult(url="fake", status_code=200, changed=True,
                                text=json.dumps({"data": [payload]}))
-        assert list(adapter_with([response]).harvest(limit=5)) == []
+        assert list(adapter_with([response]).harvest(max_records=5)) == []
 
 
 # ---------------------------------------------------------------------------
@@ -372,7 +372,7 @@ class TestDoiCaseNormalisation:
         adapter = adapter_with(
             [listing("dc-01-canonical", "dc-05-case-variant", "dc-09-nonstandard-rights")]
         )
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
         assert [o.source_id for o in observations] == [
             "10.5281/zenodo.20218022",
             "10.2314/kxp:1790028361",
@@ -382,7 +382,7 @@ class TestDoiCaseNormalisation:
         events = tmp_path / "events"
         for fixture_id in ("dc-01-canonical", "dc-05-case-variant"):
             adapter = adapter_with([listing(fixture_id)])
-            run_adapter(adapter, limit=5, events_dir=events)
+            run_adapter(adapter, max_records=5, events_dir=events)
         identity = fixture_by_id("dc-01-canonical")["identity_key"]
         assert len(read_events(identity, events)) == 1
         assert len(list(events.glob("*.jsonl"))) == 1
@@ -404,7 +404,7 @@ class TestRelatedIdentifiers:
     def test_harvest_creates_no_record_for_any_target(self) -> None:
         fixture = fixture_by_id("dc-06-related-identifiers")
         adapter = adapter_with([listing("dc-06-related-identifiers")])
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
         assert [o.source_id for o in observations] == [fixture["identity_key"]]
 
         targets = {
@@ -467,7 +467,7 @@ class TestRights:
         events = tmp_path / "events"
         records = tmp_path / "records"
         run_adapter(adapter_with([listing("dc-09-nonstandard-rights")]),
-                    limit=5, events_dir=events)
+                    max_records=5, events_dir=events)
         outcome = materialize_all(events_directory=events, records_directory=records,
                                   validate=False)
         assert any("Open Access" in str(entry) for entry in outcome.unmapped_licenses)
@@ -508,15 +508,11 @@ class TestHarvest:
     def test_the_limit_is_honoured(self) -> None:
         ids = [f["fixture_id"] for f in ALL if f["findable"]]
         adapter = adapter_with([listing(*ids)], queries=['"IEA Wind Task"'])
-        assert len(list(adapter.harvest(limit=3))) == 3
-
-    def test_the_prototype_cap_is_five(self) -> None:
-        sources = config.load_sources()
-        assert sources["datacite"]["max_records"] == 5
+        assert len(list(adapter.harvest(max_records=3))) == 3
 
     def test_the_source_key_is_attributes_updated(self) -> None:
         adapter = adapter_with([listing("dc-01-canonical")])
-        observed = list(adapter.harvest(limit=5))[0]
+        observed = list(adapter.harvest(max_records=5))[0]
         payload = raw_payload(fixture_by_id("dc-01-canonical"))
         assert observed.source_key == DataCiteAdapter.source_key_for(payload)
         assert observed.payload == payload      # verbatim
@@ -526,7 +522,7 @@ class TestHarvest:
             [listing("dc-01-canonical"), listing("dc-09-nonstandard-rights")],
             queries=['"IEA Wind Task"', 'subjects.subject:"IEA Wind Task"'],
         )
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         assert len(adapter.client.urls) == 2
         assert all(url.startswith("https://api.datacite.org/dois?") for url in adapter.client.urls)
         assert "sort=-updated" in adapter.client.urls[0]
@@ -536,9 +532,9 @@ class TestHarvest:
                              error="connection reset")
         adapter = adapter_with([broken])
         with pytest.raises(SourceUnreachable):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
 
-        result = run_adapter(adapter_with([broken]), limit=5)
+        result = run_adapter(adapter_with([broken]), max_records=5)
         assert result.reachable is False
         assert result.errors and "connection reset" in result.errors[0]
 
@@ -548,18 +544,18 @@ class TestHarvest:
             [broken, listing("dc-01-canonical")],
             queries=['"IEA Wind Task"', '"IEA Wind TCP"'],
         )
-        assert len(list(adapter.harvest(limit=5))) == 1
+        assert len(list(adapter.harvest(max_records=5))) == 1
 
     def test_a_304_listing_yields_nothing_and_is_not_an_error(self) -> None:
         not_modified = FetchResult(url="fake", status_code=304, changed=False)
         adapter = adapter_with([not_modified])
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
 
     def test_a_malformed_body_is_survived(self) -> None:
         garbage = FetchResult(url="fake", status_code=200, changed=True, text="<html>nope")
         adapter = adapter_with([garbage, listing("dc-01-canonical")],
                                queries=["a", "b"])
-        assert len(list(adapter.harvest(limit=5))) == 1
+        assert len(list(adapter.harvest(max_records=5))) == 1
 
     def test_an_item_with_no_doi_is_skipped(self) -> None:
         payload = copy.deepcopy(raw_payload(fixture_by_id("dc-01-canonical")))
@@ -567,11 +563,11 @@ class TestHarvest:
         payload["id"] = ""
         response = FetchResult(url="fake", status_code=200, changed=True,
                                text=json.dumps({"data": [payload]}))
-        assert list(adapter_with([response]).harvest(limit=5)) == []
+        assert list(adapter_with([response]).harvest(max_records=5)) == []
 
     def test_no_queries_configured_yields_nothing_and_does_not_raise(self) -> None:
         adapter = adapter_with([], queries=[])
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
 
 
 # ---------------------------------------------------------------------------
@@ -592,7 +588,7 @@ class TestEndToEnd:
 
     def _run(self, tmp_path: Path, fixture_ids: list[str]):
         events = tmp_path / "events"
-        return run_adapter(adapter_with([listing(*fixture_ids)]), limit=5, events_dir=events)
+        return run_adapter(adapter_with([listing(*fixture_ids)]), max_records=5, events_dir=events)
 
     def test_a_second_identical_run_writes_no_event(self, tmp_path: Path) -> None:
         first = self._run(tmp_path, self.CAPPED)
@@ -611,7 +607,7 @@ class TestEndToEnd:
 
     def test_a_new_source_key_appends_exactly_one_event(self, tmp_path: Path) -> None:
         events = tmp_path / "events"
-        run_adapter(adapter_with([listing("dc-01-canonical")]), limit=5, events_dir=events)
+        run_adapter(adapter_with([listing("dc-01-canonical")]), max_records=5, events_dir=events)
 
         bumped = copy.deepcopy(raw_payload(fixture_by_id("dc-01-canonical")))
         bumped["attributes"]["updated"] = "2026-09-01T00:00:00Z"
@@ -619,7 +615,7 @@ class TestEndToEnd:
                                                    "Array Design (corrected)"}]
         response = FetchResult(url="fake", status_code=200, changed=True,
                                text=json.dumps({"data": [bumped]}))
-        run_adapter(adapter_with([response]), limit=5, events_dir=events)
+        run_adapter(adapter_with([response]), max_records=5, events_dir=events)
 
         identity = fixture_by_id("dc-01-canonical")["identity_key"]
         events_written = read_events(identity, events)
@@ -630,7 +626,7 @@ class TestEndToEnd:
     def test_records_pass_the_ckan_gate(self, tmp_path: Path) -> None:
         events = tmp_path / "events"
         records = tmp_path / "records"
-        run_adapter(adapter_with([listing(*self.CAPPED)]), limit=5, events_dir=events)
+        run_adapter(adapter_with([listing(*self.CAPPED)]), max_records=5, events_dir=events)
 
         outcome = materialize_all(events_directory=events, records_directory=records)
         assert outcome.violations == [], [str(v) for v in outcome.violations]
@@ -649,7 +645,7 @@ class TestEndToEnd:
     def test_materialisation_is_byte_stable(self, tmp_path: Path) -> None:
         events = tmp_path / "events"
         records = tmp_path / "records"
-        run_adapter(adapter_with([listing("dc-01-canonical")]), limit=5, events_dir=events)
+        run_adapter(adapter_with([listing("dc-01-canonical")]), max_records=5, events_dir=events)
         materialize_all(events_directory=events, records_directory=records)
         first = {p.name: p.read_bytes() for p in records.glob("*.json")}
         outcome = materialize_all(events_directory=events, records_directory=records)

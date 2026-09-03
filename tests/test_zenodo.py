@@ -578,7 +578,7 @@ class TestCommunitiesAndTasks:
             "communities=ieawindtask32": listing(payload),
             "communities=iea_wind_task_43": listing(payload),
         })
-        result = run_adapter(configured_adapter(client), limit=5, events_dir=events_dir)
+        result = run_adapter(configured_adapter(client), max_records=5, events_dir=events_dir)
         assert (result.seen, result.changed) == (1, 1)
         assert len(read_events("10.5281/zenodo.4562391", events_dir)) == 1
 
@@ -679,7 +679,7 @@ class TestTombstone:
         good = raw_payload(fixture_by_id("zen-05-restricted-access"))
         dead = dict(self.tombstone, id=5890532)
         client = FakeClient(pages={"communities=": listing(dead, good)})
-        result = run_adapter(configured_adapter(client), limit=5, events_dir=events_dir)
+        result = run_adapter(configured_adapter(client), max_records=5, events_dir=events_dir)
         assert result.seen == 1
         assert result.identity_keys == ["10.5281/zenodo.18967947"]
 
@@ -764,7 +764,7 @@ class TestHarvest:
     def test_it_yields_verbatim_payloads(self, events_dir: Path) -> None:
         payload = raw_payload(fixture_by_id("zen-05-restricted-access"))
         adapter = configured_adapter(FakeClient(pages={"communities=": listing(payload)}))
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
         assert len(observations) == 1
         assert observations[0].payload == payload          # verbatim, no cleaning
         assert observations[0].source_id == "21037963"
@@ -779,11 +779,11 @@ class TestHarvest:
             payload["conceptdoi"] = f"10.5281/zenodo.{80000000 + index}"
             payloads.append(payload)
         adapter = configured_adapter(FakeClient(pages={"communities=": listing(*payloads)}))
-        assert len(list(adapter.harvest(limit=5))) == 5
+        assert len(list(adapter.harvest(max_records=5))) == 5
 
     def test_it_asks_for_the_latest_version_of_each_concept_only(self) -> None:
         adapter = configured_adapter(FakeClient(pages={"communities=": listing()}))
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         assert adapter.client.calls
         for url in adapter.client.calls:
             assert url.startswith(ZENODO_API)
@@ -794,7 +794,7 @@ class TestHarvest:
         payload = raw_payload(fixture_by_id("zen-05-restricted-access"))
         client = FakeClient(pages={"communities=": listing(payload)})
         adapter = configured_adapter(client)
-        list(adapter.harvest(limit=1))
+        list(adapter.harvest(max_records=1))
         assert len(client.calls) == 1        # not all nine communities
 
     def test_a_total_failure_is_reported_as_unreachable_not_raised(
@@ -802,9 +802,9 @@ class TestHarvest:
     ) -> None:
         adapter = configured_adapter(FakeClient(failures={"zenodo.org": "DNS failure"}))
         with pytest.raises(SourceUnreachable, match="DNS failure"):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
         result = run_adapter(configured_adapter(
-            FakeClient(failures={"zenodo.org": "DNS failure"})), limit=5, events_dir=events_dir)
+            FakeClient(failures={"zenodo.org": "DNS failure"})), max_records=5, events_dir=events_dir)
         assert result.reachable is False and result.seen == 0
 
     def test_one_dead_community_does_not_cost_the_others(self, events_dir: Path) -> None:
@@ -813,30 +813,30 @@ class TestHarvest:
             pages={"communities=ieawindtask32": listing(payload)},
             failures={"communities=iea_wind_task_43": "HTTP 503"},
         )
-        result = run_adapter(configured_adapter(client), limit=5, events_dir=events_dir)
+        result = run_adapter(configured_adapter(client), max_records=5, events_dir=events_dir)
         assert result.reachable is True and result.changed == 1
 
     def test_a_garbled_body_does_not_crash_the_run(self, events_dir: Path) -> None:
         client = FakeClient(pages={"communities=": {"unexpected": "shape"}})
-        result = run_adapter(configured_adapter(client), limit=5, events_dir=events_dir)
+        result = run_adapter(configured_adapter(client), max_records=5, events_dir=events_dir)
         assert result.reachable is False and result.seen == 0
 
     def test_a_304_is_not_an_error(self, events_dir: Path) -> None:
         client = FakeClient(statuses={"communities=": 304})
-        result = run_adapter(configured_adapter(client), limit=5, events_dir=events_dir)
+        result = run_adapter(configured_adapter(client), max_records=5, events_dir=events_dir)
         assert result.reachable is True and result.seen == 0
 
     def test_it_never_touches_a_files_endpoint(self) -> None:
         """Metadata and links only — the catalogue never mirrors a file."""
         payload = raw_payload(fixture_by_id("zen-02-concept-vs-version"))
         client = FakeClient(pages={"communities=": listing(payload)})
-        list(configured_adapter(client).harvest(limit=5))
+        list(configured_adapter(client).harvest(max_records=5))
         assert not any("/files" in url or "/versions" in url for url in client.calls)
 
     def test_it_closes_only_the_client_it_opened(self) -> None:
         client = FakeClient(pages={"communities=": listing()})
         adapter = configured_adapter(client)
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         adapter.close()
         assert client.closed is False        # injected clients belong to the caller
 
@@ -849,9 +849,9 @@ class TestChangeDetectionEndToEnd:
         self, events_dir: Path
     ) -> None:
         payload = raw_payload(fixture_by_id("zen-02-concept-vs-version"))
-        first = run_adapter(configured_adapter(self._client(payload)), limit=5,
+        first = run_adapter(configured_adapter(self._client(payload)), max_records=5,
                             events_dir=events_dir)
-        second = run_adapter(configured_adapter(self._client(payload)), limit=5,
+        second = run_adapter(configured_adapter(self._client(payload)), max_records=5,
                              events_dir=events_dir)
         assert (first.seen, first.changed, first.skipped_unchanged) == (1, 1, 0)
         assert (second.seen, second.changed, second.skipped_unchanged) == (1, 0, 1)
@@ -860,8 +860,8 @@ class TestChangeDetectionEndToEnd:
     def test_a_new_version_under_the_same_concept_appends(self, events_dir: Path) -> None:
         earlier = raw_payload(fixture_by_id("zen-03-version-metadata-drift"))
         latest = raw_payload(fixture_by_id("zen-02-concept-vs-version"))
-        run_adapter(configured_adapter(self._client(earlier)), limit=5, events_dir=events_dir)
-        result = run_adapter(configured_adapter(self._client(latest)), limit=5,
+        run_adapter(configured_adapter(self._client(earlier)), max_records=5, events_dir=events_dir)
+        result = run_adapter(configured_adapter(self._client(latest)), max_records=5,
                              events_dir=events_dir)
         assert result.changed == 1
         events = read_events("10.5281/zenodo.4549875", events_dir)
@@ -870,10 +870,10 @@ class TestChangeDetectionEndToEnd:
 
     def test_a_no_op_run_leaves_the_event_file_byte_identical(self, events_dir: Path) -> None:
         payload = raw_payload(fixture_by_id("zen-02-concept-vs-version"))
-        run_adapter(configured_adapter(self._client(payload)), limit=5, events_dir=events_dir)
+        run_adapter(configured_adapter(self._client(payload)), max_records=5, events_dir=events_dir)
         path = events_dir / "doi-10-5281-zenodo-4549875.jsonl"
         before = path.read_bytes()
-        run_adapter(configured_adapter(self._client(payload)), limit=5, events_dir=events_dir)
+        run_adapter(configured_adapter(self._client(payload)), max_records=5, events_dir=events_dir)
         assert path.read_bytes() == before
 
 
@@ -893,7 +893,7 @@ class TestConfiguration:
     def test_the_configured_communities_are_used_in_order(self) -> None:
         client = FakeClient(pages={"communities=": listing()})
         adapter = configured_adapter(client)
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         declared = [entry["slug"] for entry in adapter.communities()]
         called = [url.split("communities=")[1].split("&")[0] for url in client.calls]
         assert called == declared
@@ -901,11 +901,8 @@ class TestConfiguration:
     def test_it_falls_back_to_verified_communities_with_no_config(self) -> None:
         client = FakeClient(pages={"communities=": listing()})
         adapter = ZenodoAdapter(client=client)
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         assert any("iea_wind_task_43" in url for url in client.calls)
-
-    def test_the_prototype_cap_is_still_five(self) -> None:
-        assert config.load_sources()["zenodo"]["max_records"] == 5
 
     def test_the_robots_opt_out_is_config_not_code(self) -> None:
         """zenodo.org/robots.txt disallows /api; see the adapter docstring."""

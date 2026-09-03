@@ -69,17 +69,17 @@ uv run python -m harvest sources
 `sources` prints one line per configured source. On a foundation-only checkout:
 
 ```
-crossref   tier 1  enabled  max 5   harvest.adapters.crossref.CrossrefAdapter
-datacite   tier 1  enabled  max 5   harvest.adapters.datacite.DataCiteAdapter
-github     tier 1  enabled  max 5   harvest.adapters.github.GitHubAdapter
-ieawind    tier 3  enabled  max 5   harvest.adapters.ieawind.IeaWindAdapter
-osti       tier 1  enabled  max 5   harvest.adapters.osti.OstiAdapter
-wdh        tier 2  enabled  max 5   harvest.adapters.wdh.WindDataHubAdapter
-zenodo     tier 1  enabled  max 5   harvest.adapters.zenodo.ZenodoAdapter
+crossref   tier 1  enabled  harvest.adapters.crossref.CrossrefAdapter
+datacite   tier 1  enabled  harvest.adapters.datacite.DataCiteAdapter
+github     tier 1  enabled  harvest.adapters.github.GitHubAdapter
+ieawind    tier 3  enabled  harvest.adapters.ieawind.IeaWindAdapter
+osti       tier 1  enabled  harvest.adapters.osti.OstiAdapter
+wdh        tier 2  enabled  harvest.adapters.wdh.WindDataHubAdapter
+zenodo     tier 1  enabled  harvest.adapters.zenodo.ZenodoAdapter
 ```
 
-Seven sources, `max 5` on every one — that is the prototype cap
-([[run-a-harvest-locally]] §2).
+Seven sources. The per-run record cap is `--max-records`, not a per-source
+setting ([[run-a-harvest-locally]] §2).
 
 Finally, confirm the gate runs:
 
@@ -104,7 +104,7 @@ make            # the help target — lists every command with its description
 | Command | Does |
 |---|---|
 | `make sync` | install the pinned environment (`uv sync --frozen --dev`) |
-| `make harvest` | harvest every enabled source (`LIMIT=5`) and materialise |
+| `make harvest` | harvest every enabled source (`MAX_RECORDS=N` overrides the default cap) and materialise |
 | `make materialize` | replay `events/` into `records/` |
 | `make validate` | the CKAN-compat gate alone |
 | `make test` | `uv run pytest` |
@@ -117,7 +117,7 @@ make            # the help target — lists every command with its description
 The underlying CLI, if you prefer it:
 
 ```sh
-uv run python -m harvest run [--source X] [--limit N] [--dry-run] [--no-materialize]
+uv run python -m harvest run [--source X] [--max-records N] [--dry-run] [--no-materialize]
 uv run python -m harvest materialize [--no-prune]
 uv run python -m harvest validate
 uv run python -m harvest extract [--limit N]

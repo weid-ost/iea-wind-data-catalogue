@@ -113,7 +113,7 @@ import re
 from typing import Any, Iterable, Iterator
 from urllib.parse import urlencode
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
 from harvest.doi import DoiDropLog, normalise_doi, resolve_or_drop
 from harvest.http import HarvestClient
@@ -664,20 +664,20 @@ class CrossrefAdapter(Adapter):
         return urls
 
     # -- harvest -----------------------------------------------------------
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
-        """Query Crossref and yield at most ``limit`` verbatim work items.
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
+        """Query Crossref and yield at most ``max_records`` verbatim work items.
 
         Degradation (fixture ``wdh-07``): a query that fails is logged and
         skipped. Only when **every** query fails does the source declare itself
         unreachable, so a single 500 costs one query, not the run.
         """
-        limit = max(0, int(limit))
-        if limit == 0:
+        max_records = max(0, int(max_records))
+        if max_records == 0:
             return
 
         client = self._open_client()
-        items = self._collect(client, limit)
-        for item in self._prefer_published(items, client, limit):
+        items = self._collect(client, max_records)
+        for item in self._prefer_published(items, client, max_records):
             doi = str(item.get("DOI", "")).strip()
             yield RawObservation(
                 source_system=self.source_name,
@@ -695,11 +695,11 @@ class CrossrefAdapter(Adapter):
             self._owns_client = True
         return self._client
 
-    def _collect(self, client: HarvestClient, limit: int) -> list[dict[str, Any]]:
+    def _collect(self, client: HarvestClient, max_records: int) -> list[dict[str, Any]]:
         """Run every configured query; dedupe by DOI, order preserved."""
         # A couple of spare rows per query so that dropping a preprint whose
         # published version is in the same batch does not cost us a record.
-        rows = min(int(self.config.get("rows") or 20), limit + 5)
+        rows = min(int(self.config.get("rows") or 20), max_records + 5)
         collected: dict[str, dict[str, Any]] = {}
         failures: list[str] = []
         urls = self._query_urls(rows)
@@ -729,7 +729,7 @@ class CrossrefAdapter(Adapter):
         return list(collected.values())
 
     def _prefer_published(
-        self, items: list[dict[str, Any]], client: HarvestClient, limit: int
+        self, items: list[dict[str, Any]], client: HarvestClient, max_records: int
     ) -> Iterator[dict[str, Any]]:
         """cr-04: one record per work, and it is the published one.
 
@@ -744,7 +744,7 @@ class CrossrefAdapter(Adapter):
         present = {normalise_doi(item.get("DOI")) for item in items}
         yielded = 0
         for item in items:
-            if yielded >= limit:
+            if yielded >= max_records:
                 return
             target = published_version_doi(item)
             if target is not None:

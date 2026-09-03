@@ -67,7 +67,7 @@ import re
 from typing import Any, Iterable
 from urllib.parse import urlencode
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
 from harvest.doi import DoiDropLog, normalise_doi, resolve_or_drop
 from harvest.http import HarvestClient
@@ -356,13 +356,13 @@ class OstiAdapter(Adapter):
             return entry_date
         return payload_hash({field: payload.get(field) for field in _HASH_FIELDS})
 
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
         client = self._http()
         seen: set[str] = set()
         yielded = 0
 
         for url in self._query_urls():
-            if yielded >= limit:
+            if yielded >= max_records:
                 return
             result = client.get(url)
             if not result.ok:
@@ -375,7 +375,7 @@ class OstiAdapter(Adapter):
                 raise SourceUnreachable(f"OSTI returned a body that is not JSON: {exc}") from exc
 
             for payload in self._records(body):
-                if yielded >= limit:
+                if yielded >= max_records:
                     return
                 osti_id = _osti_id(payload)
                 if not osti_id or osti_id in seen:

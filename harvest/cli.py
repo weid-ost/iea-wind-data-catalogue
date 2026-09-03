@@ -1,6 +1,6 @@
 """``python -m harvest`` — run, materialize, validate, extract, report.
 
-    uv run python -m harvest run [--source X] [--limit N]   # DEFAULT LIMIT: 5
+    uv run python -m harvest run [--source X] [--max-records N]
     uv run python -m harvest materialize
     uv run python -m harvest validate
     uv run python -m harvest annotations [--dry-run]
@@ -29,7 +29,7 @@ import logging
 import sys
 from pathlib import Path
 
-from harvest import DEFAULT_LIMIT, __version__, config
+from harvest import DEFAULT_MAX_RECORDS, __version__, config
 from harvest.adapters.base import (
     ADAPTERS,
     SourceConfig,
@@ -61,11 +61,8 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--source", action="append", default=None,
                      help="limit to one source (repeatable); default: all enabled")
     run.add_argument(
-        "--limit", type=int, default=DEFAULT_LIMIT,
-        help=(
-            f"max records per source. DEFAULT: {DEFAULT_LIMIT}. "
-            "This is a deliberate prototype cap — raise it consciously."
-        ),
+        "--max-records", type=int, default=DEFAULT_MAX_RECORDS, dest="max_records",
+        help=f"max records per source (default {DEFAULT_MAX_RECORDS})",
     )
     run.add_argument("--dry-run", action="store_true",
                      help="harvest and report, but append no events")
@@ -134,7 +131,7 @@ def cmd_run(args: argparse.Namespace) -> int:
     live cron committing beside it is the one failure nobody would notice.
     """
     root: Path | None = args.root
-    report = RunReport(limit=args.limit)
+    report = RunReport(max_records=args.max_records)
     from harvest import events as event_log
 
     event_log.reset_log_problems()
@@ -168,7 +165,6 @@ def _run_pipeline(args: argparse.Namespace, report: RunReport) -> int:
 
     for name in wanted:
         source_config = SourceConfig.from_mapping(name, sources.get(name))
-        limit = min(args.limit, source_config.max_records or args.limit)
         try:
             adapter_class = get_adapter(name)
         except Exception as exc:
@@ -180,7 +176,7 @@ def _run_pipeline(args: argparse.Namespace, report: RunReport) -> int:
         adapter = adapter_class(config=source_config)
         result = run_adapter(
             adapter,
-            limit=limit,
+            max_records=args.max_records,
             events_dir=config.events_dir(root),
             dry_run=args.dry_run,
         )
@@ -225,7 +221,7 @@ def _run_pipeline(args: argparse.Namespace, report: RunReport) -> int:
     if args.linkcheck:
         from harvest.linkcheck import check_records, write_link_report
 
-        link_report = check_records(root=root, limit=args.limit)
+        link_report = check_records(root=root, limit=args.max_records)
         write_link_report(link_report, root=root)
         report.add_notices(link_report.as_notices())
         log.info("%s", link_report.summary())
@@ -385,10 +381,7 @@ def cmd_sources(args: argparse.Namespace) -> int:
         adapter = ADAPTERS.get(name)
         state = "enabled" if source_config.enabled else "disabled"
         adapter_name = f"{adapter.__module__}.{adapter.__name__}" if adapter else "(no adapter)"
-        print(
-            f"{name:<10} tier {source_config.tier}  {state:<8} "
-            f"max {source_config.max_records:<3} {adapter_name}"
-        )
+        print(f"{name:<10} tier {source_config.tier}  {state:<8} {adapter_name}")
     return 0
 
 

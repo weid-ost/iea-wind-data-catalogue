@@ -122,7 +122,7 @@ class FakeOstiClient:
 
 
 def adapter_with(client: FakeOstiClient, **options) -> OstiAdapter:  # noqa: ANN003
-    mapping = {"enabled": True, "tier": 1, "max_records": 5,
+    mapping = {"enabled": True, "tier": 1,
                "api": "https://www.osti.gov/api/v1/records", **options}
     return OstiAdapter(config=SourceConfig.from_mapping("osti", mapping), client=client)
 
@@ -358,7 +358,7 @@ class TestOsti05ReportNumber:
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
         payload = payload_of("osti-05-report-number")
         client = FakeOstiClient(records=[payload])
-        result = run_adapter(adapter_with(client), limit=5, events_dir=repo / "events")
+        result = run_adapter(adapter_with(client), max_records=5, events_dir=repo / "events")
         assert result.changed == 1
 
         materialized = materialize_all(root=repo)
@@ -479,13 +479,13 @@ def synthetic(osti_id: str, doi: str | None = None, entry: str = "2026-01-01T00:
 class TestHarvest:
     def test_the_five_record_cap_is_honoured(self) -> None:
         client = FakeOstiClient(records=[synthetic(str(n)) for n in range(20)])
-        observations = list(adapter_with(client).harvest(limit=5))
+        observations = list(adapter_with(client).harvest(max_records=5))
         assert len(observations) == 5
 
     def test_payloads_are_yielded_verbatim(self) -> None:
         payload = payload_of("osti-01-canonical")
         client = FakeOstiClient(records=[payload], resolvable={"10.2172/2447928"})
-        observation = next(iter(adapter_with(client).harvest(limit=5)))
+        observation = next(iter(adapter_with(client).harvest(max_records=5)))
         assert observation.payload == payload
         assert observation.source_system == "osti"
         assert observation.source_id == "2447928"
@@ -498,40 +498,40 @@ class TestHarvest:
                    "second": [synthetic("2"), synthetic("3")]},
         )
         adapter = adapter_with(client, queries=["first", "second"])
-        ids = [observation.source_id for observation in adapter.harvest(limit=5)]
+        ids = [observation.source_id for observation in adapter.harvest(max_records=5)]
         assert ids == ["1", "2", "3"]
 
     def test_a_transport_failure_disables_the_source_cleanly(self, events_dir: Path) -> None:
         """wdh-07's pattern: report it, never crash the run."""
         client = FakeOstiClient(listing_error="connection reset")
-        result = run_adapter(adapter_with(client), limit=5, events_dir=events_dir)
+        result = run_adapter(adapter_with(client), max_records=5, events_dir=events_dir)
         assert result.reachable is False
         assert "connection reset" in result.errors[0]
 
     def test_an_http_error_raises_source_unreachable(self) -> None:
         client = FakeOstiClient(records=[], listing_status=503)
         with pytest.raises(SourceUnreachable, match="503"):
-            list(adapter_with(client).harvest(limit=5))
+            list(adapter_with(client).harvest(max_records=5))
 
     def test_a_non_json_body_raises_source_unreachable(self) -> None:
         client = FakeOstiClient(listing_body="<html>maintenance</html>")
         with pytest.raises(SourceUnreachable, match="not JSON"):
-            list(adapter_with(client).harvest(limit=5))
+            list(adapter_with(client).harvest(max_records=5))
 
     def test_an_unexpected_envelope_shape_yields_nothing_rather_than_crashing(self) -> None:
         client = FakeOstiClient(listing_body=json.dumps({"unexpected": "shape"}))
-        assert list(adapter_with(client).harvest(limit=5)) == []
+        assert list(adapter_with(client).harvest(max_records=5)) == []
 
     def test_an_envelope_around_the_array_is_tolerated(self) -> None:
         client = FakeOstiClient(listing_body=json.dumps({"records": [synthetic("7")]}))
-        assert [o.source_id for o in adapter_with(client).harvest(limit=5)] == ["7"]
+        assert [o.source_id for o in adapter_with(client).harvest(max_records=5)] == ["7"]
 
 
 class TestResolveOrDrop:
     def test_a_resolving_doi_is_kept(self) -> None:
         client = FakeOstiClient(records=[synthetic("1", "10.2172/1")],
                                 resolvable={"10.2172/1"})
-        observations = list(adapter_with(client).harvest(limit=5))
+        observations = list(adapter_with(client).harvest(max_records=5))
         assert [o.source_id for o in observations] == ["1"]
 
     def test_a_doi_that_does_not_resolve_drops_the_record_and_logs_it(self) -> None:
@@ -539,7 +539,7 @@ class TestResolveOrDrop:
             FakeOstiClient(records=[synthetic("1", "10.2172/nope"), synthetic("2")],
                            resolvable=set())
         )
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
         assert [o.source_id for o in observations] == ["2"]
         assert adapter.drop_log.as_notices() == [
             {"doi": "10.2172/nope", "reason": "did-not-resolve", "context": "osti:1"}
@@ -547,7 +547,7 @@ class TestResolveOrDrop:
 
     def test_a_record_without_a_doi_is_never_sent_to_a_resolver(self) -> None:
         client = FakeOstiClient(records=[synthetic("1")])
-        list(adapter_with(client).harvest(limit=5))
+        list(adapter_with(client).harvest(max_records=5))
         assert not [call for call in client.calls if "doi" in call or "works" in call]
 
     def test_resolution_happens_in_harvest_never_in_map(self) -> None:
@@ -583,7 +583,7 @@ class TestEndToEnd:
         )
 
     def test_a_first_run_writes_one_event_per_record(self, repo: Path) -> None:
-        result = run_adapter(adapter_with(self._client()), limit=5,
+        result = run_adapter(adapter_with(self._client()), max_records=5,
                              events_dir=repo / "events")
         assert (result.seen, result.changed, result.skipped_unchanged) == (5, 5, 0)
         assert len(list((repo / "events").glob("*.jsonl"))) == 5
@@ -592,15 +592,15 @@ class TestEndToEnd:
     def test_a_second_run_writes_nothing_at_all(self, repo: Path) -> None:
         """ADR-0026: an unchanged entry_date means no event, not an empty one."""
         events = repo / "events"
-        run_adapter(adapter_with(self._client()), limit=5, events_dir=events)
+        run_adapter(adapter_with(self._client()), max_records=5, events_dir=events)
         before = {path: path.read_bytes() for path in sorted(events.glob("*.jsonl"))}
-        result = run_adapter(adapter_with(self._client()), limit=5, events_dir=events)
+        result = run_adapter(adapter_with(self._client()), max_records=5, events_dir=events)
         assert (result.seen, result.changed, result.skipped_unchanged) == (5, 0, 5)
         assert {path: path.read_bytes() for path in sorted(events.glob("*.jsonl"))} == before
 
     def test_a_moved_entry_date_appends(self, repo: Path) -> None:
         events = repo / "events"
-        run_adapter(adapter_with(self._client()), limit=5, events_dir=events)
+        run_adapter(adapter_with(self._client()), max_records=5, events_dir=events)
         moved = self._payloads()
         moved[0] = {**moved[0], "entry_date": "2027-01-01T00:00:00Z"}
         run_adapter(
@@ -608,7 +608,7 @@ class TestEndToEnd:
                 records=moved,
                 resolvable={"10.2172/2447928", "10.5194/wes-11-1429-2026"},
             )),
-            limit=5,
+            max_records=5,
             events_dir=events,
         )
         assert len(read_events("10.2172/2447928", events)) == 2
@@ -619,7 +619,7 @@ class TestEndToEnd:
         from harvest.materialize import materialize_all
 
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        run_adapter(adapter_with(self._client()), limit=5, events_dir=repo / "events")
+        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "events")
         result = materialize_all(root=repo)
         assert result.violations == []
         assert len(result.written) == 5
@@ -630,7 +630,7 @@ class TestEndToEnd:
         from harvest.materialize import materialize_all
 
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        run_adapter(adapter_with(self._client()), limit=5, events_dir=repo / "events")
+        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "events")
         materialize_all(root=repo)
         again = materialize_all(root=repo)
         assert again.written == [] and len(again.unchanged) == 5
@@ -641,7 +641,7 @@ class TestEndToEnd:
         from harvest.materialize import materialize_all
 
         monkeypatch.setenv("HARVEST_ROOT", str(repo))
-        run_adapter(adapter_with(self._client()), limit=5, events_dir=repo / "events")
+        run_adapter(adapter_with(self._client()), max_records=5, events_dir=repo / "events")
         materialize_all(root=repo)
         record = json.loads((repo / "records" / "osti-2323276.json").read_text("utf-8"))
         extras = {extra["key"]: extra["value"] for extra in record["extras"]}
@@ -659,7 +659,6 @@ class TestConfiguration:
         osti = config.load_sources()["osti"]
         assert osti["enabled"] is True
         assert osti["tier"] == 1
-        assert osti["max_records"] == 5
         assert osti["api"] == "https://www.osti.gov/api/v1/records"
 
     def test_the_source_key_semantics_are_documented_where_they_are_read(self) -> None:

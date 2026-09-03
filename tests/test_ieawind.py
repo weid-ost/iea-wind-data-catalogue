@@ -142,7 +142,7 @@ def adapter_for(pages, resolver=None, **options) -> IeaWindAdapter:
     task_pages = options.pop("task_pages", [])
     source_config = SourceConfig.from_mapping(
         "ieawind",
-        {"tier": 3, "max_records": 5, "task_pages": task_pages,
+        {"tier": 3, "task_pages": task_pages,
          "follow_publication_links": False, **options},
     )
     return IeaWindAdapter(config=source_config, client=pages, resolver=resolver or Resolver())
@@ -290,7 +290,7 @@ class TestTheDoiSweep:
             task_pages=[{"iea_task": fixture["iea_task"], "url": url}],
         )
 
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
 
         assert [o.source_id for o in observations] == [good]
         assert [drop["doi"] for drop in adapter.drop_log.as_notices()] == [bad]
@@ -305,7 +305,7 @@ class TestTheDoiSweep:
             Resolver(),  # nothing resolves at all
             task_pages=[{"iea_task": fixture["iea_task"], "url": url}],
         )
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
         assert len(adapter.drop_log) == 2, "both DOIs dropped, both logged"
 
 
@@ -357,7 +357,7 @@ class TestIea06MultiTask:
             ],
         )
 
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
 
         assert len(observations) == 1, "one DOI on two pages is ONE record"
         assert observations[0].payload["iea_task"] == ["task-43", "task-49"]
@@ -394,7 +394,7 @@ class TestIea07TitleSearch:
             task_pages=[{"iea_task": self.fixture["iea_task"], "url": url}],
         )
 
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
 
         assert [o.source_id for o in observations] == [accepted_doi]
         assert observations[0].payload["identifier_source"] == "crossref-title-search"
@@ -415,7 +415,7 @@ class TestIea07TitleSearch:
             task_pages=[{"iea_task": self.fixture["iea_task"], "url": url}],
         )
 
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
         assert {n["type"] for n in adapter.notices} == {"unresolved_citation"}
 
     def test_a_search_result_is_still_put_through_resolve_or_drop(self) -> None:
@@ -427,7 +427,7 @@ class TestIea07TitleSearch:
             resolver,
             task_pages=[{"iea_task": self.fixture["iea_task"], "url": url}],
         )
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
         assert [drop["doi"] for drop in adapter.drop_log.as_notices()] == [doi]
 
 
@@ -487,7 +487,7 @@ class TestIea09NotARecord:
             Resolver(crossref={d: {"message": {"DOI": d}} for d in fixture["dois_present_on_page"]}),
             task_pages=[{"iea_task": fixture["iea_task"], "url": url}],
         )
-        assert list(adapter.harvest(limit=5)) == [], (
+        assert list(adapter.harvest(max_records=5)) == [], (
             "a news post never becomes a record, however many DOIs it quotes"
         )
         assert [n["type"] for n in adapter.notices] == ["page_not_record_bearing"]
@@ -738,7 +738,7 @@ class TestIea11PdfOnly:
             PageServer({url: html(fixture)}),
             task_pages=[{"iea_task": fixture["iea_task"], "url": url}],
         )
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
         gaps = [n for n in adapter.notices if n["type"] == "coverage_gap_pdf_only"]
         assert len(gaps) == 1
         assert sorted(gaps[0]["pdfs"]) == sorted(fixture["expected_gap_pdfs"])
@@ -763,7 +763,7 @@ class TestIea12DeadPage:
                 {"iea_task": live["iea_task"], "url": live_url},
             ],
         )
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
         assert [o.source_id for o in observations] == [good]
         assert [n["type"] for n in adapter.notices][0] == "page_unreachable"
 
@@ -776,7 +776,7 @@ class TestIea12DeadPage:
             ],
         )
         with pytest.raises(SourceUnreachable) as caught:
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
         assert "none of the 2 configured" in str(caught.value)
 
     def test_existing_records_are_untouched_by_a_dead_page(
@@ -790,7 +790,7 @@ class TestIea12DeadPage:
             PageServer({}),
             task_pages=[{"iea_task": "task-65", "url": self.fixture["page_url"]}],
         )
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
 
         assert result.reachable is False and result.changed == 0
         assert list(events_dir.glob("*.jsonl")) == []
@@ -799,7 +799,7 @@ class TestIea12DeadPage:
     def test_no_task_pages_configured_is_also_unreachable(self) -> None:
         adapter = adapter_for(PageServer({}), task_pages=[])
         with pytest.raises(SourceUnreachable):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
 
 
 # ---------------------------------------------------------------------------
@@ -827,7 +827,7 @@ class TestTheContract:
             Resolver(datacite={doi: {"data": {"attributes": {}}} for doi in dois}),
             task_pages=[{"iea_task": "task-43", "url": url}],
         )
-        assert len(list(adapter.harvest(limit=5))) == 5, "the limit is five"
+        assert len(list(adapter.harvest(max_records=5))) == 5, "the limit is five"
 
     def test_map_is_pure(self) -> None:
         """No network, no clock, no filesystem: the same input, twice, identically."""
@@ -864,7 +864,7 @@ class TestTheContract:
                 Resolver(crossref={good: {"message": {"DOI": good, "title": ["ok"]}}}),
                 task_pages=[{"iea_task": fixture["iea_task"], "url": url}],
             )
-            return run_adapter(adapter, limit=5, events_dir=events_dir)
+            return run_adapter(adapter, max_records=5, events_dir=events_dir)
 
         first = once()
         assert first.changed == 1 and first.skipped_unchanged == 0

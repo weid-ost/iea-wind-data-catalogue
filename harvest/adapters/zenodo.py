@@ -78,7 +78,7 @@ from pathlib import Path
 from typing import Any, Iterable, Iterator
 from urllib.parse import quote
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest import config as _config
 from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
 from harvest.doi import normalise_doi
@@ -472,8 +472,8 @@ class ZenodoAdapter(Adapter):
             f"&size={size}&sort=mostrecent&all_versions=false"
         )
 
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
-        """Yield at most ``limit`` records across the configured communities.
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
+        """Yield at most ``max_records`` records across the configured communities.
 
         Only the latest version of each concept is listed (``all_versions=false``)
         — that is the record whose metadata the concept identity displays.
@@ -488,12 +488,12 @@ class ZenodoAdapter(Adapter):
         yielded = 0
 
         for community in self.communities():
-            if yielded >= limit:
+            if yielded >= max_records:
                 break
             slug = str(community.get("slug") or "").strip()
             if not slug:
                 continue
-            url = self._listing_url(slug, min(limit, MAX_PAGE_SIZE))
+            url = self._listing_url(slug, min(max_records, MAX_PAGE_SIZE))
             result = client.get(url)
             if not result.ok:
                 failures.append(f"{slug}: {result.error or f'HTTP {result.status_code}'}")
@@ -512,7 +512,7 @@ class ZenodoAdapter(Adapter):
             for observation in self._observations(hits, seen_ids):
                 yield observation
                 yielded += 1
-                if yielded >= limit:
+                if yielded >= max_records:
                     break
 
         if not reached:

@@ -122,7 +122,7 @@ your job to update it.
 **Getting going**
 
 - [[local-dev-setup]] — clone to green test suite
-- [[run-a-harvest-locally]] — including the five-record cap and how to lift it
+- [[run-a-harvest-locally]] — including the record cap and how to lift it
 - [[materialize-and-validate]] — rebuild `records/` and pass the CKAN gate
 - [[run-the-site-locally]] — `site/` build and dev server
 

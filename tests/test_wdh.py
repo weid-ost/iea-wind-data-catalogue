@@ -74,7 +74,7 @@ def observation_for(fixture: dict) -> RawObservation:
 
 def adapter_for(**options) -> WindDataHubAdapter:
     return WindDataHubAdapter(
-        config=SourceConfig.from_mapping("wdh", {"tier": 2, "max_records": 5, **options})
+        config=SourceConfig.from_mapping("wdh", {"tier": 2, **options})
     )
 
 
@@ -88,7 +88,7 @@ class TestWdh07TheAuthWall:
 
     def test_no_token_disables_the_source_cleanly(self) -> None:
         with pytest.raises(SourceUnreachable) as caught:
-            list(adapter_for().harvest(limit=5))
+            list(adapter_for().harvest(max_records=5))
         for phrase in self.fixture["expected_reason_mentions"]:
             assert phrase in str(caught.value)
 
@@ -98,7 +98,7 @@ class TestWdh07TheAuthWall:
         assert "existing records are untouched" in AUTH_WALL_REASON
 
     def test_run_adapter_turns_it_into_one_report_line(self, events_dir: Path) -> None:
-        result = run_adapter(adapter_for(), limit=5, events_dir=events_dir)
+        result = run_adapter(adapter_for(), max_records=5, events_dir=events_dir)
         assert result.as_dict() == {
             **self.fixture["expected_source_result"],
             "errors": [AUTH_WALL_REASON],
@@ -110,7 +110,7 @@ class TestWdh07TheAuthWall:
         record.write_text('{"name": "doi-10-21947-1406992"}\n', encoding="utf-8")
         before = record.read_bytes()
 
-        run_adapter(adapter_for(), limit=5, events_dir=events_dir)
+        run_adapter(adapter_for(), max_records=5, events_dir=events_dir)
 
         assert record.read_bytes() == before
 
@@ -149,7 +149,7 @@ class TestWdh07TheAuthWall:
             config=SourceConfig.from_mapping("wdh", {"api": f"{BASE_URL}/api"}), client=client
         )
         with pytest.raises(SourceUnreachable, match="403"):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
         assert client.headers["Authorization"] == "Bearer pretend-token"
 
     def test_an_unexpected_listing_shape_degrades_rather_than_crashing(
@@ -168,7 +168,7 @@ class TestWdh07TheAuthWall:
 
         adapter = WindDataHubAdapter(config=SourceConfig.from_mapping("wdh", {}), client=Surprising())
         with pytest.raises(SourceUnreachable, match="unexpected listing shape"):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
 
 
 # ---------------------------------------------------------------------------

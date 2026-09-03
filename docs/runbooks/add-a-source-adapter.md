@@ -47,7 +47,6 @@ Add a block to `sources.yaml`:
     enabled: true
     tier: 1
     precedence: 45          # lower wins for scalars when several systems describe one identity
-    max_records: 5          # the prototype cap. Leave it at five.
     source_key: "revision_id — bumped on metadata edit; verified 2026-08-31"
     api: "https://example.org/api/records"
     # anything else reaches the adapter as SourceConfig.options
@@ -64,7 +63,7 @@ set-valued fields union across all of them regardless.
 ```python
 from typing import Iterable
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest.adapters.base import Adapter, SourceUnreachable, register
 from harvest.http import HarvestClient
 from harvest.identity import identity_key
@@ -80,7 +79,7 @@ class MySourceAdapter(Adapter):
     tier = 1
     source_key_semantics = "revision_id, bumped on metadata edit"
 
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
         with HarvestClient() as client:
             result = client.get(self.config.get("api"))
             if not result.ok:
@@ -258,7 +257,7 @@ churns — go back to §1.3.
 - [ ] a parametrised test over your fixture directory
 - [ ] two consecutive runs ⇒ `changed: 0` on the second
 - [ ] `make validate` green
-- [ ] `max_records` still 5 in `sources.yaml`
+- [ ] no per-source `max_records` in `sources.yaml` — the cap is `--max-records`
 
 ---
 

@@ -10,7 +10,7 @@ Read ``harvest/CONTRACT.md`` before adding one. The short version:
         tier = 1
         source_key_semantics = "InvenioRDM record revision id"
 
-        def harvest(self, limit=DEFAULT_LIMIT): ...   # -> Iterable[RawObservation]
+        def harvest(self, max_records=DEFAULT_MAX_RECORDS): ...   # -> Iterable[RawObservation]
         def map(self, raw): ...                       # -> MappedObservation
 
 Adapters are discovered by name from ``sources.yaml``; the module name, the

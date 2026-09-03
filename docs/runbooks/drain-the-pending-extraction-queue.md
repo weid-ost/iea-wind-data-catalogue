@@ -184,7 +184,7 @@ commit message.
 ---
 
 **Last executed:** 2026-09-01. `uv run python -m harvest run --source ieawind
---limit 5` harvested five records live from `iea-wind.org/task43/
+--max-records 5` harvested five records live from `iea-wind.org/task43/
 t43-publications/` (every DOI resolved against DataCite; nothing came from the
 page), queued seven ambiguous pages, and reported `ok: true`. A second run was a
 clean no-op — `seen: 5, skipped_unchanged: 5, changed: 0`. `uv run python -m

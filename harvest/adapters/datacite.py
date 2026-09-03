@@ -74,7 +74,7 @@ import re
 from typing import Any, Iterable
 from urllib.parse import urlencode
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest.adapters.base import Adapter, SourceUnreachable, register
 from harvest.doi import normalise_doi
 from harvest.http import HarvestClient
@@ -268,14 +268,14 @@ class DataCiteAdapter(Adapter):
         state = str((payload.get("attributes") or {}).get("state") or "").strip().lower()
         return state == REQUIRED_STATE
 
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
-        # Ask for a page rather than exactly ``limit``, because non-findable
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
+        # Ask for a page rather than exactly ``max_records``, because non-findable
         # DOIs and cross-query duplicates are dropped after the response
         # arrives; but never more than one page, and never more than the
         # configured ceiling. In practice the first query fills the cap and no
         # second request is made at all.
         required_state = str(self.config.get("state") or REQUIRED_STATE).strip().lower()
-        page_size = max(limit, min(int(self.config.get("page_size", 25) or 25), limit * 5))
+        page_size = max(max_records, min(int(self.config.get("page_size", 25) or 25), max_records * 5))
         urls = self._search_urls(page_size)
 
         seen: set[str] = set()
@@ -284,7 +284,7 @@ class DataCiteAdapter(Adapter):
         errors: list[str] = []
 
         for url in urls:
-            if yielded >= limit:
+            if yielded >= max_records:
                 break
             result = self._client().get(url)
             if result.status_code == 304:
@@ -304,7 +304,7 @@ class DataCiteAdapter(Adapter):
                 continue
 
             for item in _as_list(document.get("data")):
-                if yielded >= limit:
+                if yielded >= max_records:
                     break
                 if not isinstance(item, dict):
                     continue

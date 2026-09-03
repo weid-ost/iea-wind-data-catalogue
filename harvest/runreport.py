@@ -37,7 +37,7 @@ class RunReport:
     started_at: str = field(default_factory=utcnow)
     finished_at: str | None = None
     harvest_version: str = __version__
-    limit: int | None = None
+    max_records: int | None = None
     sources: dict[str, dict[str, Any]] = field(default_factory=dict)
     unreachable_sources: list[str] = field(default_factory=list)
     records_total: int = 0
@@ -78,7 +78,7 @@ class RunReport:
             "started_at": self.started_at,
             "finished_at": self.finished_at or utcnow(),
             "harvest_version": self.harvest_version,
-            "limit": self.limit,
+            "max_records": self.max_records,
             "ok": self.ok,
             "sources": {name: self.sources[name] for name in sorted(self.sources)},
             "unreachable_sources": sorted(self.unreachable_sources),

@@ -348,7 +348,7 @@ class TestGh05Archived:
         fixture = fixture_by_id("gh-05-archived")
         adapter = GitHubAdapter(events_directory=events_dir)
         run_adapter(_StaticAdapter(adapter, [observation(fixture)]),
-                    limit=5, events_dir=events_dir)
+                    max_records=5, events_dir=events_dir)
         result = materialize_all(events_dir, records_dir, validate=False)
         package = json.loads(
             (records_dir / f"{fixture['expected_slug']}.json").read_text(encoding="utf-8")
@@ -376,7 +376,7 @@ class TestGh06NoLicense:
         fixture = fixture_by_id("gh-06-no-license")
         adapter = GitHubAdapter(events_directory=events_dir)
         run_adapter(_StaticAdapter(adapter, [observation(fixture)]),
-                    limit=5, events_dir=events_dir)
+                    max_records=5, events_dir=events_dir)
         outcome = materialize_all(events_dir, records_dir, validate=False)
         package = json.loads(
             (records_dir / f"{fixture['expected_slug']}.json").read_text(encoding="utf-8")
@@ -421,7 +421,7 @@ class TestGh07Renamed:
         old_path = before["source_id"]
 
         first = _github_adapter(_fake_github({old_path: raw_payload(before)}), events_dir)
-        run_adapter(first, limit=5, events_dir=events_dir)
+        run_adapter(first, max_records=5, events_dir=events_dir)
         assert known_repository_paths(events_dir) == {
             str(after["github_repo_id"]): old_path
         }
@@ -429,7 +429,7 @@ class TestGh07Renamed:
         renamed = _github_adapter(
             _fake_github({old_path: raw_payload(after)}), events_dir
         )
-        observations = list(renamed.harvest(limit=5))
+        observations = list(renamed.harvest(max_records=5))
         assert [obs.source_id for obs in observations] == [old_path]
         assert renamed.map(observations[0]).identity_key == before["identity_key"]
 
@@ -438,7 +438,7 @@ class TestGh07Renamed:
         adapter = _github_adapter(
             _fake_github({after["renamed_from"]: raw_payload(after)}), events_dir
         )
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
         assert [obs.source_id for obs in observations] == [after["renamed_to"]]
 
 
@@ -641,7 +641,6 @@ def _github_adapter(
         {
             "enabled": True,
             "tier": 1,
-            "max_records": 5,
             "api": "https://api.github.com",
             "orgs": [{"login": org, "iea_task": tasks or ["task-43"]}],
             "exclude_forks": True,
@@ -678,8 +677,8 @@ class _StaticAdapter(GitHubAdapter):
         super().__init__(config=inner.config, events_directory=inner._events_directory)
         self._observations = observations
 
-    def harvest(self, limit: int = 5):
-        return self._observations[:limit]
+    def harvest(self, max_records: int = 5):
+        return self._observations[:max_records]
 
 
 class TestHarvest:
@@ -699,7 +698,7 @@ class TestHarvest:
             }
         )
         adapter = _github_adapter(client, events_dir)
-        assert [obs.source_id for obs in adapter.harvest(limit=5)] == [keep["source_id"]]
+        assert [obs.source_id for obs in adapter.harvest(max_records=5)] == [keep["source_id"]]
 
     def test_the_five_record_cap_is_honoured(self, events_dir: Path) -> None:
         base = raw_payload(fixture_by_id("gh-01-canonical"))
@@ -712,7 +711,7 @@ class TestHarvest:
             envelope["repository"]["name"] = f"repo-{index}"
             repos[path] = envelope
         adapter = _github_adapter(_fake_github(repos), events_dir)
-        assert len(list(adapter.harvest(limit=5))) == 5
+        assert len(list(adapter.harvest(max_records=5))) == 5
 
     def test_the_iea_task_comes_from_the_org_configuration(self, events_dir: Path) -> None:
         fixture = fixture_by_id("gh-01-canonical")
@@ -721,12 +720,12 @@ class TestHarvest:
             events_dir,
             tasks=["task-43", "task-52"],
         )
-        observations = list(adapter.harvest(limit=5))
+        observations = list(adapter.harvest(max_records=5))
         assert adapter.map(observations[0]).source.iea_task == ["task-43", "task-52"]
 
     def test_a_missing_org_is_a_warning_not_a_failure(self, events_dir: Path) -> None:
         adapter = _github_adapter(_fake_github({}, listing_status=404), events_dir)
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
 
     def test_topic_search_is_only_reached_when_orgs_do_not_fill_the_cap(
         self, events_dir: Path
@@ -750,7 +749,7 @@ class TestHarvest:
         client.routes[f"{api}/repos/{full}/readme"] = (200, payload["readme"], {})
 
         adapter = _github_adapter(client, events_dir, topics=["iea-wind"])
-        assert [obs.source_id for obs in adapter.harvest(limit=5)] == [
+        assert [obs.source_id for obs in adapter.harvest(max_records=5)] == [
             fixture["source_id"],
             found["source_id"],
         ]
@@ -763,14 +762,14 @@ class TestHarvest:
             "&per_page=25&sort=updated&order=desc"
         ] = (200, {"items": [{"full_name": fixture["source_id"]}]}, {})
         adapter = _github_adapter(client, events_dir, topics=["iea-wind"])
-        assert len(list(adapter.harvest(limit=5))) == 1
+        assert len(list(adapter.harvest(max_records=5))) == 1
 
     def test_metadata_only_no_archive_is_ever_downloaded(self, events_dir: Path) -> None:
         fixture = fixture_by_id("gh-01-canonical")
         adapter = _github_adapter(
             _fake_github({fixture["source_id"]: raw_payload(fixture)}), events_dir
         )
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         for url in adapter.client.calls:
             assert "zipball" not in url and "tarball" not in url
             assert url.startswith("https://api.github.com/")
@@ -797,16 +796,16 @@ class TestDegradation:
     def test_a_rate_limit_403_raises_source_unreachable(self, events_dir: Path) -> None:
         adapter = _github_adapter(self.rate_limited(), events_dir)
         with pytest.raises(SourceUnreachable, match="rate limit exhausted"):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
 
     def test_a_429_is_treated_the_same_way(self, events_dir: Path) -> None:
         adapter = _github_adapter(self.rate_limited(status=429), events_dir)
         with pytest.raises(SourceUnreachable, match="rate limit"):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
 
     def test_the_run_reports_it_and_does_not_raise(self, events_dir: Path) -> None:
         adapter = _github_adapter(self.rate_limited(), events_dir)
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert result.reachable is False
         assert result.seen == 0
         assert "rate limit exhausted" in result.errors[0]
@@ -821,7 +820,7 @@ class TestDegradation:
             _FakeGitHub({url: (403, {"message": "forbidden"}, {"x-ratelimit-remaining": "42"})}),
             events_dir,
         )
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert result.reachable is False
 
     def test_a_transport_error_degrades_cleanly(self, events_dir: Path) -> None:
@@ -831,7 +830,7 @@ class TestDegradation:
                                    error="connection reset by peer")
 
         adapter = _github_adapter(Broken({}), events_dir)
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert result.reachable is False
         assert "connection reset" in result.errors[0]
 
@@ -843,7 +842,7 @@ class TestDegradation:
         client.routes[f"https://api.github.com/repos/{fixture['source_id']}"] = (
             500, {"message": "boom"}, {}
         )
-        result = run_adapter(_github_adapter(client, events_dir), limit=5,
+        result = run_adapter(_github_adapter(client, events_dir), max_records=5,
                              events_dir=events_dir)
         assert result.reachable is False
         assert result.changed == 0
@@ -855,9 +854,9 @@ class TestChangeDetection:
         routes = {fixture["source_id"]: raw_payload(fixture)}
 
         first = run_adapter(_github_adapter(_fake_github(routes), events_dir),
-                            limit=5, events_dir=events_dir)
+                            max_records=5, events_dir=events_dir)
         second = run_adapter(_github_adapter(_fake_github(routes), events_dir),
-                             limit=5, events_dir=events_dir)
+                             max_records=5, events_dir=events_dir)
 
         assert (first.seen, first.changed, first.skipped_unchanged) == (1, 1, 0)
         assert (second.seen, second.changed, second.skipped_unchanged) == (1, 0, 1)
@@ -868,13 +867,13 @@ class TestChangeDetection:
         run_adapter(
             _github_adapter(_fake_github({fixture["source_id"]: raw_payload(fixture)}),
                             events_dir),
-            limit=5, events_dir=events_dir,
+            max_records=5, events_dir=events_dir,
         )
         moved = copy.deepcopy(raw_payload(fixture))
         moved["latest_release"]["tag_name"] = "v2.0.0"
         run_adapter(
             _github_adapter(_fake_github({fixture["source_id"]: moved}), events_dir),
-            limit=5, events_dir=events_dir,
+            max_records=5, events_dir=events_dir,
         )
         assert len(read_events(fixture["identity_key"], events_dir)) == 2
 
@@ -887,13 +886,13 @@ class TestChangeDetection:
         run_adapter(
             _github_adapter(_fake_github({fixture["source_id"]: raw_payload(fixture)}),
                             events_dir),
-            limit=5, events_dir=events_dir,
+            max_records=5, events_dir=events_dir,
         )
         pushed = copy.deepcopy(raw_payload(fixture))
         pushed["head_ref"]["object"]["sha"] = "a" * 40
         result = run_adapter(
             _github_adapter(_fake_github({fixture["source_id"]: pushed}), events_dir),
-            limit=5, events_dir=events_dir,
+            max_records=5, events_dir=events_dir,
         )
         assert result.changed == 1
 
@@ -907,7 +906,7 @@ class TestTheRecordItPromotes:
         run_adapter(
             _github_adapter(_fake_github({fixture["source_id"]: raw_payload(fixture)}),
                             events_dir),
-            limit=5, events_dir=events_dir,
+            max_records=5, events_dir=events_dir,
         )
         outcome = materialize_all(events_dir, records_dir, root=repo)
         assert outcome.violations == []
@@ -928,7 +927,7 @@ class TestTheRecordItPromotes:
         run_adapter(
             _github_adapter(_fake_github({fixture["source_id"]: raw_payload(fixture)}),
                             events_dir),
-            limit=5, events_dir=events_dir,
+            max_records=5, events_dir=events_dir,
         )
         materialize_all(events_dir, records_dir, root=repo, validate=False)
         again = materialize_all(events_dir, records_dir, root=repo, validate=False)
@@ -952,9 +951,6 @@ class TestConfiguration:
     def test_the_source_key_string_matches_the_adapter(self) -> None:
         declared = config.load_sources()["github"]["source_key"]
         assert declared == GitHubAdapter.source_key_semantics
-
-    def test_the_cap_is_still_five(self) -> None:
-        assert config.load_sources()["github"]["max_records"] == 5
 
     def test_the_token_env_var_is_used_when_present(self, monkeypatch) -> None:
         adapter = GitHubAdapter(config=SourceConfig.from_mapping("github", {}))

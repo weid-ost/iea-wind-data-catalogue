@@ -44,7 +44,8 @@ checks a CI dashboard for a dormant project.
 1. GitHub → the repository → **Actions** → the harvest workflow.
 2. **Enable workflow**.
 3. Run it once by hand: **Run workflow** (`workflow_dispatch`, which exists
-   alongside the cron for exactly this).
+   alongside the cron for exactly this). Leave **skip_harvest** unticked: a
+   skipped harvest makes no commit, so it is not a keepalive.
 4. Confirm the run **committed** `state/last-run.json`. If it did not, the
    heartbeat is broken and re-enabling has bought you 60 days, not a fix — go
    to §4.
@@ -83,7 +84,7 @@ to verify after any change to it:
 - **`schedule:` weekly** *and* **`workflow_dispatch:`**.
 - **`runs-on: ubuntu-24.04`** — never `ubuntu-latest`
   ([[adr-0034-toolchain-pinning-and-no-auto-updates]]).
-- `uv sync --frozen --dev`, then `uv run python -m harvest run --limit 5`.
+- `uv sync --frozen --dev`, then `uv run python -m harvest run`, with `--max-records N` when the dispatch input is set.
 - **Commit `state/last-run.json` on every run, unconditionally**, including when
   a source failed and including when nothing changed. Inline `git` commands —
   **never a Marketplace keepalive action**, which would put a third party inside

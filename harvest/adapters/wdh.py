@@ -68,7 +68,7 @@ import os
 from typing import Any, Iterable
 from urllib.parse import urlsplit, urlunsplit
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
 from harvest.doi import normalise_doi
 from harvest.http import HarvestClient
@@ -208,8 +208,8 @@ class WindDataHubAdapter(Adapter):
     source_key_semantics = "lastUpdated if provided, else payload hash of the meaningful subset"
 
     # -- harvest -----------------------------------------------------------
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
-        """Yield at most ``limit`` datasets, or disable the source cleanly.
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
+        """Yield at most ``max_records`` datasets, or disable the source cleanly.
 
         The default path is the second one, and it is the tested one
         (``wdh-07``). ``harvest()`` raises **only**
@@ -236,7 +236,7 @@ class WindDataHubAdapter(Adapter):
         except Exception as exc:  # upstream changed its shape
             raise SourceUnreachable(f"unexpected listing shape from {api}/datasets: {exc}")
 
-        for hit in hits[:limit]:
+        for hit in hits[:max_records]:
             source = hit.get("_source") or {}
             identifier = str(source.get("identifier") or hit.get("_id") or "")
             if not identifier:

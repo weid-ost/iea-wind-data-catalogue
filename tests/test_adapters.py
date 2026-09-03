@@ -7,7 +7,7 @@ from typing import Iterable
 
 import pytest
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest.adapters.base import (
     ADAPTERS,
     Adapter,
@@ -43,10 +43,10 @@ class FakeAdapter(Adapter):
         self.yield_extra = yield_extra
         self.closed = False
 
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
         if self.fail:
             raise self.fail
-        for index, record in enumerate(self.records[: limit + self.yield_extra]):
+        for index, record in enumerate(self.records[: max_records + self.yield_extra]):
             yield RawObservation(
                 source_system="fake",
                 source_id=record["id"],
@@ -112,37 +112,39 @@ class TestRegistry:
         for name in stub_sources():
             adapter = get_adapter(name)(config=SourceConfig(name=name))
             with pytest.raises(NotImplementedError, match="owner: Track"):
-                list(adapter.harvest(limit=1))
+                list(adapter.harvest(max_records=1))
 
     def test_registry_is_keyed_by_source_name(self) -> None:
         for name, adapter_class in ADAPTERS.items():
             assert adapter_class.source_name == name
 
 
-class TestTheFiveRecordCap:
-    def test_default_limit_is_five(self) -> None:
-        assert DEFAULT_LIMIT == 5
+class TestTheRecordCap:
+    def test_default_max_records_is_fifty(self) -> None:
+        assert DEFAULT_MAX_RECORDS == 50
 
-    def test_the_limit_is_honoured(self, events_dir: Path) -> None:
-        result = run_adapter(FakeAdapter(records(20)), limit=5, events_dir=events_dir)
+    def test_max_records_is_honoured(self, events_dir: Path) -> None:
+        result = run_adapter(FakeAdapter(records(20)), max_records=5, events_dir=events_dir)
         assert result.seen == 5
 
-    def test_the_limit_is_enforced_even_if_an_adapter_ignores_it(
+    def test_max_records_is_enforced_even_if_an_adapter_ignores_it(
         self, events_dir: Path
     ) -> None:
         adapter = FakeAdapter(records(20), yield_extra=10)
-        assert run_adapter(adapter, limit=5, events_dir=events_dir).seen == 5
+        assert run_adapter(adapter, max_records=5, events_dir=events_dir).seen == 5
 
-    def test_max_records_from_sources_yaml_is_five(self) -> None:
+    def test_sources_yaml_does_not_carry_a_cap(self) -> None:
+        """One knob: ``--max-records`` (CI passes it). Nothing per-source."""
         from harvest import config
 
         for name, mapping in config.load_sources().items():
-            assert SourceConfig.from_mapping(name, mapping).max_records == 5
+            assert "max_records" not in mapping, name
+            assert "max_records" not in SourceConfig.from_mapping(name, mapping).options
 
 
 class TestChangeDetection:
     def test_first_run_writes_one_event_per_record(self, events_dir: Path) -> None:
-        result = run_adapter(FakeAdapter(records(3)), limit=5, events_dir=events_dir)
+        result = run_adapter(FakeAdapter(records(3)), max_records=5, events_dir=events_dir)
         assert (result.seen, result.changed, result.skipped_unchanged) == (3, 3, 0)
         assert len(read_events("10.5281/zenodo.0", events_dir)) == 1
 
@@ -150,20 +152,20 @@ class TestChangeDetection:
         self, events_dir: Path
     ) -> None:
         """ADR-0026: unchanged means NO event, not an empty one."""
-        run_adapter(FakeAdapter(records(3)), limit=5, events_dir=events_dir)
-        result = run_adapter(FakeAdapter(records(3)), limit=5, events_dir=events_dir)
+        run_adapter(FakeAdapter(records(3)), max_records=5, events_dir=events_dir)
+        result = run_adapter(FakeAdapter(records(3)), max_records=5, events_dir=events_dir)
         assert (result.seen, result.changed, result.skipped_unchanged) == (3, 0, 3)
         assert len(read_events("10.5281/zenodo.0", events_dir)) == 1
 
     def test_a_changed_source_key_appends(self, events_dir: Path) -> None:
-        run_adapter(FakeAdapter(records(1)), limit=5, events_dir=events_dir)
+        run_adapter(FakeAdapter(records(1)), max_records=5, events_dir=events_dir)
         moved = records(1)
         moved[0]["rev"] = "rev-99"
-        run_adapter(FakeAdapter(moved), limit=5, events_dir=events_dir)
+        run_adapter(FakeAdapter(moved), max_records=5, events_dir=events_dir)
         assert len(read_events("10.5281/zenodo.0", events_dir)) == 2
 
     def test_dry_run_writes_no_events(self, events_dir: Path) -> None:
-        result = run_adapter(FakeAdapter(records(3)), limit=5, events_dir=events_dir,
+        result = run_adapter(FakeAdapter(records(3)), max_records=5, events_dir=events_dir,
                              dry_run=True)
         assert result.changed == 3
         assert read_events("10.5281/zenodo.0", events_dir) == []
@@ -174,19 +176,19 @@ class TestDegradation:
 
     def test_source_unreachable_is_reported_not_raised(self, events_dir: Path) -> None:
         adapter = FakeAdapter([], fail=SourceUnreachable("listing endpoint needs a token"))
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert result.reachable is False
         assert "token" in result.errors[0]
 
     def test_an_unexpected_exception_is_also_contained(self, events_dir: Path) -> None:
         adapter = FakeAdapter([], fail=RuntimeError("upstream changed its schema"))
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert result.reachable is False
         assert "RuntimeError" in result.errors[0]
 
     def test_a_stub_is_reported_as_not_implemented(self, events_dir: Path) -> None:
         adapter = FakeAdapter([], fail=NotImplementedError("owner: Track Z"))
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert result.implemented is False and result.reachable is True
 
     def test_one_bad_record_does_not_stop_the_others(self, events_dir: Path) -> None:
@@ -196,13 +198,13 @@ class TestDegradation:
                     raise ValueError("unexpected payload shape")
                 return super().map(raw)
 
-        result = run_adapter(HalfBroken(records(3)), limit=5, events_dir=events_dir)
+        result = run_adapter(HalfBroken(records(3)), max_records=5, events_dir=events_dir)
         assert result.seen == 3 and result.changed == 2 and len(result.errors) == 1
         assert result.reachable is True
 
     def test_a_disabled_source_is_skipped_entirely(self, events_dir: Path) -> None:
         adapter = FakeAdapter(records(3), config=SourceConfig(name="fake", enabled=False))
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert (result.enabled, result.seen, result.changed) == (False, 0, 0)
 
     def test_a_slug_collision_costs_no_record_at_all(self, events_dir: Path) -> None:
@@ -223,7 +225,7 @@ class TestDegradation:
         colliding = [{"id": "0", "rev": "r", "doi": newcomer, "title": "x"},
                      {"id": "1", "rev": "r", "doi": "10.5281/zenodo.1", "title": "y"}]
 
-        result = run_adapter(FakeAdapter(colliding), limit=5, events_dir=events_dir)
+        result = run_adapter(FakeAdapter(colliding), max_records=5, events_dir=events_dir)
 
         assert result.reachable is True
         assert result.changed == 2
@@ -233,7 +235,7 @@ class TestDegradation:
 
     def test_close_is_always_called(self, events_dir: Path) -> None:
         adapter = FakeAdapter([], fail=RuntimeError("boom"))
-        run_adapter(adapter, limit=5, events_dir=events_dir)
+        run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert adapter.closed is True
 
 
@@ -243,7 +245,7 @@ class TestSourceConfig:
 
         cfg = SourceConfig.from_mapping("zenodo", config.load_sources()["zenodo"])
         assert cfg.name == "zenodo"
-        assert cfg.enabled and cfg.tier == 1 and cfg.max_records == 5
+        assert cfg.enabled and cfg.tier == 1
         assert cfg.precedence == 30
         assert cfg.get("communities")[0]["slug"] == "iea_wind_task_43"
 

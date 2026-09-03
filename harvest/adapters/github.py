@@ -13,7 +13,7 @@ Source
        also where code living in an individual's account goes (``gh-08``).
     3. **Topic search** — ``GET /search/repositories?q=topic:...`` for every
        topic in ``github.topics``. Reached only when 1 and 2 have not already
-       filled the record cap, which at ``max_records: 5`` they always do; it
+       filled the run's ``max_records``, which they usually do; it
        exists so the discovery surface is real rather than aspirational, and
        it is exercised offline in ``tests/test_github.py``.
 
@@ -107,7 +107,7 @@ import re
 from pathlib import Path
 from typing import Any, Iterable, Iterator
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest import config as _config
 from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
 from harvest.doi import DoiDropLog, extract_dois, normalise_doi, resolve_or_drop
@@ -468,7 +468,7 @@ class GitHubAdapter(Adapter):
 
     # -- the two contract methods -----------------------------------------
 
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
         api = self._api()
         exclude_forks = bool(self.config.get("exclude_forks", True))
         min_content = int(self.config.get("min_content_bytes", 2048) or 0)
@@ -522,7 +522,7 @@ class GitHubAdapter(Adapter):
                 url=repository.get("html_url"),
                 payload=envelope,
             )
-            if yielded >= limit:
+            if yielded >= max_records:
                 return
 
     def _resolve_badge(self, envelope: dict[str, Any], context: str) -> dict[str, Any]:

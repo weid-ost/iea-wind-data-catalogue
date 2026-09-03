@@ -44,26 +44,24 @@ Six rules that override anything you might otherwise reason your way into:
 
 ---
 
-## 1. The five-record cap
+## 1. The record cap
 
-`harvest.DEFAULT_LIMIT == 5`.
+`harvest.DEFAULT_MAX_RECORDS == 50`, one value for every source. It is the
+default of `harvest run --max-records N`; CI passes the workflow's
+`max_records` input straight through.
 
-Every `Adapter.harvest(limit)` yields **at most `limit`** observations.
-`sources.yaml` sets `max_records: 5` for all seven sources, and
-`run_adapter` takes `min(cli_limit, source.max_records)`. `_iter_limited`
-truncates and logs a warning if an adapter yields more anyway, so forgetting is
-a warning rather than three thousand records.
+Every `Adapter.harvest(max_records)` yields **at most `max_records`**
+observations. `_iter_capped` truncates and logs a warning if an adapter yields
+more anyway, so forgetting is a warning rather than three thousand records.
 
-This is a deliberate prototype cap, not a performance choice. It stops a stray
-run from hammering an upstream API, blowing a rate limit, or committing a
-catalogue nobody has looked at. Raise it consciously and per-run:
+Override it per run:
 
 ```sh
-uv run python -m harvest run --limit 50            # one run
-make harvest LIMIT=50                              # same thing
+uv run python -m harvest run --max-records 200     # one run
+make harvest MAX_RECORDS=200                       # same thing
 ```
 
-Do **not** raise `max_records` in `sources.yaml` as part of an adapter PR.
+There is no per-source cap in `sources.yaml`; do not add one.
 
 ---
 
@@ -71,7 +69,7 @@ Do **not** raise `max_records` in `sources.yaml` as part of an adapter PR.
 
 ```python
 from typing import Iterable
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest.adapters.base import Adapter, register, payload_hash
 from harvest.models import MappedObservation, RawObservation, SourceNamespace, FieldProvenance
 
@@ -81,7 +79,7 @@ class ZenodoAdapter(Adapter):
     tier = 1                                # 1 API · 2 structured-ish · 3 HTML+LLM
     source_key_semantics = "InvenioRDM record revision id + version DOI"
 
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]: ...
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]: ...
     def map(self, raw: RawObservation) -> MappedObservation: ...
 ```
 
@@ -776,7 +774,7 @@ Per-record rendering notes:
 ```sh
 uv sync --frozen --dev                       # the pinned environment (ADR-0034)
 uv run pytest                                # tests
-uv run python -m harvest run --limit 5       # harvest → events → records → validate → report
+uv run python -m harvest run --max-records 5 # harvest → events → records → validate → report
 uv run python -m harvest run --source zenodo # one source
 uv run python -m harvest materialize         # replay annotations/ + events/ into records/
 uv run python -m harvest validate            # the CKAN gate alone

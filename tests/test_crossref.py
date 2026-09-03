@@ -193,10 +193,10 @@ class TestSourceKey:
 
     def test_an_unchanged_key_writes_no_second_event(self, events_dir: Path) -> None:
         adapter = _adapter_over(["cr-01-canonical", "cr-03-proceedings"])
-        first = run_adapter(adapter, limit=5, events_dir=events_dir)
+        first = run_adapter(adapter, max_records=5, events_dir=events_dir)
         second = run_adapter(
             _adapter_over(["cr-01-canonical", "cr-03-proceedings"]),
-            limit=5, events_dir=events_dir,
+            max_records=5, events_dir=events_dir,
         )
         assert (first.changed, first.skipped_unchanged) == (2, 0)
         assert (second.changed, second.skipped_unchanged) == (0, 2)
@@ -405,12 +405,12 @@ class TestCr04PreprintPair:
 
     def test_harvest_drops_the_preprint_when_the_published_version_is_in_the_batch(self) -> None:
         adapter, _ = _mock_adapter(["cr-04-preprint-pair", "cr-04b-published-version"])
-        yielded = [raw.source_id for raw in adapter.harvest(limit=5)]
+        yielded = [raw.source_id for raw in adapter.harvest(max_records=5)]
         assert yielded == ["10.5194/wes-11-2345-2026"]
 
     def test_harvest_keeps_the_preprint_when_the_published_version_is_not(self) -> None:
         adapter, _ = _mock_adapter(["cr-04-preprint-pair"])
-        yielded = [raw.source_id for raw in adapter.harvest(limit=5)]
+        yielded = [raw.source_id for raw in adapter.harvest(max_records=5)]
         assert yielded == [self.preprint]
 
     def test_an_asserted_doi_that_does_not_resolve_is_dropped_and_logged(self) -> None:
@@ -423,7 +423,7 @@ class TestCr04PreprintPair:
         identity.
         """
         adapter, _ = _mock_adapter(["cr-04-preprint-pair"], resolvable=False)
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
         assert [drop["doi"] for drop in adapter.drop_log.as_notices()] == [self.published]
         assert adapter.drop_log.as_notices()[0]["reason"] == "did-not-resolve"
 
@@ -572,7 +572,7 @@ class TestCr07Retraction:
         """ADR-0027: kept, never deleted; CKAN `state` stays active and the
         withdrawal lives in the extras the site renders the banner from."""
         adapter = _adapter_over(["cr-07-retraction"])
-        run_adapter(adapter, limit=5, events_dir=repo / "events")
+        run_adapter(adapter, max_records=5, events_dir=repo / "events")
         result = materialize_all(root=repo)
         assert result.violations == []
         record = json.loads(
@@ -644,35 +644,35 @@ def _adapter_over(fixture_ids: list[str]) -> CrossrefAdapter:
 class TestHarvest:
     def test_the_five_record_cap_is_honoured(self) -> None:
         adapter = _adapter_over([f["fixture_id"] for f in ALL_FIXTURES])
-        assert len(list(adapter.harvest(limit=5))) == 5
+        assert len(list(adapter.harvest(max_records=5))) == 5
 
     def test_a_limit_of_zero_asks_the_api_for_nothing(self) -> None:
         adapter, seen = _mock_adapter(["cr-01-canonical"])
-        assert list(adapter.harvest(limit=0)) == []
+        assert list(adapter.harvest(max_records=0)) == []
         assert seen == []
 
     def test_the_payload_is_verbatim(self) -> None:
         adapter = _adapter_over(["cr-01-canonical"])
-        raw = list(adapter.harvest(limit=5))[0]
+        raw = list(adapter.harvest(max_records=5))[0]
         assert raw.payload == payload_of("cr-01-canonical")
 
     def test_the_request_lands_in_the_polite_pool(self) -> None:
         adapter, seen = _mock_adapter(["cr-01-canonical"])
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         assert "mailto=tom%40octue.com" in seen[0]
 
     def test_the_request_selects_only_the_fields_we_map(self) -> None:
         """`select` keeps the `reference` array — tens of kilobytes of
         citations we never use — off the wire and out of the fixtures."""
         adapter, seen = _mock_adapter(["cr-01-canonical"])
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         assert "select=" in seen[0]
         assert "reference%2C" not in seen[0]
         assert "DOI" in SELECT_FIELDS and "reference" not in SELECT_FIELDS
 
     def test_it_asks_for_a_small_page_not_the_configured_maximum(self) -> None:
         adapter, seen = _mock_adapter(["cr-01-canonical"])
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         assert "rows=10" in seen[0]
 
     def test_it_does_not_sort_by_deposited(self) -> None:
@@ -680,7 +680,7 @@ class TestHarvest:
         unrelated chemistry at a five-record cap. Change detection and result
         ordering are different questions."""
         adapter, seen = _mock_adapter(["cr-01-canonical"])
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         assert "sort=" not in seen[0]
 
     def test_every_configured_query_is_run_and_results_deduplicate(self) -> None:
@@ -689,7 +689,7 @@ class TestHarvest:
             queries=[{"params": {"query.title": "IEA Wind Task"}},
                      {"params": {"filter": "issn:2366-7451"}}],
         )
-        assert len(list(adapter.harvest(limit=5))) == 1  # same DOI from both queries
+        assert len(list(adapter.harvest(max_records=5))) == 1  # same DOI from both queries
         assert len([url for url in seen if url.startswith("https://api.crossref.org/works?")]) == 2
 
     def test_the_real_sources_yaml_queries_are_usable(self) -> None:
@@ -705,7 +705,7 @@ class TestDegradation:
     def test_every_query_failing_makes_the_source_unreachable(self) -> None:
         adapter, _ = _mock_adapter(["cr-01-canonical"], statuses=[503])
         with pytest.raises(SourceUnreachable):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
 
     def test_one_query_failing_costs_one_query_not_the_run(self) -> None:
         adapter, _ = _mock_adapter(
@@ -713,11 +713,11 @@ class TestDegradation:
             statuses=[503, 200],
             queries=[{"params": {"query.title": "a"}}, {"params": {"query.title": "b"}}],
         )
-        assert len(list(adapter.harvest(limit=5))) == 1
+        assert len(list(adapter.harvest(max_records=5))) == 1
 
     def test_an_unreachable_source_is_reported_never_raised(self, events_dir: Path) -> None:
         adapter, _ = _mock_adapter(["cr-01-canonical"], statuses=[500])
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert result.reachable is False and result.errors
 
     def test_an_upstream_schema_change_does_not_crash_the_run(self, events_dir: Path) -> None:
@@ -729,7 +729,7 @@ class TestDegradation:
             respect_robots=False, min_interval=0.0,
         )
         adapter = CrossrefAdapter(config=SourceConfig(name="crossref"), client=client)
-        result = run_adapter(adapter, limit=5, events_dir=events_dir)
+        result = run_adapter(adapter, max_records=5, events_dir=events_dir)
         assert result.reachable is False
         assert "unexpected response shape" in result.errors[0]
 
@@ -747,12 +747,12 @@ class TestDegradation:
                 respect_robots=False, min_interval=0.0,
             ),
         )
-        assert list(adapter.harvest(limit=5)) == []
+        assert list(adapter.harvest(max_records=5)) == []
         assert adapter.drop_log.as_notices()[0]["reason"] == "malformed"
 
     def test_close_does_not_close_a_client_it_did_not_open(self) -> None:
         adapter, _ = _mock_adapter(["cr-01-canonical"])
-        list(adapter.harvest(limit=5))
+        list(adapter.harvest(max_records=5))
         adapter.close()
         assert adapter.client is not None  # the injected client is the caller's
 
@@ -767,7 +767,7 @@ class TestDegradation:
         )
         adapter = CrossrefAdapter(config=SourceConfig(name="crossref"), client=client)
         with pytest.raises(SourceUnreachable, match="robots"):
-            list(adapter.harvest(limit=5))
+            list(adapter.harvest(max_records=5))
 
 
 # ---------------------------------------------------------------------------
@@ -789,15 +789,15 @@ class TestRegistration:
         assert "deposited" in declared and "indexed" in declared
         assert "deposited" in CrossrefAdapter.source_key_semantics
 
-    def test_sources_yaml_keeps_the_prototype_cap(self) -> None:
+    def test_sources_yaml_declares_precedence_and_tier(self) -> None:
         cfg = SourceConfig.from_mapping("crossref", config.load_sources()["crossref"])
-        assert cfg.max_records == 5 and cfg.precedence == 20 and cfg.tier == 1
+        assert cfg.precedence == 20 and cfg.tier == 1
 
 
 class TestEndToEnd:
     def test_harvest_materialize_and_the_ckan_gate(self, repo: Path) -> None:
         adapter = _adapter_over([f["fixture_id"] for f in ALL_FIXTURES])
-        result = run_adapter(adapter, limit=5, events_dir=repo / "events")
+        result = run_adapter(adapter, max_records=5, events_dir=repo / "events")
         assert result.changed == 5 and result.errors == []
 
         materialized = materialize_all(root=repo)
@@ -805,7 +805,7 @@ class TestEndToEnd:
         assert len(materialized.written) == 5
 
     def test_materialisation_is_byte_stable(self, repo: Path) -> None:
-        run_adapter(_adapter_over(["cr-01-canonical"]), limit=5, events_dir=repo / "events")
+        run_adapter(_adapter_over(["cr-01-canonical"]), max_records=5, events_dir=repo / "events")
         materialize_all(root=repo)
         before = (repo / "records" / "doi-10-5194-wes-9-1173-2024.json").read_bytes()
         again = materialize_all(root=repo)
@@ -813,7 +813,7 @@ class TestEndToEnd:
         assert before == after and again.written == []
 
     def test_the_record_is_a_postable_ckan_package(self, repo: Path) -> None:
-        run_adapter(_adapter_over(["cr-01-canonical"]), limit=5, events_dir=repo / "events")
+        run_adapter(_adapter_over(["cr-01-canonical"]), max_records=5, events_dir=repo / "events")
         materialize_all(root=repo)
         record = json.loads(
             (repo / "records" / "doi-10-5194-wes-9-1173-2024.json").read_text(encoding="utf-8")
@@ -828,7 +828,7 @@ class TestEndToEnd:
         assert extras["container"] == "Wind Energy Science"
 
     def test_an_unmapped_licence_reaches_the_run_report(self, repo: Path) -> None:
-        run_adapter(_adapter_over(["cr-05-markup-in-title"]), limit=5, events_dir=repo / "events")
+        run_adapter(_adapter_over(["cr-05-markup-in-title"]), max_records=5, events_dir=repo / "events")
         result = materialize_all(root=repo)
         assert [entry["license_raw"] for entry in result.unmapped_licenses] == [
             "http://onlinelibrary.wiley.com/termsAndConditions#vor"

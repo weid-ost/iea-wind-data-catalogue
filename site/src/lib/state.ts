@@ -18,7 +18,7 @@ export interface LastRun {
   started_at?: string;
   finished_at?: string;
   harvest_version?: string;
-  limit?: number;
+  max_records?: number;
   events_appended?: number;
   pending_extraction?: number;
   unreachable_sources?: string[];

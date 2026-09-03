@@ -29,7 +29,7 @@ you do not need Python 3.12 installed.
 ```sh
 make sync        # install the pinned environment (uv sync --frozen --dev)
 make test        # 2080 passed, 476 skipped
-make harvest     # harvest every enabled source (LIMIT=5) → events → records → validate → report
+make harvest     # harvest every enabled source (MAX_RECORDS=N to override the cap) → events → records → validate → report
 make materialize # replay annotations/ + events/ into records/ (derived; delete it freely)
 make validate    # the CKAN-compat gate
 make site        # build the static site + Pagefind index

@@ -14,15 +14,13 @@ document the parallel tracks build against.
 from __future__ import annotations
 
 # ===========================================================================
-# PROTOTYPE RECORD CAP
+# RECORD CAP
 # ===========================================================================
-# Every adapter's ``harvest()`` takes a ``limit`` and MUST honour it.  The
-# default is FIVE.  This is a deliberate prototype cap so that a stray run
-# cannot hammer an upstream API, blow through a rate limit, or commit three
-# thousand records before anyone has looked at five.  Raise it consciously,
-# per-run, with ``--limit`` or ``max_records:`` in ``sources.yaml``.
+# Every adapter's ``harvest(max_records)`` MUST honour it. This is the default;
+# ``harvest run --max-records N`` (what CI passes from the workflow's
+# ``max_records`` input) overrides it for one run.
 # ===========================================================================
-DEFAULT_LIMIT = 5
+DEFAULT_MAX_RECORDS = 50
 
 #: HTTP User-Agent for every outbound request. Descriptive, with a contact
 #: address, per the harvesting etiquette in CLAUDE.md.
@@ -33,4 +31,4 @@ USER_AGENT = (
 
 __version__ = "0.1.0"
 
-__all__ = ["DEFAULT_LIMIT", "USER_AGENT", "__version__"]
+__all__ = ["DEFAULT_MAX_RECORDS", "USER_AGENT", "__version__"]

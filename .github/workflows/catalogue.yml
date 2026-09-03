@@ -26,6 +26,10 @@
 #
 # NEVER runs on pull_request. See ci.yml for the PR gates.
 #
+# `workflow_dispatch` with skip_harvest=true runs only build + deploy against
+# the current head of main. Use it to (re)publish the site without a harvest,
+# e.g. after a site-only change. It makes no commit, so it is NOT a keepalive.
+#
 # >>> UNTESTED: this file has never executed. It cannot be run locally and has
 # >>> deliberately not been pushed. Its YAML parses and every command it invokes
 # >>> is cross-checked against the Makefile / `python -m harvest` CLI, but the
@@ -41,14 +45,19 @@ on:
     - cron: "17 4 * * 1"
   workflow_dispatch:
     inputs:
-      limit:
-        description: "Max records per source. The prototype cap is 5 — raise it consciously."
+      max_records:
+        description: "Max records per source for this run. Blank = the harvester's default (50)."
         required: false
-        default: "5"
+        default: ""
       source:
         description: "Optional single source to harvest (e.g. zenodo). Blank = all enabled."
         required: false
         default: ""
+      skip_harvest:
+        description: "Skip the harvest and just build + deploy what is on main. No heartbeat commit is made, so do not rely on this to keep the cron alive."
+        required: false
+        type: boolean
+        default: false
 
 # No ambient permissions. Every job declares exactly what it needs, rather than
 # inheriting the repository default (re-enable-a-dormant-cron §4).
@@ -60,9 +69,6 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # THE PROTOTYPE CAP, deliberately visible. Five records per source.
-  # Mirrors `LIMIT ?= 5` in the Makefile and harvest.DEFAULT_LIMIT.
-  HARVEST_LIMIT: "5"
   # Pinned toolchain (ADR-0034). Bump deliberately, never automatically.
   UV_VERSION: "0.12.7"
   # Must equal site/.nvmrc and site/package.json "engines". Gate 8 checks it.
@@ -79,7 +85,12 @@ jobs:
     # rather than derived from the event payload — an expression that evaluates
     # to false because a context was empty would silently stop the heartbeat,
     # which is the one failure mode this whole design is built to avoid.
-    if: github.ref == 'refs/heads/main'
+    #
+    # The skip_harvest clause is written so that it can only ever be true on a
+    # manual dispatch that explicitly asked for it. On a schedule event the
+    # inputs context is empty and the whole clause is false, so the heartbeat
+    # path is untouched.
+    if: github.ref == 'refs/heads/main' && !(github.event_name == 'workflow_dispatch' && inputs.skip_harvest == true)
     timeout-minutes: 30
     permissions:
       contents: write # the heartbeat commit, and only here
@@ -113,7 +124,7 @@ jobs:
         env:
           # Inputs are read through the environment, never interpolated into the
           # shell, so a dispatch input cannot become a command.
-          INPUT_LIMIT: ${{ inputs.limit }}
+          INPUT_MAX_RECORDS: ${{ inputs.max_records }}
           INPUT_SOURCE: ${{ inputs.source }}
           # ADR-0030 / ADR-0035: GitHub Models is OpenAI-compatible, so this is
           # an httpx POST, not a vendor SDK. The credential is the built-in
@@ -125,13 +136,14 @@ jobs:
         run: |
           set -euo pipefail
 
-          limit="${INPUT_LIMIT:-}"
-          if [ -z "$limit" ]; then limit="$HARVEST_LIMIT"; fi
-          case "$limit" in
-            ''|*[!0-9]*) echo "::error::limit must be a non-negative integer, got '$limit'"; exit 2 ;;
+          max_records="${INPUT_MAX_RECORDS:-}"
+          case "$max_records" in
+            '') ;;  # no override: the harvester's default applies
+            *[!0-9]*) echo "::error::max_records must be a non-negative integer, got '$max_records'"; exit 2 ;;
           esac
 
-          args=(run --limit "$limit")
+          args=(run)
+          if [ -n "$max_records" ]; then args+=(--max-records "$max_records"); fi
 
           source_name="${INPUT_SOURCE:-}"
           if [ -n "$source_name" ]; then
@@ -141,7 +153,7 @@ jobs:
             args+=(--source "$source_name")
           fi
 
-          echo "::notice::harvest run --limit $limit ${source_name:+--source $source_name}"
+          echo "::notice::harvest run ${max_records:+--max-records $max_records} ${source_name:+--source $source_name}"
 
           # Exit 0 = the run completed and the CKAN gate passed.
           # Exit 1 = validate-ckan-compat FAILED. That is the ONE thing allowed
@@ -227,6 +239,12 @@ jobs:
   build:
     name: build site
     needs: harvest
+    # Runs when the harvest succeeded, or when it was skipped by skip_harvest
+    # (a skipped `needs` would otherwise skip this job too). A FAILED harvest
+    # still blocks the build: nothing gets deployed on top of a run that did
+    # not pass the CKAN gate. `!cancelled()` is required for the result check
+    # to be evaluated at all.
+    if: ${{ !cancelled() && github.ref == 'refs/heads/main' && (needs.harvest.result == 'success' || needs.harvest.result == 'skipped') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     permissions:

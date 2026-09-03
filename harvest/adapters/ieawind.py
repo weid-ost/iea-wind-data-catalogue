@@ -80,7 +80,7 @@ import re
 from typing import Any, Iterable
 from urllib.parse import urljoin, urlsplit
 
-from harvest import DEFAULT_LIMIT
+from harvest import DEFAULT_MAX_RECORDS
 from harvest import config as _config
 from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
 from harvest.doi import DoiDropLog, extract_dois, normalise_doi, resolve_or_drop
@@ -486,8 +486,8 @@ class IeaWindAdapter(Adapter):
         log.warning("%s: %s (%s)", kind, url, detail)
 
     # -- harvest -----------------------------------------------------------
-    def harvest(self, limit: int = DEFAULT_LIMIT) -> Iterable[RawObservation]:
-        """Crawl the configured task pages and yield at most ``limit`` records.
+    def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
+        """Crawl the configured task pages and yield at most ``max_records`` records.
 
         Nothing is yielded until every page has been read, because a DOI cited
         on two task pages must arrive as **one** observation carrying both
@@ -529,11 +529,11 @@ class IeaWindAdapter(Adapter):
                     reachable_pages += 1
                     if sub.get("record_bearing"):
                         batch.append(sub)
-            self._collect(batch, found, limit)
+            self._collect(batch, found, max_records)
             # The cap is on records, not on pages: keep crawling only while
             # there is room, but never truncate mid-page — iea-06's union needs
             # every page that cites a DOI already held.
-            if len(found) >= limit:
+            if len(found) >= max_records:
                 break
 
         if reachable_pages == 0:
@@ -543,7 +543,7 @@ class IeaWindAdapter(Adapter):
                 f"none of the {len(pages)} configured iea-wind.org task pages could be read"
             )
 
-        for doi, gathered in list(found.items())[:limit]:
+        for doi, gathered in list(found.items())[:max_records]:
             hashes = sorted({page["content_hash"] for page in gathered["pages"]})
             yield RawObservation(
                 source_system=self.source_name,
@@ -733,7 +733,7 @@ class IeaWindAdapter(Adapter):
         self,
         pages: list[dict[str, Any]],
         found: dict[str, dict[str, Any]],
-        limit: int,
+        max_records: int,
     ) -> bool:
         """Resolve each page's DOIs and fold them into ``found``. Returns "full"."""
         client = self._resolver_client()
@@ -750,7 +750,7 @@ class IeaWindAdapter(Adapter):
                     if page["url"] not in known:
                         found[normalised]["pages"].append(self._page_ref(page))
                     continue
-                if len(found) >= limit:
+                if len(found) >= max_records:
                     continue
                 # iea-05: resolve or drop. Never a record from an unresolved DOI.
                 resolution = resolve_or_drop(
@@ -764,8 +764,8 @@ class IeaWindAdapter(Adapter):
                     "tasks": set(page["iea_task"]),
                     "pages": [self._page_ref(page)],
                 }
-            self._title_search(page, found, limit)
-        return len(found) >= limit
+            self._title_search(page, found, max_records)
+        return len(found) >= max_records
 
     @staticmethod
     def _page_ref(page: dict[str, Any]) -> dict[str, Any]:
@@ -795,7 +795,7 @@ class IeaWindAdapter(Adapter):
         self,
         page: dict[str, Any],
         found: dict[str, dict[str, Any]],
-        limit: int,
+        max_records: int,
     ) -> None:
         """iea-07: a citation with a title but no DOI, looked up in Crossref.
 
@@ -807,7 +807,7 @@ class IeaWindAdapter(Adapter):
         candidates = page.get("titles_without_doi") or []
         client = self._resolver_client()
         for title in candidates:
-            if len(found) >= limit:
+            if len(found) >= max_records:
                 return
             try:
                 response = client.get(

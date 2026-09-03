@@ -9,9 +9,9 @@
 .PHONY: help sync harvest materialize validate annotations dedupe linkcheck test extract \
         build-tokens site gates clean
 
-# The PROTOTYPE CAP. Five records per source. Raise it consciously:
-#   make harvest LIMIT=50
-LIMIT ?= 5
+# Per-source record cap for `make harvest`. Blank = the harvester's default.
+#   make harvest MAX_RECORDS=200
+MAX_RECORDS ?=
 
 UV ?= uv
 NPM ?= npm
@@ -23,8 +23,8 @@ help:  ## show this help
 sync:  ## install the pinned Python environment (uv sync --frozen)
 	$(UV) sync --frozen --dev
 
-harvest:  ## harvest every enabled source (LIMIT=5 by default) and materialize
-	$(UV) run python -m harvest run --limit $(LIMIT)
+harvest:  ## harvest every enabled source (MAX_RECORDS=N overrides the default cap) and materialize
+	$(UV) run python -m harvest run $(if $(MAX_RECORDS),--max-records $(MAX_RECORDS))
 
 materialize:  ## replay events/ into records/ (derived; safe to delete and rebuild)
 	$(UV) run python -m harvest materialize

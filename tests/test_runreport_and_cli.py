@@ -41,7 +41,7 @@ class TestRunReport:
         assert payload["started_at"] and payload["finished_at"]
 
     def test_shape(self, repo: Path) -> None:
-        report = RunReport(limit=5)
+        report = RunReport(max_records=5)
         report.add_source("zenodo", SourceResult("zenodo", seen=5, changed=2,
                                                  skipped_unchanged=3))
         report.add_source("wdh", SourceResult("wdh", reachable=False,
@@ -101,7 +101,7 @@ class TestCli:
         column to the second and this test keeps meaning what it means.
         """
         stubs = set(stub_sources())
-        assert main(["--root", str(repo), "run", "--limit", "5"]) == 0
+        assert main(["--root", str(repo), "run", "--max-records", "5"]) == 0
         payload = read_run_report(root=repo)
         assert set(payload["sources"]) == set(SEVEN_SOURCES)
         for name, source in payload["sources"].items():
@@ -109,16 +109,18 @@ class TestCli:
             if name not in stubs:
                 assert source["reachable"] is False, name
             assert source["changed"] == 0, name
-        assert payload["limit"] == 5
+        assert payload["max_records"] == 5
         assert payload["ok"] is True
 
     def test_run_writes_the_heartbeat_even_when_nothing_happens(self, repo: Path) -> None:
         main(["--root", str(repo), "run", *only_stubs()])
         assert (repo / "state" / "last-run.json").exists()
 
-    def test_run_defaults_to_a_limit_of_five(self, repo: Path) -> None:
+    def test_run_defaults_to_the_default_max_records(self, repo: Path) -> None:
+        from harvest import DEFAULT_MAX_RECORDS
+
         main(["--root", str(repo), "run", *only_stubs()])
-        assert read_run_report(root=repo)["limit"] == 5
+        assert read_run_report(root=repo)["max_records"] == DEFAULT_MAX_RECORDS
 
     def test_run_can_target_one_source(self, repo: Path) -> None:
         main(["--root", str(repo), "run", "--source", "zenodo"])

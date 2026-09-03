@@ -27,7 +27,7 @@ make harvest
 which is exactly:
 
 ```sh
-uv run python -m harvest run --limit 5
+uv run python -m harvest run --max-records 5
 ```
 
 That performs the whole pipeline in one pass: harvest every enabled source →
@@ -39,35 +39,26 @@ the gate failed, and every violation is printed to stderr. An unreachable source
 does **not** fail the run — it is reported. That is deliberate
 ([[adr-0031-the-harvest-never-fails-on-llm-unavailability]]).
 
-## 2. The five-record cap
+## 2. The record cap
 
-`harvest.DEFAULT_LIMIT == 5`, and `sources.yaml` sets `max_records: 5` for all
-seven sources. `run_adapter` takes `min(cli_limit, source.max_records)`, and
-`_iter_limited` truncates and logs a warning if an adapter yields more anyway —
-so forgetting the cap is a warning, not three thousand records.
+There is one knob: `max_records`, the most records any one source harvests in
+a run. `harvest.DEFAULT_MAX_RECORDS == 50` is its default; `harvest run
+--max-records N` overrides it for that run, and the GitHub Actions workflow
+passes its `max_records` dispatch input straight through. `sources.yaml`
+carries no per-source cap. `_iter_capped` truncates and logs a warning if an
+adapter yields more anyway — so a forgetful adapter is a warning, not three
+thousand records.
 
-**This is a deliberate prototype cap, not a performance choice.** It stops a
-stray run from hammering an upstream API, blowing a rate limit, or committing a
-catalogue nobody has looked at.
-
-### Lifting it — consciously, and per run
+### Overriding it — per run
 
 ```sh
-uv run python -m harvest run --limit 50      # one run, one source's worth of care
-make harvest LIMIT=50                        # identical
+uv run python -m harvest run --max-records 200   # one run
+make harvest MAX_RECORDS=200                     # identical
 ```
 
-The `LIMIT` variable is declared at the top of the `Makefile` for exactly this.
-
-**Do not raise `max_records` in `sources.yaml` as part of an adapter change.**
-That changes the cap for everybody, permanently, in a file that is canonical
-data. Raising the real cap is a separate, deliberate commit with a reason in its
-message — and when you do it, raise one source at a time and watch the run
-report.
-
-Remember that `--limit` and `max_records` interact by `min()`: with
-`max_records: 5` still in `sources.yaml`, `--limit 50` will still yield five.
-To genuinely harvest more, both must move.
+The `MAX_RECORDS` variable is declared at the top of the `Makefile` for exactly
+this. Blank means the default. In CI, run the workflow by hand and fill in
+`max_records`; the scheduled run uses the default.
 
 ## 3. Narrowing a run
 
@@ -191,7 +182,7 @@ would receive on promotion day.
 ---
 
 **Last executed:** 2026-09-01 — the first coherent harvest. `uv run python -m
-harvest run --limit 5` exited 0 against the live upstreams: all seven adapters
+harvest run --max-records 5` exited 0 against the live upstreams: all seven adapters
 `implemented: true`, six reachable and five records each (30 events, 30
 records), `wdh` correctly `reachable: false` behind its auth wall,
 `validate-ckan-compat: OK`, `ok: true`.
@@ -207,9 +198,9 @@ Two things worth knowing before you repeat it:
   want the deterministic path only, do not export `GITHUB_TOKEN`.
 - **The committed `cache/` entries did not hit.** They are keyed on page
   content, and the two pages they were captured from are not among the five
-  `--limit 5` reaches. `cache.hit_rate: 0.0` on a first run is therefore not a
+  `--max-records 5` reaches. `cache.hit_rate: 0.0` on a first run is therefore not a
   fault; it means the crawl went somewhere else.
 
-A second `run --limit 5` immediately afterwards reported `changed: 0` for every
+A second `run --max-records 5` immediately afterwards reported `changed: 0` for every
 source, `events_appended: 0`, and left only `state/last-run.json` modified —
 the change-detection and heartbeat proof in §5, performed.

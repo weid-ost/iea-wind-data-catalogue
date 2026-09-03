@@ -41,8 +41,8 @@ then they live here.
 | | |
 |---|---|
 | Date | 2026-09-01 → 02 (observation time in events) |
-| Command | `python -m harvest run --limit 100` |
-| Per-source cap | `max_records: 100` (raised from the prototype's 5 in `sources.yaml`) |
+| Command | `python -m harvest run --max-records 100` |
+| Per-source cap | 100 (the prototype default was 5; the cap has since become the single `--max-records` knob, default 50) |
 | Records after | **291** (was 30) |
 | Events appended | 291 |
 | Validation | **0 violations** (CKAN-compat gate clean) |
