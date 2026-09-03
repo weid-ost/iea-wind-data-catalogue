@@ -323,7 +323,11 @@ jobs:
   deploy:
     name: deploy to GitHub Pages
     needs: build
-    if: needs.build.outputs.site == 'true'
+    # `!cancelled()` for the same reason as on `build`: with skip_harvest the
+    # harvest job is skipped, and the implicit success() is false whenever any
+    # ancestor in the needs chain was skipped, which would skip the deploy too.
+    # A failed build still blocks it.
+    if: ${{ !cancelled() && needs.build.result == 'success' && needs.build.outputs.site == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
