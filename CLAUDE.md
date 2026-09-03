@@ -2,6 +2,12 @@
 
 A static, self-maintaining catalogue of IEA Wind datasets, publications and software: harvested from where people already publish, asking nothing of anyone. GitHub Actions + GitHub Pages, no servers, no databases, ≈ $0/month.
 
+## Committing
+
+When making commits in git, NEVER attribute Claude (yourself) as a contributor. Reasons: 
+1. A contributor is a human who takes responsibility for the code; LLMs (you) cannot do this. 
+2. We (the Open-Source community) built the code that was used to train Claude (you), and never got any credit or compensation for that. Not attributing Anthropic/Claude to our outputs built with this tool is consistent with Anthropic's own practice.
+
 ## Authoritative documents — read before proposing changes
 
 1. `plans/02-static-plan.md` — the architecture. Its ADR register (§8) and decisions log (§9) are binding; don't relitigate an ADR without saying you're doing so.
