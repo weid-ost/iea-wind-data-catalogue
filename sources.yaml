@@ -24,7 +24,7 @@ version: 1
 
 defaults:
   max_records: 5
-  user_agent: "iea-wind-data-catalogue/0.1 (+https://github.com/thclark/iea-wind-data-catalogue; tom@octue.com)"
+  user_agent: "iea-wind-data-catalogue/0.1 (+https://github.com/weid-ost/iea-wind-data-catalogue; tom@octue.com)"
   respect_robots: true
   min_request_interval_seconds: 0.2
 

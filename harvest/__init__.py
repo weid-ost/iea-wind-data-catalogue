@@ -28,7 +28,7 @@ DEFAULT_LIMIT = 5
 #: address, per the harvesting etiquette in CLAUDE.md.
 USER_AGENT = (
     "iea-wind-data-catalogue/0.1 "
-    "(+https://github.com/thclark/iea-wind-data-catalogue; tom@octue.com)"
+    "(+https://github.com/weid-ost/iea-wind-data-catalogue; tom@octue.com)"
 )
 
 __version__ = "0.1.0"

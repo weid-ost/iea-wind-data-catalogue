@@ -152,7 +152,7 @@ byte-stable and that is a bug.
 raw `httpx`:
 
 - descriptive **User-Agent with a contact address**:
-  `iea-wind-data-catalogue/0.1 (+https://github.com/thclark/iea-wind-data-catalogue; tom@octue.com)`
+  `iea-wind-data-catalogue/0.1 (+https://github.com/weid-ost/iea-wind-data-catalogue; tom@octue.com)`
 - **`robots.txt` honoured per host**
 - **throttled** to 5 requests/second
 - **conditional GETs** — `If-None-Match` / `If-Modified-Since` from

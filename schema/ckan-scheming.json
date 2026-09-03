@@ -2,7 +2,7 @@
   "scheming_version": 2,
   "dataset_type": "dataset",
   "about": "IEA Wind Data Catalogue — canonical record schema. Nothing in this repository consumes this file yet: it is the written definition of the record shape (plan §2.2), it documents every custom field carried in `extras`, and it is the input ckanext-scheming needs on the day the catalogue is promoted to CKAN. Keep it in step with harvest/materialize.py:EXTRA_KEYS and harvest/CONTRACT.md — those three are the same contract stated three ways.",
-  "about_url": "https://github.com/thclark/iea-wind-data-catalogue",
+  "about_url": "https://github.com/weid-ost/iea-wind-data-catalogue",
 
   "notes": [
     "Every custom field below is stored as a CKAN EXTRA with a STRING value. Fields whose logical type is a list or an object are JSON-encoded inside that string, compactly, with sorted keys. CKAN accepts nothing else in extras unless declared here, which is exactly what this file declares.",

@@ -8,7 +8,7 @@ import { defineConfig } from 'astro/config';
 // *project* site today and a custom domain later. Defaults match the repo as it
 // stands; a custom domain sets SITE_BASE=/ and SITE_URL=https://your.domain/.
 export default defineConfig({
-  site: process.env.SITE_URL ?? 'https://thclark.github.io/iea-wind-data-catalogue/',
+  site: process.env.SITE_URL ?? 'https://weid-ost.github.io/iea-wind-data-catalogue/',
   base: process.env.SITE_BASE ?? '/iea-wind-data-catalogue',
   trailingSlash: 'always',
   build: { format: 'directory' },

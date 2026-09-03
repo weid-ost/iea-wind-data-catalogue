@@ -175,7 +175,7 @@ payload rather than inventing one:
 ```sh
 mkdir -p fixtures/mysource/raw
 curl -sS -H 'Accept: application/json' \
-  -A 'iea-wind-data-catalogue/0.1 (+https://github.com/thclark/iea-wind-data-catalogue; tom@octue.com)' \
+  -A 'iea-wind-data-catalogue/0.1 (+https://github.com/weid-ost/iea-wind-data-catalogue; tom@octue.com)' \
   https://example.org/api/records/123 \
   | python -m json.tool > fixtures/mysource/raw/mys-01-canonical.json
 ```

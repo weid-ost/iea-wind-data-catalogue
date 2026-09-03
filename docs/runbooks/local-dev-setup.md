@@ -35,7 +35,7 @@ uv --version
 ## 2. Clone and install the pinned environment
 
 ```sh
-git clone https://github.com/thclark/iea-wind-data-catalogue.git
+git clone https://github.com/weid-ost/iea-wind-data-catalogue.git
 cd iea-wind-data-catalogue
 make sync
 ```

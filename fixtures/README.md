@@ -57,7 +57,7 @@ Capture with the real client so the shape is honest:
 
 ```sh
 curl -sS -H 'Accept: application/json' \
-  -A 'iea-wind-data-catalogue/0.1 (+https://github.com/thclark/iea-wind-data-catalogue; tom@octue.com)' \
+  -A 'iea-wind-data-catalogue/0.1 (+https://github.com/weid-ost/iea-wind-data-catalogue; tom@octue.com)' \
   https://sandbox.zenodo.org/api/records/1234567 \
   | python -m json.tool > fixtures/zenodo/raw/zen-01-canonical.json
 ```

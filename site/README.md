@@ -50,7 +50,7 @@ scripts/
 
 The repository deploys to a GitHub Pages **project** site today, so `base`
 defaults to `/iea-wind-data-catalogue` and `site` to
-`https://thclark.github.io/iea-wind-data-catalogue/`. Both are environment
+`https://weid-ost.github.io/iea-wind-data-catalogue/`. Both are environment
 variables; a custom domain is:
 
 ```sh

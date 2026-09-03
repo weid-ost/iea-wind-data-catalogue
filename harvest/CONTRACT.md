@@ -116,7 +116,7 @@ with HarvestClient() as client:
 ```
 
 `HarvestClient` sends the project User-Agent
-(`iea-wind-data-catalogue/0.1 (+https://github.com/thclark/iea-wind-data-catalogue; tom@octue.com)`),
+(`iea-wind-data-catalogue/0.1 (+https://github.com/weid-ost/iea-wind-data-catalogue; tom@octue.com)`),
 honours `robots.txt` per host, throttles to 5 req/s, sends `If-None-Match` /
 `If-Modified-Since` from `client.fetch_state`, and **never raises** on a
 transport error — it returns a `FetchResult` with `error` set.
