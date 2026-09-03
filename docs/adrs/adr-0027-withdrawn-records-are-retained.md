@@ -83,6 +83,5 @@ their records.
 
 ## Source
 
-`plans/02-static-plan.md` §4.4, §8 (ADR-0027); `CLAUDE.md` invariants;
-`harvest/models.py`; `harvest/events.py`; fixtures `zen-12`, `r-04`, `gh-05`,
-`iea-12`; `transcript/conversation-record.md` turns 11–12.
+`CLAUDE.md` invariants; `harvest/models.py`; `harvest/events.py`; fixtures
+`zen-12`, `r-04`, `gh-05`, `iea-12`; [[decision-history]] §2 turns 11–12.

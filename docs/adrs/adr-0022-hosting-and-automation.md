@@ -14,7 +14,7 @@ tags: [infrastructure, hosting, cost]
 
 ## Status
 
-**Accepted.** Option A of `plans/02-static-plan.md` §3.1. Supersedes ADR-0001
+**Accepted.** Supersedes ADR-0001
 (platform), ADR-0002 (Terraform + GCS state), ADR-0003 (Cloud Run compute) and
 ADR-0015 (GCP identity and project ownership) from the CKAN plan. The Firebase
 variant (Option B) is documented and **not** chosen.
@@ -35,7 +35,7 @@ and from turn 5:
 
 > "We'll definitely go with option A rather than B, for the static architecture."
 
-The GCP identity problem documented at length in `plans/01-ckan-plan.md` §3.1 —
+The GCP identity problem documented at length in [[ckan-promotion-path]] §4 —
 OST is a Microsoft shop with no Google Workspace, no Cloud Identity and no GCP
 Organization, so the prototype would run on consumer Google accounts that OST
 IT could not administer, recover or offboard — evaporates entirely if there is
@@ -103,12 +103,13 @@ annotations  ──┤
   ([[adr-0034-toolchain-pinning-and-no-auto-updates]]).
 
 **Rejected: Option B, the GCP variant.** Cloud Run Job + Cloud Scheduler +
-Firebase Hosting, roughly $1–3/month. Documented in `plans/02-static-plan.md`
-§3.1 in case OST policy ever requires it. Note that raw GCS website hosting is
+Firebase Hosting, roughly $1–3/month. Costed in [[motivation]] §5 and kept on
+record in case OST policy ever requires it. Note that raw GCS website hosting is
 *not* the fallback: it needs a ~$18/month load balancer to get HTTPS.
 
 ## Source
 
-`plans/02-static-plan.md` §3.1, §6, §8 (ADR-0022), §9;
-`plans/01-ckan-plan.md` §3.1 (the identity problem this removes);
-`transcript/conversation-record.md` turns 3, 5, 6.
+[[motivation]] §5 (the cost comparison);
+[[ckan-promotion-path]] §§3–5 (the GCP design this replaces, including the
+identity problem it removes); `.github/workflows/catalogue.yml`;
+[[decision-history]] §2 turns 3, 5, 6.

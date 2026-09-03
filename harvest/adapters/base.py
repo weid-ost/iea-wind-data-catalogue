@@ -80,7 +80,7 @@ def payload_hash(payload: Any) -> str:
 
     Deterministic across runs and interpreters: JSON with sorted keys and no
     insignificant whitespace, SHA-256, first 16 hex characters. Use it when the
-    source offers no trustworthy revision or updated-at field (plan §4.1).
+    source offers no trustworthy revision or updated-at field (ADR-0026).
     """
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"), default=str)
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:16]

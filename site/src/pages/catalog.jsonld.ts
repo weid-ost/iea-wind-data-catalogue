@@ -1,6 +1,6 @@
 /**
  * The DCAT export, as a file. DCAT harvesters consume a file anyway, so
- * "read-only DCAT" is barely a loss compared with a write API (plan §5.4).
+ * "read-only DCAT" is barely a loss compared with a write API (docs/motivation.md §4).
  */
 import type { APIRoute } from 'astro';
 import { catalogue } from '../lib/catalogue';

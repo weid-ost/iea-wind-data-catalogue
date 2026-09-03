@@ -12,7 +12,7 @@
 //   B. **The built output, re-read.** Escaping helps nobody if a template
 //      forgets to call it, so `dist/` is checked for what must never appear:
 //      a JSON-LD block that does not parse, a `javascript:` href, a script tag
-//      inside a record description. Plus the promises the plan makes about the
+//      inside a record description. Plus the promises ADR-0023 makes about the
 //      output — six facets (ADR-0023 §3), every dataset typed `Dataset`, no
 //      invented DCAT licence, no download list on a withdrawn record.
 //
@@ -167,7 +167,7 @@ for (const path of htmlFiles) {
 // B.3 — the DCAT export: a licence is an IRI or it is absent (site-03).
 const catalogPath = join(dist, 'catalog.jsonld');
 if (!existsSync(catalogPath)) {
-  fail('dist/catalog.jsonld is missing — the DCAT export is what harvesters consume (plan §5.4)');
+  fail('dist/catalog.jsonld is missing — the DCAT export is what harvesters consume (docs/motivation.md §4)');
 } else {
   const raw = read(catalogPath);
   if (/[<>]/.test(raw)) {

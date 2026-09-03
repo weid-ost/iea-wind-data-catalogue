@@ -446,7 +446,7 @@ class LocalNamespace(BaseModel):
 #: are source claims, and a catalogue that lets an annotation invent an open
 #: licence with no ``license_raw`` behind it is asserting a fact nobody stated.
 #: A correction to a source value is expressed as a ``curator_notes`` entry
-#: rendered beside the wrong value (plan §4.3, fixture ``x-10``).
+#: rendered beside the wrong value (ADR-0038, fixture ``x-10``).
 LOCAL_CURATOR_FIELDS: frozenset[str] = frozenset(
     {
         "iea_task",
@@ -484,7 +484,7 @@ class RawObservation(BaseModel):
 
     source_system: str          # must equal the adapter's ``source_name``
     source_id: str              # the upstream's own stable id, as a string
-    source_key: str             # the change token (plan §4.1); adapter owns its semantics
+    source_key: str             # the change token (ADR-0026); adapter owns its semantics
     fetched_at: str = Field(default_factory=utcnow)
     url: str | None = None      # landing page, if the adapter knows it cheaply
     payload: dict[str, Any] = Field(default_factory=dict)

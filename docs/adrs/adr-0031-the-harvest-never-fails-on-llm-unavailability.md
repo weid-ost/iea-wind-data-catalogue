@@ -13,7 +13,7 @@ tags: [llm, degradation, operations]
 
 ## Status
 
-**Accepted.** `plans/02-static-plan.md` calls this "the part that actually
+**Accepted.** The design called this "the part that actually
 matters"; `CLAUDE.md` makes it an invariant.
 
 ## Context
@@ -25,10 +25,10 @@ the catalogue — quietly, at the worst moment, with nobody watching.
 
 Turn 5 asked how to plug the LLM in and whether that meant a billing account.
 Turn 7 pushed further, and the resulting posture goes beyond graceful failure:
-`plans/02-static-plan.md` §3.4 argues that the *stronger* fallback — no LLM in
-CI at all — is worth building even if GitHub Models works, because it makes the
-project immune to any future change in GitHub's free-tier terms. The delta is
-roughly fifteen pages a week. That does not need to be automated.
+the *stronger* fallback — no LLM in CI at all — is worth building even if
+GitHub Models works, because it makes the project immune to any future change in
+GitHub's free-tier terms. The delta is roughly fifteen pages a week. That does
+not need to be automated.
 
 ## Decision
 
@@ -99,6 +99,5 @@ escaping `run_adapter` is a bug in `run_adapter`.**
 
 ## Source
 
-`plans/02-static-plan.md` §3.4 ("Degradation — the part that actually matters"),
-§8 (ADR-0031); `harvest/extract.py`; `harvest/adapters/base.py::run_adapter`;
-fixtures `x-07`, `wdh-07`; `transcript/conversation-record.md` turns 5, 7.
+`harvest/extract.py`; `harvest/adapters/base.py::run_adapter`; fixtures `x-07`,
+`wdh-07`; [[decision-history]] §2 turns 5, 7.

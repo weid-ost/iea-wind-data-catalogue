@@ -23,7 +23,7 @@ Source
     403/429 is **not** a crash: it raises :class:`SourceUnreachable` and the
     source disables itself for the run.
 
-Source key (plan §4.1, ADR-0026)
+Source key (ADR-0026)
     A composite, because no single trustworthy field exists::
 
         "<default-branch head SHA>:<latest release tag>:<hash(description, topics, licence)>"
@@ -238,7 +238,7 @@ def concept_doi_of(datacite_payload: dict[str, Any] | None) -> str | None:
 
 
 def source_key_for(payload: dict[str, Any]) -> str:
-    """The composite change token (plan §4.1).
+    """The composite change token (ADR-0026).
 
     ``<head SHA>:<latest release tag>:<hash(description, topics, licence)>``.
     Pure and deterministic: the offline fixture tests recompute it from the raw

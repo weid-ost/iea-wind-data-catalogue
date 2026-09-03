@@ -10,11 +10,12 @@ When making commits in git, NEVER attribute Claude (yourself) as a contributor. 
 
 ## Authoritative documents — read before proposing changes
 
-1. `plans/02-static-plan.md` — the architecture. Its ADR register (§8) and decisions log (§9) are binding; don't relitigate an ADR without saying you're doing so.
-2. `plans/01-ckan-plan.md` — historical + the CKAN *promotion path*. Not the current architecture.
-3. `design/design-system.md` + `design/design-tokens.json` — visual system (DTCG). `design/gen.py` regenerates the palette and re-verifies WCAG contrast; run it after any colour change.
-4. `data/fixtures/fixtures-catalogue.md` — the test/gallery fixture inventory. New behaviour ⇒ new fixture.
-5. `transcript/conversation-record.md` — why everything is the way it is.
+1. `docs/adrs/` — the twenty ADRs, 0020–0039. **Binding.** Don't relitigate one without saying you're doing so, in the commit message.
+2. `docs/architecture.md` — the system end to end; `docs/record-format.md` — the shapes. Start from `docs/index.md`, the vault map.
+3. `harvest/CONTRACT.md` — the interface document the code is written against. Where it and the vault disagree about the code, CONTRACT and then the code win.
+4. `design/design-system.md` + `design/design-tokens.json` — visual system (DTCG). `design/gen.py` regenerates the palette and re-verifies WCAG contrast; run it after any colour change.
+5. `data/fixtures/fixtures-catalogue.md` — the test/gallery fixture inventory. New behaviour ⇒ new fixture.
+6. `docs/motivation.md` — why the catalogue exists and what it deliberately is not. `docs/decision-history.md` — every requirement verbatim, what it settled, and what was proposed and rejected. `docs/ckan-promotion-path.md` — the superseded CKAN design, retained solely as the promotion path.
 
 ## Non-negotiable invariants
 

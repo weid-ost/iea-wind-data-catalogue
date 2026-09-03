@@ -84,5 +84,5 @@ rather than side effects:
 
 ## Source
 
-`plans/02-static-plan.md` §2.1, §3.5, §8 (ADR-0023); `design/design-system.md`
-§6; `harvest/CONTRACT.md` §11; `transcript/conversation-record.md` turns 2–3.
+`design/design-system.md` §6; `harvest/CONTRACT.md` §11; [[decision-history]]
+§2 turns 2–3.

@@ -5,7 +5,7 @@ Source
     IEA Wind communities listed under ``sources.yaml -> sources.zenodo.communities``.
     Public metadata needs no authentication.
 
-Source key (plan §4.1, ADR-0026) — **VERIFIED LIVE 2026-08-31**
+Source key (ADR-0026) — **VERIFIED LIVE 2026-08-31**
     The field is ``revision`` (a top-level integer on every record; there is no
     ``revision_id`` on this API surface). The key is
     ``"<revision>@<version DOI>"``, exactly as ADR-0026 requires ("record

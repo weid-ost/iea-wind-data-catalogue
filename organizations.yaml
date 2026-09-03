@@ -1,6 +1,6 @@
 # organizations.yaml — CKAN-shaped organization definitions.
 #
-# Canonical data in the repo, not configuration (plan §2.2). A record's
+# Canonical data in the repo, not configuration (ADR-0021). A record's
 # `owner_org` MUST reference a `name` below or the CKAN-compat gate fails.
 #
 # The premise of this catalogue is that nobody registers anything, so these

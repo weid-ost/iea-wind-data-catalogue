@@ -7,7 +7,7 @@ checks them with the same etiquette every other request in the project uses
 the result where a human will see it.
 
 **Nothing here deletes, withdraws or edits a record.** A 404 on a task page
-means the *page* moved, not that the artifact stopped existing — plan §4.4 and
+means the *page* moved, not that the artifact stopped existing — ADR-0037 and
 [[adr-0027-withdrawn-records-are-retained]] are explicit that disappearance is a
 ``withdrawn`` event raised by an adapter that looked at the artifact, never an
 inference drawn from an HTTP status by a link checker. Fixture ``iea-12`` is the

@@ -16,12 +16,12 @@ tags: [premise, product]
 
 **Accepted.** This is the premise every other decision rests on. Supersedes
 ADR-0009 (org/group taxonomy as a permissions model) and ADR-0010
-(invite-only registration) from `plans/01-ckan-plan.md`.
+(invite-only registration) from the CKAN plan — see [[ckan-promotion-path]] §11.
 
 ## Context
 
 The original brief was a CKAN instance that institutions would log into, claim
-their records, and maintain. `plans/01-ckan-plan.md` §1 already flagged that
+their records, and maintain. The CKAN plan itself already flagged that
 the entire case for CKAN rested on that one behaviour: at hundreds to low
 thousands of public records, nothing about CKAN's *scale* capabilities is
 load-bearing.
@@ -76,7 +76,7 @@ people already publish and reflects what it finds.
 - It makes the aggregator's epistemic position honest: the catalogue reports
   what sources say, and anyone can check any field against its source.
 
-**Costs, stated plainly** (`plans/02-static-plan.md` §5)
+**Costs, stated plainly** ([[motivation]] §4)
 
 - **No self-service contribution from non-technical people.** GitHub PRs work
   for Task 43's crowd and not at all for a programme manager.
@@ -98,5 +98,6 @@ people already publish and reflects what it finds.
 
 ## Source
 
-`plans/02-static-plan.md` §1, §5, §8 (ADR-0020);
-`transcript/conversation-record.md` turns 2–3.
+[[motivation]] §§1–2, §4 (the premise and what it costs);
+[[ckan-promotion-path]] §1, §7 (the registration model this refuses, and what
+promotion would buy back); [[decision-history]] §2 turns 2–3.

@@ -56,8 +56,8 @@ The underlying CLI is `uv run python -m harvest
 | `site/` | the Astro renderer and Pagefind index build |
 | `design/` | DTCG design tokens, the palette derivation script, the design system |
 | `data/fixtures/` | test and gallery fixtures; `fixtures-catalogue.md` is the specification |
-| `docs/` | the documentation vault — ADRs, runbooks, architecture |
-| `plans/` | the two plan documents |
+| `data/README.md` | what the `data/` subtree is and the two rules that govern it |
+| `docs/` | the documentation vault — **the authority** for every decision |
 
 ## Documentation
 
@@ -65,16 +65,19 @@ Start at **[`docs/index.md`](docs/index.md)** — the vault map.
 
 - [`docs/architecture.md`](docs/architecture.md) — the system end to end, and the binding invariants
 - [`docs/record-format.md`](docs/record-format.md) — the record and event schemas
-- [`docs/adrs/`](docs/adrs/) — twenty ADRs, 0020–0039. Do not relitigate one without saying so
+- [`docs/adrs/`](docs/adrs/) — twenty ADRs, 0020–0039. **The authority.** Do not relitigate one without saying so
 - [`docs/runbooks/`](docs/runbooks/) — thirteen procedures with exact commands
 
-Underneath the vault:
+Background:
 
-- [`plans/02-static-plan.md`](plans/02-static-plan.md) — the authoritative architecture, with the ADR register (§8) and decisions log (§9)
-- [`plans/01-ckan-plan.md`](plans/01-ckan-plan.md) — the original CKAN/GCP plan, retained as the documented *promotion path*, not the current design
+- [`docs/motivation.md`](docs/motivation.md) — why this exists, what it deliberately is not, and what it costs
+- [`docs/decision-history.md`](docs/decision-history.md) — every requirement verbatim, what it settled, and what was proposed and rejected
+- [`docs/ckan-promotion-path.md`](docs/ckan-promotion-path.md) — the CKAN/GCP architecture that was planned first, retained solely as the promotion path
+
+Alongside:
+
 - [`harvest/CONTRACT.md`](harvest/CONTRACT.md) — the interface document the code is written against
 - [`design/design-system.md`](design/design-system.md) — the visual system and the accessibility gate
-- [`transcript/conversation-record.md`](transcript/conversation-record.md) — why everything is the way it is
 
 ## Two things to know before changing anything
 

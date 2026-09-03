@@ -96,6 +96,5 @@ step of [[materialize-and-validate]].
 
 ## Source
 
-`plans/02-static-plan.md` §4.4, §8 (ADR-0037); `harvest/events.py`;
-`harvest/materialize.py`; `harvest/CONTRACT.md` §§0, 6;
-`transcript/conversation-record.md` turns 11–12.
+`harvest/events.py`; `harvest/materialize.py`; `harvest/CONTRACT.md` §§0, 6;
+[[decision-history]] §2 turns 11–12.

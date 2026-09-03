@@ -13,8 +13,9 @@ last_executed: never
 **Goal:** stand up CKAN and load the catalogue into it, in about a day, without
 changing a single record file.
 **Governed by:** [[adr-0021-canonical-record-is-a-ckan-package-dict]].
-**Source:** `plans/01-ckan-plan.md` §§3–4 — the CKAN plan is retained *solely*
-as this promotion path. It is not the current architecture.
+**Design:** [[ckan-promotion-path]] — the CKAN architecture is retained *solely*
+as this promotion path. It is not the current architecture. This runbook is the
+procedure; that page is the reasoning behind each step.
 
 ---
 
@@ -23,7 +24,7 @@ as this promotion path. It is not the current architecture.
 Only when the thing that was missing appears: **a named owner and a named budget
 holder, and institutions who will actually log in and maintain records.** Those
 are separate people and both are required
-(`plans/01-ckan-plan.md` §5.5). Without them, do not promote — leave the static
+([[ckan-promotion-path]] §§1, 8). Without them, do not promote — leave the static
 catalogue running at $0 and revisit.
 
 Note that promotion **adds** a renderer; it does not replace one. The static site
@@ -73,7 +74,7 @@ Also confirm:
 
 ## 2. Stand up the infrastructure (about half a day)
 
-From `plans/01-ckan-plan.md` §3, in a **fresh, empty GCP project**:
+From [[ckan-promotion-path]] §§3–5, in a **fresh, empty GCP project**:
 
 1. **Spike 3 first, if it has not been done**: settle who owns the project, on
    which Google accounts, against which billing account. "Nobody at OST can own
@@ -168,12 +169,12 @@ CKAN.
 
 The one thing a rebuild cannot regenerate is human curation — which in this
 architecture is already in `data/events/` and `data/annotations/` in the repository
-(`plans/01-ckan-plan.md` §5.6 had to invent an export job for this; here it is
-the design).
+(the CKAN plan had to invent a nightly export job for this; here it is the
+design — [[ckan-promotion-path]] §2).
 
 ## 7. Drills to run while someone still knows how
 
-From `plans/01-ckan-plan.md` §3 Phase 3. **An untested runbook is fiction; a
+From [[ckan-promotion-path]] §9. **An untested runbook is fiction; a
 runbook whose author has left and which was never executed is worse.**
 
 - **Drill 0 — rebuild from zero.** From a clean clone into a fresh empty

@@ -14,7 +14,7 @@ Source
     :func:`harvest.extract.main_text` before anything else looks at it
     (fixture ``iea-10``).
 
-Source key (plan §4.1)
+Source key (ADR-0026)
     The **normalised content hash** of the extracted main text
     (:func:`harvest.extract.content_hash`). Its input is byte-identical to the
     LLM cache key's first component, so an unchanged page is both a no-op event
@@ -601,7 +601,7 @@ class IeaWindAdapter(Adapter):
         classification = classify_page(url, content, trusted=trusted)
         cached, _key = lookup_cache(content, PROMPT_VERSION, resolve_model(None), url=url)
         if pin_held(cached, content):
-            # plan §4.3: the page moved beneath a human judgement. The pin
+            # ADR-0038: the page moved beneath a human judgement. The pin
             # holds; the notice is what puts the decision back in front of a
             # human rather than reverting them silently.
             self._note(

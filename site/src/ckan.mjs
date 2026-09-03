@@ -1,4 +1,4 @@
-// The Zod gate. This IS `validate-ckan-compat` on the site side (plan §2.2,
+// The Zod gate. This IS `validate-ckan-compat` on the site side (ADR-0021,
 // ADR-0032, runbook run-the-site-locally §4): a record that CKAN's
 // `package_create` would refuse fails the Astro build. Fixture
 // `x-08-ckan-invalid` exists to prove it does — see scripts/check-ckan-gate.mjs.

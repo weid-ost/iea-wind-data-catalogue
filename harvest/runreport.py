@@ -11,7 +11,7 @@ It does two jobs at once, and the second is the reason it is non-negotiable:
 2. It is written **on every run, even a complete no-op**, so every run
    produces a commit. GitHub disables scheduled workflows after 60 days with
    no repository activity and only commits count. This file is the keepalive
-   (plan §3.3) — implemented inline rather than by adding a Marketplace action
+   (ADR-0029) — implemented inline rather than by adding a Marketplace action
    with write permissions to the supply chain.
 
 So: write it last, write it always, write it even when the harvest failed.

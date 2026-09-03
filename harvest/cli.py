@@ -13,7 +13,7 @@
 change only, replay ``data/annotations/`` into ``annotated`` events, replay
 everything into ``data/records/``, validate, and write ``data/state/last-run.json`` —
 **always**, including when a source failed, because that file is the cron
-keepalive (plan §3.3).
+keepalive (ADR-0029).
 
 ``materialize`` and ``run`` both replay ``data/annotations/`` first, idempotently, so
 a curator writes one YAML file and runs one command

@@ -132,10 +132,9 @@ extraction).
 - The backfill depends on one individual's personal key once. Its output is
   committed, so the dependency ends the moment it is done.
 
-**Open setup item** (`plans/02-static-plan.md` §9): verify current GitHub Models
+**Open setup item** ([[decision-history]] §5): verify current GitHub Models
 free-tier rate limits before depending on them.
 
 ## Source
 
-`plans/02-static-plan.md` §3.4, §8 (ADR-0030), §9; `harvest/extract.py`
-docstring; `transcript/conversation-record.md` turns 5–7.
+`harvest/extract.py` docstring; [[decision-history]] §2 turns 5–7.

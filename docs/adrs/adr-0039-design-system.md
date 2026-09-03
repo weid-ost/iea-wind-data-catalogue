@@ -161,5 +161,4 @@ eroding one "quick fix" at a time.
 ## Source
 
 `design/design-system.md` (all sections); `design/design-tokens.json`;
-`design/gen.py`; `plans/02-static-plan.md` §8 (ADR-0039);
-`transcript/conversation-record.md` turns 13–14.
+`design/gen.py`; [[decision-history]] §2 turns 13–14.

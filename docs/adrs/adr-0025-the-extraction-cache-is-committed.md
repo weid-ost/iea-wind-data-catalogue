@@ -85,5 +85,5 @@ the extraction track. Procedure: [[drain-the-pending-extraction-queue]].
 
 ## Source
 
-`plans/02-static-plan.md` §2.3, §3.4, §8 (ADR-0025); `harvest/extract.py`;
-`harvest/CONTRACT.md` §10; `transcript/conversation-record.md` turn 3.
+`harvest/extract.py`; `harvest/CONTRACT.md` §10; [[decision-history]] §2 turn
+3.

@@ -119,5 +119,5 @@ more than one front-end contributor ever appears.
 
 ## Source
 
-`plans/02-static-plan.md` §3.7, §8 (ADR-0036); `design/design-system.md` §8;
-`harvest/CONTRACT.md` §11; `transcript/conversation-record.md` turn 10.
+`design/design-system.md` §8; `harvest/CONTRACT.md` §11; [[decision-history]]
+§2 turn 10.

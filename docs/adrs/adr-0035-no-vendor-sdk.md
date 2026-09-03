@@ -76,5 +76,5 @@ alternative provider. Inference is therefore a POST with a JSON body.
 
 ## Source
 
-`plans/02-static-plan.md` §3.6, §8 (ADR-0035); `harvest/extract.py` docstring;
-`harvest/CONTRACT.md` §13; `transcript/conversation-record.md` turns 9–10.
+`harvest/extract.py` docstring; `harvest/CONTRACT.md` §13; [[decision-history]]
+§2 turns 9–10.

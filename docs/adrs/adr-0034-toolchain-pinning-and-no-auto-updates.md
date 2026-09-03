@@ -100,6 +100,5 @@ Policy:
 
 ## Source
 
-`plans/02-static-plan.md` §3.5, §3.6, §8 (ADR-0034); `pyproject.toml`;
-`.python-version`; `Makefile`; `harvest/CONTRACT.md` §13;
-`transcript/conversation-record.md` turns 8–10.
+`pyproject.toml`; `.python-version`; `Makefile`; `harvest/CONTRACT.md` §13;
+[[decision-history]] §2 turns 8–10.

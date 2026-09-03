@@ -129,12 +129,11 @@ audience, and it keeps the pressure where it belongs: on the source (fixture
   (`local.pinned`), auditable (`pin_source_key`), and noisy (`pin_notice`).
 
 **Procedure.** [[correct-a-record]] works the full matrix with runnable
-examples. Terminology note: the plan's `corrections/` directory was renamed
+examples. Terminology note: the originally proposed `corrections/` directory was renamed
 `data/annotations/` in turn 12, precisely because "correction" implies editing.
 
 ## Source
 
-`plans/02-static-plan.md` §4.2, §4.3, §8 (ADR-0038); `harvest/models.py`
-docstring; `harvest/events.py::resolve`; `harvest/CONTRACT.md` §5;
-fixtures `x-02`, `x-03`, `x-04`, `x-09`, `x-10`;
-`transcript/conversation-record.md` turn 12.
+`harvest/models.py` docstring; `harvest/events.py::resolve`;
+`harvest/CONTRACT.md` §5; fixtures `x-02`, `x-03`, `x-04`, `x-09`, `x-10`;
+[[decision-history]] §2 turn 12.

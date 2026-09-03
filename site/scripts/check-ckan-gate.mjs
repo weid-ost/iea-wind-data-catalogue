@@ -1,4 +1,4 @@
-// Proves the Zod gate bites (plan §2.2, ADR-0032, fixture x-08-ckan-invalid).
+// Proves the Zod gate bites (ADR-0021, ADR-0032, fixture x-08-ckan-invalid).
 //
 // `astro build` fails on a malformed record only because src/ckan.mjs rejects
 // it. A gate nobody has watched fail is a gate you are guessing about, so this

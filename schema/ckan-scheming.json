@@ -1,7 +1,7 @@
 {
   "scheming_version": 2,
   "dataset_type": "dataset",
-  "about": "IEA Wind Data Catalogue — canonical record schema. Nothing in this repository consumes this file yet: it is the written definition of the record shape (plan §2.2), it documents every custom field carried in `extras`, and it is the input ckanext-scheming needs on the day the catalogue is promoted to CKAN. Keep it in step with harvest/materialize.py:EXTRA_KEYS and harvest/CONTRACT.md — those three are the same contract stated three ways.",
+  "about": "IEA Wind Data Catalogue — canonical record schema. Nothing in this repository consumes this file yet: it is the written definition of the record shape (ADR-0021), it documents every custom field carried in `extras`, and it is the input ckanext-scheming needs on the day the catalogue is promoted to CKAN. Keep it in step with harvest/materialize.py:EXTRA_KEYS and harvest/CONTRACT.md — those three are the same contract stated three ways.",
   "about_url": "https://github.com/weid-ost/iea-wind-data-catalogue",
 
   "notes": [
@@ -16,7 +16,7 @@
       "label": "Title",
       "preset": "title",
       "form_placeholder": "Title, verbatim from the source",
-      "help_text": "Never edited. If the source has a typo, that is what the source says; attach a curator note instead (plan §4.3)."
+      "help_text": "Never edited. If the source has a typo, that is what the source says; attach a curator note instead (ADR-0038)."
     },
     {
       "field_name": "name",
@@ -115,7 +115,7 @@
     {
       "field_name": "source_key",
       "label": "Source key",
-      "help_text": "The record-level change token (plan §4.1). Semantics are owned by the adapter. Displayed in the mono face as provenance, not as a user-facing identifier.",
+      "help_text": "The record-level change token (ADR-0026). Semantics are owned by the adapter. Displayed in the mono face as provenance, not as a user-facing identifier.",
       "extras": true
     },
     {
@@ -267,7 +267,7 @@
     {
       "field_name": "curator_notes",
       "label": "Curator notes",
-      "help_text": "JSON string: list of {field?, note, added_at?}. LOCAL-ONLY and never displaced by a source. Where upstream is known wrong and will not be fixed, the wrong value is displayed verbatim with the note beside it — both truths on the page (plan §4.3, fixture x-10).",
+      "help_text": "JSON string: list of {field?, note, added_at?}. LOCAL-ONLY and never displaced by a source. Where upstream is known wrong and will not be fixed, the wrong value is displayed verbatim with the note beside it — both truths on the page (ADR-0038, fixture x-10).",
       "json_type": "list[object]",
       "extras": true
     },
@@ -288,7 +288,7 @@
     {
       "field_name": "pinned",
       "label": "Pinned extraction",
-      "help_text": "A human corrected a Tier-3 extraction. The pin HOLDS when the page's content hash later changes, and a pin_notice fires for a human to adjudicate (plan §4.3, fixture x-09).",
+      "help_text": "A human corrected a Tier-3 extraction. The pin HOLDS when the page's content hash later changes, and a pin_notice fires for a human to adjudicate (ADR-0038, fixture x-09).",
       "json_type": "bool-as-string",
       "extras": true
     }

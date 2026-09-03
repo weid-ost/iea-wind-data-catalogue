@@ -28,7 +28,7 @@ Source
     every field this adapter maps. What comes back is still verbatim what the
     API said for that request.
 
-Source key (plan §4.1, ADR-0026)
+Source key (ADR-0026)
     ``deposited.date-time`` — **not** ``indexed``. ``indexed`` is Crossref's
     own re-indexing timestamp; it moves without any change to the metadata and
     would make every weekly run an append-always run. ``deposited`` moves when
@@ -507,7 +507,7 @@ def published_version_doi(item: dict[str, Any]) -> str | None:
 
 
 def source_key_for(item: dict[str, Any]) -> str:
-    """The change token: ``deposited.date-time`` (ADR-0026, plan §4.1).
+    """The change token: ``deposited.date-time`` (ADR-0026).
 
     **Never ``indexed``.** ``indexed`` is Crossref's re-indexing timestamp; it
     moves on its own schedule, with no change to a single metadata field, and

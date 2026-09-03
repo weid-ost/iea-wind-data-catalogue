@@ -86,10 +86,9 @@ per record in `data/records/<slug>.json`, directly POSTable to `package_create`
 - `uv run python -m harvest validate` exits non-zero on any violation.
 - The site build must fail on a malformed record too — the Zod content-collection
   schema in `site/src/content.config.ts` *is* the same gate, per
-  `plans/02-static-plan.md` §2.2. Fixture `x-08-ckan-invalid` exists to prove
+  [[motivation]] §3. Fixture `x-08-ckan-invalid` exists to prove
   it fails.
 
 ## Source
 
-`plans/02-static-plan.md` §2.2, §8 (ADR-0021); `harvest/CONTRACT.md` §§7–8;
-`transcript/conversation-record.md` turn 3.
+`harvest/CONTRACT.md` §§7–8; [[decision-history]] §2 turn 3.

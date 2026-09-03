@@ -1,6 +1,6 @@
 """sources.yaml, organizations.yaml, groups.yaml and the scheming schema.
 
-These are canonical data, not configuration (plan §2.2), so they get the same
+These are canonical data, not configuration (ADR-0021), so they get the same
 treatment as code: if a group name would fail CKAN, CI says so today rather
 than on promotion day.
 """

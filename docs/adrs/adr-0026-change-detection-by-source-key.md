@@ -104,6 +104,5 @@ done at record granularity where it is cheap. The two models from turns 11 and
 
 ## Source
 
-`plans/02-static-plan.md` §4.1, §8 (ADR-0026); `harvest/CONTRACT.md` §3;
-`harvest/adapters/base.py`; `harvest/events.py` `has_changed`;
-`transcript/conversation-record.md` turns 11–12.
+`harvest/CONTRACT.md` §3; `harvest/adapters/base.py`; `harvest/events.py`
+`has_changed`; [[decision-history]] §2 turns 11–12.

@@ -32,7 +32,7 @@ Spike 4 — answered, live, 2026-08-31
     queries the gateway instead. Until then nothing is guessed and nothing is
     impersonated.
 
-Source key (plan §4.1)
+Source key (ADR-0026)
     ``lastUpdated`` where the dataset carries one, else
     :func:`~harvest.adapters.base.payload_hash` over the meaningful subset of
     the entry. Never over the whole hit — ``_index`` carries a rebuild date

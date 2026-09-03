@@ -157,7 +157,7 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
         "license_raw": license_raw,
         "license_mapped": None if license_raw is None else mapped,
         # Local-only, never displaced by a source: the curator note rendered
-        # beside a known-wrong upstream value (plan §4.3, fixture x-10).
+        # beside a known-wrong upstream value (ADR-0038, fixture x-10).
         "curator_notes": resolved.local.get("curator_notes") or None,
         "local_links": resolved.local.get("links") or None,
         "provenance": provenance or None,

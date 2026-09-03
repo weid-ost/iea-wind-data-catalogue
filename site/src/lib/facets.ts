@@ -30,7 +30,7 @@ export interface Facet {
 }
 
 /**
- * The facets the plan names — task, resource kind, year, licence, source,
+ * The facets ADR-0023 names — task, resource kind, year, licence, source,
  * institution — plus availability, which the catalogue page also filters on
  * (the shared filter vocabulary: `availability=open|restricted|embargoed|…`).
  */

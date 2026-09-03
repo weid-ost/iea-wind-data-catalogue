@@ -98,6 +98,4 @@ Two mechanical requirements that follow:
 
 ## Source
 
-`plans/02-static-plan.md` §3.3, §8 (ADR-0029); `harvest/runreport.py`;
-`harvest/cli.py::cmd_run`; fixture `r-08`;
-`transcript/conversation-record.md` turn 4.
+`harvest/runreport.py`; `harvest/cli.py::cmd_run`; fixture `r-08`; [[decision-history]] §2 turn 4.

@@ -1,6 +1,6 @@
 # groups.yaml — CKAN-shaped group definitions. Groups ARE the IEA Wind Tasks.
 #
-# Canonical data in the repo (plan §2.2). A record's `groups[].name` MUST
+# Canonical data in the repo (ADR-0021). A record's `groups[].name` MUST
 # reference a `name` below or the CKAN-compat gate fails. `iea_task` extras
 # hold these same names.
 #

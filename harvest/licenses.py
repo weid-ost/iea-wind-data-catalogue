@@ -2,7 +2,7 @@
 
 CKAN validates ``license_id`` against a licence register. Zenodo, SPDX, OSTI
 and free-text rights statements do **not** all use CKAN's identifiers, so every
-licence passes through this lookup on the way in (plan §2.2).
+licence passes through this lookup on the way in (ADR-0021).
 
 Unmappable input maps to ``notspecified`` and is **flagged in the run report**
 — never silently defaulted to something open (fixtures ``zen-08``, ``dc-09``,

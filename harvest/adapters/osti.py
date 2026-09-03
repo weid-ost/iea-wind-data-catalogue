@@ -10,7 +10,7 @@ Source
     (``/api/v2/records``) answers **403** to an anonymous client and is
     therefore not used.
 
-Source key (plan §4.1, ADR-0026)
+Source key (ADR-0026)
     ``entry_date`` — OSTI's metadata entry/update timestamp, present on every
     record observed. It moves when OSTI revises a record's metadata (2022
     publications carry 2026 entry dates), which is exactly the semantics

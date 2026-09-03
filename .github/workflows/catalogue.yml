@@ -7,7 +7,7 @@
 # Why one workflow and not three: pushes made with GITHUB_TOKEN deliberately do
 # not trigger further workflows, so a separate workflow listening for the
 # harvest commit would NEVER FIRE. Build and deploy must live in the same run as
-# the harvest (plan §3.3, ADR-0029, docs/runbooks/re-enable-a-dormant-cron.md §4).
+# the harvest (ADR-0029, docs/runbooks/re-enable-a-dormant-cron.md §4).
 #
 # Binding decisions implemented here:
 #   ADR-0022  GitHub Actions + GitHub Pages; permissions scoped per job.

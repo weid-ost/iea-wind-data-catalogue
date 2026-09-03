@@ -87,7 +87,7 @@ Expected shape:
 
 - The repository has **at least two owners/admins**. One owner is not a design;
   it is a single point of failure with a job offer. This is an open setup item
-  in `plans/02-static-plan.md` §9.
+  — see [[decision-history]] §5.
 - Any notification address is a **shared OST address or distribution list, never
   a personal mailbox** — same bus-factor reasoning.
 - Note: OST is the **Ostschweizer Fachhochschule** (Eastern Switzerland

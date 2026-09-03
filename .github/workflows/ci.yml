@@ -3,7 +3,7 @@
 #
 # This is the *other* workflow. It never harvests, never commits and never
 # touches Pages; catalogue.yml owns all of that. Splitting them is what lets the
-# harvest workflow stay off `pull_request` entirely (plan §3.4 guardrail).
+# harvest workflow stay off `pull_request` entirely (ADR-0030 guardrail).
 #
 # The gates, numbered as in docs/runbooks/release-checklist.md §1:
 #   1  tests            uv run pytest

@@ -92,6 +92,5 @@ fixture goes missing again.
 
 ## Source
 
-`plans/02-static-plan.md` §2.3, §8 (ADR-0028); `design/design-system.md` §2.3;
-`harvest/models.py::FieldProvenance`; `harvest/CONTRACT.md` §7;
-`transcript/conversation-record.md` turns 3, 13.
+`design/design-system.md` §2.3; `harvest/models.py::FieldProvenance`;
+`harvest/CONTRACT.md` §7; [[decision-history]] §2 turns 3, 13.

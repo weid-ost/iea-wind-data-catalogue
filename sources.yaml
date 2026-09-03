@@ -1,6 +1,7 @@
 # sources.yaml — the source register.
 #
-# The only "config" that matters (plan §3.2). One top-level key per source; the
+# The only "config" that matters (docs/index.md, "What lives where"). One
+# top-level key per source; the
 # key IS the adapter module name, the class's `source_name`, and the
 # `source_system` recorded on every event. Those four strings must agree.
 #
@@ -10,7 +11,7 @@
 #                        3 heterogeneous HTML (the only tier allowed a model)
 #   precedence   int   — lower wins when several sources describe one identity.
 #                        DOI registries outrank repositories outrank HTML.
-#   source_key   str   — human-readable semantics of the change token (plan §4.1).
+#   source_key   str   — human-readable semantics of the change token (ADR-0026).
 #                        The adapter owns the implementation; this documents it.
 #
 # Everything else is adapter-specific and reaches the adapter as

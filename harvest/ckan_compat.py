@@ -1,4 +1,4 @@
-"""The ``validate-ckan-compat`` gate (plan §2.2, fixture ``x-08``).
+"""The ``validate-ckan-compat`` gate (ADR-0021, fixture ``x-08``).
 
 The trap this exists to prevent: a static site renders records CKAN would
 reject, nobody notices for two years, and promotion day discovers three
@@ -49,7 +49,7 @@ __all__ = [
 NAME_RE = re.compile(r"^[a-z0-9_-]{2,100}$")
 
 #: CKAN tag: alphanumerics, ``-``, ``_`` and ``.``, 2-100 chars. Spaces are
-#: allowed by some CKAN configurations; the plan forbids them, so we do too.
+#: allowed by some CKAN configurations; ADR-0021 forbids them, so we do too.
 TAG_RE = re.compile(r"^[A-Za-z0-9._-]{2,100}$")
 
 _TAG_STRIP_RE = re.compile(r"[^A-Za-z0-9._-]+")

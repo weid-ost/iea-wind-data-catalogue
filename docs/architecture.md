@@ -9,11 +9,12 @@ tags: [architecture, overview]
 
 # Architecture
 
-The whole system, end to end. Source of authority: `plans/02-static-plan.md`
-§§3–4, and `harvest/CONTRACT.md` for the interfaces. Where this page and the
-code disagree, the code is right and this page is a bug.
+The whole system, end to end. The binding decisions are the ADRs in
+`docs/adrs/`; `harvest/CONTRACT.md` is authoritative for the interfaces. Where
+this page and the code disagree, the code is right and this page is a bug.
 
-See [[index]] for the vault map, [[record-format]] for the shapes.
+See [[motivation]] for why any of this exists, [[index]] for the vault map, and
+[[record-format]] for the shapes.
 
 ---
 

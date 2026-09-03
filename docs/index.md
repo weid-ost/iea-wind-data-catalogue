@@ -2,7 +2,8 @@
 type: moc
 id: index
 status: current
-date: 2026-08-31
+date: 2026-09-03
+related: [motivation, architecture, record-format, decision-history, ckan-promotion-path]
 tags: [vault, map]
 ---
 
@@ -19,32 +20,40 @@ The vault has three jobs, in order of importance to a stranger picking this up:
 2. **Let you actually do things.** That is `docs/runbooks/`.
 3. **Explain the shapes.** That is [[architecture]] and [[record-format]].
 
+The ADRs and these pages are **authoritative**. There is no separate plan
+document and no conversation log behind them: the reasoning was folded in here,
+and [[decision-history]] carries the requirements record — verbatim — that the
+decisions answer.
+
 ---
 
 ## Reading order
 
 If you have twenty minutes:
 
-1. [[architecture]] — the whole system on one page, with the binding invariants.
-2. [[record-format]] — what a record and an event actually look like.
-3. [[local-dev-setup]] then [[run-a-harvest-locally]] — get it running.
+1. [[motivation]] — why the catalogue exists and what it deliberately is not.
+2. [[architecture]] — the whole system on one page, with the binding invariants.
+3. [[record-format]] — what a record and an event actually look like.
+4. [[local-dev-setup]] then [[run-a-harvest-locally]] — get it running.
 
 If you are about to change something:
 
-4. The relevant ADR in [[#Decision register]] below. **Do not change behaviour
+5. The relevant ADR in [[#Decision register]] below. **Do not change behaviour
    an ADR fixes without saying, in the commit message, that you are
    relitigating it.**
-5. `harvest/CONTRACT.md` — the interface document the code is written against.
+6. `harvest/CONTRACT.md` — the interface document the code is written against.
    Where this vault and `CONTRACT.md` disagree about the code, `CONTRACT.md`
    and then the code win; fix the vault in the same change.
-6. `data/fixtures/fixtures-catalogue.md` — new behaviour requires a new fixture.
+7. `data/fixtures/fixtures-catalogue.md` — new behaviour requires a new fixture.
 
 If you want to know *why*:
 
-7. `plans/02-static-plan.md` — the authoritative architecture document, with
-   the ADR register (§8) and decisions log (§9) these ADRs expand.
-8. `transcript/conversation-record.md` — the conversation that produced it,
-   with every requirement prompt verbatim. Each ADR cites its turn.
+8. [[decision-history]] — every requirement verbatim, in order, with what it
+   settled and which ADR owns it. Each ADR cites its turn there. It also records
+   what was **proposed and rejected**, including two reconciliation models that
+   were accepted and then superseded.
+9. [[ckan-promotion-path]] — the architecture that was planned first, retained
+   because it is what promotion would actually cost.
 
 ---
 
@@ -68,16 +77,29 @@ If you want to know *why*:
 | `site/` | the Astro renderer and the Pagefind index build | the site track |
 | `design/` | DTCG tokens, the derivation script, the design system | with `design/gen.py` re-run |
 | `data/fixtures/` | test and gallery fixtures; the catalogue is the specification | every harvest change |
-| `docs/` | this vault | everyone |
-| `plans/` | the two plan documents. Historical record + binding architecture | not without a decision |
+| `data/README.md` | what the `data/` subtree is and the two rules that govern it | with the layout |
+| `docs/` | this vault — **the authority** for every decision | everyone |
+
+---
+
+## The pages
+
+| Page | What it answers |
+|---|---|
+| [[motivation]] | why this exists, what it deliberately is not, and what it costs |
+| [[architecture]] | the whole system end to end, with the binding invariants |
+| [[record-format]] | what a record and an event actually are |
+| [[harvest-anomalies]] | what the real upstreams do that the fixtures encode |
+| [[decision-history]] | the requirements record: every requirement verbatim, and what it settled |
+| [[ckan-promotion-path]] | the superseded CKAN architecture, retained as the promotion path |
 
 ---
 
 ## Decision register
 
-Twenty ADRs, 0020–0039, expanded from `plans/02-static-plan.md` §8. ADRs
-0001–0019 belong to the superseded CKAN-first plan (`plans/01-ckan-plan.md`
-§6); several are explicitly superseded — see [[adr-0022-hosting-and-automation]].
+Twenty ADRs, 0020–0039. ADRs 0001–0019 belonged to the superseded CKAN-first
+plan; those numbers are not reused, and the ones explicitly superseded are
+tabulated in [[ckan-promotion-path]] §11.
 
 ### The premise and the contract
 

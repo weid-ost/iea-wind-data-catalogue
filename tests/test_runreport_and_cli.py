@@ -1,6 +1,6 @@
 """``data/state/last-run.json`` and the CLI.
 
-The report is the cron keepalive (plan §3.3): it must be written on **every**
+The report is the cron keepalive (ADR-0029): it must be written on **every**
 run, including a run in which nothing changed and every source failed, or the
 scheduled workflow eventually goes dormant.
 """

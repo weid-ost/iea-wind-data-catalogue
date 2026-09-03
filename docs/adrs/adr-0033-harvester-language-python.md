@@ -107,6 +107,4 @@ an ADR, not a commit.
 
 ## Source
 
-`plans/02-static-plan.md` §3.6, §8 (ADR-0033); `pyproject.toml`;
-`.python-version`; `harvest/CONTRACT.md` §13;
-`transcript/conversation-record.md` turn 9.
+`pyproject.toml`; `.python-version`; `harvest/CONTRACT.md` §13; [[decision-history]] §2 turn 9.

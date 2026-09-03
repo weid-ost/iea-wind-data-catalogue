@@ -111,7 +111,7 @@ DEFAULT_MODEL = "openai/gpt-4o-mini"
 #: invalidates the cache deliberately and visibly.
 PROMPT_VERSION = "v1"
 
-#: Hard cap on model calls per run (plan §3.4, cost control).
+#: Hard cap on model calls per run (ADR-0024, cost control).
 MAX_EXTRACTIONS = 200
 
 #: The **other** model lineages present in the committed cache (ADR-0030 §4:
@@ -257,7 +257,7 @@ class ExtractionResult:
     #: The page the pin was made for. A cache entry is keyed on content, so a
     #: redesigned page mints a new key and would lose the pin silently. The URL
     #: is the only stable handle the page has, so a pin records it and
-    #: :func:`find_pin` looks the pin up by it (plan §4.3). Unset on ordinary
+    #: :func:`find_pin` looks the pin up by it (ADR-0038). Unset on ordinary
     #: entries, which are found by content and need no handle.
     pin_url: str | None = None
 
@@ -516,7 +516,7 @@ def _pin_index(directory: Path) -> dict[str, str]:
 
 
 def find_pin(url: str, cache_directory: Path | None = None) -> ExtractionResult | None:
-    """The pinned entry for ``url``, whatever the page says today (plan §4.3).
+    """The pinned entry for ``url``, whatever the page says today (ADR-0038).
 
     A pin is a human outranking a model's guess about *our own* output, so it
     must survive the page being rewritten — otherwise a site redesign silently
@@ -536,7 +536,7 @@ def find_pin(url: str, cache_directory: Path | None = None) -> ExtractionResult 
 def pin_held(result: "ExtractionResult | None", content: str) -> bool:
     """True when a pin is being served for content it was **not** made against.
 
-    That is the moment plan §4.3 says a notice must fire: the page moved
+    That is the moment ADR-0038 says a notice must fire: the page moved
     beneath a human judgement, the pin holds anyway, and a human decides.
     """
     if result is None or not result.pinned:
@@ -557,7 +557,7 @@ def lookup_cache(
     extraction would be written under, and what a queue entry records.
 
     When ``url`` is supplied and the content misses, a **pin** made for that URL
-    is served instead (plan §4.3). Ask :func:`pin_held` whether the pin was made
+    is served instead (ADR-0038). Ask :func:`pin_held` whether the pin was made
     against different content, and raise the notice if it was.
     """
     primary = cache_key(content, prompt_version, model_id)
@@ -765,7 +765,7 @@ def extract(
 
     # The cache is consulted FIRST, always, and a hit costs no call at all. A
     # pin for this URL counts as a hit even when the page has been rewritten:
-    # a human's correction outranks a fresh guess (plan §4.3).
+    # a human's correction outranks a fresh guess (ADR-0038).
     cached, key = lookup_cache(content, prompt_version, model_id, cache_directory, url=url)
     if cached is not None:
         STATS.hits += 1
@@ -871,7 +871,7 @@ def drain_pending(
 ) -> int:
     """``make extract``: run the queued pages through :func:`extract`.
 
-    Human-operated by design (plan §3.4). Returns the number of entries
+    Human-operated by design (ADR-0031). Returns the number of entries
     resolved; the rest stay queued.
 
     Each entry is re-fetched and re-reduced through :func:`main_text`, which is

@@ -13,8 +13,8 @@ tags: [llm, harvest, integrity]
 
 ## Status
 
-**Accepted.** `plans/02-static-plan.md` §2.3 states it as "the boundary matters
-more than anything else in this document". Treat it that way.
+**Accepted**, and stated at the time as "the boundary matters more than
+anything else in this document". Treat it that way.
 
 ## Context
 
@@ -114,12 +114,19 @@ reproducible ([[adr-0025-the-extraction-cache-is-committed]]).
 - The boundary is the easiest thing in the system to erode. Any future change
   that sends tier-1 JSON through a model is relitigating this ADR and must say so.
 
-**Estimated cost** (`plans/02-static-plan.md` §2.3): the first full pass over a
+**Considered and rejected: batch inference APIs.** They offer roughly 50% off
+for a 24-hour turnaround, which suits a weekly cron on paper. They were refused
+because they add asynchronous complexity — submit, poll, collect across runs —
+to a workflow that currently completes in a single run, and the saving applies
+to a spend measured in pennies. Revisit only if a backfill of the original
+magnitude ever recurs, and then only for that one-off run.
+
+**Estimated cost:** the first full pass over a
 few thousand pages at ~4k tokens each on a small fast model lands in the **$5–20**
 range; subsequent runs are pennies. See
 [[adr-0030-llm-access-via-github-models]] for who pays it and how.
 
 ## Source
 
-`plans/02-static-plan.md` §2.3, §3.4, §8 (ADR-0024); `harvest/CONTRACT.md` §10;
-`harvest/extract.py` docstring; `transcript/conversation-record.md` turn 3.
+`harvest/CONTRACT.md` §10; `harvest/extract.py` docstring; [[decision-history]]
+§2 turn 3.

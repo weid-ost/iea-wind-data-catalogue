@@ -107,5 +107,4 @@ box.
 
 ## Source
 
-`plans/02-static-plan.md` §3.5, §8 (ADR-0032); `harvest/CONTRACT.md` §11;
-`transcript/conversation-record.md` turn 8.
+`harvest/CONTRACT.md` §11; [[decision-history]] §2 turn 8.

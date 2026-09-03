@@ -1,7 +1,7 @@
 /**
  * schema.org `Dataset` JSON-LD, and the DCAT catalogue export.
  *
- * This is the single biggest discovery win of going static (plan §2.1): the
+ * This is the single biggest discovery win of going static (ADR-0023): the
  * catalogue's whole purpose is findability, and being in **Google Dataset
  * Search** is worth more than any feature a registration-based platform offers.
  * The JSON-LD is rendered into the built HTML rather than injected by script,
@@ -119,7 +119,7 @@ function conditionsOfAccess(pkg: CkanPackage): string | undefined {
 /**
  * `catalog.jsonld` — the read-only DCAT export. DCAT harvesters consume a file,
  * which is why publishing one is barely a loss compared with a write API
- * (plan §5.4).
+ * (docs/motivation.md §4).
  */
 export function dcatCatalogue(
   packages: CkanPackage[],

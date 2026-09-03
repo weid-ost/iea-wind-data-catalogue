@@ -1,8 +1,8 @@
 # harvest/CONTRACT.md
 
 **The interface document.** If you are building an adapter, the Tier-3
-extraction layer, the reconciler or the Astro site, this file plus
-`plans/02-static-plan.md` is everything you need. You will not be able to ask
+extraction layer, the reconciler or the Astro site, this file plus the ADRs in
+`docs/adrs/` is everything you need. You will not be able to ask
 anyone a question, so where this document is ambiguous, the code it describes
 is authoritative — and if you find an ambiguity, fix it here in the same PR.
 
@@ -265,8 +265,8 @@ Over-long keys truncate to 91 characters plus `-<8 hex of the full key>`, so
 the mapping stays injective within CKAN's 100-character limit.
 
 **The slug depends on the identity key and nothing else** — never on the
-title. A retitled dataset keeps its citable URL. This is why
-`plans/02-static-plan.md` §2.1 can promise stable record URLs.
+title. A retitled dataset keeps its citable URL. This is why ADR-0023 can
+promise stable, citable record URLs.
 
 **Collisions.** The slug is short and lossy; the identity key is not. Two
 identities that would render to one slug (`zenodo|a.b` and `zenodo|a-b`) are
@@ -341,7 +341,7 @@ across all of them. DataCite (10) outranks Crossref (20) outranks Zenodo (30)
 | `links` | `list[dict]` | `{url, label}` |
 | `source_urls` | `list[str]` | |
 | `suppressed` | `bool` | noise; retained but not listed |
-| `pinned` | `bool` | a pinned Tier-3 extraction (§4.3 of the plan) |
+| `pinned` | `bool` | a pinned Tier-3 extraction (ADR-0038) |
 | `pin_source_key` | `str` | the content hash the pin was made against |
 
 **Latest local event wins, per field** — except set-valued fields, which union
@@ -730,7 +730,7 @@ import { glob } from 'astro/loaders';
 
 const records = defineCollection({
   loader: glob({ pattern: '*.json', base: '../records' }),
-  // The Zod schema here IS the validate-ckan-compat gate, per plan §2.2:
+  // The Zod schema here IS the validate-ckan-compat gate, per ADR-0021:
   // slug rules, tag charset, licence register. Fail the build on a bad record.
 });
 ```

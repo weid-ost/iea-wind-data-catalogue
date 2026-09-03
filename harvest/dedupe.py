@@ -1,4 +1,4 @@
-"""Cross-source identity merging — the reconciler (plan §4, track I).
+"""Cross-source identity merging — the reconciler (ADR-0026/0038, track I).
 
 **Most deduplication in this catalogue never reaches this module**, and that is
 by design. When Zenodo, DataCite, GitHub and an iea-wind.org citation all

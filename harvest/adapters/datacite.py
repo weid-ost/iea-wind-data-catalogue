@@ -17,7 +17,7 @@ Why query strings and not client ids or prefixes
     whole of Zenodo. So: query strings, one net cast per configured query,
     sorted ``-updated`` so the window tracks the source key.
 
-Source key (plan §4.1, ADR-0026)
+Source key (ADR-0026)
     ``attributes.updated`` — DataCite bumps it when a client pushes metadata,
     which is exactly the event worth noticing. Nothing else on the payload is
     used, so a view counter ticking over does not produce an event.

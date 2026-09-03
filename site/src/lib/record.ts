@@ -211,7 +211,7 @@ export const sourceLabel = (system: string): string => SOURCE_LABELS[system] ?? 
 /**
  * Where a reader should go to report a metadata problem. Corrections belong at
  * the source, where the author can actually make them and every other consumer
- * benefits (plan §4.2).
+ * benefits (ADR-0038).
  */
 export function reportIssueUrl(system: string, pkg: CkanPackage): string | undefined {
   const url = sourceUrlsOf(pkg).find((u) => matchesSystem(u, system)) ?? extra(pkg, 'source_url');
