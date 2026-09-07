@@ -1,0 +1,100 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"ORNL\",\"name\":\"Hubbard, Amber\"},{\"affiliation\":\"ORNL\",\"name\":\"Korey, Matt\",\"orcid\":\"0000-0002-2285-5646\"},{\"affiliation\":\"ORNL\",\"name\":\"Lamm, Meghan\",\"orcid\":\"0000-0003-3485-4322\"},{\"affiliation\":\"ORNL\",\"name\":\"Copenhaver, Katie\",\"orcid\":\"0000-0003-2261-8760\"},{\"affiliation\":\"ORNL\",\"name\":\"Tobin, Jim\"},{\"affiliation\":\"ORNL\",\"name\":\"Kunc, Vlastimil\",\"orcid\":\"0000-0003-4405-7917\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy"
+    },
+    {
+      "key": "doi",
+      "value": "10.1002/we.70119"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-07T04:32:33Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1002/we.70119"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-07T04:32:33Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-04-01"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3682557\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/3682557\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "3682557"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-05T02:13:29Z"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3682557"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3682557\",\"https://www.osti.gov/pages/biblio/3682557\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1002-we-70119",
+  "notes": "Wind turbine blades are highly engineered structures designed to face temperature extremes and high winds. However, erosion of the blade's leading edge and subsequent repair remains a significant and costly challenge for the wind energy industry. Repair of these leading edges can lead to large amounts of downtime for the turbine and significant operational inefficiencies. In this work, the strength of adhesion and healing ability of a commercially available vitrimer (Mallinda's VITRIMAX) was compared to that of a thermoplastic resin, which has previously been demonstrated in wind energy applications (Arkema's Elium) to evaluate their efficacy as surface coatings for wind turbine blades, particularly their leading edges. Vitrimers are a class of inherently reprocessable thermosets, and it was theorized that vitrimer-based leading edge coatings could enable more robust and efficient wind turbine blades with decreased operational downtime and safer maintenance practices. It was found that the VITRIMAX adhered better to the wind blades' surfaces than both the manufacturer's paint and Elium, with increases in pull-off strength of adhesion ranging from 24% to 83% above that of the original paint. Furthermore, the VITRIMAX adhered strongly to the underlying composite of each blade with strength of adhesion values increasing in ranges from 42% to 97% above that of the original paint. Finally, the vitrimer coating showed an 88% decrease in surface roughness compared to end-of-life blade materials, and initial healing demonstrations in which coatings were manually scratched and subsequently healed exhibited an ~84.5% decrease in scratch depths.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3682557"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Healable Coatings as a Mechanism to Repair Leading Edge Erosion in Wind Energy",
+  "url": "https://www.osti.gov/biblio/3682557"
+}
