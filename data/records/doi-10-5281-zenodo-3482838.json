@@ -5,6 +5,10 @@
       "value": "open"
     },
     {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"}]"
+    },
+    {
       "key": "doi",
       "value": "10.5281/zenodo.3482838"
     },
@@ -26,7 +30,15 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-03T10:00:00Z"
+      "value": "2026-09-08T14:05:42Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
     },
     {
       "key": "lifecycle_state",
@@ -34,39 +46,43 @@
     },
     {
       "key": "provenance",
-      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
-      "value": "2020-04-01"
+      "value": "2019-10-11"
     },
     {
       "key": "publisher",
-      "value": "GitHub"
+      "value": "Zenodo"
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.3482839\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.3482839\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3482838\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
     },
     {
       "key": "resource_kind",
-      "value": "software"
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "working-paper"
     },
     {
       "key": "source_id",
-      "value": "IEA-Wind-Task-32/white-paper-Task32-overview"
+      "value": "3482839"
     },
     {
       "key": "source_key",
-      "value": "ab8c10143acd54c2b108175ddc535135e93d7ebf:1.0:35a415d7d66ebab5"
+      "value": "8@10.5281/zenodo.3482839~m2"
     },
     {
       "key": "source_system",
-      "value": "github"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"github\"]"
+      "value": "[\"github\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -74,7 +90,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview\"]"
+      "value": "[\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview\",\"https://zenodo.org/records/3482839\"]"
     },
     {
       "key": "withdrawn",
@@ -86,26 +102,21 @@
       "name": "task-32"
     }
   ],
-  "license_id": "notspecified",
+  "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-3482838",
-  "notes": "An overview of all activities in IEA Wind Task 32",
+  "notes": "<p>This white paper describes the IEA Wind Task 32 collaborative research program on wind lidar.</p>\n\n<p>We welcome your feedback. Please visit <a href=\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview\" rel=\"nofollow noopener\">https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview</a> to find out how you can get in touch with us.</p>",
   "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {
-      "format": "git",
-      "name": "Source repository",
-      "url": "https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview"
-    },
-    {
-      "format": "release",
-      "name": "Release 1.0",
-      "url": "https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview/releases/tag/1.0"
+      "format": "pdf",
+      "name": "2019_What_is_Task_32_Flyer.pdf",
+      "url": "https://zenodo.org/records/3482839/files/2019_What_is_Task_32_Flyer.pdf"
     }
   ],
   "state": "active",
   "tags": [],
-  "title": "IEA-Wind-Task-32/white-paper-Task32-overview",
-  "url": "https://github.com/IEA-Wind-Task-32/white-paper-Task32-overview",
+  "title": "IEA Wind Task 32: Wind Lidar",
+  "url": "https://zenodo.org/records/3482839",
   "version": "1.0"
 }

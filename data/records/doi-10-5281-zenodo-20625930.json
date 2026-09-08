@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"sowento\",\"family\":\"van den Broek\",\"given\":\"Maarten\",\"name\":\"van den Broek, Maarten\",\"orcid\":\"0000-0001-7396-4001\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Weich\",\"given\":\"Simon\",\"name\":\"Weich, Simon\",\"orcid\":\"0009-0009-5300-6151\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Preuschoff\",\"given\":\"Julius\",\"name\":\"Preuschoff, Julius\",\"orcid\":\"0009-0006-8537-3931\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-08T14:05:28Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.20625931\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.20625931\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -50,48 +62,62 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.20625931\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.20625930\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.20625931\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
     },
     {
       "key": "resource_kind",
-      "value": "publication"
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
     },
     {
       "key": "source_id",
-      "value": "10.5281/zenodo.20625930"
+      "value": "20625931"
     },
     {
       "key": "source_key",
-      "value": "2026-08-27T02:18:05Z"
+      "value": "4@10.5281/zenodo.20625931~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.20625930"
+      "value": "https://zenodo.org/records/20625931"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.20625930\"]"
+      "value": "[\"https://zenodo.org/records/20625931\",\"https://zenodo.org/doi/10.5281/zenodo.20625930\",\"https://zenodo.org/doi/10.5281/zenodo.20625931\"]"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-20625930",
   "notes": "Presentation at the IEA Wind Task 52 Working Group on Lidar-Assisted Control\n\nFollowing the success of the Lidar-Assisted-Control (LAC) Summer Games in 2024, the 2025 edition [1] builds on the lessons learned that were presented at the Wind Energy Science Conference in June 2025 [2]. This presentations summarizes the results and lessons learned from the Lidar-Assisted Control Summer Games 2025 as well as the updates on LAC Open Source Tools.\n\n[1] Schlipf, D., Guo, F., van den Broek, M., &amp; Weich, S. (2025). IEA Wind Task 52 LAC Summer Games 2025. Zenodo. https://doi.org/10.5281/zenodo.17541280.\n\n[2] Schlipf, D., Weich, S., Raach, S., &amp; Guo, F. (2025). Evaluation and Lessons Learned from the Lidar-Assisted Control Summer Games 2024. Zenodo. https://doi.org/10.5281/zenodo.16105260.",
   "owner_org": "zenodo-community",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Schlipf2026b - Evaluation of the Lidar-Assisted Control Summer Games 2025 and Update on LAC Open Source Tools.pdf",
+      "url": "https://zenodo.org/records/20625931/files/Schlipf2026b%20-%20Evaluation%20of%20the%20Lidar-Assisted%20Control%20Summer%20Games%202025%20and%20Update%20on%20LAC%20Open%20Source%20Tools.pdf"
+    }
+  ],
   "state": "active",
   "tags": [],
   "title": "Evaluation of the Lidar-Assisted Control Summer Games 2025 and Update on LAC Open Source Tools",

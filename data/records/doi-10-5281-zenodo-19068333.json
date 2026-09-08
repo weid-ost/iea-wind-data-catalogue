@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"Netherlands Organisation for Applied Scientific Research\",\"family\":\"Schepers\",\"given\":\"J.G.\",\"name\":\"Schepers, J.G.\"},{\"affiliation\":\"Netherlands Organisation for Applied Scientific Research\",\"family\":\"Boorsma\",\"given\":\"K.\",\"name\":\"Boorsma, K.\"},{\"affiliation\":\"Fachhochscule OST\",\"family\":\"Deparday\",\"given\":\"J.\",\"name\":\"Deparday, J.\"},{\"affiliation\":\"Sandia National Laboratories California\",\"family\":\"Kelley\",\"given\":\"C\",\"name\":\"Kelley, C\"},{\"affiliation\":\"Ecole de Nantes\",\"family\":\"Braud\",\"given\":\"C.\",\"name\":\"Braud, C.\"},{\"affiliation\":\"Fachhochschule Kiel\",\"family\":\"Schaffarczyk,\",\"given\":\"A.P.\",\"name\":\"Schaffarczyk,, A.P.\"},{\"affiliation\":\"SGRE\",\"family\":\"Gomez Gonzales\",\"given\":\"A\",\"name\":\"Gomez Gonzales, A\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Madsen\",\"given\":\"H.A.\",\"name\":\"Madsen, H.A.\"},{\"affiliation\":\"Netherlands Organisation for Applied Scientific Research\",\"family\":\"Fritz\",\"given\":\"E.\",\"name\":\"Fritz, E.\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-47\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-08T14:05:13Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.19068332\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.19068332\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -57,41 +69,59 @@
       "value": "report"
     },
     {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.19068333"
+      "value": "19068333"
     },
     {
       "key": "source_key",
-      "value": "2026-03-17T14:02:01Z"
+      "value": "4@10.5281/zenodo.19068333~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.19068333"
+      "value": "https://zenodo.org/records/19068333"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19068333\"]"
+      "value": "[\"https://zenodo.org/records/19068333\",\"https://zenodo.org/doi/10.5281/zenodo.19068333\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-47"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-19068333",
   "notes": "This report describes D1.7 from the IEA Wind Task 47 'TURBINIA'. It addresses various recommendations and guidelines for  doing aerodynamic field measurements on wind turbines",
   "owner_org": "ost",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Recommendation_document_on_aerodynamic_measurements.pdf",
+      "url": "https://zenodo.org/records/19068333/files/Recommendation_document_on_aerodynamic_measurements.pdf"
+    }
+  ],
   "state": "active",
   "tags": [],
   "title": "Recommendations for performing aerodynamic field measurements on wind turbine rotors",

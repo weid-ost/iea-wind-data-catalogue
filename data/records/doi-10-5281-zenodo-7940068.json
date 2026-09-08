@@ -1,12 +1,16 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Octue\",\"family\":\"Clark\",\"given\":\"Thomas\",\"name\":\"Clark, Thomas\",\"orcid\":\"https://orcid.org/0000-0002-6436-8651\"}]"
+      "value": "[{\"affiliation\":\"Octue\",\"name\":\"Clark, Thomas\",\"orcid\":\"0000-0002-6436-8651\"}]"
     },
     {
       "key": "doi",
-      "value": "10.5281/zenodo.7940068"
+      "value": "10.5281/zenodo.7940065"
     },
     {
       "key": "first_seen",
@@ -26,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:28:59Z"
+      "value": "2026-09-08T14:05:57Z"
     },
     {
       "key": "license_mapped",
@@ -42,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -58,23 +62,27 @@
     },
     {
       "key": "resource_kind",
-      "value": "publication"
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "poster"
     },
     {
       "key": "source_id",
-      "value": "10.5281/zenodo.7940068"
+      "value": "7940068"
     },
     {
       "key": "source_key",
-      "value": "56a50f704dc5d65b"
+      "value": "6@10.5281/zenodo.7940068~m2"
     },
     {
       "key": "source_system",
-      "value": "ieawind"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"ieawind\"]"
+      "value": "[\"ieawind\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -82,7 +90,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/record/7940068\",\"https://iea-wind.org/task43/t43-publications/\"]"
+      "value": "[\"https://zenodo.org/record/7940068\",\"https://iea-wind.org/task43/t43-publications/\",\"https://zenodo.org/records/7940068\"]"
     },
     {
       "key": "withdrawn",
@@ -96,14 +104,14 @@
   ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-7940068",
-  "notes": "Digitalisation and seamless data exchange are vital for reducing time-to-market for new wind turbines, time-to-development of new wind farms, and workflow friction in collaboration between internal and external teams. However, power curve documents contain highly sensitive data - access to which should be carefully managed for good commercial and technical reasons. These seemingly opposed considerations can be reconciled by adopting a so-called schema - a publicly available description of the data and its structure - and (pending appropriate access and permissions) delivering power curve data to other stakeholders which conforms to the schema. Using a schema, which is essentially a promise that “once it’s appropriate, we will give you data that looks like this”, stakeholders external to turbine OEMs such as researchers, consultants and wind farm engineers can proceed to develop and test automated tools, analyses and integrations which will reliably work, without being initially given access to large quantities of sensitive data. This poster introduces an open-source JSONSchema to do exactly this. The schema has evolved over two years in production and has described a wide variety of power curves from 8 major turbine manufacturers. It handles many corner cases involving metadata, multiple operation modes, different kinds of cut in/out, and variable parameters like air density. The talk will demonstrate some uses and benefits of the approach, including automated reporting, human-based QC, and generation of web forms for data entry.",
+  "notes": "<p>Digitalisation and seamless data exchange are vital for reducing</p>\n\n<ul>\n\t<li>time-to-market for new wind turbines,</li>\n\t<li>time-to-development of new wind farms, and</li>\n\t<li>workflow friction in collaboration between internal and external teams.</li>\n</ul>\n\n<p>However, power curve documents contain highly sensitive data - access to which should be carefully managed for good commercial and technical reasons.</p>\n\n<p>These seemingly opposed considerations can be reconciled by adopting a so-called schema - a publicly available description of the data and its structure - and (pending appropriate access and permissions) delivering power curve data to other stakeholders which conforms to the schema.</p>\n\n<p>Using a schema, which is essentially a promise that “once it’s appropriate, we will give you data that looks like this”, stakeholders external to turbine OEMs such as researchers, consultants and wind farm engineers can proceed to develop and test automated tools, analyses and integrations which will reliably work, without being initially given access to large quantities of sensitive data.</p>\n\n<p>This poster introduces an open-source JSONSchema to do exactly this. The schema has evolved over two years in production and has described a wide variety of power curves from 8 major turbine manufacturers. It handles many corner cases involving metadata, multiple operation modes, different kinds of cut in/out, and variable parameters like air density.</p>\n\n<p>The talk will demonstrate some uses and benefits of the approach, including automated reporting, human-based QC, and generation of web forms for data entry.</p>",
   "owner_org": "zenodo-community",
   "private": false,
   "resources": [
     {
-      "description": "Resolved landing page",
-      "name": "DOI",
-      "url": "https://zenodo.org/record/7940068"
+      "format": "pdf",
+      "name": "Powerful Power Curves - Poster - 21 March 2023.pdf",
+      "url": "https://zenodo.org/records/7940068/files/Powerful%20Power%20Curves%20-%20Poster%20-%2021%20March%202023.pdf"
     }
   ],
   "state": "active",
@@ -113,5 +121,5 @@
     }
   ],
   "title": "Powerful Power Curves: A production-proven, open-source schema for wind turbine power curves",
-  "url": "https://zenodo.org/record/7940068"
+  "url": "https://zenodo.org/records/7940068"
 }

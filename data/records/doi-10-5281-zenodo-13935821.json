@@ -30,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-03T09:58:54Z"
+      "value": "2026-09-08T14:04:40Z"
     },
     {
       "key": "license_mapped",
@@ -45,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.13935822\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.13935822\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -65,16 +69,20 @@
       "value": "publication"
     },
     {
+      "key": "resource_type",
+      "value": "publication"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.13935821"
+      "value": "13935822"
     },
     {
       "key": "source_key",
-      "value": "2026-09-02T23:28:56Z"
+      "value": "6@10.5281/zenodo.13935822~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
@@ -86,7 +94,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/records/13935822\",\"https://zenodo.org/doi/10.5281/zenodo.13935821\"]"
+      "value": "[\"https://zenodo.org/records/13935822\",\"https://zenodo.org/doi/10.5281/zenodo.13935821\",\"https://zenodo.org/doi/10.5281/zenodo.13935822\"]"
     },
     {
       "key": "withdrawn",

@@ -21,6 +21,10 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
       "key": "last_seen",
       "value": "2026-09-01T23:20:26Z"
     },
@@ -37,8 +41,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.19081714\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.19081714\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -54,7 +62,11 @@
     },
     {
       "key": "resource_kind",
-      "value": "publication"
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "best-practice"
     },
     {
       "key": "source_id",
@@ -81,11 +93,19 @@
       "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19081715\"]"
     },
     {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-19081715",
   "notes": "In wind energy, digital twins have the potential to maximise the value of data by providing real-time monitoring of physical systems, integrating predictive models, enabling autonomous operations and creating actionable insights. However, digital twins remain a nebulous concept, and the expression “digital twin” is applied to an enormous range of implementations at different maturity and complexity levels. This makes it difficult to understand and quantify their value, and ultimately to make investment decisions that weigh up potential complexity and value. Quantifying the value of digital twins in wind energy is essential for investment justification, forecasting and maintenance strategy development, standardisation, and policy alignment.\n\nThe purpose of this document is to provide practitioners in the wind energy sector with guidance for classifying and valuing digital twins. This will help them make investment decisions that weigh up the potential complexity and value of a given digital twin implementation. In this document, we first present a digital twin classification scheme based on existing classifications from the literature, then we introduce a table of high-potential digital twin use cases and suggest how each of these use cases could be classified. Next, we present a “System functionality value matrix template” for assessing the potential complexity and value of different functional capabilities of wind energy digital twins for a particular activity, and we present an example application. Each section includes a number of related Best Practices, which are summarised at the end.\n\nThe document is a result of a collaboration between IEA Wind Task 43 and the European Academy of Wind Energy.",

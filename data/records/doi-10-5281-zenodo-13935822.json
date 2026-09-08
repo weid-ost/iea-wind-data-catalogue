@@ -21,6 +21,10 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
       "key": "last_seen",
       "value": "2026-09-03T09:58:54Z"
     },
@@ -37,8 +41,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.13935821\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.13935821\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -54,6 +62,10 @@
     },
     {
       "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
       "value": "publication"
     },
     {
@@ -81,11 +93,19 @@
       "value": "[\"https://zenodo.org/doi/10.5281/zenodo.13935822\"]"
     },
     {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-13935822",
   "notes": "This work presents a solution for the IEA Wind Task 52 LAC Summer Games, specifically targeting the “30s Sprint” discipline. The objective is to enhance the response of a Lidar-assisted control system for wind turbines when subjected to a 12 m/s extreme operational gust (EOG). The proposed approach integrates a multivariable feedforward control strategy with a neural network-based pitch angle prediction. The controller modifies a conventional feedforward pitch system to maintain constant generator torque by using LIDAR to anticipate wind speed variations. The neural network is trained to predict the required pitch angle based on the Tip Speed Ratio (TSR) and thrust coefficient to reduce the fore-aft moment. Simulations using the OpenFAST aeroelastic model demonstrate significant improvements over baseline controllers, achieving a 67.9 % reduction in rotor speed deviation and a 90 % reduction in tower base fore-aft bending moment deviation. Additionally, the controller reduces rotor thrust by 22.4% compared to traditional feedback systems. These results indicate that the proposed multivariable feedforward controller, complemented by a deep neural network, provides a robust solution for improving wind turbine performance under extreme wind conditions.",

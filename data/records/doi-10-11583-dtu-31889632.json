@@ -37,8 +37,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.11583/dtu.31889632.v1\",\"url\":\"https://data.dtu.dk/articles/dataset/_b_Common_Fallacies_in_b_b_Calculating_Levelised_b_b_Cost_of_Energy_LCOE_-_Examples_b_/31889632/1\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -54,6 +58,10 @@
     },
     {
       "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
       "value": "dataset"
     },
     {
@@ -78,7 +86,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://data.dtu.dk/articles/dataset/_b_Common_Fallacies_in_b_b_Calculating_Levelised_b_b_Cost_of_Energy_LCOE_-_Examples_b_/31889632\"]"
+      "value": "[\"https://data.dtu.dk/articles/dataset/_b_Common_Fallacies_in_b_b_Calculating_Levelised_b_b_Cost_of_Energy_LCOE_-_Examples_b_/31889632\",\"https://data.dtu.dk/articles/dataset/_b_Common_Fallacies_in_b_b_Calculating_Levelised_b_b_Cost_of_Energy_LCOE_-_Examples_b_/31889632/1\"]"
     },
     {
       "key": "withdrawn",

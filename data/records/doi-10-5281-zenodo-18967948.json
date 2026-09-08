@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "restricted"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)\",\"family\":\"Rettenmeier\",\"given\":\"Andreas\",\"name\":\"Rettenmeier, Andreas\",\"orcid\":\"0000-0002-9953-5392\"},{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)\",\"family\":\"Lott\",\"given\":\"Sarah\",\"name\":\"Lott, Sarah\"},{\"affiliation\":\"Esslingen University\",\"family\":\"Hohaus\",\"given\":\"Jonas\",\"name\":\"Hohaus, Jonas\",\"orcid\":\"0009-0009-1403-5937\"},{\"family\":\"Knaus\",\"given\":\"Hermann\",\"name\":\"Knaus, Hermann\",\"orcid\":\"0000-0002-6584-7363\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-57\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-08T14:05:09Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.18967947\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.18967947\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -57,35 +69,47 @@
       "value": "dataset"
     },
     {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.18967948"
+      "value": "18967948"
     },
     {
       "key": "source_key",
-      "value": "2026-08-27T07:07:42Z"
+      "value": "4@10.5281/zenodo.18967948~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.18967948"
+      "value": "https://zenodo.org/records/18967948"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.18967948\"]"
+      "value": "[\"https://zenodo.org/records/18967948\",\"https://zenodo.org/doi/10.5281/zenodo.18967948\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-57"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-18967948",
   "notes": "These files include the terrain data and the data of Phase I that are released to the participants of the WINSENT complex terrain benchmark, which is one of the benchmarks of the IEA Wind Task 57 (JAM) activities. The WINSENT benchmark activities started in 2025 and two phases with two periods each have been identified. Within Phase I, the participants simulate the wind flow from the valley to the test site which is located on a forest-free plateau approx. 150m higher. The slope, known as the Albtrauf, is forested terrain, which is why different flow conditions are taken into account. Therefore, Phase I considers a period with a leaf area index (LAI) of &lt;2.5 and a period with an LAI &gt;4.",

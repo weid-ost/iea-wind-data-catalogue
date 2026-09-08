@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Dvorak\",\"given\":\"Ota\",\"name\":\"Dvorak, Ota\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-08T14:05:21Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.19707442\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.19707442\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -57,41 +69,59 @@
       "value": "report"
     },
     {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.19707443"
+      "value": "19707443"
     },
     {
       "key": "source_key",
-      "value": "2026-08-26T01:55:25Z"
+      "value": "6@10.5281/zenodo.19707443~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.19707443"
+      "value": "https://zenodo.org/records/19707443"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19707443\"]"
+      "value": "[\"https://zenodo.org/records/19707443\",\"https://zenodo.org/doi/10.5281/zenodo.19707443\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-19707443",
   "notes": "The Integrated Design of Floating Wind Arrays (IDEA) project aims to help accelerate the commercial\n\ndeployment of floating offshore wind arrays by providing reference metocean conditions, reference\n\narray-level designs, a better understanding of risk, and by studying non-technological challenges to\n\nthe development of floating offshore wind. The project is organized under International Energy\n\nAgency Wind Technology Collaboration Programme (IEA Wind) Task 49. This report was led by IDEA-\n\nIRL, the Ireland-based project aligned with Task 49, as the third deliverable for Work Package 4 –\n\nStakeholder Integration. It builds on previous reports on marine spatial planning and innovation\n\nmanagement, which included interviews and consultation with several offshore wind stakeholders\n\nfrom various countries.\n\nDuring the interviews it became apparent that along with marine spatial planning and permitting\n\nframeworks, another non-technological source of challenges is the complex global supply chain of\n\noffshore wind. Previous work has shown how reliant the supply chain is on China’s manufacturing\n\nand mining operations. Here we present the data collected by the Global Wind Energy Council as a\n\nreminder of the situation and to put it into perspective with national goals of managing the energy\n\ntrilemma – secure, cheap, and sustainable production. With China holding many of the cards and\n\ngeopolitical tensions rising, many governments are looking to become more self-sufficient and\n\npromote domestic manufacturing and bigger engagement of local companies in industrial activity.\n\nThis push for onshoring comes with debates about the effect on local greenhouse gas emissions and\n\nthe prices of energy.\n\nWe have selected four different offshore wind markets as case studies of different levels of domestic\n\nsupply chain development: Norway, The United Kingdom, Italy, and Ireland. We have identified the\n\nparts of an offshore wind project which contribute most to its cost, along with other critical\n\nconstraints like port, vessel and transmission availability, skill development, and access to raw\n\nmaterials. We have then conducted in-depth interviews with representatives of the offshore wind\n\nindustry from the four countries to find out the situation in their domestic market concerning these\n\nchallenges.",
   "owner_org": "zenodo-community",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA-Wind-Task-49-WP4-Report-3-Supply-Chain-Consultation.pdf",
+      "url": "https://zenodo.org/records/19707443/files/IEA-Wind-Task-49-WP4-Report-3-Supply-Chain-Consultation.pdf"
+    }
+  ],
   "state": "active",
   "tags": [
     {

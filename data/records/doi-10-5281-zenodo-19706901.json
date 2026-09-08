@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"University of Edinburgh, School of Engineering\",\"family\":\"Dvorak\",\"given\":\"Ota\",\"name\":\"Dvorak, Ota\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Bohan\",\"given\":\"Greg\",\"name\":\"Bohan, Greg\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-08T14:05:17Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.19706900\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.19706900\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -57,41 +69,59 @@
       "value": "report"
     },
     {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.19706901"
+      "value": "19706901"
     },
     {
       "key": "source_key",
-      "value": "2026-08-26T21:05:14Z"
+      "value": "6@10.5281/zenodo.19706901~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.19706901"
+      "value": "https://zenodo.org/records/19706901"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19706901\"]"
+      "value": "[\"https://zenodo.org/records/19706901\",\"https://zenodo.org/doi/10.5281/zenodo.19706901\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-19706901",
   "notes": "",
   "owner_org": "zenodo-community",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA-Wind-Task-49-WP4-Report-1-Innovation-Ranking.pdf",
+      "url": "https://zenodo.org/records/19706901/files/IEA-Wind-Task-49-WP4-Report-1-Innovation-Ranking.pdf"
+    }
+  ],
   "state": "active",
   "tags": [
     {

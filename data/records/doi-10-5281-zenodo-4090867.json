@@ -1,0 +1,138 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"name\":\"Javier Sanz Rodrigo\",\"orcid\":\"0000-0003-0291-6429\"},{\"affiliation\":\"NREL\",\"name\":\"Matthew Churchfield\"},{\"affiliation\":\"NCAR\",\"name\":\"Branko Kosovic\"}]"
+    },
+    {
+      "key": "container",
+      "value": "The Science of Making Torque from Wind"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4090867"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4090867"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2016-10-06"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4090867\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.834356\",\"identifier_type\":\"DOI\",\"relation\":\"isSupplementedBy\"},{\"identifier\":\"10.1088/1742-6596/753/3/032024\",\"identifier_type\":\"DOI\",\"relation\":\"isSupplementedBy\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "4090868"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.4090868~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4090868"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4090868\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4090867",
+  "notes": "<p>Presentation at the Torque Conference, 6 October 2016, Munich. The associated paper can be found at: </p>\n\n<p><a href=\"https://iopscience.iop.org/article/10.1088/1742-6596/753/3/032024\" rel=\"nofollow noopener\">https://iopscience.iop.org/article/10.1088/1742-6596/753/3/032024</a></p>\n\n<p><strong>Abstract</strong></p>\n\n<p>The third GEWEX Atmospheric Boundary Layer Studies (GABLS3) model intercomparison study, around the Cabauw met tower in the Netherlands, is revisited as a benchmark for wind energy atmospheric boundary layer (ABL) models. The case was originally developed by the boundary layer meteorology community, interested in analysing the performance of single-column and large-eddy simulation atmospheric models dealing with a diurnal cycle leading to the development of a nocturnal low-level jet. The case addresses fundamental questions related to the definition of the large-scale forcing, the interaction of the ABL with the surface and the evaluation of model results with observations. The characterization of mesoscale forcing for asynchronous microscale modelling of the ABL is discussed based on momentum budget analysis of WRF simulations. Then a single-column model is used to demonstrate the added value of incorporating different forcing mechanisms in microscale models. The simulations are evaluated in terms of wind energy quantities of interest.</p>",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "SanzRodrigo_GABLS3_Torque_Oct16.pdf",
+      "url": "https://zenodo.org/records/4090868/files/SanzRodrigo_GABLS3_Torque_Oct16.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "abl"
+    },
+    {
+      "name": "low-level-jet"
+    },
+    {
+      "name": "urans"
+    },
+    {
+      "name": "wakebench"
+    }
+  ],
+  "title": "A wind energy benchmark for ABL modelling of a diurnal cycle with a nocturnal low-level jet: GABLS3 revisited",
+  "url": "https://zenodo.org/records/4090868"
+}

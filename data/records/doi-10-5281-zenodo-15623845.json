@@ -21,6 +21,10 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-57\"]"
+    },
+    {
       "key": "last_seen",
       "value": "2026-09-01T23:20:26Z"
     },
@@ -37,8 +41,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.15623844\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15623844\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -54,6 +62,10 @@
     },
     {
       "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
       "value": "dataset"
     },
     {
@@ -81,11 +93,19 @@
       "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15623845\"]"
     },
     {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-57"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-15623845",
   "notes": "These files include all the data that were released to the participants of the AWAKEN wind farm wake benchmark, which is the first benchmark released as part of the IEA Wind Task 57 (JAM) activities, in each of the 3 phases of the benchmarking exercise. The benchmark activities ran from 2024 to 2025. The case study selected is 24 August 2023. More information on the benchmark are available at https://awaken-benchmark.readthedocs.io/en/latest/ and in related publications.",

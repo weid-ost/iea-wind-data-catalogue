@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Dvorak\",\"given\":\"Ota\",\"name\":\"Dvorak, Ota\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Bohan\",\"given\":\"Greg\",\"name\":\"Bohan, Greg\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-07T04:32:24Z"
+      "value": "2026-09-08T14:05:19Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.19707216\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.19707216\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -57,41 +69,59 @@
       "value": "report"
     },
     {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.19707217"
+      "value": "19707217"
     },
     {
       "key": "source_key",
-      "value": "2026-09-04T06:05:07Z"
+      "value": "4@10.5281/zenodo.19707217~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.19707217"
+      "value": "https://zenodo.org/records/19707217"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19707217\"]"
+      "value": "[\"https://zenodo.org/records/19707217\",\"https://zenodo.org/doi/10.5281/zenodo.19707217\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-19707217",
   "notes": "This report was prepared as the second deliverable for Work Package (WP) 4 of the International\n\nEnergy Agency (IEA) Wind Task 49 - Integrated Design on Floating wind Arrays (IDeA), with lead\n\ncontributions coming from the IDEA-IRL project. IDEA-IRL is an SEAI-funded project which funds\n\nIreland’s contribution to the IEA Wind Task 49. Both projects are aligned in terms of scope, work\n\npackages and deliverables, and will collectively be referred to as IDEA in this report.\n\nThis report updates on consultation and research undertaken primarily over the course of 2023 to\n\ngain a deeper understanding of key markets for floating offshore wind (FLOW) globally, work done in\n\nrelation to marine spatial planning (MSP), and areas designated for the future development of\n\nfloating offshore wind internationally.\n\nThe markets assessed were the USA, France, Germany, Ireland, Italy, the Netherlands, Norway, South\n\nKorea, the UK, Portugal, Spain and Japan. Interviews were undertaken with representatives from\n\neach of these countries, with the end goal of speaking to a floating offshore wind expert and a marine\n\nspatial planning expert in each country.",
   "owner_org": "zenodo-community",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA-Wind-Task-49-WP4-Report-2-MSP-and-Market-Consultation.pdf",
+      "url": "https://zenodo.org/records/19707217/files/IEA-Wind-Task-49-WP4-Report-2-MSP-and-Market-Consultation.pdf"
+    }
+  ],
   "state": "active",
   "tags": [
     {

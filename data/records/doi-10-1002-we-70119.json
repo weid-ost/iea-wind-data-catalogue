@@ -38,7 +38,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
     },
     {
       "key": "published_date",
@@ -51,6 +51,10 @@
     {
       "key": "resource_kind",
       "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
     },
     {
       "key": "source_id",

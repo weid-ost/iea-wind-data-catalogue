@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:27Z"
+      "value": "2026-09-08T14:04:36Z"
     },
     {
       "key": "license_mapped",
@@ -49,8 +49,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.16811308\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.16811308\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -69,12 +73,16 @@
       "value": "report"
     },
     {
+      "key": "resource_type",
+      "value": "technical-report"
+    },
+    {
       "key": "source_id",
       "value": "16811308"
     },
     {
       "key": "source_key",
-      "value": "4@10.5281/zenodo.16811308"
+      "value": "4@10.5281/zenodo.16811308~m2"
     },
     {
       "key": "source_system",
@@ -90,7 +98,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/records/16811308\",\"https://zenodo.org/doi/10.5281/zenodo.16811307\"]"
+      "value": "[\"https://zenodo.org/records/16811308\",\"https://zenodo.org/doi/10.5281/zenodo.16811307\",\"https://zenodo.org/doi/10.5281/zenodo.16811308\"]"
     },
     {
       "key": "withdrawn",

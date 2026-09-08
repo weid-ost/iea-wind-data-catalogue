@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Dvorak\",\"given\":\"Ota\",\"name\":\"Dvorak, Ota\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Bohan\",\"given\":\"Greg\",\"name\":\"Bohan, Greg\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-08T14:05:23Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.19707538\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.19707538\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -57,41 +69,59 @@
       "value": "report"
     },
     {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.19707539"
+      "value": "19707539"
     },
     {
       "key": "source_key",
-      "value": "2026-09-01T02:44:08Z"
+      "value": "4@10.5281/zenodo.19707539~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.19707539"
+      "value": "https://zenodo.org/records/19707539"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19707539\"]"
+      "value": "[\"https://zenodo.org/records/19707539\",\"https://zenodo.org/doi/10.5281/zenodo.19707539\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-19707539",
   "notes": "This report serves to update on the consultation that has taken place during the third year of Task 49 WP4 activities, aiming to provide qualitative assessments of the development of the offshore wind (OW) industry in partner countries based on data collected from industry experts using a questionnaire.",
   "owner_org": "zenodo-community",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA-Wind-Task-49-WP4-Report-4-Industry-Update.pdf",
+      "url": "https://zenodo.org/records/19707539/files/IEA-Wind-Task-49-WP4-Report-4-Industry-Update.pdf"
+    }
+  ],
   "state": "active",
   "tags": [
     {

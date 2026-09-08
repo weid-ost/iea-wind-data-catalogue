@@ -1,0 +1,142 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"name\":\"Javier Sanz Rodrigo\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.834355"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.834355"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "gpl-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2017-07-24"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.834355\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://github.com/jsrodrigo/GABLS3-CFDWindSCM/tree/v1.0\",\"identifier_type\":\"URL\",\"relation\":\"isSupplementTo\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "834356"
+    },
+    {
+      "key": "source_key",
+      "value": "13@10.5281/zenodo.834356~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/834356"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/834356\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "gpl-2.0",
+  "name": "doi-10-5281-zenodo-834355",
+  "notes": "<p>In this repository you can find the jupyter notebook that was used to post-process CFDWindSCM simulations of the GABLS3 diurnal cycle case. Based on this work a Windbench benchmark for wind energy applications was designed: http://windbench.net/gabls-3</p>\n\n<p>The input data can be fetched from the EUDAT repository:http://doi.org/10.23728/b2share.22e419b663cb4ffca8107391b6716c1b</p>\n\n<p>and the validation data from the original GABLS3 website at KNMI:http://projects.knmi.nl/gabls/gabls3_scm_cabauw_obs_v33.nc</p>\n\n<p>The results were published in the following journal paper: Sanz Rodrigo J, Churchfield M, Kosović B (2017) A methodology for the design and testing of atmospheric boundary layer models for wind energy applications. Wind Energ. Sci. 2: 1-20, https://doi.org/10.5194/wes-2-35-2017</p>",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "jsrodrigo/GABLS3-CFDWindSCM-v1.0.zip",
+      "url": "https://zenodo.org/records/834356/files/jsrodrigo/GABLS3-CFDWindSCM-v1.0.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "gabls3"
+    },
+    {
+      "name": "meso-micro"
+    },
+    {
+      "name": "validation"
+    },
+    {
+      "name": "wind"
+    },
+    {
+      "name": "windbench"
+    }
+  ],
+  "title": "Assessment of meso-micro offline coupling methodology based on driving CFDWind single-column-model with WRF tendencies: the GABLS3 diurnal cycle case",
+  "url": "https://zenodo.org/records/834356",
+  "version": "v1.0"
+}

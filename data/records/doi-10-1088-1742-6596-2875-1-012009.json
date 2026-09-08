@@ -50,7 +50,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
     },
     {
       "key": "published_date",
@@ -71,6 +71,10 @@
     {
       "key": "resource_kind",
       "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
     },
     {
       "key": "source_id",
@@ -109,7 +113,7 @@
   "license_id": "cc-by",
   "name": "doi-10-1088-1742-6596-2875-1-012009",
   "notes": "Abstract <p>The commercial-scale deployment of floating offshore wind (FOW) projects is expected to take place in a diverse range of sites that may differ significantly from existing fixed-bottom projects. FOW farms are particularly sensitive to the water depth and the meteorological and oceanographic (metocean) and geotechnical conditions at the project site due to the wave-induced system motions and loads as well as the anchoring system constraints imposed by the seafloor conditions. Uncertainty around the site conditions will permeate through all aspects of project design, leading to suboptimal and overly conservative designs, increased costs, and adversely affected performance. As FOW expands into a global industry, metocean and geotechnical conditions will increasingly vary for projects located in different geographic regions or in far-from-shore, deep-water sites. This study represents the outputs of work package 1 of International Energy Agency Wind Task 49, which focuses on the integrated design of floating wind arrays. The primary goal of this study is to establish the type of parameters and constraints required to characterize FOW array reference sites; provide a realistic and publicly available set of reference site conditions to the FOW community as a baseline set of data for individual research projects; identify and categorize any critical gaps in the existing data or methodologies required to define reference site characteristics; and inform and support the design of reference FOW arrays. A building block concept was developed for synthesizing reference sites for the design of FOW arrays. The building blocks include three classes of site conditions focusing on the techno-economic design of FOW projects: metocean conditions, seabed conditions, and coastal infrastructure. All reference site data produced and collected in this study are publicly available.</p>",
-  "owner_org": "unattributed",
+  "owner_org": "nrel",
   "private": false,
   "resources": [
     {

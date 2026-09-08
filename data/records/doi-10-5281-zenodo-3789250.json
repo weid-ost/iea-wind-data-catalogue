@@ -1,12 +1,20 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Northern Forestry Centre, Natural Resources Canada, Edmonton ,, Canada\",\"family\":\"Pohl\",\"given\":\"Greg\",\"name\":\"Pohl, Greg\"},{\"affiliation\":\"University of Alberta Strickland Entomology Museum ,, Canada\",\"family\":\"Anweiler\",\"given\":\"Gary\",\"name\":\"Anweiler, Gary\"},{\"affiliation\":\"Canadian Food Inspection Agency, Ottawa, Canada\",\"family\":\"Schmidt\",\"given\":\"Christian\",\"name\":\"Schmidt, Christian\"},{\"affiliation\":\"Calgary ,, Canada\",\"family\":\"Kondla\",\"given\":\"Norbert\",\"name\":\"Kondla, Norbert\"}]"
+      "value": "[{\"affiliation\":\"Northern Forestry Centre, Natural Resources Canada, Edmonton ,, Canada\",\"name\":\"Pohl, Greg\"},{\"affiliation\":\"University of Alberta Strickland Entomology Museum ,, Canada\",\"name\":\"Anweiler, Gary\"},{\"affiliation\":\"Canadian Food Inspection Agency, Ottawa, Canada\",\"name\":\"Schmidt, Christian\"},{\"affiliation\":\"Calgary ,, Canada\",\"name\":\"Kondla, Norbert\"}]"
+    },
+    {
+      "key": "container",
+      "value": "An annotated list of the Lepidoptera of Alberta, Canada, pp. 1-549 in ZooKeys"
     },
     {
       "key": "doi",
-      "value": "10.5281/zenodo.3789250"
+      "value": "10.5281/zenodo.3789249"
     },
     {
       "key": "first_seen",
@@ -26,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:28:59Z"
+      "value": "2026-09-08T14:05:43Z"
     },
     {
       "key": "license_mapped",
@@ -34,7 +42,7 @@
     },
     {
       "key": "license_raw",
-      "value": "cc0-1.0"
+      "value": "cc-zero"
     },
     {
       "key": "lifecycle_state",
@@ -42,7 +50,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -54,27 +62,31 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.3897/zookeys.38.383\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"},{\"identifier\":\"http://zenodo.org/record/576629\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"http://publication.plazi.org/id/FF8B8A2E9F2CA426E62BFFD7FFC6AF1B\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"10.5281/zenodo.3789249\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/biosyslit\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+      "value": "[{\"identifier\":\"10.3897/zookeys.38.383\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"},{\"identifier\":\"http://zenodo.org/record/576629\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"http://publication.plazi.org/id/FF8B8A2E9F2CA426E62BFFD7FFC6AF1B\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"10.5281/zenodo.3789249\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/biosyslit\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"10.3897/zookeys.38.383\",\"identifier_type\":\"DOI\",\"relation\":\"isPartOf\"},{\"identifier\":\"http://zenodo.org/record/576629\",\"identifier_type\":\"URL\",\"relation\":\"isPartOf\"},{\"identifier\":\"http://publication.plazi.org/id/FF8B8A2E9F2CA426E62BFFD7FFC6AF1B\",\"identifier_type\":\"URL\",\"relation\":\"isPartOf\"}]"
     },
     {
       "key": "resource_kind",
       "value": "publication"
     },
     {
+      "key": "resource_type",
+      "value": "publication"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.3789250"
+      "value": "3789250"
     },
     {
       "key": "source_key",
-      "value": "56a50f704dc5d65b"
+      "value": "4@10.5281/zenodo.3789250~m2"
     },
     {
       "key": "source_system",
-      "value": "ieawind"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"ieawind\"]"
+      "value": "[\"ieawind\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -82,7 +94,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/record/3789250\",\"https://iea-wind.org/task43/t43-publications/\"]"
+      "value": "[\"https://zenodo.org/record/3789250\",\"https://iea-wind.org/task43/t43-publications/\",\"https://zenodo.org/records/3789250\"]"
     },
     {
       "key": "withdrawn",
@@ -96,14 +108,14 @@
   ],
   "license_id": "cc-zero",
   "name": "doi-10-5281-zenodo-3789250",
-  "notes": "Ennomini 1495 R <i>Ennomos magnaria</i> Guenée, [1858] L Aug – L Sep m B g T: McGuffin (1981) L: Bowman (1951), Prentice (1963), McGuffin (1981), Ives and Wong (1988), Pohl et al. (2004b) C: CNC, NFRC, OLDS, PMAE, UASM 1496 * R <i>Ennomos subsignaria</i> (Hübner, 1823) L May – L Jun – – G T: McGuffin (1987) L: Bowman (1951) C: UASM",
+  "notes": "Ennomini  <p>1495 R <i>Ennomos magnaria</i> Guenée, [1858] L Aug – L Sep m B g T: McGuffin (1981)</p>   <p>L: Bowman (1951), Prentice (1963), McGuffin</p>  <p>(1981), Ives and Wong (1988), Pohl et al. (2004b)</p>  <p>C: CNC, NFRC, OLDS, PMAE, UASM</p>  <p>1496 * R <i>Ennomos subsignaria</i> (Hübner, 1823) L May – L Jun – – G T: McGuffin (1987)</p>   <p>L: Bowman (1951) C: UASM</p>",
   "owner_org": "zenodo-community",
   "private": false,
   "resources": [
     {
-      "description": "Resolved landing page",
-      "name": "DOI",
-      "url": "https://zenodo.org/record/3789250"
+      "format": "html",
+      "name": "treatment.html",
+      "url": "https://zenodo.org/records/3789250/files/treatment.html"
     }
   ],
   "state": "active",
@@ -131,5 +143,5 @@
     }
   ],
   "title": "Ennomini Duponchel 1845",
-  "url": "https://zenodo.org/record/3789250"
+  "url": "https://zenodo.org/records/3789250"
 }

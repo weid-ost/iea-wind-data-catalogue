@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"Ostschweizer Fachhochschule OST\",\"family\":\"Hammer\",\"given\":\"Florian\",\"name\":\"Hammer, Florian\"},{\"affiliation\":\"Ostschweizer Fachhochschule OST\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\"},{\"affiliation\":\"von Karman Institute for Fluid Dynamics\",\"family\":\"Venkatraman\",\"given\":\"Kartik\",\"name\":\"Venkatraman, Kartik\"},{\"affiliation\":\"Wobben Research and Development GmbH\",\"family\":\"Remmler\",\"given\":\"Sebastian\",\"name\":\"Remmler, Sebastian\"},{\"affiliation\":\"UTD Wind\",\"family\":\"Bernardoni\",\"given\":\"Federico\",\"name\":\"Bernardoni, Federico\"},{\"family\":\"Diez Sanchez\",\"given\":\"Gustavo Adolfo\",\"name\":\"Diez Sanchez, Gustavo Adolfo\"},{\"family\":\"Schubiger\",\"given\":\"Alain\",\"name\":\"Schubiger, Alain\"},{\"affiliation\":\"Von Karman Institute for Fluid Dynamics\",\"family\":\"Hågbo\",\"given\":\"Trond-Ola\",\"name\":\"Hågbo, Trond-Ola\"},{\"affiliation\":\"Von Karman Institute for Fluid Dynamics\",\"family\":\"Buckingham\",\"given\":\"Sophia\",\"name\":\"Buckingham, Sophia\"},{\"affiliation\":\"University of Stavanger\",\"family\":\"Giljarhus\",\"given\":\"Knut Erik\",\"name\":\"Giljarhus, Knut Erik\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-08T14:05:02Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.15536581\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15536581\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -57,41 +69,59 @@
       "value": "report"
     },
     {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.15536582"
+      "value": "15536582"
     },
     {
       "key": "source_key",
-      "value": "2025-05-28T15:37:55Z"
+      "value": "4@10.5281/zenodo.15536582~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.15536582"
+      "value": "https://zenodo.org/records/15536582"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15536582\"]"
+      "value": "[\"https://zenodo.org/records/15536582\",\"https://zenodo.org/doi/10.5281/zenodo.15536582\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-15536582",
   "notes": "The main goals of a wind resource assessment (WRA) at a given site are to estimate the wind speed and annual energy production (AEP) of the planned wind turbines. Several steps are involved in going from initial wind speed estimations of specific locations to a comprehensive full-scale AEP assessment. These steps differ significantly between the chosen tool and the individuals performing the task.\n\nIn this present work, the wide range of factors affecting AEP estimation accuracy and costs were investigated in a simulation challenge at the Perdigão site in Portugal. Results from nine different simulations from five different modellers are obtained via the \"IEA Wind Task 31 Comparison metrics simulation challenge for wind resource assessment in complex terrain\", consisting of a range of linear models, Reynolds-Averaged Navier-Stokes (RANS) computational fluid dynamics models and Large Eddy Simulations (LES). \n\nThe wind speed and AEP prediction errors for three different met mast positions across the site were investigated and further translated into relative \"skill\" and \"cost\" scores, using a method previously developed by the authors.It was found that the RANS simulations achieved very high prediction accuracy at relatively low costs for both wind speed and AEP estimations. The LES simulations achieved a high wind speed prediction accuracy for certain conditions, but at a much higher cost, which in turn reduced the number of possible simulations, leading to a decrease in AEP prediction accuracy in this case with the available resources. For some of the simulations, the forest canopy was explicitly modelled, which was shown to be beneficial for wind speed predictions at lower heights above the ground, but lead to under-estimations of wind speeds at higher heights, decreasing the AEP prediction accuracy. \n\nThe results highlight the many contributing factors that affect the wind speed and AEP prediction accuracy as well as the simulation costs for a given site.",
   "owner_org": "ost",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "PragmaticChallenge.pdf",
+      "url": "https://zenodo.org/records/15536582/files/PragmaticChallenge.pdf"
+    }
+  ],
   "state": "active",
   "tags": [],
   "title": "Comparison Metrics Microscale Simulation Challenge for Wind Resource Assessment",

@@ -1,12 +1,16 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
-      "value": "[{\"affiliation\":\"ScottishPower Renewables (Iberdrola Renewables)\",\"family\":\"Koukoura\",\"given\":\"Sofia\",\"name\":\"Koukoura, Sofia\"}]"
+      "value": "[{\"affiliation\":\"ScottishPower Renewables (Iberdrola Renewables)\",\"name\":\"Sofia Koukoura\"}]"
     },
     {
       "key": "doi",
-      "value": "10.5281/zenodo.7753451"
+      "value": "10.5281/zenodo.7753450"
     },
     {
       "key": "first_seen",
@@ -26,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:28:59Z"
+      "value": "2026-09-08T14:05:48Z"
     },
     {
       "key": "license_mapped",
@@ -42,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -58,23 +62,27 @@
     },
     {
       "key": "resource_kind",
-      "value": "publication"
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
     },
     {
       "key": "source_id",
-      "value": "10.5281/zenodo.7753451"
+      "value": "7753451"
     },
     {
       "key": "source_key",
-      "value": "56a50f704dc5d65b"
+      "value": "8@10.5281/zenodo.7753451~m2"
     },
     {
       "key": "source_system",
-      "value": "ieawind"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"ieawind\"]"
+      "value": "[\"ieawind\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -82,7 +90,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/record/7753451\",\"https://iea-wind.org/task43/t43-publications/\"]"
+      "value": "[\"https://zenodo.org/record/7753451\",\"https://iea-wind.org/task43/t43-publications/\",\"https://zenodo.org/records/7753451\"]"
     },
     {
       "key": "withdrawn",
@@ -96,18 +104,18 @@
   ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-7753451",
-  "notes": "This presentation discusses Reliable OM Decisions Tools and Strategies for High LCOE Reduction on Offshore Wind.",
+  "notes": "<p>This presentation discusses Reliable OM Decisions Tools and Strategies for High LCOE Reduction on Offshore Wind.</p>",
   "owner_org": "zenodo-community",
   "private": false,
   "resources": [
     {
-      "description": "Resolved landing page",
-      "name": "DOI",
-      "url": "https://zenodo.org/record/7753451"
+      "format": "pdf",
+      "name": "08 - Koukoura - ROMEO Project.pdf",
+      "url": "https://zenodo.org/records/7753451/files/08%20-%20Koukoura%20-%20ROMEO%20Project.pdf"
     }
   ],
   "state": "active",
   "tags": [],
   "title": "ROMEO Project",
-  "url": "https://zenodo.org/record/7753451"
+  "url": "https://zenodo.org/records/7753451"
 }

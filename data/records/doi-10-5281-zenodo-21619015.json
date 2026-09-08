@@ -21,6 +21,10 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
       "key": "last_seen",
       "value": "2026-09-01T23:20:26Z"
     },
@@ -37,8 +41,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.21619014\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.21619014\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -54,7 +62,11 @@
     },
     {
       "key": "resource_kind",
-      "value": "publication"
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "project-deliverable"
     },
     {
       "key": "source_id",
@@ -81,11 +93,19 @@
       "value": "[\"https://zenodo.org/doi/10.5281/zenodo.21619015\"]"
     },
     {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-21619015",
   "notes": "This white paper presents a new set of performance metrics for assessing the ability of vertical profiling lidar systems to measure turbulence intensity (TI) for wind turbine load assessment applications. In contrast to existing approaches, which typically rely on correlations of 10-minute averaged TI values, the proposed methodology applies load-relevant metrics — namely effective turbulence intensity, damage index, and representative TI based on the 90% quantile—directly when comparing lidar-derived TI to collocated reference measurements from cup anemometers. By evaluating the same derived quantities that are used in wind turbine load calculations, the approach removes the ambiguity inherent in correlation-based assessments and provides a clearer link between measurement performance and downstream application relevance. In addition, the paper proposes a testing framework that supports the incremental compilation of a database of TI assessment results over time. Rather than requiringa single, exhaustive test campaign, this framework enables new products — such as TI correction methodologies or updated reconstruction algorithms — to be introduced with an initially limited scope of validated conditions that can be systematically expanded as further evidence becomes available.This pragmatic approach acknowledges the uncontrollable nature of environmental conditions during free-field testing while promoting transparency, comparability, and confidence in the use of lidar-derived TI for wind turbine load assessments. The paper reflects the consensus findings of an IEA Task 52 working group, based on collective discussions and complementary investigations carried out by individual members.",

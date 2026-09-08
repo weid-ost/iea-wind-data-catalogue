@@ -21,6 +21,10 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
       "key": "last_seen",
       "value": "2026-09-01T23:20:26Z"
     },
@@ -37,8 +41,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.19195802\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.19195802\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -54,6 +62,10 @@
     },
     {
       "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
       "value": "report"
     },
     {
@@ -81,11 +93,19 @@
       "value": "[\"https://zenodo.org/doi/10.5281/zenodo.19195803\"]"
     },
     {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-19195803",
   "notes": "This whitepaper describes a new methodology for nacelle-mounted lidar (NML) power performance tests of wind turbines in moderately complex terrain, or as its now known \"Simple+\" Terrain. The methods in this document represent industry consensus with contributions from wind farm developers, independent engineers, wind turbine OEMs, and lidar OEMs. The work was carried out via the International Energy Agency Wind Task 52: Large-scale Deployment of Wind Lidar. Contact Andrew H. Black at andrew.hastingsblack@vaisala.com.",

@@ -1,0 +1,138 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"name\":\"Javier Sanz Rodrigo\",\"orcid\":\"0000-0003-0291-6429\"},{\"affiliation\":\"NREL\",\"name\":\"Patrick Moriarty\"}]"
+    },
+    {
+      "key": "container",
+      "value": "The Science of Making Torque from Wind"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4088286"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4088286"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2014-06-02"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4088286\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.1088/1742-6596/524/1/012105\",\"identifier_type\":\"DOI\",\"relation\":\"isSupplementedBy\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "4088287"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.4088287~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4088287"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4088287\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4088286",
+  "notes": "<p>Presentation delivered at the Torque 2014 conference. The associated paper is available at: https://iopscience.iop.org/article/10.1088/1742-6596/524/1/012105</p>\n\n<p><strong>Abstract</strong></p>\n\n<p>The IEA Task 31 Wakebench is setting up a framework for the evaluation of wind farm flow models operating at microscale level. The framework consists on a model evaluation protocol integrated on a web-based portal for model benchmarking (www.windbench.net). This paper provides an overview of the building-block validation approach applied to flow-over-terrain models, including best practices for the benchmarking and data processing procedures for the analysis and qualification of validation datasets from wind resource assessment campaigns.<br />\nA hierarchy of test cases has been proposed for flow-over-terrain model evaluation, from Monin-Obukhov similarity theory for verification of surface-layer properties, to the Leipzig profile for the near-neutral atmospheric boundary layer, to flow over isolated hills (Askervein and Bolund) to flow over mountaneous complex terrain (Alaiz). A summary of results from the first benchmarks<br />\nare used to illustrate the model evaluation protocol applied to flow-over-terrain modeling in neutral conditions.</p>",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "SanzRodrigo_WAKEBENCH_Torque_Jun-14.pdf",
+      "url": "https://zenodo.org/records/4088287/files/SanzRodrigo_WAKEBENCH_Torque_Jun-14.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "cfd"
+    },
+    {
+      "name": "microscale"
+    },
+    {
+      "name": "validation"
+    },
+    {
+      "name": "wind"
+    }
+  ],
+  "title": "IEA-Task 31 WAKEBENCH: Towards a protocol for wind farm flow model evaluation. Part 1: Flow-over-terrain models",
+  "url": "https://zenodo.org/records/4088287"
+}

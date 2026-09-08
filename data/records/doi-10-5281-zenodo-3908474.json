@@ -30,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-03T09:59:55Z"
+      "value": "2026-09-08T14:04:38Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -65,16 +65,20 @@
       "value": "publication"
     },
     {
+      "key": "resource_type",
+      "value": "working-paper"
+    },
+    {
       "key": "source_id",
-      "value": "IEA-Wind-Task-32/Webinar-summary-lidar-filtering-7April2020"
+      "value": "3909488"
     },
     {
       "key": "source_key",
-      "value": "821a38b03bfed2b9ca99b5fcd65e433eee163da8:v1.0:c879cc2dd0f16d3e"
+      "value": "5@10.5281/zenodo.3909488~m2"
     },
     {
       "key": "source_system",
-      "value": "github"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
@@ -101,7 +105,7 @@
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-3908474",
   "notes": "<p>This is a summary of the ``Filtering lidar data'' webinar given by Rogier Floors and Leonardo Alcayaga on 7 April 2020 in the IEA Wind Task 32 webinar series.</p>\n\n<p> </p>",
-  "owner_org": "zenodo-community",
+  "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {

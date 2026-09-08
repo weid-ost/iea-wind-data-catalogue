@@ -21,6 +21,10 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
       "key": "last_seen",
       "value": "2026-09-01T23:20:26Z"
     },
@@ -37,8 +41,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.22078127\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.22078127\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -55,6 +63,10 @@
     {
       "key": "resource_kind",
       "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "working-paper"
     },
     {
       "key": "source_id",
@@ -81,11 +93,19 @@
       "value": "[\"https://zenodo.org/doi/10.5281/zenodo.22078128\"]"
     },
     {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-22078128",
   "notes": "With the continued growth of wind energy and corresponding growth in the use of wind lidar, IEA Wind Task 52 was formed to investigate the challenges associated with large-scale deployment of wind lidar – framed as a 10x increase in the number of lidar in use.\n\nDigitalisation will likely be a crucial part of managing many more wind lidar than are in use today. IEA Wind Task 52 therefore established a Digitalisation Working Group to explore the opportunities and challenges for the digitalisation of wind lidar. The working group found multiple active and potential use cases for digitalisation, ranging from lidar manufacturing, to training, supporting installation and commissioning, and speeding up data processing and evaluation.\n\nA key finding was that many wind lidar digitalisation use cases are not unique to wind lidar or even wind energy; mature solutions often exist in other networked industries like IoT and smartphone ecosystems. These external sectors offer valuable lessons for managing dispersed infrastructure, large data, and stakeholder networks, having navigated challenges like market fragmentation and the need for standards.\n\nThe working group concluded that while wind-lidar specific applications are valuable, truly transformative solutions require a broader, cross-sectoral approach.",

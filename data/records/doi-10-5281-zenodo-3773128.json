@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"name\":\"Sanz Rodrigo, Javier\",\"orcid\":\"0000-0003-0291-6429\"},{\"affiliation\":\"CENER\",\"name\":\"Gancarski, Pawel\",\"orcid\":\"0000-0001-9198-8429\"},{\"affiliation\":\"CENER\",\"name\":\"Fernandes Correia, Pedro Miguel\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3773128"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3773128"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-04-28"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3773128\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://github.com/CENER-EPR/OWAbench/tree/v2.0.1\",\"identifier_type\":\"URL\",\"relation\":\"isSupplementTo\"},{\"identifier\":\"10.5281/zenodo.3715198\",\"identifier_type\":\"DOI\",\"relation\":\"references\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "3773129"
+    },
+    {
+      "key": "source_key",
+      "value": "11@10.5281/zenodo.3773129~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3773129"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3773129\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-5281-zenodo-3773128",
+  "notes": "<p>This repository contains the model evaluation scripts developed in the Offshore Wind Accelerator (OWA) Wake Modelling Challenge. A benchmarking process comprising 5 wind farms allows wake model developers and end-users test their array efficiency prediction methodologies over a wide range of wind climate and wind farm layout conditions.</p>\n\n<p>The project is integrated in the Phase 3 of the IEA Task 31 Wakebench international framework for wind farm modeling and evaluation.</p>\n\n<p>The dataset can be found here:</p>\n\n<p>Sanz Rodrigo, Javier, et al. (2020). OWA Wake Modelling Challenge Dataset (Version 1.0). Zenodo. <a href=\"http://doi.org/10.5281/zenodo.3715198\" rel=\"nofollow noopener\">http://doi.org/10.5281/zenodo.3715198</a></p>\n\n<p>The results of the Challenge are published here:</p>\n\n<p>Sanz Rodrigo J, Borbón Guillén F, Fernandes Correia P M, García Hevia B, Schlez W, Schmidt S, Basu S, Li B, Nielsen P, Cathelain M, Dall’Ozzo C, Grignon L, Pullinger D (2020) Validation of Meso-Wake Models for Array Efficiency Prediction Using Operational Data from Five Offshore Wind Farms. J. Phys.: Conf. Ser., under review</p>\n\n<p>Acknowledgements: The authors would like to thank Carbon Trust and the OWA Technical Working Group for their support providing funding, operational data and guidance throughout the project. We would like to thank all the benchmark participants for their simulations and in-kind support in fine-tuning the benchmark set-up and evaluation methodology.</p>",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "CENER-EPR/OWAbench-v2.0.1.zip",
+      "url": "https://zenodo.org/records/3773129/files/CENER-EPR/OWAbench-v2.0.1.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "array-efficiency"
+    },
+    {
+      "name": "mesocale-modelling"
+    },
+    {
+      "name": "owa"
+    },
+    {
+      "name": "wake-modelling"
+    }
+  ],
+  "title": "OWA Wake Modelling Challenge Scripts",
+  "url": "https://zenodo.org/records/3773129",
+  "version": "v2.0.1"
+}

@@ -1,12 +1,16 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
-      "value": "[{\"affiliation\":\"brightwind\",\"family\":\"stephenholleran\",\"name\":\"stephenholleran\"},{\"affiliation\":\"Deutsche WindGuard Wind Tunnel Services GmbH\",\"family\":\"heikowestermann\",\"name\":\"heikowestermann\"},{\"family\":\"Florian Roscheck\",\"name\":\"Florian Roscheck\"},{\"affiliation\":\"@actions\",\"family\":\"actions-user\",\"name\":\"actions-user\"},{\"family\":\"Gibson\",\"name\":\"Gibson\"},{\"affiliation\":\"https://github.com/NREL\",\"family\":\"Jason Fields\",\"name\":\"Jason Fields\"},{\"affiliation\":\"KUDO\",\"family\":\"Christian Jonsson\",\"name\":\"Christian Jonsson\"},{\"affiliation\":\"Altosphere\",\"family\":\"abohara\",\"name\":\"abohara\"},{\"family\":\"MatteoManaRWE\",\"name\":\"MatteoManaRWE\"},{\"family\":\"Guillermo Tornero\",\"name\":\"Guillermo Tornero\"},{\"family\":\"Michael Purdue\",\"name\":\"Michael Purdue\"},{\"family\":\"NikoSimisiroglou\",\"name\":\"NikoSimisiroglou\"},{\"affiliation\":\"@octue\",\"family\":\"Tom Clark\",\"name\":\"Tom Clark\"},{\"affiliation\":\"NRG Systems, Inc\",\"family\":\"David Carlson\",\"name\":\"David Carlson\"},{\"family\":\"Joseph Lee\",\"name\":\"Joseph Lee\"}]"
+      "value": "[{\"affiliation\":\"brightwind\",\"name\":\"stephenholleran\"},{\"affiliation\":\"Deutsche WindGuard Wind Tunnel Services GmbH\",\"name\":\"heikowestermann\"},{\"name\":\"Florian Roscheck\"},{\"affiliation\":\"@actions\",\"name\":\"actions-user\"},{\"name\":\"Gibson\"},{\"affiliation\":\"https://github.com/NREL\",\"name\":\"Jason Fields\"},{\"affiliation\":\"KUDO\",\"name\":\"Christian Jonsson\"},{\"affiliation\":\"Altosphere\",\"name\":\"abohara\"},{\"name\":\"MatteoManaRWE\"},{\"name\":\"Guillermo Tornero\"},{\"name\":\"Michael Purdue\"},{\"name\":\"NikoSimisiroglou\"},{\"affiliation\":\"@octue\",\"name\":\"Tom Clark\"},{\"affiliation\":\"NRG Systems, Inc\",\"name\":\"David Carlson\"},{\"name\":\"Joseph Lee\"}]"
     },
     {
       "key": "doi",
-      "value": "10.5281/zenodo.10818798"
+      "value": "10.5281/zenodo.4710168"
     },
     {
       "key": "first_seen",
@@ -26,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:28:59Z"
+      "value": "2026-09-08T14:04:51Z"
     },
     {
       "key": "license_mapped",
@@ -41,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.4710168\",\"url\":\"https://zenodo.org/records/15677886\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -54,27 +62,31 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"https://github.com/IEA-Task-43/digital_wra_data_standard/tree/v1.3.0-2024.03\",\"identifier_type\":\"URL\",\"relation\":\"IsSupplementTo\"},{\"identifier\":\"10.5281/zenodo.4710168\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"https://github.com/IEA-Task-43/digital_wra_data_standard/tree/v1.3.0-2024.03\",\"identifier_type\":\"URL\",\"relation\":\"IsSupplementTo\"},{\"identifier\":\"10.5281/zenodo.4710168\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://github.com/IEA-Task-43/digital_wra_data_standard/tree/v1.3.0-2024.03\",\"identifier_type\":\"URL\",\"relation\":\"isSupplementTo\"}]"
     },
     {
       "key": "resource_kind",
       "value": "software"
     },
     {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.10818798"
+      "value": "10818798"
     },
     {
       "key": "source_key",
-      "value": "56a50f704dc5d65b"
+      "value": "4@10.5281/zenodo.10818798~m2"
     },
     {
       "key": "source_system",
-      "value": "ieawind"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"ieawind\"]"
+      "value": "[\"ieawind\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -82,7 +94,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.10818798\",\"https://iea-wind.org/task43/t43-publications/\"]"
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.10818798\",\"https://iea-wind.org/task43/t43-publications/\",\"https://zenodo.org/records/10818798\",\"https://zenodo.org/records/15677886\"]"
     },
     {
       "key": "withdrawn",
@@ -96,19 +108,19 @@
   ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-10818798",
-  "notes": "[1.3.0-2024.03]\n\nBelow is an extract form the CHANGELOG file showing all the updates for this release.\n\n\n\nThe majority of the changes in this release are to expand the data model to include reanalysis or modelled VMM datasets and allow wave buoy's and ADCP's to exist outside of a floating lidar. Additions to sensors, measurement types and units are also included.\n\n\n\nAdding a new table to capture details of modelled VMM and reanalysis datasets (Issue #214)\n\n\nThis is called model_config which is at the same level as logger_main_config and contains similar information.\n\nResulting duplicate properties offset_from_utc_hrs, averaging_period_minutes and timestamp_is_end_of_period were moved to Definitions.\n\nreanalysis and virtual_met_mast enums were added to measurement_station_type as outlined below.\n\n\n\nTo measurement_type enum add:\n\n\nobukhov_length (Issue #182)\n\n\n\nTo statistic_type_id enum add:\n\n\nti30sec (Issue #218)\n\n\n\nTo measurement_units_id enum add:\n\n\ncm/s (Issue #241)\n\nmm/s (Issue #241)\n\n\n\nTo measurement_station_type enum add:\n\n\nwave_buoy (Issue #226)\n\nadcp (Issue #226)\n\nvirtual_met_mast (Issue #214)\n\nreanalysis (Issue #214)\n\n\n\nTo sensor_type enum add:\n\n\naltimeter (Issue #226)\n\nPTH (Issue #247)\n\n\n\nTo measurement_location add:\n\n\nuuid (Issue #232)\n\n\n\nAt top level, add license (Issue #225)\n\nBug fixes:\n\n\nAdd null to height_reference enum to match its type (Issue #215)\n\nIn plant_type enum, remove double quotes around the null (Issue #217).",
+  "notes": "[1.3.0-2024.03]\n<p>Below is an extract form the CHANGELOG file showing all the updates for this release.</p>\n\n\n<p>The majority of the changes in this release are to expand the data model to include reanalysis or modelled VMM datasets and allow wave buoy's and ADCP's to exist outside of a floating lidar. Additions to sensors, measurement types and units are also included.</p>\n<ol>\n<li>Adding a new table to capture details of modelled VMM and reanalysis datasets (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214\" rel=\"nofollow noopener\">#214</a>)<ol>\n<li>This is called <code>model_config</code> which is at the same level as <code>logger_main_config</code> and contains similar information.</li>\n<li>Resulting duplicate properties <code>offset_from_utc_hrs</code>, <code>averaging_period_minutes</code> and <code>timestamp_is_end_of_period</code> were moved to Definitions.</li>\n<li><code>reanalysis</code> and <code>virtual_met_mast</code> enums were added to <code>measurement_station_type</code> as outlined below.</li>\n</ol>\n</li>\n<li>To <code>measurement_type</code> enum add:<ol>\n<li><code>obukhov_length</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/182\" rel=\"nofollow noopener\">#182</a>)</li>\n</ol>\n</li>\n<li>To <code>statistic_type_id</code> enum add:<ol>\n<li><code>ti30sec</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/218\" rel=\"nofollow noopener\">#218</a>)</li>\n</ol>\n</li>\n<li>To <code>measurement_units_id</code> enum add:<ol>\n<li><code>cm/s</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/241\" rel=\"nofollow noopener\">#241</a>)</li>\n<li><code>mm/s</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/241\" rel=\"nofollow noopener\">#241</a>)</li>\n</ol>\n</li>\n<li>To <code>measurement_station_type</code> enum add:<ol>\n<li><code>wave_buoy</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226\" rel=\"nofollow noopener\">#226</a>)</li>\n<li><code>adcp</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226\" rel=\"nofollow noopener\">#226</a>)</li>\n<li><code>virtual_met_mast</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214\" rel=\"nofollow noopener\">#214</a>)</li>\n<li><code>reanalysis</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214\" rel=\"nofollow noopener\">#214</a>)</li>\n</ol>\n</li>\n<li>To <code>sensor_type</code> enum add:<ol>\n<li><code>altimeter</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226\" rel=\"nofollow noopener\">#226</a>)</li>\n<li><code>PTH</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/247\" rel=\"nofollow noopener\">#247</a>)</li>\n</ol>\n</li>\n<li>To <code>measurement_location</code> add:<ol>\n<li><code>uuid</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/232\" rel=\"nofollow noopener\">#232</a>)</li>\n</ol>\n</li>\n<li>At top level, add <code>license</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/225\" rel=\"nofollow noopener\">#225</a>)</li>\n<li>Bug fixes:<ol>\n<li>Add <code>null</code> to <code>height_reference</code> enum to match its type (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/215\" rel=\"nofollow noopener\">#215</a>)</li>\n<li>In <code>plant_type</code> enum, remove double quotes around the <code>null</code> (Issue <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard/issues/217\" rel=\"nofollow noopener\">#217</a>).</li>\n</ol>\n</li>\n</ol>",
   "owner_org": "nrel",
   "private": false,
   "resources": [
     {
-      "description": "Resolved landing page",
-      "name": "DOI",
-      "url": "https://zenodo.org/doi/10.5281/zenodo.10818798"
+      "format": "zip",
+      "name": "IEA-Task-43/digital_wra_data_standard-v1.3.0-2024.03.zip",
+      "url": "https://zenodo.org/records/10818798/files/IEA-Task-43/digital_wra_data_standard-v1.3.0-2024.03.zip"
     }
   ],
   "state": "active",
   "tags": [],
   "title": "IEA-Task-43/digital_wra_data_standard: 1.3.0-2024.03",
-  "url": "https://zenodo.org/doi/10.5281/zenodo.10818798",
+  "url": "https://zenodo.org/records/10818798",
   "version": "v1.3.0-2024.03"
 }

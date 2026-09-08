@@ -25,6 +25,10 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-32\",\"task-37\"]"
+    },
+    {
       "key": "last_seen",
       "value": "2026-09-01T23:20:26Z"
     },
@@ -42,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
     },
     {
       "key": "published_date",
@@ -55,6 +59,10 @@
     {
       "key": "resource_kind",
       "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
     },
     {
       "key": "source_id",
@@ -85,7 +93,14 @@
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-32"
+    },
+    {
+      "name": "task-37"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-1088-1742-6596-1618-4-042029",
   "notes": "Abstract <p>Lidar-assisted control is a promising technology for reducing the levelized cost of energy from wind turbines, but quantifying its impact at the overall system level requires sophisticated systems engineering analysis and optimization frameworks. The joint workshop on Optimizing Wind Turbines with Lidar-Assisted Control Using Systems Engineering was held by the International Energy Agency Wind Task 32 (Lidar) and Task 37 (Systems Engineering) in October 2019 to address this challenge. This paper summarizes the outcome of the workshop and presents a road map for further research. The most promising applications of lidar-assisted control identified at the workshop and discussed here include 1) increasing annual energy production, 2) decreasing capital expenditure costs by reducing design loads, 3) extending turbine lifetime by reducing operating loads, and 4) enabling wind turbine class upgrades. For each application, we review the state of the art and highlight remaining research needs. Finally, we discuss strategies for addressing these research needs by conducting high-fidelity systems engineering optimizations.</p>",

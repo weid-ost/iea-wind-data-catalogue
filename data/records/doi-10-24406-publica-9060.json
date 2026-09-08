@@ -21,6 +21,10 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
       "key": "last_seen",
       "value": "2026-09-01T23:20:26Z"
     },
@@ -30,7 +34,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -43,6 +47,10 @@
     {
       "key": "resource_kind",
       "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
     },
     {
       "key": "source_id",
@@ -73,7 +81,11 @@
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
   "license_id": "notspecified",
   "name": "doi-10-24406-publica-9060",
   "notes": "In wind farm operations, the full value of operational data is not realised due to obstacles in understanding and integration. With vast amounts of data in operational silos, reference ontologies provide a common framework for describing and connecting heterogeneous data, establishing a shared meaning that is machine-readable, human-understandable and a foundation for applying AI. As part of IEA Wind Task 43 and within the WeDoWind ecosystem, we have formed a public working group of experts across multiple disciplines to develop a foundational ontology of operations. Starting with foundational entities in the field of operations and maintenance, such as maintenance process and alarm system, we develop a section of the Operations Ontology (OpOn), focusing on a demonstration use case involving diagnostics and troubleshooting of rotor over-speed protection alarms. Here we illustrate how data annotation and integration become more intuitive and efficient with the use of the ontology, and we describe how this builds a solid foundation for the use of modern AI.",

@@ -5,6 +5,10 @@
       "value": "open"
     },
     {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Zahle, Frederik\",\"orcid\":\"0000-0002-3890-7519\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Barlas, Thanasis\",\"orcid\":\"0000-0003-4415-926X\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Lønbæk, Kenneth\",\"orcid\":\"0000-0003-0185-1248\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Bortolotti, Pietro\",\"orcid\":\"0000-0002-8515-9488\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Zalkind, Daniel\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Lu Wang\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Labuschagne, Casper\",\"orcid\":\"0000-0002-1962-6260\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Sethuraman, Latha\",\"orcid\":\"0000-0001-6270-0430\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Garrett Barter\"},{\"affiliation\":\"Technische Universität Berlin\",\"name\":\"Marten, David\"}]"
+    },
+    {
       "key": "doi",
       "value": "10.5281/zenodo.10944126"
     },
@@ -26,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-08-31T23:03:10Z"
+      "value": "2026-09-08T14:04:52Z"
     },
     {
       "key": "license_mapped",
@@ -34,7 +38,7 @@
     },
     {
       "key": "license_raw",
-      "value": "Apache-2.0"
+      "value": "cc-by-4.0"
     },
     {
       "key": "lifecycle_state",
@@ -42,39 +46,43 @@
     },
     {
       "key": "provenance",
-      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
-      "value": "2026-06-11"
+      "value": "2024-04-08"
     },
     {
       "key": "publisher",
-      "value": "GitHub"
+      "value": "Zenodo"
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.10944127\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.10944127\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.10944126\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://github.com/IEAWindTask37/IEA-22-280-RWT/tree/v1.0.1\",\"identifier_type\":\"URL\",\"relation\":\"isSupplementTo\"}]"
     },
     {
       "key": "resource_kind",
-      "value": "software"
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
     },
     {
       "key": "source_id",
-      "value": "IEAWindSystems/IEA-22-280-RWT"
+      "value": "10944127"
     },
     {
       "key": "source_key",
-      "value": "6923180ed0f52301867261a0238cc935e60da935:v1.1.0:2464eb2ff98df051"
+      "value": "6@10.5281/zenodo.10944127~m2"
     },
     {
       "key": "source_system",
-      "value": "github"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"github\"]"
+      "value": "[\"github\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -82,7 +90,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/IEAWindSystems/IEA-22-280-RWT\"]"
+      "value": "[\"https://github.com/IEAWindSystems/IEA-22-280-RWT\",\"https://zenodo.org/records/10944127\"]"
     },
     {
       "key": "withdrawn",
@@ -94,26 +102,21 @@
       "name": "task-37"
     }
   ],
-  "license_id": "apache",
+  "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-10944126",
-  "notes": "Repository for the IEA 22-MW offshore reference wind turbine developed by the IEA Wind Task 55 REFWIND",
+  "notes": "v1.0.1\n<p>This release corresponds to the version used in the technical report available at https://doi.org/10.11581/DTU.00000317. The release contains minor fixes to the HAWC2 and OpenFAST model definitions and includes additional outputs for these two codes. Additionally, the release contains a complete turbine model for the aeroelastic code QBlade.</p>",
   "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {
-      "format": "git",
-      "name": "Source repository",
-      "url": "https://github.com/IEAWindSystems/IEA-22-280-RWT"
-    },
-    {
-      "format": "release",
-      "name": "Release v1.1.0",
-      "url": "https://github.com/IEAWindSystems/IEA-22-280-RWT/releases/tag/v1.1.0"
+      "format": "zip",
+      "name": "IEAWindTask37/IEA-22-280-RWT-v1.0.1.zip",
+      "url": "https://zenodo.org/records/10944127/files/IEAWindTask37/IEA-22-280-RWT-v1.0.1.zip"
     }
   ],
   "state": "active",
   "tags": [],
-  "title": "IEAWindSystems/IEA-22-280-RWT",
-  "url": "https://github.com/IEAWindSystems/IEA-22-280-RWT",
-  "version": "v1.1.0"
+  "title": "IEAWindTask37/IEA-22-280-RWT: v1.0.1",
+  "url": "https://zenodo.org/records/10944127",
+  "version": "v1.0.1"
 }

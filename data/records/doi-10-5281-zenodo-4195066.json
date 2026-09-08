@@ -1,0 +1,138 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"name\":\"Sanz Rodrigo, Javier\",\"orcid\":\"0000-0003-0291-6429\"}]"
+    },
+    {
+      "key": "container",
+      "value": "EWEA Offshore 2011"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4195066"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4195066"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2011-11-29"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4195066\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "conference-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "4195067"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.4195067~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4195067"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4195067\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4195066",
+  "notes": "<p>The vertical structure of the stable atmospheric boundary layer (ABL) in open-sea offshore conditions is characterized based on flux-profile measurements at the Fino1 met mast, 45 km off the coast of Germany, during the first six months of 2006. The large data availability of flux measurements at three height levels (40, 60 and 80 m) allow a careful selection of profiles for which the most important ABL parameters of CFDWind model are obtained in non-dimensional form: velocity gradient, mixing-length, turbulent kinetic energy and eddy viscosity.</p>\n\n<p>Similar to onshore conditions, the non-dimensional ABL parameters show local scaling behaviour based on local Obukhov length and friction velocity scales. Functional relationships are extracted and compared to classical functions used over land. The non-dimensional wind shear is larger than the classical Dyer's function at moderate stabilities probably due to the presence of low-level jets. A weak dependency of the non-dimensional turbulent kinetic energy on stability is noticed at moderate to high stabilities. Using a calibrated stability function, it is possible to match the mean wind shear and mixing length profiles with CFDWind mixing-length model in the same way as it is done in onshore conditions. Nevertheless, the large spread of the flux-profile data reveals that ABL scaling might be not only dependent on local <em>z/L</em> but also on other parameters like the wave age.</p>\n\n<p>Ensemble-averaged profiles are reasonably well reproduced with quasy-steady simulations allowing to extend traditional CFD-based wind resource assessment methodologies to account for stability without the need to run costly unstable simulations.</p>",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "EWEAOffshore-2011 Flux-profile Fino1 JSanz Nov-11.pdf",
+      "url": "https://zenodo.org/records/4195067/files/EWEAOffshore-2011%20Flux-profile%20Fino1%20JSanz%20Nov-11.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "abl"
+    },
+    {
+      "name": "fino1"
+    },
+    {
+      "name": "offshore"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Flux-profile characterization of the offshore ABL for the parameterization of CFD models",
+  "url": "https://zenodo.org/records/4195067"
+}

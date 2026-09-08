@@ -5,6 +5,10 @@
       "value": "open"
     },
     {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"NWTC\",\"name\":\"Pietro Bortolotti\"},{\"affiliation\":\"@NREL\",\"name\":\"Rafael M Mudafort\"},{\"name\":\"Julian Quick\"},{\"name\":\"Frederik Zahle\"},{\"name\":\"kenloen\"},{\"affiliation\":\"National Renewable Energy Lab\",\"name\":\"Chris Bay\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Garrett Barter\"},{\"name\":\"dzalkind\"},{\"name\":\"Maxime Lejeune\"},{\"name\":\"rsmouradi\"},{\"name\":\"amirarasteh1990\"},{\"affiliation\":\"EDF R&D\",\"name\":\"Antoine Mathieu\"},{\"affiliation\":\"Fraunhofer IWES\",\"name\":\"Jonas Schulte\"},{\"name\":\"madsmpedersen\"},{\"name\":\"koendev\"},{\"name\":\"Yingqian Liao\"}]"
+    },
+    {
       "key": "doi",
       "value": "10.5281/zenodo.15191296"
     },
@@ -26,23 +30,27 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:21:02Z"
+      "value": "2026-09-08T14:04:57Z"
     },
     {
       "key": "license_mapped",
-      "value": "true"
+      "value": "false"
     },
     {
       "key": "license_raw",
-      "value": "Apache-2.0"
+      "value": "apache2.0"
     },
     {
       "key": "lifecycle_state",
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.15778456\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15778456\"},{\"label\":\"Also catalogued as 10.5281/zenodo.15784506\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15784506\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -50,31 +58,35 @@
     },
     {
       "key": "publisher",
-      "value": "GitHub"
+      "value": "Zenodo"
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.15191297\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.15191297\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.15191296\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://github.com/IEAWindSystems/windIO/tree/2.1.1\",\"identifier_type\":\"URL\",\"relation\":\"isSupplementTo\"}]"
     },
     {
       "key": "resource_kind",
       "value": "software"
     },
     {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
       "key": "source_id",
-      "value": "IEAWindSystems/windIO"
+      "value": "18774325"
     },
     {
       "key": "source_key",
-      "value": "4a61df862d56a12b328e76be1261eaa5d622eb84:2.1.1:0de205c28644697a"
+      "value": "4@10.5281/zenodo.18774325~m2"
     },
     {
       "key": "source_system",
-      "value": "github"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"github\"]"
+      "value": "[\"github\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -82,7 +94,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/IEAWindSystems/windIO\"]"
+      "value": "[\"https://github.com/IEAWindSystems/windIO\",\"https://zenodo.org/records/18774325\",\"https://zenodo.org/records/15778456\",\"https://zenodo.org/doi/10.5281/zenodo.15778456\",\"https://zenodo.org/records/15784506\",\"https://zenodo.org/doi/10.5281/zenodo.15784506\"]"
     },
     {
       "key": "withdrawn",
@@ -94,26 +106,21 @@
       "name": "task-37"
     }
   ],
-  "license_id": "apache",
+  "license_id": "notspecified",
   "name": "doi-10-5281-zenodo-15191296",
-  "notes": "windIO is a data format for inputs and outputs to wind energy system computational models.",
+  "notes": "<p>Incorporate the following PRs:</p>\n<ul>\n<li>#180, adding turbulence intensity to plant schema</li>\n<li>#181, fixing a bug in the way multi-point coordinates are defined</li>\n<li>#183, reintroducing cut in and cut out wind speeds, which were removed during the restructuring of the control block in PR #175. these two fields are now in the assembly block and adopt 3 and 25 m/s as default values</li>\n</ul>",
   "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {
-      "format": "git",
-      "name": "Source repository",
-      "url": "https://github.com/IEAWindSystems/windIO"
-    },
-    {
-      "format": "release",
-      "name": "Release 2.1.1",
-      "url": "https://github.com/IEAWindSystems/windIO/releases/tag/2.1.1"
+      "format": "zip",
+      "name": "IEAWindSystems/windIO-2.1.1.zip",
+      "url": "https://zenodo.org/records/18774325/files/IEAWindSystems/windIO-2.1.1.zip"
     }
   ],
   "state": "active",
   "tags": [],
-  "title": "IEAWindSystems/windIO",
-  "url": "https://github.com/IEAWindSystems/windIO",
+  "title": "IEAWindSystems/windIO: Cut in and cut out, TI, and multi-point coordinates",
+  "url": "https://zenodo.org/records/18774325",
   "version": "2.1.1"
 }

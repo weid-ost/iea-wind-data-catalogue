@@ -1,6 +1,10 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
       "value": "[{\"affiliation\":\"Technical University of Munich\",\"family\":\"Kainz\",\"given\":\"Samuel\",\"name\":\"Kainz, Samuel\",\"orcid\":\"0009-0003-4163-494X\"}]"
     },
@@ -21,8 +25,12 @@
       "value": "doi"
     },
     {
+      "key": "iea_task",
+      "value": "[\"task-60\"]"
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-08T14:05:05Z"
     },
     {
       "key": "license_mapped",
@@ -37,8 +45,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.15880601\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15880601\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -57,41 +69,59 @@
       "value": "dataset"
     },
     {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
       "key": "source_id",
-      "value": "10.5281/zenodo.15880602"
+      "value": "15880602"
     },
     {
       "key": "source_key",
-      "value": "2025-07-14T14:46:22Z"
+      "value": "4@10.5281/zenodo.15880602~m2"
     },
     {
       "key": "source_system",
-      "value": "datacite"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"datacite\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
-      "value": "https://zenodo.org/doi/10.5281/zenodo.15880602"
+      "value": "https://zenodo.org/records/15880602"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15880602\"]"
+      "value": "[\"https://zenodo.org/records/15880602\",\"https://zenodo.org/doi/10.5281/zenodo.15880602\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
       "value": "false"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "task-60"
+    }
+  ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-15880602",
   "notes": "Life Cyle Inventory (LCI) of the IEA Wind 740-10-MW Reference Offshore Wind Plants with irregular layout. Calculated with TUM's Design and Evaluation Toolchain with Eco-Conscious Targets (DETECT). Owner of the data: Wind Energy Institute, Technical University of Munich (TUM). Data created and shared by Samuel Kainz (samuel.kainz@tum.de) for LCA dataset creation and publication through ZHAW (Zürcher Hochschule für Angewandte Wissenschaften). Collaboration as part of IEA Wind TCP Task 60 (CYCLEWIND).",
   "owner_org": "zenodo-community",
   "private": false,
-  "resources": [],
+  "resources": [
+    {
+      "format": "xlsx",
+      "name": "LCI_IEA_740_10_MW_ROWP_irregular.xlsx",
+      "url": "https://zenodo.org/records/15880602/files/LCI_IEA_740_10_MW_ROWP_irregular.xlsx"
+    }
+  ],
   "state": "active",
   "tags": [],
   "title": "Life Cycle Inventory of the IEA Wind 740-10-MW Reference Offshore Wind Plant with irregular layout",

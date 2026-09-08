@@ -1,12 +1,16 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "restricted"
+    },
+    {
       "key": "authors",
-      "value": "[{\"affiliation\":\"NREL\",\"family\":\"M Jason Fields\",\"name\":\"M Jason Fields\",\"orcid\":\"0000-0002-8781-6138\"}]"
+      "value": "[{\"affiliation\":\"NREL\",\"name\":\"M Jason Fields\",\"orcid\":\"0000-0002-8781-6138\"}]"
     },
     {
       "key": "doi",
-      "value": "10.5281/zenodo.8145289"
+      "value": "10.5281/zenodo.8145288"
     },
     {
       "key": "first_seen",
@@ -26,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:28:59Z"
+      "value": "2026-09-08T14:05:57Z"
     },
     {
       "key": "license_mapped",
@@ -42,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -58,23 +62,27 @@
     },
     {
       "key": "resource_kind",
-      "value": "publication"
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
     },
     {
       "key": "source_id",
-      "value": "10.5281/zenodo.8145289"
+      "value": "8145289"
     },
     {
       "key": "source_key",
-      "value": "56a50f704dc5d65b"
+      "value": "9@10.5281/zenodo.8145289~m2"
     },
     {
       "key": "source_system",
-      "value": "ieawind"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"ieawind\"]"
+      "value": "[\"ieawind\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -82,7 +90,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.8145289\",\"https://iea-wind.org/task43/t43-publications/\"]"
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.8145289\",\"https://iea-wind.org/task43/t43-publications/\",\"https://zenodo.org/records/8145289\"]"
     },
     {
       "key": "withdrawn",
@@ -96,7 +104,7 @@
   ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-8145289",
-  "notes": "This presentation describes the strategic need for the wind energy industry to pursue coopetition as a core strategy for decarbonization and deployment.  It highlights several mechanisms for coopetition including open source software, open standards, joint ventures and Co-innovation.  This was presented at the Consortium for Energy and Data Science at Texas A&amp;M University on March 29, 2023. ",
+  "notes": "<p>This presentation describes the strategic need for the wind energy industry to pursue coopetition as a core strategy for decarbonization and deployment.  It highlights several mechanisms for coopetition including open source software, open standards, joint ventures and Co-innovation.  This was presented at the Consortium for Energy and Data Science at Texas A&amp;M University on March 29, 2023. </p>",
   "owner_org": "nrel",
   "private": false,
   "resources": [
@@ -128,5 +136,5 @@
     }
   ],
   "title": "zEPHYR - Coopetition in Wind Energy: A Strategic Imperative",
-  "url": "https://zenodo.org/doi/10.5281/zenodo.8145289"
+  "url": "https://zenodo.org/records/8145289"
 }

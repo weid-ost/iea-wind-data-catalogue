@@ -1,12 +1,16 @@
 {
   "extras": [
     {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Fraunhofer IWES\",\"family\":\"Menck\",\"given\":\"Oliver\",\"name\":\"Menck, Oliver\"}]"
+      "value": "[{\"affiliation\":\"Fraunhofer IWES\",\"name\":\"Oliver Menck\"}]"
     },
     {
       "key": "doi",
-      "value": "10.5281/zenodo.7753415"
+      "value": "10.5281/zenodo.7753414"
     },
     {
       "key": "first_seen",
@@ -26,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:28:59Z"
+      "value": "2026-09-08T14:05:47Z"
     },
     {
       "key": "license_mapped",
@@ -42,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -58,23 +62,27 @@
     },
     {
       "key": "resource_kind",
-      "value": "publication"
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
     },
     {
       "key": "source_id",
-      "value": "10.5281/zenodo.7753415"
+      "value": "7753415"
     },
     {
       "key": "source_key",
-      "value": "56a50f704dc5d65b"
+      "value": "6@10.5281/zenodo.7753415~m2"
     },
     {
       "key": "source_system",
-      "value": "ieawind"
+      "value": "zenodo"
     },
     {
       "key": "source_systems",
-      "value": "[\"ieawind\"]"
+      "value": "[\"ieawind\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -82,7 +90,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/record/7753415\",\"https://iea-wind.org/task43/t43-publications/\"]"
+      "value": "[\"https://zenodo.org/record/7753415\",\"https://iea-wind.org/task43/t43-publications/\",\"https://zenodo.org/records/7753415\"]"
     },
     {
       "key": "withdrawn",
@@ -96,18 +104,18 @@
   ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-7753415",
-  "notes": "This presentation reviews pitch bearing research &amp; findings related to the design guide update.",
+  "notes": "<p>This presentation reviews pitch bearing research &amp; findings related to the design guide update.</p>",
   "owner_org": "fraunhofer-iwes",
   "private": false,
   "resources": [
     {
-      "description": "Resolved landing page",
-      "name": "DOI",
-      "url": "https://zenodo.org/record/7753415"
+      "format": "pdf",
+      "name": "08 - Menck - NREL_Drivetrain_Reliability_Menck.pdf",
+      "url": "https://zenodo.org/records/7753415/files/08%20-%20Menck%20-%20NREL_Drivetrain_Reliability_Menck.pdf"
     }
   ],
   "state": "active",
   "tags": [],
   "title": "Review of Pitch Bearing Research related to the Design Guide Update",
-  "url": "https://zenodo.org/record/7753415"
+  "url": "https://zenodo.org/records/7753415"
 }

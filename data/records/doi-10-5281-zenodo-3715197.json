@@ -1,0 +1,205 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"name\":\"Sanz Rodrigo, Javier\",\"orcid\":\"0000-0003-0291-6429\"},{\"affiliation\":\"CENER\",\"name\":\"Borbón Guillén, Fernando\"},{\"affiliation\":\"CENER\",\"name\":\"Fernandes Correia, Pedro M.\"},{\"affiliation\":\"CENER\",\"name\":\"García Hevia, Bibiana\"},{\"affiliation\":\"ProPlanEn\",\"name\":\"Schlez, Wolfgang\"},{\"affiliation\":\"ProPlanEn\",\"name\":\"Schmidt, Sascha\"},{\"affiliation\":\"TU-Delft\",\"name\":\"Basu, Sukanta\"},{\"affiliation\":\"TU-Delft\",\"name\":\"Li, Bowen\"},{\"affiliation\":\"EMD\",\"name\":\"Nielsen, Per\"},{\"affiliation\":\"IFPEN\",\"name\":\"Cathelain, Marie\"},{\"affiliation\":\"EDF Renewables\",\"name\":\"Dall'Ozzo, Cédric\"},{\"affiliation\":\"Lloyd's Register\",\"name\":\"Grignon, Laure\"},{\"affiliation\":\"Lloyd's Register\",\"name\":\"Pullinger, David\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3715197"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3715197"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T14:04:49Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-03-18"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3715197\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "3715198"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.3715198~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3715198"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3715198\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-3715197",
+  "notes": "<p>This repository collects input and simulation datasets from the Offshore Wind Accelerator (OWA) Wake Modelling Challenge, whose objective is to improve confidence in wake models in the prediction of array efficiency. The data is meant to be used together with the open-source model evaluation scripts available in the following github repository: <a href=\"https://github.com/CENER-EPR/OWAbench\" rel=\"nofollow noopener\">https://github.com/CENER-EPR/OWAbench</a></p>\n\n<p>The results of the challenge are summarized in the following paper:</p>\n\n<p>Sanz Rodrigo J, Borbón Guillén F, Fernandes Correia P M, García Hevia B, Schlez W, Schmidt S, Basu S, Li B, Nielsen P, Cathelain M, Dall’Ozzo C, Grignon L, Pullinger D (2020) Validation of Meso-Wake Models for Array Efficiency Prediction Using Operational Data from Five Offshore Wind Farms. J. Phys.: Conf. Ser., under review</p>",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "Anholt_results.zip",
+      "url": "https://zenodo.org/records/3715198/files/Anholt_results.zip"
+    },
+    {
+      "format": "zip",
+      "name": "WestermostRough_inputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/WestermostRough_inputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "WestermostRough_outputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/WestermostRough_outputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "WestermostRough_results.zip",
+      "url": "https://zenodo.org/records/3715198/files/WestermostRough_results.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Rodsand2_results.zip",
+      "url": "https://zenodo.org/records/3715198/files/Rodsand2_results.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Rodsand2_outputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/Rodsand2_outputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Rodsand2_inputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/Rodsand2_inputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Ormonde_results.zip",
+      "url": "https://zenodo.org/records/3715198/files/Ormonde_results.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Ormonde_outputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/Ormonde_outputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Ormonde_inputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/Ormonde_inputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Dudgeon_results.zip",
+      "url": "https://zenodo.org/records/3715198/files/Dudgeon_results.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Anholt_inputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/Anholt_inputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Dudgeon_outputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/Dudgeon_outputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Dudgeon_inputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/Dudgeon_inputs.zip"
+    },
+    {
+      "format": "zip",
+      "name": "Anholt_outputs.zip",
+      "url": "https://zenodo.org/records/3715198/files/Anholt_outputs.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "array-efficiency"
+    },
+    {
+      "name": "mesoscale-modelling"
+    },
+    {
+      "name": "owa"
+    },
+    {
+      "name": "wake-modelling"
+    }
+  ],
+  "title": "OWA Wake Modelling Challenge Dataset",
+  "url": "https://zenodo.org/records/3715198",
+  "version": "1.0"
+}
