@@ -14,10 +14,12 @@ import Badge from './Badge.astro';
 import CitationBlock from './CitationBlock.astro';
 import EventHistory from './EventHistory.astro';
 import LinkRotNote from './LinkRotNote.astro';
+import MergedBanner from './MergedBanner.astro';
 import MetadataList from './MetadataList.astro';
 import Panel from './Panel.astro';
 import ProvenanceBadge from './ProvenanceBadge.astro';
 import RetractionFlag from './RetractionFlag.astro';
+import ResourceTypeBadge from './ResourceTypeBadge.astro';
 import SourceBadge from './SourceBadge.astro';
 import TaskChip from './TaskChip.astro';
 import WithdrawnBanner from './WithdrawnBanner.astro';
@@ -28,6 +30,7 @@ import {
   extra,
   formatDate,
   inferredFields,
+  isSuppressed,
   isWithdrawn,
   licenseTitleOf,
   localLinksOf,
@@ -35,6 +38,9 @@ import {
   relatedIdentifiersOf,
   reportIssueUrl,
   retractionOf,
+  hostsOf,
+  resourceKindOf,
+  resourceTypeOf,
   sourceLabel,
   sourceSystemsOf,
   sourceUrlsOf,
@@ -47,7 +53,8 @@ import type { EventLine } from '../lib/catalogue';
 import { deadLinksFor, readLinkCheck, type DeadLink } from '../lib/state';
 import { organization, organizationTitle, taskShort } from '../lib/registers';
 import { filterHref } from '../lib/url';
-import { kindTip, withdrawnTip, pinnedTip } from '../lib/tooltips';
+import { hostTip, kindTip, withdrawnTip, pinnedTip } from '../lib/tooltips';
+import { typeLabel } from '../lib/vocabulary';
 import { safeHtml, safeLinks } from '../safety.mjs';
 
 interface Props {
@@ -88,10 +95,17 @@ const authors = authorsOf(pkg);
 const tasks = tasksOf(pkg);
 const systems = sourceSystemsOf(pkg);
 const urls = sourceUrlsOf(pkg);
-const kind = extra(pkg, 'resource_kind');
+const kind = resourceKindOf(pkg);
+const resourceType = resourceTypeOf(pkg);
+// Where the artifact lives, as against which adapter read about it (issue #2).
+const hosts = hostsOf(pkg);
 const access = extra(pkg, 'access_status');
 const retraction = retractionOf(pkg);
 const withdrawn = isWithdrawn(pkg);
+// Merged away into another record: kept and citable, but not listed
+// (ADR-0041). The banner is how a visitor who arrives here finds the record the
+// catalogue actually lists.
+const merged = isSuppressed(pkg);
 const inferred = inferredFields(pkg);
 const related = relatedIdentifiersOf(pkg).filter((r) => r !== retraction);
 // Curator links and source resources are both strings somebody else chose, and
@@ -133,7 +147,8 @@ const pinned = boolExtra(pkg, 'pinned');
 // on their metadata rows.
 const rows = [
   { field: 'doi', label: 'DOI', value: doi, mono: true },
-  { field: 'resource_kind', label: 'Resource kind', value: kind && (RESOURCE_KIND_LABELS[kind] ?? kind) },
+  { field: 'resource_kind', label: 'Kind', value: kind && (RESOURCE_KIND_LABELS[kind] ?? kind) },
+  { field: 'resource_type', label: 'Type', value: resourceType && typeLabel(resourceType) },
   {
     field: 'published_date',
     label: 'Published',
@@ -178,6 +193,7 @@ const rows = [
   data-pagefind-body={indexable ? true : undefined}
   data-pagefind-meta={indexable ? `doi:${doi ?? ''}` : undefined}
 >
+  {merged && <MergedBanner links={links} />}
   {withdrawn && (
     <WithdrawnBanner withdrawnAt={extra(pkg, 'withdrawn_at')} sourceUrl={extra(pkg, 'source_url')} />
   )}
@@ -208,11 +224,18 @@ const rows = [
   )}
 
   <div class="row record__badges">
+    {/* One Pagefind filter per element, so the coarse and the specific value
+        are separately filterable and a reader can narrow from "reports" to
+        "IEA Wind Recommended Practices" without losing the wider net. */}
     {kind && (
       <span data-pagefind-filter={`kind:${kind}`}>
-        <Badge icon="▤" href={filterHref('kind', kind)} tip={kindTip(kind)}>
-          {RESOURCE_KIND_LABELS[kind] ?? kind}
-        </Badge>
+        {resourceType ? (
+          <span data-pagefind-filter={`type:${resourceType}`}>
+            <ResourceTypeBadge kind={kind} type={resourceType} showKind />
+          </span>
+        ) : (
+          <ResourceTypeBadge kind={kind} showKind />
+        )}
       </span>
     )}
     <AvailabilityBadge status={access} embargoDate={extra(pkg, 'embargo_date')} />
@@ -347,7 +370,31 @@ const rows = [
   )}
 
   <section aria-labelledby={`${uid}-source-heading`}>
-    <h2 id={`${uid}-source-heading`}>Sources</h2>
+    <h2 id={`${uid}-source-heading`}>Where this lives, and where we read it</h2>
+
+    {hosts.length > 0 && (
+      <>
+        <p class="secondary">
+          <strong>Published at.</strong> Where the artifact itself is — this is
+          the link to follow for the files.
+        </p>
+        <ul class="record__hosts">
+          {hosts.map((host) => (
+            <li>
+              <a href={host.url} rel="noopener external">{host.label}</a>
+              <span class="record__host-url secondary">{host.url}</span>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    <p class="secondary">
+      <strong>Harvested from.</strong> The system whose description of this
+      artifact the catalogue read — not necessarily where it is published. A
+      deposit found by reading a Task publication list on iea-wind.org, but
+      hosted on Zenodo, shows both.
+    </p>
     <p class="secondary">
       This catalogue reflects what its sources say, verbatim as of the last
       scrape. If something here is wrong, it is wrong at the source — and fixing
@@ -426,5 +473,27 @@ const rows = [
   .record__related {
     list-style: none;
     padding-inline-start: 0;
+  }
+
+  /* "Published at": the destination named, then the URL itself, quietly. A
+     reader deciding whether to follow a link wants to see where it goes. */
+  .record__hosts {
+    margin: var(--space-2) 0 var(--space-4);
+    padding: 0;
+    list-style: none;
+  }
+
+  .record__hosts li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2);
+    padding-block: var(--space-1);
+  }
+
+  .record__host-url {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-caption);
+    overflow-wrap: anywhere;
   }
 </style>

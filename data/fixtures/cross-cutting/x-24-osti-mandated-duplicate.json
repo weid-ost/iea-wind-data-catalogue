@@ -179,6 +179,10 @@
           "value": "publication"
         },
         {
+          "key": "resource_type",
+          "value": "publication"
+        },
+        {
           "key": "source_id",
           "value": "10.1088/1742-6596/2265/2/022001"
         },
@@ -211,13 +215,13 @@
       "license_id": "cc-by",
       "name": "doi-10-1088-1742-6596-2265-2-022001",
       "notes": "",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Validation of a nacelle-mounted lidar for power performance testing",
-      "url": "https://doi.org/10.1088/1742-6596/2265/2/022001",
-      "owner_org": "unattributed"
+      "url": "https://doi.org/10.1088/1742-6596/2265/2/022001"
     },
     "osti-1854723": {
       "extras": [
@@ -278,6 +282,10 @@
           "value": "publication"
         },
         {
+          "key": "resource_type",
+          "value": "publication"
+        },
+        {
           "key": "source_id",
           "value": "1854723"
         },
@@ -310,13 +318,13 @@
       "license_id": "cc-by",
       "name": "osti-1854723",
       "notes": "",
+      "owner_org": "nrel",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Validation of a Nacelle-Mounted Lidar for Power Performance Testing",
-      "url": "https://www.osti.gov/biblio/1854723",
-      "owner_org": "nrel"
+      "url": "https://www.osti.gov/biblio/1854723"
     }
   },
   "expected_notices": [],
@@ -411,6 +419,10 @@
           "value": "publication"
         },
         {
+          "key": "resource_type",
+          "value": "publication"
+        },
+        {
           "key": "source_id",
           "value": "10.1088/1742-6596/2265/2/022001"
         },
@@ -443,13 +455,13 @@
       "license_id": "cc-by",
       "name": "doi-10-1088-1742-6596-2265-2-022001",
       "notes": "",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Validation of a nacelle-mounted lidar for power performance testing",
-      "url": "https://doi.org/10.1088/1742-6596/2265/2/022001",
-      "owner_org": "unattributed"
+      "url": "https://doi.org/10.1088/1742-6596/2265/2/022001"
     },
     "osti-1854723": {
       "extras": [
@@ -514,6 +526,10 @@
           "value": "publication"
         },
         {
+          "key": "resource_type",
+          "value": "publication"
+        },
+        {
           "key": "source_id",
           "value": "1854723"
         },
@@ -550,13 +566,13 @@
       "license_id": "cc-by",
       "name": "osti-1854723",
       "notes": "",
+      "owner_org": "nrel",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Validation of a Nacelle-Mounted Lidar for Power Performance Testing",
-      "url": "https://www.osti.gov/biblio/1854723",
-      "owner_org": "nrel"
+      "url": "https://www.osti.gov/biblio/1854723"
     }
   }
 }

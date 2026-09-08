@@ -71,6 +71,9 @@ from harvest.urls import safe_url, safe_urls
 __all__ = [
     "SAMENESS_RELATIONS",
     "PREPRINT_RELATIONS",
+    "VERSION_OF_RELATIONS",
+    "HAS_VERSION_RELATIONS",
+    "VERSION_RELATIONS",
     "SUPERSEDED_BY_RELATIONS",
     "SUPERSEDES_RELATIONS",
     "DEFAULT_FUZZY_THRESHOLD",
@@ -117,6 +120,29 @@ SUPERSEDES_RELATIONS = frozenset({"haspreprint", "isnewversionof", "obsoletes"})
 
 #: Either direction of a preprint/version pair.
 PREPRINT_RELATIONS = SUPERSEDED_BY_RELATIONS | SUPERSEDES_RELATIONS
+
+#: "I am one deposited version of a thing whose concept DOI is X."
+#:
+#: Zenodo mints a DOI for every version AND a *concept* DOI that always resolves
+#: to the latest — and the catalogue's identity is the concept DOI (``zen-02``).
+#: But DataCite's index carries the **version** DOIs, so a record DataCite found
+#: first was listed under a version DOI while Zenodo listed the same artifact
+#: under its concept: two records, one title, two DOIs. "Perspectives on Wind
+#: Lidar Digitalisation" was the reported case, and there were 24 such pairs.
+#:
+#: This is not a fuzzy guess. DataCite *states* ``IsVersionOf``, so the pair
+#: joins automatically and the concept DOI — the one worth citing — is the
+#: primary. The version DOI is suppressed, not deleted: still at its own URL,
+#: still citable, linked from the primary, and the merge annotation records what
+#: was merged and on what evidence, so it can always be shown or undone
+#: (ADR-0041, fixture ``x-12``).
+VERSION_OF_RELATIONS = frozenset({"isversionof"})
+
+#: The inverse, declared from the concept's side.
+HAS_VERSION_RELATIONS = frozenset({"hasversion"})
+
+#: Either direction of a concept/version pair.
+VERSION_RELATIONS = VERSION_OF_RELATIONS | HAS_VERSION_RELATIONS
 
 #: ``difflib`` ratio over normalised titles. 0.90 keeps "…, 2021" vs "…, 2022"
 #: apart while tolerating punctuation and subtitle drift.
@@ -346,13 +372,40 @@ def _relation_candidates(
     for key, record in sorted(records.items()):
         for item in _related(record):
             relation = _relation(item)
-            if relation not in SAMENESS_RELATIONS and relation not in PREPRINT_RELATIONS:
+            if (
+                relation not in SAMENESS_RELATIONS
+                and relation not in PREPRINT_RELATIONS
+                and relation not in VERSION_RELATIONS
+            ):
                 continue
             for target in sorted(_identifier_targets(item)):
                 other = alias.get(target)
                 if not other or other == key:
                     continue
                 left, right = records[key], records[other]
+                if relation in VERSION_RELATIONS:
+                    # The concept DOI survives, whichever side declared the
+                    # relation: it is the citable "always the latest version"
+                    # identifier, and listing a version DOI instead pins the
+                    # catalogue to a snapshot that a new release silently ages.
+                    primary, secondary = (
+                        (other, key) if relation in VERSION_OF_RELATIONS else (key, other)
+                    )
+                    candidates.append(
+                        MergeCandidate(
+                            primary=primary,
+                            secondary=secondary,
+                            kind="version-pair",
+                            confidence=0.99,
+                            evidence=(
+                                f"{key} declares {item.get('relation')} "
+                                f"{item.get('identifier')}; the concept DOI is listed and the "
+                                "version DOI is linked from it"
+                            ),
+                            automatic=True,
+                        )
+                    )
+                    continue
                 if relation in PREPRINT_RELATIONS:
                     # The one declaring "I am the preprint of X" loses to X.
                     primary, secondary = (

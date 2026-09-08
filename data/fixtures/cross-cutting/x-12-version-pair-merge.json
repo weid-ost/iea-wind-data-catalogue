@@ -1,0 +1,606 @@
+{
+  "fixture_id": "x-12-version-pair-merge",
+  "fixture_kind": "record",
+  "case": "One artifact, two DOIs: DataCite indexes the Zenodo version DOI while Zenodo lists the concept — an automatic merge on the stated IsVersionOf, concept primary, version retained and suppressed",
+  "note": "One artifact, two DOIs — the case an IEA Wind reader reported (\"a record can have multiple DOIs\"), seen on 'Perspectives on Wind Lidar Digitalisation'. Zenodo mints a DOI for every deposited version AND a concept DOI that always resolves to the latest; the catalogue's identity is the concept DOI (zen-02). But DataCite indexes the VERSION DOIs, so an artifact Zenodo listed under its concept and DataCite found under a version arrived as two identities with one title, and both were listed. There were 24 such pairs. This is not a fuzzy title match: DataCite states IsVersionOf, so the join is evidence and the merge is automatic. The concept DOI is the primary because it is the identifier worth citing — listing a version DOI pins the catalogue to a snapshot that the next release silently ages. The version record is suppressed, NOT deleted: its page and URL keep resolving so an existing citation to it still works, it is linked from the primary and links back, and the merge annotation records the evidence in the log forever, so it can be shown or undone.",
+  "raw": "raw/x-12-version-pair-merge.json",
+  "identity_keys": [
+    "10.5281/zenodo.9000021",
+    "10.5281/zenodo.9000022"
+  ],
+  "expected_record_names": [
+    "doi-10-5281-zenodo-9000021",
+    "doi-10-5281-zenodo-9000022"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Steudel, D.\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.9000021"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-09-01T06:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.9000021"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-52\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-09-01T06:00:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2026-03-11"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "related_identifiers",
+        "value": "[{\"identifier\":\"10.5281/zenodo.9000022\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+      },
+      {
+        "key": "resource_kind",
+        "value": "other"
+      },
+      {
+        "key": "resource_type",
+        "value": "presentation"
+      },
+      {
+        "key": "source_id",
+        "value": "9000022"
+      },
+      {
+        "key": "source_key",
+        "value": "2@10.5281/zenodo.9000022~m2"
+      },
+      {
+        "key": "source_system",
+        "value": "zenodo"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/9000022"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/9000022\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-52"
+      }
+    ],
+    "license_id": "cc-by",
+    "name": "doi-10-5281-zenodo-9000021",
+    "notes": "",
+    "owner_org": "zenodo-community",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Perspectives on wind lidar digitalisation",
+    "url": "https://zenodo.org/records/9000022"
+  },
+  "expected_dedupe": {
+    "merges": [
+      {
+        "primary": "10.5281/zenodo.9000021",
+        "secondary": "10.5281/zenodo.9000022",
+        "kind": "version-pair",
+        "confidence": 0.99,
+        "evidence": "10.5281/zenodo.9000021 declares HasVersion 10.5281/zenodo.9000022; the concept DOI is listed and the version DOI is linked from it",
+        "automatic": true
+      }
+    ],
+    "proposals": []
+  },
+  "expected_applied_merges": [
+    {
+      "primary": "10.5281/zenodo.9000021",
+      "secondary": "10.5281/zenodo.9000022",
+      "kind": "version-pair",
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.9000021 declares HasVersion 10.5281/zenodo.9000022; the concept DOI is listed and the version DOI is linked from it",
+      "automatic": true
+    }
+  ],
+  "expected_records": {
+    "doi-10-5281-zenodo-9000021": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Steudel, D.\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.9000021"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-09-01T06:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.9000021"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-52\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-09-01T06:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2026-03-11"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "related_identifiers",
+          "value": "[{\"identifier\":\"10.5281/zenodo.9000022\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+        },
+        {
+          "key": "resource_kind",
+          "value": "other"
+        },
+        {
+          "key": "resource_type",
+          "value": "presentation"
+        },
+        {
+          "key": "source_id",
+          "value": "9000022"
+        },
+        {
+          "key": "source_key",
+          "value": "2@10.5281/zenodo.9000022~m2"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/9000022"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/9000022\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-52"
+        }
+      ],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-9000021",
+      "notes": "",
+      "owner_org": "zenodo-community",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Perspectives on wind lidar digitalisation",
+      "url": "https://zenodo.org/records/9000022"
+    },
+    "doi-10-5281-zenodo-9000022": {
+      "extras": [
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Steudel, D.\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.9000022"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-09-02T06:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.9000022"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-09-02T06:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2026-03-11"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "related_identifiers",
+          "value": "[{\"identifier\":\"10.5281/zenodo.9000021\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+        },
+        {
+          "key": "resource_kind",
+          "value": "other"
+        },
+        {
+          "key": "resource_type",
+          "value": "presentation"
+        },
+        {
+          "key": "source_id",
+          "value": "10.5281/zenodo.9000022"
+        },
+        {
+          "key": "source_key",
+          "value": "2026-09-02T05:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "datacite"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"datacite\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/doi/10.5281/zenodo.9000022"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/doi/10.5281/zenodo.9000022\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-9000022",
+      "notes": "",
+      "owner_org": "zenodo-community",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Perspectives on wind lidar digitalisation",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.9000022"
+    }
+  },
+  "expected_records_after_merge": {
+    "doi-10-5281-zenodo-9000021": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Steudel, D.\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.9000021"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-09-01T06:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.9000021"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-52\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-09-01T06:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "local_links",
+          "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.9000022\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.9000022\"}]"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2026-03-11"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "related_identifiers",
+          "value": "[{\"identifier\":\"10.5281/zenodo.9000022\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+        },
+        {
+          "key": "resource_kind",
+          "value": "other"
+        },
+        {
+          "key": "resource_type",
+          "value": "presentation"
+        },
+        {
+          "key": "source_id",
+          "value": "9000022"
+        },
+        {
+          "key": "source_key",
+          "value": "2@10.5281/zenodo.9000022~m2"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/9000022"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/9000022\",\"https://zenodo.org/doi/10.5281/zenodo.9000022\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-52"
+        }
+      ],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-9000021",
+      "notes": "",
+      "owner_org": "zenodo-community",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Perspectives on wind lidar digitalisation",
+      "url": "https://zenodo.org/records/9000022"
+    },
+    "doi-10-5281-zenodo-9000022": {
+      "extras": [
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Steudel, D.\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.9000022"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-09-02T06:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.9000022"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-09-02T06:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "local_links",
+          "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.9000021\",\"url\":\"https://zenodo.org/records/9000022\"}]"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2026-03-11"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "related_identifiers",
+          "value": "[{\"identifier\":\"10.5281/zenodo.9000021\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+        },
+        {
+          "key": "resource_kind",
+          "value": "other"
+        },
+        {
+          "key": "resource_type",
+          "value": "presentation"
+        },
+        {
+          "key": "source_id",
+          "value": "10.5281/zenodo.9000022"
+        },
+        {
+          "key": "source_key",
+          "value": "2026-09-02T05:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "datacite"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"datacite\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/doi/10.5281/zenodo.9000022"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/doi/10.5281/zenodo.9000022\"]"
+        },
+        {
+          "key": "suppressed",
+          "value": "true"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-9000022",
+      "notes": "",
+      "owner_org": "zenodo-community",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Perspectives on wind lidar digitalisation",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.9000022"
+    }
+  },
+  "expected_notices": []
+}

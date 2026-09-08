@@ -181,6 +181,10 @@
           "value": "dataset"
         },
         {
+          "key": "resource_type",
+          "value": "dataset"
+        },
+        {
           "key": "source_id",
           "value": "5000006"
         },
@@ -213,6 +217,7 @@
       "license_id": "cc-by",
       "name": "doi-10-5281-zenodo-5000005",
       "notes": "<p>Strain-gauge load measurements from three turbines, 2019-2021.</p>",
+      "owner_org": "zenodo-community",
       "private": false,
       "resources": [],
       "state": "active",
@@ -222,8 +227,7 @@
         }
       ],
       "title": "Offshore turbine load measurements, Alpha Ventus",
-      "url": "https://zenodo.org/records/5000006",
-      "owner_org": "zenodo-community"
+      "url": "https://zenodo.org/records/5000006"
     }
   },
   "expected_notices": []

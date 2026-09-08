@@ -11,7 +11,7 @@
  * The fallback is all-or-nothing: one real record and the fixtures disappear.
  */
 import { getCollection } from 'astro:content';
-import type { CkanPackage } from './record';
+import { isSuppressed, type CkanPackage } from './record';
 
 export interface CatalogueEntry {
   pkg: CkanPackage;
@@ -37,8 +37,15 @@ export interface EventLine {
 
 let cache: CatalogueEntry[] | undefined;
 
-/** Every record the site renders, sorted by publication date, newest first. */
-export async function catalogue(): Promise<CatalogueEntry[]> {
+/**
+ * Every record that exists, listed or not, sorted newest first.
+ *
+ * Use this to *build* pages. A record merged away into another still has a
+ * page, a URL and a citation — it is retained, never deleted (ADR-0027,
+ * ADR-0041) — so the page generator, the sitemap and `byName` all work from
+ * here. Use `catalogue()` for anything that *lists* records.
+ */
+export async function allEntries(): Promise<CatalogueEntry[]> {
   if (cache) return cache;
 
   const real = await getCollection('records');
@@ -52,6 +59,25 @@ export async function catalogue(): Promise<CatalogueEntry[]> {
     cache = (await fixtures()).map((entry) => ({ ...entry, origin: 'fixtures' as const }));
   }
   return (cache = cache.sort(byRecency));
+}
+
+/**
+ * The records the catalogue *lists*, sorted by publication date, newest first.
+ *
+ * Suppressed records are excluded. A suppressed record is one the reconciler
+ * merged into another — a Zenodo version DOI folded into its concept DOI, a
+ * GitHub repository into the Zenodo deposit that releases it. Listing both put
+ * the same artifact in the results twice under two DOIs, which is what an IEA
+ * Wind board member reported seeing. The merge always intended this ("retained,
+ * citable, and out of the listings" — harvest/dedupe.py); the site was the half
+ * that never honoured it.
+ *
+ * "Out of the listings" and "deleted" are different things, and the difference
+ * is the whole point: the record keeps its page, its URL and its citation, and
+ * that page says what it was merged into and why.
+ */
+export async function catalogue(): Promise<CatalogueEntry[]> {
+  return (await allEntries()).filter((entry) => !isSuppressed(entry.pkg));
 }
 
 /** The gallery's own data: always the fixtures, whether or not records exist. */
@@ -75,7 +101,7 @@ export async function usingFixtures(): Promise<boolean> {
 }
 
 export async function byName(name: string): Promise<CatalogueEntry | undefined> {
-  return (await catalogue()).find((entry) => entry.pkg.name === name);
+  return (await allEntries()).find((entry) => entry.pkg.name === name);
 }
 
 function extraValue(entry: CatalogueEntry, key: string): string {

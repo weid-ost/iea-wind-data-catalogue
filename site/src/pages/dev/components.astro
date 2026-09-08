@@ -23,7 +23,9 @@ import LinkRotNote from '../../components/LinkRotNote.astro';
 import MetadataList from '../../components/MetadataList.astro';
 import Pagination from '../../components/Pagination.astro';
 import Panel from '../../components/Panel.astro';
+import MergedBanner from '../../components/MergedBanner.astro';
 import ProvenanceBadge from '../../components/ProvenanceBadge.astro';
+import ResourceTypeBadge from '../../components/ResourceTypeBadge.astro';
 import RecordCard from '../../components/RecordCard.astro';
 import RecordDetail from '../../components/RecordDetail.astro';
 import RetractionFlag from '../../components/RetractionFlag.astro';
@@ -39,6 +41,7 @@ import { catalogue, fixtures } from '../../lib/catalogue';
 import { facetsFor } from '../../lib/facets';
 import { freshness, uiFixture, type LastRun, type LinkCheck } from '../../lib/state';
 import { provenanceOf, curatorNotesOf, retractionOf, extra } from '../../lib/record';
+import { resourceKinds, typesOfKind } from '../../lib/vocabulary';
 
 // The gallery renders real records from `data/records/` when they exist, plus the
 // pathological fixtures always. Storybook stories use synthetic args; this
@@ -63,6 +66,9 @@ const rotLinks = (rot.link_check.dead_by_record?.[rotSlug] ?? []).map(
 const llm = pick('rep-05-llm-inferred');
 const llmProvenance = provenanceOf(llm.pkg);
 const curated = pick('rep-07-curator-note');
+// The whole vocabulary, straight from the register, so a value added to
+// vocabulary.yaml appears in the gallery without anyone remembering to add it.
+const vocabularyKinds = resourceKinds.map((kind) => ({ kind, types: typesOfKind(kind.name) }));
 ---
 
 <Base
@@ -206,6 +212,36 @@ const curated = pick('rep-07-curator-note');
       </div>
 
       <div class="case">
+        <h3>Resource type badge — the kind, and the specific type under it</h3>
+        <p class="secondary">
+          Every value in <code>vocabulary.yaml</code>, in register order. Both
+          chips filter, and each tooltip carries the definition the About page
+          prints for that term — the same sentence, from the same file
+          (ADR-0040). Hover or tab to one to read it.
+        </p>
+        <div class="stack">
+          {vocabularyKinds.map(({ kind, types }) => (
+            <div class="row">
+              <ResourceTypeBadge kind={kind.name} showKind />
+              {types.map((type) => (
+                <ResourceTypeBadge kind={kind.name} type={type.name} />
+              ))}
+            </div>
+          ))}
+        </div>
+        <p class="secondary">
+          On a record page the pair renders together, so a reader can widen from
+          the specific value to its parent in one click:
+        </p>
+        <div class="row">
+          <ResourceTypeBadge type="recommended-practice" showKind />
+          <ResourceTypeBadge type="research-software" showKind />
+          <ResourceTypeBadge type="presentation" showKind />
+          <ResourceTypeBadge type="journal-article" showKind />
+        </div>
+      </div>
+
+      <div class="case">
         <h3>Source badge</h3>
         <div class="row">
           <SourceBadge system="zenodo" url="https://zenodo.org/records/1234567" reportUrl="https://zenodo.org/records/1234567" />
@@ -258,6 +294,23 @@ const curated = pick('rep-07-curator-note');
           and the record is never deleted — the page says what was tried, when,
           and what came back.
         </p>
+      </div>
+
+      <div class="case">
+        <h3>Merged banner — a version DOI listed under its concept DOI</h3>
+        <p class="secondary">
+          What a visitor sees on a record the reconciler merged away. The page
+          and the URL survive so an existing citation still resolves; only the
+          listing loses it (ADR-0041).
+        </p>
+        <MergedBanner
+          links={[
+            {
+              url: 'https://zenodo.org/doi/10.5281/zenodo.22078127',
+              label: 'Catalogued as 10.5281/zenodo.22078127',
+            },
+          ]}
+        />
       </div>
 
       <div class="case">

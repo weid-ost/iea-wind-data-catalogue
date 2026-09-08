@@ -19,6 +19,7 @@ import pytest
 from harvest import config
 from harvest.adapters.base import SourceConfig, SourceUnreachable, run_adapter
 from harvest.adapters.zenodo import (
+    MAPPING_VERSION,
     ZENODO_API,
     ZenodoAdapter,
     access_status_for,
@@ -83,6 +84,10 @@ def observation(fixture: dict[str, Any]) -> RawObservation:
         fetched_at="2026-08-31T00:00:00Z",
         url=(payload.get("links") or {}).get("self_html"),
         payload=payload,
+        # Only the backfill fixture sets one (zen-13): an enrichment is mapped
+        # onto the identity the catalogue already holds, not the one this
+        # payload's concept DOI would produce.
+        identity_override=fixture.get("identity_override"),
     )
 
 
@@ -148,10 +153,23 @@ def listing(*payloads: dict[str, Any]) -> dict[str, Any]:
 
 class TestTheFixtureSet:
     def test_every_catalogue_row_has_a_fixture(self) -> None:
-        """``data/fixtures/fixtures-catalogue.md`` lists zen-01 .. zen-12. All of them."""
+        """The catalogue and the directory agree, in both directions.
+
+        Numbering is contiguous on purpose: a gap means a fixture was deleted
+        rather than retired, and every row in
+        ``data/fixtures/fixtures-catalogue.md`` must have a file behind it.
+        """
+        import re
+
         stems = {path.stem for path in FIXTURES.glob("zen-*.json")}
         prefixes = {stem.split("-")[0] + "-" + stem.split("-")[1] for stem in stems}
-        assert prefixes == {f"zen-{n:02d}" for n in range(1, 13)}
+        assert prefixes == {f"zen-{n:02d}" for n in range(1, len(prefixes) + 1)}
+
+        catalogue = (config.repo_root() / "data" / "fixtures" / "fixtures-catalogue.md").read_text(
+            encoding="utf-8"
+        )
+        listed = set(re.findall(r"`(zen-\d\d)[a-z0-9-]*`", catalogue))
+        assert listed == prefixes
 
     def test_every_fixture_has_its_verbatim_payload(self) -> None:
         for fixture in ALL + record_fixtures():
@@ -265,8 +283,22 @@ class TestSourceKey:
     def test_it_pairs_the_revision_with_the_version_doi(self) -> None:
         payload = raw_payload(fixture_by_id("zen-02-concept-vs-version"))
         assert ZenodoAdapter.source_key_for(payload) == (
-            f"{payload['revision']}@{payload['doi']}"
+            f"{payload['revision']}@{payload['doi']}~m{MAPPING_VERSION}"
         )
+
+    def test_the_key_carries_the_mapping_version(self) -> None:
+        """ADR-0041: a mapping that preserves more must re-reach the corpus.
+
+        Change detection compares source keys, so an adapter that starts
+        preserving a new field would only ever apply it to records harvested
+        after the change — the existing corpus keeps whatever the old mapping
+        stored, for as long as upstream sits still. Folding the mapping version
+        into the key costs exactly one re-scrape per record and closes that gap.
+        """
+        payload = raw_payload(fixture_by_id("zen-02-concept-vs-version"))
+        key = ZenodoAdapter.source_key_for(payload)
+        assert key.endswith(f"~m{MAPPING_VERSION}")
+        assert ZenodoAdapter.source_key_for(payload) == key  # and it is stable
 
     def test_a_new_version_moves_the_key_even_when_the_revision_does_not(self) -> None:
         """The reason the version DOI is in the key at all.
@@ -758,6 +790,100 @@ class TestTombstone:
 # ---------------------------------------------------------------------------
 # harvest(): the network side, through a fake client
 # ---------------------------------------------------------------------------
+
+
+class TestDoiBackfill:
+    """The Zenodo records another source found first (zen-13, ADR-0041).
+
+    DataCite's copy of a Zenodo deposit does not carry access conditions, and
+    the DataCite adapter will not infer them from a licence — so these records
+    sat at "Access unknown" while Zenodo's own API said ``open``. The backfill
+    asks Zenodo directly, one GET per DOI.
+    """
+
+    fixture_id = "zen-13-doi-backfill"
+
+    def test_the_concept_doi_would_have_minted_a_second_record(self) -> None:
+        """Which is the whole reason ``identity_override`` exists.
+
+        Zenodo's identity is the concept DOI (zen-02), but DataCite indexes
+        version DOIs, so the catalogue is already listing this artifact under a
+        version DOI. Re-keying the enrichment to the concept would leave two
+        records for one artifact instead of enriching the one that exists.
+        """
+        fixture = fixture_by_id(self.fixture_id)
+        payload = raw_payload(fixture)
+        assert payload["conceptdoi"] != fixture["identity_override"]
+        assert fixture["identity_key"] == fixture["identity_override"]
+
+    def test_it_supplies_the_access_status_datacite_lacks(self) -> None:
+        fixture = fixture_by_id(self.fixture_id)
+        mapped = configured_adapter().map(observation(fixture))
+        assert mapped.source.access_status == "open"
+
+    def test_it_preserves_the_resource_type_datacite_flattens(self) -> None:
+        """DataCite's copy of this record says only ``resourceTypeGeneral: Text``."""
+        fixture = fixture_by_id(self.fixture_id)
+        mapped = configured_adapter().map(observation(fixture))
+        assert mapped.source.extra["zenodo_resource_type"] == {
+            "type": "publication",
+            "subtype": "deliverable",
+            "title": "Project deliverable",
+        }
+
+    def test_it_derives_the_specific_type_from_that(self) -> None:
+        from harvest.resource_types import derive
+
+        fixture = fixture_by_id(self.fixture_id)
+        mapped = configured_adapter().map(observation(fixture))
+        effective = mapped.source.model_dump(mode="json", exclude_none=True)
+        assert derive(effective, ["zenodo"]) == ("report", "project-deliverable")
+
+    def test_the_queue_only_holds_identities_zenodo_has_never_scraped(
+        self, events_dir: Path
+    ) -> None:
+        """So it empties as it is worked, and no record is fetched twice."""
+        from harvest.events import record_scrape
+
+        adapter = configured_adapter()
+        record_scrape(
+            identity_key="10.5281/zenodo.21619015", source_system="datacite",
+            source_id="10.5281/zenodo.21619015", source_key="k",
+            source={"doi": "10.5281/zenodo.21619015", "title": "x"},
+            provenance={}, events_dir=events_dir, observed_at="2026-09-01T00:00:00Z",
+        )
+        assert adapter.zenodo_dois_to_backfill(events_dir) == [
+            ("10.5281/zenodo.21619015", "21619015")
+        ]
+
+        record_scrape(
+            identity_key="10.5281/zenodo.21619015", source_system="zenodo",
+            source_id="21619015", source_key="4@10.5281/zenodo.21619015~m2",
+            source={"doi": "10.5281/zenodo.21619014", "title": "x"},
+            provenance={}, events_dir=events_dir, observed_at="2026-09-02T00:00:00Z",
+        )
+        assert adapter.zenodo_dois_to_backfill(events_dir) == []
+
+    def test_a_non_zenodo_doi_is_never_queued(self, events_dir: Path) -> None:
+        from harvest.events import record_scrape
+
+        record_scrape(
+            identity_key="10.5194/wes-9-101-2024", source_system="crossref",
+            source_id="10.5194/wes-9-101-2024", source_key="k",
+            source={"doi": "10.5194/wes-9-101-2024", "title": "x"},
+            provenance={}, events_dir=events_dir, observed_at="2026-09-01T00:00:00Z",
+        )
+        assert configured_adapter().zenodo_dois_to_backfill(events_dir) == []
+
+    def test_it_does_not_read_the_event_log_unless_told_where_it_is(self) -> None:
+        """`events_dir` is None for a directly-constructed adapter, and a
+        backfill that reached for the default would read the live repository
+        from inside a unit test."""
+        adapter = configured_adapter(FakeClient(pages={"communities=": listing()}))
+        assert adapter.events_dir is None
+        list(adapter.harvest(max_records=5))
+        assert all("/records/" not in url or "communities=" in url
+                   for url in adapter.client.calls)
 
 
 class TestHarvest:

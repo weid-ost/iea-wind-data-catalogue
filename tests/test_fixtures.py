@@ -337,9 +337,12 @@ class TestZen01:
         assert slug_for_identity(fixture["identity_key"]) == fixture["expected_slug"]
 
     def test_source_key_is_the_revision(self) -> None:
+        """…plus the mapping version the change token now carries (ADR-0041)."""
+        from harvest.adapters.zenodo import MAPPING_VERSION
+
         fixture = load(FIXTURES / "zenodo" / "zen-01-canonical.json")
         raw = load(FIXTURES / "zenodo" / "raw" / "zen-01-canonical.json")
-        assert fixture["source_key"] == str(raw["revision"])
+        assert fixture["source_key"] == f"{raw['revision']}~m{MAPPING_VERSION}"
 
 
 class TestX08:

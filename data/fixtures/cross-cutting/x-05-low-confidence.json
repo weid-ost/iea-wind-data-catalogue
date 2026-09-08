@@ -132,10 +132,14 @@
         },
         {
           "key": "provenance",
-          "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"confidence\":0.38,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.42,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+          "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"confidence\":0.38,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"resource_type\":{\"confidence\":0.38,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.42,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
         },
         {
           "key": "resource_kind",
+          "value": "report"
+        },
+        {
+          "key": "resource_type",
           "value": "report"
         },
         {

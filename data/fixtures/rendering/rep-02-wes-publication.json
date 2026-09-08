@@ -87,6 +87,10 @@
         "value": "publication"
       },
       {
+        "key": "resource_type",
+        "value": "journal-article"
+      },
+      {
         "key": "source_id",
         "value": "10.5072/example-wes-90000008"
       },

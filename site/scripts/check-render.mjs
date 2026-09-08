@@ -13,7 +13,7 @@
 //      forgets to call it, so `dist/` is checked for what must never appear:
 //      a JSON-LD block that does not parse, a `javascript:` href, a script tag
 //      inside a record description. Plus the promises ADR-0023 makes about the
-//      output — six facets (ADR-0023 §3), every dataset typed `Dataset`, no
+//      output — the facets (ADR-0023 §3, ADR-0040), every dataset typed `Dataset`, no
 //      invented DCAT licence, no download list on a withdrawn record.
 //
 // Findings: scrape-01, site-01, site-02, site-03, product-e2e-02/site-04,
@@ -185,10 +185,11 @@ if (!existsSync(catalogPath)) {
   }
 }
 
-// B.4 — the six facets ADR-0023 §3 names, all of them, in the built HTML. The
-// catalogue merged search and browse into the index (`/`), so the filter
-// sidebar — and therefore the facets — now lives there.
-const EXPECTED_FACETS = ['task', 'kind', 'year', 'licence', 'source', 'institution'];
+// B.4 — the six facets ADR-0023 §3 names, plus `type`, the specific resource
+// type ADR-0040 added; all of them, in the built HTML. The catalogue merged
+// search and browse into the index (`/`), so the filter sidebar — and therefore
+// the facets — now lives there.
+const EXPECTED_FACETS = ['task', 'kind', 'type', 'year', 'licence', 'source', 'institution'];
 const cataloguePage = join(dist, 'index.html');
 if (!existsSync(cataloguePage)) {
   fail('dist/index.html is missing');
@@ -200,7 +201,8 @@ if (!existsSync(cataloguePage)) {
   if (missing.length) {
     fail(
       `/ renders ${rendered.size} facets, missing ${missing.join(', ')}. ` +
-        'ADR-0023 §3 names task, resource kind, year, licence, source system and institution.'
+        'ADR-0023 §3 names task, resource kind, year, licence, source system and ' +
+        'institution; ADR-0040 adds the specific type.'
     );
   }
 }
@@ -303,5 +305,6 @@ if (failures.length) {
 }
 console.log(
   `check-render: OK — ${jsonLdBlocks} JSON-LD block(s) parse and cannot break out, ` +
-    `${datasetsChecked} dataset(s) typed Dataset, six facets rendered, no unlinkable href`
+    `${datasetsChecked} dataset(s) typed Dataset, ${EXPECTED_FACETS.length} facets rendered, ` +
+    'no unlinkable href'
 );

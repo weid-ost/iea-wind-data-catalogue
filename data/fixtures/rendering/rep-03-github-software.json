@@ -86,6 +86,10 @@
         "value": "software"
       },
       {
+        "key": "resource_type",
+        "value": "research-software"
+      },
+      {
         "key": "source_id",
         "value": "example-org/example-wra-data-standard"
       },

@@ -1,0 +1,86 @@
+{
+  "note": "The bug this fixture exists to stop coming back. `extra` is a BAG of fields, and each source fills it with keys only that source has. Composing several systems by wholesale replacement meant the highest-precedence system's bag deleted every other system's — so a record scraped by both DataCite (precedence 10) and Zenodo (30) kept `datacite_types` and silently lost `zenodo_resource_type`, which is the most specific classification signal the catalogue has: Zenodo states a type AND a subtype where DataCite's copy of the very same record flattens both to \"Text\". The consequence was visible on the site: a project deliverable filed as a bare \"Publication\", and 54 records in \"Other > Other\" that were really presentations, posters and meeting minutes. Order is deliberate — Zenodo first, DataCite second — because the dangerous direction is the higher-precedence source arriving last. Note what precedence still decides: `title` is DataCite's, because DataCite outranks Zenodo on scalars. Only the bag merges.",
+  "events": [
+    {
+      "observed_at": "2026-09-01T06:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.9000011",
+      "source_system": "zenodo",
+      "source_id": "9000011",
+      "source_key": "3@10.5281/zenodo.9000012~m2",
+      "actor": "harvest/zenodo",
+      "provenance": {
+        "title": { "extraction_method": "api" },
+        "resource_kind": { "extraction_method": "api" }
+      },
+      "source": {
+        "title": "Lidar uncertainty: WP3 deliverable",
+        "doi": "10.5281/zenodo.9000011",
+        "url": "https://zenodo.org/records/9000012",
+        "source_urls": ["https://zenodo.org/records/9000012"],
+        "authors": [{ "name": "Brandetti, L." }],
+        "publisher": "Zenodo",
+        "published_date": "2026-04-02",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "access_status": "open",
+        "iea_task": ["task-52"],
+        "withdrawn": false,
+        "extra": {
+          "zenodo_record_id": 9000012,
+          "zenodo_concept_recid": 9000011,
+          "zenodo_version_doi": "10.5281/zenodo.9000012",
+          "zenodo_resource_type": {
+            "type": "publication",
+            "subtype": "deliverable",
+            "title": "Project deliverable"
+          }
+        }
+      }
+    },
+    {
+      "observed_at": "2026-09-02T06:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.9000011",
+      "source_system": "datacite",
+      "source_id": "10.5281/zenodo.9000011",
+      "source_key": "2026-09-02T05:00:00Z",
+      "actor": "harvest/datacite",
+      "provenance": {
+        "title": { "extraction_method": "api" },
+        "resource_kind": { "extraction_method": "api" }
+      },
+      "source": {
+        "title": "Lidar uncertainty: WP3 deliverable (v1.1)",
+        "doi": "10.5281/zenodo.9000011",
+        "url": "https://zenodo.org/doi/10.5281/zenodo.9000011",
+        "source_urls": ["https://zenodo.org/doi/10.5281/zenodo.9000011"],
+        "authors": [{ "name": "Brandetti, L." }],
+        "publisher": "Zenodo",
+        "published_date": "2026-04-02",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "iea_task": [],
+        "withdrawn": false,
+        "extra": {
+          "datacite_client_id": "cern.zenodo",
+          "datacite_state": "findable",
+          "datacite_types": {
+            "resourceType": "",
+            "resourceTypeGeneral": "Text"
+          },
+          "rights_list": [
+            {
+              "rights": "Creative Commons Attribution 4.0 International",
+              "rightsIdentifier": "cc-by-4.0",
+              "rightsIdentifierScheme": "SPDX",
+              "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

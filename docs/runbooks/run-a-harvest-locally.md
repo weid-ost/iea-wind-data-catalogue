@@ -3,7 +3,7 @@ type: runbook
 id: RUN-run-a-harvest-locally
 status: current
 date: 2026-08-31
-related: [adr-0026-change-detection-by-source-key, adr-0031-the-harvest-never-fails-on-llm-unavailability, adr-0029-scheduling-and-the-heartbeat-commit, materialize-and-validate, add-a-source-adapter]
+related: [adr-0026-change-detection-by-source-key, adr-0031-the-harvest-never-fails-on-llm-unavailability, adr-0029-scheduling-and-the-heartbeat-commit, materialize-and-validate, add-a-source-adapter, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus]
 tags: [runbook, harvest]
 last_executed: 2026-09-01
 ---

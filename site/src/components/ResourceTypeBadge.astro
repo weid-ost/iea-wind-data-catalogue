@@ -1,0 +1,72 @@
+---
+/**
+ * What this record *is*, at both levels: the coarse kind and the specific type
+ * beneath it (ADR-0040).
+ *
+ * An IEA Wind board member asked what "publication", "report" and "other"
+ * actually mean, and whether IEA Wind's own publication types could be used
+ * instead. They can, and the answer has to be visible on the record rather than
+ * buried in a schema — so the chip says "IEA Wind Recommended Practice", and
+ * its tooltip gives IEA Wind's own definition of one, verbatim from
+ * `vocabulary.yaml`.
+ *
+ * Both chips filter. The kind is the wide net a reader casts first ("show me
+ * the reports"); the type is the narrow one ("show me the Recommended
+ * Practices"). On a card only the specific chip is shown — it implies its
+ * parent, its tooltip names it, and two chips per card is noise.
+ */
+import Badge from './Badge.astro';
+import { kindLabel, typeLabel, parentKind } from '../lib/vocabulary';
+import { filterHref } from '../lib/url';
+import { kindTip, resourceTypeTip } from '../lib/tooltips';
+
+interface Props {
+  kind?: string;
+  type?: string;
+  /** Show the parent kind chip alongside. The record page does; cards do not. */
+  showKind?: boolean;
+}
+const { kind: rawKind, type, showKind = false } = Astro.props;
+// The type's declared parent is better evidence than a stored kind: it comes
+// from the vocabulary, where the relationship is defined once.
+const kind = parentKind(type) ?? rawKind;
+---
+
+{(kind || type) && (
+  <span class="kindpair">
+    {showKind && kind && (
+      <Badge icon="▤" href={filterHref('kind', kind)} tip={kindTip(kind)}>
+        {kindLabel(kind)}
+      </Badge>
+    )}
+    {showKind && kind && type && (
+      <span class="icon kindpair__sep" aria-hidden="true" data-icon="›"></span>
+    )}
+    {type ? (
+      <Badge icon={showKind ? undefined : '▤'} href={filterHref('type', type)} tip={resourceTypeTip(type)}>
+        {typeLabel(type)}
+      </Badge>
+    ) : (
+      !showKind && kind && (
+        <Badge icon="▤" href={filterHref('kind', kind)} tip={kindTip(kind)}>
+          {kindLabel(kind)}
+        </Badge>
+      )
+    )}
+  </span>
+)}
+
+<style>
+  .kindpair {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-1);
+  }
+
+  /* The separator is decoration between two chips that each carry their own
+     accessible name, so it is hidden from the accessibility tree entirely. */
+  .kindpair__sep {
+    color: var(--text-secondary);
+    font-size: var(--font-size-caption);
+  }
+</style>

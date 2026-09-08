@@ -40,6 +40,8 @@ __all__ = [
     "load_sources",
     "load_organizations",
     "load_groups",
+    "load_vocabulary",
+    "vocabulary_path",
     "organization_names",
     "group_names",
     "group_aliases",
@@ -106,6 +108,10 @@ def groups_path(root: Path | None = None) -> Path:
     return (root or repo_root()) / "groups.yaml"
 
 
+def vocabulary_path(root: Path | None = None) -> Path:
+    return (root or repo_root()) / "vocabulary.yaml"
+
+
 def scheming_path(root: Path | None = None) -> Path:
     return (root or repo_root()) / "schema" / "ckan-scheming.json"
 
@@ -156,6 +162,17 @@ def load_groups(root: Path | None = None) -> list[dict]:
     """``groups.yaml`` -> list of CKAN-shaped group dicts (= IEA Wind tasks)."""
     doc = _load_register(groups_path(root))
     return list(doc.get("groups", []))
+
+
+def load_vocabulary(root: Path | None = None) -> dict[str, Any]:
+    """``vocabulary.yaml`` — the controlled vocabularies and their definitions.
+
+    The one place a term is defined (ADR-0040). The harvest reads it to know
+    which values are legal; the site reads the same file to label a chip and to
+    render the About page's Definitions section, so a value can never be shown
+    without a definition behind it.
+    """
+    return dict(_load_register(vocabulary_path(root)))
 
 
 def organization_names(root: Path | None = None) -> set[str]:

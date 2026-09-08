@@ -1,0 +1,238 @@
+{
+  "fixture_id": "x-11-source-extra-merge",
+  "fixture_kind": "record",
+  "case": "Two systems describe one identity and each fills `source.extra` with its own keys — the bag merges key by key, so Zenodo's resource subtype survives DataCite's higher precedence",
+  "note": "The bug this fixture exists to stop coming back. `extra` is a BAG of fields, and each source fills it with keys only that source has. Composing several systems by wholesale replacement meant the highest-precedence system's bag deleted every other system's — so a record scraped by both DataCite (precedence 10) and Zenodo (30) kept `datacite_types` and silently lost `zenodo_resource_type`, which is the most specific classification signal the catalogue has: Zenodo states a type AND a subtype where DataCite's copy of the very same record flattens both to \"Text\". The consequence was visible on the site: a project deliverable filed as a bare \"Publication\", and 54 records in \"Other > Other\" that were really presentations, posters and meeting minutes. Order is deliberate — Zenodo first, DataCite second — because the dangerous direction is the higher-precedence source arriving last. Note what precedence still decides: `title` is DataCite's, because DataCite outranks Zenodo on scalars. Only the bag merges.",
+  "raw": "raw/x-11-source-extra-merge.json",
+  "identity_keys": [
+    "10.5281/zenodo.9000011"
+  ],
+  "expected_record_names": [
+    "doi-10-5281-zenodo-9000011"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "authors",
+        "value": "[{\"name\":\"Brandetti, L.\"}]"
+      },
+      {
+        "key": "doi",
+        "value": "10.5281/zenodo.9000011"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-09-01T06:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "10.5281/zenodo.9000011"
+      },
+      {
+        "key": "identity_kind",
+        "value": "doi"
+      },
+      {
+        "key": "iea_task",
+        "value": "[\"task-52\"]"
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-09-02T06:00:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "cc-by-4.0"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+      },
+      {
+        "key": "published_date",
+        "value": "2026-04-02"
+      },
+      {
+        "key": "publisher",
+        "value": "Zenodo"
+      },
+      {
+        "key": "resource_kind",
+        "value": "report"
+      },
+      {
+        "key": "resource_type",
+        "value": "project-deliverable"
+      },
+      {
+        "key": "source_id",
+        "value": "10.5281/zenodo.9000011"
+      },
+      {
+        "key": "source_key",
+        "value": "2026-09-02T05:00:00Z"
+      },
+      {
+        "key": "source_system",
+        "value": "datacite"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"datacite\",\"zenodo\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://zenodo.org/records/9000012"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://zenodo.org/records/9000012\",\"https://zenodo.org/doi/10.5281/zenodo.9000011\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [
+      {
+        "name": "task-52"
+      }
+    ],
+    "license_id": "cc-by",
+    "name": "doi-10-5281-zenodo-9000011",
+    "notes": "",
+    "owner_org": "zenodo-community",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [],
+    "title": "Lidar uncertainty: WP3 deliverable (v1.1)",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.9000011"
+  },
+  "expected_records": {
+    "doi-10-5281-zenodo-9000011": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Brandetti, L.\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.9000011"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-09-01T06:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.9000011"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-52\"]"
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-09-02T06:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2026-04-02"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "resource_kind",
+          "value": "report"
+        },
+        {
+          "key": "resource_type",
+          "value": "project-deliverable"
+        },
+        {
+          "key": "source_id",
+          "value": "10.5281/zenodo.9000011"
+        },
+        {
+          "key": "source_key",
+          "value": "2026-09-02T05:00:00Z"
+        },
+        {
+          "key": "source_system",
+          "value": "datacite"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"datacite\",\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/9000012"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/9000012\",\"https://zenodo.org/doi/10.5281/zenodo.9000011\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-52"
+        }
+      ],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-9000011",
+      "notes": "",
+      "owner_org": "zenodo-community",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "Lidar uncertainty: WP3 deliverable (v1.1)",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.9000011"
+    }
+  },
+  "expected_notices": []
+}

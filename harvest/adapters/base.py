@@ -150,9 +150,18 @@ class Adapter(ABC):
     #: One line describing the change token, for the run report and the docs.
     source_key_semantics: ClassVar[str] = "normalised payload hash"
 
+    #: Where the catalogue's event log lives, set by :func:`run_adapter` before
+    #: ``harvest()`` is called. It is ``None`` for an adapter constructed
+    #: directly — a ``map()`` unit test, a fixture replay — and an adapter must
+    #: treat that as "I have not been told what the catalogue holds" and skip
+    #: any backfill phase entirely, rather than reaching for the default
+    #: directory and reading the live repository from inside a test.
+    events_dir: Path | None = None
+
     def __init__(self, config: SourceConfig | None = None, client: Any = None) -> None:
         self.config = config or SourceConfig(name=self.source_name)
         self.client = client
+        self.events_dir = None
 
     # -- the two methods every adapter implements --------------------------
     @abstractmethod
@@ -243,6 +252,10 @@ def run_adapter(
     if not adapter.config.enabled:
         log.info("source %s disabled in sources.yaml; skipping", adapter.source_name)
         return result
+
+    # An adapter that backfills needs to know what the catalogue already holds;
+    # nothing else may assume a default (see Adapter.events_dir).
+    adapter.events_dir = events_dir if events_dir is not None else _config.events_dir()
 
     try:
         observations = _iter_capped(adapter.harvest(max_records=max_records), max_records)

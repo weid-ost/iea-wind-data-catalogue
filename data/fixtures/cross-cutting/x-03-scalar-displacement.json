@@ -146,7 +146,7 @@
         },
         {
           "key": "provenance",
-          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
         },
         {
           "key": "published_date",
@@ -159,6 +159,10 @@
         {
           "key": "resource_kind",
           "value": "software"
+        },
+        {
+          "key": "resource_type",
+          "value": "research-software"
         },
         {
           "key": "source_id",
@@ -193,13 +197,13 @@
       "license_id": "cc-by",
       "name": "zenodo-3000003",
       "notes": "",
+      "owner_org": "zenodo-community",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Aeroelastic model of the IEA 15MW reference turbine",
-      "url": "https://zenodo.org/records/3000003",
-      "owner_org": "zenodo-community"
+      "url": "https://zenodo.org/records/3000003"
     }
   },
   "expected_notices": [

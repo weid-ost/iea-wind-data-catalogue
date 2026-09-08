@@ -28,6 +28,7 @@
 | `zen-10-diacritics` | `Søren`, `Müller`, `Ø` in titles and names | Encoding, slug generation | Preserved in display; transliterated in `name` slug |
 | `zen-11-multi-community` | Record in two IEA Wind communities | Double-harvest | One record, `iea_task` multi-valued |
 | `zen-12-tombstone` | Withdrawn record; DOI resolves to a tombstone page | Deletion policy | `status: withdrawn`, page retained, never deleted |
+| `zen-13-doi-backfill` | A Zenodo record another source found first, fetched by DOI outside the community sweep | The backfill phase (ADR-0041) and `identity_override` | Zenodo supplies the `access_status` DataCite does not carry, and the resource subtype DataCite flattens to `Text`. The payload's **concept** DOI differs from the identity the catalogue holds, so the enrichment is mapped onto the existing identity rather than minting a second record; collapsing version onto concept is a merge, and that is `x-12` |
 
 ---
 
@@ -153,6 +154,7 @@ These exercise reconciliation and provenance rather than any single adapter, and
 | `x-06-no-identifier` | No DOI, no stable source ID | Worst-case identity | Deterministic hash key; documented as fragile |
 | `x-07-cache-miss-no-llm` | **INVENTED** — Tier-3 page with no cache entry and no LLM available | §3.4 degradation (ADR-0031) | The page is deliberately unclassifiable by pattern, so it escalates; `extract()` returns `None` without attempting a call, no cache entry is written, the URL is queued once to `data/state/pending-extraction.json`, and the run reports `ok: true`. Idempotent: a second pass queues nothing new |
 | `x-08-ckan-invalid` | Record whose slug, tag or licence would fail CKAN validation | §2.2 promotion contract | Build fails at the Zod gate |
+| `x-11-source-extra-merge` | Two systems describe one identity and each fills `source.extra` with its own keys | Cross-system composition of the `extra` bag (ADR-0040) | `extra` merges key by key, so Zenodo's `zenodo_resource_type` survives DataCite's higher precedence and the record classifies as `report › project-deliverable`. Precedence still decides scalars: the title is DataCite's. Under the old wholesale replacement the subtype was deleted and the record read as a bare "Publication" |
 
 ### Reconciliation fixtures (`x-2N`)
 
@@ -165,6 +167,7 @@ Dedup, link rot and the joins between sources. These arrived with the reconciler
 | `x-22-dedupe-preprint-pair` | A Crossref preprint declaring `IsPreprintOf` the published article | Realises `cr-04` | The published version is listed; the preprint is linked from it, not listed separately |
 | `x-23-link-rot` | A dead task page and a dead file link | Realises `iea-12` at record level | Reported in the run report and rendered as a "source link unreachable" note. The link is never removed and the record is never deleted (ADR-0027) |
 | `x-24-osti-mandated-duplicate` | An OSTI deposit duplicating a journal article, joined on the DOI it states | Realises `osti-03` | Merged on the stated DOI; OSTI becomes an additional `source_url` |
+| `x-12-version-pair-merge` | One artifact with two DOIs: DataCite indexes the Zenodo **version** DOI while Zenodo lists the **concept** | The `IsVersionOf` join (ADR-0041) | **Automatic**, because DataCite states the relation — this is evidence, not a fuzzy title match. The concept DOI is the primary, because it is what resolves to the latest version and what is worth citing. The version record is suppressed and **retained**: its page and URL keep resolving so an existing citation still works, the two link to each other, and the merge annotation records the evidence in the log forever |
 
 ---
 

@@ -87,6 +87,10 @@
         "value": "report"
       },
       {
+        "key": "resource_type",
+        "value": "report"
+      },
+      {
         "key": "source_id",
         "value": "task54-publications"
       },

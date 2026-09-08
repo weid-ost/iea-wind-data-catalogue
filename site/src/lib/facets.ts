@@ -12,9 +12,12 @@ import {
   licenseTitleOf,
   yearOf,
   availabilityOf,
+  resourceKindOf,
+  resourceTypeOf,
   RESOURCE_KIND_LABELS,
   ACCESS_LABELS,
 } from './record';
+import { typeLabel } from './vocabulary';
 import { organizationTitle, taskShort } from './registers';
 
 export interface FacetValue {
@@ -31,8 +34,9 @@ export interface Facet {
 
 /**
  * The facets ADR-0023 names — task, resource kind, year, licence, source,
- * institution — plus availability, which the catalogue page also filters on
- * (the shared filter vocabulary: `availability=open|restricted|embargoed|…`).
+ * institution — plus the specific resource type (ADR-0040) and availability,
+ * which the catalogue page also filters on (the shared filter vocabulary:
+ * `availability=open|restricted|embargoed|…`).
  */
 export function facetsFor(entries: CatalogueEntry[]): Facet[] {
   const tally = (
@@ -51,11 +55,17 @@ export function facetsFor(entries: CatalogueEntry[]): Facet[] {
     { name: 'task', legend: 'IEA Wind Task', values: tally((e) => tasksOf(e.pkg), taskShort) },
     {
       name: 'kind',
-      legend: 'Resource kind',
-      values: tally(
-        (e) => [extra(e.pkg, 'resource_kind') ?? ''],
-        (v) => RESOURCE_KIND_LABELS[v] ?? v
-      ),
+      legend: 'Kind',
+      values: tally((e) => [resourceKindOf(e.pkg) ?? ''], (v) => RESOURCE_KIND_LABELS[v] ?? v),
+    },
+    // The specific value below `kind` (ADR-0040). A separate facet rather than a
+    // nested one: Pagefind filters are flat, and the two are genuinely
+    // independent questions — "all the reports" and "the Recommended Practices"
+    // are both things a reader asks for.
+    {
+      name: 'type',
+      legend: 'Type',
+      values: tally((e) => [resourceTypeOf(e.pkg) ?? ''], typeLabel),
     },
     { name: 'year', legend: 'Year', values: tally((e) => [yearOf(e.pkg)], (v) => v) },
     {

@@ -6,7 +6,7 @@ status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
 supersedes: [ADR-0007]
-related: [adr-0032-site-framework-astro, adr-0036-component-architecture-and-the-gallery, adr-0039-design-system, run-the-a11y-gate]
+related: [adr-0032-site-framework-astro, adr-0036-component-architecture-and-the-gallery, adr-0039-design-system, run-the-a11y-gate, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels]
 tags: [site, search, discovery]
 ---
 

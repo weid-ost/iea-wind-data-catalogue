@@ -4,10 +4,23 @@ import Panel from '../components/Panel.astro';
 import { withBase } from '../lib/url';
 import { readLastRun, freshness } from '../lib/state';
 import { sourceLabel } from '../lib/record';
+import {
+  accessStatuses,
+  authorityOf,
+  resourceKinds,
+  terms,
+  typesOfKind,
+} from '../lib/vocabulary';
 
 const lastRun = readLastRun();
 const fresh = freshness(lastRun);
 const sources = Object.entries(lastRun?.sources ?? {});
+
+// The Definitions section renders `vocabulary.yaml` directly (ADR-0040). It is
+// the same file the tooltip on every chip reads, so the page explaining a term
+// and the chip using it cannot say different things — which is exactly how they
+// drifted before.
+const kinds = resourceKinds.map((kind) => ({ kind, types: typesOfKind(kind.name) }));
 ---
 
 <Base
@@ -57,6 +70,83 @@ const sources = Object.entries(lastRun?.sources ?? {});
         resolving. Link rot is the failure mode a catalogue exists to fight.
       </li>
     </ul>
+
+    <h2 id="definitions">Definitions</h2>
+    <p>
+      Three questions came back from IEA Wind about what the words on a record
+      actually mean. They were fair questions, so every term the catalogue shows
+      is defined here, and the same definition appears in the tooltip on the chip
+      that uses it. Where a term is not ours to define — IEA Wind's own
+      publication types, the FAIR4RS definition of research software — the
+      definition is quoted and the authority named.
+    </p>
+
+    <h3 id="definitions-kind">Kind, and the specific type</h3>
+    <p>
+      Every record has a <strong>kind</strong> — the wide bucket you filter by
+      first — and a more specific <strong>type</strong> under it. The type is
+      derived from what the source already published: Zenodo's resource type and
+      subtype, OSTI's product type, Crossref's type, DataCite's resource type,
+      and the IEA Wind publication types, which appear only in a document's
+      title. Both are filterable, so you can ask for every report, or only the
+      Recommended Practices.
+    </p>
+
+    {kinds.map(({ kind, types }) => (
+      <section class="defs" aria-labelledby={`def-kind-${kind.name}`}>
+        <h4 id={`def-kind-${kind.name}`}>{kind.label}</h4>
+        <p>{kind.definition}</p>
+        {types.length > 0 && (
+          <dl class="defs__list">
+            {types.map((type) => (
+              <>
+                <dt>{type.label}</dt>
+                <dd>
+                  {type.definition}
+                  {authorityOf(type) && (
+                    <>
+                      {' '}Defined by{' '}
+                      {authorityOf(type)?.url ? (
+                        <a href={authorityOf(type)?.url} rel="noopener external">
+                          {authorityOf(type)?.title}
+                        </a>
+                      ) : (
+                        authorityOf(type)?.title
+                      )}.
+                    </>
+                  )}
+                </dd>
+              </>
+            ))}
+          </dl>
+        )}
+      </section>
+    ))}
+
+    <h3 id="definitions-availability">Availability</h3>
+    <p>
+      What stands between you and the files. The catalogue never implies a
+      download that needs an account, and never assumes access the source has not
+      stated.
+    </p>
+    <dl class="defs__list">
+      {accessStatuses.map((status) => (
+        <>
+          <dt>{status.label}</dt>
+          <dd>{status.definition}</dd>
+        </>
+      ))}
+    </dl>
+
+    <h3 id="definitions-terms">Everything else on a record</h3>
+    <dl class="defs__list">
+      {terms.map((term) => (
+        <>
+          <dt>{term.label}</dt>
+          <dd>{term.definition}</dd>
+        </>
+      ))}
+    </dl>
 
     <h2>Provenance</h2>
     <p>
@@ -155,5 +245,46 @@ const sources = Object.entries(lastRun?.sources ?? {});
 
   li + li {
     margin-block-start: var(--space-3);
+  }
+
+  /* A definition list, not a table: the terms are of very different lengths and
+     a two-column table forces either a cramped column or a lot of white space.
+     A square-cornered left accent bar per kind, at the panel bar width, as
+     design §2.3 allows: it groups the specific types under their parent
+     without filling a surface. */
+  .defs {
+    margin-block-start: var(--space-5);
+    padding-inline-start: var(--space-4);
+    border-inline-start: var(--panel-bar-width) solid var(--border-subtle);
+  }
+
+  .defs h4 {
+    margin-block-end: var(--space-2);
+  }
+
+  .defs__list {
+    margin-block: var(--space-3) 0;
+  }
+
+  .defs__list dt {
+    margin-block-start: var(--space-3);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .defs__list dd {
+    margin-block-start: var(--space-1);
+    margin-inline-start: 0;
+    max-width: var(--font-measure-prose);
+    color: var(--text-secondary);
+  }
+
+  /* Underlined at rest, unlike links elsewhere on the site. The site convention
+     is colour at rest and an underline on hover, which works because the link
+     colour carries enough contrast against body text. Here the surrounding text
+     is already `--text-secondary`, so colour alone no longer distinguishes the
+     link and axe fails it (link-in-text-block). An underline is the fix WCAG
+     actually asks for, rather than a colour that only just clears the ratio. */
+  .defs__list dd a {
+    text-decoration: underline;
   }
 </style>

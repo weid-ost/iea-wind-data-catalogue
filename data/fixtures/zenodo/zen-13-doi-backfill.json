@@ -1,0 +1,118 @@
+{
+  "fixture_id": "zen-13-doi-backfill",
+  "fixture_kind": "source_namespace",
+  "case": "A Zenodo record another source found first: fetched by DOI, mapped onto the identity the catalogue already holds",
+  "note": "REAL CAPTURE, verbatim from https://zenodo.org/api/records/21619015 on 2026-09-08 — the record the issue linked to. Issue #3 — 'Access unknown' on records that are plainly open. DataCite's copy of a Zenodo deposit carries the licence but NOT the access conditions, and the DataCite adapter refuses (correctly) to infer access from a licence, so 92 openly-available Zenodo records showed as unknown. Zenodo states it outright: access_right 'open'. The community sweep never saw this record because it sits outside the nine configured communities, so the adapter's backfill phase asks Zenodo for it by DOI — the numeric suffix of a 10.5281/zenodo.* DOI IS the record id, so it costs one GET and no search. The identity is the load-bearing part: this payload's CONCEPT doi is 10.5281/zenodo.21619014, but the catalogue already lists the artifact under the VERSION doi DataCite supplied. Mapping to the concept would mint a SECOND record for one artifact, so the backfill sets identity_override and enriches the record that exists (ADR-0041). Collapsing version onto concept is a merge, and merges belong to the reconciler — see x-12.",
+  "raw": "raw/zen-13-doi-backfill.json",
+  "identity_override": "10.5281/zenodo.21619015",
+  "identity_key": "10.5281/zenodo.21619015",
+  "source_system": "zenodo",
+  "source_id": "21619015",
+  "source_key": "4@10.5281/zenodo.21619015~m2",
+  "source": {
+    "title": "IEA Wind Task 52 WG1: A proposal for new metrics to evaluate lidar-measured TI (White Paper)",
+    "notes": "<p>This white paper presents a new set of performance metrics for assessing the ability of vertical profiling lidar systems to measure turbulence intensity (TI) for wind turbine load assessment applications. In contrast to existing approaches, which typically rely on correlations of 10-minute averaged TI values, the proposed methodology applies load-relevant metrics — namely effective turbulence intensity, damage index, and representative TI based on the 90% quantile—directly when comparing lidar-derived TI to collocated reference measurements from cup anemometers. By evaluating the same derived quantities that are used in wind turbine load calculations, the approach removes the ambiguity inherent in correlation-based assessments and provides a clearer link between measurement performance and downstream application relevance. In addition, the paper proposes a testing framework that supports the incremental compilation of a database of TI assessment results over time. Rather than requiring<br />a single, exhaustive test campaign, this framework enables new products — such as TI correction methodologies or updated reconstruction algorithms — to be introduced with an initially limited scope of validated conditions that can be systematically expanded as further evidence becomes available.<br />This pragmatic approach acknowledges the uncontrollable nature of environmental conditions during free-field testing while promoting transparency, comparability, and confidence in the use of lidar-derived TI for wind turbine load assessments. The paper reflects the consensus findings of an IEA Task 52 working group, based on collective discussions and complementary investigations carried out by individual members.</p>",
+    "doi": "10.5281/zenodo.21619014",
+    "url": "https://zenodo.org/records/21619015",
+    "source_urls": [
+      "https://zenodo.org/records/21619015"
+    ],
+    "authors": [
+      {
+        "name": "Brandetti, L."
+      },
+      {
+        "name": "Cavalli, M."
+      },
+      {
+        "name": "Chattopadhyay, S."
+      },
+      {
+        "name": "Cressall, S."
+      },
+      {
+        "name": "Eichelmann, T."
+      },
+      {
+        "name": "Fruehmann, R. K."
+      },
+      {
+        "name": "Haghshenas, A."
+      },
+      {
+        "name": "Hansen, A."
+      },
+      {
+        "name": "Macdonald, E."
+      },
+      {
+        "name": "Parker, Z."
+      },
+      {
+        "name": "Rabhi, H."
+      },
+      {
+        "name": "Steudel, D."
+      }
+    ],
+    "publisher": "Zenodo",
+    "published_date": "2026-07-27",
+    "license_raw": "cc-by-4.0",
+    "license_id": "cc-by",
+    "resource_kind": "report",
+    "access_status": "open",
+    "keywords": [],
+    "resources": [
+      {
+        "url": "https://zenodo.org/records/21619015/files/IEA_Task_52_TI_Metrics_20260723.pdf",
+        "name": "IEA_Task_52_TI_Metrics_20260723.pdf",
+        "format": "pdf"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "relation": "IsVersionOf",
+        "identifier": "10.5281/zenodo.21619014",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [
+      "task-52"
+    ],
+    "withdrawn": false,
+    "extra": {
+      "zenodo_record_id": 21619015,
+      "zenodo_concept_recid": "21619014",
+      "zenodo_version_doi": "10.5281/zenodo.21619015",
+      "zenodo_resource_type": {
+        "title": "Project deliverable",
+        "type": "publication",
+        "subtype": "deliverable"
+      }
+    }
+  },
+  "provenance": {
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "title": {
+      "extraction_method": "api"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "iea_task": {
+      "extraction_method": "pattern"
+    }
+  },
+  "expected_slug": "doi-10-5281-zenodo-21619015"
+}

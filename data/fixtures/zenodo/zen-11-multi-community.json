@@ -7,7 +7,7 @@
   "identity_key": "10.5281/zenodo.4562391",
   "source_system": "zenodo",
   "source_id": "4562392",
-  "source_key": "5@10.5281/zenodo.4562392",
+  "source_key": "5@10.5281/zenodo.4562392~m2",
   "source": {
     "title": "Wind Energy as a Use Case for General Energy System Integration",
     "notes": "<p>Emerging data sharing protocols such as Open Energy, and the broader context of green finance and sustainable development goals, are discussed. The practical example of the digital integration of wind energy projects is considered, with particular emphasis on the role of wind data, specifically those obtained using lidar.</p>\n\n<p>Originally presented at the Windpower Data and Digital Innovation Forum 2021.</p>",
@@ -48,8 +48,12 @@
     ],
     "withdrawn": false,
     "extra": {
-      "zenodo_record_id": 4562392,
       "zenodo_concept_recid": "4562391",
+      "zenodo_record_id": 4562392,
+      "zenodo_resource_type": {
+        "title": "Presentation",
+        "type": "presentation"
+      },
       "zenodo_version_doi": "10.5281/zenodo.4562392"
     }
   },

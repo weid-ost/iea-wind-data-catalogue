@@ -5,7 +5,7 @@ title: data/events/ is the source of truth; data/records/ is a derived materiali
 status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
-related: [adr-0026-change-detection-by-source-key, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0027-withdrawn-records-are-retained, adr-0021-canonical-record-is-a-ckan-package-dict, materialize-and-validate, record-format]
+related: [adr-0026-change-detection-by-source-key, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0027-withdrawn-records-are-retained, adr-0021-canonical-record-is-a-ckan-package-dict, materialize-and-validate, record-format, adr-0042-the-concept-doi-is-the-record, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus]
 tags: [data-model, events, provenance]
 ---
 

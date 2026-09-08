@@ -64,6 +64,7 @@ If you want to know *why*:
 | `sources.yaml` | the source register — the only configuration that matters | anyone, consciously |
 | `organizations.yaml` | CKAN-shaped institutions; `owner_org` must resolve here | curator |
 | `groups.yaml` | CKAN-shaped groups = IEA Wind Tasks, with renumbering aliases | curator |
+| `vocabulary.yaml` | **the terms, defined once** — resource kinds and types, access statuses, and everything else a record page names. The harvest validates against it, every tooltip quotes it, and the About page's Definitions section is rendered from it | anyone, with a definition |
 | `schema/ckan-scheming.json` | the written definition of the custom fields; CKAN needs it on promotion day | with `EXTRA_KEYS` |
 | `harvest/` | adapters, event log, materialiser, CKAN gate, extraction stub | the harvest tracks |
 | `harvest/CONTRACT.md` | **the interface document** — read before writing an adapter | whoever finds it ambiguous |
@@ -97,7 +98,7 @@ If you want to know *why*:
 
 ## Decision register
 
-Twenty ADRs, 0020–0039. ADRs 0001–0019 belonged to the superseded CKAN-first
+Twenty-three ADRs, 0020–0042. ADRs 0001–0019 belonged to the superseded CKAN-first
 plan; those numbers are not reused, and the ones explicitly superseded are
 tabulated in [[ckan-promotion-path]] §11.
 
@@ -125,6 +126,12 @@ tabulated in [[ckan-promotion-path]] §11.
 - [[adr-0031-the-harvest-never-fails-on-llm-unavailability]] — the pending queue
 - [[adr-0035-no-vendor-sdk]] — OpenAI-compatible HTTP only
 - [[adr-0028-provenance-is-displayed]] — machine-inferred fields are marked
+
+### What the words mean
+
+- [[adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels]] — `vocabulary.yaml`, kind › type, IEA Wind's own publication types
+- [[adr-0041-a-mapping-improvement-must-reach-the-existing-corpus]] — mapping versions and the Zenodo DOI backfill
+- [[adr-0042-the-concept-doi-is-the-record]] — version DOIs merge into the concept, and are kept
 
 ### The site
 

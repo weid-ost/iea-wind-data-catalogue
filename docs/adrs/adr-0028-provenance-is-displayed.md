@@ -5,7 +5,7 @@ title: Provenance display — machine-inferred fields are visibly marked
 status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
-related: [adr-0024-the-llm-boundary, adr-0025-the-extraction-cache-is-committed, adr-0039-design-system, record-format, run-the-a11y-gate]
+related: [adr-0024-the-llm-boundary, adr-0025-the-extraction-cache-is-committed, adr-0039-design-system, record-format, run-the-a11y-gate, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels]
 tags: [provenance, trust, site]
 ---
 

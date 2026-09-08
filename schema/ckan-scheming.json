@@ -3,13 +3,11 @@
   "dataset_type": "dataset",
   "about": "IEA Wind Data Catalogue — canonical record schema. Nothing in this repository consumes this file yet: it is the written definition of the record shape (ADR-0021), it documents every custom field carried in `extras`, and it is the input ckanext-scheming needs on the day the catalogue is promoted to CKAN. Keep it in step with harvest/materialize.py:EXTRA_KEYS and harvest/CONTRACT.md — those three are the same contract stated three ways.",
   "about_url": "https://github.com/weid-ost/iea-wind-data-catalogue",
-
   "notes": [
     "Every custom field below is stored as a CKAN EXTRA with a STRING value. Fields whose logical type is a list or an object are JSON-encoded inside that string, compactly, with sorted keys. CKAN accepts nothing else in extras unless declared here, which is exactly what this file declares.",
     "Records are never edited in place. `source.*` metadata is replaced wholesale on a source-key change; `local.*` annotation is additive (ADR-0038). The event log in data/events/ is the source of truth; data/records/*.json is a derived view.",
     "Withdrawal is NOT CKAN `state: deleted` — that would hide and permit purging a record ADR-0027 requires be retained. Withdrawal is `lifecycle_state`, `withdrawn` and `withdrawn_at` below."
   ],
-
   "dataset_fields": [
     {
       "field_name": "title",
@@ -57,7 +55,6 @@
       "preset": "tag_string_autocomplete",
       "help_text": "Alphanumerics, '-', '_' and '.', 2-100 characters each."
     },
-
     {
       "field_name": "identity_key",
       "label": "Identity key",
@@ -71,9 +68,18 @@
       "label": "Identity derivation",
       "help_text": "How the identity key was derived. 'fragile' records are the ones a corrected upstream title would split in two.",
       "choices": [
-        {"value": "doi", "label": "DOI"},
-        {"value": "source", "label": "Source system identifier"},
-        {"value": "fragile", "label": "Hash of title, author and year (fragile)"}
+        {
+          "value": "doi",
+          "label": "DOI"
+        },
+        {
+          "value": "source",
+          "label": "Source system identifier"
+        },
+        {
+          "value": "fragile",
+          "label": "Hash of title, author and year (fragile)"
+        }
       ],
       "extras": true
     },
@@ -89,13 +95,34 @@
       "label": "Source system",
       "help_text": "The adapter that most recently scraped this record.",
       "choices": [
-        {"value": "zenodo", "label": "Zenodo"},
-        {"value": "datacite", "label": "DataCite"},
-        {"value": "crossref", "label": "Crossref"},
-        {"value": "github", "label": "GitHub"},
-        {"value": "osti", "label": "OSTI"},
-        {"value": "wdh", "label": "Wind Data Hub"},
-        {"value": "ieawind", "label": "iea-wind.org"}
+        {
+          "value": "zenodo",
+          "label": "Zenodo"
+        },
+        {
+          "value": "datacite",
+          "label": "DataCite"
+        },
+        {
+          "value": "crossref",
+          "label": "Crossref"
+        },
+        {
+          "value": "github",
+          "label": "GitHub"
+        },
+        {
+          "value": "osti",
+          "label": "OSTI"
+        },
+        {
+          "value": "wdh",
+          "label": "Wind Data Hub"
+        },
+        {
+          "value": "ieawind",
+          "label": "iea-wind.org"
+        }
       ],
       "extras": true
     },
@@ -143,26 +170,170 @@
       "field_name": "resource_kind",
       "label": "Resource kind",
       "choices": [
-        {"value": "dataset", "label": "Dataset"},
-        {"value": "publication", "label": "Publication"},
-        {"value": "software", "label": "Software"},
-        {"value": "report", "label": "Report"},
-        {"value": "model", "label": "Model"},
-        {"value": "other", "label": "Other"}
+        {
+          "value": "dataset",
+          "label": "Dataset"
+        },
+        {
+          "value": "publication",
+          "label": "Publication"
+        },
+        {
+          "value": "software",
+          "label": "Software"
+        },
+        {
+          "value": "report",
+          "label": "Report"
+        },
+        {
+          "value": "model",
+          "label": "Model"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
       ],
       "help_text": "Often classified rather than stated. Where classified by a model, provenance records extraction_method 'llm' and the record page shows a machine-inferred badge.",
+      "extras": true
+    },
+    {
+      "field_name": "resource_type",
+      "label": "Resource type",
+      "choices": [
+        {
+          "value": "dataset",
+          "label": "Dataset"
+        },
+        {
+          "value": "journal-article",
+          "label": "Journal article"
+        },
+        {
+          "value": "conference-paper",
+          "label": "Conference paper"
+        },
+        {
+          "value": "preprint",
+          "label": "Preprint"
+        },
+        {
+          "value": "thesis",
+          "label": "Thesis"
+        },
+        {
+          "value": "book-chapter",
+          "label": "Book chapter"
+        },
+        {
+          "value": "working-paper",
+          "label": "Working paper"
+        },
+        {
+          "value": "publication",
+          "label": "Publication (unspecified)"
+        },
+        {
+          "value": "recommended-practice",
+          "label": "IEA Wind Recommended Practice"
+        },
+        {
+          "value": "best-practice",
+          "label": "IEA Wind Best Practice"
+        },
+        {
+          "value": "expert-group-report",
+          "label": "IEA Wind Expert Group Report"
+        },
+        {
+          "value": "technical-report",
+          "label": "Technical report"
+        },
+        {
+          "value": "annual-report",
+          "label": "IEA Wind Annual Report"
+        },
+        {
+          "value": "tem-proceedings",
+          "label": "Topical Expert Meeting proceedings"
+        },
+        {
+          "value": "project-deliverable",
+          "label": "Project deliverable"
+        },
+        {
+          "value": "report",
+          "label": "Report (unspecified)"
+        },
+        {
+          "value": "research-software",
+          "label": "Research software"
+        },
+        {
+          "value": "other-software",
+          "label": "Other software"
+        },
+        {
+          "value": "model",
+          "label": "Model"
+        },
+        {
+          "value": "presentation",
+          "label": "Presentation"
+        },
+        {
+          "value": "poster",
+          "label": "Poster"
+        },
+        {
+          "value": "meeting-record",
+          "label": "Meeting record"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        },
+        {
+          "value": "other",
+          "label": "Other (unspecified)"
+        }
+      ],
+      "help_text": "The specific type, below resource_kind (ADR-0040). Derived at materialise time from the vocabulary the source already published — Zenodo's resource_type subtype, OSTI's product_type, Crossref's type, DataCite's types.resourceType — plus the IEA Wind publication types, which appear only in the title. Every value is defined in vocabulary.yaml, which is also what the site's Definitions section renders; a value with no definition fails the test suite.",
       "extras": true
     },
     {
       "field_name": "access_status",
       "label": "Access",
       "choices": [
-        {"value": "open", "label": "Open"},
-        {"value": "restricted", "label": "Restricted"},
-        {"value": "embargoed", "label": "Embargoed"},
-        {"value": "registration-required", "label": "Registration required"},
-        {"value": "metadata-only", "label": "Metadata only"},
-        {"value": "unknown", "label": "Unknown"}
+        {
+          "value": "open",
+          "label": "Open"
+        },
+        {
+          "value": "restricted",
+          "label": "Restricted"
+        },
+        {
+          "value": "embargoed",
+          "label": "Embargoed"
+        },
+        {
+          "value": "registration-required",
+          "label": "Registration required"
+        },
+        {
+          "value": "metadata-only",
+          "label": "Metadata only"
+        },
+        {
+          "value": "unknown",
+          "label": "Unknown"
+        }
       ],
       "help_text": "Availability honesty (fixtures zen-05, zen-06, osti-04, wdh-06). Never imply a file is downloadable when it is not.",
       "extras": true
@@ -233,9 +404,18 @@
       "field_name": "lifecycle_state",
       "label": "Lifecycle",
       "choices": [
-        {"value": "active", "label": "Active"},
-        {"value": "archived", "label": "Archived"},
-        {"value": "withdrawn", "label": "Withdrawn"}
+        {
+          "value": "active",
+          "label": "Active"
+        },
+        {
+          "value": "archived",
+          "label": "Archived"
+        },
+        {
+          "value": "withdrawn",
+          "label": "Withdrawn"
+        }
       ],
       "help_text": "NOT CKAN's `state`. A withdrawn record is retained with its URL intact so existing citations survive (ADR-0027, fixtures zen-12, r-04).",
       "extras": true
@@ -293,7 +473,6 @@
       "extras": true
     }
   ],
-
   "resource_fields": [
     {
       "field_name": "url",

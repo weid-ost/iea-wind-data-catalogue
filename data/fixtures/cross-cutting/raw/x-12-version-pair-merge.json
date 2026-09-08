@@ -1,0 +1,92 @@
+{
+  "note": "One artifact, two DOIs — the case an IEA Wind reader reported (\"a record can have multiple DOIs\"), seen on 'Perspectives on Wind Lidar Digitalisation'. Zenodo mints a DOI for every deposited version AND a concept DOI that always resolves to the latest; the catalogue's identity is the concept DOI (zen-02). But DataCite indexes the VERSION DOIs, so an artifact Zenodo listed under its concept and DataCite found under a version arrived as two identities with one title, and both were listed. There were 24 such pairs. This is not a fuzzy title match: DataCite states IsVersionOf, so the join is evidence and the merge is automatic. The concept DOI is the primary because it is the identifier worth citing — listing a version DOI pins the catalogue to a snapshot that the next release silently ages. The version record is suppressed, NOT deleted: its page and URL keep resolving so an existing citation to it still works, it is linked from the primary and links back, and the merge annotation records the evidence in the log forever, so it can be shown or undone.",
+  "merge_observed_at": "2026-09-08T12:00:00Z",
+  "events": [
+    {
+      "observed_at": "2026-09-01T06:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.9000021",
+      "source_system": "zenodo",
+      "source_id": "9000022",
+      "source_key": "2@10.5281/zenodo.9000022~m2",
+      "actor": "harvest/zenodo",
+      "provenance": {
+        "title": { "extraction_method": "api" },
+        "resource_kind": { "extraction_method": "api" }
+      },
+      "source": {
+        "title": "Perspectives on wind lidar digitalisation",
+        "doi": "10.5281/zenodo.9000021",
+        "url": "https://zenodo.org/records/9000022",
+        "source_urls": ["https://zenodo.org/records/9000022"],
+        "authors": [{ "name": "Steudel, D." }],
+        "publisher": "Zenodo",
+        "published_date": "2026-03-11",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "access_status": "open",
+        "iea_task": ["task-52"],
+        "withdrawn": false,
+        "related_identifiers": [
+          {
+            "relation": "HasVersion",
+            "identifier": "10.5281/zenodo.9000022",
+            "identifier_type": "DOI"
+          }
+        ],
+        "extra": {
+          "zenodo_record_id": 9000022,
+          "zenodo_concept_recid": 9000021,
+          "zenodo_version_doi": "10.5281/zenodo.9000022",
+          "zenodo_resource_type": {
+            "type": "presentation",
+            "title": "Presentation"
+          }
+        }
+      }
+    },
+    {
+      "observed_at": "2026-09-02T06:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "10.5281/zenodo.9000022",
+      "source_system": "datacite",
+      "source_id": "10.5281/zenodo.9000022",
+      "source_key": "2026-09-02T05:00:00Z",
+      "actor": "harvest/datacite",
+      "provenance": {
+        "title": { "extraction_method": "api" },
+        "resource_kind": { "extraction_method": "api" }
+      },
+      "source": {
+        "title": "Perspectives on wind lidar digitalisation",
+        "doi": "10.5281/zenodo.9000022",
+        "url": "https://zenodo.org/doi/10.5281/zenodo.9000022",
+        "source_urls": ["https://zenodo.org/doi/10.5281/zenodo.9000022"],
+        "authors": [{ "name": "Steudel, D." }],
+        "publisher": "Zenodo",
+        "published_date": "2026-03-11",
+        "license_raw": "cc-by-4.0",
+        "license_id": "cc-by",
+        "resource_kind": "publication",
+        "iea_task": [],
+        "withdrawn": false,
+        "related_identifiers": [
+          {
+            "relation": "IsVersionOf",
+            "identifier": "10.5281/zenodo.9000021",
+            "identifier_type": "DOI"
+          }
+        ],
+        "extra": {
+          "datacite_client_id": "cern.zenodo",
+          "datacite_state": "findable",
+          "datacite_types": {
+            "resourceType": "Presentation",
+            "resourceTypeGeneral": "Text"
+          }
+        }
+      }
+    }
+  ]
+}

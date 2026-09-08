@@ -500,6 +500,15 @@ def _compose_source(
     Higher-precedence systems (lower number) win scalars; set-valued fields
     union across all of them, so a four-way merge keeps four source URLs
     (fixture ``x-01``).
+
+    ``extra`` is the exception to "the winner replaces": it is a **bag of
+    fields**, not one value, and each source fills it with keys only that source
+    has — ``datacite_types``, ``crossref_type``, ``zenodo_resource_type``. Under
+    wholesale replacement the highest-precedence system's bag simply deleted
+    every other system's, so a record scraped by both DataCite and Zenodo lost
+    Zenodo's resource type — the single most specific classification signal in
+    the catalogue (ADR-0040, fixture ``x-11``). It is therefore merged key by
+    key, with precedence deciding only where two systems use the *same* key.
     """
     order = sorted(
         by_system,
@@ -512,6 +521,10 @@ def _compose_source(
         for key, value in block.items():
             if key in SET_VALUED_FIELDS:
                 composed[key] = _union(composed.get(key), value)
+            elif key == "extra" and isinstance(value, dict):
+                merged = dict(composed.get("extra") or {})
+                merged.update({k: v for k, v in value.items() if not _is_empty(v)})
+                composed["extra"] = merged
             elif not _is_empty(value):
                 composed[key] = value
             else:

@@ -8,7 +8,7 @@
   "identity_key": "10.5072/zenodo.1234569",
   "source_system": "zenodo",
   "source_id": "1234570",
-  "source_key": "2@10.5072/zenodo.1234570",
+  "source_key": "2@10.5072/zenodo.1234570~m2",
   "source": {
     "title": "Nacelle lidar campaign at the Rødsand site, 2025 (embargoed)",
     "notes": "<p>Ten-minute nacelle lidar statistics. Files are under embargo until 1 March 2027; the metadata is public.</p>",
@@ -55,8 +55,12 @@
     ],
     "withdrawn": false,
     "extra": {
-      "zenodo_record_id": 1234570,
       "zenodo_concept_recid": "1234569",
+      "zenodo_record_id": 1234570,
+      "zenodo_resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
       "zenodo_version_doi": "10.5072/zenodo.1234570"
     }
   },

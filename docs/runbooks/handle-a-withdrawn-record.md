@@ -3,7 +3,7 @@ type: runbook
 id: RUN-handle-a-withdrawn-record
 status: current
 date: 2026-08-31
-related: [adr-0027-withdrawn-records-are-retained, adr-0037-events-are-the-source-of-truth, correct-a-record, record-format]
+related: [adr-0027-withdrawn-records-are-retained, adr-0037-events-are-the-source-of-truth, correct-a-record, record-format, adr-0042-the-concept-doi-is-the-record]
 tags: [runbook, lifecycle, link-rot]
 last_executed: 2026-08-31
 ---

@@ -209,6 +209,10 @@
           "value": "dataset"
         },
         {
+          "key": "resource_type",
+          "value": "dataset"
+        },
+        {
           "key": "source_id",
           "value": "task43/outputs#osterild"
         },
@@ -245,6 +249,7 @@
       "license_id": "cc-by",
       "name": "doi-10-5072-zenodo-1234566",
       "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021.</p>",
+      "owner_org": "dtu",
       "private": false,
       "resources": [
         {
@@ -270,8 +275,7 @@
       ],
       "title": "Lidar measurements from the Østerild campaign, 2021",
       "url": "https://doi.org/10.5072/zenodo.1234566",
-      "version": "2.0",
-      "owner_org": "dtu"
+      "version": "2.0"
     }
   },
   "expected_notices": []

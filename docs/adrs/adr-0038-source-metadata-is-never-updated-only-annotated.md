@@ -5,7 +5,7 @@ title: Source metadata is never updated, only annotated
 status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
-related: [adr-0037-events-are-the-source-of-truth, adr-0026-change-detection-by-source-key, adr-0027-withdrawn-records-are-retained, adr-0028-provenance-is-displayed, correct-a-record, record-format]
+related: [adr-0037-events-are-the-source-of-truth, adr-0026-change-detection-by-source-key, adr-0027-withdrawn-records-are-retained, adr-0028-provenance-is-displayed, correct-a-record, record-format, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels, adr-0042-the-concept-doi-is-the-record, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus]
 tags: [data-model, curation, trust]
 ---
 

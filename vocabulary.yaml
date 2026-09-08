@@ -1,0 +1,393 @@
+# vocabulary.yaml — the controlled vocabularies, and what every term means.
+#
+# This is a register, like sources.yaml, groups.yaml and organizations.yaml: it
+# is canonical data, hand-edited, and it lives at the repository root. It is the
+# ONE place a term is defined. Everything that shows a term to a reader reads it
+# from here:
+#
+#   * harvest/resource_types.py    — validates the vocabulary and derives values
+#   * site/src/lib/vocabulary.ts   — labels and tooltips on every chip
+#   * site/src/pages/about.astro   — the Definitions section, rendered from here
+#
+# Adding a value in one place and defining it in another is how a catalogue ends
+# up with an "Other" bucket nobody can explain. Define it here or not at all;
+# `make test` fails if the code knows a value this file does not.
+#
+# WHY TWO LEVELS (ADR-0040). `resource_kind` is the coarse facet and it is a
+# CKAN field, so its six values are fixed by the promotion contract (ADR-0021)
+# and by every /catalogue?kind= URL already in the wild. `resource_type` is the
+# specific one — "Journal article", "IEA Wind Recommended Practice", "Research
+# software" — derived from what the upstream source already told us. Both are
+# filterable; the specific one is what a reader sees on the record.
+#
+# `authority` names who defines a term when it is not ours to define. The IEA
+# Wind publication types are IEA Wind's own; the research-software definition is
+# the FAIR4RS one, which is what the IEA Wind community settled on.
+
+version: 1
+
+authorities:
+  iea-wind-publications:
+    title: "IEA Wind TCP — Publications"
+    url: "https://iea-wind.org/publications/"
+  iea-wind-rp:
+    title: "IEA Wind TCP — Recommended Practices"
+    url: "https://iea-wind.org/publications/rp/"
+  fair4rs:
+    title: "FAIR Principles for Research Software (FAIR4RS Principles), v1.0"
+    url: "https://doi.org/10.15497/RDA00068"
+    note: >-
+      Cited by the IEA Wind board as the definition to use; the record the
+      request pointed at is https://zenodo.org/records/6623556.
+
+# ---------------------------------------------------------------------------
+# The coarse facet. Six values, fixed by the CKAN promotion contract.
+# ---------------------------------------------------------------------------
+resource_kinds:
+  - name: dataset
+    label: Dataset
+    plural: datasets
+    definition: >-
+      A published collection of measured, modelled or simulated data, deposited
+      so that other people can download and reuse it.
+
+  - name: publication
+    label: Publication
+    plural: publications
+    definition: >-
+      A written research output published through a journal, a conference, a
+      book or a preprint server — something that went through an editor or a
+      programme committee.
+
+  - name: report
+    label: Report
+    plural: reports
+    definition: >-
+      Grey literature: a document published by an organisation on its own
+      authority rather than through a journal. Every official IEA Wind
+      publication type lives here.
+
+  - name: software
+    label: Software
+    plural: software
+    definition: >-
+      Code published so that other people can run or reuse it — a repository, a
+      release, a library or a tool.
+
+  - name: model
+    label: Model
+    plural: models
+    definition: >-
+      A published simulation model or reference design, such as a reference wind
+      turbine definition.
+
+  - name: other
+    label: Other
+    plural: other records
+    definition: >-
+      Everything that is none of the above. It is not a shrug: each record still
+      carries a specific type, and in this catalogue "other" is almost entirely
+      presentations, posters and meeting records from IEA Wind Task events.
+
+# ---------------------------------------------------------------------------
+# The specific vocabulary. Every value names its parent kind.
+# ---------------------------------------------------------------------------
+resource_types:
+
+  # -- dataset --------------------------------------------------------------
+  - name: dataset
+    kind: dataset
+    label: Dataset
+    definition: >-
+      A published data collection. The source states no narrower type.
+
+  # -- publication ----------------------------------------------------------
+  - name: journal-article
+    kind: publication
+    label: Journal article
+    definition: >-
+      An article published in an issue of a peer-reviewed journal.
+
+  - name: conference-paper
+    kind: publication
+    label: Conference paper
+    definition: >-
+      A paper published in the proceedings of a conference or symposium.
+
+  - name: preprint
+    kind: publication
+    label: Preprint
+    definition: >-
+      A manuscript posted publicly before, or without, journal peer review.
+
+  - name: thesis
+    kind: publication
+    label: Thesis
+    definition: >-
+      A doctoral or master's thesis submitted for a degree.
+
+  - name: book-chapter
+    kind: publication
+    label: Book chapter
+    definition: >-
+      A chapter in an edited book or monograph.
+
+  - name: working-paper
+    kind: publication
+    label: Working paper
+    definition: >-
+      A paper circulated for discussion and comment, not submitted for
+      publication in this form.
+
+  - name: publication
+    kind: publication
+    label: Publication (unspecified)
+    definition: >-
+      The source says this is a publication but does not say which kind. The
+      catalogue does not guess.
+
+  # -- report ---------------------------------------------------------------
+  - name: recommended-practice
+    kind: report
+    label: IEA Wind Recommended Practice
+    authority: iea-wind-rp
+    definition: >-
+      An IEA Wind publication type. "A Recommended Practices document includes
+      actions and procedures recommended by the experts involved." Developed and
+      reviewed by experts in the area it addresses and approved by the IEA Wind
+      Executive Committee.
+
+  - name: best-practice
+    kind: report
+    label: IEA Wind Best Practice
+    authority: iea-wind-rp
+    definition: >-
+      An IEA Wind publication type. "A Best Practices document includes
+      suggested actions and procedures based on good industry practices
+      collected during the research project."
+
+  - name: expert-group-report
+    kind: report
+    label: IEA Wind Expert Group Report
+    authority: iea-wind-rp
+    definition: >-
+      An IEA Wind publication type. "An Experts Group Report includes the latest
+      background information on the topic as well as a survey of practices,
+      where possible."
+
+  - name: technical-report
+    kind: report
+    label: Technical report
+    authority: iea-wind-publications
+    definition: >-
+      Published by the research Tasks to report the results of their research.
+      Includes tutorials, roadmaps, analyses of laboratory testing and surveys,
+      and the Final Technical Report documenting a Task's results at the end of
+      its term.
+
+  - name: annual-report
+    kind: report
+    label: IEA Wind Annual Report
+    authority: iea-wind-publications
+    definition: >-
+      The IEA Wind TCP's report for one year: an executive summary, the country
+      reports summarising each member's policies and deployment, and the task
+      reports.
+
+  - name: tem-proceedings
+    kind: report
+    label: Topical Expert Meeting proceedings
+    authority: iea-wind-publications
+    definition: >-
+      The proceedings of a Topical Expert Meeting — the workshops IEA Wind holds
+      four times a year, at which invited experts share current knowledge on a
+      topic of common interest to members.
+
+  - name: project-deliverable
+    kind: report
+    label: Project deliverable
+    definition: >-
+      A document produced to satisfy a funded project's deliverable schedule.
+
+  - name: report
+    kind: report
+    label: Report (unspecified)
+    definition: >-
+      A report whose publisher states no narrower type.
+
+  # -- software -------------------------------------------------------------
+  - name: research-software
+    kind: software
+    label: Research software
+    authority: fair4rs
+    definition: >-
+      FAIR4RS: "source code files, algorithms, scripts, computational workflows
+      and executables that were created during the research process or for a
+      research purpose." In this catalogue that is code with research
+      provenance — published under a DOI, released from an IEA Wind Task
+      organisation, or shipping citation metadata.
+
+  - name: other-software
+    kind: software
+    label: Other software
+    authority: fair4rs
+    definition: >-
+      What FAIR4RS calls "software in research": components used for research
+      but not created during it, or with a clear research intent. In this
+      catalogue it is also where wind-related code with no research provenance
+      ends up — a company's repository, a student project, a site build.
+
+  # -- model ----------------------------------------------------------------
+  - name: model
+    kind: model
+    label: Model
+    definition: >-
+      A published simulation model or reference design.
+
+  # -- other ----------------------------------------------------------------
+  - name: presentation
+    kind: other
+    label: Presentation
+    definition: >-
+      Slides presented at a meeting, seminar, workshop or conference.
+
+  - name: poster
+    kind: other
+    label: Poster
+    definition: >-
+      A poster presented at a conference or workshop.
+
+  - name: meeting-record
+    kind: other
+    label: Meeting record
+    definition: >-
+      The record of a meeting or event rather than a paper about it — a kickoff,
+      a general meeting, a seminar series, minutes, an agenda.
+
+  - name: image
+    kind: other
+    label: Image
+    definition: >-
+      A figure, photograph or diagram published in its own right.
+
+  - name: video
+    kind: other
+    label: Video
+    definition: >-
+      A recording of a talk, a demonstration or an experiment.
+
+  - name: other
+    kind: other
+    label: Other (unspecified)
+    definition: >-
+      The source states a type the catalogue has no narrower term for. If you
+      see many of these, the vocabulary needs a new value — add it here.
+
+# ---------------------------------------------------------------------------
+# Availability. What stands between a reader and the files.
+# ---------------------------------------------------------------------------
+access_statuses:
+  - name: open
+    label: Open access
+    definition: >-
+      Freely accessible — no account, request or embargo stands between you and
+      the files.
+
+  - name: restricted
+    label: Restricted
+    definition: >-
+      Access is limited: it may need a request, an approval, or membership at
+      the source.
+
+  - name: registration-required
+    label: Registration required
+    definition: >-
+      You must create an account or sign in at the source before you can access
+      it.
+
+  - name: embargoed
+    label: Embargoed
+    definition: >-
+      Under embargo now; the source states a date on which access opens.
+
+  - name: metadata-only
+    label: Metadata only
+    definition: >-
+      Only the metadata is published. The files themselves are not available,
+      here or at the source.
+
+  - name: unknown
+    label: Access unknown
+    definition: >-
+      The source does not state the access conditions, so the catalogue does not
+      assume them. It does not mean the record is closed — only that nobody has
+      said. Where a source states access elsewhere (Zenodo does; DataCite's copy
+      of the same record does not) the catalogue goes and asks, so this bucket
+      should keep shrinking.
+
+# ---------------------------------------------------------------------------
+# The rest of the vocabulary a reader meets on a record page.
+# ---------------------------------------------------------------------------
+terms:
+  - name: source
+    label: Source
+    definition: >-
+      The system the catalogue harvested this record's metadata FROM — Zenodo,
+      DataCite, Crossref, OSTI, GitHub, iea-wind.org. It is a statement about
+      where the description came from, not about where the artifact is
+      published. A record found by reading a Task publication list on
+      iea-wind.org, but deposited on Zenodo, has iea-wind.org as its source and
+      Zenodo as its host. The record page names both.
+
+  - name: host
+    label: Published at
+    definition: >-
+      Where the artifact itself lives, taken from its own landing page URL.
+      This is the link to follow to get the files.
+
+  - name: iea-task
+    label: IEA Wind Task
+    definition: >-
+      The IEA Wind TCP research Task this record belongs to. Task numbers have
+      been reused and renumbered over the years, so the catalogue resolves every
+      spelling and alias through groups.yaml rather than matching on the number.
+
+  - name: institution
+    label: Institution
+    definition: >-
+      The organisation the catalogue attributes the record to, resolved against
+      organizations.yaml. It is the depositing or publishing organisation, not
+      necessarily every author's affiliation.
+
+  - name: provenance
+    label: Provenance
+    definition: >-
+      How the catalogue came to know a field's value, recorded per field. "API"
+      means a structured API stated it. "Pattern" means a deterministic rule
+      derived it from what the source stated. "Model" means a language model
+      extracted it from a web page — those are marked on the record, and no
+      identifier is ever accepted from a model without resolving it against
+      DataCite or Crossref first.
+
+  - name: concept-doi
+    label: Concept DOI
+    definition: >-
+      Zenodo mints one DOI per deposited version and one "concept" DOI that
+      always resolves to the latest version. The catalogue lists the concept
+      DOI, because that is the one worth citing. Version DOIs found separately
+      are merged into it and kept — see "Merged record".
+
+  - name: merged-record
+    label: Merged record
+    definition: >-
+      Two records the catalogue determined are the same artifact. The evidence
+      is always recorded: what was merged, into what, and on what grounds. The
+      merged-away record is retained and stays citable at its own URL — it is
+      hidden from the listings, never deleted.
+
+  - name: withdrawn
+    label: Withdrawn
+    definition: >-
+      The source has removed or retracted the artifact. The catalogue keeps the
+      record and stops offering the files. Link rot is the thing a catalogue
+      exists to resist, so nothing is ever deleted.

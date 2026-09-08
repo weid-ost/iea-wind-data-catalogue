@@ -196,7 +196,7 @@ system** and, if unchanged, **skips the record and writes no event**.
 
 | Source | Key | Note |
 |---|---|---|
-| `zenodo` | `"<revision>@<version DOI>"` | **Verified live 2026-08-31**: the field is `revision` (top-level int); there is no `revision_id` on this API surface. The version DOI is load-bearing, not decoration — the identity is the *concept* DOI, so a new version is a different record whose revision counter restarts, and OpenOA's v3.1.4 and v3.2 are both `revision 4`. See the `harvest/adapters/zenodo.py` docstring |
+| `zenodo` | `"<revision>@<version DOI>~m<MAPPING_VERSION>"` | **Verified live 2026-08-31**: the field is `revision` (top-level int); there is no `revision_id` on this API surface. The version DOI is load-bearing, not decoration — the identity is the *concept* DOI, so a new version is a different record whose revision counter restarts, and OpenOA's v3.1.4 and v3.2 are both `revision 4`. See the `harvest/adapters/zenodo.py` docstring. The `~m<n>` suffix is the adapter's **mapping version** (ADR-0041) |
 | `datacite` | `attributes.updated` | reflects client metadata pushes |
 | `crossref` | `deposited` | **not** `indexed`, which churns without content change |
 | `github` | default-branch SHA + latest release tag + `hash(description, topics, licence)` | no single trustworthy field exists |
@@ -219,6 +219,39 @@ entire design.
 
 A noisy key costs a redundant re-scrape and a no-op event. It cannot clobber a
 human edit, because of §5.
+
+### The mapping version (ADR-0041)
+
+Change detection has a consequence that has to be stated: **a change to `map()`
+only ever applies to records harvested after it ships.** Improve an adapter to
+preserve a field it used to discard and every record already in the catalogue
+keeps the old mapping for as long as its upstream sits still — which, for a
+finished 2023 conference presentation, is forever. Re-running the harvest does
+not help; it computes the same key and skips.
+
+So an adapter may declare `MAPPING_VERSION` and fold it into its source key.
+**Bump it whenever `map()` starts preserving something it did not preserve
+before.** The next run re-scrapes every record of that source exactly once, then
+resumes ordinary change detection. Keep a one-line changelog beside the constant
+saying what each version added.
+
+Forgetting to bump is silent: the improvement ships and reaches nothing.
+
+### The backfill phase (ADR-0041)
+
+An adapter may fetch records the catalogue already knows about from another
+source. `run_adapter` sets `adapter.events_dir` before calling `harvest()`, and
+it is **`None` for a directly-constructed adapter** — a `map()` unit test, a
+fixture replay. An adapter must treat `None` as "I have not been told what the
+catalogue holds" and skip its backfill entirely, rather than reaching for the
+default directory and reading the live repository from inside a test.
+
+A backfilled observation sets `RawObservation.identity_override`, and `map()`
+must honour it: the artifact is enriched under the identity the catalogue
+already lists it by, never re-keyed to the one this payload would produce.
+Re-keying mints a second record for one artifact. Collapsing two identities is a
+**merge**, and merges belong to the reconciler (§9a, ADR-0042). `map()` stays
+pure either way. Fixture `zen-13`.
 
 ---
 
@@ -307,7 +340,7 @@ mapped only in field *names*.
 | `version` | `str` | |
 | `license_raw` | `str` | exactly what the source said |
 | `license_id` | `str` | mapped through `harvest.licenses.map_license` |
-| `resource_kind` | `str` | `dataset` `publication` `software` `report` `model` `other` |
+| `resource_kind` | `str` | `dataset` `publication` `software` `report` `model` `other`. The **coarse** facet, fixed by the CKAN promotion contract |
 | `access_status` | `str` | `open` `restricted` `embargoed` `registration-required` `metadata-only` `unknown` |
 | `embargo_date` | `str` | |
 | `container` | `str` | journal / series / community title |
@@ -355,6 +388,7 @@ across every annotation.
 | only `local` has the field | local value |
 | both, **scalar** | **source displaces local**; local retained in the log; a `displacement` notice appears in `resolved.notices` and the run report (`x-03`) |
 | both, **set-valued** | **union** — a Zenodo community adding Task 43 never erases a hand-added Task 49 (`x-04`) |
+| two source systems both fill `extra` | **merged key by key.** `extra` is a bag of fields, not one value, and each source fills it with keys only that source has. Precedence decides only where two systems use the *same* key. Under the old wholesale replacement, DataCite's bag deleted Zenodo's and the catalogue lost `zenodo_resource_type`, the most specific classification signal it has (`x-11`, ADR-0040) |
 | a `withdrawn` event exists | `withdrawn: true`, metadata retained, record still materialised (`zen-12`, ADR-0027) |
 
 `resolve()` raises implicit displacement notices itself, so the behaviour is
@@ -513,7 +547,8 @@ run in which nothing changed produces no diff in `data/records/`.
     { "key": "published_date", "value": "2024-06-01" },
     { "key": "publisher", "value": "Zenodo" },
     { "key": "related_identifiers", "value": "[{\"identifier\":\"10.5072/zenodo.1234566\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]" },
-    { "key": "resource_kind", "value": "dataset" },
+    { "key": "resource_kind", "value": "dataset" },              // the coarse facet
+    { "key": "resource_type", "value": "dataset" },              // the specific value under it (ADR-0040)
     { "key": "source_id", "value": "1234567" },
     { "key": "source_key", "value": "3" },
     { "key": "source_system", "value": "zenodo" },

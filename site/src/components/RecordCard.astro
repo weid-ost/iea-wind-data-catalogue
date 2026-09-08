@@ -12,6 +12,7 @@
 import TaskChip from './TaskChip.astro';
 import Badge from './Badge.astro';
 import AvailabilityBadge from './AvailabilityBadge.astro';
+import ResourceTypeBadge from './ResourceTypeBadge.astro';
 import SourceLink from './SourceLink.astro';
 import {
   authorSummary,
@@ -20,16 +21,17 @@ import {
   isWithdrawn,
   inferredFields,
   plainText,
+  resourceKindOf,
+  resourceTypeOf,
   sourceSystemsOf,
   sourceUrlsOf,
   tasksOf,
   truncate,
   yearOf,
-  RESOURCE_KIND_LABELS,
   type CkanPackage,
 } from '../lib/record';
 import { filterHref, recordPath } from '../lib/url';
-import { kindTip, inferredTip, withdrawnTip } from '../lib/tooltips';
+import { inferredTip, withdrawnTip } from '../lib/tooltips';
 
 interface Props {
   pkg: CkanPackage;
@@ -38,7 +40,8 @@ interface Props {
 const { pkg, headingLevel = 'h2' } = Astro.props;
 const Heading = headingLevel;
 
-const kind = extra(pkg, 'resource_kind');
+const kind = resourceKindOf(pkg);
+const resourceType = resourceTypeOf(pkg);
 const summary = truncate(plainText(pkg.notes), 220);
 const authors = authorSummary(authorsOf(pkg));
 const year = yearOf(pkg);
@@ -66,11 +69,9 @@ const sourceUrl = extra(pkg, 'source_url') ?? sourceUrlsOf(pkg)[0];
   {summary && <p class="card__summary">{summary}</p>}
 
   <div class="row card__meta">
-    {kind && (
-      <Badge icon="▤" href={filterHref('kind', kind)} tip={kindTip(kind)}>
-        {RESOURCE_KIND_LABELS[kind] ?? kind}
-      </Badge>
-    )}
+    {/* The specific type only: it implies its parent kind, its tooltip names
+        it, and two classification chips per card is noise. */}
+    {(kind || resourceType) && <ResourceTypeBadge kind={kind} type={resourceType} />}
     <AvailabilityBadge status={extra(pkg, 'access_status')} embargoDate={extra(pkg, 'embargo_date')} />
     {withdrawn && <Badge tone="withdrawn" icon="⊘" tip={withdrawnTip}>Withdrawn upstream</Badge>}
     {inferred.length > 0 && (

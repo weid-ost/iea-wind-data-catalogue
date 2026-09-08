@@ -26,6 +26,7 @@ from harvest.events import iter_identity_keys, log_problems, resolve
 from harvest.institutions import infer_owner_org
 from harvest.licenses import is_known_license, map_license
 from harvest.models import ResolvedRecord, json_extra
+from harvest.resource_types import derive as derive_resource_type
 
 __all__ = [
     "MaterializeResult",
@@ -63,6 +64,7 @@ EXTRA_KEYS = (
     "related_identifiers",
     "report_number",
     "resource_kind",
+    "resource_type",
     "source_id",
     "source_key",
     "source_system",
@@ -122,10 +124,18 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
     if effective.get("url") and effective["url"] not in source_urls:
         source_urls = [effective["url"], *source_urls]
 
+    resource_kind, resource_type = derive_resource_type(
+        effective, resolved.source_systems or []
+    )
+
     provenance = {
         key: value.model_dump(mode="json", exclude_none=True)
         for key, value in sorted(resolved.provenance.items())
     }
+    # `resource_type` is derived, so it carries the provenance of the field it
+    # was derived from rather than pretending an API stated it (ADR-0028).
+    if resource_type and "resource_kind" in provenance:
+        provenance.setdefault("resource_type", dict(provenance["resource_kind"]))
 
     candidates: dict[str, Any] = {
         "identity_key": resolved.identity_key,
@@ -142,7 +152,13 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
         "iea_task": sorted(
             {config.canonical_group(task) for task in (effective.get("iea_task") or []) if task}
         ) or None,
-        "resource_kind": effective.get("resource_kind"),
+        # The coarse facet and the specific type, derived together from what
+        # the sources already stated (ADR-0040). The specific value may correct
+        # the coarse one: a "Project deliverable" the adapter flattened to
+        # `publication` is grey literature, and `report` is where a reader
+        # looking for grey literature will go.
+        "resource_kind": resource_kind,
+        "resource_type": resource_type,
         "access_status": effective.get("access_status"),
         "embargo_date": effective.get("embargo_date"),
         "authors": effective.get("authors") or None,

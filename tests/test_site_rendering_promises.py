@@ -138,9 +138,19 @@ class TestTheHomepageCounts:
         assert "${kind}${n === 1 ? '' : 's'}" not in index
 
     def test_software_has_no_plural_s(self) -> None:
-        record = read("src", "lib", "record.ts")
-        assert "software: 'software'" in record
-        assert "other: 'other records'" in record
+        """The plurals now live in ``vocabulary.yaml``, which is where they are
+        checked. Slugs are not English, and ``${kind}s`` said "5 softwares"
+        beside a facet that said "Software" (product-e2e-06)."""
+        from harvest import config
+
+        plurals = {
+            entry["name"]: entry.get("plural")
+            for entry in config.load_vocabulary()["resource_kinds"]
+        }
+        assert plurals["software"] == "software"
+        assert plurals["other"] == "other records"
+        # …and every kind states one, rather than falling back to the naive rule.
+        assert all(plurals.values()), plurals
 
 
 class TestTheSitemap:

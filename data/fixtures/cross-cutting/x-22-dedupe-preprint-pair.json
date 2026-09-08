@@ -187,6 +187,10 @@
           "value": "publication"
         },
         {
+          "key": "resource_type",
+          "value": "publication"
+        },
+        {
           "key": "source_id",
           "value": "10.5194/egusphere-2023-1234"
         },
@@ -219,13 +223,13 @@
       "license_id": "cc-by",
       "name": "doi-10-5194-egusphere-2023-1234",
       "notes": "",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Turbulence intensity in the wake of a floating offshore turbine",
-      "url": "https://doi.org/10.5194/egusphere-2023-1234",
-      "owner_org": "unattributed"
+      "url": "https://doi.org/10.5194/egusphere-2023-1234"
     },
     "doi-10-5194-wes-9-101-2024": {
       "extras": [
@@ -290,6 +294,10 @@
           "value": "publication"
         },
         {
+          "key": "resource_type",
+          "value": "publication"
+        },
+        {
           "key": "source_id",
           "value": "10.5194/wes-9-101-2024"
         },
@@ -322,13 +330,13 @@
       "license_id": "cc-by",
       "name": "doi-10-5194-wes-9-101-2024",
       "notes": "",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Turbulence intensity in the wake of a floating offshore wind turbine",
-      "url": "https://doi.org/10.5194/wes-9-101-2024",
-      "owner_org": "unattributed"
+      "url": "https://doi.org/10.5194/wes-9-101-2024"
     }
   },
   "expected_notices": [],
@@ -427,6 +435,10 @@
           "value": "publication"
         },
         {
+          "key": "resource_type",
+          "value": "publication"
+        },
+        {
           "key": "source_id",
           "value": "10.5194/egusphere-2023-1234"
         },
@@ -463,13 +475,13 @@
       "license_id": "cc-by",
       "name": "doi-10-5194-egusphere-2023-1234",
       "notes": "",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Turbulence intensity in the wake of a floating offshore turbine",
-      "url": "https://doi.org/10.5194/egusphere-2023-1234",
-      "owner_org": "unattributed"
+      "url": "https://doi.org/10.5194/egusphere-2023-1234"
     },
     "doi-10-5194-wes-9-101-2024": {
       "extras": [
@@ -538,6 +550,10 @@
           "value": "publication"
         },
         {
+          "key": "resource_type",
+          "value": "publication"
+        },
+        {
           "key": "source_id",
           "value": "10.5194/wes-9-101-2024"
         },
@@ -570,13 +586,13 @@
       "license_id": "cc-by",
       "name": "doi-10-5194-wes-9-101-2024",
       "notes": "",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "Turbulence intensity in the wake of a floating offshore wind turbine",
-      "url": "https://doi.org/10.5194/wes-9-101-2024",
-      "owner_org": "unattributed"
+      "url": "https://doi.org/10.5194/wes-9-101-2024"
     }
   }
 }

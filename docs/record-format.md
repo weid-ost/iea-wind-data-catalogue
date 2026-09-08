@@ -3,7 +3,7 @@ type: reference
 id: record-format
 status: current
 date: 2026-08-31
-related: [architecture, adr-0021-canonical-record-is-a-ckan-package-dict, adr-0037-events-are-the-source-of-truth, adr-0038-source-metadata-is-never-updated-only-annotated]
+related: [architecture, adr-0021-canonical-record-is-a-ckan-package-dict, adr-0037-events-are-the-source-of-truth, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels]
 tags: [schema, records, events]
 ---
 
@@ -225,7 +225,7 @@ Verbatim in content; mapped only in field *names*.
 | `version` | `str` | |
 | `license_raw` | `str` | exactly what the source said |
 | `license_id` | `str` | mapped through `harvest.licenses.map_license` |
-| `resource_kind` | `str` | `dataset` `publication` `software` `report` `model` `other` |
+| `resource_kind` | `str` | `dataset` `publication` `software` `report` `model` `other`. The **coarse** facet, fixed by the CKAN promotion contract |
 | `access_status` | `str` | `open` `restricted` `embargoed` `registration-required` `metadata-only` `unknown` |
 | `embargo_date` | `str` | |
 | `container` | `str` | journal / series / community title |
@@ -322,7 +322,8 @@ is [[correct-a-record]].
     { "key": "published_date", "value": "2024-06-01" },
     { "key": "publisher", "value": "Zenodo" },
     { "key": "related_identifiers", "value": "[{\"identifier\":\"10.5072/zenodo.1234566\",…}]" },
-    { "key": "resource_kind", "value": "dataset" },
+    { "key": "resource_kind", "value": "dataset" },              // the coarse facet
+    { "key": "resource_type", "value": "dataset" },              // the specific value under it (ADR-0040)
     { "key": "source_id", "value": "1234567" },
     { "key": "source_key", "value": "3" },
     { "key": "source_system", "value": "zenodo" },              // the last system to scrape

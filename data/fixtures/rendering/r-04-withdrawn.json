@@ -83,6 +83,10 @@
         "value": "dataset"
       },
       {
+        "key": "resource_type",
+        "value": "dataset"
+      },
+      {
         "key": "source_id",
         "value": "90000005"
       },

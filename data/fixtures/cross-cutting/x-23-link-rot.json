@@ -179,6 +179,10 @@
           "value": "report"
         },
         {
+          "key": "resource_type",
+          "value": "report"
+        },
+        {
           "key": "source_id",
           "value": "task11/publications#7"
         },
@@ -215,6 +219,7 @@
       "license_id": "cc-by",
       "name": "doi-10-5281-zenodo-8000008",
       "notes": "",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [
         {
@@ -226,8 +231,7 @@
       "state": "active",
       "tags": [],
       "title": "Task 11 final technical report",
-      "url": "https://iea-wind.org/task11/publications/",
-      "owner_org": "unattributed"
+      "url": "https://iea-wind.org/task11/publications/"
     }
   },
   "expected_notices": [],

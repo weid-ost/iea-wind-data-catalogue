@@ -8,6 +8,13 @@
  * a default that would make "we don't know" look like "no".
  */
 import { LICENSES } from '../licenses.mjs';
+import {
+  accessStatuses,
+  asLabels,
+  parentKind,
+  resourceKinds,
+  typeLabel,
+} from './vocabulary';
 
 export type Extras = Record<string, string>;
 
@@ -209,6 +216,71 @@ export const SOURCE_LABELS: Record<string, string> = {
 export const sourceLabel = (system: string): string => SOURCE_LABELS[system] ?? system;
 
 /**
+ * Hostnames the catalogue can name, for the "Published at" line.
+ *
+ * `SOURCE_LABELS` above answers a different question — which of our seven
+ * adapters read this record — and conflating the two is what made a Zenodo
+ * deposit found by reading a Task publication list say "Source: iea-wind.org"
+ * with no mention of Zenodo anywhere (issue #2). One is provenance, the other
+ * is where the files are; a record page owes the reader both.
+ */
+const HOST_LABELS: Record<string, string> = {
+  'zenodo.org': 'Zenodo',
+  'sandbox.zenodo.org': 'Zenodo (sandbox)',
+  'github.com': 'GitHub',
+  'osti.gov': 'OSTI',
+  'www.osti.gov': 'OSTI',
+  'wdh.energy.gov': 'Wind Data Hub',
+  'a2e.energy.gov': 'Wind Data Hub',
+  'iea-wind.org': 'iea-wind.org',
+  'doi.org': 'doi.org',
+  'dx.doi.org': 'doi.org',
+};
+
+export interface Host {
+  /** "Zenodo", or the bare hostname when the catalogue has no name for it. */
+  label: string;
+  url: string;
+  hostname: string;
+}
+
+const hostnameOf = (url: string): string => {
+  try {
+    return new URL(url).hostname.toLowerCase();
+  } catch {
+    return '';
+  }
+};
+
+/**
+ * Every distinct place this artifact actually lives, in the order the record
+ * lists them, de-duplicated by hostname.
+ *
+ * This is the link a reader wants: the DOI first when there is one, because it
+ * is the citable, persistent route, then each landing page the sources gave us.
+ * A record with a Zenodo DOI now says "Published at Zenodo" even when the only
+ * system that ever saw it was iea-wind.org.
+ */
+export function hostsOf(pkg: CkanPackage): Host[] {
+  const doi = extra(pkg, 'doi');
+  const candidates = [
+    ...(doi ? [`https://doi.org/${doi}`] : []),
+    ...(pkg.url ? [pkg.url] : []),
+    ...(extra(pkg, 'source_url') ? [extra(pkg, 'source_url') as string] : []),
+    ...sourceUrlsOf(pkg),
+  ];
+  const seen = new Set<string>();
+  const hosts: Host[] = [];
+  for (const url of candidates) {
+    const hostname = hostnameOf(url);
+    if (!hostname || seen.has(hostname)) continue;
+    seen.add(hostname);
+    hosts.push({ label: HOST_LABELS[hostname] ?? hostname.replace(/^www\./, ''), url, hostname });
+  }
+  return hosts;
+}
+
+/**
  * Where a reader should go to report a metadata problem. Corrections belong at
  * the source, where the author can actually make them and every other consumer
  * benefits (ADR-0038).
@@ -256,37 +328,43 @@ const AVAILABILITY_FACET: Record<string, string> = {
   unknown: 'unknown',
 };
 
-export const ACCESS_LABELS: Record<string, string> = {
-  open: 'Open access',
-  restricted: 'Restricted',
-  embargoed: 'Embargoed',
-  'registration-required': 'Registration required',
-  'metadata-only': 'Metadata only',
-  unknown: 'Access unknown',
-};
+/**
+ * Labels come from `vocabulary.yaml` (ADR-0040), which is also what the About
+ * page's Definitions section renders. Hardcoding them here is what let a chip
+ * say one thing and the page explaining it say another.
+ */
+export const ACCESS_LABELS: Record<string, string> = asLabels(accessStatuses);
 
-export const RESOURCE_KIND_LABELS: Record<string, string> = {
-  dataset: 'Dataset',
-  publication: 'Publication',
-  software: 'Software',
-  report: 'Report',
-  model: 'Model',
-  other: 'Other',
-};
+export const RESOURCE_KIND_LABELS: Record<string, string> = asLabels(resourceKinds);
 
 /**
  * The plural of a resource kind, written out — because `${kind}s` produced
  * "5 softwares · 2 others" on the homepage while the facet beside it said
  * "Software" and "Other" (product-e2e-06). Slugs are not English.
  */
-export const RESOURCE_KIND_PLURALS: Record<string, string> = {
-  dataset: 'datasets',
-  publication: 'publications',
-  software: 'software',
-  report: 'reports',
-  model: 'models',
-  other: 'other records',
-};
+export const RESOURCE_KIND_PLURALS: Record<string, string> = Object.fromEntries(
+  resourceKinds.map((entry) => [entry.name, entry.plural ?? `${entry.label.toLowerCase()}s`])
+);
+
+/**
+ * The specific type below `resource_kind` — "Journal article", "IEA Wind
+ * Recommended Practice", "Research software". Derived by the harvest from the
+ * vocabulary the source already published, so it is present on every record
+ * that has a kind at all (ADR-0040).
+ */
+export const resourceTypeOf = (pkg: CkanPackage): string | undefined =>
+  extra(pkg, 'resource_type');
+
+export const resourceTypeLabel = typeLabel;
+
+/**
+ * The kind a record should be filed under, preferring the parent of its
+ * specific type. The two agree on every record the current harvest wrote; they
+ * can differ on one written before the type was derived, and the specific value
+ * is the better evidence.
+ */
+export const resourceKindOf = (pkg: CkanPackage): string | undefined =>
+  parentKind(resourceTypeOf(pkg)) ?? extra(pkg, 'resource_kind');
 
 /** "10 reports", "5 software", "1 dataset". */
 export function resourceKindCount(kind: string, count: number): string {

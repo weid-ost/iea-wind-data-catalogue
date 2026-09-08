@@ -83,6 +83,10 @@
         "value": "report"
       },
       {
+        "key": "resource_type",
+        "value": "technical-report"
+      },
+      {
         "key": "source_id",
         "value": "90000007"
       },

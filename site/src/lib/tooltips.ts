@@ -9,45 +9,77 @@
  * register, so an unknown task still gets a sensible, non-empty tooltip.
  */
 import { taskShort, taskTitle } from './registers';
-import { ACCESS_LABELS, RESOURCE_KIND_LABELS, sourceLabel } from './record';
+import { sourceLabel } from './record';
+import {
+  kindDefinition,
+  kindLabel,
+  statusDefinition,
+  statusLabel,
+  termDefinition,
+  termLabel,
+  typeDefinition,
+  typeEntry,
+  typeLabel,
+} from './vocabulary';
 
 export interface Tip {
   title: string;
   body: string;
 }
 
-const KIND_BODY: Record<string, string> = {
-  dataset: 'A published collection of measured or modelled data.',
-  publication: 'A written output such as a journal article, conference paper or thesis.',
-  software: 'Code, tools or libraries published for others to reuse.',
-  report: 'A technical or project report — often grey literature, frequently without a DOI.',
-  model: 'A published simulation model or numerical dataset.',
-  other: "A record that doesn't fit the other entry types.",
-};
-
+/**
+ * Every tooltip body below is the definition from `vocabulary.yaml` verbatim —
+ * the same sentence the About page's Definitions section prints (ADR-0040).
+ * The wording used to live here in parallel with the page that explained it,
+ * which is how a chip and its explanation drift apart.
+ */
 export const kindTip = (kind: string): Tip => ({
-  title: `Entry type: ${RESOURCE_KIND_LABELS[kind] ?? kind}`,
-  body: KIND_BODY[kind] ?? 'The kind of thing this record describes.',
+  title: `Kind: ${kindLabel(kind)}`,
+  body: kindDefinition(kind) || 'The kind of thing this record describes.',
 });
 
-const AVAILABILITY_BODY: Record<string, string> = {
-  open: 'Freely accessible — no account, request or embargo stands between you and the files.',
-  restricted: 'Access is limited: it may need a request, an approval, or membership at the source.',
-  'registration-required': 'You must create an account or sign in at the source before you can access it.',
-  embargoed: 'Under embargo now; the source states a date on which access opens.',
-  'metadata-only': 'Only the metadata is published — the files themselves are not available here or at the source.',
-  unknown: 'The source does not state the access conditions, so the catalogue does not assume them.',
+/**
+ * The specific type below the kind. The title shows the pair — "Report › IEA
+ * Wind Recommended Practice" — because the value is only meaningful under its
+ * parent, and the reader is looking at a chip that filters on the specific one.
+ */
+export const resourceTypeTip = (type: string): Tip => {
+  const entry = typeEntry(type);
+  const parent = entry?.kind ? `${kindLabel(entry.kind)} › ` : '';
+  return {
+    title: `${parent}${typeLabel(type)}`,
+    body: typeDefinition(type) || 'The specific type of thing this record describes.',
+  };
 };
 
 export const availabilityTip = (status: string): Tip => ({
-  title: `Availability: ${ACCESS_LABELS[status] ?? ACCESS_LABELS.unknown}`,
-  body: AVAILABILITY_BODY[status] ?? AVAILABILITY_BODY.unknown,
+  title: `Availability: ${statusLabel(status) || statusLabel('unknown')}`,
+  body: statusDefinition(status) || statusDefinition('unknown'),
 });
 
 export const sourceTip = (system: string): Tip => ({
-  title: `Source: ${sourceLabel(system)}`,
-  body: `Harvested from ${sourceLabel(system)}. Filter the catalogue to everything that came from this source.`,
+  title: `${termLabel('source')}: ${sourceLabel(system)}`,
+  body: `${termDefinition('source')} This record's metadata was harvested from ${sourceLabel(
+    system
+  )}; the chip filters the catalogue to everything that came from there.`,
 });
+
+/** Where the artifact itself lives, as against where we read about it. */
+export const hostTip = (host: string): Tip => ({
+  title: `${termLabel('host')}: ${host}`,
+  body: termDefinition('host'),
+});
+
+/** The banner on a record that was merged away into another. */
+export const mergedTip: Tip = {
+  title: termLabel('merged-record'),
+  body: termDefinition('merged-record'),
+};
+
+export const conceptDoiTip: Tip = {
+  title: termLabel('concept-doi'),
+  body: termDefinition('concept-doi'),
+};
 
 /**
  * A concise scope line per Task. Covers every Task present in the 30 records

@@ -488,6 +488,15 @@ class RawObservation(BaseModel):
     fetched_at: str = Field(default_factory=utcnow)
     url: str | None = None      # landing page, if the adapter knows it cheaply
     payload: dict[str, Any] = Field(default_factory=dict)
+    #: The identity this observation ENRICHES, when it is not the one ``map()``
+    #: would derive. Set only by a backfill that was handed an identity the
+    #: catalogue already holds (ADR-0041): the Zenodo adapter fetching a record
+    #: another source found first knows the artifact's concept DOI, but the
+    #: catalogue may be listing it under the version DOI DataCite supplied.
+    #: Re-keying it to the concept would mint a second record for one artifact
+    #: instead of enriching the one that exists, so the caller's identity wins.
+    #: An ordinary harvest never sets this, and ``map()`` is still pure.
+    identity_override: str | None = None
 
 
 class MappedObservation(BaseModel):

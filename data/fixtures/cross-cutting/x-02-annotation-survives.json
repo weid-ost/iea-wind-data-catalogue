@@ -196,6 +196,10 @@
           "value": "dataset"
         },
         {
+          "key": "resource_type",
+          "value": "dataset"
+        },
+        {
           "key": "source_id",
           "value": "2000002"
         },
@@ -232,6 +236,7 @@
       "license_id": "cc-by",
       "name": "doi-10-5281-zenodo-2000001",
       "notes": "<p>Second release, with the nacelle lidar channel added.</p>",
+      "owner_org": "zenodo-community",
       "private": false,
       "resources": [],
       "state": "active",
@@ -244,8 +249,7 @@
         }
       ],
       "title": "Wake measurements at the Lillgrund offshore wind farm",
-      "url": "https://zenodo.org/records/2000002",
-      "owner_org": "zenodo-community"
+      "url": "https://zenodo.org/records/2000002"
     }
   },
   "expected_notices": []

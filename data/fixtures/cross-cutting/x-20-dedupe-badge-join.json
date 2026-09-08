@@ -192,6 +192,10 @@
           "value": "software"
         },
         {
+          "key": "resource_type",
+          "value": "research-software"
+        },
+        {
           "key": "source_id",
           "value": "7654321"
         },
@@ -228,14 +232,14 @@
       "license_id": "mit",
       "name": "doi-10-5281-zenodo-7654321",
       "notes": "<p>Software release archived from GitHub.</p>",
+      "owner_org": "zenodo-community",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "digital-wra-data-standard: v1.3.0",
       "url": "https://zenodo.org/records/7654321",
-      "version": "1.3.0",
-      "owner_org": "zenodo-community"
+      "version": "1.3.0"
     },
     "github-iea-task-43-digital-wra-data-standard": {
       "extras": [
@@ -284,6 +288,10 @@
           "value": "software"
         },
         {
+          "key": "resource_type",
+          "value": "other-software"
+        },
+        {
           "key": "source_id",
           "value": "IEA-Task-43/digital-wra-data-standard"
         },
@@ -316,6 +324,7 @@
       "license_id": "mit",
       "name": "github-iea-task-43-digital-wra-data-standard",
       "notes": "<p>An IEA Wind Task 43 data standard for wind resource assessment.</p>",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [],
       "state": "active",
@@ -328,8 +337,7 @@
         }
       ],
       "title": "digital-wra-data-standard",
-      "url": "https://github.com/IEA-Task-43/digital-wra-data-standard",
-      "owner_org": "unattributed"
+      "url": "https://github.com/IEA-Task-43/digital-wra-data-standard"
     }
   },
   "expected_notices": [],
@@ -428,6 +436,10 @@
           "value": "software"
         },
         {
+          "key": "resource_type",
+          "value": "research-software"
+        },
+        {
           "key": "source_id",
           "value": "7654321"
         },
@@ -464,14 +476,14 @@
       "license_id": "mit",
       "name": "doi-10-5281-zenodo-7654321",
       "notes": "<p>Software release archived from GitHub.</p>",
+      "owner_org": "zenodo-community",
       "private": false,
       "resources": [],
       "state": "active",
       "tags": [],
       "title": "digital-wra-data-standard: v1.3.0",
       "url": "https://zenodo.org/records/7654321",
-      "version": "1.3.0",
-      "owner_org": "zenodo-community"
+      "version": "1.3.0"
     },
     "github-iea-task-43-digital-wra-data-standard": {
       "extras": [
@@ -524,6 +536,10 @@
           "value": "software"
         },
         {
+          "key": "resource_type",
+          "value": "other-software"
+        },
+        {
           "key": "source_id",
           "value": "IEA-Task-43/digital-wra-data-standard"
         },
@@ -560,6 +576,7 @@
       "license_id": "mit",
       "name": "github-iea-task-43-digital-wra-data-standard",
       "notes": "<p>An IEA Wind Task 43 data standard for wind resource assessment.</p>",
+      "owner_org": "unattributed",
       "private": false,
       "resources": [],
       "state": "active",
@@ -572,8 +589,7 @@
         }
       ],
       "title": "digital-wra-data-standard",
-      "url": "https://github.com/IEA-Task-43/digital-wra-data-standard",
-      "owner_org": "unattributed"
+      "url": "https://github.com/IEA-Task-43/digital-wra-data-standard"
     }
   }
 }

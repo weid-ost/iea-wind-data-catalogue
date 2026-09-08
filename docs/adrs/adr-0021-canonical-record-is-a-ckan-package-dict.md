@@ -5,7 +5,7 @@ title: Canonical record = CKAN package dict, validated at build
 status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
-related: [adr-0020-aggregation-only, adr-0037-events-are-the-source-of-truth, adr-0032-site-framework-astro, record-format]
+related: [adr-0020-aggregation-only, adr-0037-events-are-the-source-of-truth, adr-0032-site-framework-astro, record-format, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels]
 tags: [contract, promotion, records]
 ---
 

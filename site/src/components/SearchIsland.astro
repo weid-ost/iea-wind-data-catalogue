@@ -8,8 +8,8 @@
  * is a progressive enhancement layered on top, not a prerequisite for reading.
  *
  * The island reads the shared filter vocabulary from the query string
- * (`task`, `kind`, `year`, `licence`, `source`, `institution`, `availability`,
- * `q`, `page`), applies it over the embedded set, updates the list, the live
+ * (`task`, `kind`, `type`, `year`, `licence`, `source`, `institution`,
+ * `availability`, `q`, `page`), applies it over the embedded set, updates the list, the live
  * count and the facet counts in place, and rewrites the URL so a filtered view
  * is shareable. It needs no index and no network, so it works identically under
  * `astro dev` (where Pagefind does not exist) and in the built site — which is
@@ -32,6 +32,8 @@ import {
   plainText,
   authorsOf,
   availabilityOf,
+  resourceKindOf,
+  resourceTypeOf,
   type CkanPackage,
 } from '../lib/record';
 
@@ -60,7 +62,8 @@ const searchText = (pkg: CkanPackage): string =>
 const rows = initial.map((pkg) => ({
   pkg,
   task: tasksOf(pkg).join(' '),
-  kind: extra(pkg, 'resource_kind') ?? '',
+  kind: resourceKindOf(pkg) ?? '',
+  type: resourceTypeOf(pkg) ?? '',
   year: yearOf(pkg),
   licence: pkg.license_id ?? '',
   source: sourceSystemsOf(pkg).join(' '),
@@ -115,6 +118,7 @@ const shown = rows.length;
             <li
               data-task={row.task}
               data-kind={row.kind}
+              data-type={row.type}
               data-year={row.year}
               data-licence={row.licence}
               data-source={row.source}
@@ -164,7 +168,7 @@ const shown = rows.length;
 
       const items = Array.from(list.querySelectorAll('li'));
       const pageSize = Math.max(1, parseInt(root.dataset.pageSize || '20', 10) || 20);
-      const FACETS = ['task', 'kind', 'year', 'licence', 'source', 'institution', 'availability'];
+      const FACETS = ['task', 'kind', 'type', 'year', 'licence', 'source', 'institution', 'availability'];
       const MULTI = new Set(['task', 'source']);
 
       const valuesOf = (li, facet) => {

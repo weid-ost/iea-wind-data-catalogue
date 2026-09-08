@@ -1,0 +1,53 @@
+---
+/**
+ * This record was merged into another: the reconciler determined that two
+ * identity keys describe one artifact, and this is the one that lost.
+ *
+ * Almost always a Zenodo **version** DOI folded into its **concept** DOI.
+ * Zenodo mints a DOI per deposited version plus a concept DOI that always
+ * resolves to the latest, and DataCite indexes the version DOIs — so an
+ * artifact that Zenodo listed under its concept and DataCite under a version
+ * appeared twice, with two DOIs and one title. That is what a reader reported
+ * (issue: "a record can have multiple DOIs").
+ *
+ * Merging hides the duplicate from the listings; it never deletes it
+ * (ADR-0027, ADR-0041). This page, this URL and this citation all keep working,
+ * because somebody may already have cited the version DOI and a catalogue that
+ * breaks citations has failed at its one job. The banner is how a visitor who
+ * arrives here learns where the catalogue actually lists this artifact — and
+ * the evidence for the merge is in the event log, permanently, so it can be
+ * shown or undone.
+ */
+import Panel from './Panel.astro';
+import { safeHref } from '../safety.mjs';
+import type { Tip } from '../lib/tooltips';
+import { termDefinition } from '../lib/vocabulary';
+
+interface Props {
+  /** The cross-link the merge wrote onto this record, pointing at the primary. */
+  links?: { url: string; label?: string }[];
+}
+const { links = [] } = Astro.props;
+const target = links.find((link) => /^Catalogued as /.test(link.label ?? ''));
+const href = safeHref(target?.url);
+const label = target?.label?.replace(/^Catalogued as /, '');
+---
+
+<Panel tone="info" icon="⇄" role="status" heading="Listed under another record" headingLevel="p">
+  <p>
+    The catalogue determined that this and another record describe the same
+    artifact, and lists the other one — usually because this is a
+    <strong>version DOI</strong> and the other is the <strong>concept DOI</strong>,
+    the identifier that always resolves to the latest version and is the one
+    worth citing.
+    {href && (
+      <>
+        {' '}It is listed as <a href={href} rel="noopener external">{label ?? href}</a>.
+      </>
+    )}
+  </p>
+  <p>
+    This page is kept, and this URL keeps resolving, so any citation already
+    made to it still works. {termDefinition('merged-record')}
+  </p>
+</Panel>

@@ -99,6 +99,20 @@ __all__ = ["ZenodoAdapter", "ZENODO_API", "resource_kind_for", "access_status_fo
 
 log = logging.getLogger(__name__)
 
+#: Bumped whenever :meth:`ZenodoAdapter.map` starts preserving something it did
+#: not preserve before. The change token carries it (ADR-0041), so the next run
+#: re-scrapes every Zenodo record exactly once and the improvement reaches the
+#: records already in the catalogue. Without it, change detection (ADR-0026)
+#: compares an unchanged upstream revision, skips, and a mapping fix only ever
+#: applies to records harvested after it shipped.
+#:
+#: 2 — preserve ``metadata.resource_type`` as ``extra.zenodo_resource_type``.
+MAPPING_VERSION = 2
+
+#: A Zenodo DOI. The numeric suffix IS the record id, so a DOI another source
+#: gave us is enough to ask Zenodo about the record — no search, one GET.
+_ZENODO_DOI = re.compile(r"^10\.5281/zenodo\.(\d+)$")
+
 ZENODO_API = "https://zenodo.org/api/records"
 
 #: Zenodo's page size cap on ``/api/records``. Larger values are a 400.
@@ -340,7 +354,7 @@ class ZenodoAdapter(Adapter):
     # -- the change token --------------------------------------------------
     @staticmethod
     def source_key_for(payload: dict[str, Any]) -> str:
-        """``"<revision>@<version DOI>"`` — see the module docstring for why both."""
+        """``"<revision>@<version DOI>~m<n>"`` — the docstring says why each part."""
         parts: list[str] = []
         revision = payload.get("revision")
         if revision is None:
@@ -351,9 +365,8 @@ class ZenodoAdapter(Adapter):
         version_doi = normalise_doi(payload.get("doi") or metadata.get("doi"))
         if version_doi:
             parts.append(version_doi)
-        if not parts:
-            return payload_hash(metadata or payload)
-        return "@".join(parts)
+        key = payload_hash(metadata or payload) if not parts else "@".join(parts)
+        return f"{key}~m{MAPPING_VERSION}"
 
     # -- withdrawal --------------------------------------------------------
     @staticmethod
@@ -515,9 +528,106 @@ class ZenodoAdapter(Adapter):
                 if yielded >= max_records:
                     break
 
+        # `events_dir is None` means nobody told this adapter what the catalogue
+        # holds (a map() unit test, a fixture replay), so there is nothing to
+        # backfill and no business reading the live event log.
+        if (
+            reached
+            and self.events_dir is not None
+            and self.config.get("backfill_dois", True) is not False
+        ):
+            for observation in self._backfill_observations(
+                seen_ids, max_records - yielded, self.events_dir
+            ):
+                yield observation
+                yielded += 1
+                if yielded >= max_records:
+                    break
+
         if not reached:
             raise SourceUnreachable(
                 "; ".join(failures) or "no Zenodo community listing could be fetched"
+            )
+
+    # -- backfill ----------------------------------------------------------
+    def zenodo_dois_to_backfill(self, events_dir: Path | None = None) -> list[tuple[str, str]]:
+        """``[(identity the catalogue holds, Zenodo record id)]``, oldest first.
+
+        The gap this closes: **DataCite does not carry access conditions for
+        Zenodo deposits.** DataCite's copy of a Zenodo record has the licence and
+        the title but no ``info:eu-repo/semantics/openAccess`` term, and the
+        DataCite adapter refuses — correctly — to infer access from a licence.
+        So a Zenodo record that DataCite or an iea-wind.org citation found first,
+        and that sits outside the nine communities the sweep reads, showed as
+        "Access unknown" while Zenodo's own API said ``access_right: open``. That
+        was 92 of the 151 unknowns, and it is issue #3 on the repository.
+
+        Zenodo states it, so the catalogue goes and asks Zenodo. One record id
+        per identity, and only for identities no Zenodo scrape has ever touched,
+        so the queue empties as it is worked and never re-fetches.
+        """
+        from harvest.events import iter_identity_keys, read_events
+
+        pending: list[tuple[str, str]] = []
+        for identity in iter_identity_keys(events_dir):
+            doi = None
+            scraped_by_zenodo = False
+            for event in read_events(identity, events_dir):
+                if event.event_type != "scraped":
+                    continue
+                if event.source_system == self.source_name:
+                    scraped_by_zenodo = True
+                    break
+                doi = event.source.get("doi") or doi
+            if scraped_by_zenodo:
+                continue
+            match = _ZENODO_DOI.match(normalise_doi(doi) or "")
+            if match:
+                pending.append((identity, match.group(1)))
+        return pending
+
+    def _backfill_observations(
+        self, seen_ids: set[str], budget: int, events_dir: Path | None = None
+    ) -> Iterator[RawObservation]:
+        """Fetch known-but-unscraped Zenodo records, one request each.
+
+        Each observation carries ``identity_override``: the artifact is enriched
+        under the identity the catalogue already lists it by. Re-keying it to
+        Zenodo's concept DOI would mint a *second* record for one artifact,
+        because DataCite hands out version DOIs (ADR-0041). Collapsing a version
+        DOI onto its concept is a merge, and merges belong to the reconciler,
+        which now joins on ``IsVersionOf`` and records its evidence.
+        """
+        if budget <= 0:
+            return
+        client = self._ensure_client()
+        for identity, record_id in self.zenodo_dois_to_backfill(events_dir)[:budget]:
+            if record_id in seen_ids:
+                continue
+            result = client.get(f"{self.api}/{quote(record_id)}")
+            if not result.ok or not result.text:
+                # A backfill miss is not a source failure: the community sweep
+                # already reported the source reachable, and a 404 here just
+                # means this DOI is not a Zenodo record after all.
+                log.info("zenodo backfill: %s unavailable (%s)", record_id, result.status_code)
+                continue
+            try:
+                payload = result.json()
+            except ValueError:
+                log.info("zenodo backfill: %s returned an unreadable body", record_id)
+                continue
+            if not isinstance(payload, dict) or payload.get("id") is None:
+                continue
+            if self.is_tombstone(payload):
+                continue      # zen-12: withdrawal is an event, never a scrape
+            seen_ids.add(record_id)
+            yield RawObservation(
+                source_system=self.source_name,
+                source_id=str(payload["id"]),
+                source_key=self.source_key_for(payload),
+                url=(payload.get("links") or {}).get("self_html"),
+                payload=payload,
+                identity_override=identity,
             )
 
     def _observations(
@@ -592,6 +702,20 @@ class ZenodoAdapter(Adapter):
             extra["zenodo_concept_recid"] = payload["conceptrecid"]
         if version_doi:
             extra["zenodo_version_doi"] = version_doi
+        resource_type = metadata.get("resource_type")
+        if isinstance(resource_type, dict) and resource_type:
+            # VERBATIM, and the most specific classification signal any source
+            # in this catalogue publishes: Zenodo states a type AND a subtype
+            # ("publication" / "deliverable"), where DataCite's copy of the same
+            # record flattens both to "Text". Mapping it to `resource_kind` and
+            # dropping the rest lost the distinction between a presentation, a
+            # poster and a set of meeting minutes — all of which arrived as
+            # "other" (ADR-0040).
+            extra["zenodo_resource_type"] = {
+                key: str(value)
+                for key, value in resource_type.items()
+                if key in ("type", "subtype", "title") and value
+            }
         repository = (metadata.get("custom") or {}).get("code:codeRepository")
         if repository:
             # zen-04: the free join key to the GitHub record. The dedup track
@@ -633,9 +757,8 @@ class ZenodoAdapter(Adapter):
             provenance["iea_task"] = FieldProvenance(extraction_method="pattern")
 
         return MappedObservation(
-            identity_key=identity_key(
-                doi=doi, source_system=self.source_name, source_id=raw.source_id
-            ),
+            identity_key=raw.identity_override
+            or identity_key(doi=doi, source_system=self.source_name, source_id=raw.source_id),
             source_system=self.source_name,
             source_id=raw.source_id,
             source_key=raw.source_key,
