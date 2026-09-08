@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Kjeller Vindteknikk (Norway)\",\"name\":\"Bredesen, Rolv\"},{\"name\":\"Cattin, René\"},{\"name\":\"Clausen,, Niels-Erik\"},{\"name\":\"Davis, Neil\"},{\"name\":\"Jordaens, Pieter Jan\"},{\"name\":\"Khadiri-Yazami, Zouhair\"},{\"name\":\"Klintström, Rebecka\"},{\"name\":\"Krenn, Andreas\"},{\"name\":\"Lehtomäki, Ville\"},{\"name\":\"Ronsten, Göran\"},{\"name\":\"Wadham-Gagnon, Matthew\"},{\"name\":\"Wickman, Helena\"}]"
+      "value": "[{\"affiliation\":\"Kjeller Vindteknikk (Norway)\",\"family\":\"Bredesen\",\"given\":\"Rolv\",\"name\":\"Bredesen, Rolv\"},{\"family\":\"Cattin\",\"given\":\"René\",\"name\":\"Cattin, René\"},{\"family\":\"Clausen,\",\"given\":\"Niels-Erik\",\"name\":\"Clausen,, Niels-Erik\"},{\"family\":\"Davis\",\"given\":\"Neil\",\"name\":\"Davis, Neil\"},{\"family\":\"Jordaens\",\"given\":\"Pieter Jan\",\"name\":\"Jordaens, Pieter Jan\"},{\"family\":\"Khadiri-Yazami\",\"given\":\"Zouhair\",\"name\":\"Khadiri-Yazami, Zouhair\"},{\"family\":\"Klintström\",\"given\":\"Rebecka\",\"name\":\"Klintström, Rebecka\"},{\"family\":\"Krenn\",\"given\":\"Andreas\",\"name\":\"Krenn, Andreas\"},{\"family\":\"Lehtomäki\",\"given\":\"Ville\",\"name\":\"Lehtomäki, Ville\"},{\"family\":\"Ronsten\",\"given\":\"Göran\",\"name\":\"Ronsten, Göran\"},{\"family\":\"Wadham-Gagnon\",\"given\":\"Matthew\",\"name\":\"Wadham-Gagnon, Matthew\"},{\"family\":\"Wickman\",\"given\":\"Helena\",\"name\":\"Wickman, Helena\"}]"
     },
     {
       "key": "doi",
@@ -29,8 +29,16 @@
       "value": "[\"task-54\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind TCP\" and community:coldclimatewind, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-08T14:04:42Z"
+      "value": "2026-09-08T15:28:09Z"
     },
     {
       "key": "license_mapped",
@@ -45,8 +53,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.14179846\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.14179846\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -54,11 +66,11 @@
     },
     {
       "key": "publisher",
-      "value": "Zenodo"
+      "value": "IEA Wind TCP"
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.14179845\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.14179845\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.14179846\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
     },
     {
       "key": "resource_kind",
@@ -74,7 +86,7 @@
     },
     {
       "key": "source_key",
-      "value": "8@10.5281/zenodo.14179846~m2"
+      "value": "8@10.5281/zenodo.14179846~m3"
     },
     {
       "key": "source_system",
@@ -82,7 +94,7 @@
     },
     {
       "key": "source_systems",
-      "value": "[\"zenodo\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -90,7 +102,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/records/14179846\"]"
+      "value": "[\"https://zenodo.org/records/14179846\",\"https://zenodo.org/doi/10.5281/zenodo.14179845\",\"https://zenodo.org/doi/10.5281/zenodo.14179846\"]"
     },
     {
       "key": "withdrawn",
@@ -104,8 +116,8 @@
   ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-14179845",
-  "notes": "<p>The purpose of this IEA Wind TCP report is to provide the best available information of recommended practices for cold climate (CC) wind projects to developers, owners, and operators of wind projects within CC. The incentive is to reduce the risks and accelerate the growth of wind energy production. This document also provides preparatory information that should benefit manufacturers, banks, and insurance companies.</p>\n<p><br />Cold climate sites around the world offer large wind energy potential in demanding winter climates. National activities have been conducted to master the challenges that atmospheric icing and low temperatures pose for wind energy development. Our lack of knowledge of special CC issues and the lack of proven and economic technological solutions have limited the large-scale exploitation of these sites. For the sake of this document, the concept of CC includes both low temperature and icing environments.</p>\n<p><br />A generic wind energy development best practise guide provides a good starting point for developing a CC site. Those generic practices should be used to the extent possible, even though they do not normally consider CC issues. This report focuses on the additional challenges that are involved in CC wind energy projects that must also be assessed in detail.</p>\n<p><br />CC conditions directly affect site access, working conditions, technology selection, turbine loads, noise, health and safety, public safety and energy production.<br />Prior to any wind farm investment, mapping of all potential risks are keys to success. In order to get some preliminary information regarding atmospheric icing and low temperature conditions worldwide, associated maps provide a good first glance at potential risks. However, icing maps only provide a rough estimate<br />of potential sites atmospheric icing conditions, and should not be used as the only indicator for icing. Similar to wind speed measurements, on-site icing measurements are of crucial importance and can provide more accurate icing information than icing maps for business case analysis. Icing maps can also be used when planning the site icing measurements that will take place during the resource assessment campaign.</p>",
-  "owner_org": "zenodo-community",
+  "notes": "The purpose of this IEA Wind TCP report is to provide the best available information of recommended practices for cold climate (CC) wind projects to developers, owners, and operators of wind projects within CC. The incentive is to reduce the risks and accelerate the growth of wind energy production. This document also provides preparatory information that should benefit manufacturers, banks, and insurance companies.\n\nCold climate sites around the world offer large wind energy potential in demanding winter climates. National activities have been conducted to master the challenges that atmospheric icing and low temperatures pose for wind energy development. Our lack of knowledge of special CC issues and the lack of proven and economic technological solutions have limited the large-scale exploitation of these sites. For the sake of this document, the concept of CC includes both low temperature and icing environments.\n\nA generic wind energy development best practise guide provides a good starting point for developing a CC site. Those generic practices should be used to the extent possible, even though they do not normally consider CC issues. This report focuses on the additional challenges that are involved in CC wind energy projects that must also be assessed in detail.\n\nCC conditions directly affect site access, working conditions, technology selection, turbine loads, noise, health and safety, public safety and energy production.Prior to any wind farm investment, mapping of all potential risks are keys to success. In order to get some preliminary information regarding atmospheric icing and low temperature conditions worldwide, associated maps provide a good first glance at potential risks. However, icing maps only provide a rough estimateof potential sites atmospheric icing conditions, and should not be used as the only indicator for icing. Similar to wind speed measurements, on-site icing measurements are of crucial importance and can provide more accurate icing information than icing maps for business case analysis. Icing maps can also be used when planning the site icing measurements that will take place during the resource assessment campaign.",
+  "owner_org": "iea-wind",
   "private": false,
   "resources": [
     {
@@ -118,8 +130,11 @@
   "tags": [
     {
       "name": "cold-climate"
+    },
+    {
+      "name": "wind-power"
     }
   ],
   "title": "IEA Wind TCP Recommended practice 13: Wind Energy Projects in Cold Climates",
-  "url": "https://zenodo.org/records/14179846"
+  "url": "https://zenodo.org/doi/10.5281/zenodo.14179845"
 }

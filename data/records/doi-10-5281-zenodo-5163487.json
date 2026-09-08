@@ -1,0 +1,139 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Fraunhofer IWES\",\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\",\"orcid\":\"0000-0001-7129-9247\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5163487"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5163487"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.5158570\",\"url\":\"https://zenodo.org/record/5158570\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-07-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5158570\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.5163487"
+    },
+    {
+      "key": "source_key",
+      "value": "2021-08-05T12:13:50Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/5163487"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/5163487\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5163487",
+  "notes": "IEA Wind Task 32 on wind lidar for wind energy applications is planning a new phase, starting in 2022. This PDF contains an overview of the concept for the phase. It was presented at a Task 32 workshop on 4th August 2021. The participants in the workshop were split into breakout rooms where they added feedback and new ideas to the slides for each of the four themes. This input is included in slides 21 to 35. A previous workshop on the next phase of Task 32 took place on 15th July 2021. Results from the first workshop are available here.",
+  "owner_org": "fraunhofer-iwes",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "Concept for the 2022-2025 operating phase of IEA Wind Task 32",
+  "url": "https://zenodo.org/record/5163487",
+  "version": "2021 August 04"
+}

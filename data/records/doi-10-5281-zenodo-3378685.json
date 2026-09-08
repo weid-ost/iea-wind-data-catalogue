@@ -1,0 +1,146 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Black & Veatch\",\"family\":\"Clive\",\"given\":\"Peter J M\",\"name\":\"Clive, Peter J M\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science Conference 2019"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3378685"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3378685"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:20Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.3378684\",\"url\":\"https://zenodo.org/record/3378684\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-08-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3378684\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/wesc2019\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "3378685"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.3378685~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3378685"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3378685\",\"https://zenodo.org/record/3378685\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-3378685",
+  "notes": "Lidar is playing an increasingly important role in the evaluation of the incident wind resource at offshore wind power assets for the purposes of power performance testing. Lidar provides low-cost data acquisition opportunities compared to established methods based on the capabilities of met masts. In addition, lidar provides richer datasets which allow the investigation of wind phenomena that would otherwise be neglected if reliance was placed entirely on the more limited capabilities of met masts. Therefore, the information necessary not only to evaluate power performance, but to understand it in relation to complex wind conditions, can be acquired at the cost of barely one hundredth of what would have been necessary were met masts used. IEA Wind Task 32 has elaborated a “use case” framework for describing lidar applications in wind energy assessments. Different offshore wind lidar use cases, corresponding to the different data requirements that arise in relation to particular wind energy assessments, and the different measurement methods adopted to fulfil those requirements in the offshore environment, have achieved a degree of maturity. These include vertically profiling lidar on floating or fixed platforms, often deployed in a pre-construction wind resource assessment role, nacelle mounted lidar, and scanning lidar installed on the transition piece of an offshore wind turbine, more often used to evaluate the incident wind resource post-construction for the purposes of wind turbine power performance assessment in accordance with the second edition of IEC 61400-12-1 or the forthcoming IEC 61400-50-3. Scanning lidars installed on the transition piece walkway of a fixed offshore wind turbine represent the highest degree of compliance with IEC 61400-12-1:2017 possible offshore in the absence of a met mast. Other use cases that have delivered valuable results include nacelle mounted scanning lidar, which have been used to undertake detailed investigation of wind turbine wakes, and multiple co-ordinated and synchronised lidars implementing a convergent scan geometry. In addition, scanning lidar have been installed on the transition pieces of floating wind turbines, mounted on a frame to achieve the sight line stabilisation necessary for scanning lidar operations under these circumstances. Measurements suitable for wake studies and power curve tests have been acquired using multiple lidar use cases. The key methods considered include lidar on floating and fixed platforms, including floating wind turbines, nacelle mounted lidar, transition piece mounted lidar, and lidar installed on nearby fixed platforms. It is found from lidar to lidar comparisons that lidar measurements are more consistent than met masts, suggesting a higher degree of accuracy, which however cannot yet be demonstrated using current calibration methods. This presentation reviews progress to date and discuss the various relative advantages and disadvantages of the various available lidar methods for offshore wind turbine power performance testing, while looking to the future, in which the integration of lidar with wind turbine components such as blades, and the installation of lidar on floating wind turbine foundations, will see further development.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pptx",
+      "name": "Offshore wind turbine power curve tests - Session 7.16 - (A2).pptx",
+      "url": "https://zenodo.org/records/3378685/files/Offshore%20wind%20turbine%20power%20curve%20tests%20-%20Session%207.16%20-%20%28A2%29.pptx"
+    },
+    {
+      "format": "pdf",
+      "name": "Offshore wind turbine power curve tests - Session 7.16 - (A2).pdf",
+      "url": "https://zenodo.org/records/3378685/files/Offshore%20wind%20turbine%20power%20curve%20tests%20-%20Session%207.16%20-%20%28A2%29.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "7.16_Clive: Offshore wind turbine power curve tests using lidar",
+  "url": "https://zenodo.org/record/3378685"
+}

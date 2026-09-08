@@ -1,0 +1,119 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"family\":\"Kwakye\",\"given\":\"Daniel\",\"name\":\"Kwakye, Daniel\"},{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"},{\"affiliation\":\"HES-SO University of Applied Sciences and Arts Western Switzerland\",\"family\":\"Calbimonte\",\"given\":\"Jean-Paul\",\"name\":\"Calbimonte, Jean-Paul\",\"orcid\":\"0000-0002-0364-6945\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.21871069"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.21871069"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.21871066\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.21871066\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21871066\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.21871069"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-08-27T04:16:30Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.21871069"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.21871069\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-21871069",
+  "notes": "The wind energy domain is moving, together with broader IEA and open data communities, towards semantic technologies and shared formal ontologies. When those are mature and adopted, existing information modelling efforts may need to map to them. The cost of that alignment depends heavily on decisions made today.\n\nAs part of the Swiss-funded project “Exploring ORD practices with the IEA Wind Technology Collaboration Programme”, we are exploring how to better align information modelling efforts in the wind energy domain. In this document, we suggest some development steps for the WRA Data Model that we expect to make future alignment with domain ontologies much easier and cheaper.\n\nThis document starts with a description of the added value of semantic alignment and then a summary of our recommendations for the WRA Data Model. These sections are followed by four sections explaining the recommendations in more detail, each consisting of our observation followed by concrete recommendations.",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Future-Proofing the WRA Data Model - Recommendations for JSON data modelling that converges with semantic technologies",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.21871069"
+}

@@ -1,0 +1,115 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Würth\",\"given\":\"Ines\",\"name\":\"Würth, Ines\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.18419/opus-12169"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.18419/opus-12169"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "info:eu-repo/semantics/openAccess"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2022-06-03"
+    },
+    {
+      "key": "publisher",
+      "value": "Universität Stuttgart"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10.18419/opus-12169"
+    },
+    {
+      "key": "source_key",
+      "value": "2022-06-03T09:00:15Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "http://elib.uni-stuttgart.de/handle/11682/12186"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"http://elib.uni-stuttgart.de/handle/11682/12186\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-18419-opus-12169",
+  "notes": "With the introduction of renewable energies, the power grid has transformed from a centralised to a decentralised system. To balance the supply and demand of power in the energy grid at all times in spite of the volatile nature of wind and solar power, grid operators have to rely on accurate forecasts. However, state of the art wind power forecasting methods are not able to forecast changes of power in the minute-scale accurately. Therefore new methods are needed. This thesis investigates the use of a long-range lidar to forecast wind power on the minute-scale. To that aim, two measurement campaigns were carried out. One was an onshore campaign, where the lidar was installed fixed on a radio tower next to a turbine that a forecast was made for. The second was an offshore campaign where the lidar was installed on top of the nacelle of a wind turbine. Both campaigns lasted over several months and the wind speed was measured in several kilometers in front of the turbine. During this time the turbine`s own data system also recorded the 10-minute average power from the turbine. In this thesis, a wind power forecast process is established. Lidar data is transformed from radial velocity to filtered horizontal wind speed and wind direction. The wind field information is then propagated to the wind turbine with an advection model based on Taylor's hypothesis. The forecasted wind speed at the turbine is then transformed into a forecasted power with the help of the power curve of the turbine. To account for the uncertainty in the wind speed and power forecast, probabilistic forecast methods are applied. The results show that lidar-based forecasts at the offshore site are accurate in a forecast horizon up to ten minutes and outperform the benchmark forecast method persistence. Longer forecast horizons are biased because only small wind speeds measured further away from the wind turbine arrive with a delay of more than ten minutes. At the onshore site, persistence outperforms the lidar-based method in all forecast horizons, includinig the forecast horizon up to 10 minutes. The reason is that the Taylor based advection model does not model the actual propagation at the complex onshore site well enough. During ramp events, the lidar-based forecast demonstrates its strength: information from the wind speed measured a few kilometers in front of the turbine allows us to forecast changes of power. In comparison, persistence only uses old information and therefore cannot forecast any future changes. It is concluded that the added value of using a lidar for minute-scale forecasts lies in forecasting changes of power. As wind ramps are potentially critical to the grid stability, or can affect the cost of balancing the power system if they are not forecast well, using lidars at wind farms to improve the power forecast is advised. However, challenges to the implementation of lidar-based forecasts remain. Lidar measurements depend on the aerosol content in the air and therefore the availability of the measurements for a forecast is not guaranteed. A fallback solution is needed such as statistical models or numerical weather prediction. To achieve forecast horizons of more than 10 minutes, the lidar measurement range needs to be extended beyond 10 kilometers. And to establish lidars as a state-of-the-art forecasting tool, standards are needed, which could be enabled by groups such as the IEA Wind community. Wind lidar data coupled with propagation models and power curves has fundamental advantages for minute-scale wind power forecasting. Although this thesis has shown that current approaches may not be perfect, the rapid pace of wind lidar technology development, the increasing number of users, and the growing network of third party service providers, suggests that wind lidar is the future of minute-scale wind power forecasting.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "620"
+    }
+  ],
+  "title": "Minute-scale forecasting of wind power using long-range lidar data",
+  "url": "http://elib.uni-stuttgart.de/handle/11682/12186"
+}

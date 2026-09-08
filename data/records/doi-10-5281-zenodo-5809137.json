@@ -1,0 +1,137 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"TNO Energy Transition\",\"name\":\"J.G. Schepers\"},{\"affiliation\":\"TNO Energy Transition\",\"name\":\"K. Boorsma\"},{\"affiliation\":\"DTU\",\"name\":\"H.A Madsen\"},{\"affiliation\":\"DTU\",\"name\":\"G.R. Pirrung\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"G. Bangga\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"G. Guma\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"T. Lutz\"},{\"affiliation\":\"LHEEA lab - Centrale Nantes/CNRS\",\"name\":\"T. Potentier\"},{\"affiliation\":\"LHEEA lab - Centrale Nantes/CNRS\",\"name\":\"C. Braud\"},{\"affiliation\":\"LHEEA lab - Centrale Nantes/CNRS\",\"name\":\"E. Guilmineau\"},{\"affiliation\":\"PoliMi\",\"name\":\"A. Croce\"},{\"affiliation\":\"PoliMi\",\"name\":\"S. Cacciola\"},{\"affiliation\":\"Kiel University of Applied Sciences\",\"name\":\"A. P. Schaffarczyk\"},{\"affiliation\":\"Kiel University of Applied Sciences\",\"name\":\"B. A. Lobo\"},{\"affiliation\":\"Uppsala University, Campus Gotland\",\"name\":\"S. Ivanell\"},{\"affiliation\":\"Uppsala University, Campus Gotland\",\"name\":\"H. Asmuth\"},{\"affiliation\":\"DTU\",\"name\":\"F. Bertagnolio\"},{\"affiliation\":\"DTU\",\"name\":\"N.N. Sørensen\"},{\"affiliation\":\"DTU\",\"name\":\"W. Z. Shen\"},{\"affiliation\":\"DTU\",\"name\":\"C. Grinderslev\"},{\"affiliation\":\"DTU\",\"name\":\"A. M. Forsting\"},{\"affiliation\":\"IFPEN\",\"name\":\"F. Blondel\"},{\"affiliation\":\"IFPEN\",\"name\":\"P. Bozonnet\"},{\"affiliation\":\"ONERA\",\"name\":\"R. Boisard\"},{\"affiliation\":\"Forwind\",\"name\":\"K. Yassin\"},{\"affiliation\":\"Fraunhofer IWES\",\"name\":\"L. Hoening\"},{\"affiliation\":\"Fraunhofer IWES\",\"name\":\"B. Stoevesandt\"},{\"affiliation\":\"DLR\",\"name\":\"M. Imiela\"},{\"affiliation\":\"CNR-INM\",\"name\":\"L. Greco\"},{\"affiliation\":\"CNR-INM\",\"name\":\"C. Testa\"},{\"affiliation\":\"CNR-INM\",\"name\":\"F. Magionesi\"},{\"affiliation\":\"NREL\",\"name\":\"G. Vijayakumar\"},{\"affiliation\":\"NREL\",\"name\":\"S. Ananthan\"},{\"affiliation\":\"NREL\",\"name\":\"M. A. Sprague\"},{\"affiliation\":\"NREL\",\"name\":\"E. Branlard\"},{\"affiliation\":\"NREL\",\"name\":\"J. Jonkman\"},{\"affiliation\":\"DNV-GL\",\"name\":\"M. Carrion\"},{\"affiliation\":\"DNV-GL\",\"name\":\"S. Parkinson\"},{\"affiliation\":\"DNV-GL\",\"name\":\"E. Cicirello\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5809137"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5809137"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-29\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:13Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4813067\",\"url\":\"https://zenodo.org/record/4813067\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-05-26"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4813067\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "5809137"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.5809137~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5809137"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5809137\",\"https://zenodo.org/record/5809137\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-29"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5809137",
+  "notes": "This report describes the results of the fourth phase of IEA TCP Wind Task 29 on wind turbine aerodynamics.",
+  "owner_org": "tno",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Final_report_of_Task_29_Phase_IV_24_12_21.pdf",
+      "url": "https://zenodo.org/records/5809137/files/Final_report_of_Task_29_Phase_IV_24_12_21.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP Task 29, Phase IV: Detailed Aerodynamics of Wind Turbines",
+  "url": "https://zenodo.org/record/5809137"
+}

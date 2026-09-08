@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Delft University of Technology\",\"family\":\"Joshi\",\"given\":\"Rishikesh\",\"name\":\"Joshi, Rishikesh\",\"orcid\":\"0000-0003-1401-9127\"},{\"affiliation\":\"Polytechnic University of Milan\",\"family\":\"Trevisi\",\"given\":\"Filippo\",\"name\":\"Trevisi, Filippo\",\"orcid\":\"0000-0001-7356-9212\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.12166696"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.12166696"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind TCP\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:29Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "mit"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.12166697\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.12166697\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06"
+    },
+    {
+      "key": "publisher",
+      "value": "IEA Wind TCP 48"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.12166696\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/doi/10.5281/zenodo.8114627\",\"identifier_type\":\"URL\",\"relation\":\"isDescribedBy\"},{\"identifier\":\"https://zenodo.org/doi/10.5281/zenodo.8114627\",\"identifier_type\":\"URL\",\"relation\":\"IsDescribedBy\"},{\"identifier\":\"10.5281/zenodo.12166697\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "12166697"
+    },
+    {
+      "key": "source_key",
+      "value": "12@10.5281/zenodo.12166697~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/12166697"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/12166697\",\"https://zenodo.org/doi/10.5281/zenodo.12166696\",\"https://zenodo.org/doi/10.5281/zenodo.12166697\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "doi-10-5281-zenodo-12166696",
+  "notes": "Initial release.",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "awegroup/AWE-Eco-v0.1.0.zip",
+      "url": "https://zenodo.org/records/12166697/files/awegroup/AWE-Eco-v0.1.0.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "AWE-Eco",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.12166696",
+  "version": "v0.1.0"
+}

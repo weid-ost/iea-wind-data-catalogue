@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:32:53Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|MajkelAFC/Wind-Energy-Analytics-Platform"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:32:53Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-05"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "MajkelAFC/Wind-Energy-Analytics-Platform"
+    },
+    {
+      "key": "source_key",
+      "value": "53bbfeca3a06b6bfccd2a24df54b063a23343d8f::68922eadd27d1c25~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/MajkelAFC/Wind-Energy-Analytics-Platform"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/MajkelAFC/Wind-Energy-Analytics-Platform\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-majkelafc-wind-energy-analytics-platform",
+  "notes": "ETL pipeline calculating average wind turbine power from SCADA data — Python, Airflow, PostgreSQL, Docker, Medallion architecture",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/MajkelAFC/Wind-Energy-Analytics-Platform"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "airflow"
+    },
+    {
+      "name": "data-engineering"
+    },
+    {
+      "name": "docker"
+    },
+    {
+      "name": "etl"
+    },
+    {
+      "name": "medallion-architecture"
+    },
+    {
+      "name": "postgresql"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "MajkelAFC/Wind-Energy-Analytics-Platform",
+  "url": "https://github.com/MajkelAFC/Wind-Energy-Analytics-Platform"
+}

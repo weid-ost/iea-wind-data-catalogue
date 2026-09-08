@@ -1,0 +1,119 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Icetek\",\"family\":\"Roberge\",\"given\":\"Patrice\",\"name\":\"Roberge, Patrice\"},{\"affiliation\":\"Vattenfall (Sweden)\",\"family\":\"Petterson\",\"given\":\"Jennifer\",\"name\":\"Petterson, Jennifer\"},{\"family\":\"Rittinghaus\",\"given\":\"Claas\",\"name\":\"Rittinghaus, Claas\"},{\"affiliation\":\"Nergica\",\"family\":\"Godreau\",\"given\":\"Charles\",\"name\":\"Godreau, Charles\",\"orcid\":\"0000-0002-3889-878X\"},{\"affiliation\":\"Meteotest (Switzerland)\",\"family\":\"Froidevaux\",\"given\":\"Paul\",\"name\":\"Froidevaux, Paul\"},{\"affiliation\":\"Meteotest (Switzerland)\",\"family\":\"Gerber\",\"given\":\"Franziska\",\"name\":\"Gerber, Franziska\"},{\"affiliation\":\"Borealis Wind, Canada\",\"family\":\"Roeper\",\"given\":\"Daniela\",\"name\":\"Roeper, Daniela\"},{\"affiliation\":\"Wicetec, Finland\",\"family\":\"Wallenius\",\"given\":\"Tomas\",\"name\":\"Wallenius, Tomas\"},{\"affiliation\":\"Université Laval\",\"family\":\"Bégin-Drolet\",\"given\":\"André\",\"name\":\"Bégin-Drolet, André\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15058134"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15058134"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "bsd-3-clause"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.15058133\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15058133\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-03-20"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15058133\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.15058134"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-04-22T13:30:52Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.15058134"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15058134\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "bsd-3-clause",
+  "name": "doi-10-5281-zenodo-15058134",
+  "notes": "With the model code for blade heating system performance envelopes, IEA Task 54, an internationalexpert group for wind energy in cold climate, is proposing a simplified theoreticalmodel for simulating performance envelopes of an active blade heating system’s efficiencyfor various operational boundaries. The model is based on python code and comes with anexecutable file to provide a user-friendly interface.For wind energy projects being developed and operated in cold climate conditions, an IPS(Ice Protection System) - often including a blade heating system - can be required both dueto financial aspects as well as legal aspects. Production losses from icing can easily amountto the largest fraction of losses for a wind farm in cold climate conditions. Thus, projectionand assessment of the performance of technical solutions designed to mitigate icing losses isof high importance. As of today, there is limited available knowledge on how to select a wellfittingsystem for a specific turbine as well as for a specific location. Hence, IEA Wind Task54 provides a tool to model the performance according to turbine specifics and meteorologicalconditions.The purpose of the tool is for the end-user to model different blade heating system performanceenvelopes to either project if a specific system would be a suitable choice for the respectivemeteorological conditions of a project location, or to use on existing turbines with bladeheating system to evaluate the system’s performance and respective limits. As the complexityof simulating all the phenomena for a rotating turbine blade in a natural environment with avariety of thermodynamic effects is too advanced, the methodology of the presented modelis based on the assumption of keeping the blade ice-free and does not incorporate the actualeffect of ice build-up and melting. On the other hand, this reflects the goal of implementing ablade heating system quite well.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Task 54 Blade heating Envelope model",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15058134"
+}

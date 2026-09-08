@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"IEA Wind Task 52\",\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.11643399"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.11643399"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.11643398\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.11643398\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06-13"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.11643398\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "meeting-record"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.11643399"
+    },
+    {
+      "key": "source_key",
+      "value": "2024-06-13T20:39:54Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.11643399"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.11643399\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-11643399",
+  "notes": "The Task 52 General Meeting was held on May 14-15, 2024 at the Fraunhofer ENIQ premises in Berlin. The meeting focused on providing updateson the current status of wind lidar technology, the progress of Task 52 working groups, and developments since the last general meeting. It included several presentations on the status of the working groupsand brainstorming discussions on the challenges related to IEA Wind Task 52.\n\nAttached are the meeting minutes and all presentations given during the 2-day meeting.",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Minutes from IEA Wind Task 52 General Meeting 2024",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.11643399"
+}

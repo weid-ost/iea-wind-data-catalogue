@@ -1,0 +1,130 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Barter\",\"given\":\"Garrett\",\"name\":\"Barter, Garrett\"},{\"family\":\"Gaertner\",\"given\":\"Evan\",\"name\":\"Gaertner, Evan\"},{\"affiliation\":\"NWTC\",\"family\":\"Bortolotti\",\"given\":\"Pietro\",\"name\":\"Bortolotti, Pietro\"},{\"name\":\"Nikhar J. Abbas\"},{\"affiliation\":\"Dtu Wind Energy\",\"family\":\"Rinker\",\"given\":\"Jenni\",\"name\":\"Rinker, Jenni\"},{\"family\":\"Zahle\",\"given\":\"Frederik\",\"name\":\"Zahle, Frederik\"},{\"name\":\"E. Branlard\"},{\"name\":\"Lapadron\"},{\"family\":\"Hall\",\"given\":\"Matt\",\"name\":\"Hall, Matt\"},{\"name\":\"Dzalkind\"},{\"name\":\"Lssraman\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.6330754"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.6330754"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-37\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:16Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "Open Access"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2022-03-05"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.6330753\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://github.com/IEAWindTask37/IEA-15-240-RWT/tree/v1.1\",\"identifier_type\":\"URL\",\"relation\":\"isSupplementTo\"},{\"identifier\":\"https://github.com/IEAWindTask37/IEA-15-240-RWT/tree/v1.1\",\"identifier_type\":\"URL\",\"relation\":\"IsSupplementTo\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "6330754"
+    },
+    {
+      "key": "source_key",
+      "value": "10@10.5281/zenodo.6330754~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/6330754"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/6330754\",\"https://zenodo.org/record/6330754\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-37"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-5281-zenodo-6330754",
+  "notes": "IEA Wind Task 37 is proud to release an update to its 15-MW Reference Wind Turbine. A detailed list of changes is provided in the release notes. Many of these updates were driven by community engagement, so we are appreciative of everyone that has taken the time to document the issues and give us feedback.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "IEAWindTask37/IEA-15-240-RWT-v1.1.zip",
+      "url": "https://zenodo.org/records/6330754/files/IEAWindTask37/IEA-15-240-RWT-v1.1.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindTask37/IEA-15-240-RWT: IEA Wind 15-MW Reference Wind Turbine update",
+  "url": "https://zenodo.org/record/6330754",
+  "version": "v1.1"
+}

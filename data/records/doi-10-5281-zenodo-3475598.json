@@ -1,0 +1,146 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Vasiljevic\",\"given\":\"Nikola\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3475598"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3475598"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:32Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-sa-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.3475599\",\"url\":\"https://zenodo.org/record/3475599\"},{\"label\":\"Also catalogued as 10.5281/zenodo.3475609\",\"url\":\"https://zenodo.org/record/3475609\"},{\"label\":\"Also catalogued as 10.5281/zenodo.3475617\",\"url\":\"https://zenodo.org/record/3475617\"},{\"label\":\"Also catalogued as 10.5281/zenodo.3476763\",\"url\":\"https://zenodo.org/record/3476763\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-10-08"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3475598\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.3475599\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3475609\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3475617\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3476763\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "3476763"
+    },
+    {
+      "key": "source_key",
+      "value": "7@10.5281/zenodo.3476763~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3476763"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3476763\",\"https://zenodo.org/record/3475598\",\"https://zenodo.org/records/3475599\",\"https://zenodo.org/record/3475599\",\"https://zenodo.org/records/3475609\",\"https://zenodo.org/record/3475609\",\"https://zenodo.org/records/3475617\",\"https://zenodo.org/record/3475617\",\"https://zenodo.org/record/3476763\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by-sa",
+  "name": "doi-10-5281-zenodo-3475598",
+  "notes": "Wind lidar technology has been increasingly used for wind energy applications for over a decade. During this time there has been an impressive development of a lidar community and widespread adoption of wind lidars. Lidars are becoming more robust, energy-efficient, smaller, and cheaper. However, this is not happening at the desired pace. Lidar technology still needs to be made user friendly to achieve a wider audience, but also quite “open” for power users. The <em>e-WindLidar</em> and <em>OpenLidar</em> initiatives have been tackling these seemingly opposing challenges through the auspice of IEA Wind Task 32. Since 2017 the <em>e-WindLidar</em> initiative has been pursuing the goal of including expert lidar knowledge in tools that will facilitate the application of lidar technology. The initiative yielded several open-source tools such as <em>lidaco, </em>the<em> campaign-planning-tool</em> and <em>YADDUM</em> which are respectively Python libraries for lidar data conversion, campaign planning and configuration, and single- and dual- Doppler uncertainty calculations. Since 2014 the <em>OpenLidar</em> initiative has been working on the development of the architecture of an open-source lidar that can be used for teaching, research, and product development. The core paradigm of the initiative is a modular lidar. We will briefly touch upon the <em>OpenLidar</em> architecture and present its practical implementation in a proof-of-concept drone-based wind lidar. In this talk, we will present the contributions of DTU Wind Energy to both initiatives and suggest ways that they can be included in wind energy R&amp;D activities.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "wind_lidar_digitalization_v4.pdf",
+      "url": "https://zenodo.org/records/3476763/files/wind_lidar_digitalization_v4.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digitalization"
+    },
+    {
+      "name": "fair-data"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "Wind Lidar Digitalization",
+  "url": "https://zenodo.org/record/3475598"
+}

@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Sidhartha Panda\"},{\"name\":\"N.P.Padhy\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.1057843"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.1057843"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:16Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Creative Commons Attribution 4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.1057842\",\"url\":\"https://zenodo.org/record/1057842\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2008-10-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.1057842\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "1057843"
+    },
+    {
+      "key": "source_key",
+      "value": "7@10.5281/zenodo.1057843~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/1057843"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/1057843\",\"https://zenodo.org/record/1057843\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-1057843",
+  "notes": "Wind power is among the most actively developing distributed generation (DG) technology. Majority of the wind power based DG technologies employ wind turbine induction generators (WTIG) instead of synchronous generators, for the technical advantages like: reduced size, increased robustness, lower cost, and increased electromechanical damping. However, dynamic changes of wind speed make the amount of active/reactive power injected/drawn to a WTIG embedded distribution network highly variable. This paper analyzes the effect of wind speed changes on the active and reactive power penetration to the wind energy embedded distribution network. Four types of wind speed changes namely; constant, linear change, gust change and random change of wind speed are considered in the analysis. The study is carried out by three-phase, non-linear, dynamic simulation of distribution system component models. Results obtained from the investigation are presented and discussed.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "2760.pdf",
+      "url": "https://zenodo.org/records/1057843/files/2760.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "active-and-reactive-power"
+    },
+    {
+      "name": "distribution-network"
+    },
+    {
+      "name": "wind-speed"
+    },
+    {
+      "name": "wind-turbine-induction-generator"
+    }
+  ],
+  "title": "Investigating The Impact Of Wind Speed On Active And Reactive Power Penetration To The Distribution Network",
+  "url": "https://zenodo.org/record/1057843",
+  "version": "2760"
+}

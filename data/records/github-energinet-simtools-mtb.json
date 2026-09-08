@@ -17,8 +17,16 @@
       "value": "source"
     },
     {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-07T04:33:23Z"
+      "value": "2026-09-08T15:32:22Z"
     },
     {
       "key": "license_mapped",
@@ -34,7 +42,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -58,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "c9514b965aa99b2e5b6a433d41651b351169a016:v1.1.2:ff5fed891489a49b"
+      "value": "b665556aed6fb62018e9255121a6534ecdc5052e:v1.1.2:ff5fed891489a49b~m2"
     },
     {
       "key": "source_system",

@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Bangalore\",\"given\":\"Pramod\",\"name\":\"Bangalore, Pramod\"},{\"family\":\"Boussion\",\"given\":\"Cyril\",\"name\":\"Boussion, Cyril\"},{\"family\":\"Faulstich\",\"given\":\"Stefan\",\"name\":\"Faulstich, Stefan\"},{\"family\":\"Hahn\",\"given\":\"Berthold\",\"name\":\"Hahn, Berthold\"},{\"family\":\"Harrison\",\"given\":\"Keith\",\"name\":\"Harrison, Keith\"},{\"family\":\"Miguelañez-Martin\",\"given\":\"Emilio\",\"name\":\"Miguelañez-Martin, Emilio\"},{\"family\":\"O'Connor\",\"given\":\"Frank\",\"name\":\"O'Connor, Frank\"},{\"family\":\"Pettersson\",\"given\":\"Lasse\",\"name\":\"Pettersson, Lasse\"},{\"name\":\"Conaill Soraghan\"},{\"name\":\"Clym Stock-Williams\"},{\"family\":\"Sørensen\",\"given\":\"John Dalsgaard\",\"name\":\"Sørensen, John Dalsgaard\"},{\"family\":\"Van Bussel\",\"given\":\"Gerard\",\"name\":\"Van Bussel, Gerard\"},{\"family\":\"Vatn\",\"given\":\"Jørn\",\"name\":\"Vatn, Jørn\"},{\"family\":\"Welte\",\"given\":\"Thomas\",\"name\":\"Welte, Thomas\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.13140/rg.2.2.26947.48169"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.13140/rg.2.2.26947.48169"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind TCP\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:57Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2017"
+    },
+    {
+      "key": "publisher",
+      "value": "Unpublished"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "recommended-practice"
+    },
+    {
+      "key": "source_id",
+      "value": "10.13140/rg.2.2.26947.48169"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-10-21T09:27:35Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.researchgate.net/doi/10.13140/RG.2.2.26947.48169"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.researchgate.net/doi/10.13140/RG.2.2.26947.48169\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-13140-rg-2-2-26947-48169",
+  "notes": "",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind TCP RP17. EXPERT GROUP REPORT ON RECOMMENDED PRACTICES 17. WIND FARM DATA COLLECTION AND RELIABILITY ASSESSMENT FOR O&amp;M OPTIMIZATION",
+  "url": "https://www.researchgate.net/doi/10.13140/RG.2.2.26947.48169"
+}

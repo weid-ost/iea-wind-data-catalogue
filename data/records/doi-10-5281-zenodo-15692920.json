@@ -1,0 +1,119 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Thedin\",\"given\":\"Regis\",\"name\":\"Thedin, Regis\",\"orcid\":\"0000-0001-5336-7875\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Rybchuk\",\"given\":\"Alex\",\"name\":\"Rybchuk, Alex\",\"orcid\":\"0000-0003-4433-3993\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy and Energy System\",\"family\":\"Lukas\",\"given\":\"Vollmer\",\"name\":\"Lukas, Vollmer\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Moriarty\",\"given\":\"Patrick\",\"name\":\"Moriarty, Patrick\",\"orcid\":\"0000-0001-7122-5993\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Bodini\",\"given\":\"Nicola\",\"name\":\"Bodini, Nicola\",\"orcid\":\"0000-0002-2550-9853\"},{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (ZSW)\",\"family\":\"Rettenmeier\",\"given\":\"Andreas\",\"name\":\"Rettenmeier, Andreas\",\"orcid\":\"0000-0002-9953-5392\"},{\"affiliation\":\"Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)\",\"family\":\"Wildmann\",\"given\":\"Norman\",\"name\":\"Wildmann, Norman\",\"orcid\":\"0000-0001-9475-4206\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15692920"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15692920"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.15692919\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15692919\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-06-17"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15692919\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.15692920"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-06-18T19:51:56Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.15692920"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15692920\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15692920",
+  "notes": "International Energy Agency (IEA) Wind Technology Collaboration Program (TCP)\n\nTask 57 - Joint Assessment of Models (JAM)\n\n \n\nSlides presented during the 2025 General Annual Meeting, held on June 17, 2025.\n\n \n\n\n\n\nTopic\nLead\n\n\nIntroduction &amp; Task Updates\nRegis Thedin, NREL\n\n\nAWAKEN Benchmark\nNicola Bodini, NREL\n\n\nRAAW Single-turbine Benchmark\nAlex Rybchuk, NREL\n\n\nWINSENT Benchmark\nAndreas Rettenmeier, ZSW\n\n\nWiValdi Benchmark\nNorman Wildmann, DLR\n\n\nUncertainty Quantification Activities\nLukas Vollmer, IWES",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "JAM Annual General Meeting 2025",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15692920"
+}

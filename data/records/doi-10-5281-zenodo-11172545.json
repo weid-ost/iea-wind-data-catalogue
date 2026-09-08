@@ -1,0 +1,133 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Leeds\",\"family\":\"Mackie\",\"given\":\"Colin\",\"name\":\"Mackie, Colin\",\"orcid\":\"0000-0002-8560-2427\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.11172545"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.11172545"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-45\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:22Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.11172546\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.11172546\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-05-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.11172545\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.11172546\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "11172546"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.11172546~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/11172546"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/11172546\",\"https://zenodo.org/doi/10.5281/zenodo.11172545\",\"https://zenodo.org/doi/10.5281/zenodo.11172546\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-45"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-11172545",
+  "notes": "This document represents the second deliverable from the IEA Wind Task 45 Work Package 4 working group. Its purpose is to present for critical discussion four options for regulating end-of-life wind turbine blade (WTB) waste. Three comprise proposals for legislative provisions (i.e., ‘hard’ law measures) and one comprises development of tender requirements. The latter may operate as a something of a bridge between ‘hard law’ requirements and ‘soft law’ (voluntary) intentions or targets. Each option is presented according to a similar format: summary, proposed drafting and a commentary on the rationale for the option’s various components. The aim is to facilitate dialogue with stakeholders on (i) the option’s appeal from a regulatory and commercial perspective; (ii) its strengths and weaknesses; and (iii) how the option could be revised to aid its commercial viability. It is to be stressed that these options are presented as mere starting points to aid discussion and dialogue amongst stakeholders.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA Wind Task 45 - Deliverable 4.2 - Guideline for Legislation and Policy on End-of-Life Wind Turbine Blade Waste .pdf",
+      "url": "https://zenodo.org/records/11172546/files/IEA%20Wind%20Task%2045%20-%20Deliverable%204.2%20-%20Guideline%20for%20Legislation%20and%20Policy%20on%20End-of-Life%20Wind%20Turbine%20Blade%20Waste%20.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 45 - Deliverable 4.2 - Guideline for Legislation and Policy on End-of-Life Wind Turbine Blade Waste",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.11172545"
+}

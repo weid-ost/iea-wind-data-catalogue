@@ -1,0 +1,227 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Fraunhofer IWES\",\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"},{\"affiliation\":\"Fraunhofer IWES\",\"family\":\"Szyslo\",\"given\":\"Tom\",\"name\":\"Szyslo, Tom\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.8145113"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.8145113"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:55Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.8145112\",\"url\":\"https://zenodo.org/record/8145112\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-07-13"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.8145112\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask52\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "8145113"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.8145113~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/8145113"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/8145113\",\"https://zenodo.org/record/8145113\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-8145113",
+  "notes": "The IEA Wind Task 52 General Meeting 2023 took place online. The meeting was designed to provide information about the current status of wind lidar technology, the Task 52 working groups and the collaboration with other IEA Wind Tasks. The virtual meeting was organised as a mix of presentations, discussions and polls. Attached are the meeting minutes and all presentation (see agenda in minutes) given during the 2-day meeting.",
+  "owner_org": "fraunhofer-iwes",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "14June_04_WG_Alexander_Stoekl.pdf",
+      "url": "https://zenodo.org/records/8145113/files/14June_04_WG_Alexander_Stoekl.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "14June_05_WG_David_Schlipf.pdf",
+      "url": "https://zenodo.org/records/8145113/files/14June_05_WG_David_Schlipf.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_09_Jennifer_Tan.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_09_Jennifer_Tan.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "14June_07_LIKE.pdf",
+      "url": "https://zenodo.org/records/8145113/files/14June_07_LIKE.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_10_John_Medley.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_10_John_Medley.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_08_Rafael_Tavares.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_08_Rafael_Tavares.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_07_WG_Jacob_Eisenhart.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_07_WG_Jacob_Eisenhart.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_06_WG_Andy_Cifton.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_06_WG_Andy_Cifton.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "2023_IEA_Wind_Task_52_General_Meeting_MINUTES.pdf",
+      "url": "https://zenodo.org/records/8145113/files/2023_IEA_Wind_Task_52_General_Meeting_MINUTES.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_05_WG_Sara_Koller.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_05_WG_Sara_Koller.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_04_WG_Andy_Oldroyd.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_04_WG_Andy_Oldroyd.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_03_Peter_Clive.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_03_Peter_Clive.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_02_Eric_Simley.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_02_Eric_Simley.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_11_Poul_Hummelshoj.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_11_Poul_Hummelshoj.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "13June_01_Intro_Julia_Gottschall.pdf",
+      "url": "https://zenodo.org/records/8145113/files/13June_01_Intro_Julia_Gottschall.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "14June_01_Intro_Julia_Gottschall.pdf",
+      "url": "https://zenodo.org/records/8145113/files/14June_01_Intro_Julia_Gottschall.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "14June_02_Stephen_Holleran.pdf",
+      "url": "https://zenodo.org/records/8145113/files/14June_02_Stephen_Holleran.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "14June_03_Konstanze_Koelle.pdf",
+      "url": "https://zenodo.org/records/8145113/files/14June_03_Konstanze_Koelle.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "14June_06_WG_Dexing_Liu.pdf",
+      "url": "https://zenodo.org/records/8145113/files/14June_06_WG_Dexing_Liu.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Minutes from IEA Wind Task 52 General Meeting 2023",
+  "url": "https://zenodo.org/record/8145113"
+}

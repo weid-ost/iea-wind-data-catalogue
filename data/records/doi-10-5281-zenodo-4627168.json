@@ -1,0 +1,136 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"WETI\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"WETI\",\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"sowento\",\"family\":\"Raach\",\"given\":\"Steffen\",\"name\":\"Raach, Steffen\",\"orcid\":\"0000-0002-1264-0422\"},{\"affiliation\":\"MOLAS\",\"family\":\"Zhu\",\"given\":\"Hailong\",\"name\":\"Zhu, Hailong\",\"orcid\":\"0000-0001-6545-1345\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4627168"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4627168"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4627167\",\"url\":\"https://zenodo.org/record/4627167\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-03-17"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4627167\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.4627168"
+    },
+    {
+      "key": "source_key",
+      "value": "2023-06-02T00:06:30Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/4627168"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/4627168\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4627168",
+  "notes": "<strong>Presentation at the IEA Wind Task 32 Workshop on Digitalization on March 17, 2021</strong> We believe that lidar systems will follow the general trend of technology by adapting to their environment and becoming more adjustable. Here, the “smart lidar” concept intents to provide a helpful framework. The presentation shows the main advantages, current advances, and new opportunities for various stakeholders in the lidar community.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "lidar-wind-turbine-control-iea-wind-task-32"
+    }
+  ],
+  "title": "The Smart Lidar Concept - New Opportunities for the Lidar Community",
+  "url": "https://zenodo.org/record/4627168",
+  "version": "1"
+}

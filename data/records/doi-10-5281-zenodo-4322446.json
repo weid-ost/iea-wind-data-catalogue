@@ -1,0 +1,152 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"UPC\",\"family\":\"Molins\",\"given\":\"Climent\",\"name\":\"Molins, Climent\",\"orcid\":\"0000-0001-8292-0473\"},{\"affiliation\":\"UPC\",\"family\":\"Trubat\",\"given\":\"Pau\",\"name\":\"Trubat, Pau\",\"orcid\":\"0000-0001-8292-8272\"},{\"affiliation\":\"USTUTT\",\"family\":\"Mahfouz\",\"given\":\"M. Youssef\",\"name\":\"Mahfouz, M. Youssef\",\"orcid\":\"0000-0002-3057-270X\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4322446"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4322446"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:53Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4322445\",\"url\":\"https://zenodo.org/record/4322445\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-12-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4322445\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/corewind\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "4322446"
+    },
+    {
+      "key": "source_key",
+      "value": "3@10.5281/zenodo.4322446~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4322446"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4322446\",\"https://zenodo.org/record/4322446\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4322446",
+  "notes": "Files to simulate and run, UPC - WINDCRETE OpenFAST model 15MW FOWT from NREL (DTU) at Grand Canary Island site. This model version is consistent with deliverable D1.3 from COREWIND project (link to delvierable). Link to the 15MW wind turbine model can be found in the following link: GitHub - IEAWindTask37/IEA-15-240-RWT: 15MW reference wind turbine repository developed in conjunction with IEA Wind <strong>Disclaimer:</strong> The files and models are provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the models and files or the use or other dealings in the models and files provided.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "WINDCRETE_OpenFASTModel_v1.zip",
+      "url": "https://zenodo.org/records/4322446/files/WINDCRETE_OpenFASTModel_v1.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "15mw-wind-turbine"
+    },
+    {
+      "name": "corewind-project"
+    },
+    {
+      "name": "floating-wind-energy"
+    },
+    {
+      "name": "horizon2020"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "spar-technology"
+    },
+    {
+      "name": "wind"
+    }
+  ],
+  "title": "UPC - WINDCRETE OpenFAST model 15MW FOWT - Grand Canary Island",
+  "url": "https://zenodo.org/record/4322446",
+  "version": "1.0"
+}

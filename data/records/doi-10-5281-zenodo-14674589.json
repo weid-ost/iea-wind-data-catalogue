@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of the Basque Country UPV/EHU\",\"family\":\"Jugo\",\"given\":\"Josu\",\"name\":\"Jugo, Josu\"},{\"affiliation\":\"TECNALIA, Basque Research and Technology Alliance (BRTA)\",\"family\":\"Lopez-Queija\",\"given\":\"Javier\",\"name\":\"Lopez-Queija, Javier\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.14674589"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.14674589"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.14674588\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.14674588\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-01-16"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.14674588\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.14674589"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-01-19T10:45:43Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.14674589"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.14674589\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-14674589",
+  "notes": "This study presents preliminary results from the UPV/EHU-TECNALIA team on the optimization of Nonlinear Model Predictive Controller (NMPC) for the 30-second sprint discipline at the LAC Summer Games 2024, organized by the IEA Wind Task 52. The control objective is to regulate the IEA 15 MW reference wind turbine, incorporating Lidar-based wind measurements, under an Extreme Operational Gust (EOG) of 12 m/s. This document outlines the implemented scheme, which utilizes a Python-based approach, and summarizes the initial results.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "LAC Summer Games 2024 - 30 s Sprint report",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.14674589"
+}

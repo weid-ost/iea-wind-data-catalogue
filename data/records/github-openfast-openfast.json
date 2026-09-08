@@ -1,0 +1,134 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:32:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|OpenFAST/openfast"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:32:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Apache-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-12"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "OpenFAST/openfast"
+    },
+    {
+      "key": "source_key",
+      "value": "2895884d2be01862173c88d70f86b358d2f1a50a:v5.0.0:c161b597041cc5c9~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/OpenFAST/openfast"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/OpenFAST/openfast\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "apache",
+  "name": "github-openfast-openfast",
+  "notes": "Main repository for the NLR-supported OpenFAST whole-turbine and FAST.Farm wind farm simulation codes.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/OpenFAST/openfast"
+    },
+    {
+      "format": "release",
+      "name": "Release v5.0.0",
+      "url": "https://github.com/OpenFAST/openfast/releases/tag/v5.0.0"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "aeroelasticity"
+    },
+    {
+      "name": "wind"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-farm"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-turbine"
+    }
+  ],
+  "title": "OpenFAST/openfast",
+  "url": "https://github.com/OpenFAST/openfast",
+  "version": "v5.0.0"
+}

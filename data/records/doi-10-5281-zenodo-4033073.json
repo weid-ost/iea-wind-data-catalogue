@@ -1,0 +1,139 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Vasiljevic\",\"given\":\"Nikola\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4033073"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4033073"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:44Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-nc-nd-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4033072\",\"url\":\"https://zenodo.org/record/4033072\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-09-16"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4033072\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.1199489\",\"identifier_type\":\"DOI\",\"relation\":\"cites\"},{\"identifier\":\"10.5281/zenodo.4013191\",\"identifier_type\":\"DOI\",\"relation\":\"cites\"},{\"identifier\":\"http://data.windenergy.dtu.dk/taxonomy\",\"identifier_type\":\"URL\",\"relation\":\"cites\"},{\"identifier\":\"10.5281/zenodo.1493874\",\"identifier_type\":\"DOI\",\"relation\":\"cites\"},{\"identifier\":\"https://github.com/rdawg-pidinst/use-cases/blob/master/16-DTU-Wind-Energy.md\",\"identifier_type\":\"URL\",\"relation\":\"cites\"},{\"identifier\":\"10.5281/zenodo.1199489\",\"identifier_type\":\"DOI\",\"relation\":\"Cites\"},{\"identifier\":\"10.5281/zenodo.4013191\",\"identifier_type\":\"DOI\",\"relation\":\"Cites\"},{\"identifier\":\"http://data.windenergy.dtu.dk/taxonomy\",\"identifier_type\":\"URL\",\"relation\":\"Cites\"},{\"identifier\":\"10.5281/zenodo.1493874\",\"identifier_type\":\"DOI\",\"relation\":\"Cites\"},{\"identifier\":\"https://github.com/rdawg-pidinst/use-cases/blob/master/16-DTU-Wind-Energy.md\",\"identifier_type\":\"URL\",\"relation\":\"Cites\"},{\"identifier\":\"https://zenodo.org/communities/oswec\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/communities/rda-related\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "4033073"
+    },
+    {
+      "key": "source_key",
+      "value": "7@10.5281/zenodo.4033073~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4033073"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4033073\",\"https://zenodo.org/record/4033073\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-nc-nd",
+  "name": "doi-10-5281-zenodo-4033073",
+  "notes": "The main focus of the wind energy domain is to provide practical solutions that will result in cost-effective electricity produced from the wind. To achieve such goals, the wind energy domain is characterized as a multi-disciplinary domain, reusing, mixing and contributing to solutions in fields of Earth Sciences, Mechanical and Electrical Engineering, Material Science, Computer Science and Social Science. Due to multidisciplinarity it is essential to establish common terminology to boost sharing and reuse of data, and general understanding across the domain. In 2017, through the international collaboration with domain experts, several wind energy related taxonomies (e.g., research topics, external conditions, etc.) were developed to enable better description of published datasets. These taxonomies have been initially implemented in 2018 in DTU Data (university instance of figshare), and later in sharewind (instance of b2share). Recently, in the Marinet2 project we have proposed metadata schemas , by generalizing seadatanet standard, for data streams (i.e., recorded parameters) and datasets (collection of data streams) for preparing datasets in NetCDF format for publishing and preservation. To establish a controlled vocabulary of parameters, and thus assure same naming convention across datasets, we are fusing existing vocabularies from Earth Ocean domain (e.g., CF standard name convention, BODC) and terminologies used in IEC standards for wind turbine performance assessment. Follow up steps will be to build a collection of ‘standards’ for wind energy domain under FAIRsharing.org, work towards their implementation during the AWAKEN project, disseminate them through IEA Wind and EERA JP WIND.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "presentation.pdf",
+      "url": "https://zenodo.org/records/4033073/files/presentation.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "fair"
+    },
+    {
+      "name": "rda"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "DTU Wind Energy metadata and terminology",
+  "url": "https://zenodo.org/record/4033073"
+}

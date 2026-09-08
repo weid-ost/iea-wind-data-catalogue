@@ -1,0 +1,152 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"NREL\",\"family\":\"Fields\",\"given\":\"M Jason\",\"name\":\"Fields, M Jason\",\"orcid\":\"0000-0002-8781-6138\"},{\"affiliation\":\"Fraunhofer\",\"family\":\"Hahn\",\"given\":\"Berthold\",\"name\":\"Hahn, Berthold\"},{\"affiliation\":\"ServusNet\",\"family\":\"Farren\",\"given\":\"Des\",\"name\":\"Farren, Des\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4310030"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4310030"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:50Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.4310031\",\"url\":\"https://zenodo.org/record/4310031\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-11-05"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4310030\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.4310031\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/iea_wind_task_43\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "4310031"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.4310031~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4310031"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4310031\",\"https://zenodo.org/record/4310030\",\"https://zenodo.org/record/4310031\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4310030",
+  "notes": "This presentation discusses the definition, opportunities and challenges of wind energy digitalization. It also presents the organization and management of International Energy Agency Task 43 on Wind Energy Digitalization.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "20191104_Task 43_digitalization_kickoff_intro.pdf",
+      "url": "https://zenodo.org/records/4310031/files/20191104_Task%2043_digitalization_kickoff_intro.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digitalization"
+    },
+    {
+      "name": "energy-yield-assessment"
+    },
+    {
+      "name": "operations-and-maintenance"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-energy-digitalization"
+    },
+    {
+      "name": "wind-resource-assessment"
+    }
+  ],
+  "title": "IEA Wind Task 43 on Wind Energy Digitalization: Task Launch Overview",
+  "url": "https://zenodo.org/record/4310030"
+}

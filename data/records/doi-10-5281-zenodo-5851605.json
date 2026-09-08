@@ -1,0 +1,145 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Sandia National Laboratories\",\"family\":\"Camarena\",\"given\":\"Ernesto\",\"name\":\"Camarena, Ernesto\",\"orcid\":\"0000-0001-7835-6689\"},{\"affiliation\":\"Sandia National Laboratories\",\"family\":\"Anderson\",\"given\":\"Evan\",\"name\":\"Anderson, Evan\",\"orcid\":\"0000-0002-5455-6018\"},{\"affiliation\":\"Sandia National Laboratories\",\"family\":\"Ruehl\",\"given\":\"Kelley\",\"name\":\"Ruehl, Kelley\"},{\"affiliation\":\"Sandia National Laboratories\",\"family\":\"Clarke\",\"given\":\"Ryan James\",\"name\":\"Clarke, Ryan James\",\"orcid\":\"0000-0002-4757-4322\"},{\"affiliation\":\"Sandia National Laboratories\",\"family\":\"Paquette\",\"given\":\"Joshua\",\"name\":\"Paquette, Joshua\"},{\"affiliation\":\"Sandia National Laboratories\",\"family\":\"Ennis\",\"given\":\"Brandon Lee\",\"name\":\"Ennis, Brandon Lee\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5851605"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5851605"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:14Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "Open Access"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.5851606\",\"url\":\"https://zenodo.org/record/5851606\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2022-01-04"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5851605\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.5851606\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "5851606"
+    },
+    {
+      "key": "source_key",
+      "value": "2@10.5281/zenodo.5851606~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5851606"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5851606\",\"https://zenodo.org/record/5851605\",\"https://zenodo.org/record/5851606\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-5281-zenodo-5851605",
+  "notes": "The current release now incorporates structural optimization, associated<br /> structural analyses, and the move to object-oriented data structures.<br /> The exclusive use of the GUI in prior versions prevented automation in<br /> optimizations. Thus, moving to these data structures enabled<br /> optimization. Since the GUI functionality is advantageous in certain<br /> situations, its functionality is still retained. Current documentation primarily<br /> describes usage of the structural optimization, associated structural<br /> analyses, and the object-oriented data structures. A new capability also includes the ability to accept input from the<br /> International Energy Agency (IEA) Wind Task 37 blade ontology. This<br /> is known to have enhanced collaboration. 3D FEA shell analyses have been partially detached from the GUI and can now be<br /> parameterized for various parameter studies and optimization. Data I/O for<br /> ANSYS has been automated for mesh generation as well as various analyses,<br /> such as tip-deflection, buckling, material rupture, total mass, and<br /> frequencies. A technique was developed to determine the design loads. The<br /> thousands of section forces and moments that occurred during the<br /> dynamic structural analyses required in the system-level optimization<br /> were reduced to nine critical load cases. The other newly developed analysis procedure allowed to evaluate<br /> fatigue damage for every material layer at various cross-sections of<br /> a blade. Further details on both new analyses are provided in the<br /> journal article (to appear): Camarena, Ernesto, et al. \"Land-based wind turbines with flexible rail transportable blades–Part II: 3D FEM design optimization of the rotor blades.\" Wind Energy Science\".",
+  "owner_org": "sandia",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "NuMAD-3.0.zip",
+      "url": "https://zenodo.org/records/5851606/files/NuMAD-3.0.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "blade-design"
+    },
+    {
+      "name": "composite"
+    },
+    {
+      "name": "finite-element"
+    },
+    {
+      "name": "optimization"
+    },
+    {
+      "name": "turbine-blade"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "NuMAD v3.0",
+  "url": "https://zenodo.org/record/5851605",
+  "version": "3.0"
+}

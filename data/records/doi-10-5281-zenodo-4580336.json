@@ -1,0 +1,150 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Robertson\",\"given\":\"Amy\",\"name\":\"Robertson, Amy\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4580336"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4580336"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-30\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4580335\",\"url\":\"https://zenodo.org/record/4580335\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-03-04"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4580335\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/eerajpwind\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/communities/setwind\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "4580336"
+    },
+    {
+      "key": "source_key",
+      "value": "7@10.5281/zenodo.4580336~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4580336"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4580336\",\"https://zenodo.org/record/4580336\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-30"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4580336",
+  "notes": "This presentation was part of the EERA JP Wind SP4 Aerodynamics Loads &amp; Control – FALCON 30 50 Workshop (February 25, 2021).",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Amy Robertson-NREL.pdf",
+      "url": "https://zenodo.org/records/4580336/files/Amy%20Robertson-NREL.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "floating-wind"
+    },
+    {
+      "name": "wind"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-turbines"
+    }
+  ],
+  "title": "Introduction to the OC6 Project (IEA Wind Task 30)",
+  "url": "https://zenodo.org/record/4580336"
+}

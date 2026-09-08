@@ -1,0 +1,99 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Höning, Leo\"},{\"name\":\"Herráez, Iván\"},{\"name\":\"Stoevesandt, Bernhard\"},{\"name\":\"Peinke, Joachim\"},{\"name\":\":unav\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.24406/publica-8751"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.24406/publica-8751"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026"
+    },
+    {
+      "key": "publisher",
+      "value": "Fraunhofer-Gesellschaft"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "10.24406/publica-8751"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-05T01:37:34Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://publica.fraunhofer.de/handle/publica/517129"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://publica.fraunhofer.de/handle/publica/517129\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-24406-publica-8751",
+  "notes": "This study explores the aeroelastic behavior of the IEA 15MW wind turbine rotor during dynamic yaw maneuvers under storm conditions through high-fidelity computational fluid dynamics (CFD) simulations. The focus is on blade vibration responses to a variety of yaw misalignments while maintaining constant pitch and azimuth settings. Utilizing the geometrically exact beam theory (GEBT) and the OpenFOAM framework, the study reveals that certain yaw angles lead to significant edgewise blade vibrations, with distinct responses being observed among the rotor's three blades. Detailed analysis of one blade at varying fixed yaw angles, employing Hilbert–Huang transformation, uncovers a lock-in effect where flow structures synchronize with the blade's eigenfrequencies, resulting in pronounced blade tip vibrations. Key findings indicate that the most substantial vibrations occur during specific yaw angles, suggesting that the rotor's structural integrity could be compromised under certain dynamic conditions. This work enhances the understanding of aeroelastic instabilities during off-design yaw maneuvers and highlights the need for operational strategies in managing rotor performance during extreme conditions.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Aeroelastic instabilities of the IEA 15MW rotor during extreme yaw maneuvers",
+  "url": "https://publica.fraunhofer.de/handle/publica/517129"
+}

@@ -25,8 +25,16 @@
       "value": "[\"task-43\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through task-page:task-43, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-08-31T23:03:29Z"
+      "value": "2026-09-08T15:34:55Z"
     },
     {
       "key": "license_mapped",
@@ -74,7 +82,7 @@
     },
     {
       "key": "source_key",
-      "value": "56a50f704dc5d65b"
+      "value": "56a50f704dc5d65b~m2"
     },
     {
       "key": "source_system",

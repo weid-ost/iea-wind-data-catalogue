@@ -1,0 +1,142 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Wind Energy Technology Institute, Flensburg University of Applied Sciences\",\"family\":\"Afanasieva\",\"given\":\"Nadiia\",\"name\":\"Afanasieva, Nadiia\",\"orcid\":\"0000-0003-1399-4318\"},{\"affiliation\":\"Wind Energy Technology Institute, Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"}]"
+    },
+    {
+      "key": "container",
+      "value": "19th EAWE PhD seminar"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.8335186"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.8335186"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.8116593\",\"url\":\"https://zenodo.org/record/8116593\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-06-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.8116593\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/abba\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "conference-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "8335186"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.8335186~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/8335186"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/8335186\",\"https://zenodo.org/record/8335186\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-8335186",
+  "notes": "The response of a wind turbine to changes in the wind speed is traditionally achieved via a feedback blade pitch and generator torque control. Which means that a turbine can only react after the wind changes impact it. Light detection and ranging (lidar) technology measuring the wind in front of the rotor gives the wind turbine the ability to respond to emerging wind dynamics prior to its occurring. However, commercial application remains limited so far, although the potential for improvements in control performance has been shown in literature. This work is intended to contribute to the development of lidar technology by improving the wind preview quality. For this purpose, a basic framework and test strategy for testing and evaluating wind field reconstruction (WFR) has been developed. Here, the quality of the WFR method is evaluated in terms of the coherence between the rotor-effective wind speed (REWS) from the reference wind field and the wind field estimated by the lidar. The baseline simulation case was built based on the IEA Kaimal wind field, a simple lidar simulator measuring at two points in front of the rotor, and a baseline WFR assuming perfect alignment. In this case, the obtained coherence agrees well with its theoretical value, indicating that the simulation and WFR was implemented correctly. Replacing the wind field by a more realistic (e.g. generated by LES) should give an idea of how much of the wind flow physics can be captured by the standard statistical turbulence mode within the baseline WFR. Finally, when reinforcing WFR with physics informed techniques by making use of simplified LES, we expect better preview of the real wind flow physics. An extension of the framework will include full aero-elastic simulations to evaluate the methods not only with respect to the wind preview quality, but also for their capability in improving wind turbine control.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Afanasieva_Schlipf_Hannover2023.pdf",
+      "url": "https://zenodo.org/records/8335186/files/Afanasieva_Schlipf_Hannover2023.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Afanasieva_Schlipf__Abstract.pdf",
+      "url": "https://zenodo.org/records/8335186/files/Afanasieva_Schlipf__Abstract.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-field-reconstruction-large-eddy-simulation-lidar"
+    }
+  ],
+  "title": "Improving the Quality of Wind Field Reconstruction Techniques for Lidar-assisted Control of Wind Turbines",
+  "url": "https://zenodo.org/record/8335186"
+}

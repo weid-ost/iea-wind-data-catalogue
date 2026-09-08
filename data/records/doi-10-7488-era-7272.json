@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Leite\",\"given\":\"Anita\",\"name\":\"Leite, Anita\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.7488/era/7272"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.7488/era/7272"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-27"
+    },
+    {
+      "key": "publisher",
+      "value": "My University"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "thesis"
+    },
+    {
+      "key": "source_id",
+      "value": "10.7488/era/7272"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-05-27T16:20:13Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://era.ed.ac.uk/handle/1842/44757"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://era.ed.ac.uk/handle/1842/44757\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-7488-era-7272",
+  "notes": "The development of floating offshore wind turbines (FOWTs) has accelerated in recent years, drawing heavily on experience from the oil &amp; gas and naval architecture sectors. Numerical modelling tools originally developed for these industries are now being adapted for floating wind applications. However, to ensure their reliability, these tools require experimental validation, typically through wave basin testing. Basin testing of FOWTs presents unique challenges due to the scaling incompatibility between aerodynamics experienced by the rotor and hydrodynamics experienced by the floater, making the accurate representation of both loads particularly difficult. In basin testing, various methods for simulating the wind loads have been proposed, ranging from simplistic to highly complex. Yet, no consensus exists on which method is most appropriate for different testing objectives or technology readiness levels (TRLs). This thesis investigates how the complexity of wind actuation systems influences test outcomes and whether simpler alternatives to Software-in-the-Loop (SIL) methods may suffice depending on test goals. A dedicated methodology was developed to compare three actuation approaches: static weight, constant thrust, and SIL, using the same FOWT model, the UMaine VolturnUS-S platform with a 15 MW IEA wind turbine, tested at the FloWave basin. The three campaigns differed only in their wind actuation approach, enabling a direct comparison of their influence on system response. Additional considerations included metocean condition selection and the adaptation of the mooring system for physical testing. Results show that while SIL enables full coupling between aerodynamic and hydrodynamic responses, its effectiveness depends on the responsiveness and fidelity of the control implementation. Insufficient tuning can introduce negative damping effects or overly amplified motions. The proportional–integral (PI) control method yielded the best agreement with the numerical model across most degrees of freedom, particularly pitch and surge, while the Static Weight approach introduced the largest discrepancies, especially in dynamic scenarios, though it offered reasonable agreement in mooring tension predictions. Directional wave–wind misalignment tests further demonstrated the importance of reproducing asymmetries in yaw and sway, where differences in applied thrust orientation (e.g., via winch angle shifting during large yaw excursions) can introduce additional discrepancies. Based on these findings, preliminary guidance is proposed for selecting wind actuation strategies according to the Technology Readiness Level (TRL) of the system under test. For early-stage development (TRL 2–3), the Static Weight method may be sufficient for basic hydrodynamic characterisation and capturing mooring line tensions. At intermediate stages (TRL 3–4), the PI method offers greater fidelity and improved agreement with numerical models, particularly when the primary focus of the test remains on hydrodynamic behaviour. For high-fidelity testing and validation at advanced TRL (5 and above), the SIL method is recommended, provided the actuation system is responsive enough to avoid introducing amplifications. Moreover, for testing and validating control methodologies, SIL is the only approach capable of capturing the dynamic interaction between the controller and the platform.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "experimental-validation"
+    },
+    {
+      "name": "floating-offshore-wind-turbines-fowt"
+    },
+    {
+      "name": "fowt"
+    },
+    {
+      "name": "sil"
+    },
+    {
+      "name": "software-in-the-loop-sil"
+    },
+    {
+      "name": "technology-readiness-level-trl"
+    },
+    {
+      "name": "trl"
+    },
+    {
+      "name": "wave-basin-testing"
+    },
+    {
+      "name": "wind-actuation-methods"
+    }
+  ],
+  "title": "Evaluating wind load simulation methods in wave basin testing of floating offshore wind turbines while balancing complexity and test objectives",
+  "url": "https://era.ed.ac.uk/handle/1842/44757"
+}

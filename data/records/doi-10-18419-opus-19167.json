@@ -1,0 +1,118 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Mahfouz, Mohammad Youssef\"},{\"name\":\"Roser, T.\"},{\"name\":\"Cheng, Po Wen\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.18419/opus-19167"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.18419/opus-19167"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "CC BY"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021"
+    },
+    {
+      "key": "publisher",
+      "value": "Universität Stuttgart"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "conference-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "10.18419/opus-19167"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-07-28T15:00:32Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://elib.uni-stuttgart.de/handle/11682/19186"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://elib.uni-stuttgart.de/handle/11682/19186\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-18419-opus-19167",
+  "notes": "The modelling of mooring lines and their behaviour is essential for the research and development of Floating Offshore Wind Turbines (FOWTs). Mooring lines’ dynamics impact the platform motions and hence the loads on the turbine’s blades. Therefore, coupling the mooring lines’ dynamics in the aero-hydro-servo-elastic models is a necessity. In this paper we couple Moordyn to SIMPACK which is a multibody system simulation software. Afterwards, we verify the coupling by comparing the results to OpenFAST v2.1. The IEA Wind 15 MW reference wind turbine coupled to Activefloat and WindCrete floaters, introduced in COREWIND project, are used for the verification process. The two floaters have two different mooring configurations; WindCrete is a spar floater with a symmetric delta shape catenary mooring line system, while Activefloat is a semi-submersible with simple catenary mooring configurations. During the verification, both steady and dynamic load cases are used for the responses of two mooring systems. After the verification, the coupling procedure is open access and can be used to model new innovations in FOWTs using SIMPACK benefiting from the tool’s flexibility.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "333.7"
+    },
+    {
+      "name": "550"
+    }
+  ],
+  "title": "Verification of SIMPACK-MoorDyn coupling using 15 MW IEA-Wind reference models Activefloat and WindCrete",
+  "url": "https://elib.uni-stuttgart.de/handle/11682/19186"
+}

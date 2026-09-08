@@ -17,8 +17,16 @@
       "value": "source"
     },
     {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-03T10:00:32Z"
+      "value": "2026-09-08T15:32:50Z"
     },
     {
       "key": "lifecycle_state",
@@ -26,7 +34,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -50,7 +58,7 @@
     },
     {
       "key": "source_key",
-      "value": "c08403da06bc850e1273f517f45a9cdd86d8baa1:v1.0.0:9f7b3b4123073230"
+      "value": "c08403da06bc850e1273f517f45a9cdd86d8baa1:v1.0.0:9f7b3b4123073230~m2"
     },
     {
       "key": "source_system",

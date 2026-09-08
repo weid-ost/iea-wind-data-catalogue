@@ -1,0 +1,145 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"family\":\"Rodrigo\",\"given\":\"Javier Sanz\",\"name\":\"Rodrigo, Javier Sanz\",\"orcid\":\"0000-0003-0291-6429\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4095052"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4095052"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4095051\",\"url\":\"https://zenodo.org/record/4095051\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2014-06-02"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.1088/1742-6596/524/1/012105\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementedBy\"},{\"identifier\":\"10.5281/zenodo.4095051\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/wakebench\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.4095052"
+    },
+    {
+      "key": "source_key",
+      "value": "2020-10-16T10:43:37Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/4095052"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/4095052\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4095052",
+  "notes": "This dataset has been generated within the IEA-Wind Task 31 Wakebench project to validate microscale flow models over complex terrain. The data has been digitized from the original technical reports of the experiment from Taylor and Teunissen (1983/1985).",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "benchmark"
+    },
+    {
+      "name": "cfd"
+    },
+    {
+      "name": "microscale"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Input and validation data for the Askervein Hill benchmark",
+  "url": "https://zenodo.org/record/4095052",
+  "version": "1.0"
+}

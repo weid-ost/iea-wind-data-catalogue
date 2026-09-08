@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Eastern Switzerland University of Applied Sciences\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"},{\"affiliation\":\"Octue Ltd\",\"family\":\"Clark\",\"given\":\"Thomas\",\"name\":\"Clark, Thomas\"},{\"affiliation\":\"Energy and Environment Directorate, Pacific Northwest National Laboratory\",\"family\":\"Day\",\"given\":\"Justin\",\"name\":\"Day, Justin\"},{\"affiliation\":\"IntelStor LLC\",\"family\":\"Totaro\",\"given\":\"Philip\",\"name\":\"Totaro, Philip\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.6457038"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.6457038"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:17Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.6457039\",\"url\":\"https://zenodo.org/record/6457039\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2022-04-04"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.6457038\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.6457039\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "poster"
+    },
+    {
+      "key": "source_id",
+      "value": "6457039"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.6457039~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/6457039"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/6457039\",\"https://zenodo.org/record/6457038\",\"https://zenodo.org/record/6457039\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-6457038",
+  "notes": "Wind energy is highly interdisciplinary and consists of many stakeholders across the value chain, between whom data sharing is a requisite. Active and effective data sharing - and communication about the data - improve collaboration and increase innovation, therefore having a high potential to benefit the entire community. Community defined and agreed upon common metadata, semantics and schema definitions reduce costs and increase reliance on data and data science for generating a competitive advantage. Therefore one of the focus topics of IEA Wind Task 43 is \"data sharing and standards\". Initial work involved conducting 30+ interviews with the wind energy community, showing that one of the main barriers to data sharing is the lack of common metadata standards and semantics across the wind energy industry [1]. A number of metadata standards and semantics do already exist, and a number of initiatives are active in their further development. However, there is not yet a common definition or method of application agreed on by the entire community. Also, there is a lack of clarity about what the industry actually needs. For example, is only one unique definition desired, should the definitions be split into different categories (and if so, which?), would a flexible framework able to deal with different definitions be required, etc.? The IEA Wind Task 43 Metadata Challenge - currently running on the WeDoWind platform - sets out to answer these questions. The goals of this challenge are to research existing efforts, then to define the key actions required to progress toward commonality in wind energy data, and finally to implement these actions. The work in this paper addresses the research of existing efforts and the definition of the key actions required towards the standardisation of wind energy data.",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "PO182.pdf",
+      "url": "https://zenodo.org/records/6457039/files/PO182.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data-standards"
+    },
+    {
+      "name": "meta-data"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "The IEA Wind Task 43 Metadata Challenge: A roadmap to enable commonality in wind energy data",
+  "url": "https://zenodo.org/record/6457038"
+}

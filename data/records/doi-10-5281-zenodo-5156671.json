@@ -1,0 +1,149 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Fraunhofer\",\"family\":\"Hahn\",\"given\":\"Berthold\",\"name\":\"Hahn, Berthold\"},{\"affiliation\":\"Servusnet\",\"family\":\"Des Farren\",\"name\":\"Des Farren,\"},{\"affiliation\":\"NRG Systems\",\"family\":\"Purdue\",\"given\":\"Michael\",\"name\":\"Purdue, Michael\"},{\"affiliation\":\"NREL\",\"family\":\"Fields\",\"given\":\"M Jason\",\"name\":\"Fields, M Jason\",\"orcid\":\"0000-0002-8781-6138\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5156671"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5156671"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:04Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.5156672\",\"url\":\"https://zenodo.org/record/5156672\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-08-03"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5156671\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.5156672\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/iea_wind_task_43\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "technical-report"
+    },
+    {
+      "key": "source_id",
+      "value": "5156672"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.5156672~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5156672"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5156672\",\"https://zenodo.org/record/5156671\",\"https://zenodo.org/record/5156672\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5156671",
+  "notes": "This document contains the minutes of the International Energy Agency (IEA) Wind Task 43 third general meeting. Meeting Overview:<br /> IEA Wind Task 43 Wind Energy Digitalization held their 3rd general meeting as a digital week from May 18th to 20th 2021. It was an open meeting announced to the public via various means and it found great attention. Nearly 70 participants attended the opening session and around 40 - 60 participants took part in the sessions dedicated to the individual work packages of Task 43.<br /> Jason Fields from National Renewable Energies Lab, operating agent of Task 43, welcomed the audience, gave an overview about the Task 43, and moderated through the whole meeting. <br /> All days started with a key note or a panel discussion respectively. Shuli Goodman from Linux Foundation Energy and Gavin Starks from Icebreaker One presented their views on the state-of-the-art in digitalization and their expectations regarding the further development and next steps needed. <br /> On the first day, a live interview with Daniel Luecht, SiemensGamesa and Khalid Kamhawi, Ithaca Clean Energy allowed a deeper insight for the audience into the current situation with opportunities and barriers of a turbine manufacturing company and a consulting firm offering AI analyses. These findings will enrich the findings from +30 interviews work package 1 “Roadmap of Digitalization in Wind Energy” have already conducted. <br /> The third day started with short introductory presentations from and a panel discussion on “External Perspectives on Digitalization” with Martin Curley, Health Service Executive-Ireland, Vijayant Kumar, Optum-UnitedHealth Group, and Liz Dennet, Amazon Web Services. <br /> The other six sessions gave space for the work packages to present their intermediate results and to discuss it with the audience. In general, these results drew much attention and started lively discussions with valuable findings for all working groups. The complete agenda for all three days is presented in the annex.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "20210803_IEAWT43_Spring2021_DigitalWeekII_Proceedings.pdf",
+      "url": "https://zenodo.org/records/5156672/files/20210803_IEAWT43_Spring2021_DigitalWeekII_Proceedings.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digitalization"
+    },
+    {
+      "name": "open-source"
+    },
+    {
+      "name": "operations-and-mainteannce"
+    },
+    {
+      "name": "resource-assessment"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "IEA Wind Task 43 Meeting 3 Proceedings (Virtual)",
+  "url": "https://zenodo.org/record/5156671"
+}

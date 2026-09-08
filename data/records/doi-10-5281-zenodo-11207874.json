@@ -1,0 +1,137 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Leeds\",\"family\":\"Mackie\",\"given\":\"Colin\",\"name\":\"Mackie, Colin\",\"orcid\":\"0000-0002-8560-2427\"},{\"affiliation\":\"ECHT\",\"family\":\"Lobregt\",\"given\":\"Maarten\",\"name\":\"Lobregt, Maarten\"},{\"affiliation\":\"University of Leeds\",\"family\":\"Velenturf\",\"given\":\"Anne\",\"name\":\"Velenturf, Anne\",\"orcid\":\"0000-0003-2635-0546\"},{\"affiliation\":\"Vestas Wind Systems A/S\",\"family\":\"Vasudevan\",\"given\":\"Karthik\",\"name\":\"Vasudevan, Karthik\"},{\"affiliation\":\"Vattenfall\",\"family\":\"Frid\",\"given\":\"Gustav\",\"name\":\"Frid, Gustav\"},{\"affiliation\":\"Verband Deutscher Maschinen- und Anlagenbau\",\"family\":\"Najib\",\"given\":\"Haras\",\"name\":\"Najib, Haras\"},{\"affiliation\":\"National Composite Centre\",\"family\":\"Agirregomezkorta\",\"given\":\"Asier\",\"name\":\"Agirregomezkorta, Asier\"},{\"affiliation\":\"Engie - Laborelec\",\"family\":\"Barcelo Basanez\",\"given\":\"Areil\",\"name\":\"Barcelo Basanez, Areil\"},{\"family\":\"Monnaie\",\"given\":\"Frederic\",\"name\":\"Monnaie, Frederic\"},{\"affiliation\":\"DNV\",\"family\":\"Krüger\",\"given\":\"Bernhard\",\"name\":\"Krüger, Bernhard\"},{\"affiliation\":\"Vattenfall\",\"family\":\"Straarup Skygebjerg\",\"given\":\"Lene\",\"name\":\"Straarup Skygebjerg, Lene\"},{\"affiliation\":\"TPI Composites Germany GmbH\",\"family\":\"Spring\",\"given\":\"Philippe\",\"name\":\"Spring, Philippe\"},{\"affiliation\":\"Ørsted\",\"family\":\"Marchante Jiménez\",\"given\":\"Miriam\",\"name\":\"Marchante Jiménez, Miriam\"},{\"affiliation\":\"Ørsted\",\"family\":\"Travia\",\"given\":\"William Frederic\",\"name\":\"Travia, William Frederic\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Beauson\",\"given\":\"Justine\",\"name\":\"Beauson, Justine\",\"orcid\":\"0000-0003-3534-3516\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.11207874"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.11207874"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-45\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:25Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.11207873\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.11207873\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-05-17"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.11207873\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "11207874"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.11207874~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/11207874"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/11207874\",\"https://zenodo.org/doi/10.5281/zenodo.11207874\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-45"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-11207874",
+  "notes": "This document represents the ‘6-month preliminary report’ deliverable from the Work Package 4 working group. The purpose of this report is to review and summarize existing legislation, standards, and certification schemes related to recycling glass fiber composites. Readers should consider this report a current ‘snapshot in time’ of legislation, policies, rules, and standards – to the extent they exist – in various countries around the world. This preliminary report is intended to help inform members in other Work Package groups about the state of the policy and regulatory landscape related to blade recycling. The information assembled herein does not reflect an exhaustive review of legislation and policies in every country but reflects the conditions in select major wind energy markets. The WP4 working group acknowledges the lack of content from Asia Pacific, Africa, and Indian subcontinent countries, with hope for expanded participation from industry members in these regions.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA Task 45 - WP4 - D4.1 - Preliminary Summary of Regulations and Policies.pdf",
+      "url": "https://zenodo.org/records/11207874/files/IEA%20Task%2045%20-%20WP4%20-%20D4.1%20-%20Preliminary%20Summary%20of%20Regulations%20and%20Policies.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 45 - Deliverable 4.1 - Preliminary summary of policies, legislation, guidelines and initiatives that address the end-of-life of wind turbine blades",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.11207874"
+}

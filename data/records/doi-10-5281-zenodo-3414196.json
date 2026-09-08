@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Danish Technical University\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"Wuerth, Ines\",\"orcid\":\"0000-0002-1365-0243\"},{\"affiliation\":\"Sowento GmbH\",\"name\":\"Steffen Raach\",\"orcid\":\"0000-0002-1264-0422\"},{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg\",\"name\":\"Haizmann, Florian\",\"orcid\":\"0000-0001-9002-576X\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"Fürst, Holger\"}]"
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Danish Technical University\",\"family\":\"Vasiljevic\",\"given\":\"Nikola\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"},{\"affiliation\":\"University of Stuttgart\",\"family\":\"Wuerth\",\"given\":\"Ines\",\"name\":\"Wuerth, Ines\",\"orcid\":\"0000-0002-1365-0243\"},{\"affiliation\":\"Sowento GmbH\",\"family\":\"Raach\",\"given\":\"Steffen\",\"name\":\"Raach, Steffen\",\"orcid\":\"0000-0002-1264-0422\"},{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg\",\"family\":\"Haizmann\",\"given\":\"Florian\",\"name\":\"Haizmann, Florian\",\"orcid\":\"0000-0001-9002-576X\"},{\"affiliation\":\"University of Stuttgart\",\"family\":\"Fürst\",\"given\":\"Holger\",\"name\":\"Fürst, Holger\"}]"
     },
     {
       "key": "doi",
@@ -29,8 +29,16 @@
       "value": "[\"task-32\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and org:IEA-Wind-Task-32, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-08T14:05:41Z"
+      "value": "2026-09-08T15:32:12Z"
     },
     {
       "key": "license_mapped",
@@ -45,8 +53,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.3414197\",\"url\":\"https://zenodo.org/record/3414197\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -58,7 +70,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.3414197\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3414196\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.3414197\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3414196\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
     },
     {
       "key": "resource_kind",
@@ -70,19 +82,19 @@
     },
     {
       "key": "source_id",
-      "value": "3414197"
+      "value": "IEA-Wind-Task-32/wind-lidar-ontology"
     },
     {
       "key": "source_key",
-      "value": "11@10.5281/zenodo.3414197~m2"
+      "value": "5582afb0213cacd68d59a8ca5ee01d9be44038bd::e8e996a39f87edd4~m2"
     },
     {
       "key": "source_system",
-      "value": "zenodo"
+      "value": "github"
     },
     {
       "key": "source_systems",
-      "value": "[\"github\",\"zenodo\"]"
+      "value": "[\"datacite\",\"github\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -90,7 +102,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/IEA-Wind-Task-32/wind-lidar-ontology\",\"https://zenodo.org/records/3414197\"]"
+      "value": "[\"https://github.com/IEA-Wind-Task-32/wind-lidar-ontology\",\"https://zenodo.org/records/3414197\",\"https://zenodo.org/record/3414196\",\"https://zenodo.org/record/3414197\"]"
     },
     {
       "key": "withdrawn",
@@ -104,7 +116,7 @@
   ],
   "license_id": "cc-by-sa",
   "name": "doi-10-5281-zenodo-3414196",
-  "notes": "<p>This white paper describes the OpenLidar initiative for collaborative research on wind lidar hardware and software.</p>\n\n<p>We welcome feedback. Please see <a href=\"https://github.com/IEA-Wind-Task-32/white-paper-openLidar\" rel=\"nofollow noopener\">https://github.com/IEA-Wind-Task-32/white-paper-openLidar</a> for ways you can get in touch with us.</p>",
+  "notes": "This white paper describes the OpenLidar initiative for collaborative research on wind lidar hardware and software. We welcome feedback. Please see https://github.com/IEA-Wind-Task-32/white-paper-openLidar for ways you can get in touch with us.",
   "owner_org": "iea-wind",
   "private": false,
   "resources": [
@@ -130,6 +142,6 @@
     }
   ],
   "title": "The OpenLidar Initiative for collaboration on wind lidar hardware and software",
-  "url": "https://zenodo.org/records/3414197",
+  "url": "https://zenodo.org/record/3414196",
   "version": "0.9"
 }

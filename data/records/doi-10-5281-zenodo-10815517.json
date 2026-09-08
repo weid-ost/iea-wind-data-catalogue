@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Doubrawa, Paula\",\"orcid\":\"0000-0002-0660-7212\"}]"
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Doubrawa\",\"given\":\"Paula\",\"name\":\"Doubrawa, Paula\",\"orcid\":\"0000-0002-0660-7212\"}]"
     },
     {
       "key": "doi",
@@ -29,8 +29,16 @@
       "value": "[\"task-57\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and community:jam, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-08T14:04:46Z"
+      "value": "2026-09-08T15:28:13Z"
     },
     {
       "key": "license_mapped",
@@ -45,8 +53,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.10815518\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.10815518\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
     },
     {
       "key": "published_date",
@@ -58,7 +70,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.10815517\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.10815517\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.10815518\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
     },
     {
       "key": "resource_kind",
@@ -74,7 +86,7 @@
     },
     {
       "key": "source_key",
-      "value": "6@10.5281/zenodo.10815518~m2"
+      "value": "6@10.5281/zenodo.10815518~m3"
     },
     {
       "key": "source_system",
@@ -82,7 +94,7 @@
     },
     {
       "key": "source_systems",
-      "value": "[\"zenodo\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -90,7 +102,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/records/10815518\"]"
+      "value": "[\"https://zenodo.org/records/10815518\",\"https://zenodo.org/doi/10.5281/zenodo.10815517\",\"https://zenodo.org/doi/10.5281/zenodo.10815518\"]"
     },
     {
       "key": "withdrawn",
@@ -104,8 +116,8 @@
   ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-10815517",
-  "notes": "<p>Slides presented at the IEA Wind Task 57 JAM virtual kickoff on March 12 2024.</p>",
-  "owner_org": "zenodo-community",
+  "notes": "Slides presented at the IEA Wind Task 57 JAM virtual kickoff on March 12 2024.",
+  "owner_org": "nrel",
   "private": false,
   "resources": [
     {
@@ -117,5 +129,5 @@
   "state": "active",
   "tags": [],
   "title": "JAM VIRTUAL KICKOFF",
-  "url": "https://zenodo.org/records/10815518"
+  "url": "https://zenodo.org/doi/10.5281/zenodo.10815517"
 }

@@ -1,0 +1,153 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"family\":\"Santos\",\"given\":\"Pedro Alvim De Azevedo\",\"name\":\"Santos, Pedro Alvim De Azevedo\",\"orcid\":\"0000-0003-2962-1364\"},{\"affiliation\":\"CENER\",\"family\":\"Arroyo\",\"given\":\"Roberto Aurelio Chávez\",\"name\":\"Arroyo, Roberto Aurelio Chávez\",\"orcid\":\"0000-0003-0862-219X\"},{\"affiliation\":\"CENER\",\"family\":\"Rodrigo\",\"given\":\"Javier Sanz\",\"name\":\"Rodrigo, Javier Sanz\",\"orcid\":\"0000-0003-0291-6429\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3532685"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3532685"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.3532684\",\"url\":\"https://zenodo.org/record/3532684\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-11-04"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3532684\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/wakebench\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/communities/wind_energy\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.3532685"
+    },
+    {
+      "key": "source_key",
+      "value": "2020-07-30T08:37:02Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/3532685"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/3532685\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-3532685",
+  "notes": "Presentation on the kick-off of the \"ALEX17 Diurnal Cycles Benchmark\" coordinated within the IEA Wind Task 31, consisting on a 4-day episode for flow modellers to simulate the interaction of mountain-valley winds with mesoscale forcing and thermal stratification to drive wind energy siting conditions.",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "benchmark"
+    },
+    {
+      "name": "cfd"
+    },
+    {
+      "name": "complex-terrain"
+    },
+    {
+      "name": "mesoscale"
+    },
+    {
+      "name": "validation"
+    },
+    {
+      "name": "wakebench"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "ALEX17 Diurnal Cycles Benchmark Kick-Off",
+  "url": "https://zenodo.org/record/3532685"
+}

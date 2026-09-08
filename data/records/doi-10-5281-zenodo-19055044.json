@@ -1,0 +1,144 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"family\":\"Sirkis\",\"given\":\"Leah Hope\",\"name\":\"Sirkis, Leah Hope\",\"orcid\":\"0009-0002-0106-747X\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"family\":\"Lozon\",\"given\":\"Ericka\",\"name\":\"Lozon, Ericka\",\"orcid\":\"0000-0003-0971-2613\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"family\":\"Hall\",\"given\":\"Matthew\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.19055044"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.19055044"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:02Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.19055043\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.19055043\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-16"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.19055043\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "19055044"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.19055044~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/19055044"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/19055044\",\"https://zenodo.org/doi/10.5281/zenodo.19055044\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-19055044",
+  "notes": "This dataset provides an open-source files for the National Laboratory of the Rockies' reference floating wind array designs, developed as part of the Floating Wind Array Design project. This dataset can be found on GitHub at https://github.com/FloatingArrayDesign/ReferenceDesigns/tree/main/Reference_Arrays. The version of this dataset associated with this DOI zenodo entry is tag v1.0. The designs include platform layouts, cable routing, substation placement, mooring and cable designs, and anchor types developed for three U.S. locations. The locations vary in water depths, ranging from deep water (800 m) to intermediate (200 m) to to shallow (80 m), and metocean conditions, as described in [1]. The metocean conditions, including fatigue bins and extreme load conditions developed from the dataset, are provided in [2], with methodology described in [1]. Bathymetry and sediment information for each region is also provided in [2]. These datasets can be found here.The floating wind turbines in the designs are the IEA Wind 15 MW turbine [3] and VolturnUS-S semisubmersible platform [4]. Mooring system and dynamic power cable designs are incorporated from a previous recent publication [5]. A substation design is included, adapted from the work of F. Jorge Alcantara [6].The design process and details are described in the upcoming work L.H. Sirkis, E. Lozon, M. Hall, \"Reference Floating Wind Array Designs for Three Representative Regions,\" Wind Energy Science. 2026. (accepted)\n\n\n\n[1] [M. Biglu, M. Hall, E. Lozon, and S. Housner, \"Reference Site Conditions for Floating Wind Arrays in the United States,\" NREL/TP-5000-89897, 2024.](https://docs.nlr.gov/docs/fy24osti/89897.pdf)\n\n\n[2] [M. Biglu, M. Hall, E. Lozon, and S. Housner, \"Reference Site Condition Datasets for Floating Wind Arrays in the United States.\" NREL Data Catalog. Golden, CO: National Renewable Energy Laboratory. 2024. Last updated: January 16, 2025. DOI: 10.7799/2425969](https://data.nlr.gov/submissions/241)\n\n\n[3] [E. Gaertner et al., \"Definition of the IEA 15-Megawatt Offshore Reference Wind Turbine,\" NREL/TP-5000-75698, 2020.](https://docs.nlr.gov/docs/fy20osti/75698.pdf)\n\n\n[4] [C. Allen et al., \"Definition of the UMaine VolturnUS-S Reference Platform Developed for the IEA Wind 15-Megawatt Offshore Reference Wind Turbine,\" NREL/TP-5000-76773, 2020.](https://docs.nlr.gov/docs/fy20osti/76773.pdf)\n\n\n[5] [E. Lozon, M. Lekkala, L. Sirkis, and M. Hall, \"Reference mooring and dynamic cable designs for representative U.S. floating wind farms\", Ocean Engineering, 2025](https://doi.org/10.1016/j.oceaneng.2025.120473)\n\n\n[6] F. Jorge Alcantara, Design of a Floating Foundation for an HVAC Off-\n\nshore Substation, Ph.D. thesis, Universite de Liege, Belgium.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "Reference_Arrays.zip",
+      "url": "https://zenodo.org/records/19055044/files/Reference_Arrays.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "cable-routing"
+    },
+    {
+      "name": "floating-wind-arrays"
+    },
+    {
+      "name": "reference-array-design"
+    }
+  ],
+  "title": "Reference Floating Wind Array Designs Dataset for Three Representative Regions",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.19055044",
+  "version": "v1.0"
+}

@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Simley, Eric\",\"orcid\":\"0000-0002-1027-9848\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"name\":\"Scholbrock, Andrew\",\"orcid\":\"0000-0003-1241-6356\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"}]"
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Simley\",\"given\":\"Eric\",\"name\":\"Simley, Eric\",\"orcid\":\"0000-0002-1027-9848\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Scholbrock\",\"given\":\"Andrew\",\"name\":\"Scholbrock, Andrew\",\"orcid\":\"0000-0003-1241-6356\"},{\"affiliation\":\"University of Stuttgart\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"}]"
     },
     {
       "key": "doi",
@@ -29,24 +29,36 @@
       "value": "[\"task-32\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and community:ieawindtask32, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-08T14:04:38Z"
+      "value": "2026-09-08T15:28:06Z"
     },
     {
       "key": "license_mapped",
-      "value": "true"
+      "value": "false"
     },
     {
       "key": "license_raw",
-      "value": "other-closed"
+      "value": "Open Access"
     },
     {
       "key": "lifecycle_state",
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.3763079\",\"url\":\"https://zenodo.org/record/3763079\"},{\"label\":\"Also catalogued as 10.5281/zenodo.3764556\",\"url\":\"https://zenodo.org/record/3764556\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
     },
     {
       "key": "published_date",
@@ -58,7 +70,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.3763078\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.3763078\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.3763079\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3764556\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
     },
     {
       "key": "resource_kind",
@@ -74,7 +86,7 @@
     },
     {
       "key": "source_key",
-      "value": "5@10.5281/zenodo.3764556~m2"
+      "value": "5@10.5281/zenodo.3764556~m3"
     },
     {
       "key": "source_system",
@@ -82,7 +94,7 @@
     },
     {
       "key": "source_systems",
-      "value": "[\"zenodo\"]"
+      "value": "[\"datacite\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -90,7 +102,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://zenodo.org/records/3764556\"]"
+      "value": "[\"https://zenodo.org/records/3764556\",\"https://zenodo.org/record/3763078\",\"https://zenodo.org/records/3763079\",\"https://zenodo.org/record/3763079\",\"https://zenodo.org/record/3764556\"]"
     },
     {
       "key": "withdrawn",
@@ -102,9 +114,9 @@
       "name": "task-32"
     }
   ],
-  "license_id": "other-closed",
+  "license_id": "notspecified",
   "name": "doi-10-5281-zenodo-3763078",
-  "notes": "<p>The use of nacelle lidar measurements for wind turbine control applications has been widely studied in the research community and is beginning to be adopted by industry. Successful implementation of lidar-assisted control to reduce the cost of wind energy involves several design choices, including lidar scan pattern selection, lidar data processing, and controller design.</p>\n\n<p>In this webinar, Eric Simley and Andrew Scholbrock from the National Renewable Energy Laboratory (NREL), and David Schlipf (Flensburg University of Applied Sciences) presented an overview of lidar-assisted control applications, answering the following questions:</p>\n\n<ol>\n\t<li><strong>How can we obtain useful information for controls from lidar systems?</strong> Topics: wind field reconstruction, scan pattern optimization, lidar data processing. Presented by Eric Simley.</li>\n\t<li><strong>How can these lidar measurements be used to improve wind turbine control?</strong> Topics: feedforward pitch control, yaw control, multivariate control. Presented by David Schlipf.</li>\n\t<li><strong>What are some practical considerations when implementing lidar-assisted control in the field?</strong> Topics: lidar availability, calibration, certification challenges. Presented by Andrew Scholbrock.</li>\n</ol>\n\n<p>The webinar was moderated by Andy Clifton.</p>\n\n<p>This webinar expanded on the presentation Eric and Andrew Scholbrock gave on “Nacelle-Mounted Lidar for Wind Energy Applications” as part of NREL’s Wind Workforce Development webinar series. A recording of that presentation is available at <a href=\"https://youtu.be/yQIMDoYmFno\" rel=\"nofollow noopener\">https://youtu.be/yQIMDoYmFno.</a></p>",
+  "notes": "The use of nacelle lidar measurements for wind turbine control applications has been widely studied in the research community and is beginning to be adopted by industry. Successful implementation of lidar-assisted control to reduce the cost of wind energy involves several design choices, including lidar scan pattern selection, lidar data processing, and controller design. In this webinar, Eric Simley and Andrew Scholbrock from the National Renewable Energy Laboratory (NREL), and David Schlipf (Flensburg University of Applied Sciences) presented an overview of lidar-assisted control applications, answering the following questions: <strong>How can we obtain useful information for controls from lidar systems?</strong> Topics: wind field reconstruction, scan pattern optimization, lidar data processing. Presented by Eric Simley. <strong>How can these lidar measurements be used to improve wind turbine control?</strong> Topics: feedforward pitch control, yaw control, multivariate control. Presented by David Schlipf. <strong>What are some practical considerations when implementing lidar-assisted control in the field?</strong> Topics: lidar availability, calibration, certification challenges. Presented by Andrew Scholbrock. The webinar was moderated by Andy Clifton. This webinar expanded on the presentation Eric and Andrew Scholbrock gave on “Nacelle-Mounted Lidar for Wind Energy Applications” as part of NREL’s Wind Workforce Development webinar series. A recording of that presentation is available at https://youtu.be/yQIMDoYmFno.",
   "owner_org": "nrel",
   "private": false,
   "resources": [
@@ -142,6 +154,6 @@
     }
   ],
   "title": "An Overview of Lidar-Assisted Control",
-  "url": "https://zenodo.org/records/3764556",
+  "url": "https://zenodo.org/record/3763078",
   "version": "23 April 2020"
 }

@@ -1,0 +1,135 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"family\":\"Sanz Rodrigo\",\"given\":\"Javier\",\"name\":\"Sanz Rodrigo, Javier\",\"orcid\":\"0000-0003-0291-6429\"},{\"affiliation\":\"CENER\",\"family\":\"Gancarski\",\"given\":\"Pawel\",\"name\":\"Gancarski, Pawel\",\"orcid\":\"0000-0001-9198-8429\"},{\"affiliation\":\"CSC\",\"family\":\"Vathsavayi\",\"given\":\"Sri Harsha\",\"name\":\"Vathsavayi, Sri Harsha\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3254592"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3254592"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.3254591\",\"url\":\"https://zenodo.org/record/3254591\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2018-10-09"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3254591\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/oswec\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/communities/wakebench\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/communities/wind_energy\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "poster"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.3254592"
+    },
+    {
+      "key": "source_key",
+      "value": "2020-12-09T09:51:20Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/3254592"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/3254592\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-3254592",
+  "notes": "<strong>Introduction</strong> The Windbench portal has been developed together with the IEA-Wind Task 31 “Wakebench” Wind Energy Model Evaluation Protocol (WEMEP) to promote interdisciplinary research in the development of integrated design tools. Due to the high complexity of the multi-scale wind energy system, a building-block validation process is required to systematically test model adequacy based on fit-to-purpose metrics across a wide range of wind conditions. <strong>Value Proposition</strong> Windbench focuses primarily on model developer needs while also engaging with researchers involved in the design of experiments and generation of validation datasets. End-users from industry use Windbench to judge the adequacy of the models underlying their design tools. The value proposition for these users is: <em>Validate your code together with your peers and share your data safely to contribute to a traceable international model evaluation framework for the development of trustful wind energy engineering tools. </em> This is rolled out into the following features that lead the new design of Windbench: A community platform to map and document the development an international wind energy modeling and evaluation framework. A validation directed research program to establish high-level priorities for experimental analysis, model development and evaluation to meet the requirements of wind energy applications. A guide to adopt formal model evaluation procedures and data standards to improve the traceability and interoperability of the framework. A gateway to open-access resources for modeling, data analysis and validation. A forum to discuss industry challenges and scientific insights that help identify knowledge gaps. <strong>Solution</strong> Windbench will orchestrate general-purpose services around the SeaDataCloud virtual research environment (VRE), a data analytics platform that allows users to run benchmarking activities powered by the EUDAT Collaborative Data Infrastructure. Jupyter notebooks will be integrated in the WEMEP using sphinx-based documentation through Github repositories, published in Zenodo for version control. Benchmark data repositories will be shared and exploited through EUDAT data management services integrated with the SeaDataCloud to adopt policies and standards that promote data interoperability. Potential contributions to the WEMEP will be discussed online through The Wind Vane Blog, a publication hosted by Medium to promote the exchange of scientific insights and challenges between wind energy researchers and industry. <strong>Testing Plans</strong> Windbench is developed alongside the third phase of the IEA Wind Task 31 with support from the H2020-MARINET2 project (grant agreement number 73108). Over the next three years the integration of Windbench in the SeaDataCloud VRE will be enabled and tested with use cases from MARINET2 calls for access to e-infrastructures as well as other parallel projects under the umbrella of the IEA Wind. Solution testing with early adopters will focus on developing critical components that lead to adoption (communities engaged, benchmarks produced, users producing content, etc). This will ultimately depend on an actionable model evaluation protocol that promotes validation repositories that follow FAIR principles on data that are findable, accessible, interoperable and reusable. <strong>Summary</strong> We present a prototype for the new design of Windbench, a service to manage benchmarking activities for verification and validation of wind energy models. Windbench addresses model developers, experimentalists and end-users from industry through an actionable model evaluation protocol that promotes data sharing and trust. This will be powered by a virtual research environment built on the SeaDataCloud to provide data analytics around benchmark repositories managed in the EUDAT data management ecosystem. Key performance indicators will be based on quantifying user adoption as well as assessing the FAIRification of the data as outlined in the GO FAIR initiative.",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "open-science-validation-jupyter-hub-eudat"
+    }
+  ],
+  "title": "Windbench: Building Trust on Wind Energy Design Tools through Open Science Model Evaluation",
+  "url": "https://zenodo.org/record/3254592"
+}

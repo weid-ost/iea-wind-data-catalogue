@@ -1,0 +1,138 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Danish Technical University\",\"family\":\"Vasiljevic\",\"given\":\"Nikola\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"},{\"affiliation\":\"University of Stuttgart\",\"family\":\"Wuerth\",\"given\":\"Ines\",\"name\":\"Wuerth, Ines\",\"orcid\":\"0000-0002-1365-0243\"},{\"affiliation\":\"Sowento GmbH\",\"family\":\"Raach\",\"given\":\"Steffen\",\"name\":\"Raach, Steffen\",\"orcid\":\"0000-0002-1264-0422\"},{\"affiliation\":\"Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg\",\"family\":\"Haizmann\",\"given\":\"Florian\",\"name\":\"Haizmann, Florian\",\"orcid\":\"0000-0001-9002-576X\"},{\"affiliation\":\"University of Stuttgart\",\"family\":\"Fürst\",\"given\":\"Holger\",\"name\":\"Fürst, Holger\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3414197"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3414197"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-sa-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.3414196\",\"url\":\"https://zenodo.org/record/3414196\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-09-24"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3414196\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "working-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "3414197"
+    },
+    {
+      "key": "source_key",
+      "value": "11@10.5281/zenodo.3414197~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3414197"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3414197\",\"https://zenodo.org/record/3414197\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by-sa",
+  "name": "doi-10-5281-zenodo-3414197",
+  "notes": "This white paper describes the OpenLidar initiative for collaborative research on wind lidar hardware and software. We welcome feedback. Please see https://github.com/IEA-Wind-Task-32/white-paper-openLidar for ways you can get in touch with us.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "2019_OpenLidar_Flyer.pdf",
+      "url": "https://zenodo.org/records/3414197/files/2019_OpenLidar_Flyer.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "The OpenLidar Initiative for collaboration on wind lidar hardware and software",
+  "url": "https://zenodo.org/record/3414197",
+  "version": "0.9"
+}

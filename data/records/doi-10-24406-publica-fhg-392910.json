@@ -1,0 +1,107 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Durstewitz\",\"given\":\"M.\",\"name\":\"Durstewitz, M.\"},{\"family\":\"Laakso\",\"given\":\"T.\",\"name\":\"Laakso, T.\"},{\"family\":\"Tallhaug\",\"given\":\"L.\",\"name\":\"Tallhaug, L.\"},{\"family\":\"Ronsten\",\"given\":\"G.\",\"name\":\"Ronsten, G.\"},{\"family\":\"Cattin\",\"given\":\"R.\",\"name\":\"Cattin, R.\"},{\"family\":\"Baring-Gould\",\"given\":\"I.\",\"name\":\"Baring-Gould, I.\"},{\"family\":\"Lacroix\",\"given\":\"A.\",\"name\":\"Lacroix, A.\"},{\"family\":\"Peltola\",\"given\":\"E.\",\"name\":\"Peltola, E.\"},{\"family\":\"Wallenius\",\"given\":\"T.\",\"name\":\"Wallenius, T.\"},{\"family\":\"Hulkkonen\",\"given\":\"M.\",\"name\":\"Hulkkonen, M.\"},{\"family\":\"Krenn\",\"given\":\"A.\",\"name\":\"Krenn, A.\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.24406/publica-fhg-392910"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.24406/publica-fhg-392910"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-54\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2011"
+    },
+    {
+      "key": "publisher",
+      "value": "Fraunhofer-Gesellschaft"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.24406/publica-fhg-392910"
+    },
+    {
+      "key": "source_key",
+      "value": "2022-12-13T19:45:53Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://publica.fraunhofer.de/handle/publica/392910"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://publica.fraunhofer.de/handle/publica/392910\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-54"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-24406-publica-fhg-392910",
+  "notes": "",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Cold Climate Challenges. IEA Wind Task 19 - Wind Energy in Cold Climates",
+  "url": "https://publica.fraunhofer.de/handle/publica/392910"
+}

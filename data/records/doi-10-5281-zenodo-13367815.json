@@ -25,8 +25,16 @@
       "value": "[\"task-43\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and task-page:task-43, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-08-31T23:03:29Z"
+      "value": "2026-09-08T15:34:55Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +54,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
     },
     {
       "key": "published_date",
@@ -62,11 +70,11 @@
     },
     {
       "key": "resource_kind",
-      "value": "publication"
+      "value": "other"
     },
     {
       "key": "resource_type",
-      "value": "publication"
+      "value": "presentation"
     },
     {
       "key": "source_id",
@@ -74,7 +82,7 @@
     },
     {
       "key": "source_key",
-      "value": "56a50f704dc5d65b"
+      "value": "56a50f704dc5d65b~m2"
     },
     {
       "key": "source_system",
@@ -82,7 +90,7 @@
     },
     {
       "key": "source_systems",
-      "value": "[\"ieawind\"]"
+      "value": "[\"datacite\",\"ieawind\"]"
     },
     {
       "key": "source_url",

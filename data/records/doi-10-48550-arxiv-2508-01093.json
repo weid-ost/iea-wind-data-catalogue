@@ -1,0 +1,115 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Sarker\",\"given\":\"Doyal\",\"name\":\"Sarker, Doyal\"},{\"family\":\"Sakif\",\"given\":\"Md\",\"name\":\"Sakif, Md\"},{\"family\":\"Ngo\",\"given\":\"Tri\",\"name\":\"Ngo, Tri\"},{\"family\":\"Das\",\"given\":\"Tuhin\",\"name\":\"Das, Tuhin\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.48550/arxiv.2508.01093"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.48550/arxiv.2508.01093"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-nc-nd-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025"
+    },
+    {
+      "key": "publisher",
+      "value": "arXiv"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "10.48550/arxiv.2508.01093"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-08-05T02:35:15Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://arxiv.org/abs/2508.01093"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://arxiv.org/abs/2508.01093\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-nc-nd",
+  "name": "doi-10-48550-arxiv-2508-01093",
+  "notes": "This study presents key enhancements in hydrodynamic modeling using the strip-based Morison's equation approach to enable rapid simulations of Floating Offshore Wind Turbines (FOWT). The modeling framework employs the relative form of the Morison equation, incorporating nonlinear irregular wave kinematics, vertical wave stretching, and diffraction corrections based on MacCamy-Fuchs (MCF) theory for large-scale, non-slender structures. Wave kinematics are iteratively applied at dynamically displaced structural nodes to accurately capture fluid-structure interaction. Additionally, a discretization scheme is introduced to improve hydrodynamic load distribution across large horizontal structures of floaters. These enhancements are validated against experimental data from the Floating Offshore Wind and Controls Advanced Laboratory (FOCAL), which conducted a 1:70 scale test of the IEA-Wind 15MW reference turbine on the VolturnUS-S platform. Results demonstrate that the incorporation of nonlinear wave kinematics significantly improves low-frequency response accuracy. Furthermore, the vertical wave stretching and MCF corrections lead to surge response predictions that closely align with experimental measurements, while the improved load discretization significantly enhances heave and pitch response fidelity in wave-dominant frequency ranges.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "atmospheric-and-oceanic-physics-physics.ao-ph"
+    },
+    {
+      "name": "fos-physical-sciences"
+    }
+  ],
+  "title": "Hydrodynamic Modeling Improvements for Floating Offshore Wind Turbines with Validation Results",
+  "url": "https://arxiv.org/abs/2508.01093",
+  "version": "1"
+}

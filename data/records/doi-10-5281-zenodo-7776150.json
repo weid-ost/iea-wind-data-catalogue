@@ -6,11 +6,11 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"NREL\",\"name\":\"Jason Fields\",\"orcid\":\"0000-0002-8781-6138\"}]"
+      "value": "[{\"affiliation\":\"NREL\",\"family\":\"Fields\",\"given\":\"Jason\",\"name\":\"Fields, Jason\",\"orcid\":\"0000-0002-8781-6138\"}]"
     },
     {
       "key": "doi",
-      "value": "10.5281/zenodo.7776149"
+      "value": "10.5281/zenodo.7776150"
     },
     {
       "key": "first_seen",
@@ -29,8 +29,16 @@
       "value": "[\"task-43\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and task-page:task-43, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-08T14:05:55Z"
+      "value": "2026-09-08T15:34:55Z"
     },
     {
       "key": "license_mapped",
@@ -45,8 +53,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.7776149\",\"url\":\"https://zenodo.org/record/7776149\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
     },
     {
       "key": "published_date",
@@ -70,19 +82,19 @@
     },
     {
       "key": "source_id",
-      "value": "7776150"
+      "value": "10.5281/zenodo.7776150"
     },
     {
       "key": "source_key",
-      "value": "6@10.5281/zenodo.7776150~m2"
+      "value": "56a50f704dc5d65b~m2"
     },
     {
       "key": "source_system",
-      "value": "zenodo"
+      "value": "ieawind"
     },
     {
       "key": "source_systems",
-      "value": "[\"ieawind\",\"zenodo\"]"
+      "value": "[\"datacite\",\"ieawind\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -91,6 +103,10 @@
     {
       "key": "source_urls",
       "value": "[\"https://zenodo.org/record/7776150\",\"https://iea-wind.org/task43/t43-publications/\",\"https://zenodo.org/records/7776150\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
     },
     {
       "key": "withdrawn",
@@ -104,7 +120,7 @@
   ],
   "license_id": "cc-by",
   "name": "doi-10-5281-zenodo-7776150",
-  "notes": "<p>Presentation on open source software as an important vector for tech transfer in wind energy. Includes a high level survey of open source projects in renewable energy and cites specific example of IEA Wind Task 43 WRA Data model: <a href=\"https://github.com/IEA-Task-43/digital_wra_data_standard\" rel=\"nofollow noopener\">https://github.com/IEA-Task-43/digital_wra_data_standard</a>  Presented at International Energy Agency (IEA) Wind Topical Experts Meeting #108 on Technology Transfer for Wind Energy (Virtual Event) on March 23, 2023.<br />\n </p>",
+  "notes": "Presentation on open source software as an important vector for tech transfer in wind energy. Includes a high level survey of open source projects in renewable energy and cites specific example of IEA Wind Task 43 WRA Data model: https://github.com/IEA-Task-43/digital_wra_data_standard Presented at International Energy Agency (IEA) Wind Topical Experts Meeting #108 on Technology Transfer for Wind Energy (Virtual Event) on March 23, 2023.<br />",
   "owner_org": "nrel",
   "private": false,
   "resources": [
@@ -142,5 +158,5 @@
     }
   ],
   "title": "Open Source for Technology Transfer",
-  "url": "https://zenodo.org/records/7776150"
+  "url": "https://zenodo.org/record/7776150"
 }

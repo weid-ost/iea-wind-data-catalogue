@@ -1,0 +1,150 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Papetta\",\"given\":\"Alkistis\",\"name\":\"Papetta, Alkistis\"},{\"affiliation\":\"Dr.\",\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4291936"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4291936"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:49Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4291935\",\"url\":\"https://zenodo.org/record/4291935\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-07-02"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4291935\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "4291936"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.4291936~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4291936"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4291936\",\"https://zenodo.org/record/4291936\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4291936",
+  "notes": "A presentation part of the IEA Wind Task 32 webinar series on how to tackle challenges associated with wind resource assessment in complex terrain. We introduce the developed approach for combining scanning lidar measurements with flow modelling in order to improve numerical wind flow performance.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pptx",
+      "name": "20200702_Webinar_IEATask32_papalk_GotJul-final.pptx",
+      "url": "https://zenodo.org/records/4291936/files/20200702_Webinar_IEATask32_papalk_GotJul-final.pptx"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "complex-terrain"
+    },
+    {
+      "name": "scanning-lidar"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-resource-assessment"
+    }
+  ],
+  "title": "Advancing wind resource assessment in complex terrain with scanning lidar measurements",
+  "url": "https://zenodo.org/record/4291936"
+}

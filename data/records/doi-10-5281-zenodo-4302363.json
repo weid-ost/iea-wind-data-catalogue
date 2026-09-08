@@ -1,0 +1,148 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Vaisala\",\"family\":\"Black\",\"given\":\"Andrew\",\"name\":\"Black, Andrew\"},{\"affiliation\":\"Leosphere\",\"family\":\"Mazoyer\",\"given\":\"Paul\",\"name\":\"Mazoyer, Paul\"},{\"affiliation\":\"ZX LIdars\",\"family\":\"Wylie\",\"given\":\"Scott\",\"name\":\"Wylie, Scott\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Debnath\",\"given\":\"Mishu\",\"name\":\"Debnath, Mishu\",\"orcid\":\"0000-0002-9446-4310\"},{\"affiliation\":\"Pattern Development\",\"family\":\"Lammers\",\"given\":\"Andrew\",\"name\":\"Lammers, Andrew\"},{\"affiliation\":\"Natural Power\",\"family\":\"Spalding\",\"given\":\"Taurin\",\"name\":\"Spalding, Taurin\"},{\"affiliation\":\"RWE\",\"family\":\"Schultz\",\"given\":\"Robert\",\"name\":\"Schultz, Robert\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4302363"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4302363"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4302362\",\"url\":\"https://zenodo.org/record/4302362\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-12-02"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4302362\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/cfars\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.4302363"
+    },
+    {
+      "key": "source_key",
+      "value": "2021-07-07T14:29:46Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/4302363"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/4302363\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4302363",
+  "notes": "As part of its mission to reduce the uncertainty of preconstruction wind resource estimates, the Consortium for the Advancement for Remote Sensing (CFARS) is engaged in a survey of correction techniques for remote wind sensing devices in complex terrain. This webinar presented and compared correction techniques from several suppliers (Leosphere, WindSim, Meteodyn) when applied to data collected by the most prominent sensing devices (Triton, WindCube, ZX). All techniques show similar results: uncorrected RSD wind speeds differ from cup measurement by 2%-5% and corrected data are all within ±1%. This study also examines anemometer biases due to flow inclination. The webinar goes beyond the CFARS presentation to AWEA 2020, providing further detail on the datasets, terrain classification and methods used to compare mast and lidars. Andrew Hastings Black, Scott Wylie, and Paul Mazoyer presented the survey results. The discussion was moderated by Andy Clifton from IEA Wind Task 32. This repository includes the following files: An introduction by Task 32 (\"2020 12 08...\") The main presentation (\"CFARS_...\").",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "complex-flow"
+    },
+    {
+      "name": "complex-terrain"
+    },
+    {
+      "name": "resource-assessment"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "Survey of Correction Techniques for Remote Sensing Devices in Complex Flow",
+  "url": "https://zenodo.org/record/4302363",
+  "version": "2020 December 08"
+}

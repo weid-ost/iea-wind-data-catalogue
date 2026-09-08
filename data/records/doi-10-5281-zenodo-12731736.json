@@ -1,0 +1,139 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Danish Hydraulic Institute\",\"family\":\"de Paiva\",\"given\":\"Helene Syvena Wellm Resende\",\"name\":\"de Paiva, Helene Syvena Wellm Resende\"},{\"affiliation\":\"Danish Hydraulic Institute\",\"family\":\"Santos\",\"given\":\"Pedro\",\"name\":\"Santos, Pedro\",\"orcid\":\"0000-0003-2962-1364\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.12731736"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.12731736"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:32Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-sa-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.12731737\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.12731737\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-09-28"
+    },
+    {
+      "key": "publisher",
+      "value": "DHI Report"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.12731736\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.11073986\",\"identifier_type\":\"DOI\",\"relation\":\"isSupplementedBy\"},{\"identifier\":\"10.5281/zenodo.11073986\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementedBy\"},{\"identifier\":\"10.5281/zenodo.12731737\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "12731737"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.12731737~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/12731737"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/12731737\",\"https://zenodo.org/doi/10.5281/zenodo.12731736\",\"https://zenodo.org/doi/10.5281/zenodo.12731737\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by-sa",
+  "name": "doi-10-5281-zenodo-12731736",
+  "notes": "This report is a deliverable of the project Integrated Design for Floating Wind Arrays (IDEA) funded by The Energy Technology and Demonstration Program (EUDP) of the Danish Energy Agency. This deliverable is aligned with the scope of work defined in the International Energy Agency Wind Technology Collaboration (IEA Wind TCP) Task 49 with the same name.\n\nThe preliminary metocean study consisted of utilising existing datasets to establish normal and extreme metocean conditions. Analyses of the normal (operational)  conditions and extreme conditions were performed at one location close to the lease area representing the Havbredey FOWF, originally called N2 area in the ScotWind leasing round.\n\nThe present study is suitable for a preliminary (pre-FEED) assessment of the metocean conditions at the site. Additional analyses might be required for a FEED study.  Moreover, for detailed design, local metocean measurements and bathymetry survey would be required to establish higher resolution models and more representative and validated conditions.\n\nThe time series data related to this report are published in https://doi.org/10.5281/zenodo.11073986",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "11826846_Havbredey_Preliminary_Metocean_Study_UKNS_Draft_0.1_2023-09-28.pdf",
+      "url": "https://zenodo.org/records/12731737/files/11826846_Havbredey_Preliminary_Metocean_Study_UKNS_Draft_0.1_2023-09-28.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "floating-wind"
+    },
+    {
+      "name": "metocean-conditions"
+    },
+    {
+      "name": "offshore-wind"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "Havbredey Preliminary Metocean Study",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.12731736",
+  "version": "0.1"
+}

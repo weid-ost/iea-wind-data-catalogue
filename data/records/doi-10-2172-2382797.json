@@ -29,8 +29,16 @@
       "value": "[\"task-49\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:iea-wind-task-by-title, query:\"IEA Wind Task\" and task-page:task-49, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:28:59Z"
+      "value": "2026-09-08T15:34:55Z"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"ieawind\"}}"
     },
     {
       "key": "published_date",
@@ -70,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "3a383a1fa7d41543"
+      "value": "3a383a1fa7d41543~m2"
     },
     {
       "key": "source_system",

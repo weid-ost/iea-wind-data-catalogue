@@ -1,0 +1,130 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"VTT Technical Research Centre of Finland\",\"family\":\"Lehtomäki\",\"given\":\"Ville\",\"name\":\"Lehtomäki, Ville\"},{\"affiliation\":\"Energiewerkstatt Verein\",\"family\":\"Krenn\",\"given\":\"Andreas\",\"name\":\"Krenn, Andreas\"},{\"affiliation\":\"Sirris\",\"family\":\"Jordaens\",\"given\":\"Pieter Jan\",\"name\":\"Jordaens, Pieter Jan\"},{\"affiliation\":\"Nergica\",\"family\":\"Godreau\",\"given\":\"Charles\",\"name\":\"Godreau, Charles\"},{\"affiliation\":\"Danmarks Tekniske Universitetet\",\"family\":\"Davis\",\"given\":\"Neil\",\"name\":\"Davis, Neil\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Systems\",\"family\":\"Khadiri-Yazami\",\"given\":\"Zouhair\",\"name\":\"Khadiri-Yazami, Zouhair\"},{\"affiliation\":\"Kjeller Vindteknikk (Norway)\",\"family\":\"Bredesen\",\"given\":\"Rolv\",\"name\":\"Bredesen, Rolv\"},{\"affiliation\":\"WindREN\",\"family\":\"Ronsten\",\"given\":\"Göran\",\"name\":\"Ronsten, Göran\"},{\"affiliation\":\"Vattenfall (Sweden)\",\"family\":\"Wickman\",\"given\":\"Helena\",\"name\":\"Wickman, Helena\"},{\"affiliation\":\"Meteotest (Switzerland)\",\"family\":\"Bourgeois\",\"given\":\"Saskia\",\"name\":\"Bourgeois, Saskia\"},{\"affiliation\":\"DNV (United Kingdom)\",\"family\":\"Beckford\",\"given\":\"Till\",\"name\":\"Beckford, Till\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15050539"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15050539"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind TCP\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:57Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.15050538\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15050538\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2018-10-01"
+    },
+    {
+      "key": "publisher",
+      "value": "IEA Wind TCP"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15050538\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.15050539"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-03-19T10:07:38Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.15050539"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15050539\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15050539",
+  "notes": "For the wind industry, cold climate refers to sites that may experience significant periods of icing events, temperatures below the operational limits of standard wind turbines, or both. There is vast potential for producing electricity at these often windy and uninhabited cold climate sites. Consequently, the International Energy Agency Wind Agreement has since 2002, operated the international working group Task 19 Wind Energy in Cold Climates. The goal of this cooperation is to gather and disseminate information about wind energy in cold climates and to establish guidelines and state-of-the-art information. In this report, the available technologies for cold climate wind energy are presented.This, the second edition of the Available Technologies report, is an update to the previous report from 2016. The Available Technologies report is a report consisting of a gigantic collection of references allowing the reader to quickly and easily find potential solutions to some of the most demanding challenges in cold climate wind energy. The target audience for this report is an R&amp;D design engineer, analyst, researcher, or similar professional with a technical background and basic knowledge about wind energy. For best practices and recommendations on how to apply these technologies, please refer to the Recommended Practices report from Task 19.",
+  "owner_org": "vtt",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "cold-climate"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "Available Technologies for Wind Energy in Cold Climates",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15050539",
+  "version": "2"
+}

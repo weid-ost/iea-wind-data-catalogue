@@ -1,0 +1,147 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"X1WIND\",\"family\":\"Casanovas\",\"given\":\"Carlos\",\"name\":\"Casanovas, Carlos\"},{\"affiliation\":\"X1WIND\",\"family\":\"Raventos\",\"given\":\"Alex\",\"name\":\"Raventos, Alex\"},{\"affiliation\":\"X1WIND\",\"family\":\"Verges\",\"given\":\"María\",\"name\":\"Verges, María\"},{\"affiliation\":\"X1WIND\",\"name\":\"Rocio Torres\"}]"
+    },
+    {
+      "key": "container",
+      "value": "WindEurope 2019"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.7942852"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.7942852"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-40\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:40Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.7942853\",\"url\":\"https://zenodo.org/record/7942853\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-04-02"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.7942852\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.7942853\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/pivotbuoy\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "poster"
+    },
+    {
+      "key": "source_id",
+      "value": "7942853"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.7942853~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/7942853"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/7942853\",\"https://zenodo.org/record/7942852\",\"https://zenodo.org/record/7942853\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-40"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-7942852",
+  "notes": "1. General summary Using adapted Oil&amp;Gas (O&amp;G) platform designs for floating wind is a reliable solution<br /> but too expensive for the wind sector. There is a need to redesign floating solutions to<br /> reduce the LCOE to competitive levels compared to fixed solutions. X1Wind is<br /> developing an innovative weathervaning system to reduce drastically the weight and<br /> costs of current solutions: the PivotBuoy. The PivotBuoy is a novel system integrating<br /> the mooring, the anchoring and the electrical cable in a single point (single point<br /> mooring – SPM) allowing a faster connection of floating platforms.<br /> The PivotBuoy brings the stability and light weight of tension-leg systems (TLPs) but<br /> can be combined with the simpler installation strategy of ‘onshore assembly and tug to<br /> site’ of semi-submersibles. As a result, the PivotBuoy can be easily pre-installed, while<br /> the floating platform is towed to site with local vessels (avoiding the need for large<br /> expensive vessels) and easily connected to the mini-TLP. By using a downwind<br /> configuration, a more efficient structure can be designed, which enables to eliminate<br /> the tower and drastically reduce the platform weight, achieving around 260 tons/MW<br /> (similar to fixed offshore) while spar and semi-submersibles require between 1.000 and<br /> 2.000 tons/MW. Using a truss structure not only allows to reduce platform weight, but<br /> also to minimize wave slamming and wind turbulence that traditional tubular towers<br /> induce in a downwind rotor.<br /> The weight reduction and the installation strategy reduce the capital expenditures<br /> (CAPEX) by around 50% compared to the state-of-the-art floating wind. <br /> 2. Method<br /> After completing the conceptual design phase and simulations with the Orcaflex model,<br /> a successful proof of concept was conducted with a 1:64 scale prototype of the X1Wind<br /> downwind platform and the PivotBuoy at CIEMLAB wave flume (UPC, Barcelona) to<br /> validate the model. Regular wave periods were tested as well as extreme conditions,<br /> and up to 90º of wind/waves misalignment, and they confirmed that the stability given<br /> by the PivotBuoy is comparable with only a fraction of the weight of semi-submersibles<br /> or spar platforms using catenary moorings (much heavier).<br /> The next tank tests will be conducted in February through de MariNET2 Programme in<br /> the Hydrodynamic and Ocean Engineering tank of ECN (Ecole Centrale Nantes), the<br /> results of which will also be presented at the conference. 3. Results<br /> Tests showed that the dynamic behaviour of the system matched well the Orcaflex<br /> simulation model. Results also showed that while other floating platforms with different<br /> mooring systems are 3 to 6 times heavier, PivotBuoy has similar or improved stability<br /> performance. While spar and semi-submersibles have a slight improvement in heave<br /> and pitch motion (with large weight increase), they have a much larger wave-induced<br /> surge motion, that will affect negatively on thrust variation and turbine torque stability.<br /> Additionally, results from ongoing projects (e.g. IEA WIND Task 40) show that<br /> downwind rotors can bring additional 5-8% reduction of LCOE for large-scale turbines,<br /> as they don’t require pre-coning and blade pre-bending (unlike upwind rotors to avoid<br /> tower strike), allowing lighter and larger blades, increasing the energy production. <br /> 4. Conclusions<br /> The PivotBuoy is a new SPM system that can be implemented in deep waters with a<br /> cost similar to fixed offshore, making floating wind cost-effective. It has the potential to<br /> lower the CAPEX of a downwind floating platform by more than 50%, and the OPEX up<br /> to 20%. These significant cost reductions are achieved through mooring and anchoring<br /> cost reduction (instead of long and heavy catenary chains), a low-cost and efficient<br /> novel connection (avoiding traditional complex turrets), enabling platform weight<br /> reduction, and allowing assembly and installation using local infrastructure. <br /> 5. Learning Objectives<br /> The SPM technology has been widely used in O&amp;G for decades, specifically for the<br /> connection of FPSOs (Floating Production, Storage and Offloading), but remains<br /> unknown to the majority of the wind industry. A few new entrants in the floating wind<br /> sector are proposing to use SPM technology to connect their floating platforms (Eolink,<br /> Saitec, X1Wind, Hexicon, and Tetrafloat). Delegates will learn what are the advantages<br /> of implementing this technology with floating offshore wind platforms, like the drastic<br /> weight and LCOE reduction or the elimination of active systems, as well as the<br /> challenges (such as the possible misalignment of wind and waves) in comparison to<br /> current mooring solutions.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Poster_WindEurope - 2019.pdf",
+      "url": "https://zenodo.org/records/7942853/files/Poster_WindEurope%20-%202019.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "floating-offshore-wind"
+    },
+    {
+      "name": "lcoe-reduction"
+    },
+    {
+      "name": "offshore-wind"
+    }
+  ],
+  "title": "PivotBuoy: An Advanced System for Cost-effective and Reliable Mooring, Connection, Installation and Operation of Floating Wind",
+  "url": "https://zenodo.org/record/7942852"
+}

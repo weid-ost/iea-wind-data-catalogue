@@ -1,0 +1,150 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4094632"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4094632"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:48Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.4094631\",\"url\":\"https://zenodo.org/record/4094631\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-09-28"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4094631\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/wind_energy\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "poster"
+    },
+    {
+      "key": "source_id",
+      "value": "4094632"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.4094632~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4094632"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4094632\",\"https://zenodo.org/record/4094632\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4094632",
+  "notes": "In wind energy, the accuracy of the estimation of the wind resource has an enormous effect on the expected rate of return of a project. For a given project, the modeller is faced with a difficult choice of a wide range of simulation tools with varying accuracies and costs. In previous work, a new method for estimating the skill and cost scores of different wind modelling tools for a given project has been developed. Although this method worked well, it was shown that further studies are required for a wide range of input conditions and project types in order to develop project-specific transfer functions between the predicted and actual cost and skill scores. In this paper therefore, a new simulation challenge is designed with the goal of collecting comparison metrics data regarding the skill and cost scores of a range of different simulation tools for a complex terrain site, both before and after carrying out the simulations. The complex terrain site Perdig˜ao is chosen for the challenge, due to the volume and quality of available measurement data and the complexity of the terrain. An initial data analysis and WAsP simulations allow mast 29 to be chosen for the input data and masts 7, 10, 20, 22, 25, 27, 34 and 37 for the validation data. The WAsP simulations are compared to previous WRF simulations and are found to capture the main features of the flow over the two ridges. The wind acceleration over the two ridges and the resulting maximum wind speeds at the peak of the ridges as well as the reduced velocity regions in the valley between the ridges are well captured. However, smaller-scale features such as small areas of separated flow seen in the WRF simulations cannot be captured by WAsP. This choice of mast for the challenge will therefore allow the capabilities of different tools for calculating flow in separated regions as well as on top of hills to be assessed.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Poster_Barberetal_Challenge_torque2020_20200915.pdf",
+      "url": "https://zenodo.org/records/4094632/files/Poster_Barberetal_Challenge_torque2020_20200915.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "complex-terrain"
+    },
+    {
+      "name": "simulation-challenge"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-resource-assessment"
+    }
+  ],
+  "title": "IEA Wind Task 31: Design of a new comparison metrics simulation challenge for wind resource assessment in complex terrain Stage 1",
+  "url": "https://zenodo.org/record/4094632"
+}

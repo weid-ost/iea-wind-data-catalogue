@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Kjeller Vindteknikk (Norway)\",\"family\":\"Bredesen\",\"given\":\"Rolv\",\"name\":\"Bredesen, Rolv\"},{\"family\":\"Cattin\",\"given\":\"René\",\"name\":\"Cattin, René\"},{\"family\":\"Clausen,\",\"given\":\"Niels-Erik\",\"name\":\"Clausen,, Niels-Erik\"},{\"family\":\"Davis\",\"given\":\"Neil\",\"name\":\"Davis, Neil\"},{\"family\":\"Jordaens\",\"given\":\"Pieter Jan\",\"name\":\"Jordaens, Pieter Jan\"},{\"family\":\"Khadiri-Yazami\",\"given\":\"Zouhair\",\"name\":\"Khadiri-Yazami, Zouhair\"},{\"family\":\"Klintström\",\"given\":\"Rebecka\",\"name\":\"Klintström, Rebecka\"},{\"family\":\"Krenn\",\"given\":\"Andreas\",\"name\":\"Krenn, Andreas\"},{\"family\":\"Lehtomäki\",\"given\":\"Ville\",\"name\":\"Lehtomäki, Ville\"},{\"family\":\"Ronsten\",\"given\":\"Göran\",\"name\":\"Ronsten, Göran\"},{\"family\":\"Wadham-Gagnon\",\"given\":\"Matthew\",\"name\":\"Wadham-Gagnon, Matthew\"},{\"family\":\"Wickman\",\"given\":\"Helena\",\"name\":\"Wickman, Helena\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.14179846"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.14179846"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind TCP\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:57Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.14179845\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.14179845\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2017-02-10"
+    },
+    {
+      "key": "publisher",
+      "value": "IEA Wind TCP"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.14179845\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "recommended-practice"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.14179846"
+    },
+    {
+      "key": "source_key",
+      "value": "2024-11-18T14:25:31Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.14179846"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.14179846\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-14179846",
+  "notes": "The purpose of this IEA Wind TCP report is to provide the best available information of recommended practices for cold climate (CC) wind projects to developers, owners, and operators of wind projects within CC. The incentive is to reduce the risks and accelerate the growth of wind energy production. This document also provides preparatory information that should benefit manufacturers, banks, and insurance companies.\n\nCold climate sites around the world offer large wind energy potential in demanding winter climates. National activities have been conducted to master the challenges that atmospheric icing and low temperatures pose for wind energy development. Our lack of knowledge of special CC issues and the lack of proven and economic technological solutions have limited the large-scale exploitation of these sites. For the sake of this document, the concept of CC includes both low temperature and icing environments.\n\nA generic wind energy development best practise guide provides a good starting point for developing a CC site. Those generic practices should be used to the extent possible, even though they do not normally consider CC issues. This report focuses on the additional challenges that are involved in CC wind energy projects that must also be assessed in detail.\n\nCC conditions directly affect site access, working conditions, technology selection, turbine loads, noise, health and safety, public safety and energy production.Prior to any wind farm investment, mapping of all potential risks are keys to success. In order to get some preliminary information regarding atmospheric icing and low temperature conditions worldwide, associated maps provide a good first glance at potential risks. However, icing maps only provide a rough estimateof potential sites atmospheric icing conditions, and should not be used as the only indicator for icing. Similar to wind speed measurements, on-site icing measurements are of crucial importance and can provide more accurate icing information than icing maps for business case analysis. Icing maps can also be used when planning the site icing measurements that will take place during the resource assessment campaign.",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "cold-climate"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "IEA Wind TCP Recommended practice 13: Wind Energy Projects in Cold Climates",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.14179846"
+}

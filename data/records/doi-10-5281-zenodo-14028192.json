@@ -1,0 +1,133 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Airborne Wind Europe\",\"family\":\"Petrick\",\"given\":\"Kristian\",\"name\":\"Petrick, Kristian\",\"orcid\":\"0000-0001-8443-3556\"},{\"affiliation\":\"Airborne Wind Europe\",\"family\":\"Thoms\",\"given\":\"Stefanie\",\"name\":\"Thoms, Stefanie\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.14028192"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.14028192"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-48\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:39Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.14028193\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.14028193\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-10-16"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.14028192\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.14028193\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "14028193"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.14028193~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/14028193"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/14028193\",\"https://zenodo.org/doi/10.5281/zenodo.14028192\",\"https://zenodo.org/doi/10.5281/zenodo.14028193\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-48"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-14028192",
+  "notes": "The objective of IEA Wind Task 48 on Airborne Wind Energy is to tackle technological, regulatory and policy challenges on a global level, addressing and including stakeholders such as AWE developers, suppliers, policy makers, authorities, regulators and other wind energy and technology experts. Task 48 consists of five Work Packages: i) Resource Potential and Markets; ii) Reference Models, Tools and Metrics; iii) Safety and Regulation; iv) Social Acceptance and Environmental Impacts; v) AWES Architectures. This report summarizes the activities of the Task in 2023.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "1729239760255.pdf",
+      "url": "https://zenodo.org/records/14028193/files/1729239760255.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Airborne Wind Energy - Report 2023 - Task 48",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.14028192"
+}

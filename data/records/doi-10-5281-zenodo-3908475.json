@@ -1,0 +1,138 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Alcayaga\",\"given\":\"Leonardo\",\"name\":\"Alcayaga, Leonardo\",\"orcid\":\"0000-0003-4175-9024\"},{\"family\":\"Floors\",\"given\":\"Rogier\",\"name\":\"Floors, Rogier\",\"orcid\":\"0000-0002-9363-4699\"},{\"family\":\"Santos\",\"given\":\"Pedro\",\"name\":\"Santos, Pedro\",\"orcid\":\"0000-0003-2962-1364\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3908475"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3908475"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:42Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "CC-BY-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.3908474\",\"url\":\"https://zenodo.org/record/3908474\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-06-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3908474\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "working-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "3908475"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.3908475~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3908475"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3908475\",\"https://zenodo.org/record/3908475\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-3908475",
+  "notes": "This is a summary of the ``Filtering lidar data'' webinar given by Rogier Floors and Leonardo Alcayaga on 7 April 2020 in the IEA Wind Task 32 webinar series.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Task_32_WebinarSummary_FilteringPulsedLidarData_26June2020.pdf",
+      "url": "https://zenodo.org/records/3908475/files/Task_32_WebinarSummary_FilteringPulsedLidarData_26June2020.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Approaches in filtering data from pulsed wind lidar",
+  "url": "https://zenodo.org/record/3908475",
+  "version": "26 June 2020"
+}

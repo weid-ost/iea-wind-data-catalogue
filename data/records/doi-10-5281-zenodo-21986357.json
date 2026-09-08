@@ -1,0 +1,129 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Illinois Urbana-Champaign\",\"family\":\"Kobayashi\",\"given\":\"Kazuma\",\"name\":\"Kobayashi, Kazuma\"},{\"affiliation\":\"University of Illinois Urbana-Champaign\",\"family\":\"Ahmed\",\"given\":\"Farid\",\"name\":\"Ahmed, Farid\"},{\"affiliation\":\"University of Illinois Urbana-Champaign\",\"family\":\"Park\",\"given\":\"Jaewan\",\"name\":\"Park, Jaewan\"},{\"affiliation\":\"Indian Institute of Technology Delhi\",\"family\":\"Sarkar\",\"given\":\"Subhankar\",\"name\":\"Sarkar, Subhankar\"},{\"affiliation\":\"University of Illinois Urbana-Champaign\",\"family\":\"Koric\",\"given\":\"Seid\",\"name\":\"Koric, Seid\"},{\"affiliation\":\"University of Illinois Urbana-Champaign\",\"family\":\"Chakraborty\",\"given\":\"Souvik\",\"name\":\"Chakraborty, Souvik\"},{\"affiliation\":\"University of Illinois Urbana-Champaign\",\"family\":\"Alam\",\"given\":\"Syed Bahauddin\",\"name\":\"Alam, Syed Bahauddin\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.21986357"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.21986357"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:08Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.21224751\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.21224751\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-17"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21224751\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "21986357"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.21986357~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/21986357"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/21986357\",\"https://zenodo.org/doi/10.5281/zenodo.21986357\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-21986357",
+  "notes": "Virtual Sensing to Enable Real-Time Monitoring of Inaccessible Locations &amp; Unmeasurable Parameters.\n\nReconstructing inaccessible interior fields from sparse measurements — across engineering simulations and real-world energy, atmospheric, and ocean data.\n\n \n\nOne-line summary.\n\nWe introduce operator-based virtual sensing as a general framework for recovering inaccessible interior fields from sparse boundary measurements, and instantiate it with MIMONet, a multi-input, multi-output branch–trunk neural operator that fuses heterogeneous inputs and decodes coupled physical fields through a shared latent representation. The framework is demonstrated across three escalating-complexity engineering problems (lid-driven cavity → PWR subchannel → fully coupled heat exchanger) and further validated on three independent real-world datasets spanning electrochemical energy, atmospheric science, and physical oceanography — fuel-cell current-density mapping, tall-tower wind profiling, and a global ocean reanalysis.\n\n \n\nRun\n\nThese scripts reproduce the main accuracy table of the MIMONet manuscript (Virtual Sensing to Enable Real-Time Monitoring of Inaccessible Locations &amp; Unmeasurable Parameters, arXiv:2412.00107) by loading the released checkpoints and re-evaluating the held-out test split — no training is performed. This is intended for the peer review and reproduction, where training is not run.\n\nTo reproduce the results reported in the manuscript, please go to Production directory and run production scripts following README.md file located in that directory.\n\n# from the repository root, in the project conda env\npython Production/reproduce_accuracy.py                 # all three cases\npython Production/reproduce_accuracy.py --case HeatExchanger\npython Production/reproduce_accuracy.py --data-root /data   # data mounted elsewhere\n\nEach case runs in its own subprocess (case_eval.py) because every Benchmark// ships identically-named modules (nomad.py, geofno_irregular.py, …) that would otherwise collide in one Python process.\n\n \n\nRequirements\n\n\n\nThe project conda env (PyTorch + scikit-learn + numpy). Pure inference: torch.no_grad, model.eval(), no optimizer.\n\nA CUDA GPU. The GeoFNO baseline (GeoFNO_NOMAD) hard-codes .cuda() on its submodules, so the baselines require a GPU. MIMONet itself runs on CPU, but for a uniform run use a GPU capsule.\n\nCheckpoints and data ship in the repository layout:\n\n\n\nMIMONet: {LDC,Subchannel,HeatExchanger}/model/best_model.pt\n\nBaselines: Benchmark/{LDC,Subchannel,HeatExchanger}/models/*.pt\n\nData: each case's data/ (train targets are needed to fit the target scaler used for the physical-units metric). --data-root relocates the case data/ dirs.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "MIMONet.zip",
+      "url": "https://zenodo.org/records/21986357/files/MIMONet.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Data and Code for \"Virtual Sensing to Enable Real-Time Monitoring of Inaccessible Locations & Unmeasurable Parameters\"",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.21986357"
+}

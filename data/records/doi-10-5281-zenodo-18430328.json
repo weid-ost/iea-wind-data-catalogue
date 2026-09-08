@@ -1,0 +1,125 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Delft University of Technology\",\"family\":\"Cibin\",\"given\":\"Nicola\",\"name\":\"Cibin, Nicola\",\"orcid\":\"0009-0008-4075-193X\"},{\"affiliation\":\"Utrecht University\",\"family\":\"Mwangi\",\"given\":\"Agrippina\",\"name\":\"Mwangi, Agrippina\",\"orcid\":\"0000-0002-3663-8335\"},{\"affiliation\":\"Norwegian University of Science and Technology\",\"family\":\"Shao\",\"given\":\"Han\",\"name\":\"Shao, Han\",\"orcid\":\"0000-0001-9664-8255\"},{\"affiliation\":\"Imperial College London\",\"family\":\"Arjomandi-Nezhad\",\"given\":\"Ali\",\"name\":\"Arjomandi-Nezhad, Ali\",\"orcid\":\"0000-0002-2568-0853\"},{\"affiliation\":\"Siemens Gamesa Renewable Energy AS\",\"family\":\"Gomes Guerreiro\",\"given\":\"Gabriel Miguel\",\"name\":\"Gomes Guerreiro, Gabriel Miguel\",\"orcid\":\"0000-0002-0803-0795\"},{\"affiliation\":\"Typhoon HiL\",\"family\":\"Vilerá\",\"given\":\"Kaio Vinícius\",\"name\":\"Vilerá, Kaio Vinícius\",\"orcid\":\"0000-0001-5944-056X\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Leiva Vilaplana\",\"given\":\"Jose Angel\",\"name\":\"Leiva Vilaplana, Jose Angel\",\"orcid\":\"0000-0003-2595-5682\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.18430328"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.18430328"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.18430329\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.18430329\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-01-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.18430328\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.18430329\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "18430329"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.18430329~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/18430329"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/18430329\",\"https://zenodo.org/doi/10.5281/zenodo.18430328\",\"https://zenodo.org/doi/10.5281/zenodo.18430329\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-18430328",
+  "notes": "The offshore wind energy sector presents significant opportunities for advancing globalrenewable energy targets. As the urgency to achieve sustainability goals intensifies, the expansionof cost-effective, low-carbon technologies becomes paramount. Offshore wind, a rapidly maturingtechnology, has the potential to transform future energy systems. According to the International EnergyAgency (IEA), offshore wind capacity is projected to increase fifteen-fold by 2040, establishing it as acornerstone of global decarbonization efforts.\n\nFrom a technical standpoint, integrating wind energy into the grid and maintaining powersystem stability are critical challenges. Ensuring power stability in wind power plants (WPPs) necessitatesthe deployment of advanced technologies and methodologies for comprehensive monitoring,analysis, and control. Power stability encompasses a system’s capacity to sustain consistent voltage,frequency, and operational equilibrium amid disturbances.\n\nWithin the EU H2020 InnoCyPES project, an interdisciplinary approach has been adopted todeploy digital tools that enhance offshore WPP stability. The objective is to equip grid operatorsand WPP managers with tools for monitoring and controlling power stability, improving communicationinfrastructure resilience, reducing testing and deployment costs, and ultimately evaluating the valuethese tools add to WPP operations.\n\nA systems perspective reveals the main challenges facing offshore WPPs. Firstly, grid integrationrequires advanced technologies to ensure stability and efficiency. Secondly, the cyber layerdemands robust cybersecurity measures and a resilient communication infrastructure to safeguardagainst potential threats. Lastly, societal factors are crucial; public acceptance and support from policymakersare essential for the successful deployment of wind energy solutions, significantly impactingboth financial backing and regulatory frameworks.\n\nIn response to these challenges, relevant research has been conducted across various layers.Solutions for grid integration include power quality monitoring, short-circuit current estimation frominverter-based resources, transient stability assessment, and validation of electromagnetic transient(EMT) models throughout the lifecycle of wind turbines and WPPs. Additionally, next-generationsupervisory control and data acquisition (SCADA-NG) systems utilize a software-defined communicationnetwork architecture to enhance data resilience and implement advanced intrusion detection methodsfor cyber threat mitigation. The introduction of dynamic cost-benefit analysis (CBA) captures theevolving impacts of digital technology adoption, offering valuable insights for informed decision-making.A proposed framework for integrating cyber-physical solutions emphasizes coherence andinteroperability. This adaptable approach ensures that the use cases and solutions discussed canenable synergies, offering a unified methodology for managing complex WPPs. It aligns closely with theInnoCyPES project’s goal of establishing an integrated platform to govern the lifecycle of cyber-physicalWPPs. The primary aim is to integrate use cases in a manner that promotes contextual relevance andinteroperability.\n\nThis framework lays the groundwork for future platforms focused on managing the planningand operation of WPPs The target audience includes transmission system operators (TSOs), WPPdevelopers, original equipment manufacturers (OEMs), end users, regulatory authorities, academia,industry stakeholders, and interdisciplinary researchers.\n\nFuture Directions in Cyber-Physical Energy Systems This report presents a foundational explorationof interdisciplinary research at the intersection of energy transition and digitalization. It marksthe first step toward integrating cyber-physical energy systems and lays the groundwork for a scalableplatform for future research. This approach not only opens multiple avenues across various researchlayers but also facilitates the integration of findings, shaping the research agenda for forthcoming usecases.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "InnoCyPES_workflow___Offshore_Wind.pdf",
+      "url": "https://zenodo.org/records/18430329/files/InnoCyPES_workflow___Offshore_Wind.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Offshore Wind Power Plant Stability and Resiliency: Integrating Cross-Domain Insights",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.18430328"
+}

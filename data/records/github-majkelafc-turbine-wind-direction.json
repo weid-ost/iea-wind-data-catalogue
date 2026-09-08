@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:32:55Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|MajkelAFC/Turbine-Wind-Direction"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:32:55Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-09"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "MajkelAFC/Turbine-Wind-Direction"
+    },
+    {
+      "key": "source_key",
+      "value": "a34cc7cf69cfc6ba98bf62e8f58cb7b4c2d4423f::4f645184ee725db3~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/MajkelAFC/Turbine-Wind-Direction"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/MajkelAFC/Turbine-Wind-Direction\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-majkelafc-turbine-wind-direction",
+  "notes": "Wind direction analytics pipeline using circular mean — Python, Airflow, PostgreSQL, Superset, Docker",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/MajkelAFC/Turbine-Wind-Direction"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "airflow"
+    },
+    {
+      "name": "data-engineering"
+    },
+    {
+      "name": "docker"
+    },
+    {
+      "name": "etl"
+    },
+    {
+      "name": "postgresql"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "superset"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "MajkelAFC/Turbine-Wind-Direction",
+  "url": "https://github.com/MajkelAFC/Turbine-Wind-Direction"
+}

@@ -1,0 +1,136 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Danish Technical University\",\"family\":\"Vasiljevic\",\"given\":\"Nikola\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Sciences\",\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"},{\"affiliation\":\"Black & Veatch\",\"family\":\"Clive\",\"given\":\"Peter\",\"name\":\"Clive, Peter\",\"orcid\":\"0000-0002-1365-0243\"},{\"affiliation\":\"University of Stuttgart\",\"family\":\"Wüerth\",\"given\":\"Ines\",\"name\":\"Wüerth, Ines\"},{\"affiliation\":\"Danish Technical University\",\"family\":\"Wagner\",\"given\":\"Rozenn\",\"name\":\"Wagner, Rozenn\"},{\"affiliation\":\"Orsted\",\"family\":\"Nygaard\",\"given\":\"Nicolai\",\"name\":\"Nygaard, Nicolai\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4030701"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4030701"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.3374354\",\"url\":\"https://zenodo.org/record/3374354\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-09-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3374354\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "working-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.4030701"
+    },
+    {
+      "key": "source_key",
+      "value": "2020-09-15T12:31:47Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/4030701"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/4030701\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4030701",
+  "notes": "IEA Wind Task 32 coordinates a range of research and development activities for wind lidar for wind energy applications. In order to help Task members and others keep an overview of what's happening in the Task, we have created a visual road map showing these activities. To find out more about specific activities, see the Task 32 website at https://community.ieawind.org/task32/home. This repository includes a PDF of the roadmap as \"IEA_Wind_Task_32__Collaborative_RD_Roadmap.pdf\" The files required to produce the roadmap using the LaTeX document preparation system can be obtained from our repository at GitHub.com. Please note that this document will be updated regularly. Please check for new versions at https://doi.org/10.5281/zenodo.3374354. <strong>We welcome feedback on the document</strong>. Please go to https://github.com/IEA-Wind-Task-32/white-paper-Task32-RnD-roadmap to find out how you can help improve this document.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-lidar-roadmap"
+    }
+  ],
+  "title": "IEA Wind Task 32: Collaborative R&amp;D Roadmap",
+  "url": "https://zenodo.org/record/4030701",
+  "version": "2020 September 15"
+}

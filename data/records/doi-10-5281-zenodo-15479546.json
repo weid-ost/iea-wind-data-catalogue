@@ -1,0 +1,142 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Córdoba\",\"family\":\"Lara\",\"given\":\"Manuel\",\"name\":\"Lara, Manuel\",\"orcid\":\"0000-0002-0330-2982\"},{\"affiliation\":\"University of Córdoba\",\"family\":\"Ruz\",\"given\":\"Mario L.\",\"name\":\"Ruz, Mario L.\",\"orcid\":\"0000-0002-2356-5253\"},{\"affiliation\":\"University of Córdoba\",\"family\":\"Vázquez\",\"given\":\"Francisco\",\"name\":\"Vázquez, Francisco\",\"orcid\":\"0000-0003-4544-6084\"},{\"affiliation\":\"Delft University of Technology\",\"family\":\"Mulders\",\"given\":\"Sebastiaan Paul\",\"name\":\"Mulders, Sebastiaan Paul\",\"orcid\":\"0000-0003-4689-257X\"},{\"affiliation\":\"Delft University of Technology\",\"family\":\"van Wingerden\",\"given\":\"Jan-Willem\",\"name\":\"van Wingerden, Jan-Willem\",\"orcid\":\"0000-0003-3061-7442\"},{\"affiliation\":\"University of Córdoba\",\"family\":\"Garrido\",\"given\":\"Juan\",\"name\":\"Garrido, Juan\",\"orcid\":\"0000-0001-5122-4803\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15479546"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15479546"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:53Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.15479545\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15479545\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15479545\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "15479546"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.15479546~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15479546"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15479546\",\"https://zenodo.org/doi/10.5281/zenodo.15479546\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15479546",
+  "notes": "This dataset supports the study presented in the paper \"Multi-Objective Optimization of Collective and Individual Pitch Control for Blade Load Reduction and Power Regulation in Wind Turbines\" submitted to the 2026 IEEE Mediterranean Electrotechnical Conference (MELECON 2026). \n\nThe study focuses on optimizing control strategies for a 15 MW IEA reference wind turbine to balance blade fatigue load reduction and power regulation in the full-load region. Four control configurations (ROSCO IPC, CPC IPC, CPC IPC Azi, and CPC IPC D) are analyzed using a multi-objective optimization (MOO) framework based on the NSGA-II genetic algorithm and TOPSIS decision-making method. \n\nThe dataset includes Pareto front data, optimal control parameters, and simulation results under turbulent wind conditions with a mean speed of 22 m/s.\n\nFolder Structure----------------**Multi-objective optimization results/**    - `Figure5.fig`: Figure 5 - Pareto front plot comparing DEL(M) vs. ISE(Pg) for different controllers.    - `Figure5_generate.m`: MATLAB script to generate Figure 5.    - `Figure6.fig`: Figure 6 - Subplot figure showing k_{P cpc}, k_{I cpc}, k_{I IPC}, d_{12}, and ψ_o vs. DEL(M).    - `Figure6_generate.m`: MATLAB script to generate Figure 6.    - `ParetoFrontsData.mat`: MATLAB data file containing Pareto front data (e.g., f1_22_ROSCO_IPC_1Param_KigualesIPC_25puntos, Optimo_* variables).    - `SubplotData.mat`: MATLAB data file containing subplot data (e.g., x1_22_* variables).    - `Table1_OPTIMAL CPC-IPC PARAMETERS.mat`: MATLAB data file with optimal parameters for CPC-IPC controllers (e.g., Optimo_CPC_IPC_* variables).    - `Table2_Pareto_and_Control_Parameters.xlsx`: Excel file summarizing Pareto fronts and control parameters.**Simulation results/**    - `Figure7.fig`: Figure 7 - Bar plot comparing DEL M and ISE_{Pg} across seeds for different controllers.    - `Figure7_generate.m`: MATLAB script to generate Figure 7.    - `Figure8.fig`: Figure 8 - Radar plot comparing standardized performance metrics for CPC IPC variants.    - `Figure8_generate.m`: MATLAB script to generate Figure 8.    - `Figure9.fig`: Figure 9 - Time series subplot showing v, P_g, M_1, and Pitch_1 for different controllers.    - `Figure9_data.mat`: MATLAB data file containing time series data (e.g., vx_*, pg_*, myc1_*, pitch1_* variables).    - `Figure9_generate.m`: MATLAB script to generate Figure 9.\n\nFile Descriptions------------------ **.fig files**: Saved MATLAB figure files containing the graphical outputs for Figures 5, 6, 7, 8, and 9.- **_generate.m files**: MATLAB scripts used to generate the corresponding figures. Each script loads the required data and produces the plot.- **.mat files**: MATLAB data files containing raw data used for generating the figures and tables.  - `ParetoFrontsData.mat`: Contains Pareto front data for initial comparison plots.  - `SubplotData.mat`: Contains data for subplot analyses (e.g., Figure 6).  - `Table1_OPTIMAL CPC-IPC PARAMETERS.mat`: Stores optimal parameter values for CPC-IPC controllers.  - `Figure9_data.mat`: Contains time series data for velocity, power, moment, and pitch angle (Figure 9).- **Table2_Pareto_and_Control_Parameters.xlsx**: Excel spreadsheet summarizing Pareto front results and control parameters.- **README.txt**: This document providing an overview of the dataset.\n\nUsage Instructions------------------1. **Requirements**: MATLAB with basic plotting capabilities is required to run the generate scripts or view the .fig files.2. **Running Scripts**:   - Navigate to the appropriate folder (e.g., `Multi-objective optimization results` or `Simulation results`).   - Open and run the corresponding `_generate.m` file (e.g., `Figure7_generate.m`) in MATLAB.   - Ensure the required .mat files are in the same directory or adjust the `load` paths in the scripts.3. **Viewing Figures**: Open .fig files directly in MATLAB to view the pre-generated plots.4. **Data Analysis**: Load .mat files into MATLAB using the `load` command to access raw data for further analysis (e.g., `load('ParetoFrontsData.mat')`).\n\nAcknowledgments---------------This research was funded by the Spanish Ministry of Science, Innovation and Universities (MCIU/AEI/10.13039/501100011033/FEDER,UE), grant number PID2023-149181OB-I00.\n\nContact-------For questions or additional information, contact the corresponding author: Manuel Lara (manuel.lara@uco.es), University of Cordoba, Spain.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "MOO_CPC_IPC_conf.zip",
+      "url": "https://zenodo.org/records/15479546/files/MOO_CPC_IPC_conf.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "individual-pitch-control"
+    },
+    {
+      "name": "multi-objective-optimization"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-turbine-control"
+    }
+  ],
+  "title": "Data files for the manuscript Multi-Objective Optimization of Collective and Individual Pitch Control for Blade Load Reduction and Power Regulation in Wind Turbines",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15479546"
+}

@@ -1,0 +1,155 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Centre (CENER)\",\"family\":\"Sanz Rodrigo\",\"given\":\"Javier\",\"name\":\"Sanz Rodrigo, Javier\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.835299"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.835299"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by-nc/4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.835300\",\"url\":\"https://zenodo.org/record/835300\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2017-07-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.835299\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.835300\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "project-deliverable"
+    },
+    {
+      "key": "source_id",
+      "value": "835300"
+    },
+    {
+      "key": "source_key",
+      "value": "11@10.5281/zenodo.835300~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/835300"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/835300\",\"https://zenodo.org/record/835299\",\"https://zenodo.org/record/835300\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-nc",
+  "name": "doi-10-5281-zenodo-835299",
+  "notes": "This report describes a pilot study on the implementation of a virtual laboratory for wind energy in European high-performance computing (HPC) and data management infrastructures. The virtual laboratory consists on a simulation platform that promotes open-access, modularity, performance and follows best practices for software engineering and testing based on a unified model development and validation strategy. The platform will support the development of high-fidelity models (HFM) of multi-scale atmospheric flows based on large-eddy simulation. A systematic verification and validation process based on unitary and sub-system building blocks determines the suitability of the different modules of the model-chain and their integration in full system simulations. This pilot provides a high-level description of a unified research program for HFM under the umbrella of the IEA-Wind Task 31. Modularity aspects are demonstrated in this pilot study with the development of an interface for offline meso-micro coupling that uses tendencies from the Weather Research and Forecasting (WRF) mesoscale model to drive large-eddy simulations with the SOWFA (Simulator fOr Wind Farm Applications) computational fluid dynamics microscale model. Testing of this approach is carried out with the GABLS3 benchmark on the simulation of a diurnal cycle at the Cabauw meteorological tower in the Netherlands. The case has been shared with relevant research groups by conducting a model intercomparison benchmark in Task 31. This report summarizes all the stages of the research process carried out throughout the MesoWake project to provide guidance to future activities around a unified HFM international research program.",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "SanzRodrigo 2017 Virtual Laboratory for Wind Energy.pdf",
+      "url": "https://zenodo.org/records/835300/files/SanzRodrigo%202017%20Virtual%20Laboratory%20for%20Wind%20Energy.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "gabls3"
+    },
+    {
+      "name": "high-fidelity-modeling"
+    },
+    {
+      "name": "hpc"
+    },
+    {
+      "name": "les"
+    },
+    {
+      "name": "meso-micro"
+    },
+    {
+      "name": "multi-scale"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Open-Access Virtual Laboratory For Wind Energy In European High Performance Computing And Data Management Infrastructures: The Mesowake Pilot Study",
+  "url": "https://zenodo.org/record/835299"
+}

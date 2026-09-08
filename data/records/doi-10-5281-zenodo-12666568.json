@@ -1,0 +1,119 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"sowento GmbH\",\"family\":\"Fu\",\"given\":\"Wei\",\"name\":\"Fu, Wei\",\"orcid\":\"0000-0001-5111-5631\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"sowento GmbH\",\"family\":\"Raach\",\"given\":\"Steffen\",\"name\":\"Raach, Steffen\",\"orcid\":\"0000-0002-1264-0422\"},{\"affiliation\":\"ZXLidars\",\"family\":\"White\",\"given\":\"Steven\",\"name\":\"White, Steven\"},{\"affiliation\":\"ZXLidars\",\"family\":\"Pitter\",\"given\":\"Mark\",\"name\":\"Pitter, Mark\"},{\"affiliation\":\"ZXLidars\",\"family\":\"Slinger\",\"given\":\"Chris\",\"name\":\"Slinger, Chris\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.12666568"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.12666568"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.12666567\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.12666567\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-07-05"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.12666567\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.12666568"
+    },
+    {
+      "key": "source_key",
+      "value": "2024-07-07T15:23:08Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.12666568"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.12666568\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-12666568",
+  "notes": "Lidar-assisted control is a promising technology to improve the performance of wind turbines, including structural load reduction and energy increase. A major challenge to widespread industrial adoption is a lack of knowledge of the optimal measurement distance and uncertainty introduced by the complexity of wind models. \n\nThis work presents simulations of the 15 MW IEA reference wind turbine using a continuous wave lidar system. We first optimize the measurement distance using different wind models, demonstrating that the optimal ranges are similar. Detailed simulations are performed using the optimized setups for each wind model, from the simplest approach (Kaimal spectra without wind evolution) to the more complex wind fields (Mann with a space-time tensor). The study confirms that the control benefits are positive for the different setups. We emphasize by further simulations that distance optimization and adaptive filtering is important despite the robustness to wind models.\n\nFurthermore, we tune the ROSCO controller based on its default setting for the 15 MW reference turbine. Results show there is a large benefit to optimize the original feedback controller for tower load reduction. After the optimization, LAC still brings significant improvements for loads and pitch activity.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Study on the impact of wind models and data processing on lidar-assisted control performance",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.12666568"
+}

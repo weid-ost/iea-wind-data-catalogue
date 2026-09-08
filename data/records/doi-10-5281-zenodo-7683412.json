@@ -1,0 +1,182 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"},{\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\"},{\"family\":\"Stoekl\",\"given\":\"Alexander\",\"name\":\"Stoekl, Alexander\"},{\"family\":\"Oldroyd\",\"given\":\"Andrew\",\"name\":\"Oldroyd, Andrew\"},{\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\"},{\"family\":\"Schild\",\"given\":\"Axel\",\"name\":\"Schild, Axel\"},{\"family\":\"Black\",\"given\":\"Andrew\",\"name\":\"Black, Andrew\"},{\"family\":\"Becker\",\"given\":\"Johannes\",\"name\":\"Becker, Johannes\"},{\"family\":\"Gomez\",\"given\":\"Paula\",\"name\":\"Gomez, Paula\"},{\"family\":\"Simon\",\"given\":\"Elliot\",\"name\":\"Simon, Elliot\"},{\"family\":\"Courtney\",\"given\":\"Michael\",\"name\":\"Courtney, Michael\"},{\"family\":\"Ueda\",\"given\":\"Yuko\",\"name\":\"Ueda, Yuko\"},{\"family\":\"Clive\",\"given\":\"Peter\",\"name\":\"Clive, Peter\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.7683412"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.7683412"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:34Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.7683411\",\"url\":\"https://zenodo.org/record/7683411\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-02-28"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.7683411\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask52\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "7683412"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.7683412~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/7683412"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/7683412\",\"https://zenodo.org/record/7683412\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-7683412",
+  "notes": "This is the material presented during the (first) IEA Wind Task 52 Lunch Seminar Series, which was held online on between 13-16 February 2023 (all days 13-14 CET). The seminars were opened with an introduction by the Operating Agent, see <em>20230215_IEA-Wind-Task52_lunch-seminar-INTRO_GotJul (1)</em>, followed by these presentations: Day 1 -- focus on Lidar-Assisted Control (LAC), organized by David Schlipf (<em>20230213_LAC_WG</em>) Feng Guo on \"Improved modeling of lidar wind preview for wind turbine control\" <em>Feng_Guo_LunchSeminar_v2n</em> Axel Schild on \"Lidar-assisted model predictive turbine control\" <em>Schild_Challenges_on_the_way_to_indstrial_reality</em> Day 2 -- focus on Complex Terrain, organized by Alexander Stoekl Andrew Hastings Black on \"Point and lidar wind field reconstruction sensitivities in complex flow\" <em>IEATask52_LunchWebinarSeries_ComplexFlowWFR_AndrewBlack_14FEB2023</em> Johannes Becker on \"Scanning LiDAR in Complex Terrain for Wind Ressource Assessment\" <em>GEO-NET_IEA-Task52-Lunch-Session_EWINO-Approach-Scanning-LiDAR-in-WRA_20230214</em> Day 3 -- focus on Scanning Lidar Offshore, organized by Andrew Oldroyd Yuko Ueda on \"Validation of near-shore wind measurements using a dual scanning LiDAR\" <em>230215_task52_lunch_seminar_ueda</em> Paula Gómez, Elliot Simon, Mike Courtney on \"Guidelines for the usage of scanning lidars for power curve verification\" <em>20230215_IEA52_webinar</em> Day 4 -- focus on Floating Lidar, organized by Julia Gottschall Introductory presentation \"Floating lidar within the IEA Wind 'Lidar' Task so far ...\" <em>20230216_IEA-Wind-Task52_Lunch-seminar_GotJul</em> Peter Clive on \"Floating lidar standards and guidance, an update centred around the upcoming technical specification IEC 61400-50-4\" <em>FLS Standard - update - 2023-02-16</em> Please note that each document or presentation may have its own license. If in doubt about reusing or citing any of the material presented here, please contact the authors.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "230215_task52_lunch_seminar_ueda.pdf",
+      "url": "https://zenodo.org/records/7683412/files/230215_task52_lunch_seminar_ueda.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20230213_LAC_WG.pdf",
+      "url": "https://zenodo.org/records/7683412/files/20230213_LAC_WG.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20230215_IEA-Wind-Task52_lunch-seminar-INTRO_GotJul (1).pdf",
+      "url": "https://zenodo.org/records/7683412/files/20230215_IEA-Wind-Task52_lunch-seminar-INTRO_GotJul%20%281%29.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Schild_Challenges_on_the_way_to_indstrial_reality.pdf",
+      "url": "https://zenodo.org/records/7683412/files/Schild_Challenges_on_the_way_to_indstrial_reality.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "FLS Standard - update - 2023-02-16.pdf",
+      "url": "https://zenodo.org/records/7683412/files/FLS%20Standard%20-%20update%20-%202023-02-16.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20230215_IEA52_webinar.pdf",
+      "url": "https://zenodo.org/records/7683412/files/20230215_IEA52_webinar.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "Feng_Guo_LunchSeminar_v2n.pdf",
+      "url": "https://zenodo.org/records/7683412/files/Feng_Guo_LunchSeminar_v2n.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "20230216_IEA-Wind-Task52_Lunch-seminar_GotJul.pdf",
+      "url": "https://zenodo.org/records/7683412/files/20230216_IEA-Wind-Task52_Lunch-seminar_GotJul.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "GEO-NET_IEA-Task52-Lunch-Session_EWINO-Approach-Scanning-LiDAR-in-WRA_20230214.pdf",
+      "url": "https://zenodo.org/records/7683412/files/GEO-NET_IEA-Task52-Lunch-Session_EWINO-Approach-Scanning-LiDAR-in-WRA_20230214.pdf"
+    },
+    {
+      "format": "pdf",
+      "name": "IEATask52_LunchWebinarSeries_ComplexFlowWFR_AndrewBlack_14FEB2023.pdf",
+      "url": "https://zenodo.org/records/7683412/files/IEATask52_LunchWebinarSeries_ComplexFlowWFR_AndrewBlack_14FEB2023.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 52 Lunch Seminar Series (February 2023)",
+  "url": "https://zenodo.org/record/7683412"
+}

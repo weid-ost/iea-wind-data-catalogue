@@ -1,0 +1,115 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Willeke\",\"given\":\"Leonard\",\"name\":\"Willeke, Leonard\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.18419/opus-11435"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.18419/opus-11435"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "info:eu-repo/semantics/openAccess"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-04-27"
+    },
+    {
+      "key": "publisher",
+      "value": "Universität Stuttgart"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "10.18419/opus-11435"
+    },
+    {
+      "key": "source_key",
+      "value": "2021-04-27T16:00:21Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "http://elib.uni-stuttgart.de/handle/11682/11452"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"http://elib.uni-stuttgart.de/handle/11682/11452\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-18419-opus-11435",
+  "notes": "Wind turbines play an important role in the transition towards a sustainable future. With the demand for clean energy unbroken, suitable sites onshore become rare and more and more conflicts around land use arise. That’s why the industry moved to the sea, where wind resources and space are abundant. After the development of fixed-bottom and floating offshore wind turbines (FOWT), we now present the concept of a sailing offshore wind turbine (SOWT). It can enter deeper waters and will unlock more resources. The concept builds on the existing spar floating turbines. Specifically, the IEA Wind 15 MW reference turbine and the WindCrete spar are used. Simulations are run in OpenFASTv2.4, while the hydrodynamics of the spar are calculated in Ansys AQWA. The turbine is not attached to the sea floor but free to move. It is intended to sail with the wind like a ship. The turbine’s controller can be used to perform manoeuvres such as stop or turn. The turbine will produce power while sailing. It can store the energy onboard and will unload it periodically, e.g. to ships or stations. From this approach, many challenges arise. This work focuses on the stability. Special interest lies on the floater’s yaw stiffness which is very low. Due to the lack of mooring lines, it plays an important role for the stability. We concentrate on improving yaw stability by the instalment of underwater drag elements that slow down the yaw. Drag elements lead to a reasonable period of stability. Still, the turbine becomes unstable afterwards. Reason for this is the sideways force F_T,y, the y – component of the thrust force F_T. It is defined as F_T,y = F_T * sin{alpha_yaw}. The yaw angle alpha_yaw increases constantly under wind load, leading to an increase in F_T,y as well. Instabilities occur when F_T,y reaches a tipping point but not before. For steady wind with wind speeds v of 20 m/s and 25 m/s, the following pitch and roll are so strong that the rotor blades touch the water. For the lower wind speeds of 9 m/s and 17 m/s, pitch and roll are less strong. The turbine can recover and stabilize. The suggestion is to avoid the tipping point to prevent instabilities. Minimizing F_T,y can be achieved by the reduce of the thrust force F_T through rotor blade pitching. Another option is to control the yaw angle alpha_yaw through the nacelle yaw. Both strategies can be implemented into the turbine‘s controller.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "620"
+    }
+  ],
+  "title": "Concept study of a sailing offshore wind turbine",
+  "url": "http://elib.uni-stuttgart.de/handle/11682/11452"
+}

@@ -1,0 +1,119 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Doubrawa\",\"given\":\"Paula\",\"name\":\"Doubrawa, Paula\",\"orcid\":\"0000-0002-0660-7212\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Thedin\",\"given\":\"Regis\",\"name\":\"Thedin, Regis\",\"orcid\":\"0000-0001-5336-7875\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Moriarty\",\"given\":\"Patrick\",\"name\":\"Moriarty, Patrick\",\"orcid\":\"0000-0001-7122-5993\"},{\"affiliation\":\"National Renewable Energy Laboratory\",\"family\":\"Bodini\",\"given\":\"Nicola\",\"name\":\"Bodini, Nicola\",\"orcid\":\"0000-0002-2550-9853\"},{\"family\":\"Knaus\",\"given\":\"Hermann\",\"name\":\"Knaus, Hermann\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.11507768"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.11507768"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.11507767\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.11507767\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06-06"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.11507767\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.11507768"
+    },
+    {
+      "key": "source_key",
+      "value": "2024-06-10T16:28:47Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.11507768"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.11507768\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-11507768",
+  "notes": "International Energy Agency (IEA) Wind Technology Collaboration Program (TCP)\n\nTask 57 - Joint Assessment of Models (JAM)\n\nIn-Person Kickoff Meeting,1st In-Person Meeting\n\n28th May 2024\n\nFlorence, Italy\n\n \n\nAgenda\n\n\n\n\n\n\n13:00\n\n\n\nWelcome &amp; Introductions\n\n\n\nEveryone\n\n\n\n\n\n13:30\n\n\n\nTask Overview &amp; Status\n\n\n\nPaula Doubrawa, NREL\n\n\n\n\n\n13:45\n\n\n\nBenchmark Survey &amp; Blueprint\n\n\n\nRegis Thedin, NREL\n\n\n\n\n\n14:15\n\n\n\nAWAKEN Benchmark Launch\n\n\n\nNicola Bodini, NREL\n\n\n\n\n\n15:00\n\n\n\nWINSENT Benchmark\n\n\n\nHermann Knaus, Esslingen\n\n\n\n\n\n15:30\n\n\n\nCoffee Break \n\n\n\nEveryone\n\n\n\n\n\n16:00\n\n\n\nFuture Benchmarks\n\n\n\nRegis Thedin, NREL\n\n\n\n\n\n16:20\n\n\n\nCollaborations\n\n\n\nPaula Doubrawa, NREL\n\n\n\n\n\n16:30\n\n\n\nFuture Field Campaigns\n\n\n\nPat Moriarty, NREL\n\n\n\n\n\n17:00\n\n\n\nGroup Picture &amp; End\n\n\n\nEveryone",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "JAM In-Person Kickoff Meeting",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.11507768"
+}

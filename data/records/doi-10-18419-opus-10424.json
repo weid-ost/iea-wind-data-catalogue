@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\"},{\"family\":\"Clive\",\"given\":\"Peter\",\"name\":\"Clive, Peter\"},{\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"},{\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\"},{\"family\":\"Simley\",\"given\":\"Eric\",\"name\":\"Simley, Eric\"},{\"family\":\"Simmons\",\"given\":\"Luke\",\"name\":\"Simmons, Luke\"},{\"family\":\"Stein\",\"given\":\"Detlef\",\"name\":\"Stein, Detlef\"},{\"family\":\"Trabucchi\",\"given\":\"Davide\",\"name\":\"Trabucchi, Davide\"},{\"family\":\"Vasiljevic\",\"given\":\"Nikola\",\"name\":\"Vasiljevic, Nikola\"},{\"family\":\"Würth\",\"given\":\"Ines\",\"name\":\"Würth, Ines\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.18419/opus-10424"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.18419/opus-10424"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "info:eu-repo/semantics/openAccess"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-06-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Universität Stuttgart"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "10.18419/opus-10424"
+    },
+    {
+      "key": "source_key",
+      "value": "2020-10-10T16:46:04Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "http://elib.uni-stuttgart.de/handle/11682/10441"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"http://elib.uni-stuttgart.de/handle/11682/10441\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-18419-opus-10424",
+  "notes": "IEA Wind Task 32 exists to identify and mitigate barriers to the adoption of lidar for wind energy applications. It leverages ongoing international research and development activities in academia and industry to investigate site assessment, power performance testing, controls and loads, and complex flows. Since its initiation in 2011, Task 32 has been responsible for several recommended practices and expert reports that have contributed to the adoption of ground-based, nacelle-based, and floating lidar by the wind industry. Future challenges include the development of lidar uncertainty models, best practices for data management, and developing community-based tools for data analysis, planning of lidar measurements and lidar configuration. This paper describes the barriers that Task 32 identified to the deployment of wind lidar in each of these application areas, and the steps that have been taken to confirm or mitigate the barriers. Task 32 will continue to be a meeting point for the international wind lidar community until at least 2020 and welcomes old and new participants.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "620"
+    }
+  ],
+  "title": "IEA Wind Task 32: Wind Lidar : identifying and mitigating barriers to the adoption of wind lidar",
+  "url": "http://elib.uni-stuttgart.de/handle/11682/10441"
+}

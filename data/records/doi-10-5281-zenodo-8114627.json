@@ -1,0 +1,134 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Delft University of Technology\",\"family\":\"Rishikesh Joshi\",\"name\":\"Rishikesh Joshi\",\"orcid\":\"0000-0003-1401-9127\"},{\"affiliation\":\"Politecnico di Milano\",\"family\":\"Filippo Trevisi\",\"name\":\"Filippo Trevisi\",\"orcid\":\"0000-0001-7356-9212\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.8114627"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.8114627"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-48\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:51Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.10959930\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.10959930\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-06"
+    },
+    {
+      "key": "publisher",
+      "value": "IEA Wind TCP Task 48"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.8114627\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.8114628\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.10959930\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10959930"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.10959930~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/10959930"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/10959930\",\"https://zenodo.org/doi/10.5281/zenodo.8114627\",\"https://zenodo.org/doi/10.5281/zenodo.10959930\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-48"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-8114627",
+  "notes": "This work falls under the IEA Wind Task 48 activity and is the result of a collaborative effort between industry and academia. Airborne Wind Europe facilitated the setup of this work and acts as an intermediary for data collection, storage, and dissemination.  \n\nThis technical report and the developed computer code provide parametric cost models that aim to estimate both capital expenditure (CapEx) and operational expenditure (OpEx) associated with each component of airborne wind energy systems (AWESs). Furthermore, the report identifies relevant design metrics that could be used as objectives for the optimisation and refinement of AWES designs. These metrics will not only aid in evaluating the performance and efficiency of AWESs but will also guide future research and development efforts. In addition to cost modelling and design metrics, the report delves into potential markets where AWESs could play a significant role in the global energy supply mix. \n\nThis report aims to be a valuable resource for researchers, industry and policy makers who want to understand the economic aspects, design considerations and market potential of AWESs. It sets the groundwork for informed decision making, road mapping of technology development, and collaborative efforts to advance the adoption and deployment of AWESs on a global scale.",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Reference_Economic_Model_for_AWESs_v1.pdf",
+      "url": "https://zenodo.org/records/10959930/files/Reference_Economic_Model_for_AWESs_v1.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Reference Economic Model for Airborne Wind Energy Systems",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.8114627",
+  "version": "Version 1"
+}

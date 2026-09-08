@@ -1,0 +1,145 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"EnBW Energie Baden-Württemberg AG\",\"family\":\"Reith\",\"given\":\"Sören\",\"name\":\"Reith, Sören\"},{\"affiliation\":\"EnBW Energie Baden-Württemberg AG\",\"family\":\"Kölbel\",\"given\":\"Thomas\",\"name\":\"Kölbel, Thomas\"},{\"affiliation\":\"EnBW Energie Baden-Württemberg AG\",\"family\":\"Schlagermann\",\"given\":\"Pascal\",\"name\":\"Schlagermann, Pascal\"},{\"affiliation\":\"University of Milan\",\"family\":\"Pellizzone\",\"given\":\"Anna\",\"name\":\"Pellizzone, Anna\"},{\"affiliation\":\"University of Siena\",\"family\":\"Allansdottir\",\"given\":\"Agnes\",\"name\":\"Allansdottir, Agnes\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.1284068"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.1284068"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:35Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "Open Access"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.1284069\",\"url\":\"https://zenodo.org/record/1284069\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2013-04-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.1284068\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.1284069\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "project-deliverable"
+    },
+    {
+      "key": "source_id",
+      "value": "1284069"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.1284069~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/1284069"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/1284069\",\"https://zenodo.org/record/1284068\",\"https://zenodo.org/record/1284069\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-5281-zenodo-1284068",
+  "notes": "In this report, a general introduction into the topic of social acceptance and associated topics like Responsible Research an Innovation is given. Firstly chapters 2 and 3 show that social acceptance has to be investigated on several levels. Success in project development can only be reached, if the circumstances on all levels support the implementation of renewable energies. These circumstances are mainly defined by the attitude of affected stakeholders. This includes the affected members of the public, policy makers and market actors. In the process of shaping this attitude, mass media plays a prominent role.<br />\nTherefore mass media in Germany was analysed. Leucht delivered in two studies ( (Leucht 2011); (Leucht 2012)) a picture of the mass media landscape in Germany. On the basis of this analysis, four main sources of social resistances were identified in chapter 4. Therefore the following environmental issues, “missing-involvement”-issues, financial issues and the NIMBY-syndrome are analysed. Therewith a general understanding of these topics is implemented. Through sound information prior to a social acceptance discussion, project developers can act open and provide information that helps to create trust. For the single issues it is demonstrated that on the one hand geothermal power faces similar problems as other renewables. But on the other hand geothermal power offers advantages in a social acceptance discussion like the project participation possibilities through the direct use of<br />\nheat.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "D-4.4-GEOELEC-report-on-public-acceptance.pdf",
+      "url": "https://zenodo.org/records/1284069/files/D-4.4-GEOELEC-report-on-public-acceptance.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "environmental"
+    },
+    {
+      "name": "financial-issue"
+    },
+    {
+      "name": "geothermal-energy"
+    },
+    {
+      "name": "nimby-issue"
+    },
+    {
+      "name": "non-technical"
+    },
+    {
+      "name": "social-acceptance"
+    }
+  ],
+  "title": "Public Acceptance Of Geothermal Electricity Production",
+  "url": "https://zenodo.org/record/1284068",
+  "version": "1"
+}

@@ -1,0 +1,128 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Universidad de la República (UDELAR)\",\"family\":\"Silveira\",\"given\":\"Victor\",\"name\":\"Silveira, Victor\",\"orcid\":\"0000-0002-5021-5515\"},{\"affiliation\":\"Universidad de la República (UDELAR)\",\"family\":\"Franco\",\"given\":\"Ignacio\",\"name\":\"Franco, Ignacio\",\"orcid\":\"0000-0002-1006-752X\"},{\"affiliation\":\"Universidad de la República (UDELAR)\",\"family\":\"González Borges\",\"given\":\"Joaquín\",\"name\":\"González Borges, Joaquín\",\"orcid\":\"0009-0004-0408-8326\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.13937132"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.13937132"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-52\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.13937131\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.13937131\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-10-23"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.13937131\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.13937132"
+    },
+    {
+      "key": "source_key",
+      "value": "2024-10-23T18:19:53Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.13937132"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.13937132\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-52"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-13937132",
+  "notes": "In the context of the IEA Summer Games Task 52, our work focuses on the development of lidar-assisted controllers (LAC) for wind turbines, a technology that promises to revolutionise wind energy management. Since wind characteristics are dynamic and subject to sudden changes, conventional control systems often react with delay, which can affect turbine efficiency and performance.\n\nOur approach proposes an LAC system that uses advance information about wind conditions, allowing the turbine to proactively adapt to variations before they impact its operation. This approach not only improves efficiency, but also minimises mechanical wear and tear on the turbine, extending its lifetime.\n\nDuring the development of this work, we have used open source tools to implement lidar data processing algorithms, which facilitates accessibility and collaboration in the community. Through this research, we aim to contribute to the advancement of LAC technology and promote practices that simplify its application in industry.\n\nWe hope that our work will inspire new ideas and collaborations during the Summer Games, and that together we can move towards a more efficient and sustainable future in wind energy.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 52 - 18 m/s Hurdles report - Low Hanging Winds Team",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.13937132",
+  "version": "01"
+}

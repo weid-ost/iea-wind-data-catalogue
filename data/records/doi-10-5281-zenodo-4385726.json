@@ -1,0 +1,142 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"USTUTT\",\"family\":\"Mahfouz\",\"given\":\"Youssef\",\"name\":\"Mahfouz, Youssef\"},{\"affiliation\":\"USTUTT\",\"family\":\"Salari\",\"given\":\"Mohammad\",\"name\":\"Salari, Mohammad\"},{\"affiliation\":\"ESTEYCO\",\"family\":\"Vigara\",\"given\":\"Fernando\",\"name\":\"Vigara, Fernando\"},{\"affiliation\":\"ESTEYCO\",\"family\":\"Hernandez\",\"given\":\"Sergio\",\"name\":\"Hernandez, Sergio\"},{\"affiliation\":\"UPC\",\"name\":\"Climent Molins\"},{\"affiliation\":\"UPC\",\"family\":\"Trubat\",\"given\":\"Pau\",\"name\":\"Trubat, Pau\"},{\"affiliation\":\"DTU\",\"family\":\"Bredmose\",\"given\":\"Henrik\",\"name\":\"Bredmose, Henrik\"},{\"affiliation\":\"DTU\",\"family\":\"Pegalajar-Jurado\",\"given\":\"Antonio\",\"name\":\"Pegalajar-Jurado, Antonio\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4385726"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4385726"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.4385727\",\"url\":\"https://zenodo.org/record/4385727\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-12-22"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4385726\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.4385727\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/corewind\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4385727"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.4385727~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4385727"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4385727\",\"https://zenodo.org/record/4385726\",\"https://zenodo.org/record/4385727\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-4385726",
+  "notes": "This report is the Deliverable D1.3; were we present two floating OpenFAST models for the WindCrete spar and the ActiveFloat semi-submersible. The floaters are designed for the IEA Wind 15MW reference wind turbine. Moreover, Ultimate Limit State (ULS) load cases are selected for the mooring and dynamic cable design in COREWIND.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "D1.3 Public design and FAST models of the two 15MW floater_FINAL.pdf",
+      "url": "https://zenodo.org/records/4385727/files/D1.3%20Public%20design%20and%20FAST%20models%20of%20the%20two%2015MW%20floater_FINAL.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "corewind-project"
+    },
+    {
+      "name": "floating-wind-energy"
+    },
+    {
+      "name": "horizon2020"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "wind"
+    }
+  ],
+  "title": "D1.3. Public design and FAST models of the two 15MW floater-turbine concepts",
+  "url": "https://zenodo.org/record/4385726",
+  "version": "1.0"
+}

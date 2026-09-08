@@ -1,0 +1,141 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Córdoba\",\"family\":\"Garrido\",\"given\":\"Juan\",\"name\":\"Garrido, Juan\",\"orcid\":\"0000-0001-5122-4803\"},{\"affiliation\":\"University of Córdoba\",\"family\":\"Ruz\",\"given\":\"Mario L.\",\"name\":\"Ruz, Mario L.\",\"orcid\":\"0000-0002-2356-5253\"},{\"affiliation\":\"University of Córdoba\",\"family\":\"Vázquez\",\"given\":\"Francisco\",\"name\":\"Vázquez, Francisco\",\"orcid\":\"0000-0003-4544-6084\"},{\"affiliation\":\"University of Córdoba\",\"family\":\"Lara\",\"given\":\"Manuel\",\"name\":\"Lara, Manuel\",\"orcid\":\"0000-0002-0330-2982\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.18052643"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.18052643"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:57Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.18052644\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.18052644\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.18052643\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.18052644\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "18052644"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.18052644~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/18052644"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/18052644\",\"https://zenodo.org/doi/10.5281/zenodo.18052643\",\"https://zenodo.org/doi/10.5281/zenodo.18052644\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-18052643",
+  "notes": "This dataset contains data and plots presented in the study \"Individual Pitch Control with Two Azimuth Offsets in the Reverse Multiblade Coordinate Transformation for Reducing Periodic Blade Loads in Wind Turbines\".\n\nAll data, scripts, and functions are coded in MATLAB language (https://www.mathworks.com/products/matlab.html). The files were generated and run on a PC with Windows 10. \n\nThe study focuses on comparing different IPC strategies for a 15 MW IEA reference wind turbine to balance blade fatigue load reduction and actuator effort in the full-load region. Six control configurations (IPC1, IPC2, IPC3, IPC4, IPC1G0 and IPC2G0) are analyzed.The dataset includes Pareto front data, optimal control parameters, and simulation results under turbulent wind conditions with with a mean speed of 22 m/s and 10 differnt seeds.\n\nThe dataset encompasses a wide variety of data types, including but not limited to:- Numerical data: Post-processed simulation data and calculations.- Visual data: plots illustrating findings.\n\nThese data are provided in two folders. The description of these folder and their files is as follows:\n\nA) The folder \"OptimizationResults\" includes:- the dataset MOOresults22m_s.mat with the points (inidces and parameters) of the Pareto fronts obtained by optimization for the different control schemes: IPC1, IPC2, IPC3, IPC4, IPC1G0 and IPC2G0.- the file GenerateFronts.m generates the figure in the paper about the Pareto fronts.- the file paramFronts.m generates the figure in the paper about the fronts showing DEL and NAT with respect control parameters.- Figure files in the MATLAB format .fig for theses figures in the manuscript.\n\nB) The folders \"SimulationResults\" includes:- seven datsets Simulations***.mat with the simulation data obtained for each control scheme for 10 wind speed profiles created with differents seeds: CPC, IPC1, IPC2, IPC3, IPC4, IPC1G0 and IPC2G0.- the file Analysis.m analyses performance indices (DEL, NAT, and Pg), calculate their means values and relative values. It also generates the box chart of the corresponding figure in the paper.- the file RespTime.m represents the time responses of the different control schemes for specific seed and time interval. It generates two figures: the first one wiht varaibles in the rotating frame and the second one with variables in the fixed frame.- the file plotIPCs.m is a script to represent the time response of a variable for the different propsed control schemes for a specific seed and time interval.- the file RespFreq to calcualte the frequency responses of the example and generate the correspondig figure.- Figure files in the MATLAB format .fig for the box plot, the time responses and frequency responses.\n\nUsage Instructions:1. **Requirements**: MATLAB with basic plotting capabilities is required to run the generate scripts or view the .fig files.2. **Running Scripts**:   - Navigate to the appropriate folder (e.g., OptimizatonResults or SimulationResults).   - Open and run the corresponding m. file file (e.g., `REspTime.m`) in MATLAB.   - Ensure the required .mat files are in the same directory or adjust the `load` paths in the scripts.3. **Viewing Figures**: Open .fig files directly in MATLAB to view the pre-generated plots.4. **Data Analysis**: Load .mat files into MATLAB using the `load` command to access raw data for further analysis).\n\nAcknowledgmentsThis research was funded by the Spanish Ministry of Science, Innovation and Universities (MCIU/AEI/10.13039/501100011033/FEDER,UE), grant number PID2023-149181OB-I00.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "IPC_2offsets.zip",
+      "url": "https://zenodo.org/records/18052644/files/IPC_2offsets.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "decoupling-control"
+    },
+    {
+      "name": "fatigue-load-mitigation"
+    },
+    {
+      "name": "individual-pitch-control"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-turbine"
+    }
+  ],
+  "title": "Data files for the manuscript Individual Pitch Control with Two Azimuth Offsets in the Reverse Multiblade Coordinate Transformation for Reducing Periodic Blade Loads in Wind Turbines",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.18052643"
+}

@@ -1,0 +1,141 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"X1WIND\",\"family\":\"Casanovas\",\"given\":\"Carlos\",\"name\":\"Casanovas, Carlos\"},{\"affiliation\":\"X1WIND\",\"family\":\"Raventos\",\"given\":\"Alex\",\"name\":\"Raventos, Alex\"},{\"affiliation\":\"X1WIND\",\"family\":\"Verges\",\"given\":\"Maria\",\"name\":\"Verges, Maria\"},{\"affiliation\":\"X1WIND\",\"name\":\"Rocio Torres\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Floating Offshore Wind Turbines 2019"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.7945102"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.7945102"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-40\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:42Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.7945103\",\"url\":\"https://zenodo.org/record/7945103\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-04-24"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.7945102\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.7945103\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/pivotbuoy\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "7945103"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.7945103~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/7945103"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/7945103\",\"https://zenodo.org/record/7945102\",\"https://zenodo.org/record/7945103\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-40"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-7945102",
+  "notes": "There are several floating wind concepts under development, but all current designs have adapted Oil&amp;Gas floating platform concepts to wind offshore. These platforms are too heavy, some with more than 1.250tons of steel per MW, while fixed foundations have around 220 tons per MW. This results in much higher capital costs (around 7M€/MW) and a cost of electricity (LCOE) around 250€/MW. X1 Wind has redesigned floating wind platforms to make floating offshore wind cost-effective, cutting weight by up to 80% and costs by 50%. Our design has a weight similar to fixed foundations (around 260 tons/MW), but is much cheaper to install, with the potential to lower LCOE to 50€/MW. X1 Wind bases its platform in the innovative PivotBuoy®, a single point mooring (SPM) system that, combined with a mini-TLP (Tension-Leg Platform), allows the structure to weathervane. This removes the need for active yaw and ballast, reducing maintenance needs. The system combines the advantages of TLPs (able to reach deeper waters) with the benefits of semi-submersible (assembled onshore and towed to site), allowing a much easier and faster installation, and thus reducing by more than 50% the CAPEX. We have designed our system to be assembled, installed and maintained using local infrastructure.. The structure can be assembled at quayside using local cranes, towed to site with a small tug and installed with a quick connection system to the PivotBuoy®, which has been pre-installed. For large maintenance operations, the platform can be easily disconnected with the quick connection and towed to the nearest port. Despite its infancy, X1 Wind has been recognized as one of the start-ups with more potential in Europe to fight against climate change, having obtained the 2nd prize in the Cleantech Camp, the H2020 SME Instrument (phase 1) and letters of interest from potential clients or partners (like EDP, Gas Natural Fenosa, GE or WavEC among others). The X1 Wind concept, conceived by its founder while at MIT, will be at TRL4 in spring after validating the technology in a wave tank in ECN (through the MariNET2 program). To advance to TRL5, the platform will be tested in a relevant environment (PLOCAN test site) where critical innovations related to assembly, installation and O&amp;M techniques will be validated. The latest developments of the platform, like the tank tests results and preliminary results of the IEA Wind Task 40, will be presented at the conference.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "PPT_FOWT_2019.pdf",
+      "url": "https://zenodo.org/records/7945103/files/PPT_FOWT_2019.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "floating-offshore-wind"
+    }
+  ],
+  "title": "Development of a Second Generation Floating Platform for Offshore Wind",
+  "url": "https://zenodo.org/record/7945102"
+}

@@ -25,8 +25,16 @@
       "value": "doi"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:39Z"
+      "value": "2026-09-08T15:31:04Z"
     },
     {
       "key": "lifecycle_state",
@@ -34,7 +42,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
     },
     {
       "key": "published_date",
@@ -62,7 +70,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-08-06T09:23:48Z"
+      "value": "2026-08-06T09:23:48Z~m2"
     },
     {
       "key": "source_system",

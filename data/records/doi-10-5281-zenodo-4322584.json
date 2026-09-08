@@ -1,0 +1,148 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"COBRA\",\"family\":\"Duran\",\"given\":\"Ruben\",\"name\":\"Duran, Ruben\"},{\"affiliation\":\"ESTEYCO\",\"family\":\"Hernandez\",\"given\":\"Sergio\",\"name\":\"Hernandez, Sergio\"},{\"affiliation\":\"ESTEYCO\",\"family\":\"Vigara\",\"given\":\"Fernando\",\"name\":\"Vigara, Fernando\"},{\"affiliation\":\"USTUTT\",\"name\":\"M. Youssef Mahfouz\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.4322584"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.4322584"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:54Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-nc-nd-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.4322585\",\"url\":\"https://zenodo.org/record/4322585\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-12-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.4322584\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.4322585\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/corewind\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "4322585"
+    },
+    {
+      "key": "source_key",
+      "value": "2@10.5281/zenodo.4322585~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/4322585"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/4322585\",\"https://zenodo.org/record/4322584\",\"https://zenodo.org/record/4322585\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-nc-nd",
+  "name": "doi-10-5281-zenodo-4322584",
+  "notes": "Files to simulate and run, ACTIVEFLOAT OpenFAST model 15MW FOWT from NREL (DTU) at Grand Canary Island site. This model version is consistent with deliverable D1.3 from COREWIND project (link to delvierable). Link to the 15MW wind turbine model can be found in the following link: GitHub - IEAWindTask37/IEA-15-240-RWT: 15MW reference wind turbine repository developed in conjunction with IEA Wind <strong>Disclaimer:</strong> The files and models are provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the models and files or the use or other dealings in the models and files provided.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "ACTIVEFLOAT_OpenFASTModel_v1.zip",
+      "url": "https://zenodo.org/records/4322585/files/ACTIVEFLOAT_OpenFASTModel_v1.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "15-mw-wind-turbine"
+    },
+    {
+      "name": "corewind-project"
+    },
+    {
+      "name": "floating-wind-energy"
+    },
+    {
+      "name": "horizon2020"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "semisubmesible-platform"
+    },
+    {
+      "name": "wind"
+    }
+  ],
+  "title": "COREWIND - ACTIVEFLOAT OpenFAST model 15 MW FOWT Grand Canary Island site",
+  "url": "https://zenodo.org/record/4322584",
+  "version": "1.0"
+}

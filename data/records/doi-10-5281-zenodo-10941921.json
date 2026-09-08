@@ -1,0 +1,133 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Delft University of Technology\",\"family\":\"Joustra\",\"given\":\"Jelle\",\"name\":\"Joustra, Jelle\",\"orcid\":\"0000-0002-5925-3753\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Beauson\",\"given\":\"Justine\",\"name\":\"Beauson, Justine\",\"orcid\":\"0000-0003-3534-3516\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Systems\",\"family\":\"Ludwig\",\"given\":\"Niels\",\"name\":\"Ludwig, Niels\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Systems\",\"family\":\"Czichon\",\"given\":\"Steffen\",\"name\":\"Czichon, Steffen\",\"orcid\":\"0000-0002-0862-8324\"},{\"affiliation\":\"National Composite Centre (UK)\",\"family\":\"Fuller\",\"given\":\"Jonathan\",\"name\":\"Fuller, Jonathan\"},{\"affiliation\":\"National Composite Centre (UK)\",\"family\":\"Andrews\",\"given\":\"Tom\",\"name\":\"Andrews, Tom\"},{\"affiliation\":\"University of the West of England\",\"family\":\"De Laurentis\",\"given\":\"Carla\",\"name\":\"De Laurentis, Carla\",\"orcid\":\"0000-0002-6510-9926\"},{\"affiliation\":\"Vattenfall (Sweden)\",\"family\":\"Frid\",\"given\":\"Gustav\",\"name\":\"Frid, Gustav\"},{\"affiliation\":\"University of Sheffield\",\"family\":\"Meng\",\"given\":\"Fanran\",\"name\":\"Meng, Fanran\",\"orcid\":\"0000-0002-9014-1231\"},{\"affiliation\":\"Netherlands Organisation for Applied Scientific Research\",\"family\":\"van der Mijle Meijer\",\"given\":\"Harald\",\"name\":\"van der Mijle Meijer, Harald\",\"orcid\":\"0000-0002-0433-2331\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.10941921"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.10941921"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-45\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:19Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.10941922\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.10941922\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-04-08"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10941921\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.10941922\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10941922"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.10941922~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/10941922"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/10941922\",\"https://zenodo.org/doi/10.5281/zenodo.10941921\",\"https://zenodo.org/doi/10.5281/zenodo.10941922\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-45"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-10941921",
+  "notes": "This document has been prepared in support of IEA Wind Task 45, Subtask 2.1 “Prevention of waste”, Subtask 2.2 on the “Reuse and repurpose of end-of-life wind turbine blades” and Subtask 2.3 on “Recycling and recovery methods”. This document is the outcome of a workshop and a series of meetings gathering experts from academia and industry on the following topics: wind turbine blade materials and design, recycling of wind turbine blades and windfarm operation. The document provides a summary of considerations to evaluate the recyclability of blades and design aspects supporting blade recycling.\n\nThe intended audience consists of three main groups: first, project developers, owners, operators, providing information on how to evaluate the recyclability of blade design alternatives (current blades, operational in the field, and new blades currently being developed). Second, designers, engineers, and manufacturers, address how to anticipate for recycling in the development of new blades and providing information to generate design solutions. Finally, decommissioners and recyclers, providing considerations to evaluate recovery pathways. This document provides a structured approach on different aspects to be considered.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA Wind Task 45 - Deliverable 2.3 - Evaluating Recyclability of wind turbine blades – Suggestions for an evaluation scheme.pdf",
+      "url": "https://zenodo.org/records/10941922/files/IEA%20Wind%20Task%2045%20-%20Deliverable%202.3%20-%20Evaluating%20Recyclability%20of%20wind%20turbine%20blades%20%E2%80%93%20Suggestions%20for%20an%20evaluation%20scheme.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 45 - Deliverable 2.3 - Evaluating Recyclability of wind turbine blades – Suggestions for an evaluation scheme",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.10941921"
+}

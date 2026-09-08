@@ -21,8 +21,16 @@
       "value": "[\"task-37\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through org:IEAWindSystems, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-08-31T23:03:07Z"
+      "value": "2026-09-08T15:31:17Z"
     },
     {
       "key": "license_mapped",
@@ -38,7 +46,7 @@
     },
     {
       "key": "provenance",
-      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -62,7 +70,7 @@
     },
     {
       "key": "source_key",
-      "value": "350cf06f5db9cec12bcd73c2b174a5d9642958d8::4b2446f55aa313c3"
+      "value": "350cf06f5db9cec12bcd73c2b174a5d9642958d8::4b2446f55aa313c3~m2"
     },
     {
       "key": "source_system",

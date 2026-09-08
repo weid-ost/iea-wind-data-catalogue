@@ -1,0 +1,174 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Lodz University of Technology, Institute of Turbomachinery\",\"family\":\"Domagalski\",\"given\":\"Piotr\",\"name\":\"Domagalski, Piotr\",\"orcid\":\"0000-0001-5851-7799\"},{\"affiliation\":\"Department of Energy and Process Engineering, Norwegian University of Science and Technology\",\"family\":\"Sætran\",\"given\":\"Lars Roar\",\"name\":\"Sætran, Lars Roar\",\"orcid\":\"0000-0002-0479-4608\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.2541205"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.2541205"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-27\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:10Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.2531988\",\"url\":\"https://zenodo.org/record/2531988\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-01-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.2531988\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.1115/1.4041816\",\"identifier_type\":\"DOI\",\"relation\":\"isSupplementTo\"},{\"identifier\":\"10.1115/1.4041816\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementTo\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "2541205"
+    },
+    {
+      "key": "source_key",
+      "value": "12@10.5281/zenodo.2541205~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/2541205"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/2541205\",\"https://zenodo.org/record/2541205\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-27"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-2541205",
+  "notes": "Herewith we present the dataset of wind measurements from a Skipheia meteorological station on the island of Frøya on the western coast of Norway, Trondelag.\n\nThe site represents an exposed coastal wind climate with open sea, land and mixed fetch from various directions. UTM-coordinates of the Met-mast: 8.34251 E and 63.66638 N.\n\nPresented data were gathered between years 2009-2015;\n\nHardware summary: 6 pairs of 2D sonic anemometers at 10, 16, 25, 40, 70, 100 m above the ground, independent temperature measurements at the same heights and near the ground; pressure and relative humidity from local meteostation (Sula, 20 km away).\n\nDatabase summary: approx. 180 000 of 10 min data samples of full data recovery. Wind speed and direction, temperature, pressure &amp; relative hummidity (from a nearby meteostation).\n\nData description: Two data files of different formats are available: a *.txt comma-separated values file and a native MATLAB *.mat file. Both contain the same data, starting with the first column: timestamp, wind speed (columns WS1-WS12) for 6 anemometers pairs, wind direction (columns WD1-WD12) for 6 anemometers pairs, temprature at 0.2 m (AT0), temeratures at levels of wind measurement (AT1-AT6), SUla. Columns have headers describing the data (first row).\n\nDetailed site description with wind climate description can be found in attached asnalisys: Site analisys.pdf.\n\nAdditional information and analisys can be found in listed below works, using data from Frøya site, or nearby sites:\n\nIEA Wind TCP Task 27 Compendium of IEA Wind TCP Task 27 Case Studies, Technical Report, Prepared by Ignacio Cruz Cruz, CIEMAT, Spain Trudy Forsyth, WAT, United States, October 2018; Chapter 1.8 \n\nDomagalski, P., Bardal, L. M., &amp; Satran, L. Vertical Wind Profiles in Non-neutral Conditions-Comparison of Models and Measurements from Froya. <em>Journal of Offshore Mechanics and Arctic Engineering</em>.\n\nMathias Møller , Piotr Domagalski and Lars Roar Sætran, Characteristics of abnormal vertical wind profiles at a coastal site, <em>Journal of Physics: Conference Series</em>, IOPscience, in rewiev (Feb 2019).\n\nBardal, L. M., Onstad, A. E., Sætran, L. R., &amp; Lund, J. A. (2018). Evaluation of methods for estimating atmospheric stability at two coastal sites. <em>Wind Engineering</em>, 0309524X18780378. \n\nBardal, L. M., &amp; Sætran, L. R. (2016, September). Spatial correlation of atmospheric wind at scales relevant for large scale wind turbines. In <em>Journal of Physics: Conference Series</em> (Vol. 753, No. 3, p. 032033). IOP Publishing.\n\nBardal, L. M., &amp; Sætran, L. R. (2016). Wind gust factors in a coastal wind climate. <em>Energy Procedia,</em> 94, 417-424.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "Site analisys.pdf",
+      "url": "https://zenodo.org/records/2541205/files/Site%20analisys.pdf"
+    },
+    {
+      "format": "txt",
+      "name": "readme.txt",
+      "url": "https://zenodo.org/records/2541205/files/readme.txt"
+    },
+    {
+      "format": "txt",
+      "name": "Froya_10min.txt",
+      "url": "https://zenodo.org/records/2541205/files/Froya_10min.txt"
+    },
+    {
+      "format": "mat",
+      "name": "Froya_10min.mat",
+      "url": "https://zenodo.org/records/2541205/files/Froya_10min.mat"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "atmospheric-boundary-layer"
+    },
+    {
+      "name": "coastal-wind-climate"
+    },
+    {
+      "name": "marine-atmospheric-boundary-layer"
+    },
+    {
+      "name": "offshore"
+    },
+    {
+      "name": "temperature-profiles"
+    },
+    {
+      "name": "wind"
+    },
+    {
+      "name": "wind-velocity-profile"
+    }
+  ],
+  "title": "Frøya wind data",
+  "url": "https://zenodo.org/record/2541205"
+}

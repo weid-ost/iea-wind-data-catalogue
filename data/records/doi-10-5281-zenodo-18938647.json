@@ -1,0 +1,132 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Ostschweizer Fachhochschule OST\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"},{\"affiliation\":\"Ostschweizer Fachhochschule OST\",\"family\":\"Marykovskiy\",\"given\":\"Yuriy\",\"name\":\"Marykovskiy, Yuriy\",\"orcid\":\"0000-0002-6570-6966\"},{\"affiliation\":\"Teraom\",\"family\":\"Vallarampara\",\"given\":\"Jagadish\",\"name\":\"Vallarampara, Jagadish\"},{\"affiliation\":\"Technical University of Munich\",\"family\":\"Hoghooghi\",\"given\":\"Hadi\",\"name\":\"Hoghooghi, Hadi\",\"orcid\":\"0000-0002-4676-532X\"},{\"affiliation\":\"University of Strathclyde\",\"family\":\"Hoi-Yin Yung\",\"given\":\"Kobe\",\"name\":\"Hoi-Yin Yung, Kobe\"},{\"affiliation\":\"Aalborg University\",\"family\":\"Khodam\",\"given\":\"Ali\",\"name\":\"Khodam, Ali\"},{\"affiliation\":\"KUDO Software\",\"family\":\"Jonsson\",\"given\":\"Christian\",\"name\":\"Jonsson, Christian\",\"orcid\":\"0009-0001-8891-1276\"},{\"affiliation\":\"Suzlon\",\"family\":\"Rodriguez\",\"given\":\"Carlos\",\"name\":\"Rodriguez, Carlos\"},{\"affiliation\":\"Memorial University of Newfoundland\",\"family\":\"Wanasinghe\",\"given\":\"Thumeera R\",\"name\":\"Wanasinghe, Thumeera R\"},{\"affiliation\":\"Memorial University of Newfoundland\",\"family\":\"Don\",\"given\":\"Mihiran Galagedarage\",\"name\":\"Don, Mihiran Galagedarage\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.18938647"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.18938647"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.16961583\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.16961583\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-10"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.16961583\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.18938647"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-03-31T14:39:11Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.18938647"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.18938647\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-18938647",
+  "notes": "List of digital twin use cases in wind energy, used in the IEA Wind / EAWE Joint Best Practices for Classifying and Valuing Digital Twins in Wind Energy",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digital-twin"
+    },
+    {
+      "name": "use-cases"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "Digital twin use cases in wind energy",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.18938647"
+}

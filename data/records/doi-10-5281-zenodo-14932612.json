@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University College Dublin\",\"family\":\"Creane\",\"given\":\"Shauna\",\"name\":\"Creane, Shauna\",\"orcid\":\"0000-0002-9637-1636\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Friel\",\"given\":\"Dallán\",\"name\":\"Friel, Dallán\",\"orcid\":\"0000-0001-5435-4398\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Gudipati\",\"given\":\"Sowmya Reddy\",\"name\":\"Gudipati, Sowmya Reddy\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Bohan\",\"given\":\"Greg\",\"name\":\"Bohan, Greg\"},{\"affiliation\":\"Gavin and Doherty Geosolutions (Ireland)\",\"family\":\"Neves\",\"given\":\"Diogo\",\"name\":\"Neves, Diogo\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.14932612"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.14932612"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:46Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.14932613\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.14932613\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-02-26"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.14932612\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.8375735\",\"identifier_type\":\"DOI\",\"relation\":\"isSupplementedBy\"},{\"identifier\":\"10.5281/zenodo.8375735\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementedBy\"},{\"identifier\":\"10.5281/zenodo.14932613\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "14932613"
+    },
+    {
+      "key": "source_key",
+      "value": "3@10.5281/zenodo.14932613~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/14932613"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/14932613\",\"https://zenodo.org/doi/10.5281/zenodo.14932612\",\"https://zenodo.org/doi/10.5281/zenodo.14932613\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-14932612",
+  "notes": "This dataset contains atmospheric and oceanographic data for 3 of the 4 site locations chosen as reference sites for the IDEA-IRL project (the Integrated Design of Floating Wind Arrays - Ireland). This project is being undertaken in collaboration with IEA Wind Task 49 (IDEA). Data for the 4th site - Moneypoint One - was previously published for the IEA Wind Task 49 @ https://zenodo.org/records/11073986. \n\nEach dataset was used to perform a metocean analysis for preliminary design, published in IDEA-IRL WP1 reporting available @ https://www.marei.ie/project/idea-irl-integrated-design-floating-wind/. \n\nThe defined reference site conditions will be used to inform the design of reference floating wind farms for the IDEA-IRL project. \n\nThe relevant sites are included in the table below. \n\n\n\n\n\n\nID\n\n\n\nReference site\n\n\n\nCountry\n\n\n\nRegion\n\n\n\nLat\n\n\n\nLong\n\n\n\nApprox Water depth [mMSL] (GEBCO)\n\n\n\nDataset curated by \n\n\n\n\n\nIE02\n\n\n\nM5 wave buoy\n\n\n\nIreland\n\n\n\nCeltic Sea\n\n\n\n51.69\n\n\n\n-6.70\n\n\n\n-70\n\n\n\nGDG for IDEA-IRL\n\n\n\n\n\nIE03\n\n\n\nKinsale Alpha Platform\n\n\n\nIreland\n\n\n\nCeltic Sea\n\n\n\n51.36\n\n\n\n-7.95\n\n\n\n-90\n\n\n\nGDG for IDEA-IRL\n\n\n\n\n\nSK04\n\n\n\nUlsan Floating Wind farm\n\n\n\nSouth Korea\n\n\n\nSea of Japan\n\n\n\n35.45\n\n\n\n129.95\n\n\n\n-188\n\n\n\nGDG for IDEA-IRL",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "zip",
+      "name": "SK04_Ulsan_dataset_GDG.zip",
+      "url": "https://zenodo.org/records/14932613/files/SK04_Ulsan_dataset_GDG.zip"
+    },
+    {
+      "format": "zip",
+      "name": "IE03_Kinsale_dataset_GDG.zip",
+      "url": "https://zenodo.org/records/14932613/files/IE03_Kinsale_dataset_GDG.zip"
+    },
+    {
+      "format": "zip",
+      "name": "IE02_M5_Dataset_GDG.zip",
+      "url": "https://zenodo.org/records/14932613/files/IE02_M5_Dataset_GDG.zip"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Reference site conditions for floating wind arrays: dataset of reference sites for IDEA-IRL",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.14932612"
+}

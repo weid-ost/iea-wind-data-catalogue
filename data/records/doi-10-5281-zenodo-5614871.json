@@ -1,0 +1,141 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"IEA\",\"family\":\"Barth\",\"given\":\"Stephan\",\"name\":\"Barth, Stephan\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5614871"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5614871"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind TCP\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:07Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.5614872\",\"url\":\"https://zenodo.org/record/5614872\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-10-29"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5614871\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.5614872\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/eerajpwind\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/communities/setwind\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "5614872"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.5614872~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5614872"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5614872\",\"https://zenodo.org/record/5614871\",\"https://zenodo.org/record/5614872\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5614871",
+  "notes": "This presentation was part of the EERA JP Wind &amp; SETWind Annual Event 2021, in collaboration with ETIPWind (September 20 - 24, Amsterdam &amp; online).",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "23-09 Stephan Barth.pdf",
+      "url": "https://zenodo.org/records/5614872/files/23-09%20Stephan%20Barth.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "floating-wind"
+    },
+    {
+      "name": "offshore-wind"
+    },
+    {
+      "name": "wind"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-turbines"
+    }
+  ],
+  "title": "IEA Wind TCP: Global Collaboration in Wind Energy Technology",
+  "url": "https://zenodo.org/record/5614871"
+}

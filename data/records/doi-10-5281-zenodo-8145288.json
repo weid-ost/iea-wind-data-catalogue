@@ -1,0 +1,146 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "restricted"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"NREL\",\"family\":\"M Jason Fields\",\"name\":\"M Jason Fields\",\"orcid\":\"0000-0002-8781-6138\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.8145288"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.8145288"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.8145289\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.8145289\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-07-13"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.8145288\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.8145289\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "8145289"
+    },
+    {
+      "key": "source_key",
+      "value": "9@10.5281/zenodo.8145289~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/8145289"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/8145289\",\"https://zenodo.org/doi/10.5281/zenodo.8145288\",\"https://zenodo.org/doi/10.5281/zenodo.8145289\",\"https://iea-wind.org/task43/t43-publications/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-8145288",
+  "notes": "This presentation describes the strategic need for the wind energy industry to pursue coopetition as a core strategy for decarbonization and deployment.  It highlights several mechanisms for coopetition including open source software, open standards, joint ventures and Co-innovation.  This was presented at the Consortium for Energy and Data Science at Texas A&amp;M University on March 29, 2023.",
+  "owner_org": "nrel",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "coopetition"
+    },
+    {
+      "name": "iea-wind"
+    },
+    {
+      "name": "iea-wind-task-43"
+    },
+    {
+      "name": "open-source"
+    },
+    {
+      "name": "open-source-software"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "zEPHYR - Coopetition in Wind Energy: A Strategic Imperative",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.8145288"
+}

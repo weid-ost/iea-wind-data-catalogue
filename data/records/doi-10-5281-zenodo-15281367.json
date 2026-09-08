@@ -1,0 +1,127 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Nergica\",\"family\":\"Godreau\",\"given\":\"Charles\",\"name\":\"Godreau, Charles\",\"orcid\":\"0000-0002-3889-878X\"},{\"affiliation\":\"Vattenfall (Sweden)\",\"family\":\"Wickman\",\"given\":\"Helena\",\"name\":\"Wickman, Helena\"},{\"affiliation\":\"VTT Technical Research Centre of Finland\",\"family\":\"Karlsson\",\"given\":\"Timo\",\"name\":\"Karlsson, Timo\",\"orcid\":\"0000-0002-5568-8768\"},{\"affiliation\":\"DNV (Norway)\",\"family\":\"Söderberg\",\"given\":\"Stefan\",\"name\":\"Söderberg, Stefan\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15281367"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15281367"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-54\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.15281366\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.15281366\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-09-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15281366\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.15281367"
+    },
+    {
+      "key": "source_key",
+      "value": "2025-04-25T10:43:20Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.15281367"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.15281367\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-54"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15281367",
+  "notes": "IEA Wind Task 19 considers wind turbine performance testing in icing climates as a keyelement to mitigate risks when developing wind farms in cold climates and for acceleratingwind turbine technology improvements in cold climate conditions. The first edition of thePerformance Warranty guidelines for wind turbines in icing climates was published in May2018. The aim of this second edition is to present and further detail the most promisingavailable options on how wind turbines with icing climate adaptations can be warranted andtested with affordable and reasonably accurate test methods.It is recommended that an ice protection system (“IPS”) should be considered as part of theprocurement process within the turbine contract and to include a turbine performance warrantyfor icing climates. The IPS should be viewed as an integral sub-system of the turbine, subjectto similar level of expectations and service as for any other sub-system in the wind turbine andas such should carry the same warranty protection as the turbine (e.g., related to productperformance and availability).A turbine performance warranty for a wind turbine in icing climate should define a test methoddesigned for measuring a clearly defined performance criteria within the IPS’s operationalenvelope at reasonable cost, accuracy and test duration. The performance criteria may differdepending on the chosen test method. Consequences for failed tests should be aimed firstly atrectifying and improving turbine performance and secondly at providing liability coverage.Three different turbine-level IPS performance test methods have been identified as the mostpromising and commonly used in the industry. The three turbine performance warranty testsare:\n\n \n\n\n\nThe turbine self-comparison test – self-comparison of a test turbines performanceduring icing events and outside of icing events .\n\nThe side-by-side comparison test – comparison of two or more turbines positioned insimilar locations, with similar wind and icing climate, where one wind turbine is runwith an active IPS and the other with a deactivated IPS.\n\nThe power performance test – similar to IEC 61400-12, based on the standard powercurve testing standard.",
+  "owner_org": "vtt",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Performance Warranty Guidelines for Wind Turbines in Icing Climates",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15281367"
+}

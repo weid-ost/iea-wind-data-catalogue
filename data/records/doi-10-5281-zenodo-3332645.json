@@ -1,0 +1,147 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"CENER\",\"family\":\"Sanz Rodrigo\",\"given\":\"Javier\",\"name\":\"Sanz Rodrigo, Javier\",\"orcid\":\"0000-0003-0291-6429\"},{\"affiliation\":\"CENER\",\"family\":\"Chávez Arroyo\",\"given\":\"Roberto Aurelio\",\"name\":\"Chávez Arroyo, Roberto Aurelio\"},{\"affiliation\":\"Fraunhofer IWES\",\"family\":\"Gottschall\",\"given\":\"Julia\",\"name\":\"Gottschall, Julia\"},{\"affiliation\":\"Fraunhofer IWES\",\"family\":\"Dörenkämper\",\"given\":\"Martin\",\"name\":\"Dörenkämper, Martin\"},{\"affiliation\":\"University of Oldenburg\",\"family\":\"Witha\",\"given\":\"Björn\",\"name\":\"Witha, Björn\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.3332645"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.3332645"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-31\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:29:13Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.3332646\",\"url\":\"https://zenodo.org/record/3332646\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2019-05-30"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.3332645\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.3332646\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/newa\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"},{\"identifier\":\"https://zenodo.org/communities/wind_energy\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "project-deliverable"
+    },
+    {
+      "key": "source_id",
+      "value": "3332646"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.3332646~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/3332646"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/3332646\",\"https://zenodo.org/record/3332645\",\"https://zenodo.org/record/3332646\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-31"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-3332645",
+  "notes": "This report summarizes the third round of benchmarks conducted under the NEWA validation strategy [1]. The <strong>first round</strong> of microscale benchmarks [2] was directed to developing microscale models that can be driven with mesoscale input forcing, include thermal stratification of the atmospheric boundary layer and high resolution digital models of heterogeneous forest canopy characteristics based on aerial lidar-scan data. These fundamental implementations were developed around the GABLS3 diurnal-cycle and Ryningsnäs forest canopy benchmarks, both in flat terrain conditions. By model intercomparison, NEWA modelers found reasonably good consistency in the simulation of these cases, establishing common understanding of the modeling capabilities of the group before attempting more complex simulation challenges in connection to the NEWA experiments. The <strong>second round</strong> of benchmarks [3] focused on flow modeling over forested terrain based on the Rödeser Berg and Hornamossen experiments to add terrain complexity to the baseline settings used in GABLS3 and Ryningsnäs. A follow-up benchmark from GABLS3, based at the Cabauw tower, served to launch the “NEWA Meso-Micro Challenge for Wind Resource Assessment” to address the evaluation of a hierarchy of methodologies that incorporate mesoscale-to-microscale downscaling and understand the added-value compared to traditional approaches for site assessment that rely only on microscale modeling. The <strong>third round</strong> continues with the second phase of the challenge in complex terrain, starting with Rödeser Berg. Following the NEWA validation strategy the benchmarks will be directed to flow cases targeting the validation of specific phenomena, as well as case studies that integrate these models in wind resource assessment methodologies to assess the impact on relevant quantities of interest for the wind industry such as annual energy prediction, site assessment characteristics, mean profiles, etc. Additionally, the Ferry Lidar benchmark was launched to test mesoscale models predicting the wind profile along a ship track in the Southern Baltic Sea. With the NEWA project concluded, the meso-micro challenge will continue in the frame of the <strong>IEA-Wind Task 31 “Wakebench”</strong> as new benchmarks are generated from the database of experiments [4].",
+  "owner_org": "cener",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "NEWA_D3.9_3rdBenchmarks_v2.0final.pdf",
+      "url": "https://zenodo.org/records/3332646/files/NEWA_D3.9_3rdBenchmarks_v2.0final.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "benchmark"
+    },
+    {
+      "name": "validation"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-resource-assessment"
+    }
+  ],
+  "title": "Report on Third Round of Benchmarks",
+  "url": "https://zenodo.org/record/3332645",
+  "version": "2.0"
+}

@@ -1,0 +1,133 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"DTU\",\"name\":\"Néstor Ramos-García\"},{\"affiliation\":\"DTU\",\"family\":\"González-Horcas\",\"given\":\"Sergio\",\"name\":\"González-Horcas, Sergio\"},{\"affiliation\":\"DTU\",\"family\":\"Pegalajar-Jurado\",\"given\":\"Antonio\",\"name\":\"Pegalajar-Jurado, Antonio\"},{\"affiliation\":\"DTU\",\"family\":\"Kontos\",\"given\":\"Stavros\",\"name\":\"Kontos, Stavros\"},{\"affiliation\":\"DTU\",\"family\":\"Gözcü\",\"given\":\"Ozan\",\"name\":\"Gözcü, Ozan\"},{\"affiliation\":\"DTU\",\"family\":\"Bredmose\",\"given\":\"Henrik\",\"name\":\"Bredmose, Henrik\"},{\"affiliation\":\"USTUTT\",\"family\":\"Özinan\",\"given\":\"Umut\",\"name\":\"Özinan, Umut\"},{\"affiliation\":\"USTUTT\",\"family\":\"Mahfouz\",\"given\":\"Mohammad Youssed\",\"name\":\"Mahfouz, Mohammad Youssed\"},{\"affiliation\":\"POLIMI\",\"family\":\"Fontanella\",\"given\":\"Alessandro\",\"name\":\"Fontanella, Alessandro\"},{\"affiliation\":\"POLIMI\",\"family\":\"Facchinetti\",\"given\":\"Alan\",\"name\":\"Facchinetti, Alan\"},{\"affiliation\":\"POLIMI\",\"family\":\"Belloli\",\"given\":\"Marco\",\"name\":\"Belloli, Marco\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.7869755"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.7869755"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:39Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.7869754\",\"url\":\"https://zenodo.org/record/7869754\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-04-04"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.7869754\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/corewind\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "other"
+    },
+    {
+      "key": "source_id",
+      "value": "7869755"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.7869755~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/7869755"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/7869755\",\"https://zenodo.org/record/7869755\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-7869755",
+  "notes": "Floating wind turbines have special dynamics due to the low-frequency floater motion which results<br /> from the mooring system and the restoring forces from hydrostatics and gravity. These motions<br /> affect the local inflow dynamics to the blade and also change the wake in comparison to bottom<br /> fixed offshore turbines.<br /> Further dynamic effects are added when floating turbines are placed in wind farms. Here, the<br /> floater motions effect on the wake may drive motion at the low frequency floater modes of downstream turbines. More direct coupling may also occur, if the turbines share mooring lines. <br /> These effects are the topic of the present deliverable. It builds on earlier output from COREWIND,<br /> namely the WindCrete Spar floater, as designed for the 15 MW IEA Wind reference turbine (Mahfouz et al., 2020a), the mooring configurations of the Morro Bay and the shared mooring method presented in D1.4 (Gözcü et al., 2021). The investigations consist of the following substudies:<br /> • An accelerated method for evaluation of second-order wave loads from Quadratic Transfer<br /> Function (QTF) — (Chapter 2)<br /> • A study of dynamic response to a storm sea state for 2-turbine configuration with shared mooring<br /> lines. The effect of second-order wave forcing on the low-frequency modes is investigated.<br /> (Chapter 3).<br /> • A detailed parametric study of the wake behind an oscillating rotor, carried out with the free<br /> MIRAS free vortex code. Chapter 4. An example of the wake behind a rotor with forced<br /> harmonic pitch motion is shown in figure 2.<br /> • A comparison of the loads and response for two floating turbines, one in the wake of the other<br /> is presented in Chapter 5. Computations are made in MIRAS-HAWC2farm and FAST.farm.<br /> • A wind tunnel test campaign that investigates the wake-flow response of a 1:100 scale model<br /> of the IEA 15 MW turbine subjected to imposed platform motion. Chapter 6.<br /> • A detailed MIRAS-based investigation of downwind response in 5-turbine wind farm, where<br /> the wake of the upstream turbines can excite resonance along the row. Chapter 7. The computational setup for the 5-turbine configuration is shown in Figure 3",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "COREWIND_D1_5_Methods_for_nonlinear_wave_forcing_and_wakes_Revised_compressed.pdf",
+      "url": "https://zenodo.org/records/7869755/files/COREWIND_D1_5_Methods_for_nonlinear_wave_forcing_and_wakes_Revised_compressed.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "shared-anchors-shared-moorings-floating-wind-nonlinear-forces-wakes-waves"
+    }
+  ],
+  "title": "D1.5.-Methods for nonlinear forcing and wakes",
+  "url": "https://zenodo.org/record/7869755"
+}

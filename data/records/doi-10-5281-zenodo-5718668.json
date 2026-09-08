@@ -1,0 +1,139 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"University of Stuttgart\",\"family\":\"Wuerth\",\"given\":\"Ines\",\"name\":\"Wuerth, Ines\",\"orcid\":\"0000-0002-1365-0243\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Fraunhofer IEE\",\"family\":\"Klaas-Witt\",\"given\":\"Tobias\",\"name\":\"Klaas-Witt, Tobias\"},{\"affiliation\":\"energiewerkstatt\",\"family\":\"Stoekl\",\"given\":\"Alexander\",\"name\":\"Stoekl, Alexander\"},{\"affiliation\":\"Nergica\",\"family\":\"Defossez\",\"given\":\"Marc\",\"name\":\"Defossez, Marc\"},{\"affiliation\":\"IAV GmbH Ingenieurgesellschaft Auto und Verkehr\",\"family\":\"Schild\",\"given\":\"Axel\",\"name\":\"Schild, Axel\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5718668"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5718668"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-nc-nd-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Catalogued as 10.5281/zenodo.5718667\",\"url\":\"https://zenodo.org/record/5718667\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-11-22"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5718667\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.5718668"
+    },
+    {
+      "key": "source_key",
+      "value": "2021-12-02T16:58:06Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/record/5718668"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/record/5718668\"]"
+    },
+    {
+      "key": "suppressed",
+      "value": "true"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-nc-nd",
+  "name": "doi-10-5281-zenodo-5718668",
+  "notes": "These are the minutes of the IEA Wind Task 32 General Meeting, held online on November 16-18, 2021. The meeting is documented in <em>T32GM2021.pdf </em>(download link). This repository includes the overall minutes as well as some material presented in the meeting: Tobias Klaas-Witt (Fraunhofer IEE) are in <em>T32GM2021-LoTarProjectOverview-KlaasWitt.pdf</em>. Alexander Stoekl (energiewerkstatt) are in <em>T32GM2021-MeasurementsInComplexTerrain-Stoekl.pdf</em> Marc Defossez (Nergica) are in <em>T32GM2021-WindLidarinColdClimates-Defossez.pdf</em> A poster about \"Mastering the challenges of industrial lidar assisted model predictive turbine control\" from Axel Schild (IAV GmbH Ingenieurgesellschaft Auto und Verkehr). This presentation is in <em>T32GM2021-PosterMCPforLAC-Schild.pdf</em> Some material presented in the meeting is stored elsewhere: Information about the ITN LIKE Early Stage Researchers can be found at DOI: 10.5281/zenodo.5726899. A poster about \"The Business Case for wind resource assessment using scanning Lidar\" from Pedro Santos (Fraunhofer IWES) is at DOI: 10.5281/zenodo.5722362, Information about the new Task 32 round-robin on turbulence from forward-looking wind lidar can be found at DOI: 10.5281/zenodo.5713972. Information about the future direction of Task 32 can found at DOI: 10.5281/zenodo.5163487. Please note that each document or presentation may have its own license. If in doubt about reusing or citing any of the material presented here, please contact the authors.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-lidar"
+    }
+  ],
+  "title": "IEA Wind Task 32 Meeting Minutes: 2021 General Meeting",
+  "url": "https://zenodo.org/record/5718668",
+  "version": "2021 December 2"
+}

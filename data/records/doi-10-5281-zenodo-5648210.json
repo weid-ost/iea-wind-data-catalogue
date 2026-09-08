@@ -1,0 +1,137 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Cornell University\",\"family\":\"Pryor\",\"given\":\"S.C.\",\"name\":\"Pryor, S.C.\",\"orcid\":\"0000-0003-4847-3440\"},{\"affiliation\":\"Cornell University\",\"family\":\"Barthelmie\",\"given\":\"R.J.\",\"name\":\"Barthelmie, R.J.\"},{\"affiliation\":\"WEICan\",\"family\":\"Cadence\",\"given\":\"J.\",\"name\":\"Cadence, J.\"},{\"affiliation\":\"Catapult\",\"family\":\"Dyer\",\"given\":\"K.\",\"name\":\"Dyer, K.\"},{\"affiliation\":\"DTU\",\"family\":\"Hasager\",\"given\":\"C.\",\"name\":\"Hasager, C.\"},{\"affiliation\":\"Catapult\",\"family\":\"Herring\",\"given\":\"R.\",\"name\":\"Herring, R.\"},{\"affiliation\":\"University of Bergen\",\"family\":\"Kral\",\"given\":\"S.T.\",\"name\":\"Kral, S.T.\"},{\"affiliation\":\"VTT\",\"family\":\"Prieto\",\"given\":\"R.\",\"name\":\"Prieto, R.\"},{\"affiliation\":\"University of Bergen\",\"family\":\"Reuder\",\"given\":\"J.\",\"name\":\"Reuder, J.\"},{\"affiliation\":\"WEICan\",\"family\":\"Rodgers\",\"given\":\"M.\",\"name\":\"Rodgers, M.\"},{\"affiliation\":\"Orsted\",\"family\":\"Veraat\",\"given\":\"M\",\"name\":\"Veraat, M\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5648210"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5648210"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-46\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:09Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.5648211\",\"url\":\"https://zenodo.org/record/5648211\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-11-05"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5648210\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.5648211\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "5648211"
+    },
+    {
+      "key": "source_key",
+      "value": "2@10.5281/zenodo.5648211~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5648211"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5648211\",\"https://zenodo.org/record/5648210\",\"https://zenodo.org/record/5648211\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-46"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-5648210",
+  "notes": "The objectives of the work summarized in the report that accompanies this dataset are to: Describe crucial meteorological parameters for wind turbine blade leading edge erosion Describe technologies appropriate to measurement of hydroclimates and specifically hydrometeor size distributions and phase Identify available data sets that are available to describe hydrometeor size distributions and phase and generate meta-data for data sets available for use in mapping wind turbine blade leading edge erosion potential. This dataset summarizes those meta-data. Identify priority geographic areas for geospatial mapping of wind turbine blade leading edge erosion potential",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "xlsx",
+      "name": "IEA46_WP2_METADATA_Deliverable1_Hydrometeors_5November2021.xlsx",
+      "url": "https://zenodo.org/records/5648211/files/IEA46_WP2_METADATA_Deliverable1_Hydrometeors_5November2021.xlsx"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "wind-turbines-hydrometeors-leading-edge-erosion-hail-droplet-size-distributions-wind-energy"
+    }
+  ],
+  "title": "META-DATA for IEA Wind Task 46 report: Atmospheric drivers of wind turbine blade leading edge erosion: Hydrometeors",
+  "url": "https://zenodo.org/record/5648210"
+}

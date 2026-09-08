@@ -1,0 +1,154 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Cornell University\",\"family\":\"Pryor\",\"given\":\"S.C.\",\"name\":\"Pryor, S.C.\",\"orcid\":\"0000-0003-4847-3440\"},{\"affiliation\":\"Cornell University\",\"family\":\"Barthelmie\",\"given\":\"R.J.\",\"name\":\"Barthelmie, R.J.\"},{\"affiliation\":\"Lancaster University\",\"family\":\"Campobasso\",\"given\":\"Sergio\",\"name\":\"Campobasso, Sergio\"},{\"affiliation\":\"DTU\",\"family\":\"Delwik\",\"given\":\"E.\",\"name\":\"Delwik, E.\"},{\"affiliation\":\"DTU\",\"family\":\"Hannisdottir\",\"given\":\"A.\",\"name\":\"Hannisdottir, A.\"},{\"affiliation\":\"DTU\",\"family\":\"Hasager\",\"given\":\"C.\",\"name\":\"Hasager, C.\"},{\"affiliation\":\"University of Bergen\",\"family\":\"Kral\",\"given\":\"S.T.\",\"name\":\"Kral, S.T.\"},{\"affiliation\":\"University of Bergen\",\"family\":\"Reuder\",\"given\":\"J.\",\"name\":\"Reuder, J.\"},{\"affiliation\":\"WEICan\",\"family\":\"Rodgers\",\"given\":\"M.\",\"name\":\"Rodgers, M.\"},{\"affiliation\":\"Orsted\",\"family\":\"Veraart\",\"given\":\"M.\",\"name\":\"Veraart, M.\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.7734764"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.7734764"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-46\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:35Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.7734765\",\"url\":\"https://zenodo.org/record/7734765\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-03-14"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.7734764\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.7734765\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "7734765"
+    },
+    {
+      "key": "source_key",
+      "value": "5@10.5281/zenodo.7734765~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/7734765"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/7734765\",\"https://zenodo.org/record/7734764\",\"https://zenodo.org/record/7734765\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-46"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-7734764",
+  "notes": "Leading edge erosion (LEE) of wind turbine blades has been identified as a major factor in decreased wind turbine blade lifetimes and energy output over time. Accordingly, the International Energy Agency Wind Technology Collaboration Programme (IEA Wind TCP) created Task 46 to undertake cooperative research in the key topic of blade erosion. This report is a product of WorkPackage 2 <strong>Climatic conditions driving blade erosion. </strong> The objectives of the work summarized in this report are to: Summarize efforts to elucidate critical atmospheric co-stressors that may accelerate leading edge erosion and hence for which meta-data regarding observations should be collated. Briefly describe and summarize additional data pertaining to those LEE co-stressors from sites that were the focus of analyses of hydrometeors in the report “Atmospheric drivers of wind turbine blade leading edge erosion: Hydrometeors” (Pryor et al. 2021) Accompanying this report is a detailed spreadsheet that summarizes the meta-data regarding these co-stressor variables.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "xlsx",
+      "name": "IEA46_WP2_METADATA_AncillaryData.xlsx",
+      "url": "https://zenodo.org/records/7734765/files/IEA46_WP2_METADATA_AncillaryData.xlsx"
+    },
+    {
+      "format": "pdf",
+      "name": "IEA_Wind_Task_46_WP2_Deliverable2.pdf",
+      "url": "https://zenodo.org/records/7734765/files/IEA_Wind_Task_46_WP2_Deliverable2.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "atmospheric-measurements"
+    },
+    {
+      "name": "damage"
+    },
+    {
+      "name": "hydroclimate"
+    },
+    {
+      "name": "leading-edge-erosion"
+    },
+    {
+      "name": "wind-turbine"
+    }
+  ],
+  "title": "META-DATA for IEA Wind Task 46. WP2: Atmospheric drivers of wind turbine blade leading edge erosion: Ancillary variables",
+  "url": "https://zenodo.org/record/7734764"
+}

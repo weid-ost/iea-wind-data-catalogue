@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"name\":\"Bergua, Roger\"}]"
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"family\":\"Bergua\",\"given\":\"Roger\",\"name\":\"Bergua, Roger\"}]"
     },
     {
       "key": "doi",
@@ -25,8 +25,16 @@
       "value": "doi"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-08-31T23:03:04Z"
+      "value": "2026-09-08T15:31:01Z"
     },
     {
       "key": "lifecycle_state",
@@ -34,11 +42,15 @@
     },
     {
       "key": "provenance",
-      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
     },
     {
       "key": "published_date",
-      "value": "2026-08-12"
+      "value": "2023"
+    },
+    {
+      "key": "publisher",
+      "value": "Pacific Northwest National Laboratory"
     },
     {
       "key": "related_identifiers",
@@ -58,7 +70,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-08-12T18:15:12Z"
+      "value": "2026-08-12T18:15:12Z~m2"
     },
     {
       "key": "source_system",
@@ -66,7 +78,7 @@
     },
     {
       "key": "source_systems",
-      "value": "[\"osti\"]"
+      "value": "[\"datacite\",\"osti\"]"
     },
     {
       "key": "source_url",
@@ -74,7 +86,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://www.osti.gov/biblio/1962594\",\"https://www.osti.gov/dataexplorer/biblio/dataset/1962594\"]"
+      "value": "[\"https://www.osti.gov/biblio/1962594\",\"https://www.osti.gov/dataexplorer/biblio/dataset/1962594\",\"https://www.osti.gov/servlets/purl/1962594\"]"
     },
     {
       "key": "withdrawn",
@@ -84,7 +96,7 @@
   "groups": [],
   "license_id": "notspecified",
   "name": "doi-10-21947-1962594",
-  "notes": "Campaign I of the Floating Offshore-wind Controls Advanced Laboratory Experimental Program (FOCAL) aims to generate a dataset enabling the validation of aerodynamic performance of a scaled turbine mounted on a rigid tower in a fixed condition. The turbine considered in the FOCAL testing campaigns is the IEA-Wind 15MW Reference Wind Turbine. This scaled model is capable of simulating advanced blade-pitch control strategies in a high-quality wind field. The turbine is fully instrumented to record a variety of parameters in real time such as structural loads and dynamics. The test data considered was generated at the University of Maine's Harold Alfond Wind and Wave (W2) testing facility.\n\nThe Load Cases (LC) considered in this testing campaign are as follows:\nLC 1.X - Constant wind and blade-pitch with varying rotor speeds\nLC 2.X - Constant wind and rotor speed with varying blade-pitch\nLC 3.X - Varying wind with active closed-loop control\n\nDetailed properties on the modeled system are found in the following reference:\nLenfest E., Floating Offshore-wind Controls Advanced Laboratory (FOCAL) Experimental Program - Campaign I: 1:70 Model-scale Testing of the IEA-Wind 15MW Reference Turbine. UMaine ASCC Report Number 23-40-1183.\n\nDetails on the results of the verification and validation are found in the following reference: \nMendoza, Nicole et al., \"Verification and Validation of Model-Scale Turbine Performance and Control for the IEA Wind 15 MW Reference Wind Turbine,\" Energies, vol. 15, no. 20, 2022, https://doi.org/10.3390/en15207649.\n",
+  "notes": "Campaign I of the Floating Offshore-wind Controls Advanced Laboratory Experimental Program (FOCAL) aims to generate a dataset enabling the validation of aerodynamic performance of a scaled turbine mounted on a rigid tower in a fixed condition. The turbine considered in the FOCAL testing campaigns is the IEA-Wind 15MW Reference Wind Turbine. This scaled model is capable of simulating advanced blade-pitch control strategies in a high-quality wind field. The turbine is fully instrumented to record a variety of parameters in real time such as structural loads and dynamics. The test data considered was generated at the University of Maine's Harold Alfond Wind and Wave (W2) testing facility.\n\nThe Load Cases (LC) considered in this testing campaign are as follows:\nLC 1.X - Constant wind and blade-pitch with varying rotor speeds\nLC 2.X -  Constant wind and rotor speed with varying blade-pitch\nLC 3.X - Varying wind with active closed-loop control\n\nDetailed properties on the modeled system are found in the following reference:\nLenfest E., Floating Offshore-wind Controls Advanced Laboratory (FOCAL) Experimental Program - Campaign I: 1:70 Model-scale Testing of the IEA-Wind 15MW Reference Turbine. UMaine ASCC Report Number 23-40-1183.\n\nDetails on the results of the verification and validation are found in the following reference: \nMendoza, Nicole et al., \"Verification and Validation of Model-Scale Turbine Performance and Control for the IEA Wind 15 MW Reference Wind Turbine,\" Energies, vol. 15, no. 20, 2022, https://doi.org/10.3390/en15207649.",
   "owner_org": "pnnl",
   "private": false,
   "resources": [
@@ -100,5 +112,5 @@
     }
   ],
   "title": "FOCAL Campaign I: Advanced Wind Turbine Control Strategies",
-  "url": "https://www.osti.gov/biblio/1962594"
+  "url": "https://www.osti.gov/servlets/purl/1962594"
 }

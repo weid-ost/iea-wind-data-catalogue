@@ -1,0 +1,133 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"DTU Wind Energy, Denmark\",\"family\":\"Pathan\",\"given\":\"Shahbaz\",\"name\":\"Pathan, Shahbaz\"},{\"affiliation\":\"DTU Wind Energy, Denmark\",\"name\":\"Liqin Jin\"},{\"affiliation\":\"Stuttgart Wind Energy, University of Stuttgart\",\"family\":\"Costa\",\"given\":\"Francisco\",\"name\":\"Costa, Francisco\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Systems, University of Oldenburg\",\"family\":\"Rubio\",\"given\":\"Hugo\",\"name\":\"Rubio, Hugo\"},{\"affiliation\":\"University of Porto, Faculty of Engineering\",\"name\":\"Isadora Coimbra\"},{\"affiliation\":\"DTU Wind Energy, Denmark\",\"name\":\"Haichen Zuo\"},{\"affiliation\":\"Geophysical Institute, University of Bergen, Norway\",\"family\":\"Diezel\",\"given\":\"Jan Markus\",\"name\":\"Diezel, Jan Markus\"},{\"affiliation\":\"UL International GmbH\",\"family\":\"Orozco\",\"given\":\"Priscila\",\"name\":\"Orozco, Priscila\"},{\"affiliation\":\"Center for Wind energy research, University of Oldenburg\",\"family\":\"Anantharaman\",\"given\":\"Arjun\",\"name\":\"Anantharaman, Arjun\"},{\"affiliation\":\"DTU Wind Energy, Denmark\",\"family\":\"Sebastiani\",\"given\":\"Alessandro\",\"name\":\"Sebastiani, Alessandro\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\"},{\"affiliation\":\"DTU Wind Energy, Denmark\",\"family\":\"Fu\",\"given\":\"Wei\",\"name\":\"Fu, Wei\"},{\"affiliation\":\"Department of Mechanical and Structural Engineering and Material Science, University of Stavanger\",\"family\":\"Nafisifard\",\"given\":\"Mohammad\",\"name\":\"Nafisifard, Mohammad\"},{\"affiliation\":\"Department of Mechanical Engineering, Politecnico di Milano\",\"name\":\"Zhaoyu Zhang\"},{\"affiliation\":\"University of Bergen, Norway\",\"family\":\"Wang\",\"given\":\"Sai\",\"name\":\"Wang, Sai\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.5726899"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.5726899"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-32\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:30:11Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-nc-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.5726900\",\"url\":\"https://zenodo.org/record/5726900\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2021-11-25"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.5726899\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.5726900\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/itn-like\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "5726900"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.5726900~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/5726900"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/5726900\",\"https://zenodo.org/record/5726899\",\"https://zenodo.org/record/5726900\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-32"
+    }
+  ],
+  "license_id": "cc-nc",
+  "name": "doi-10-5281-zenodo-5726899",
+  "notes": "Introduction slides for the poster session for the General Meeting of IEA Wind Task 32 on November 16th 2021. Each Early Stage Researcher (ESR) from LIKE presented their work on one slide at the beginning of the session.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "LIKE-PosterSessionGeneralMeeting-ESR1-15.pdf",
+      "url": "https://zenodo.org/records/5726900/files/LIKE-PosterSessionGeneralMeeting-ESR1-15.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "Introduction slides to LIKE Poster session at IEA Wind Task 32 General Meeting 2021",
+  "url": "https://zenodo.org/record/5726899"
+}

@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"University of Stuttgart\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Danish Technical University\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"},{\"affiliation\":\"University of Stuttgart\",\"name\":\"Würth, Ines\",\"orcid\":\"0000-0002-1365-0243\"}]"
+      "value": "[{\"affiliation\":\"University of Stuttgart\",\"family\":\"Clifton\",\"given\":\"Andrew\",\"name\":\"Clifton, Andrew\",\"orcid\":\"0000-0001-9698-5083\"},{\"affiliation\":\"Danish Technical University\",\"family\":\"Vasiljevic\",\"given\":\"Nikola\",\"name\":\"Vasiljevic, Nikola\",\"orcid\":\"0000-0002-9381-9693\"},{\"affiliation\":\"University of Stuttgart\",\"family\":\"Würth\",\"given\":\"Ines\",\"name\":\"Würth, Ines\",\"orcid\":\"0000-0002-1365-0243\"}]"
     },
     {
       "key": "doi",
@@ -29,8 +29,16 @@
       "value": "[\"task-32\"]"
     },
     {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and org:IEA-Wind-Task-32, which is an IEA Wind attribution."
+    },
+    {
       "key": "last_seen",
-      "value": "2026-09-08T14:05:40Z"
+      "value": "2026-09-08T15:32:07Z"
     },
     {
       "key": "license_mapped",
@@ -45,8 +53,12 @@
       "value": "active"
     },
     {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.3447756\",\"url\":\"https://zenodo.org/record/3447756\"}]"
+    },
+    {
       "key": "provenance",
-      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      "value": "{\"access_status\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
     },
     {
       "key": "published_date",
@@ -58,7 +70,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.3447756\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3401424\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.3447756\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3401424\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.3401425\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"10.5281/zenodo.3419514\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"},{\"identifier\":\"https://zenodo.org/communities/ieawindtask32\",\"identifier_type\":\"URL\",\"relation\":\"IsPartOf\"}]"
     },
     {
       "key": "resource_kind",
@@ -70,19 +82,19 @@
     },
     {
       "key": "source_id",
-      "value": "3447756"
+      "value": "IEA-Wind-Task-32/white-paper-Task32-lidar-digitalisation"
     },
     {
       "key": "source_key",
-      "value": "10@10.5281/zenodo.3447756~m2"
+      "value": "523075f3d2961cd55a61ac6d8deb0816717a82ab:1.1:e4ae8f818af27caf~m2"
     },
     {
       "key": "source_system",
-      "value": "zenodo"
+      "value": "github"
     },
     {
       "key": "source_systems",
-      "value": "[\"github\",\"zenodo\"]"
+      "value": "[\"datacite\",\"github\",\"zenodo\"]"
     },
     {
       "key": "source_url",
@@ -90,7 +102,7 @@
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-lidar-digitalisation\",\"https://zenodo.org/records/3447756\"]"
+      "value": "[\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-lidar-digitalisation\",\"https://zenodo.org/records/3447756\",\"https://zenodo.org/record/3401424\",\"https://zenodo.org/record/3447756\"]"
     },
     {
       "key": "withdrawn",
@@ -104,7 +116,7 @@
   ],
   "license_id": "cc-by-sa",
   "name": "doi-10-5281-zenodo-3401424",
-  "notes": "<p>Wind lidars allow new approaches to building and operating wind plants but also generate huge amounts of data. This white paper provides a short overview of how digitalization -- the process of converting information into discoverable, shareable, and actionable computer-readable data -- could help the wind energy industry benefit from wind lidar, and what needs to be done to make this vision a reality.</p>\n\n<p>We welcome feedback on the document. Please go to <a href=\"https://github.com/IEA-Wind-Task-32/white-paper-Task32-lidar-digitalisation\" rel=\"nofollow noopener\">https://github.com/IEA-Wind-Task-32/white-paper-Task32-lidar-digitalisation</a> to find out how you can help improve this document.</p>",
+  "notes": "Wind lidars allow new approaches to building and operating wind plants but also generate huge amounts of data. This white paper provides a short overview of how digitalization -- the process of converting information into discoverable, shareable, and actionable computer-readable data -- could help the wind energy industry benefit from wind lidar, and what needs to be done to make this vision a reality. We welcome feedback on the document. Please go to https://github.com/IEA-Wind-Task-32/white-paper-Task32-lidar-digitalisation to find out how you can help improve this document.",
   "owner_org": "iea-wind",
   "private": false,
   "resources": [
@@ -121,6 +133,6 @@
     }
   ],
   "title": "Increasing the impact of wind lidar through digitalization",
-  "url": "https://zenodo.org/records/3447756",
+  "url": "https://zenodo.org/record/3401424",
   "version": "1.1"
 }

@@ -1,0 +1,115 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Rivera-Arreba\",\"given\":\"Irene\",\"name\":\"Rivera-Arreba, Irene\"},{\"family\":\"Li\",\"given\":\"Zhaobin\",\"name\":\"Li, Zhaobin\"},{\"family\":\"Yang\",\"given\":\"Xiaolei\",\"name\":\"Yang, Xiaolei\"},{\"family\":\"Bachynski-Polić\",\"given\":\"Erin E.\",\"name\":\"Bachynski-Polić, Erin E.\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.48550/arxiv.2308.01004"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.48550/arxiv.2308.01004"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:27:58Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023"
+    },
+    {
+      "key": "publisher",
+      "value": "arXiv"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "10.48550/arxiv.2308.01004"
+    },
+    {
+      "key": "source_key",
+      "value": "2023-08-03T01:07:04Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://arxiv.org/abs/2308.01004"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://arxiv.org/abs/2308.01004\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-48550-arxiv-2308-01004",
+  "notes": "This work focuses on the validation of the dynamic wake meandering (DWM) model against large eddy simulation (LES). The wake deficit, mean deflection, and meandering under different wind turbine misalignment angles in yaw and tilt, for the IEA 15MW wind turbine, for two turbulent inflows with different shear and turbulence intensities are compared. Simulation results indicate that the DWM model as implemented in FAST.Farm shows very good agreement with the LES (VFS-Wind) data when predicting the time-averaged horizontal and vertical wake, especially at x &gt; 6D and for cases with positive tilt angles (&gt; 6deg). The wake dynamics captured by the DWM model include the large-eddy-induced wake meandering at low Strouhal number (St &lt; 0.1). Additionally, the wake oscillation induced by the shear layer at St approx. 0.27 is captured only by LES. The mean and standard deviation of the wake deflection, as computed by the DWM, are sensitive to the size of the polar grid used to calculate the spatial-averaged velocity with which the wake planes meander. The power output of a turbine in the wake of a wind turbine in free-wind deflected by a yaw angle gamma = 30deg is almost doubled compared to the fully-waked condition.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "fluid-dynamics-physics.flu-dyn"
+    },
+    {
+      "name": "fos-physical-sciences"
+    }
+  ],
+  "title": "Validation of the dynamic wake meandering model against large eddy simulation for horizontal and vertical steering of wind turbine wakes",
+  "url": "https://arxiv.org/abs/2308.01004",
+  "version": "1"
+}

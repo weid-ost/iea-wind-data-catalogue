@@ -1,0 +1,133 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"clockworkX (Germany)\",\"family\":\"Castellano\",\"given\":\"Nicolas Munoz\",\"name\":\"Castellano, Nicolas Munoz\"},{\"affiliation\":\"clockworkX (Germany)\",\"family\":\"Duschl\",\"given\":\"Marcus\",\"name\":\"Duschl, Marcus\"},{\"affiliation\":\"Siemens (Germany)\",\"family\":\"Emiroglu\",\"given\":\"Altug\",\"name\":\"Emiroglu, Altug\"},{\"affiliation\":\"ServusNet Analytics (Ireland)\",\"family\":\"Farren\",\"given\":\"Des\",\"name\":\"Farren, Des\"},{\"affiliation\":\"Fraunhofer IEE (Germany)\",\"family\":\"Hahn\",\"given\":\"Berthold\",\"name\":\"Hahn, Berthold\"},{\"affiliation\":\"UKA (Germany)\",\"family\":\"Lutz\",\"given\":\"Marc Alexander\",\"name\":\"Lutz, Marc Alexander\"},{\"affiliation\":\"Electric Power Research Institute\",\"family\":\"Myrent\",\"given\":\"Noah\",\"name\":\"Myrent, Noah\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Quick\",\"given\":\"Julian\",\"name\":\"Quick, Julian\"},{\"affiliation\":\"Technical University of Denmark\",\"family\":\"Sempreviva\",\"given\":\"Anna Maria\",\"name\":\"Sempreviva, Anna Maria\"},{\"affiliation\":\"Electric Power Research Institute\",\"family\":\"Haus\",\"given\":\"Lili\",\"name\":\"Haus, Lili\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.11225636"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.11225636"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:27Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.11225637\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.11225637\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-05-21"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.11225636\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.11225637\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "11225637"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.11225637~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/11225637"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/11225637\",\"https://zenodo.org/doi/10.5281/zenodo.11225636\",\"https://zenodo.org/doi/10.5281/zenodo.11225637\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-11225636",
+  "notes": "More can be done to develop digitalisation capability and enhance the value of generation assets within the wind energy sector. This includes building on developments already in place as well as taking advantage of advances in other industries.\n\n \n\nThis paper outlines the findings of an IEA Wind Task 43 sub-group which investigated the degree to which the availability of industry standards and guidelines support those activities and disciplines and contribute to higher asset value. A framework for assessing the coverage of standards and guidelines is presented along with findings from a preliminary gap analysis indicating potential areas for improvement.\n\n \n\nSpecific examples, or use cases, are presented which highlight the need for more effective development and deployment of standards or guidelines. In addition, a possible approach is proposed which could improve the “FAIR” characteristics of standards and guidelines i.e. rendering them more Findable, Accessible, Interoperable and Reusable.\n\n \n\nFinally, suggestions and recommendations for further work are provided to enhance the availability of standards in support of wind industry digitalisation.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "IEA Wind Task 43 - Collaborative Action 4.pdf",
+      "url": "https://zenodo.org/records/11225637/files/IEA%20Wind%20Task%2043%20-%20Collaborative%20Action%204.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 43: An Investigation of the Standards Landscape in the Wind Energy Sector",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.11225636"
+}

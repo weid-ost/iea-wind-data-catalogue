@@ -1,0 +1,153 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Danish Hydraulic Institute\",\"family\":\"Devantier\",\"given\":\"Cecilie Borch\",\"name\":\"Devantier, Cecilie Borch\"},{\"affiliation\":\"Danish Hydraulic Institute\",\"family\":\"Wong\",\"given\":\"Xin Huei\",\"name\":\"Wong, Xin Huei\"},{\"affiliation\":\"Danish Hydraulic Institute\",\"family\":\"Schrameyer\",\"given\":\"Verena\",\"name\":\"Schrameyer, Verena\",\"orcid\":\"0000-0001-7218-4038\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.12731584"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-08T15:27:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.12731584"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-49\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and backfill:doi, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-08T15:28:31Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-sa-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "local_links",
+      "value": "[{\"label\":\"Also catalogued as 10.5281/zenodo.12731585\",\"url\":\"https://zenodo.org/doi/10.5281/zenodo.12731585\"}]"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-04-23"
+    },
+    {
+      "key": "publisher",
+      "value": "DHI Technical Report"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.12731584\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.12731585\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "technical-report"
+    },
+    {
+      "key": "source_id",
+      "value": "12731585"
+    },
+    {
+      "key": "source_key",
+      "value": "6@10.5281/zenodo.12731585~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/12731585"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/12731585\",\"https://zenodo.org/doi/10.5281/zenodo.12731584\",\"https://zenodo.org/doi/10.5281/zenodo.12731585\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-49"
+    }
+  ],
+  "license_id": "cc-by-sa",
+  "name": "doi-10-5281-zenodo-12731584",
+  "notes": "Floating wind farms in offshore areas in the world marks a significant stride towards harnessing renewable wind power from deeper oceanic expanses. While the technology is still evolving, its potential as a key player in the renewable energy landscape is evident. Overcoming challenges related to economic viability, design optimization, and addressing concerns on how to mitigate biofouling on dynamic cables underscore the commitment to ensuring the efficient and sustainable operation of these innovative energy systems. As the offshore wind sector aims to deliver 40 gigawatts by 2030, a holistic understanding of marine biofouling on floating windfarm  structures becomes crucial, guiding the industry towards environmentally responsible practices in its pursuit of clean energy.\n\nThis technical report presents a theorectical background on marine growth in the mesopelagic zone (i.e., ~200 to ~1000 meters below the ocean surface) including typical mesopelagic biota and recommendations for growth thickness in three floating sites selected for study by the IEA Wind Task 49, supported by an EUDP Project on Floating Wind Arrays.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "11826846_EUDP_IDEA_Marine_Growth_Final_1.0.pdf",
+      "url": "https://zenodo.org/records/12731585/files/11826846_EUDP_IDEA_Marine_Growth_Final_1.0.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "floating-wind"
+    },
+    {
+      "name": "marine-biology"
+    },
+    {
+      "name": "marine-growth"
+    },
+    {
+      "name": "offshore-wind"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "Marine growth along the mesopelagic zone",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.12731584",
+  "version": "1.0"
+}

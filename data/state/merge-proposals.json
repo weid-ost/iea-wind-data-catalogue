@@ -3,6 +3,14 @@
     {
       "automatic": true,
       "confidence": 0.95,
+      "evidence": "10.11583/dtu.28237124.v1 declares IsIdenticalTo 10.11583/dtu.28237124",
+      "kind": "related-identifier",
+      "primary": "10.11583/dtu.28237124",
+      "secondary": "10.11583/dtu.28237124.v1"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.95,
       "evidence": "10.11583/dtu.31889632.v1 declares IsIdenticalTo 10.11583/dtu.31889632",
       "kind": "related-identifier",
       "primary": "10.11583/dtu.31889632",
@@ -27,6 +35,14 @@
     {
       "automatic": true,
       "confidence": 0.99,
+      "evidence": "10.17632/vskgsgnwj8.1 declares IsVersionOf 10.17632/vskgsgnwj8; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.17632/vskgsgnwj8",
+      "secondary": "10.17632/vskgsgnwj8.1"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
       "evidence": "10.5281/zenodo.10069849 declares HasVersion 10.5281/zenodo.10069850; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.10069849",
@@ -35,7 +51,167 @@
     {
       "automatic": true,
       "confidence": 0.99,
-      "evidence": "10.5281/zenodo.13225353 declares IsVersionOf 10.5281/zenodo.13225352; the concept DOI is listed and the version DOI is linked from it",
+      "evidence": "10.5281/zenodo.1057842 declares HasVersion 10.5281/zenodo.1057843; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.1057842",
+      "secondary": "10.5281/zenodo.1057843"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10599601 declares HasVersion 10.5281/zenodo.10599602; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.10599601",
+      "secondary": "10.5281/zenodo.10599602"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10599643 declares HasVersion 10.5281/zenodo.10599644; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.10599643",
+      "secondary": "10.5281/zenodo.10599644"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10619555 declares HasVersion 10.5281/zenodo.10619556; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.10619555",
+      "secondary": "10.5281/zenodo.10619556"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10815517 declares HasVersion 10.5281/zenodo.10815518; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.10815517",
+      "secondary": "10.5281/zenodo.10815518"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10913814 declares HasVersion 10.5281/zenodo.10913815; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.10913814",
+      "secondary": "10.5281/zenodo.10913815"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10931628 declares HasVersion 10.5281/zenodo.10931629; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.10931628",
+      "secondary": "10.5281/zenodo.10931629"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10931628 declares HasVersion 10.5281/zenodo.13235189; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.10931628",
+      "secondary": "10.5281/zenodo.13235189"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10941921 declares HasVersion 10.5281/zenodo.10941922; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.10941921",
+      "secondary": "10.5281/zenodo.10941922"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.11172545 declares HasVersion 10.5281/zenodo.11172546; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.11172545",
+      "secondary": "10.5281/zenodo.11172546"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.11207873 declares HasVersion 10.5281/zenodo.11207874; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.11207873",
+      "secondary": "10.5281/zenodo.11207874"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.11225636 declares HasVersion 10.5281/zenodo.11225637; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.11225636",
+      "secondary": "10.5281/zenodo.11225637"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.11507767 declares HasVersion 10.5281/zenodo.11507768; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.11507767",
+      "secondary": "10.5281/zenodo.11507768"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.11643398 declares HasVersion 10.5281/zenodo.11643399; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.11643398",
+      "secondary": "10.5281/zenodo.11643399"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.12166696 declares HasVersion 10.5281/zenodo.12166697; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.12166696",
+      "secondary": "10.5281/zenodo.12166697"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.12666567 declares HasVersion 10.5281/zenodo.12666568; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.12666567",
+      "secondary": "10.5281/zenodo.12666568"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.12731584 declares HasVersion 10.5281/zenodo.12731585; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.12731584",
+      "secondary": "10.5281/zenodo.12731585"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.12731736 declares HasVersion 10.5281/zenodo.12731737; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.12731736",
+      "secondary": "10.5281/zenodo.12731737"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.1284068 declares HasVersion 10.5281/zenodo.1284069; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.1284068",
+      "secondary": "10.5281/zenodo.1284069"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.13225289 declares HasVersion 10.5281/zenodo.13225290; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.13225289",
+      "secondary": "10.5281/zenodo.13225290"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.13225352 declares HasVersion 10.5281/zenodo.13225353; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.13225352",
       "secondary": "10.5281/zenodo.13225353"
@@ -43,7 +219,15 @@
     {
       "automatic": true,
       "confidence": 0.99,
-      "evidence": "10.5281/zenodo.13367815 declares IsVersionOf 10.5281/zenodo.13367814; the concept DOI is listed and the version DOI is linked from it",
+      "evidence": "10.5281/zenodo.13329100 declares HasVersion 10.5281/zenodo.13329101; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.13329100",
+      "secondary": "10.5281/zenodo.13329101"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.13367814 declares HasVersion 10.5281/zenodo.13367815; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.13367814",
       "secondary": "10.5281/zenodo.13367815"
@@ -51,7 +235,7 @@
     {
       "automatic": true,
       "confidence": 0.99,
-      "evidence": "10.5281/zenodo.13367875 declares IsVersionOf 10.5281/zenodo.13367874; the concept DOI is listed and the version DOI is linked from it",
+      "evidence": "10.5281/zenodo.13367874 declares HasVersion 10.5281/zenodo.13367875; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.13367874",
       "secondary": "10.5281/zenodo.13367875"
@@ -83,10 +267,138 @@
     {
       "automatic": true,
       "confidence": 0.99,
+      "evidence": "10.5281/zenodo.13692001 declares HasVersion 10.5281/zenodo.13692002; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.13692001",
+      "secondary": "10.5281/zenodo.13692002"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.13692001 declares HasVersion 10.5281/zenodo.14058145; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.13692001",
+      "secondary": "10.5281/zenodo.14058145"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
       "evidence": "10.5281/zenodo.13935821 declares HasVersion 10.5281/zenodo.13935822; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.13935821",
       "secondary": "10.5281/zenodo.13935822"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.13937131 declares HasVersion 10.5281/zenodo.13937132; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.13937131",
+      "secondary": "10.5281/zenodo.13937132"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14028192 declares HasVersion 10.5281/zenodo.14028193; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14028192",
+      "secondary": "10.5281/zenodo.14028193"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14179845 declares HasVersion 10.5281/zenodo.14179846; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14179845",
+      "secondary": "10.5281/zenodo.14179846"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14439043 declares HasVersion 10.5281/zenodo.14439044; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14439043",
+      "secondary": "10.5281/zenodo.14439044"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14439043 declares HasVersion 10.5281/zenodo.14447171; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14439043",
+      "secondary": "10.5281/zenodo.14447171"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14518798 declares HasVersion 10.5281/zenodo.14518799; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14518798",
+      "secondary": "10.5281/zenodo.14518799"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14674588 declares HasVersion 10.5281/zenodo.14674589; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14674588",
+      "secondary": "10.5281/zenodo.14674589"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14700022 declares HasVersion 10.5281/zenodo.14700023; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14700022",
+      "secondary": "10.5281/zenodo.14700023"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14778977 declares HasVersion 10.5281/zenodo.14778978; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14778977",
+      "secondary": "10.5281/zenodo.14778978"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14932612 declares HasVersion 10.5281/zenodo.14932613; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14932612",
+      "secondary": "10.5281/zenodo.14932613"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.14981729 declares HasVersion 10.5281/zenodo.14981730; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.14981729",
+      "secondary": "10.5281/zenodo.14981730"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15023133 declares HasVersion 10.5281/zenodo.15023134; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15023133",
+      "secondary": "10.5281/zenodo.15023134"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15050538 declares HasVersion 10.5281/zenodo.15050539; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15050538",
+      "secondary": "10.5281/zenodo.15050539"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15058133 declares HasVersion 10.5281/zenodo.15058134; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15058133",
+      "secondary": "10.5281/zenodo.15058134"
     },
     {
       "automatic": true,
@@ -115,10 +427,50 @@
     {
       "automatic": true,
       "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15281366 declares HasVersion 10.5281/zenodo.15281367; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15281366",
+      "secondary": "10.5281/zenodo.15281367"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15281424 declares HasVersion 10.5281/zenodo.15281425; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15281424",
+      "secondary": "10.5281/zenodo.15281425"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
       "evidence": "10.5281/zenodo.15290993 declares HasVersion 10.5281/zenodo.15290994; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.15290993",
       "secondary": "10.5281/zenodo.15290994"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15380253 declares HasVersion 10.5281/zenodo.15380254; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15380253",
+      "secondary": "10.5281/zenodo.15380254"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15380253 declares HasVersion 10.5281/zenodo.17333961; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15380253",
+      "secondary": "10.5281/zenodo.17333961"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15479545 declares HasVersion 10.5281/zenodo.15479546; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15479545",
+      "secondary": "10.5281/zenodo.15479546"
     },
     {
       "automatic": true,
@@ -135,6 +487,14 @@
       "kind": "version-pair",
       "primary": "10.5281/zenodo.15623844",
       "secondary": "10.5281/zenodo.15623845"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.15692919 declares HasVersion 10.5281/zenodo.15692920; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.15692919",
+      "secondary": "10.5281/zenodo.15692920"
     },
     {
       "automatic": true,
@@ -175,6 +535,22 @@
       "kind": "version-pair",
       "primary": "10.5281/zenodo.16926007",
       "secondary": "10.5281/zenodo.16926008"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.16961583 declares HasVersion 10.5281/zenodo.16961584; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.16961583",
+      "secondary": "10.5281/zenodo.16961584"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.16961583 declares HasVersion 10.5281/zenodo.18938647; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.16961583",
+      "secondary": "10.5281/zenodo.18938647"
     },
     {
       "automatic": true,
@@ -227,6 +603,22 @@
     {
       "automatic": true,
       "confidence": 0.99,
+      "evidence": "10.5281/zenodo.18052643 declares HasVersion 10.5281/zenodo.18052644; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.18052643",
+      "secondary": "10.5281/zenodo.18052644"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.18430328 declares HasVersion 10.5281/zenodo.18430329; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.18430328",
+      "secondary": "10.5281/zenodo.18430329"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
       "evidence": "10.5281/zenodo.18935809 declares HasVersion 10.5281/zenodo.18935810; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.18935809",
@@ -271,6 +663,14 @@
       "kind": "version-pair",
       "primary": "10.5281/zenodo.18988933",
       "secondary": "10.5281/zenodo.19111787"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.19055043 declares HasVersion 10.5281/zenodo.19055044; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.19055043",
+      "secondary": "10.5281/zenodo.19055044"
     },
     {
       "automatic": true,
@@ -355,10 +755,34 @@
     {
       "automatic": true,
       "confidence": 0.99,
+      "evidence": "10.5281/zenodo.20556734 declares HasVersion 10.5281/zenodo.20556735; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.20556734",
+      "secondary": "10.5281/zenodo.20556735"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
       "evidence": "10.5281/zenodo.20625930 declares HasVersion 10.5281/zenodo.20625931; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.20625930",
       "secondary": "10.5281/zenodo.20625931"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.20704319 declares HasVersion 10.5281/zenodo.20704320; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.20704319",
+      "secondary": "10.5281/zenodo.20704320"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.20833043 declares IsVersionOf 10.5281/zenodo.20833042; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.20833042",
+      "secondary": "10.5281/zenodo.20833043"
     },
     {
       "automatic": true,
@@ -375,6 +799,22 @@
       "kind": "version-pair",
       "primary": "10.5281/zenodo.21211759",
       "secondary": "10.5281/zenodo.21211760"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.21224751 declares HasVersion 10.5281/zenodo.21224752; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.21224751",
+      "secondary": "10.5281/zenodo.21224752"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.21224751 declares HasVersion 10.5281/zenodo.21986357; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.21224751",
+      "secondary": "10.5281/zenodo.21986357"
     },
     {
       "automatic": true,
@@ -411,6 +851,30 @@
     {
       "automatic": true,
       "confidence": 0.99,
+      "evidence": "10.5281/zenodo.21870981 declares HasVersion 10.5281/zenodo.21870982; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.21870981",
+      "secondary": "10.5281/zenodo.21870982"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.21870981 declares HasVersion 10.5281/zenodo.21873268; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.21870981",
+      "secondary": "10.5281/zenodo.21873268"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.21871066 declares HasVersion 10.5281/zenodo.21871069; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.21871066",
+      "secondary": "10.5281/zenodo.21871069"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
       "evidence": "10.5281/zenodo.21873396 declares HasVersion 10.5281/zenodo.21873397; the concept DOI is listed and the version DOI is linked from it",
       "kind": "version-pair",
       "primary": "10.5281/zenodo.21873396",
@@ -423,10 +887,762 @@
       "kind": "version-pair",
       "primary": "10.5281/zenodo.22078127",
       "secondary": "10.5281/zenodo.22078128"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.2531988 declares HasVersion 10.5281/zenodo.2531989; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.2531988",
+      "secondary": "10.5281/zenodo.2531989"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.2531988 declares HasVersion 10.5281/zenodo.2541205; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.2531988",
+      "secondary": "10.5281/zenodo.2541205"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.2531988 declares HasVersion 10.5281/zenodo.2557500; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.2531988",
+      "secondary": "10.5281/zenodo.2557500"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3254591 declares HasVersion 10.5281/zenodo.3254592; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3254591",
+      "secondary": "10.5281/zenodo.3254592"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3332645 declares HasVersion 10.5281/zenodo.3332646; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3332645",
+      "secondary": "10.5281/zenodo.3332646"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3358439 declares HasVersion 10.5281/zenodo.3358440; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3358439",
+      "secondary": "10.5281/zenodo.3358440"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3374354 declares HasVersion 10.5281/zenodo.3374355; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3374354",
+      "secondary": "10.5281/zenodo.3374355"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3374354 declares HasVersion 10.5281/zenodo.3515444; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3374354",
+      "secondary": "10.5281/zenodo.3515444"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3374354 declares HasVersion 10.5281/zenodo.3604290; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3374354",
+      "secondary": "10.5281/zenodo.3604290"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3374354 declares HasVersion 10.5281/zenodo.4030701; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3374354",
+      "secondary": "10.5281/zenodo.4030701"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3378661 declares HasVersion 10.5281/zenodo.3378662; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3378661",
+      "secondary": "10.5281/zenodo.3378662"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3378684 declares HasVersion 10.5281/zenodo.3378685; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3378684",
+      "secondary": "10.5281/zenodo.3378685"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3385743 declares HasVersion 10.5281/zenodo.3385744; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3385743",
+      "secondary": "10.5281/zenodo.3385744"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3385749 declares HasVersion 10.5281/zenodo.3385750; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3385749",
+      "secondary": "10.5281/zenodo.3385750"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3401424 declares HasVersion 10.5281/zenodo.3447756; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3401424",
+      "secondary": "10.5281/zenodo.3447756"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3403361 declares HasVersion 10.5281/zenodo.3403362; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3403361",
+      "secondary": "10.5281/zenodo.3403362"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3414196 declares HasVersion 10.5281/zenodo.3414197; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3414196",
+      "secondary": "10.5281/zenodo.3414197"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3445323 declares HasVersion 10.5281/zenodo.3445324; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3445323",
+      "secondary": "10.5281/zenodo.3445324"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3475598 declares HasVersion 10.5281/zenodo.3475599; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3475598",
+      "secondary": "10.5281/zenodo.3475599"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3475598 declares HasVersion 10.5281/zenodo.3475609; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3475598",
+      "secondary": "10.5281/zenodo.3475609"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3475598 declares HasVersion 10.5281/zenodo.3475617; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3475598",
+      "secondary": "10.5281/zenodo.3475617"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3475598 declares HasVersion 10.5281/zenodo.3476763; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3475598",
+      "secondary": "10.5281/zenodo.3476763"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3482838 declares HasVersion 10.5281/zenodo.3482839; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3482838",
+      "secondary": "10.5281/zenodo.3482839"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3532684 declares HasVersion 10.5281/zenodo.3532685; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3532684",
+      "secondary": "10.5281/zenodo.3532685"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3727097 declares HasVersion 10.5281/zenodo.3727098; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3727097",
+      "secondary": "10.5281/zenodo.3727098"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3727097 declares HasVersion 10.5281/zenodo.4040546; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3727097",
+      "secondary": "10.5281/zenodo.4040546"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3763078 declares HasVersion 10.5281/zenodo.3763079; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3763078",
+      "secondary": "10.5281/zenodo.3763079"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3763078 declares HasVersion 10.5281/zenodo.3764556; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3763078",
+      "secondary": "10.5281/zenodo.3764556"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3862383 declares HasVersion 10.5281/zenodo.3862384; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3862383",
+      "secondary": "10.5281/zenodo.3862384"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3908474 declares HasVersion 10.5281/zenodo.3908475; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3908474",
+      "secondary": "10.5281/zenodo.3908475"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.3908474 declares HasVersion 10.5281/zenodo.3909488; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.3908474",
+      "secondary": "10.5281/zenodo.3909488"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4033072 declares HasVersion 10.5281/zenodo.4033073; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4033072",
+      "secondary": "10.5281/zenodo.4033073"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4094623 declares HasVersion 10.5281/zenodo.4094624; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4094623",
+      "secondary": "10.5281/zenodo.4094624"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4094631 declares HasVersion 10.5281/zenodo.4094632; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4094631",
+      "secondary": "10.5281/zenodo.4094632"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4095051 declares HasVersion 10.5281/zenodo.4095052; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4095051",
+      "secondary": "10.5281/zenodo.4095052"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4291935 declares HasVersion 10.5281/zenodo.4291936; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4291935",
+      "secondary": "10.5281/zenodo.4291936"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4291935 declares HasVersion 10.5281/zenodo.4291978; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4291935",
+      "secondary": "10.5281/zenodo.4291978"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4292207 declares HasVersion 10.5281/zenodo.4292208; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4292207",
+      "secondary": "10.5281/zenodo.4292208"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4302362 declares HasVersion 10.5281/zenodo.4302363; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4302362",
+      "secondary": "10.5281/zenodo.4302363"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4310030 declares HasVersion 10.5281/zenodo.4310031; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4310030",
+      "secondary": "10.5281/zenodo.4310031"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4322445 declares HasVersion 10.5281/zenodo.4322446; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4322445",
+      "secondary": "10.5281/zenodo.4322446"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4322584 declares HasVersion 10.5281/zenodo.4322585; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4322584",
+      "secondary": "10.5281/zenodo.4322585"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4385726 declares HasVersion 10.5281/zenodo.4385727; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4385726",
+      "secondary": "10.5281/zenodo.4385727"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4580335 declares HasVersion 10.5281/zenodo.4580336; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4580335",
+      "secondary": "10.5281/zenodo.4580336"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4627167 declares HasVersion 10.5281/zenodo.4627168; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4627167",
+      "secondary": "10.5281/zenodo.4627168"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4629674 declares HasVersion 10.5281/zenodo.4629675; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4629674",
+      "secondary": "10.5281/zenodo.4629675"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4646944 declares HasVersion 10.5281/zenodo.4646945; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4646944",
+      "secondary": "10.5281/zenodo.4646945"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4813067 declares HasVersion 10.5281/zenodo.4813068; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4813067",
+      "secondary": "10.5281/zenodo.4813068"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4813067 declares HasVersion 10.5281/zenodo.4817875; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4813067",
+      "secondary": "10.5281/zenodo.4817875"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4813067 declares HasVersion 10.5281/zenodo.4925963; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4813067",
+      "secondary": "10.5281/zenodo.4925963"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4813067 declares HasVersion 10.5281/zenodo.5809137; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4813067",
+      "secondary": "10.5281/zenodo.5809137"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4817724 declares HasVersion 10.5281/zenodo.4817725; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4817724",
+      "secondary": "10.5281/zenodo.4817725"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.4890901 declares HasVersion 10.5281/zenodo.4890902; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.4890901",
+      "secondary": "10.5281/zenodo.4890902"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5046719 declares HasVersion 10.5281/zenodo.5046720; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5046719",
+      "secondary": "10.5281/zenodo.5046720"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5156671 declares HasVersion 10.5281/zenodo.5156672; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5156671",
+      "secondary": "10.5281/zenodo.5156672"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5158570 declares HasVersion 10.5281/zenodo.5158571; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5158570",
+      "secondary": "10.5281/zenodo.5158571"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5158570 declares HasVersion 10.5281/zenodo.5163487; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5158570",
+      "secondary": "10.5281/zenodo.5163487"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5614871 declares HasVersion 10.5281/zenodo.5614872; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5614871",
+      "secondary": "10.5281/zenodo.5614872"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5648210 declares HasVersion 10.5281/zenodo.5648211; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5648210",
+      "secondary": "10.5281/zenodo.5648211"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5713971 declares HasVersion 10.5281/zenodo.5713972; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5713971",
+      "secondary": "10.5281/zenodo.5713972"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5718667 declares HasVersion 10.5281/zenodo.5718668; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5718667",
+      "secondary": "10.5281/zenodo.5718668"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5726899 declares HasVersion 10.5281/zenodo.5726900; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5726899",
+      "secondary": "10.5281/zenodo.5726900"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.5851605 declares HasVersion 10.5281/zenodo.5851606; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.5851605",
+      "secondary": "10.5281/zenodo.5851606"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.6457038 declares HasVersion 10.5281/zenodo.6457039; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.6457038",
+      "secondary": "10.5281/zenodo.6457039"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.6788217 declares HasVersion 10.5281/zenodo.6788218; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.6788217",
+      "secondary": "10.5281/zenodo.6788218"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.6815531 declares HasVersion 10.5281/zenodo.6815532; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.6815531",
+      "secondary": "10.5281/zenodo.6815532"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.6815545 declares HasVersion 10.5281/zenodo.6815546; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.6815545",
+      "secondary": "10.5281/zenodo.6815546"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.6815555 declares HasVersion 10.5281/zenodo.6815556; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.6815555",
+      "secondary": "10.5281/zenodo.6815556"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.6815569 declares HasVersion 10.5281/zenodo.6815570; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.6815569",
+      "secondary": "10.5281/zenodo.6815570"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.6828890 declares HasVersion 10.5281/zenodo.6828891; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.6828890",
+      "secondary": "10.5281/zenodo.6828891"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.7598337 declares HasVersion 10.5281/zenodo.7598338; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.7598337",
+      "secondary": "10.5281/zenodo.7598338"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.7683411 declares HasVersion 10.5281/zenodo.7683412; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.7683411",
+      "secondary": "10.5281/zenodo.7683412"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.7734764 declares HasVersion 10.5281/zenodo.7734765; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.7734764",
+      "secondary": "10.5281/zenodo.7734765"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.7776149 declares HasVersion 10.5281/zenodo.7776150; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.7776149",
+      "secondary": "10.5281/zenodo.7776150"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.7869754 declares HasVersion 10.5281/zenodo.7869755; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.7869754",
+      "secondary": "10.5281/zenodo.7869755"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.7942852 declares HasVersion 10.5281/zenodo.7942853; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.7942852",
+      "secondary": "10.5281/zenodo.7942853"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.7945102 declares HasVersion 10.5281/zenodo.7945103; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.7945102",
+      "secondary": "10.5281/zenodo.7945103"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8007753 declares HasVersion 10.5281/zenodo.8007754; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8007753",
+      "secondary": "10.5281/zenodo.8007754"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8007753 declares HasVersion 10.5281/zenodo.8034397; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8007753",
+      "secondary": "10.5281/zenodo.8034397"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8033373 declares HasVersion 10.5281/zenodo.8033374; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8033373",
+      "secondary": "10.5281/zenodo.8033374"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8037350 declares HasVersion 10.5281/zenodo.8037351; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8037350",
+      "secondary": "10.5281/zenodo.8037351"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.10959930 declares IsVersionOf 10.5281/zenodo.8114627; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8114627",
+      "secondary": "10.5281/zenodo.10959930"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8116593 declares HasVersion 10.5281/zenodo.8116594; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8116593",
+      "secondary": "10.5281/zenodo.8116594"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8116593 declares HasVersion 10.5281/zenodo.8335186; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8116593",
+      "secondary": "10.5281/zenodo.8335186"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8145112 declares HasVersion 10.5281/zenodo.8145113; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8145112",
+      "secondary": "10.5281/zenodo.8145113"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8145112 declares HasVersion 10.5281/zenodo.8241511; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8145112",
+      "secondary": "10.5281/zenodo.8241511"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8145288 declares HasVersion 10.5281/zenodo.8145289; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8145288",
+      "secondary": "10.5281/zenodo.8145289"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8273220 declares HasVersion 10.5281/zenodo.8273221; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8273220",
+      "secondary": "10.5281/zenodo.8273221"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.8318208 declares HasVersion 10.5281/zenodo.8318209; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.8318208",
+      "secondary": "10.5281/zenodo.8318209"
+    },
+    {
+      "automatic": true,
+      "confidence": 0.99,
+      "evidence": "10.5281/zenodo.835299 declares HasVersion 10.5281/zenodo.835300; the concept DOI is listed and the version DOI is linked from it",
+      "kind": "version-pair",
+      "primary": "10.5281/zenodo.835299",
+      "secondary": "10.5281/zenodo.835300"
     }
   ],
   "note": "Fuzzy matches proposed by `python -m harvest dedupe`. Nothing here has been applied. Confirm one by writing the merge annotation (see docs/runbooks/correct-a-record.md); reject one by leaving it alone.",
   "proposals": [
+    {
+      "automatic": false,
+      "confidence": 0.9935,
+      "evidence": "title similarity 0.99 with the same first author (honing) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.24406/publica-8751",
+      "secondary": "10.5194/wes-11-1531-2026"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.10931629",
+      "secondary": "10.5281/zenodo.13235189"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (froidevaux) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.14439044",
+      "secondary": "10.5281/zenodo.14447171"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (monnig) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.15380254",
+      "secondary": "10.5281/zenodo.17333961"
+    },
     {
       "automatic": false,
       "confidence": 0.9552,
@@ -453,6 +1669,22 @@
     },
     {
       "automatic": false,
+      "confidence": 0.9459,
+      "evidence": "title similarity 0.95 with the same first author (sirkis) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19055043",
+      "secondary": "10.5194/wes-11-1429-2026"
+    },
+    {
+      "automatic": false,
+      "confidence": 0.9459,
+      "evidence": "title similarity 0.95 with the same first author (sirkis) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.19055044",
+      "secondary": "10.5194/wes-11-1429-2026"
+    },
+    {
+      "automatic": false,
       "confidence": 1.0,
       "evidence": "title similarity 1.00 with the same first author (rettenmeier) and year (2026); no shared DOI — REVIEW REQUIRED",
       "kind": "fuzzy-title",
@@ -462,10 +1694,242 @@
     {
       "automatic": false,
       "confidence": 1.0,
-      "evidence": "title similarity 1.00 with the same first author (eisenhartrothe) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "evidence": "title similarity 1.00 with the same first author (kobayashi) and year (2026); no shared DOI — REVIEW REQUIRED",
       "kind": "fuzzy-title",
-      "primary": "10.5281/zenodo.5713971",
-      "secondary": "10.5281/zenodo.5714037"
+      "primary": "10.5281/zenodo.21224752",
+      "secondary": "10.5281/zenodo.21986357"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (barber) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.21870982",
+      "secondary": "10.5281/zenodo.21873268"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (domagalski) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.2531989",
+      "secondary": "10.5281/zenodo.2541205"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (domagalski) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.2531989",
+      "secondary": "10.5281/zenodo.2557500"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (domagalski) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.2541205",
+      "secondary": "10.5281/zenodo.2557500"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (clifton) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3374355",
+      "secondary": "10.5281/zenodo.3515444"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3475599",
+      "secondary": "10.5281/zenodo.3475609"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3475599",
+      "secondary": "10.5281/zenodo.3475617"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3475599",
+      "secondary": "10.5281/zenodo.3476763"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3475609",
+      "secondary": "10.5281/zenodo.3475617"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3475609",
+      "secondary": "10.5281/zenodo.3476763"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3475617",
+      "secondary": "10.5281/zenodo.3476763"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (clifton) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3727098",
+      "secondary": "10.5281/zenodo.4040546"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (simley) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3763079",
+      "secondary": "10.5281/zenodo.3764556"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (alcayaga) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.3908475",
+      "secondary": "10.5281/zenodo.3909488"
+    },
+    {
+      "automatic": false,
+      "confidence": 0.9027,
+      "evidence": "title similarity 0.90 with the same first author (barber) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4094623",
+      "secondary": "10.5281/zenodo.4094631"
+    },
+    {
+      "automatic": false,
+      "confidence": 0.9027,
+      "evidence": "title similarity 0.90 with the same first author (barber) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4094623",
+      "secondary": "10.5281/zenodo.4094632"
+    },
+    {
+      "automatic": false,
+      "confidence": 0.9027,
+      "evidence": "title similarity 0.90 with the same first author (barber) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4094624",
+      "secondary": "10.5281/zenodo.4094631"
+    },
+    {
+      "automatic": false,
+      "confidence": 0.9027,
+      "evidence": "title similarity 0.90 with the same first author (barber) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4094624",
+      "secondary": "10.5281/zenodo.4094632"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (papetta) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4291936",
+      "secondary": "10.5281/zenodo.4291978"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4813068",
+      "secondary": "10.5281/zenodo.4817875"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4813068",
+      "secondary": "10.5281/zenodo.4925963"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4813068",
+      "secondary": "10.5281/zenodo.5809137"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4817875",
+      "secondary": "10.5281/zenodo.4925963"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4817875",
+      "secondary": "10.5281/zenodo.5809137"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.4925963",
+      "secondary": "10.5281/zenodo.5809137"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (clifton) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.5158571",
+      "secondary": "10.5281/zenodo.5163487"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (gertjan) and year (2023); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.8007754",
+      "secondary": "10.5281/zenodo.8034397"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (afanasieva) and year (2023); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.8116594",
+      "secondary": "10.5281/zenodo.8335186"
+    },
+    {
+      "automatic": false,
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (gottschall) and year (2023); no shared DOI — REVIEW REQUIRED",
+      "kind": "fuzzy-title",
+      "primary": "10.5281/zenodo.8145113",
+      "secondary": "10.5281/zenodo.8241511"
     }
   ]
 }
