@@ -202,6 +202,20 @@ pre,
   font-weight: var(--font-weight-medium);
 }
 
+/* The repository link. Icon plus the word, never the icon alone: a lone glyph
+   is a link with no accessible name, and "GitHub" is one word. */
+.site-nav__repo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.site-nav__icon {
+  flex: none;
+  /* Optical alignment: the mark's visual centre sits above the text baseline. */
+  transform: translateY(0.15em);
+}
+
 main {
   display: block;
   padding-block: var(--space-8) var(--space-12);

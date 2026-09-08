@@ -94,7 +94,7 @@ it, argue with it, and change it without a commit to `harvest/`.
 | `direct` | an attributing discovery route, or an IEA Wind Task attribution |
 | `cites` | it cites an identity the catalogue holds |
 | `cited-by` | an identity the catalogue holds cites it |
-| `unassessed` | no route was ever recorded, so nothing is established either way |
+| `unassessed` | no route was ever recorded, so nothing is established either way. **Must be zero**; see §5 |
 | `none` | out of scope |
 
 …and `inclusion_evidence`, one sentence naming the *specific* grounds
@@ -117,7 +117,31 @@ the catalogue" is not a fact about one record. `materialize_all` therefore
 resolves every identity first, builds the citation index, and only then shapes
 packages.
 
-### 4. Out of scope is not deleted
+### 4. A lost route is recovered, not guessed at
+
+`unassessed` is a gap in the harvest, not a property of the corpus, and it is
+not allowed to persist. OSTI's queries return a **rolling window**, so a record
+harvested before routes existed may never appear in a listing again — and two
+did not. Their stored metadata mentions IEA Wind nowhere, so no amount of
+text-matching could have recovered why they were here.
+
+So the adapter goes back and asks. `?q=<query>&osti_id=<id>` scopes a search to
+one record, and the filter is genuinely applied: a nonsense query returns
+nothing where a real one returns the record. That makes it **evidence** — OSTI's
+own index saying whether it associates the record with "IEA Wind" — rather than
+an inference from what we happened to store. Both records came back matching,
+and both are `direct` on that basis.
+
+A record matching none of the configured queries is recorded as
+`query:no-match`, which `sources.yaml` lists as a generic route: we asked, and
+the answer was no. That is an assessment on evidence, and a different thing from
+never having looked.
+
+The tally is in `data/state/last-run.json` under `inclusion`, and a test asserts
+the shipped catalogue holds no `unassessed` record. If one appears, the answer is
+to run the harvest — the adapters backfill routes — not to accept the state.
+
+### 5. Out of scope is not deleted
 
 An out-of-scope record keeps its page, its URL and its citation, and is excluded
 from the listings, the sitemap and the DCAT catalogue — exactly the treatment a
@@ -153,9 +177,9 @@ undo.
   to their Task attribution, and where they have none they are `unassessed` —
   **listed, and marked** — rather than excluded, because the rule is meant to
   act on evidence of non-attribution and not on the absence of evidence. The
-  re-harvest that ships with this ADR settles all but one of them; the survivor
-  is an OSTI record that has rolled out of its query's window and may never be
-  re-scraped, which is exactly why the count is worth watching.
+  re-harvest that ships with this ADR, plus the OSTI route backfill above,
+  settles every one of them: the catalogue holds no `unassessed` record and a
+  test keeps it that way.
 - Citation coverage is only as good as Crossref's reference lists. DataCite
   deposits rarely state citations, OSTI states none, and GitHub has no notion of
   one. A conference presentation on Zenodo that cites a Task report will not be
@@ -173,5 +197,6 @@ undo.
 ## Source
 
 `harvest/inclusion.py`; `harvest/models.py` (`discovered_via`);
-`sources.yaml` (`generic_routes`); `site/src/components/OutOfScopeBanner.astro`;
+`sources.yaml` (`generic_routes`); `harvest/adapters/osti.py`
+(`confirm_routes`); `site/src/components/OutOfScopeBanner.astro`;
 the About page's "What belongs in this catalogue"; fixtures `x-13`, `x-14`.

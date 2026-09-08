@@ -30,15 +30,15 @@
     },
     {
       "key": "inclusion_basis",
-      "value": "unassessed"
+      "value": "direct"
     },
     {
       "key": "inclusion_evidence",
-      "value": "Harvested before the catalogue recorded discovery routes, and not re-scraped since; its grounds have not been established."
+      "value": "Found through query:\"IEA Wind\" and query:\"IEA Wind Task\", which is an IEA Wind attribution."
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:50Z"
+      "value": "2026-09-08T15:50:44Z"
     },
     {
       "key": "lifecycle_state",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-08-24T07:30:55Z"
+      "value": "2026-08-24T07:30:55Z~m2"
     },
     {
       "key": "source_system",

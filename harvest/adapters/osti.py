@@ -64,7 +64,8 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import Any, Iterable
+from pathlib import Path
+from typing import Any, Iterable, Iterator
 from urllib.parse import urlencode
 
 from harvest import DEFAULT_MAX_RECORDS
@@ -425,6 +426,100 @@ class OstiAdapter(Adapter):
                     discovered_via=[route],
                 )
                 yielded += 1
+
+        if self.events_dir is not None:
+            for observation in self._backfill_routes(seen, max_records - yielded, self.events_dir):
+                yield observation
+                yielded += 1
+                if yielded >= max_records:
+                    return
+
+    # -- backfilling a lost discovery route --------------------------------
+    def routeless_identities(self, events_dir: Path | None = None) -> list[tuple[str, str]]:
+        """``[(identity, osti_id)]`` for OSTI records with no recorded route.
+
+        OSTI's queries return a *rolling window*, so a record harvested before
+        discovery routes existed may never appear in a listing again — and
+        without a route the scope rule cannot assess it (ADR-0043). The one
+        thing it must not do is guess, so instead of inferring an attribution
+        from the stored metadata (which for these records mentions IEA Wind
+        nowhere), it goes back and asks OSTI.
+        """
+        from harvest.events import iter_identity_keys, read_events
+
+        pending: list[tuple[str, str]] = []
+        for identity in iter_identity_keys(events_dir):
+            scrapes = [
+                event
+                for event in read_events(identity, events_dir)
+                if event.event_type == "scraped"
+            ]
+            if not scrapes or any(event.discovered_via for event in scrapes):
+                continue
+            mine = [e for e in scrapes if e.source_system == self.source_name]
+            if mine and mine[-1].source_id:
+                pending.append((identity, str(mine[-1].source_id)))
+        return pending
+
+    def confirm_routes(self, osti_id: str) -> tuple[list[str], dict[str, Any] | None]:
+        """Ask OSTI which of the configured queries this record matches.
+
+        ``?q=<query>&osti_id=<id>`` scopes a search to one record, and the
+        filter is genuinely applied — a nonsense query returns nothing for a
+        record that a real one returns. So this is **evidence**, not inference:
+        OSTI's own index says whether it associates the record with "IEA Wind".
+
+        Returns the matching routes and the record payload, so a confirmation
+        doubles as a re-scrape and costs no extra request.
+        """
+        client = self._http()
+        api = str(self.config.get("api") or OSTI_API)
+        routes: list[str] = []
+        payload: dict[str, Any] | None = None
+        for route, _ in self._query_urls():
+            query = route.split(":", 1)[1]
+            result = client.get(f"{api}?{urlencode({'q': query, 'osti_id': osti_id})}")
+            if not result.ok or not result.text:
+                continue
+            try:
+                records = self._records(result.json())
+            except Exception:
+                continue
+            if records:
+                routes.append(route)
+                payload = payload or records[0]
+        return routes, payload
+
+    def _backfill_routes(
+        self, seen: set[str], budget: int, events_dir: Path | None = None
+    ) -> Iterator[RawObservation]:
+        """Re-emit routeless records with the route OSTI confirms.
+
+        A record that matches none of the configured queries is recorded as
+        ``query:no-match``, which ``sources.yaml`` lists as a generic route: we
+        asked, and OSTI does not associate this record with anything we search
+        for. That is an assessment — the record is out of scope on evidence —
+        and not the same as never having looked.
+        """
+        if budget <= 0:
+            return
+        for identity, osti_id in self.routeless_identities(events_dir)[:budget]:
+            if osti_id in seen:
+                continue
+            routes, payload = self.confirm_routes(osti_id)
+            if payload is None:
+                log.info("osti: could not re-read %s to confirm its route", osti_id)
+                continue
+            seen.add(osti_id)
+            yield RawObservation(
+                source_system=self.source_name,
+                source_id=osti_id,
+                source_key=self.source_key(payload),
+                url=_link_href(payload, "citation") or f"{OSTI_BIBLIO}{osti_id}",
+                payload=payload,
+                identity_override=identity,
+                discovered_via=routes or ["query:no-match"],
+            )
 
     # -- interpreting one payload (pure) ------------------------------------
     def map(self, raw: RawObservation) -> MappedObservation:

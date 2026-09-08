@@ -268,6 +268,15 @@ its place by citing, or being cited by, something already in the catalogue.
 **A new discovery route needs a decision, not just code.** If it is not an IEA
 Wind attribution, add it to `generic_routes` in the same change.
 
+**A source with a rolling query window owes a route backfill.** If a record can
+fall out of every listing — OSTI's queries do exactly that — then a record
+harvested before routes existed can never recover one, and the scope rule cannot
+assess it. The adapter must go back and ask: `OstiAdapter.confirm_routes()`
+scopes each configured query to one record and reports which ones match, which
+is evidence rather than inference. A record matching none is recorded as
+`query:no-match`, declared generic. `unassessed` must be zero in a healthy
+catalogue, and a test asserts it.
+
 A backfilled observation sets `RawObservation.identity_override`, and `map()`
 must honour it: the artifact is enriched under the identity the catalogue
 already lists it by, never re-keyed to the one this payload would produce.

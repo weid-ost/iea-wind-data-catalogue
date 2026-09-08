@@ -48,6 +48,8 @@ class RunReport:
     notices: list[dict] = field(default_factory=list)
     dropped_dois: list[dict] = field(default_factory=list)
     unmapped_licenses: list[dict] = field(default_factory=list)
+    #: ``{inclusion_basis: count}``; ``unassessed`` should always be zero.
+    inclusion: dict[str, int] = field(default_factory=dict)
     cache_hits: int = 0
     cache_misses: int = 0
     pending_extraction: int = 0
@@ -92,6 +94,7 @@ class RunReport:
             "notices": self.notices,
             "dropped_dois": self.dropped_dois,
             "unmapped_licenses": self.unmapped_licenses,
+            "inclusion": {name: self.inclusion[name] for name in sorted(self.inclusion)},
             "cache": {
                 "hits": self.cache_hits,
                 "misses": self.cache_misses,

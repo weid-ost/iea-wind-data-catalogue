@@ -57,7 +57,7 @@ class TestTheRegisterDeclaresTheGenericRoutes:
     def test_the_generic_routes_are_read_from_sources_yaml(self) -> None:
         """The judgement lives in the register, where a human can see and change
         it, not in the code."""
-        assert generic_routes() == {"topic:wind-energy"}
+        assert generic_routes() == {"topic:wind-energy", "query:no-match"}
 
     def test_every_generic_route_is_one_an_adapter_can_actually_emit(self) -> None:
         """A typo here silently turns an exclusion back into an attribution, and
@@ -69,6 +69,15 @@ class TestTheRegisterDeclaresTheGenericRoutes:
                 assert kind in {"topic", "query", "org", "community", "repo", "task-page"}, route
                 if kind == "topic":
                     assert value in [str(t) for t in source.get("topics") or []], route
+                if kind == "query" and value != "no-match":
+                    declared = [str(q) for q in source.get("queries") or []]
+                    assert value in declared, route
+
+    def test_no_match_is_a_recorded_assessment_not_a_gap(self) -> None:
+        """`query:no-match` means the adapter went back and asked, and the
+        source associates the record with none of our queries. That is evidence
+        of non-attribution, so it excludes — unlike having never looked."""
+        assert "query:no-match" in generic_routes()
 
     def test_the_iea_named_topics_are_not_generic(self) -> None:
         """Applying `iea-wind` to a repository is a claim about the work, made by
@@ -226,3 +235,40 @@ class TestItIsReversible:
                               cited_by=["10.5281/zenodo.9"])
         after = resolve_all(report, orphan_cited)
         assert basis_of(after, "github|x/y", {"topic:wind-energy"})[0] == "cited-by"
+
+
+class TestTheShippedCatalogue:
+    """Data invariants, checked against `data/records/` as it actually is."""
+
+    def _records(self):
+        import json
+
+        from harvest import config
+
+        for path in sorted(config.records_dir().glob("*.json")):
+            record = json.loads(path.read_text(encoding="utf-8"))
+            yield path.stem, {e["key"]: e["value"] for e in record["extras"]}
+
+    def test_every_record_states_a_basis(self) -> None:
+        for slug, extras in self._records():
+            assert extras.get("inclusion_basis") in INCLUSION_BASES, slug
+
+    def test_nothing_is_left_unassessed(self) -> None:
+        """`unassessed` is a gap in the harvest, not a property of the corpus.
+
+        Every adapter records a discovery route at scrape time, and OSTI — whose
+        rolling query window is the one place a record can lose its route —
+        goes back and asks. So a record in this state means something did not
+        run, and the right response is to run it, not to accept the state.
+        """
+        stranded = [slug for slug, extras in self._records()
+                    if extras.get("inclusion_basis") == "unassessed"]
+        assert stranded == [], (
+            f"{len(stranded)} record(s) have no assessable discovery route: {stranded[:5]}. "
+            "Run `python -m harvest run` — the adapters backfill routes — rather than "
+            "accepting the state."
+        )
+
+    def test_every_record_carries_its_evidence(self) -> None:
+        for slug, extras in self._records():
+            assert extras.get("inclusion_evidence"), slug

@@ -88,6 +88,12 @@ class MaterializeResult:
     violations: list[Violation] = field(default_factory=list)
     notices: list[dict] = field(default_factory=list)
     unmapped_licenses: list[dict] = field(default_factory=list)
+    #: ``{inclusion_basis: count}`` — how the scope rule decided (ADR-0043).
+    #: ``unassessed`` should be **zero**: it means a record has no discovery
+    #: route and none could be recovered, so nothing is established about it
+    #: either way. A non-zero count is a gap in the harvest, not a property of
+    #: the corpus, and it belongs in the run report where somebody sees it.
+    inclusion: dict[str, int] = field(default_factory=dict)
 
     @property
     def ok(self) -> bool:
@@ -378,6 +384,7 @@ def materialize_all(
     claimed: dict[str, str] = {}   # slug -> identity key, to catch collisions
     for identity_key, resolved in resolved_by_key.items():
         inclusion = decide_inclusion(identity_key, resolved, cites, cited_by, generic)
+        result.inclusion[inclusion[0]] = result.inclusion.get(inclusion[0], 0) + 1
         package = to_ckan_package(
             resolved, root=root, notices=result.notices, inclusion=inclusion
         )

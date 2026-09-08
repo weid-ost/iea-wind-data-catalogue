@@ -172,6 +172,17 @@ sources:
       - '"IEA Wind"'
       - '"IEA Wind Task"'
     rows: 25
+    # OSTI's queries return a ROLLING WINDOW, so a record harvested before
+    # discovery routes existed may never appear in a listing again. The adapter
+    # therefore re-asks OSTI about any record with no recorded route, scoping
+    # the query to that one record (`?q=...&osti_id=...`, which genuinely
+    # filters — a nonsense query returns nothing where a real one returns the
+    # record). `query:no-match` is what it records when OSTI associates the
+    # record with none of the queries above: we asked, and the answer was no.
+    # That is an assessment on evidence, not an absence of one, so it belongs
+    # here rather than leaving the record unassessed (ADR-0043).
+    generic_routes:
+      - "query:no-match"
 
   # -------------------------------------------------------------------------
   wdh:

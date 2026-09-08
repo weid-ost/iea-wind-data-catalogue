@@ -215,6 +215,7 @@ def _run_pipeline(args: argparse.Namespace, report: RunReport) -> int:
         report.records_pruned = len(outcome.pruned)
         report.add_notices(outcome.notices)
         report.unmapped_licenses = outcome.unmapped_licenses
+        report.inclusion = outcome.inclusion
         report.validation_violations = [str(v) for v in outcome.violations]
         report.ok = outcome.ok
 
