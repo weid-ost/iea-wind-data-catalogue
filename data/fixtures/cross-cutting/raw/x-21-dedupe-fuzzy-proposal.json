@@ -36,7 +36,10 @@
         "resource_kind": "publication",
         "access_status": "open",
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     },
     {
       "observed_at": "2026-08-24T03:12:00Z",
@@ -73,7 +76,10 @@
         "resource_kind": "publication",
         "access_status": "open",
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "query:\"IEA Wind Task\""
+      ]
     }
   ],
   "expected_proposals": [

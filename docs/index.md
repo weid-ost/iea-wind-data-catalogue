@@ -98,7 +98,7 @@ If you want to know *why*:
 
 ## Decision register
 
-Twenty-three ADRs, 0020–0042. ADRs 0001–0019 belonged to the superseded CKAN-first
+Twenty-four ADRs, 0020–0043. ADRs 0001–0019 belonged to the superseded CKAN-first
 plan; those numbers are not reused, and the ones explicitly superseded are
 tabulated in [[ckan-promotion-path]] §11.
 
@@ -132,6 +132,7 @@ tabulated in [[ckan-promotion-path]] §11.
 - [[adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels]] — `vocabulary.yaml`, kind › type, IEA Wind's own publication types
 - [[adr-0041-a-mapping-improvement-must-reach-the-existing-corpus]] — mapping versions and the Zenodo DOI backfill
 - [[adr-0042-the-concept-doi-is-the-record]] — version DOIs merge into the concept, and are kept
+- [[adr-0043-what-belongs-in-the-catalogue]] — attributed to IEA Wind, or citing/cited by something that is
 
 ### The site
 

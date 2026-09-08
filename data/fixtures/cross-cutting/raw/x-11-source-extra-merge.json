@@ -10,22 +10,34 @@
       "source_key": "3@10.5281/zenodo.9000012~m2",
       "actor": "harvest/zenodo",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "resource_kind": { "extraction_method": "api" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "resource_kind": {
+          "extraction_method": "api"
+        }
       },
       "source": {
         "title": "Lidar uncertainty: WP3 deliverable",
         "doi": "10.5281/zenodo.9000011",
         "url": "https://zenodo.org/records/9000012",
-        "source_urls": ["https://zenodo.org/records/9000012"],
-        "authors": [{ "name": "Brandetti, L." }],
+        "source_urls": [
+          "https://zenodo.org/records/9000012"
+        ],
+        "authors": [
+          {
+            "name": "Brandetti, L."
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2026-04-02",
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "resource_kind": "publication",
         "access_status": "open",
-        "iea_task": ["task-52"],
+        "iea_task": [
+          "task-52"
+        ],
         "withdrawn": false,
         "extra": {
           "zenodo_record_id": 9000012,
@@ -37,7 +49,10 @@
             "title": "Project deliverable"
           }
         }
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     },
     {
       "observed_at": "2026-09-02T06:00:00Z",
@@ -48,15 +63,25 @@
       "source_key": "2026-09-02T05:00:00Z",
       "actor": "harvest/datacite",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "resource_kind": { "extraction_method": "api" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "resource_kind": {
+          "extraction_method": "api"
+        }
       },
       "source": {
         "title": "Lidar uncertainty: WP3 deliverable (v1.1)",
         "doi": "10.5281/zenodo.9000011",
         "url": "https://zenodo.org/doi/10.5281/zenodo.9000011",
-        "source_urls": ["https://zenodo.org/doi/10.5281/zenodo.9000011"],
-        "authors": [{ "name": "Brandetti, L." }],
+        "source_urls": [
+          "https://zenodo.org/doi/10.5281/zenodo.9000011"
+        ],
+        "authors": [
+          {
+            "name": "Brandetti, L."
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2026-04-02",
         "license_raw": "cc-by-4.0",
@@ -80,7 +105,10 @@
             }
           ]
         }
-      }
+      },
+      "discovered_via": [
+        "query:\"IEA Wind Task\""
+      ]
     }
   ]
 }

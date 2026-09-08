@@ -323,7 +323,9 @@ is [[correct-a-record]].
     { "key": "publisher", "value": "Zenodo" },
     { "key": "related_identifiers", "value": "[{\"identifier\":\"10.5072/zenodo.1234566\",…}]" },
     { "key": "resource_kind", "value": "dataset" },              // the coarse facet
-    { "key": "resource_type", "value": "dataset" },              // the specific value under it (ADR-0040)
+    { "key": "resource_type", "value": "dataset" },              // the specific type (ADR-0040)
+    { "key": "inclusion_basis", "value": "direct" },             // why it is here (ADR-0043)
+    { "key": "inclusion_evidence", "value": "Found through community:iea_wind_task_43, which is an IEA Wind attribution." },
     { "key": "source_id", "value": "1234567" },
     { "key": "source_key", "value": "3" },
     { "key": "source_system", "value": "zenodo" },              // the last system to scrape

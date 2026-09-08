@@ -3,7 +3,7 @@ type: runbook
 id: RUN-correct-a-record
 status: current
 date: 2026-08-31
-related: [adr-0038-source-metadata-is-never-updated-only-annotated, adr-0037-events-are-the-source-of-truth, adr-0028-provenance-is-displayed, materialize-and-validate, handle-a-withdrawn-record, record-format, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels, adr-0042-the-concept-doi-is-the-record]
+related: [adr-0038-source-metadata-is-never-updated-only-annotated, adr-0037-events-are-the-source-of-truth, adr-0028-provenance-is-displayed, materialize-and-validate, handle-a-withdrawn-record, record-format, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels, adr-0042-the-concept-doi-is-the-record, adr-0043-what-belongs-in-the-catalogue]
 tags: [runbook, curation, annotations]
 last_executed: 2026-08-31
 ---

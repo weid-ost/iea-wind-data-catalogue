@@ -7,7 +7,7 @@
   "identity_key": "10.5281/zenodo.4549875",
   "source_system": "zenodo",
   "source_id": "4851223",
-  "source_key": "8@10.5281/zenodo.4851223~m2",
+  "source_key": "8@10.5281/zenodo.4851223~m3",
   "source": {
     "title": "NREL/OpenOA: Release 2.2",
     "notes": "<ul>\n<li>IAV incorporation in AEP calculation</li>\n<li>Set power to 0 for windspeeds above and below cutoff in IEC power curve function.</li>\n<li>Split unit tests from regression tests and updated CI pipeline to run the full regression tests weekly.</li>\n<li>Flake8 with Black code style implemented with git hook to run on commit</li>\n<li>Updated long-term loss calculations to weight by monthly/daily long-term gross energy</li>\n<li>Added wind turbine asset data to example ENGIE project</li>\n<li>Reduce amount of time it takes to run regression tests by decreasing number of monte carlo iterations. Reduce tolerance of float comparisons in plant analysis regression test. Linear regression on daily data is removed from test.</li>\n<li>Bugfixes, such as fixing an improper python version specifier in setup.py and replacing some straggling references to the master branch with main.</li>\n</ul>",

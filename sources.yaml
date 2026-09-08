@@ -229,6 +229,22 @@ sources:
       - "iea-wind"
       - "iea-task-43"
       - "wind-energy"
+    # DISCOVERY ROUTES THAT ARE NOT AN IEA WIND ATTRIBUTION (ADR-0043).
+    #
+    # Every other route in this file is one: an IEA Wind Zenodo community, an
+    # IEA Wind GitHub organisation, an iea-wind.org Task page, or a query that
+    # names IEA Wind. Whatever they return is IEA Wind's by construction.
+    #
+    # `topic:wind-energy` is not. It is a label anyone can put on any
+    # repository, and it is what put a company API directory, a wind-farm video
+    # game and a nuclear-vs-wind comparison into an IEA Wind catalogue. A repo
+    # found ONLY this way is in the catalogue only if it cites, or is cited by,
+    # something already in it.
+    #
+    # `topic:iea-wind` and `topic:iea-task-43` ARE attributions: applying those
+    # topics is a claim about the work, made by the people who published it.
+    generic_routes:
+      - "topic:wind-energy"
     exclude_forks: true       # fixture gh-04 — or you catalogue fifty copies
     min_content_bytes: 2048   # fixture gh-10 — empty/template repos are noise
 

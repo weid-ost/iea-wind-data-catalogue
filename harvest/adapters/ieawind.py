@@ -82,7 +82,7 @@ from urllib.parse import urljoin, urlsplit
 
 from harvest import DEFAULT_MAX_RECORDS
 from harvest import config as _config
-from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
+from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register, stamp
 from harvest.doi import DoiDropLog, extract_dois, normalise_doi, resolve_or_drop
 from harvest.extract import (
     PROMPT_VERSION,
@@ -440,6 +440,14 @@ def map_crossref(payload: dict[str, Any]) -> dict[str, Any]:
 _MAPPERS = {"datacite": map_datacite, "crossref": map_crossref}
 
 
+#: Bumped when ``map()`` or ``harvest()`` starts recording something they did
+#: not record before, and folded into the change token so the improvement
+#: reaches records already harvested (ADR-0041). Without it a change here only
+#: ever applies to records harvested after it ships.
+#:
+#: 2 — record the discovery route as ``discovered_via`` (ADR-0043).
+MAPPING_VERSION = 2
+
 @register
 class IeaWindAdapter(Adapter):
     """The Tier-3 task-site adapter. Read the module docstring before editing."""
@@ -548,7 +556,10 @@ class IeaWindAdapter(Adapter):
             yield RawObservation(
                 source_system=self.source_name,
                 source_id=doi,
-                source_key=hashes[0] if len(hashes) == 1 else payload_hash(hashes),
+                source_key=stamp(
+                    hashes[0] if len(hashes) == 1 else payload_hash(hashes),
+                    MAPPING_VERSION,
+                ),
                 url=gathered["pages"][0]["url"],
                 payload={
                     "doi": doi,
@@ -558,6 +569,11 @@ class IeaWindAdapter(Adapter):
                     "pages": gathered["pages"],
                     "identifier_source": gathered.get("identifier_source", "page-doi-sweep"),
                 },
+                # Every iea-wind.org page IS an IEA Wind attribution: the DOI was
+                # found because IEA Wind published it on a Task page (ADR-0043).
+                discovered_via=sorted(
+                    {f"task-page:{task}" for task in gathered["tasks"] if task}
+                ) or ["task-page:iea-wind.org"],
             )
 
     # -- one page ----------------------------------------------------------

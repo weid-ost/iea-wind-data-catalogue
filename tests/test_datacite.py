@@ -26,7 +26,8 @@ from harvest.adapters.base import (
     get_adapter,
     run_adapter,
 )
-from harvest.adapters.datacite import REQUIRED_STATE, DataCiteAdapter
+from harvest.adapters.base import stamp
+from harvest.adapters.datacite import MAPPING_VERSION, REQUIRED_STATE, DataCiteAdapter
 from harvest.events import read_events
 from harvest.http import FetchResult
 from harvest.identity import slug_for_identity
@@ -620,7 +621,7 @@ class TestEndToEnd:
         identity = fixture_by_id("dc-01-canonical")["identity_key"]
         events_written = read_events(identity, events)
         assert len(events_written) == 2
-        assert events_written[-1].source_key == "2026-09-01T00:00:00Z"
+        assert events_written[-1].source_key == stamp("2026-09-01T00:00:00Z", MAPPING_VERSION)
         assert events_written[-1].source["title"].endswith("(corrected)")
 
     def test_records_pass_the_ckan_gate(self, tmp_path: Path) -> None:

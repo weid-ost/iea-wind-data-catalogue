@@ -9,23 +9,38 @@
       "source_id": "4000005",
       "source_key": "1",
       "actor": "harvest/zenodo",
-      "provenance": { "title": { "extraction_method": "api" } },
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
       "source": {
         "title": "Digital WRA data standard — worked examples",
         "doi": "10.5281/zenodo.4000004",
         "url": "https://zenodo.org/records/4000005",
-        "source_urls": ["https://zenodo.org/records/4000005"],
-        "authors": [{ "name": "Andersson, Karin" }],
+        "source_urls": [
+          "https://zenodo.org/records/4000005"
+        ],
+        "authors": [
+          {
+            "name": "Andersson, Karin"
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2025-05-20",
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "resource_kind": "dataset",
         "access_status": "open",
-        "keywords": ["wra"],
+        "keywords": [
+          "wra"
+        ],
         "iea_task": [],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     },
     {
       "observed_at": "2026-08-29T06:00:00Z",
@@ -36,25 +51,42 @@
       "source_key": "2",
       "actor": "harvest/zenodo",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "iea_task": { "extraction_method": "pattern" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "iea_task": {
+          "extraction_method": "pattern"
+        }
       },
       "source": {
         "title": "Digital WRA data standard — worked examples",
         "doi": "10.5281/zenodo.4000004",
         "url": "https://zenodo.org/records/4000005",
-        "source_urls": ["https://zenodo.org/records/4000005"],
-        "authors": [{ "name": "Andersson, Karin" }],
+        "source_urls": [
+          "https://zenodo.org/records/4000005"
+        ],
+        "authors": [
+          {
+            "name": "Andersson, Karin"
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2025-05-20",
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "resource_kind": "dataset",
         "access_status": "open",
-        "keywords": ["wra"],
-        "iea_task": ["task-43"],
+        "keywords": [
+          "wra"
+        ],
+        "iea_task": [
+          "task-43"
+        ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     }
   ],
   "annotations_yaml": {
@@ -62,7 +94,11 @@
     "actor": "curator:tom",
     "annotations": [
       {
-        "local": { "iea_task": ["task-49"] },
+        "local": {
+          "iea_task": [
+            "task-49"
+          ]
+        },
         "note": "Task 49 attribution from the IDEA workshop participant list",
         "observed_at": "2026-08-26T09:00:00Z"
       }

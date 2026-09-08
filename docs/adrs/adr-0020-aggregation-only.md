@@ -6,7 +6,7 @@ status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
 supersedes: [ADR-0009, ADR-0010]
-related: [adr-0021-canonical-record-is-a-ckan-package-dict, adr-0022-hosting-and-automation, adr-0038-source-metadata-is-never-updated-only-annotated]
+related: [adr-0021-canonical-record-is-a-ckan-package-dict, adr-0022-hosting-and-automation, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0043-what-belongs-in-the-catalogue]
 tags: [premise, product]
 ---
 

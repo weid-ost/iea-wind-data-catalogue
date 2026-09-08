@@ -10,18 +10,29 @@
       "source_key": "3",
       "actor": "harvest/zenodo",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "doi": { "extraction_method": "api" },
-        "license_id": { "extraction_method": "pattern" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "doi": {
+          "extraction_method": "api"
+        },
+        "license_id": {
+          "extraction_method": "pattern"
+        }
       },
       "source": {
         "title": "Lidar measurements from the Østerild campaign, 2021",
         "notes": "<p>Ten-minute statistics from a scanning lidar deployed at the Østerild National Test Centre during 2021.</p>",
         "doi": "10.5072/zenodo.1234566",
         "url": "https://sandbox.zenodo.org/records/1234567",
-        "source_urls": ["https://sandbox.zenodo.org/records/1234567"],
+        "source_urls": [
+          "https://sandbox.zenodo.org/records/1234567"
+        ],
         "authors": [
-          { "name": "Müller, Søren Ø.", "affiliation": "Technical University of Denmark" }
+          {
+            "name": "Müller, Søren Ø.",
+            "affiliation": "Technical University of Denmark"
+          }
         ],
         "publisher": "Zenodo",
         "published_date": "2024-06-01",
@@ -30,8 +41,13 @@
         "license_id": "cc-by",
         "resource_kind": "dataset",
         "access_status": "open",
-        "keywords": ["lidar", "wind energy"],
-        "iea_task": ["task-43"],
+        "keywords": [
+          "lidar",
+          "wind energy"
+        ],
+        "iea_task": [
+          "task-43"
+        ],
         "resources": [
           {
             "url": "https://sandbox.zenodo.org/records/1234567/files/osterild-lidar-2021.csv",
@@ -40,7 +56,10 @@
           }
         ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     },
     {
       "observed_at": "2026-08-24T03:12:00Z",
@@ -51,25 +70,41 @@
       "source_key": "2026-06-01T09:00:00Z",
       "actor": "harvest/datacite",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "doi": { "extraction_method": "api" },
-        "publisher": { "extraction_method": "api" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "doi": {
+          "extraction_method": "api"
+        },
+        "publisher": {
+          "extraction_method": "api"
+        }
       },
       "source": {
         "title": "Lidar measurements from the Østerild campaign, 2021",
         "doi": "10.5072/zenodo.1234566",
         "url": "https://doi.org/10.5072/zenodo.1234566",
-        "source_urls": ["https://doi.org/10.5072/zenodo.1234566"],
+        "source_urls": [
+          "https://doi.org/10.5072/zenodo.1234566"
+        ],
         "authors": [
-          { "name": "Müller, Søren Ø.", "affiliation": "Technical University of Denmark" },
-          { "name": "Okafor, Chidi", "affiliation": "National Renewable Energy Laboratory" }
+          {
+            "name": "Müller, Søren Ø.",
+            "affiliation": "Technical University of Denmark"
+          },
+          {
+            "name": "Okafor, Chidi",
+            "affiliation": "National Renewable Energy Laboratory"
+          }
         ],
         "publisher": "Technical University of Denmark",
         "published_date": "2024-06-01",
         "license_raw": "CC-BY-4.0",
         "license_id": "cc-by",
         "resource_kind": "dataset",
-        "keywords": ["remote sensing"],
+        "keywords": [
+          "remote sensing"
+        ],
         "related_identifiers": [
           {
             "relation": "IsVersionOf",
@@ -78,7 +113,10 @@
           }
         ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "query:\"IEA Wind Task\""
+      ]
     },
     {
       "observed_at": "2026-08-24T03:13:00Z",
@@ -89,20 +127,32 @@
       "source_key": "9f1c2ae0d3b4",
       "actor": "harvest/github",
       "provenance": {
-        "doi": { "extraction_method": "pattern" },
-        "title": { "extraction_method": "api" }
+        "doi": {
+          "extraction_method": "pattern"
+        },
+        "title": {
+          "extraction_method": "api"
+        }
       },
       "source": {
         "title": "osterild-lidar",
         "doi": "10.5072/zenodo.1234566",
         "url": "https://github.com/IEA-Task-43/osterild-lidar",
-        "source_urls": ["https://github.com/IEA-Task-43/osterild-lidar"],
+        "source_urls": [
+          "https://github.com/IEA-Task-43/osterild-lidar"
+        ],
         "license_raw": "MIT",
         "license_id": "mit",
         "resource_kind": "software",
-        "keywords": ["lidar", "python"],
+        "keywords": [
+          "lidar",
+          "python"
+        ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "org:IEA-Task-43"
+      ]
     },
     {
       "observed_at": "2026-08-24T03:14:00Z",
@@ -113,17 +163,28 @@
       "source_key": "c0ffee1234567890",
       "actor": "harvest/ieawind",
       "provenance": {
-        "doi": { "extraction_method": "pattern" },
-        "iea_task": { "extraction_method": "pattern" }
+        "doi": {
+          "extraction_method": "pattern"
+        },
+        "iea_task": {
+          "extraction_method": "pattern"
+        }
       },
       "source": {
         "title": "Østerild lidar campaign data",
         "doi": "10.5072/zenodo.1234566",
         "url": "https://iea-wind.org/task43/outputs/",
-        "source_urls": ["https://iea-wind.org/task43/outputs/"],
-        "iea_task": ["task-43"],
+        "source_urls": [
+          "https://iea-wind.org/task43/outputs/"
+        ],
+        "iea_task": [
+          "task-43"
+        ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "task-page:task-43"
+      ]
     }
   ]
 }

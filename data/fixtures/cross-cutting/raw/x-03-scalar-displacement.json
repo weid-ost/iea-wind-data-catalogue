@@ -9,19 +9,32 @@
       "source_id": "3000003",
       "source_key": "1",
       "actor": "harvest/zenodo",
-      "provenance": { "title": { "extraction_method": "api" } },
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
       "source": {
         "title": "Aeroelastic model of the IEA 15MW reference turbine",
         "url": "https://zenodo.org/records/3000003",
-        "source_urls": ["https://zenodo.org/records/3000003"],
-        "authors": [{ "name": "Okafor, Chidi" }],
+        "source_urls": [
+          "https://zenodo.org/records/3000003"
+        ],
+        "authors": [
+          {
+            "name": "Okafor, Chidi"
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2025-01-15",
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "access_status": "open",
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     },
     {
       "observed_at": "2026-08-28T09:00:00Z",
@@ -32,14 +45,24 @@
       "source_key": "2",
       "actor": "harvest/zenodo",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "resource_kind": { "extraction_method": "api" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "resource_kind": {
+          "extraction_method": "api"
+        }
       },
       "source": {
         "title": "Aeroelastic model of the IEA 15MW reference turbine",
         "url": "https://zenodo.org/records/3000003",
-        "source_urls": ["https://zenodo.org/records/3000003"],
-        "authors": [{ "name": "Okafor, Chidi" }],
+        "source_urls": [
+          "https://zenodo.org/records/3000003"
+        ],
+        "authors": [
+          {
+            "name": "Okafor, Chidi"
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2025-01-15",
         "license_raw": "cc-by-4.0",
@@ -47,7 +70,10 @@
         "resource_kind": "software",
         "access_status": "open",
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     }
   ],
   "annotations_yaml": {
@@ -55,7 +81,9 @@
     "actor": "curator:tom",
     "annotations": [
       {
-        "local": { "resource_kind": "model" },
+        "local": {
+          "resource_kind": "model"
+        },
         "note": "the source does not type it; it is an aeroelastic model",
         "observed_at": "2026-08-26T12:00:00Z"
       }

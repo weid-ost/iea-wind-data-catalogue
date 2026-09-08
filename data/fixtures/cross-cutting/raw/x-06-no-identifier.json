@@ -42,7 +42,10 @@
           "task-65"
         ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "task-page:task-43"
+      ]
     },
     {
       "observed_at": "2026-08-31T03:11:07Z",
@@ -84,7 +87,10 @@
           "task-65"
         ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "task-page:task-43"
+      ]
     }
   ],
   "expected_proposals": [

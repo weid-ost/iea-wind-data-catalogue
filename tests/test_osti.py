@@ -16,7 +16,9 @@ import pytest
 
 from harvest import config
 from harvest.adapters.base import SourceConfig, SourceUnreachable, run_adapter
+from harvest.adapters.base import stamp
 from harvest.adapters.osti import (
+    MAPPING_VERSION,
     OSTI_DOI_PREFIXES,
     PRODUCT_TYPES,
     TASK_GROUPS,
@@ -161,7 +163,7 @@ class TestFixtures:
     @pytest.mark.parametrize("fixture", ALL_FIXTURES, ids=lambda f: f["fixture_id"])
     def test_the_source_key_is_the_payloads_entry_date(self, fixture: dict) -> None:
         payload = json.loads((FIXTURES / fixture["raw"]).read_text(encoding="utf-8"))
-        assert fixture["source_key"] == payload["entry_date"]
+        assert fixture["source_key"] == stamp(payload["entry_date"], MAPPING_VERSION)
 
     @pytest.mark.parametrize("fixture", ALL_FIXTURES, ids=lambda f: f["fixture_id"])
     def test_map_is_pure_and_repeatable(self, fixture: dict) -> None:
@@ -434,13 +436,13 @@ class TestTaskAttribution:
 class TestSourceKey:
     def test_it_is_the_entry_date_when_osti_provides_one(self) -> None:
         payload = payload_of("osti-01-canonical")
-        assert OstiAdapter().source_key(payload) == payload["entry_date"]
+        assert OstiAdapter().source_key(payload) == stamp(payload["entry_date"], MAPPING_VERSION)
 
     def test_it_falls_back_to_a_hash_when_entry_date_is_missing(self) -> None:
         payload = {k: v for k, v in payload_of("osti-01-canonical").items()
                    if k != "entry_date"}
         key = OstiAdapter().source_key(payload)
-        assert key != "" and len(key) == 16
+        assert key != "" and len(key) == 16 + len(f"~m{MAPPING_VERSION}")
 
     def test_the_fallback_hash_ignores_fields_that_churn(self) -> None:
         base = {k: v for k, v in payload_of("osti-01-canonical").items()
@@ -489,7 +491,7 @@ class TestHarvest:
         assert observation.payload == payload
         assert observation.source_system == "osti"
         assert observation.source_id == "2447928"
-        assert observation.source_key == payload["entry_date"]
+        assert observation.source_key == stamp(payload["entry_date"], MAPPING_VERSION)
         assert observation.url == "https://www.osti.gov/biblio/2447928"
 
     def test_one_record_is_not_harvested_twice_across_queries(self) -> None:

@@ -2,7 +2,7 @@
   "fixture_id": "x-05-low-confidence",
   "fixture_kind": "record",
   "case": "INVENTED — Tier-3 fields the model extracted at low confidence: the machine-inferred badge appears on exactly those fields, and the record stays visible",
-  "note": "Catalogue row x-05, record side. ADR-0028 §5 requires a visible badge on every field whose extraction_method is `llm`, and §7 forbids hiding low-confidence records — the badge is the mitigation, not suppression. Two fields here came from the model at 0.42 and 0.38; `iea_task` came from a pattern match and must therefore carry NO badge. The rendering side of the same row is data/fixtures/rendering/rep-05-llm-inferred.json, which is what /dev/components draws.",
+  "note": "Catalogue row x-05, record side. ADR-0028 §5 requires a visible badge on every field whose extraction_method is `llm`, and §7 forbids hiding low-confidence records — the badge is the mitigation, not suppression. Two fields here came from the model at 0.42 and 0.38; `iea_task` came from a pattern match and must therefore carry NO badge. The rendering side of the same row is data/fixtures/rendering/rep-05-llm-inferred.json, which is what /dev/components draws.\n\n`resource_type` joins the badged set because on this record it is only the generic child of a resource_kind the model guessed — no source stated a narrower type, so the type is exactly as well-known as the kind is, and inherits its provenance (ADR-0028, ADR-0040). Where a source's own vocabulary or the IEA Wind title rule decides the type, it carries `api` or `pattern` instead and is NOT badged, even if a model guessed the kind.",
   "raw": "raw/x-05-low-confidence.json",
   "identity_key": "ieawind|task54/example-low-confidence-page",
   "identity_keys": [
@@ -13,6 +13,7 @@
   ],
   "expected_llm_fields": [
     "resource_kind",
+    "resource_type",
     "title"
   ],
   "expected_confidence_ceiling": 0.5,
@@ -39,6 +40,14 @@
         "value": "[\"task-54\"]"
       },
       {
+        "key": "inclusion_basis",
+        "value": "direct"
+      },
+      {
+        "key": "inclusion_evidence",
+        "value": "Found through task-page:task-43, which is an IEA Wind attribution."
+      },
+      {
         "key": "last_seen",
         "value": "2026-08-24T04:00:00Z"
       },
@@ -48,10 +57,14 @@
       },
       {
         "key": "provenance",
-        "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"confidence\":0.38,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.42,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
+        "value": "{\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"ieawind\"},\"resource_kind\":{\"confidence\":0.38,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"resource_type\":{\"confidence\":0.38,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"},\"title\":{\"confidence\":0.42,\"extraction_method\":\"llm\",\"model\":\"openai/gpt-4o-mini\",\"prompt_version\":\"v1\",\"source_system\":\"ieawind\"}}"
       },
       {
         "key": "resource_kind",
+        "value": "report"
+      },
+      {
+        "key": "resource_type",
         "value": "report"
       },
       {
@@ -121,6 +134,14 @@
         {
           "key": "iea_task",
           "value": "[\"task-54\"]"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through task-page:task-43, which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",

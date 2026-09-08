@@ -22,11 +22,13 @@ Source
     useless at a five-record cap. Relevance ranking, verified live, returns the
     right works.
 
-    Every request carries ``select=...`` (see :data:`SELECT_FIELDS`). This is
-    an ordinary API parameter: it drops the ``reference`` array — tens of
-    kilobytes of citations we neither use nor want in a fixture — and keeps
-    every field this adapter maps. What comes back is still verbatim what the
-    API said for that request.
+    Every request carries ``select=...`` (see :data:`SELECT_FIELDS`), an
+    ordinary API parameter that keeps every field this adapter maps and drops
+    the rest. What comes back is still verbatim what the API said for that
+    request. ``reference`` is now among the requested fields: it is bulky, but
+    it is the only place a "this work cites that work" edge is stated, and the
+    catalogue's scope rule needs those edges (ADR-0043). ``map()`` keeps the
+    reference DOIs and discards everything else in each entry.
 
 Source key (ADR-0026)
     ``deposited.date-time`` — **not** ``indexed``. ``indexed`` is Crossref's
@@ -114,7 +116,7 @@ from typing import Any, Iterable, Iterator
 from urllib.parse import urlencode
 
 from harvest import DEFAULT_MAX_RECORDS
-from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
+from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register, stamp
 from harvest.doi import DoiDropLog, normalise_doi, resolve_or_drop
 from harvest.http import HarvestClient
 from harvest.identity import identity_key
@@ -143,9 +145,14 @@ log = logging.getLogger(__name__)
 API = "https://api.crossref.org/works"
 
 #: Fields requested with ``select``. Everything this adapter maps, and nothing
-#: else — in particular not ``reference``, which is the bulk of a Crossref item
-#: and is of no use to a catalogue of metadata and links. Verified against the
-#: route's own list of valid selects on 2026-08-31.
+#: else. Verified against the route's own list of valid selects on 2026-08-31.
+#:
+#: ``reference`` was deliberately excluded — it is the bulk of a Crossref item
+#: and "of no use to a catalogue of metadata and links". That was true until the
+#: catalogue acquired a scope rule (ADR-0043): a work is in scope if it cites,
+#: or is cited by, something already in the catalogue, and a reference list is
+#: the only place that edge is stated. Only the DOIs are kept — the rest of each
+#: reference entry is discarded in ``map()``.
 SELECT_FIELDS: tuple[str, ...] = (
     "DOI", "type", "title", "subtitle", "short-title", "original-title",
     "container-title", "short-container-title", "group-title", "event",
@@ -156,8 +163,17 @@ SELECT_FIELDS: tuple[str, ...] = (
     "subject", "ISSN", "issn-type", "ISBN", "relation", "update-to",
     "updated-by", "update-policy", "funder", "alternative-id", "prefix",
     "member", "references-count", "is-referenced-by-count", "archive",
-    "content-domain", "assertion", "standards-body",
+    "content-domain", "assertion", "standards-body", "reference",
 )
+
+#: Bumped when ``map()`` starts preserving something it did not preserve before,
+#: and folded into the change token so the improvement reaches records already
+#: harvested (ADR-0041). Without it a mapping fix only ever applies to records
+#: harvested after it ships.
+#:
+#: 2 — preserve the DOIs of the work's reference list as
+#:     ``extra.crossref_references`` (ADR-0043).
+MAPPING_VERSION = 2
 
 #: Crossref's ``type`` vocabulary mapped to the catalogue's ``resource_kind``.
 #: Unlisted types fall back to ``publication``: Crossref registers published
@@ -518,6 +534,15 @@ def source_key_for(item: dict[str, Any]) -> str:
     :func:`~harvest.adapters.base.payload_hash` over the content fields, with
     ``indexed`` and the citation counters excluded for exactly the same reason.
     """
+    if _deposited_key(item):
+        return stamp(_deposited_key(item), MAPPING_VERSION)
+    return stamp(
+        payload_hash({k: v for k, v in item.items() if k not in _VOLATILE_KEYS}),
+        MAPPING_VERSION,
+    )
+
+
+def _deposited_key(item: dict[str, Any]) -> str:
     deposited = item.get("deposited")
     if isinstance(deposited, dict):
         for key in ("date-time", "timestamp"):
@@ -527,7 +552,25 @@ def source_key_for(item: dict[str, Any]) -> str:
         stamped = _date_from_parts(deposited)
         if stamped:
             return stamped
-    return payload_hash({k: v for k, v in item.items() if k not in _VOLATILE_KEYS})
+    return ""
+
+
+def _reference_dois(item: dict[str, Any]) -> list[str]:
+    """The DOIs a work cites, deduplicated, order preserved.
+
+    Only the DOIs. A Crossref reference entry also carries the cited work's
+    title, authors, journal, volume and page — none of which the catalogue
+    uses, all of which would bloat every event and every fixture. A citation
+    edge needs an identifier and nothing else.
+    """
+    out: list[str] = []
+    for entry in item.get("reference") or []:
+        if not isinstance(entry, dict):
+            continue
+        doi = normalise_doi(entry.get("DOI"))
+        if doi and doi not in out:
+            out.append(doi)
+    return out
 
 
 def _extra(item: dict[str, Any], own_doi: str | None, preprint_of: str | None) -> dict[str, Any]:
@@ -537,6 +580,11 @@ def _extra(item: dict[str, Any], own_doi: str | None, preprint_of: str | None) -
     ``source.extra`` is never rendered unless a curator opts in.
     """
     extra: dict[str, Any] = {"crossref_type": str(item.get("type", ""))}
+
+    # The citation edges the scope rule runs on (ADR-0043). DOIs only.
+    references = _reference_dois(item)
+    if references:
+        extra["crossref_references"] = references
 
     title_raw = _first(item.get("title"))
     plain, rich = _plain(title_raw), _rich(title_raw)
@@ -634,33 +682,43 @@ class CrossrefAdapter(Adapter):
         self._owns_client = False
         #: Every DOI this adapter refused to accept, for the run report.
         self.drop_log = DoiDropLog()
+        #: ``{doi: [discovery route]}``. Crossref collects across every query
+        #: and dedupes by DOI before yielding, so the route that found a work
+        #: has to be remembered here or it is gone by the time it is needed
+        #: (ADR-0043).
+        self._routes: dict[str, list[str]] = {}
 
     # -- configuration -----------------------------------------------------
     def _api(self) -> str:
         return str(self.config.get("api") or API)
 
-    def _queries(self) -> list[dict[str, str]]:
-        """The configured query list, as ``[{param: value}, ...]``."""
+    def _queries(self) -> list[tuple[str, dict[str, str]]]:
+        """``[(discovery route, {param: value})]`` — the route travels with the
+        query, because the catalogue's scope rule turns on why a record was
+        fetched (ADR-0043) and the query is otherwise gone by the time a payload
+        is in hand."""
         configured = self.config.get("queries") or []
-        queries: list[dict[str, str]] = []
+        queries: list[tuple[str, dict[str, str]]] = []
         for entry in configured:
             if isinstance(entry, dict) and isinstance(entry.get("params"), dict):
-                queries.append({str(k): str(v) for k, v in entry["params"].items()})
+                name = str(entry.get("name") or entry["params"])
+                queries.append((f"query:{name}", {str(k): str(v) for k, v in entry["params"].items()}))
             elif isinstance(entry, str) and entry.strip():
-                queries.append({"query.bibliographic": entry.strip()})
-        return queries or [{"query.title": "IEA Wind Task"}]
+                queries.append((f"query:{entry.strip()}", {"query.bibliographic": entry.strip()}))
+        return queries or [("query:iea-wind-task-by-title", {"query.title": "IEA Wind Task"})]
 
-    def _query_urls(self, rows: int) -> list[str]:
-        """One URL per configured query, with ``select``, ``rows`` and ``mailto``."""
+    def _query_urls(self, rows: int) -> list[tuple[str, str]]:
+        """``[(discovery route, url)]``, one per configured query, with
+        ``select``, ``rows`` and ``mailto``."""
         api, urls = self._api(), []
         mailto = str(self.config.get("mailto") or "").strip()
-        for params in self._queries():
+        for route, params in self._queries():
             query = dict(params)
             query["rows"] = str(max(1, rows))
             query["select"] = ",".join(SELECT_FIELDS)
             if mailto:
                 query["mailto"] = mailto
-            urls.append(f"{api}?{urlencode(query)}")
+            urls.append((route, f"{api}?{urlencode(query)}"))
         return urls
 
     # -- harvest -----------------------------------------------------------
@@ -685,6 +743,7 @@ class CrossrefAdapter(Adapter):
                 source_key=source_key_for(item),
                 url=str(item.get("URL") or "") or None,
                 payload=item,  # VERBATIM
+                discovered_via=self._routes.get(normalise_doi(doi) or doi, []),
             )
 
     def _open_client(self) -> HarvestClient:
@@ -704,7 +763,7 @@ class CrossrefAdapter(Adapter):
         failures: list[str] = []
         urls = self._query_urls(rows)
 
-        for url in urls:
+        for route, url in urls:
             result = client.get(url)
             if not result.ok:
                 failures.append(result.error or f"HTTP {result.status_code}")
@@ -723,6 +782,11 @@ class CrossrefAdapter(Adapter):
                     self.drop_log.record(str(item.get("DOI")), "malformed", "crossref listing")
                     continue
                 collected.setdefault(doi, item)
+                # A work two queries both return was discovered by both, and
+                # the union is what the scope rule should see.
+                routes = self._routes.setdefault(doi, [])
+                if route not in routes:
+                    routes.append(route)
 
         if failures and not collected:
             raise SourceUnreachable("; ".join(failures))

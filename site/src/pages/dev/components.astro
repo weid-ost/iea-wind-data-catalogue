@@ -24,6 +24,7 @@ import MetadataList from '../../components/MetadataList.astro';
 import Pagination from '../../components/Pagination.astro';
 import Panel from '../../components/Panel.astro';
 import MergedBanner from '../../components/MergedBanner.astro';
+import OutOfScopeBanner from '../../components/OutOfScopeBanner.astro';
 import ProvenanceBadge from '../../components/ProvenanceBadge.astro';
 import ResourceTypeBadge from '../../components/ResourceTypeBadge.astro';
 import RecordCard from '../../components/RecordCard.astro';
@@ -294,6 +295,17 @@ const vocabularyKinds = resourceKinds.map((kind) => ({ kind, types: typesOfKind(
           and the record is never deleted — the page says what was tried, when,
           and what came back.
         </p>
+      </div>
+
+      <div class="case">
+        <h3>Out-of-scope banner — kept, and not listed</h3>
+        <p class="secondary">
+          What a visitor sees on a record that meets none of the three inclusion
+          tests (ADR-0043). Almost always a repository found through the generic
+          <code>wind-energy</code> GitHub topic. Not listed is not deleted: the
+          page and the URL stay, and the test is re-applied on every rebuild.
+        </p>
+        <OutOfScopeBanner evidence="No IEA Wind attribution, and no citation link to anything in the catalogue." />
       </div>
 
       <div class="case">

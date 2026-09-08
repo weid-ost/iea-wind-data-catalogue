@@ -68,7 +68,7 @@ from typing import Any, Iterable
 from urllib.parse import urlencode
 
 from harvest import DEFAULT_MAX_RECORDS
-from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
+from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register, stamp
 from harvest.doi import DoiDropLog, normalise_doi, resolve_or_drop
 from harvest.http import HarvestClient
 from harvest.identity import identity_key
@@ -302,6 +302,14 @@ def iea_tasks(*texts: str | None) -> list[str]:
     return found
 
 
+#: Bumped when ``map()`` or ``harvest()`` starts recording something they did
+#: not record before, and folded into the change token so the improvement
+#: reaches records already harvested (ADR-0041). Without it a change here only
+#: ever applies to records harvested after it ships.
+#:
+#: 2 — record the discovery route as ``discovered_via`` (ADR-0043).
+MAPPING_VERSION = 2
+
 @register
 class OstiAdapter(Adapter):
     """DOE's Office of Scientific and Technical Information."""
@@ -331,11 +339,20 @@ class OstiAdapter(Adapter):
             self._own_client.close()
             self._own_client = None
 
-    def _query_urls(self) -> list[str]:
+    def _query_urls(self) -> list[tuple[str, str]]:
+        """``[(discovery route, url)]`` — see ADR-0043 for why the route travels.
+
+        OSTI's free-text search matches the whole record, including text this
+        adapter never stores, so the query that found a record is often the
+        ONLY surviving evidence that it mentions IEA Wind at all.
+        """
         api = str(self.config.get("api") or OSTI_API)
         rows = int(self.config.get("rows", 25) or 25)
         queries = self.config.get("queries") or ['"IEA Wind"']
-        return [f"{api}?{urlencode({'q': str(query), 'rows': rows})}" for query in queries]
+        return [
+            (f"query:{query}", f"{api}?{urlencode({'q': str(query), 'rows': rows})}")
+            for query in queries
+        ]
 
     @staticmethod
     def _records(body: Any) -> list[dict[str, Any]]:
@@ -353,15 +370,18 @@ class OstiAdapter(Adapter):
         """``entry_date`` if OSTI provided one, else the curated payload hash."""
         entry_date = _text(payload.get("entry_date"))
         if entry_date:
-            return entry_date
-        return payload_hash({field: payload.get(field) for field in _HASH_FIELDS})
+            return stamp(entry_date, MAPPING_VERSION)
+        return stamp(
+            payload_hash({field: payload.get(field) for field in _HASH_FIELDS}),
+            MAPPING_VERSION,
+        )
 
     def harvest(self, max_records: int = DEFAULT_MAX_RECORDS) -> Iterable[RawObservation]:
         client = self._http()
         seen: set[str] = set()
         yielded = 0
 
-        for url in self._query_urls():
+        for route, url in self._query_urls():
             if yielded >= max_records:
                 return
             result = client.get(url)
@@ -402,6 +422,7 @@ class OstiAdapter(Adapter):
                     source_key=self.source_key(payload),
                     url=_link_href(payload, "citation") or f"{OSTI_BIBLIO}{osti_id}",
                     payload=payload,  # VERBATIM
+                    discovered_via=[route],
                 )
                 yielded += 1
 

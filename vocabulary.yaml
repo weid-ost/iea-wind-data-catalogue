@@ -385,6 +385,29 @@ terms:
       merged-away record is retained and stays citable at its own URL — it is
       hidden from the listings, never deleted.
 
+  - name: inclusion-basis
+    label: Why this is in the catalogue
+    definition: >-
+      The grounds on which a record qualifies for the catalogue, recorded per
+      record. "Direct" means it was found through an IEA Wind community,
+      organisation, Task page or a source query naming IEA Wind, or it carries a
+      Task attribution. "Cites" means it cites something the catalogue already
+      holds. "Cited by" means something the catalogue holds cites it. A record
+      that meets none of the three is out of scope: kept and still citable at
+      its own URL, but not listed. "Unassessed" is a fifth state, and a
+      different thing from "out of scope": it means the record was harvested
+      before the catalogue started recording how it was found, so nothing has
+      been established either way. Those are listed, and marked, until a
+      re-scrape settles them.
+
+  - name: out-of-scope
+    label: Out of scope
+    definition: >-
+      A record that meets none of the three inclusion tests. It is not deleted —
+      nothing here ever is — but it is not listed either. The decision is made
+      afresh every time the catalogue is rebuilt, so a repository that later
+      gets cited by a Task report comes back on its own.
+
   - name: withdrawn
     label: Withdrawn
     definition: >-

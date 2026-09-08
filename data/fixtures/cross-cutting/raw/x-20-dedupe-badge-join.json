@@ -45,7 +45,10 @@
           }
         ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     },
     {
       "observed_at": "2026-08-24T03:13:00Z",
@@ -86,7 +89,10 @@
           }
         ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "org:IEA-Task-43"
+      ]
     }
   ],
   "expected_merges": [

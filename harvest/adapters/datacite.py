@@ -75,7 +75,7 @@ from typing import Any, Iterable
 from urllib.parse import urlencode
 
 from harvest import DEFAULT_MAX_RECORDS
-from harvest.adapters.base import Adapter, SourceUnreachable, register
+from harvest.adapters.base import Adapter, SourceUnreachable, register, stamp
 from harvest.doi import normalise_doi
 from harvest.http import HarvestClient
 from harvest.identity import identity_key
@@ -197,6 +197,14 @@ def _as_list(value: Any) -> list[Any]:
     return [value]
 
 
+#: Bumped when ``map()`` or ``harvest()`` starts recording something they did
+#: not record before, and folded into the change token so the improvement
+#: reaches records already harvested (ADR-0041). Without it a change here only
+#: ever applies to records harvested after it ships.
+#:
+#: 2 — record the discovery route as ``discovered_via`` (ADR-0043).
+MAPPING_VERSION = 2
+
 @register
 class DataCiteAdapter(Adapter):
     """Harvest IEA-Wind-relevant DOIs from the DataCite REST API."""
@@ -224,8 +232,16 @@ class DataCiteAdapter(Adapter):
             self._own_client.close()
             self._own_client = None
 
-    def _search_urls(self, page_size: int) -> list[str]:
-        """One URL per configured query. Config lives in ``sources.yaml`` only."""
+    def _search_urls(self, page_size: int) -> list[tuple[str, str]]:
+        """``[(discovery route, url)]``, one per configured query.
+
+        The route travels with the URL because the catalogue's scope rule
+        (ADR-0043) turns on *why* a record was fetched, and by the time a
+        payload is in hand the query that found it is otherwise gone. Every
+        DataCite query in ``sources.yaml`` names IEA Wind, so every route here
+        is an attribution — but that is a fact about the register, and the
+        register is where it is asserted, not here.
+        """
         api = str(self.config.get("api") or DEFAULT_API)
         queries = [str(q) for q in (self.config.get("queries") or []) if str(q).strip()]
         if not queries:
@@ -234,7 +250,7 @@ class DataCiteAdapter(Adapter):
         urls = []
         for query in queries:
             params = [("query", query), ("page[size]", str(page_size)), ("sort", sort)]
-            urls.append(f"{api}?{urlencode(params)}")
+            urls.append((f"query:{query}", f"{api}?{urlencode(params)}"))
         return urls
 
     @staticmethod
@@ -256,7 +272,7 @@ class DataCiteAdapter(Adapter):
         text = raw[:-1] if raw.endswith("Z") else raw
         if "." in text:
             text = text.split(".", 1)[0]
-        return f"{text}Z" if raw.endswith("Z") else text
+        return stamp(f"{text}Z" if raw.endswith("Z") else text, MAPPING_VERSION)
 
     @staticmethod
     def is_findable(payload: dict[str, Any]) -> bool:
@@ -283,7 +299,7 @@ class DataCiteAdapter(Adapter):
         reached = 0
         errors: list[str] = []
 
-        for url in urls:
+        for route, url in urls:
             if yielded >= max_records:
                 break
             result = self._client().get(url)
@@ -332,6 +348,7 @@ class DataCiteAdapter(Adapter):
                     source_key=self.source_key_for(item),
                     url=attributes.get("url") or None,
                     payload=item,          # VERBATIM
+                    discovered_via=[route],
                 )
                 yielded += 1
 

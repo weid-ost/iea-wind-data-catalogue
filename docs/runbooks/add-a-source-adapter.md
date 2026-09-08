@@ -20,7 +20,7 @@ first — it is the interface document and it wins over this page.
 
 ---
 
-## 1. Decide four things before writing code
+## 1. Decide five things before writing code
 
 1. **The source name.** One string that is simultaneously the module name
    (`harvest/adapters/<name>.py`), the class's `source_name`, the key under
@@ -37,6 +37,15 @@ first — it is the interface document and it wins over this page.
    timestamp turns append-on-change into append-always and defeats the design.
 4. **The identity rule.** DOI if there is one; else `source_system|source_id`;
    else the fragile title-hash, used knowingly. See [[record-format]] §1.
+5. **The discovery routes, and whether each one is an IEA Wind attribution.**
+   Every observation carries `discovered_via` — why this record was fetched, as
+   `"<kind>:<value>"`. Most routes are an attribution by construction: an IEA
+   Wind community, organisation or Task page, or a query that names IEA Wind.
+   Any route that is **not** goes in `generic_routes` in `sources.yaml`, in the
+   same change, because a record reached only that way has to earn its place by
+   citing or being cited by something already in the catalogue
+   ([[adr-0043-what-belongs-in-the-catalogue]]). Getting this wrong is how a
+   company API directory and a wind-farm video game ended up in the catalogue.
 
 ## 2. Register the source
 
@@ -88,9 +97,13 @@ class MySourceAdapter(Adapter):
                 yield RawObservation(
                     source_system=self.source_name,
                     source_id=str(item["id"]),
-                    source_key=str(item["revision_id"]),
+                    source_key=stamp(str(item["revision_id"]), MAPPING_VERSION),
                     url=item.get("links", {}).get("html"),
                     payload=item,                      # VERBATIM. No cleaning.
+                    # WHY this record was fetched. Set here, in harvest(), which
+                    # is the only place that knows; run_adapter carries it onto
+                    # the event so map() stays pure (ADR-0043).
+                    discovered_via=[f"query:{query_name}"],
                 )
 
     def map(self, raw: RawObservation) -> MappedObservation:
@@ -247,6 +260,13 @@ churns — go back to §1.3.
 
 - [ ] `sources.yaml` entry, with a `source_key:` string that describes the real
       semantics and a `precedence:`
+- [ ] `MAPPING_VERSION` at the top of the module, folded into the source key
+      with `harvest.adapters.base.stamp`, and **bumped whenever the adapter
+      starts recording something new** — otherwise the change never reaches the
+      records already harvested ([[adr-0041-a-mapping-improvement-must-reach-the-existing-corpus]])
+- [ ] every observation carries `discovered_via`, and any route that is not an
+      IEA Wind attribution is listed in `generic_routes`
+      ([[adr-0043-what-belongs-in-the-catalogue]])
 - [ ] `harvest/adapters/<name>.py`, `@register`, `source_name` matching in four
       places
 - [ ] `harvest()` honours `limit`, uses `HarvestClient`, yields verbatim

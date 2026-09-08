@@ -9,7 +9,11 @@
       "source_id": "task11/publications#7",
       "source_key": "9a8b7c6d5e4f3021",
       "actor": "harvest/ieawind",
-      "provenance": { "doi": { "extraction_method": "pattern" } },
+      "provenance": {
+        "doi": {
+          "extraction_method": "pattern"
+        }
+      },
       "source": {
         "title": "Task 11 final technical report",
         "doi": "10.5281/zenodo.8000008",
@@ -18,13 +22,19 @@
           "https://iea-wind.org/task11/publications/",
           "https://zenodo.org/records/8000009"
         ],
-        "authors": [{ "name": "Nowak, Piotr" }],
+        "authors": [
+          {
+            "name": "Nowak, Piotr"
+          }
+        ],
         "published_date": "2019",
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "resource_kind": "report",
         "access_status": "open",
-        "iea_task": ["task-11"],
+        "iea_task": [
+          "task-11"
+        ],
         "resources": [
           {
             "url": "https://iea-wind.org/wp-content/uploads/task11-final.pdf",
@@ -33,7 +43,10 @@
           }
         ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "task-page:task-43"
+      ]
     }
   ],
   "http_responses": {
@@ -45,6 +58,8 @@
     "https://iea-wind.org/task11/publications/",
     "https://iea-wind.org/wp-content/uploads/task11-final.pdf"
   ],
-  "expected_unreachable_hosts": ["iea-wind.org"],
+  "expected_unreachable_hosts": [
+    "iea-wind.org"
+  ],
   "expected_record_unchanged": true
 }

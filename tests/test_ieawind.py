@@ -24,7 +24,9 @@ import pytest
 
 from harvest import config
 from harvest.adapters.base import SourceConfig, SourceUnreachable, payload_hash, run_adapter
+from harvest.adapters.base import stamp
 from harvest.adapters.ieawind import (
+    MAPPING_VERSION,
     IeaWindAdapter,
     classify_page,
     map_crossref,
@@ -231,7 +233,7 @@ class TestIea01Canonical:
 
     def test_the_source_key_is_the_page_content_hash(self) -> None:
         content = main_text((FIXTURES / "raw" / "iea-01-canonical.html").read_text(encoding="utf-8"))
-        assert content_hash(content) == self.fixture["source_key"]
+        assert stamp(content_hash(content), MAPPING_VERSION) == self.fixture["source_key"]
 
     def test_the_page_supplies_the_task_and_a_url_and_nothing_else(self) -> None:
         source = self.fixture["source"]
@@ -335,7 +337,7 @@ class TestIea06MultiTask:
         payload = json.loads((FIXTURES / self.fixture["raw"]).read_text(encoding="utf-8"))
         hashes = sorted({page["content_hash"] for page in payload["pages"]})
         assert len(hashes) == 2
-        assert payload_hash(hashes) == self.fixture["source_key"], (
+        assert stamp(payload_hash(hashes), MAPPING_VERSION) == self.fixture["source_key"], (
             "the record must re-emit when EITHER citing page moves"
         )
 

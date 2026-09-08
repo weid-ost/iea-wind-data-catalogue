@@ -7,7 +7,7 @@
   "identity_key": "10.5281/zenodo.4549875",
   "source_system": "zenodo",
   "source_id": "18424146",
-  "source_key": "4@10.5281/zenodo.18424146~m2",
+  "source_key": "4@10.5281/zenodo.18424146~m3",
   "source": {
     "title": "OpenOA: An Open-Source Codebase For Operational Analysis of Wind Farms",
     "notes": "What's Changed\n<ul>\n<li>Hourly reanalysis downloading by @ejsimley in https://github.com/NatLabRockies/OpenOA/pull/296</li>\n<li>Enhancement: Add flexibility to the Monte Carlo analysis PlantData initialization by @RHammond2 in https://github.com/NatLabRockies/OpenOA/pull/307</li>\n<li>Enhancement: Update supported Python versions by @RHammond2 in https://github.com/NatLabRockies/OpenOA/pull/309</li>\n<li>Freestream wind speed heterogeneity corrections for wake loss analysis by @ejsimley in https://github.com/NatLabRockies/OpenOA/pull/310</li>\n<li>Code cleanup for versioning updates by @RHammond2 in https://github.com/NatLabRockies/OpenOA/pull/317</li>\n<li>Release 3.2 by @RHammond2 in https://github.com/NatLabRockies/OpenOA/pull/318</li>\n</ul>\n<p><strong>Full Changelog</strong>: https://github.com/NatLabRockies/OpenOA/compare/v3.1.4...v3.2</p>",

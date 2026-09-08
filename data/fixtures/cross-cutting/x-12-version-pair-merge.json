@@ -43,6 +43,14 @@
         "value": "[\"task-52\"]"
       },
       {
+        "key": "inclusion_basis",
+        "value": "direct"
+      },
+      {
+        "key": "inclusion_evidence",
+        "value": "Found through community:iea_wind_task_43, which is an IEA Wind attribution."
+      },
+      {
         "key": "last_seen",
         "value": "2026-09-01T06:00:00Z"
       },
@@ -60,7 +68,7 @@
       },
       {
         "key": "provenance",
-        "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
       },
       {
         "key": "published_date",
@@ -182,6 +190,14 @@
           "value": "[\"task-52\"]"
         },
         {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through community:iea_wind_task_43, which is an IEA Wind attribution."
+        },
+        {
           "key": "last_seen",
           "value": "2026-09-01T06:00:00Z"
         },
@@ -199,7 +215,7 @@
         },
         {
           "key": "provenance",
-          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
         },
         {
           "key": "published_date",
@@ -289,6 +305,14 @@
           "value": "doi"
         },
         {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+        },
+        {
           "key": "last_seen",
           "value": "2026-09-02T06:00:00Z"
         },
@@ -306,7 +330,7 @@
         },
         {
           "key": "provenance",
-          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
         },
         {
           "key": "published_date",
@@ -402,6 +426,14 @@
           "value": "[\"task-52\"]"
         },
         {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through community:iea_wind_task_43, which is an IEA Wind attribution."
+        },
+        {
           "key": "last_seen",
           "value": "2026-09-01T06:00:00Z"
         },
@@ -423,7 +455,7 @@
         },
         {
           "key": "provenance",
-          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
         },
         {
           "key": "published_date",
@@ -513,6 +545,14 @@
           "value": "doi"
         },
         {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+        },
+        {
           "key": "last_seen",
           "value": "2026-09-02T06:00:00Z"
         },
@@ -534,7 +574,7 @@
         },
         {
           "key": "provenance",
-          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+          "value": "{\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
         },
         {
           "key": "published_date",

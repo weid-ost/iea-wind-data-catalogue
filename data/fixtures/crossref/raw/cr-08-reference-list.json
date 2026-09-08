@@ -1,0 +1,393 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        8
+      ]
+    ],
+    "date-time": "2026-09-08T00:10:01Z",
+    "timestamp": 1788826201288,
+    "version": "build-2803163510"
+  },
+  "publisher": "Copernicus GmbH",
+  "issue": "7",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            7,
+            14
+          ]
+        ],
+        "date-time": "2026-07-14T00:00:00Z",
+        "timestamp": 1783987200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100011030",
+      "name": "Wind Energy Technologies Office",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "DE-AC36-08GO28308"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "DE-AC36-08GO28308"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100011030",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Wind Energ. Sci."
+  ],
+  "abstract": "<jats:p>Abstract. Aero-hydro-elastic-servo numerical models used to design and analyze wind turbines are based on thousands of variable input parameters that dictate the inflow, aerodynamic, structural, and control characteristics of the system as well as sea state, hydrodynamic, and mooring characteristics for fixed-bottom and floating offshore wind turbines. Each of these parameters has some level of uncertainty, which can significantly impact the predicted loads. Understanding the uncertainty in the inputs is critical to understanding the uncertainty in the outputs. This work demonstrates a screening technique to identify which parameters ultimate loads are most sensitive to so that more focus can be given to quantifying the possible range of those parameters. This technique has been demonstrated previously for different turbine and load case types and is extended here for a floating offshore wind turbine in design load cases with transient events both in the inflow and operations. Each load case features a deterministic gust, including variations in wind speed, direction, and shear. Load cases are considered with an operating turbine as well as with prescribed fault, startup, and shutdown procedures. The study found that key input parameters with a large impact on loads include the length of the gust, the magnitude of direction change and speed in the gust, the initial wind speed, and the shape of the gust profile.</jats:p>",
+  "DOI": "10.5194/wes-11-2447-2026",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        14
+      ]
+    ],
+    "date-time": "2026-07-14T05:05:28Z",
+    "timestamp": 1784005528000
+  },
+  "page": "2447-2477",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Sensitivity analysis of numerical modeling input parameters on wind turbine loads in deterministic transient load cases"
+  ],
+  "prefix": "10.5194",
+  "volume": "11",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0009-0002-1621-5500",
+      "authenticated-orcid": false,
+      "given": "Will",
+      "family": "Wiley",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-2990-7362",
+      "authenticated-orcid": false,
+      "given": "Jason",
+      "family": "Jonkman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-7448-4632",
+      "authenticated-orcid": false,
+      "given": "Amy",
+      "family": "Robertson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "3145",
+  "published-online": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        14
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "ref1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Abdallah, I., Natarajan, A., and Sørensen, J.: Impact of uncertainty in airfoil characteristics on wind turbine extreme loads, Renew. Energ., 75, 283–300, https://doi.org/10.1016/j.renene.2014.10.009, 2015. a, b, c, d, e",
+      "DOI": "10.1016/j.renene.2014.10.009"
+    },
+    {
+      "key": "ref2",
+      "unstructured": "Allen, C., Viselli, A., Dagher, H., Goupee, A., Gaertner, E., Abbas, N., Hall, M., and Barter, G.: Definition of the UMaine VolturnUS-S Reference Platform Developed for the IEA Wind 15-Megawatt Offshore Reference Wind Turbine, NREL/TP-5000-76773, https://docs.nlr.gov/docs/fy20osti/76773.pdf (last access: 8 August 2026), 2020. a, b"
+    },
+    {
+      "key": "ref3",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bodini, N., Redfern, S., Rybchuk, A., Pronk, V., Castagneri, S., Purkayastha, A., Draxl, <span id=\"page2477\"/>C., Young, E., Roberts, B., Rosenlieb, E., Musial, W., Tai, S., Berg, L., Rosencrans, D., Lundquist, J., and Optis, M.: NOW-23: The 2023 National Offshore Wind Data Set, NREL/TP-5000-87675, https://doi.org/10.2172/2274805, 2023. a",
+      "DOI": "10.5194/essd-2023-490"
+    },
+    {
+      "key": "ref4",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bodini, N., Optis, M., Redfern, S., Rosencrans, D., Rybchuk, A., Lundquist, J. K., Pronk, V., Castagneri, S., Purkayastha, A., Draxl, C., Krishnamurthy, R., Young, E., Roberts, B., Rosenlieb, E., and Musial, W.: The 2023 National Offshore Wind data set (NOW-23), Earth Syst. Sci. Data, 16, 1965–2006, https://doi.org/10.5194/essd-16-1965-2024, 2024. a",
+      "DOI": "10.5194/essd-16-1965-2024"
+    },
+    {
+      "key": "ref5",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bortolotti, P., Canet, H., Bottasso, C. L., and Loganathan, J.: Performance of non-intrusive uncertainty quantification in the aeroservoelastic simulation of wind turbines, Wind Energ. Sci., 4, 397–406, https://doi.org/10.5194/wes-4-397-2019, 2019. a",
+      "DOI": "10.5194/wes-4-397-2019"
+    },
+    {
+      "key": "ref6",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Damiani, R., Hayman, G., and Jonkman, J.: Development and Validation of a New Unsteady Airfoil Aerodynamics Model Within AeroDyn, American Institute of Aeronautics and Astronautics SciTeck Forum, AIAA, AIAA 2016-1007, https://doi.org/10.2514/6.2016-1007, 2016. a",
+      "DOI": "10.2514/6.2016-1007"
+    },
+    {
+      "key": "ref7",
+      "unstructured": "Gaertner, E., Rinker, J., Sethuraman, L., Zahle, F., Anderson, B., Barter, G., Abbas, N., Meng, F., Bortolotti, P., Skrzypinski, W., Scott, G., Feil, R., Bredmose, H., Dykes, K., Shields, M., Allen, C., and Viselli, A.: Definition of the IEA Wind 15-Megawatt Offshore Reference Wind Turbine, NREL/TP-5000-75698, https://docs.nlr.gov/docs/fy20osti/75698.pdf (last access: 8 August 2026), 2020. a"
+    },
+    {
+      "key": "ref8",
+      "unstructured": "Hansen, M., Gaunaa, M., and Madsen, H.: A Beddoes-Leishman type dynamic stall model in state-space and indicial formulations, Forskningscenter Risoe, Risoe-R No. 1354(EN), ISBN 87-550-3089-0; 87-550-3090-4, 2004. a"
+    },
+    {
+      "key": "ref9",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hu, W., Wang, S., Zhang, T., Zhang, Y., Shi, W., Li, Q., and Zhang, F.: Uncertainty quantification of aerodynamic characteristics of wind turbine blade airfoils, Renew. Energ., https://doi.org/10.1016/j.renene.2025.123151, 2025. a, b",
+      "DOI": "10.2139/ssrn.5030588"
+    },
+    {
+      "key": "ref10",
+      "unstructured": "Wind energy generation systems – Part 1: Design requirements, International Electrotechnical Commission, IEC TS 61400-1, 2019. a, b, c"
+    },
+    {
+      "key": "ref11",
+      "unstructured": "Wind energy generation systems – Part 3-2: Design requirements for floating offshore wind turbines, International Electrotechnical Commission, IEC TS 61400-3-2, 2024. a, b, c, d"
+    },
+    {
+      "key": "ref12",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lozon, E., Reddy Lekkala, M., Sirkis, L., and Hall, M.: Reference Mooring and Dynamic Cable Designs for Representative U.S. Floating Wind Farms, Ocean Eng., 322, https://doi.org/10.1016/j.oceaneng.2025.120473, 2025. a, b",
+      "DOI": "10.1016/j.oceaneng.2025.120473"
+    },
+    {
+      "key": "ref13",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Morris, M.: Factorial Sampling Plans for Preliminary Computational Experiments, Technometrics, 33, 161–174, 1991. a",
+      "DOI": "10.1080/00401706.1991.10484804"
+    },
+    {
+      "key": "ref14",
+      "unstructured": "NREL: OpenFAST, GitHub [code], https://github.com/OpenFAST/openfast (last access: 1 October 2024), 2024.  a"
+    },
+    {
+      "key": "ref15",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Reddy, L., Karystinou, D., Milano, D., Walker, J., and Virè, A.: Influence of wind-wave characteristics on floating wind turbine loads: A sensitivity analysis across different floating concepts, J. Phys. Conf. Ser., 2767, 062030, https://doi.org/10.1088/1742-6596/2767/6/062030, 2024. a",
+      "DOI": "10.1088/1742-6596/2767/6/062030"
+    },
+    {
+      "key": "ref16",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Robertson, A., Sethuraman, L., Jonkman, J., and Quick, J.: Assessment of Wind Parameter Sensitivity on Ultimate and Fatigue Wind Turbine Loads, NREL/CP-5000-70445, https://doi.org/10.2514/6.2018-1728, 2018. a, b, c",
+      "DOI": "10.2514/6.2018-1728"
+    },
+    {
+      "key": "ref17",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Robertson, A. N., Shaler, K., Sethuraman, L., and Jonkman, J.: Sensitivity analysis of the effect of wind characteristics and turbine properties on wind turbine loads, Wind Energ. Sci., 4, 479–513, https://doi.org/10.5194/wes-4-479-2019, 2019. a, b, c",
+      "DOI": "10.5194/wes-4-479-2019"
+    },
+    {
+      "key": "ref18",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sandua-Fernandez, I., Vittori, F., Equinoa, I., and Cheng, P.: Impact of hydrodynamic drag coefficient uncertainty on 15 MW floating offshore wind turbine power and speed control, J. Phys. Conf. Ser., 2362, 012037, https://doi.org/10.1088/1742-6596/2362/1/012037, 2022. a",
+      "DOI": "10.1088/1742-6596/2362/1/012037"
+    },
+    {
+      "key": "ref19",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Shaler, K., Robertson, A., Sethuraman, L., and Jonkman, J.: Assessment of Airfoil Property Sensitivity on Wind Turbine Extreme and Fatigue Loads, NREL/CP-5000-72892, https://doi.org/10.2514/6.2019-0248, 2019. a, b, c, d, e",
+      "DOI": "10.2514/6.2019-0248"
+    },
+    {
+      "key": "ref20",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Shaler, K., Robertson, A. N., and Jonkman, J.: Sensitivity analysis of the effect of wind and wake characteristics on wind turbine loads in a small wind farm, Wind Energ. Sci., 8, 25–40, https://doi.org/10.5194/wes-8-25-2023, 2023. a",
+      "DOI": "10.5194/wes-8-25-2023"
+    },
+    {
+      "key": "ref21",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sobol, I.: On the distribution of points in a cube and the approximate evaluation of integrals, USSR Comp. Math. Math+, 7, 86–112, 1967. a",
+      "DOI": "10.1016/0041-5553(67)90144-9"
+    },
+    {
+      "key": "ref22",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sørum, S., Katsikogiannis, G., Bachynski-Polić, E., Amdahl, J., Page, A., and Klinkvort, R.: Fatigue design sensitivities of large monopile offshore wind turbines, Wind Energy, 25, 1684–1709, https://doi.org/10.1002/we.2755, 2022. a",
+      "DOI": "10.1002/we.2755"
+    },
+    {
+      "key": "ref23",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Wiley, W., Jonkman, J., Robertson, A., and Shaler, K.: Sensitivity analysis of numerical modeling input parameters on floating offshore wind turbine loads, Wind Energ. Sci., 8, 1575–1595, https://doi.org/10.5194/wes-8-1575-2023, 2023. a, b",
+      "DOI": "10.5194/wes-8-1575-2023"
+    },
+    {
+      "key": "ref24",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Wiley, W., Jonkman, J., and Robertson, A.: Sensitivity analysis of numerical modeling input parameters on floating offshore wind turbine loads in extreme idling conditions, Wind Energ. Sci., 10, 941–970, https://doi.org/10.5194/wes-10-941-2025, 2025. a, b, c, d, e, f, g, h",
+      "DOI": "10.5194/wes-10-941-2025"
+    },
+    {
+      "key": "ref25",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Wiley, W., Jonkman, J., and Robertson, A.: File Sharing for: WES-2025-228 – Sensitivity analysis of numerical modeling input parameters on wind turbine loads in deterministic transient load cases, Zenodo [data set], https://doi.org/10.5281/zenodo.20819544, 2026. a",
+      "DOI": "10.5194/wes-2025-228"
+    }
+  ],
+  "container-title": [
+    "Wind Energy Science"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://wes.copernicus.org/articles/11/2447/2026/wes-11-2447-2026.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        8
+      ]
+    ],
+    "date-time": "2026-09-08T00:01:50Z",
+    "timestamp": 1788825710000
+  },
+  "resource": {
+    "primary": {
+      "URL": "https://wes.copernicus.org/articles/11/2447/2026/"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        14
+      ]
+    ]
+  },
+  "references-count": 25,
+  "URL": "https://doi.org/10.5194/wes-11-2447-2026",
+  "relation": {
+    "has-preprint": [
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-228",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-228",
+        "asserted-by": "object"
+      }
+    ],
+    "has-review": [
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-228-RC1",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-228-RC2",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-228-AC1",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-228-RC1",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-228-RC2",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.5194/wes-2025-228-AC1",
+        "asserted-by": "object"
+      }
+    ],
+    "is-part-of": [
+      {
+        "id-type": "doi",
+        "id": "10.5281/zenodo.20819544",
+        "asserted-by": "subject"
+      }
+    ]
+  },
+  "ISSN": [
+    "2366-7451"
+  ],
+  "issn-type": [
+    {
+      "value": "2366-7451",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        14
+      ]
+    ]
+  }
+}

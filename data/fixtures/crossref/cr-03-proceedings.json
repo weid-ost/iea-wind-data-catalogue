@@ -7,7 +7,7 @@
   "identity_key": "10.1088/1742-6596/1618/4/042029",
   "source_system": "crossref",
   "source_id": "10.1088/1742-6596/1618/4/042029",
-  "source_key": "2022-02-02T04:26:19Z",
+  "source_key": "2022-02-02T04:26:19Z~m2",
   "source": {
     "title": "IEA Wind Task 32 and Task 37: Optimizing Wind Turbines with Lidar-Assisted Control Using Systems Engineering",
     "notes": "Abstract <p>Lidar-assisted control is a promising technology for reducing the levelized cost of energy from wind turbines, but quantifying its impact at the overall system level requires sophisticated systems engineering analysis and optimization frameworks. The joint workshop on Optimizing Wind Turbines with Lidar-Assisted Control Using Systems Engineering was held by the International Energy Agency Wind Task 32 (Lidar) and Task 37 (Systems Engineering) in October 2019 to address this challenge. This paper summarizes the outcome of the workshop and presents a road map for further research. The most promising applications of lidar-assisted control identified at the workshop and discussed here include 1) increasing annual energy production, 2) decreasing capital expenditure costs by reducing design loads, 3) extending turbine lifetime by reducing operating loads, and 4) enabling wind turbine class upgrades. For each application, we review the state of the art and highlight remaining research needs. Finally, we discuss strategies for addressing these research needs by conducting high-fidelity systems engineering optimizations.</p>",

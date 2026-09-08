@@ -60,6 +60,7 @@ __all__ = [
     "iea_publication_type",
     "research_software_type",
     "derive",
+    "derive_with_method",
     "check_vocabulary",
     "known_types",
     "known_kinds",
@@ -354,7 +355,12 @@ def research_software_type(effective: Mapping[str, Any]) -> str:
     * **it has a DOI** — somebody deposited it as a citable research output;
     * **it is attributed to an IEA Wind Task** — it came out of the programme;
     * **it came from a research repository** rather than from a code host —
-      Zenodo, OSTI and DataCite hold research deposits by construction.
+      Zenodo, OSTI and DataCite hold research deposits by construction;
+    * **it reached the catalogue through an IEA Wind route** — an IEA Wind
+      GitHub organisation, community or Task page (ADR-0043). Code an IEA Wind
+      Task publishes is research software whether or not anyone minted a DOI
+      for it, and that is precisely what separates it from a repository that
+      merely carries the ``wind-energy`` topic.
 
     Everything else is ``other-software``. That is what separates ``windIO``,
     ``OpenOA`` and the FAD-Toolset from the wind-adjacent company repositories
@@ -364,6 +370,8 @@ def research_software_type(effective: Mapping[str, Any]) -> str:
     if effective.get("doi"):
         return "research-software"
     if effective.get("iea_task"):
+        return "research-software"
+    if effective.get("_inclusion_basis") == "direct":
         return "research-software"
     systems = set(effective.get("_source_systems") or ())
     if systems - {"github", "ieawind", "wdh"}:
@@ -379,12 +387,35 @@ def research_software_type(effective: Mapping[str, Any]) -> str:
 def derive(
     effective: Mapping[str, Any],
     source_systems: list[str] | None = None,
+    inclusion_basis: str | None = None,
 ) -> tuple[str | None, str | None]:
     """``(resource_kind, resource_type)`` for one resolved record.
 
     Pure and offline: everything it reads is already in the event log. Returns
     the adapter's kind unchanged and a ``None`` type only when the record has no
     kind at all, which is the one case where inventing a type would be a guess.
+    """
+    kind, resource_type, _ = derive_with_method(effective, source_systems, inclusion_basis)
+    return kind, resource_type
+
+
+def derive_with_method(
+    effective: Mapping[str, Any],
+    source_systems: list[str] | None = None,
+    inclusion_basis: str | None = None,
+) -> tuple[str | None, str | None, str | None]:
+    """``(kind, type, extraction method)`` — the method being how the TYPE was known.
+
+    ``"api"`` when a source's own vocabulary named it, ``"pattern"`` when a
+    deterministic rule over stored data did (the IEA Wind title match, the
+    research-software signals), and ``None`` when nothing narrower than the
+    record's existing kind was available — in which case the type is only as
+    good as the kind, and inherits the kind's provenance.
+
+    That distinction is the whole of ADR-0028 applied to a derived field. A
+    record whose kind a model guessed, and whose type is merely the generic
+    child of that guess, must carry the machine-inferred badge; one whose type
+    DataCite stated must not, even if a model guessed the kind.
     """
     extra = effective.get("extra")
     extra = extra if isinstance(extra, Mapping) else {}
@@ -393,30 +424,36 @@ def derive(
     # The source vocabularies first: their answer is what an IEA phrase has to
     # beat, and what tells us whether beating it would be wrong.
     derived: str | None = None
+    method: str | None = None
     for reader in _VOCABULARIES:
         derived = reader(extra)
         if derived:
+            method = "api"
             break
 
     iea = iea_publication_type(effective.get("title"))
     if iea and derived not in _UNOVERRIDABLE:
-        derived = iea
+        derived, method = iea, "pattern"
 
     if derived is None and stored_kind:
-        derived = GENERIC_TYPE_FOR_KIND.get(str(stored_kind))
+        # Nothing narrower than the kind was available, so the type is exactly
+        # as well-known as the kind is — and inherits its provenance.
+        derived, method = GENERIC_TYPE_FOR_KIND.get(str(stored_kind)), None
 
     if derived is None:
-        return (stored_kind, None)
+        return (stored_kind, None, None)
 
     kind = KIND_OF_TYPE.get(derived, stored_kind)
 
     if kind == "software":
         view = dict(effective)
         view["_source_systems"] = source_systems or []
+        view["_inclusion_basis"] = inclusion_basis
         derived = research_software_type(view)
         kind = "software"
+        method = "pattern"
 
-    return (kind, derived)
+    return (kind, derived, method)
 
 
 # ---------------------------------------------------------------------------

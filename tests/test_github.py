@@ -17,7 +17,9 @@ import pytest
 
 from harvest import config
 from harvest.adapters.base import SourceConfig, SourceUnreachable, payload_hash, run_adapter
+from harvest.adapters.base import stamp
 from harvest.adapters.github import (
+    MAPPING_VERSION,
     BADGE_MARKER,
     GitHubAdapter,
     badge_doi_candidates,
@@ -520,7 +522,7 @@ class TestTheSourceKey:
                 "license": payload["repository"]["license"]["spdx_id"],
             }
         )
-        assert source_key_for(payload) == f"{sha}:{tag}:{digest}"
+        assert source_key_for(payload) == stamp(f"{sha}:{tag}:{digest}", MAPPING_VERSION)
 
     def test_it_is_stable_across_runs(self) -> None:
         assert source_key_for(self.payload()) == source_key_for(self.payload())

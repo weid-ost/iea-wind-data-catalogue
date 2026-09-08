@@ -41,6 +41,14 @@
         "value": "[\"task-43\"]"
       },
       {
+        "key": "inclusion_basis",
+        "value": "direct"
+      },
+      {
+        "key": "inclusion_evidence",
+        "value": "Found through community:iea_wind_task_43, query:\"IEA Wind Task\", org:IEA-Task-43 and task-page:task-43, which is an IEA Wind attribution."
+      },
+      {
         "key": "last_seen",
         "value": "2026-08-24T03:14:00Z"
       },
@@ -74,6 +82,10 @@
       },
       {
         "key": "resource_kind",
+        "value": "dataset"
+      },
+      {
+        "key": "resource_type",
         "value": "dataset"
       },
       {
@@ -171,6 +183,14 @@
         {
           "key": "iea_task",
           "value": "[\"task-43\"]"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through community:iea_wind_task_43, query:\"IEA Wind Task\", org:IEA-Task-43 and task-page:task-43, which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",

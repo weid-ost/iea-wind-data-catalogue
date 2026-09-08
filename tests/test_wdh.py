@@ -29,7 +29,9 @@ import pytest
 
 from harvest import config
 from harvest.adapters.base import SourceConfig, SourceUnreachable, run_adapter
+from harvest.adapters.base import stamp
 from harvest.adapters.wdh import (
+    MAPPING_VERSION,
     AUTH_WALL_REASON,
     BASE_URL,
     LEGACY_HOSTS,
@@ -375,7 +377,9 @@ class TestWdh06RegistrationRequired:
 class TestTheSourceKey:
     def test_last_updated_wins_when_present(self) -> None:
         hit = {"_source": {"identifier": "p/d", "lastUpdated": "2026-03-03T21:02:06.000000Z"}}
-        assert WindDataHubAdapter.source_key_for(hit) == "2026-03-03T21:02:06.000000Z"
+        assert WindDataHubAdapter.source_key_for(hit) == stamp(
+            "2026-03-03T21:02:06.000000Z", MAPPING_VERSION
+        )
 
     def test_the_nightly_reindex_does_not_move_the_key(self) -> None:
         """``_index`` carries a rebuild date; hashing it would write an event a night."""

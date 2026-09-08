@@ -497,6 +497,22 @@ class RawObservation(BaseModel):
     #: instead of enriching the one that exists, so the caller's identity wins.
     #: An ordinary harvest never sets this, and ``map()`` is still pure.
     identity_override: str | None = None
+    #: **Why this record was fetched** — the discovery route, as
+    #: ``"<kind>:<value>"``: ``community:iea_wind_task_43``,
+    #: ``org:IEAWindSystems``, ``topic:wind-energy``, ``query:iea-wind-task-by-title``,
+    #: ``task-page:task-43``, ``backfill:doi``.
+    #:
+    #: The catalogue's scope rule (ADR-0043) turns on this. Most routes ARE an
+    #: IEA Wind attribution — an IEA Wind Zenodo community, an IEA Wind GitHub
+    #: organisation, a Task page, a query that names IEA Wind — and a record
+    #: reached through one is in scope by that fact alone. A generic route (the
+    #: ``wind-energy`` GitHub topic) is not, and a record found only that way
+    #: has to earn its place by citing, or being cited by, something already in
+    #: the catalogue. ``sources.yaml`` says which routes are generic.
+    #:
+    #: Throwing this away is what left 56 records with no recoverable reason for
+    #: being in an IEA Wind catalogue, including several that plainly belonged.
+    discovered_via: list[str] = Field(default_factory=list)
 
 
 class MappedObservation(BaseModel):
@@ -511,6 +527,8 @@ class MappedObservation(BaseModel):
     source: SourceNamespace
     provenance: dict[str, FieldProvenance] = Field(default_factory=dict)
     fetched_at: str = Field(default_factory=utcnow)
+    #: Carried through from the observation; see ``RawObservation.discovered_via``.
+    discovered_via: list[str] = Field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -537,6 +555,10 @@ class Event(BaseModel):
     source: dict[str, Any] = Field(default_factory=dict)
     local: dict[str, Any] = Field(default_factory=dict)
     provenance: dict[str, FieldProvenance] = Field(default_factory=dict)
+    #: The discovery routes this scrape came through (ADR-0043). Absent on
+    #: events written before the rule existed, and on annotations and
+    #: withdrawals, which are not discoveries.
+    discovered_via: list[str] = Field(default_factory=list)
     notice: dict[str, Any] | None = None   # displacement_notice / pin_notice payload
     actor: str | None = None               # "harvest/zenodo", "curator:tom", "reconcile"
     note: str | None = None
@@ -671,3 +693,8 @@ class ResolvedRecord(BaseModel):
     withdrawn_at: str | None = None
     notices: list[dict] = Field(default_factory=list)
     event_count: int = 0
+    #: Every discovery route that ever reached this identity, across all
+    #: sources, deduplicated and ordered. The catalogue's scope rule reads it
+    #: (ADR-0043); an identity found through an IEA Wind community, org, Task
+    #: page or IEA-Wind-named query is in scope by that fact alone.
+    discovered_via: list[str] = Field(default_factory=list)

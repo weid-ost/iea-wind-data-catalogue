@@ -1,0 +1,30 @@
+{
+  "note": "The record this rule exists to exclude. `api-evangelist/sunedison` is a third-party directory entry for a defunct solar company's API surface. It is in an IEA Wind catalogue for one reason: it carries the `wind-energy` GitHub topic, which anyone can apply to anything. It has no IEA Wind Task attribution, no DOI, no deposit, and nothing in the catalogue cites it or is cited by it. `sources.yaml` lists `topic:wind-energy` under `generic_routes`, so the route that found it is not an attribution, and the record fails all three limbs of the scope rule. It is kept, and its page and URL keep resolving — nothing here is ever deleted (ADR-0027) — but it is not listed, and the record says why. Note the second event: the SAME repository would be in scope if an IEA Wind organisation also published it, because the strongest route wins.",
+  "events": [
+    {
+      "observed_at": "2026-09-08T06:00:00Z",
+      "event_type": "scraped",
+      "identity_key": "github|api-evangelist/sunedison",
+      "source_system": "github",
+      "source_id": "api-evangelist/sunedison",
+      "source_key": "abc123:: 3f1c2d4e5a6b7c8d~m2",
+      "actor": "harvest/github",
+      "discovered_via": ["topic:wind-energy"],
+      "provenance": { "title": { "extraction_method": "api" } },
+      "source": {
+        "title": "api-evangelist/sunedison",
+        "notes": "SunEdison — independent third-party profile of a public API surface, by API Evangelist.",
+        "url": "https://github.com/api-evangelist/sunedison",
+        "source_urls": ["https://github.com/api-evangelist/sunedison"],
+        "publisher": "GitHub",
+        "license_raw": null,
+        "license_id": "notspecified",
+        "resource_kind": "software",
+        "access_status": "open",
+        "keywords": ["wind-energy", "renewable-energy", "apis-json"],
+        "iea_task": [],
+        "withdrawn": false
+      }
+    }
+  ]
+}

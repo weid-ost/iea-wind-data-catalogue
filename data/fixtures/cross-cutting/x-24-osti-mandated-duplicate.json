@@ -43,6 +43,14 @@
         "value": "doi"
       },
       {
+        "key": "inclusion_basis",
+        "value": "direct"
+      },
+      {
+        "key": "inclusion_evidence",
+        "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
+      },
+      {
         "key": "last_seen",
         "value": "2026-08-24T03:12:00Z"
       },
@@ -72,6 +80,10 @@
       },
       {
         "key": "resource_kind",
+        "value": "publication"
+      },
+      {
+        "key": "resource_type",
         "value": "publication"
       },
       {
@@ -107,13 +119,13 @@
     "license_id": "cc-by",
     "name": "doi-10-1088-1742-6596-2265-2-022001",
     "notes": "",
+    "owner_org": "unattributed",
     "private": false,
     "resources": [],
     "state": "active",
     "tags": [],
     "title": "Validation of a nacelle-mounted lidar for power performance testing",
-    "url": "https://doi.org/10.1088/1742-6596/2265/2/022001",
-    "owner_org": "unattributed"
+    "url": "https://doi.org/10.1088/1742-6596/2265/2/022001"
   },
   "expected_records": {
     "doi-10-1088-1742-6596-2265-2-022001": {
@@ -145,6 +157,14 @@
         {
           "key": "identity_kind",
           "value": "doi"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",
@@ -248,6 +268,14 @@
         {
           "key": "identity_kind",
           "value": "source"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",
@@ -383,6 +411,14 @@
           "value": "doi"
         },
         {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
+        },
+        {
           "key": "last_seen",
           "value": "2026-08-24T03:12:00Z"
         },
@@ -488,6 +524,14 @@
         {
           "key": "identity_kind",
           "value": "source"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",

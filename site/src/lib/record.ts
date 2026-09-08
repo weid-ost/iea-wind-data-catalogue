@@ -110,6 +110,30 @@ export const isWithdrawn = (pkg: CkanPackage): boolean =>
 export const isSuppressed = (pkg: CkanPackage): boolean => boolExtra(pkg, 'suppressed');
 
 /**
+ * Why this record is in the catalogue: `direct`, `cites`, `cited-by`, or
+ * `none` (ADR-0043). Always present on a record the current harvest wrote.
+ */
+export const inclusionBasisOf = (pkg: CkanPackage): string =>
+  extra(pkg, 'inclusion_basis') ?? 'direct';
+
+/** The sentence naming the specific grounds — a community, a Task, a cited DOI. */
+export const inclusionEvidenceOf = (pkg: CkanPackage): string | undefined =>
+  extra(pkg, 'inclusion_evidence');
+
+/**
+ * Out of scope: it meets none of the three inclusion tests, so it is not
+ * listed. It is **not** deleted — the page and the URL stay, and the decision
+ * is re-made on every rebuild, so a repository that later gets cited by a Task
+ * report comes back on its own.
+ *
+ * `unassessed` is deliberately NOT out of scope. It means the record predates
+ * discovery routes and nothing has been established either way; excluding it
+ * would punish it for a gap of ours rather than for evidence about it.
+ */
+export const isOutOfScope = (pkg: CkanPackage): boolean =>
+  inclusionBasisOf(pkg) === 'none';
+
+/**
  * A retraction is a fact the *source* states, via an `IsRetractedBy` /
  * `IsRetractionOf` related identifier (fixture cr-07). It is not withdrawal:
  * a retracted paper is still at the publisher.

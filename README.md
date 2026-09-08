@@ -65,7 +65,7 @@ Start at **[`docs/index.md`](docs/index.md)** — the vault map.
 
 - [`docs/architecture.md`](docs/architecture.md) — the system end to end, and the binding invariants
 - [`docs/record-format.md`](docs/record-format.md) — the record and event schemas
-- [`docs/adrs/`](docs/adrs/) — twenty-three ADRs, 0020–0042. **The authority.** Do not relitigate one without saying so
+- [`docs/adrs/`](docs/adrs/) — twenty-four ADRs, 0020–0043. **The authority.** Do not relitigate one without saying so
 - [`docs/runbooks/`](docs/runbooks/) — thirteen procedures with exact commands
 
 Background:

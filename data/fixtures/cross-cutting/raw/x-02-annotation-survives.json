@@ -9,14 +9,24 @@
       "source_id": "2000002",
       "source_key": "3",
       "actor": "harvest/zenodo",
-      "provenance": { "title": { "extraction_method": "api" } },
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
       "source": {
         "title": "Wake measurements at the Lillgrund wind farm",
         "notes": "<p>First release.</p>",
         "doi": "10.5281/zenodo.2000001",
         "url": "https://zenodo.org/records/2000002",
-        "source_urls": ["https://zenodo.org/records/2000002"],
-        "authors": [{ "name": "Andersson, Karin" }],
+        "source_urls": [
+          "https://zenodo.org/records/2000002"
+        ],
+        "authors": [
+          {
+            "name": "Andersson, Karin"
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2023-03-01",
         "version": "1.0",
@@ -24,10 +34,15 @@
         "license_id": "cc-by",
         "resource_kind": "dataset",
         "access_status": "open",
-        "keywords": ["wake"],
+        "keywords": [
+          "wake"
+        ],
         "iea_task": [],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     },
     {
       "observed_at": "2026-08-27T09:00:00Z",
@@ -37,24 +52,40 @@
       "source_id": "2000002",
       "source_key": "4",
       "actor": "harvest/zenodo",
-      "provenance": { "title": { "extraction_method": "api" } },
+      "provenance": {
+        "title": {
+          "extraction_method": "api"
+        }
+      },
       "source": {
         "title": "Wake measurements at the Lillgrund offshore wind farm",
         "notes": "<p>Second release, with the nacelle lidar channel added.</p>",
         "doi": "10.5281/zenodo.2000001",
         "url": "https://zenodo.org/records/2000002",
-        "source_urls": ["https://zenodo.org/records/2000002"],
-        "authors": [{ "name": "Andersson, Karin" }],
+        "source_urls": [
+          "https://zenodo.org/records/2000002"
+        ],
+        "authors": [
+          {
+            "name": "Andersson, Karin"
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2023-03-01",
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "resource_kind": "dataset",
         "access_status": "open",
-        "keywords": ["wake", "nacelle lidar"],
+        "keywords": [
+          "wake",
+          "nacelle lidar"
+        ],
         "iea_task": [],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     }
   ],
   "annotations_yaml": {
@@ -62,7 +93,11 @@
     "actor": "curator:tom",
     "annotations": [
       {
-        "local": { "iea_task": ["task-31"] },
+        "local": {
+          "iea_task": [
+            "task-31"
+          ]
+        },
         "note": "Task 31 attribution from the Wakebench benchmark list",
         "observed_at": "2026-08-25T08:00:00Z"
       },

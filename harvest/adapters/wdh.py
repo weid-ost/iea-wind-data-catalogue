@@ -69,7 +69,7 @@ from typing import Any, Iterable
 from urllib.parse import urlsplit, urlunsplit
 
 from harvest import DEFAULT_MAX_RECORDS
-from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
+from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register, stamp
 from harvest.doi import normalise_doi
 from harvest.http import HarvestClient
 from harvest.identity import identity_key
@@ -199,6 +199,14 @@ def _keywords(source: dict[str, Any]) -> list[str]:
     return words
 
 
+#: Bumped when ``map()`` or ``harvest()`` starts recording something they did
+#: not record before, and folded into the change token so the improvement
+#: reaches records already harvested (ADR-0041). Without it a change here only
+#: ever applies to records harvested after it ships.
+#:
+#: 2 — record the discovery route as ``discovered_via`` (ADR-0043).
+MAPPING_VERSION = 2
+
 @register
 class WindDataHubAdapter(Adapter):
     """Wind Data Hub. Self-disabling by default — see the module docstring."""
@@ -247,6 +255,7 @@ class WindDataHubAdapter(Adapter):
                 source_key=self.source_key_for(hit),
                 url=landing_url(identifier),
                 payload=hit,  # VERBATIM
+                discovered_via=["listing:wdh"],
             )
 
     def close(self) -> None:
@@ -267,9 +276,9 @@ class WindDataHubAdapter(Adapter):
         source = hit.get("_source") or {}
         updated = _text(source.get("lastUpdated"))
         if updated:
-            return updated
+            return stamp(updated, MAPPING_VERSION)
         summary = source.get("dapFileSummary") or {}
-        return payload_hash(
+        digest = payload_hash(
             {
                 "identifier": source.get("identifier"),
                 "title": source.get("title"),
@@ -282,6 +291,7 @@ class WindDataHubAdapter(Adapter):
                 "ends": summary.get("ends"),
             }
         )
+        return stamp(digest, MAPPING_VERSION)
 
     # -- map ---------------------------------------------------------------
     def map(self, raw: RawObservation) -> MappedObservation:

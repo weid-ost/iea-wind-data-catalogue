@@ -29,12 +29,19 @@
       "source": {
         "title": "Recommended practices for floating lidar acceptance testing",
         "url": "https://iea-wind.org/task54/example-low-confidence-page/",
-        "source_urls": ["https://iea-wind.org/task54/example-low-confidence-page/"],
+        "source_urls": [
+          "https://iea-wind.org/task54/example-low-confidence-page/"
+        ],
         "resource_kind": "report",
         "access_status": "open",
-        "iea_task": ["task-54"],
+        "iea_task": [
+          "task-54"
+        ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "task-page:task-43"
+      ]
     }
   ],
   "expected_notices": []

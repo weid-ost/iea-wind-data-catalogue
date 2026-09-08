@@ -9,7 +9,7 @@
   "expected_slug": "github-iea-task-43-digital_wra_data_standard",
   "source_system": "github",
   "source_id": "IEA-Task-43/digital_wra_data_standard",
-  "source_key": "14841ca8e8799149177e5591a8ee71ee649bb783:v1.4.0-2025.06:1841dd919bada8bd",
+  "source_key": "14841ca8e8799149177e5591a8ee71ee649bb783:v1.4.0-2025.06:1841dd919bada8bd~m2",
   "expected_included": true,
   "source": {
     "title": "IEA-Task-43/wra-data-standard",

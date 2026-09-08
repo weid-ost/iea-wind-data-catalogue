@@ -25,6 +25,7 @@ import pytest
 from harvest import config
 from harvest.adapters.base import SourceConfig, SourceUnreachable, get_adapter, run_adapter
 from harvest.adapters.crossref import (
+    MAPPING_VERSION,
     RESOURCE_KINDS_BY_TYPE,
     SELECT_FIELDS,
     CrossrefAdapter,
@@ -141,7 +142,12 @@ class TestMapAgainstFixtures:
 class TestSourceKey:
     def test_the_key_is_the_deposited_date_time(self) -> None:
         payload = payload_of("cr-01-canonical")
-        assert source_key_for(payload) == payload["deposited"]["date-time"]
+        assert source_key_for(payload) == f"{payload['deposited']['date-time']}~m{MAPPING_VERSION}"
+
+    def test_the_key_carries_the_mapping_version(self) -> None:
+        """ADR-0041: a mapping that preserves more must re-reach the corpus.
+        Version 2 is what carries Crossref's reference DOIs into the log."""
+        assert source_key_for(payload_of("cr-01-canonical")).endswith(f"~m{MAPPING_VERSION}")
 
     def test_the_key_is_not_the_indexed_date_time(self) -> None:
         payload = payload_of("cr-01-canonical")
@@ -182,7 +188,7 @@ class TestSourceKey:
         after["is-referenced-by-count"] = 99
         after["references-count"] = 1234
         assert source_key_for(after) == source_key_for(before)
-        assert len(source_key_for(before)) == 16
+        assert len(source_key_for(before)) == 16 + len(f"~m{MAPPING_VERSION}")
 
     def test_the_fallback_hash_still_notices_real_metadata(self) -> None:
         before = payload_of("cr-01-canonical")
@@ -662,13 +668,50 @@ class TestHarvest:
         assert "mailto=tom%40octue.com" in seen[0]
 
     def test_the_request_selects_only_the_fields_we_map(self) -> None:
-        """`select` keeps the `reference` array — tens of kilobytes of
-        citations we never use — off the wire and out of the fixtures."""
+        """`select` keeps everything this adapter does not map off the wire."""
         adapter, seen = _mock_adapter(["cr-01-canonical"])
         list(adapter.harvest(max_records=5))
         assert "select=" in seen[0]
-        assert "reference%2C" not in seen[0]
-        assert "DOI" in SELECT_FIELDS and "reference" not in SELECT_FIELDS
+        assert "DOI" in SELECT_FIELDS
+        # Deliberately excluded, and each for a stated reason.
+        for unused in ("abstract-html", "score", "clinical-trial-number"):
+            assert unused not in SELECT_FIELDS
+
+    def test_only_the_dois_survive_from_a_reference_list(self) -> None:
+        """The discipline that makes a bulky field affordable (cr-08).
+
+        A Crossref reference entry carries `key`, `unstructured`,
+        `doi-asserted-by` and often the cited work's title, authors, journal,
+        volume and page. A citation edge needs an identifier and nothing else,
+        and storing the remainder would bloat every event and every fixture.
+        """
+        fixture = next(
+            f for f in load_fixtures() if f["fixture_id"] == "cr-08-reference-list"
+        )
+        payload = payload_of("cr-08-reference-list")
+        kept = fixture["source"]["extra"]["crossref_references"]
+        stated = [r for r in payload["reference"] if isinstance(r, dict)]
+
+        assert len(stated) > len(kept), "the fixture must have entries with no DOI"
+        assert kept == [r["DOI"].lower() for r in stated if r.get("DOI")]
+        assert all(isinstance(doi, str) for doi in kept)
+        # Nothing else from an entry reaches the event.
+        blob = json.dumps(fixture["source"])
+        for entry in stated:
+            for field, value in entry.items():
+                if field == "DOI" or not isinstance(value, str) or len(value) < 30:
+                    continue
+                assert value not in blob, f"{field} leaked into the source namespace"
+
+    def test_it_asks_for_the_reference_list(self) -> None:
+        """It is bulky, and it was excluded for exactly that reason until the
+        catalogue acquired a scope rule. A reference list is the only place a
+        "cites" edge is stated, and ADR-0043 runs on those edges. `map()` keeps
+        the DOIs and throws the rest of each entry away."""
+        adapter, seen = _mock_adapter(["cr-01-canonical"])
+        list(adapter.harvest(max_records=5))
+        assert "reference" in SELECT_FIELDS
+        assert "reference" in seen[0]
 
     def test_it_asks_for_a_small_page_not_the_configured_maximum(self) -> None:
         adapter, seen = _mock_adapter(["cr-01-canonical"])
@@ -697,8 +740,14 @@ class TestHarvest:
         adapter = CrossrefAdapter(config=cfg)
         urls = adapter._query_urls(rows=5)
         assert len(urls) == 2
-        assert all(url.startswith("https://api.crossref.org/works?") for url in urls)
-        assert all("mailto=tom%40octue.com" in url for url in urls)
+        assert all(url.startswith("https://api.crossref.org/works?") for _, url in urls)
+        assert all("mailto=tom%40octue.com" in url for _, url in urls)
+        # Each URL carries the discovery route that produced it (ADR-0043),
+        # named from `sources.yaml` rather than reconstructed from the params.
+        assert [route for route, _ in urls] == [
+            "query:iea-wind-task-by-title",
+            "query:wind-energy-science-iea-wind",
+        ]
 
 
 class TestDegradation:
@@ -823,7 +872,7 @@ class TestEndToEnd:
         assert all(isinstance(extra["value"], str) for extra in record["extras"])
         extras = {extra["key"]: extra["value"] for extra in record["extras"]}
         assert extras["source_system"] == "crossref"
-        assert extras["source_key"] == "2025-01-22T13:21:59Z"
+        assert extras["source_key"] == f"2025-01-22T13:21:59Z~m{MAPPING_VERSION}"
         assert extras["resource_kind"] == "publication"
         assert extras["container"] == "Wind Energy Science"
 

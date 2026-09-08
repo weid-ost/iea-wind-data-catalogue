@@ -307,6 +307,40 @@
       "extras": true
     },
     {
+      "field_name": "inclusion_basis",
+      "label": "Why this is in the catalogue",
+      "choices": [
+        {
+          "value": "direct",
+          "label": "Directly attributed to IEA Wind"
+        },
+        {
+          "value": "cites",
+          "label": "Cites something in the catalogue"
+        },
+        {
+          "value": "cited-by",
+          "label": "Cited by something in the catalogue"
+        },
+        {
+          "value": "unassessed",
+          "label": "Not yet assessed"
+        },
+        {
+          "value": "none",
+          "label": "Out of scope"
+        }
+      ],
+      "help_text": "The scope rule (ADR-0043): a record belongs if it is directly attributed to IEA Wind, cites something in the catalogue, or is cited by something in the catalogue. Derived at materialise time over the whole catalogue and re-decided on every rebuild. 'none' means out of scope: retained and citable, but not listed.",
+      "extras": true
+    },
+    {
+      "field_name": "inclusion_evidence",
+      "label": "Inclusion evidence",
+      "help_text": "One sentence naming the specific grounds — the community, organisation, Task or cited record. Written for a reader, not for a machine.",
+      "extras": true
+    },
+    {
       "field_name": "access_status",
       "label": "Access",
       "choices": [

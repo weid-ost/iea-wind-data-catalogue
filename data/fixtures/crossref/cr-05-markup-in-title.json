@@ -7,7 +7,7 @@
   "identity_key": "10.1002/we.1736",
   "source_system": "crossref",
   "source_id": "10.1002/we.1736",
-  "source_key": "2023-10-05T06:14:02Z",
+  "source_key": "2023-10-05T06:14:02Z~m2",
   "source": {
     "title": "An improved k ‐ ϵ model applied to a wind turbine wake in atmospheric turbulence",
     "notes": "Abstract <p> An improved k ‐ ϵ turbulence model is developed and applied to a single wind turbine wake in a neutral atmospheric boundary layer using a Reynolds averaged Navier–Stokes solver. The proposed model includes a flow‐dependent C <sub> μ </sub> that is sensitive to high velocity gradients, e.g., at the edge of a wind turbine wake. The modified k ‐ ϵ model is compared with the original k ‐ ϵ eddy viscosity model, Large‐Eddy Simulations and field measurements using eight test cases. The comparison shows that the velocity wake deficits, predicted by the proposed model are much closer to the ones calculated by the Large‐Eddy Simulation and those observed in the measurements, than predicted by the original k ‐ ϵ model. Copyright © 2014 John Wiley &amp; Sons, Ltd. </p>",

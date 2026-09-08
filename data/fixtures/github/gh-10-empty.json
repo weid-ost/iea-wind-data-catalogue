@@ -8,7 +8,7 @@
   "expected_slug": "github-ieawindtask37-github",
   "source_system": "github",
   "source_id": "IEAWindTask37/.github",
-  "source_key": "96a6a35fe46b1f642401038dfe4937508385e035::b8f94722f34071de",
+  "source_key": "96a6a35fe46b1f642401038dfe4937508385e035::b8f94722f34071de~m2",
   "expected_included": false,
   "expected_exclusion_reason": "GitHub meta-repository, not an artifact",
   "source": {

@@ -1,0 +1,150 @@
+{
+  "fixture_id": "cr-08-reference-list",
+  "fixture_kind": "source_namespace",
+  "case": "A journal article whose reference list is the evidence for the catalogue's scope rule",
+  "note": "REAL CAPTURE, verbatim from https://api.crossref.org/works/10.5194/wes-11-2447-2026 on 2026-09-08, filtered to SELECT_FIELDS because that is all the adapter ever sees.\n\n`reference` was deliberately excluded from SELECT_FIELDS — it is the bulk of a Crossref item and was 'of no use to a catalogue of metadata and links'. That stopped being true when the catalogue acquired a scope rule (ADR-0043): a work is in scope if it cites, or is cited by, something already in the catalogue, and a reference list is the only place such an edge is stated.\n\nWhat this fixture pins is the discipline that makes the field affordable. The payload carries 25 reference entries, 19 with a DOI, and each entry also carries `key`, `unstructured`, `doi-asserted-by` and often the cited work's title, authors, journal, volume and page. `map()` keeps NINETEEN DOIs and throws all the rest away: a citation edge needs an identifier and nothing else, and storing the remainder would bloat every event and every fixture for no gain.",
+  "raw": "raw/cr-08-reference-list.json",
+  "identity_key": "10.5194/wes-11-2447-2026",
+  "source_system": "crossref",
+  "source_id": "10.5194/wes-11-2447-2026",
+  "source_key": "2026-09-08T00:01:50Z~m2",
+  "source": {
+    "title": "Sensitivity analysis of numerical modeling input parameters on wind turbine loads in deterministic transient load cases",
+    "notes": "<p>Abstract. Aero-hydro-elastic-servo numerical models used to design and analyze wind turbines are based on thousands of variable input parameters that dictate the inflow, aerodynamic, structural, and control characteristics of the system as well as sea state, hydrodynamic, and mooring characteristics for fixed-bottom and floating offshore wind turbines. Each of these parameters has some level of uncertainty, which can significantly impact the predicted loads. Understanding the uncertainty in the inputs is critical to understanding the uncertainty in the outputs. This work demonstrates a screening technique to identify which parameters ultimate loads are most sensitive to so that more focus can be given to quantifying the possible range of those parameters. This technique has been demonstrated previously for different turbine and load case types and is extended here for a floating offshore wind turbine in design load cases with transient events both in the inflow and operations. Each load case features a deterministic gust, including variations in wind speed, direction, and shear. Load cases are considered with an operating turbine as well as with prescribed fault, startup, and shutdown procedures. The study found that key input parameters with a large impact on loads include the length of the gust, the magnitude of direction change and speed in the gust, the initial wind speed, and the shape of the gust profile.</p>",
+    "doi": "10.5194/wes-11-2447-2026",
+    "url": "https://doi.org/10.5194/wes-11-2447-2026",
+    "source_urls": [
+      "https://doi.org/10.5194/wes-11-2447-2026",
+      "https://wes.copernicus.org/articles/11/2447/2026/"
+    ],
+    "authors": [
+      {
+        "name": "Wiley, Will",
+        "given": "Will",
+        "family": "Wiley",
+        "orcid": "0009-0002-1621-5500"
+      },
+      {
+        "name": "Jonkman, Jason",
+        "given": "Jason",
+        "family": "Jonkman",
+        "orcid": "0000-0003-2990-7362"
+      },
+      {
+        "name": "Robertson, Amy",
+        "given": "Amy",
+        "family": "Robertson",
+        "orcid": "0000-0001-7448-4632"
+      }
+    ],
+    "publisher": "Copernicus GmbH",
+    "published_date": "2026-07-14",
+    "license_raw": "https://creativecommons.org/licenses/by/4.0/",
+    "license_id": "cc-by",
+    "resource_kind": "publication",
+    "container": "Wind Energy Science",
+    "keywords": [],
+    "resources": [],
+    "related_identifiers": [
+      {
+        "relation": "HasPreprint",
+        "identifier": "10.5194/wes-2025-228",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "HasReview",
+        "identifier": "10.5194/wes-2025-228-rc1",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "HasReview",
+        "identifier": "10.5194/wes-2025-228-rc2",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "HasReview",
+        "identifier": "10.5194/wes-2025-228-ac1",
+        "identifier_type": "DOI"
+      },
+      {
+        "relation": "IsPartOf",
+        "identifier": "10.5281/zenodo.20819544",
+        "identifier_type": "DOI"
+      }
+    ],
+    "iea_task": [],
+    "withdrawn": false,
+    "extra": {
+      "crossref_type": "journal-article",
+      "crossref_references": [
+        "10.1016/j.renene.2014.10.009",
+        "10.5194/essd-2023-490",
+        "10.5194/essd-16-1965-2024",
+        "10.5194/wes-4-397-2019",
+        "10.2514/6.2016-1007",
+        "10.2139/ssrn.5030588",
+        "10.1016/j.oceaneng.2025.120473",
+        "10.1080/00401706.1991.10484804",
+        "10.1088/1742-6596/2767/6/062030",
+        "10.2514/6.2018-1728",
+        "10.5194/wes-4-479-2019",
+        "10.1088/1742-6596/2362/1/012037",
+        "10.2514/6.2019-0248",
+        "10.5194/wes-8-25-2023",
+        "10.1016/0041-5553(67)90144-9",
+        "10.1002/we.2755",
+        "10.5194/wes-8-1575-2023",
+        "10.5194/wes-10-941-2025",
+        "10.5194/wes-2025-228"
+      ],
+      "crossref_short_container_title": "Wind Energ. Sci.",
+      "crossref_volume": "11",
+      "crossref_issue": "7",
+      "crossref_page": "2447-2477",
+      "crossref_issn": [
+        "2366-7451"
+      ],
+      "crossref_links": [
+        {
+          "URL": "https://wes.copernicus.org/articles/11/2447/2026/wes-11-2447-2026.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "title": {
+      "extraction_method": "api"
+    },
+    "doi": {
+      "extraction_method": "api"
+    },
+    "published_date": {
+      "extraction_method": "api"
+    },
+    "resource_kind": {
+      "extraction_method": "api"
+    },
+    "license_id": {
+      "extraction_method": "pattern"
+    },
+    "notes": {
+      "extraction_method": "api"
+    },
+    "authors": {
+      "extraction_method": "api"
+    },
+    "publisher": {
+      "extraction_method": "api"
+    },
+    "container": {
+      "extraction_method": "api"
+    },
+    "related_identifiers": {
+      "extraction_method": "api"
+    }
+  },
+  "expected_slug": "doi-10-5194-wes-11-2447-2026"
+}

@@ -8,7 +8,7 @@
   "expected_slug": "github-ieawindsystems-iea37-wflo-casestudies",
   "source_system": "github",
   "source_id": "IEAWindSystems/iea37-wflo-casestudies",
-  "source_key": "267f6e5d2906400b2ee0a8ff533da7ebcc4bb47a::3ef6249373f408c9",
+  "source_key": "267f6e5d2906400b2ee0a8ff533da7ebcc4bb47a::3ef6249373f408c9~m2",
   "expected_included": false,
   "expected_exclusion_reason": "fork",
   "source": {

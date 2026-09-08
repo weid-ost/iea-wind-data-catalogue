@@ -5,7 +5,7 @@ title: Withdrawn records are retained, never deleted
 status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
-related: [adr-0021-canonical-record-is-a-ckan-package-dict, adr-0037-events-are-the-source-of-truth, handle-a-withdrawn-record, record-format, adr-0042-the-concept-doi-is-the-record]
+related: [adr-0021-canonical-record-is-a-ckan-package-dict, adr-0037-events-are-the-source-of-truth, handle-a-withdrawn-record, record-format, adr-0042-the-concept-doi-is-the-record, adr-0043-what-belongs-in-the-catalogue]
 tags: [lifecycle, link-rot, records]
 ---
 

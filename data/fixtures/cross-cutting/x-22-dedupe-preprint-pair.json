@@ -43,6 +43,14 @@
         "value": "doi"
       },
       {
+        "key": "inclusion_basis",
+        "value": "direct"
+      },
+      {
+        "key": "inclusion_evidence",
+        "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
+      },
+      {
         "key": "last_seen",
         "value": "2026-08-24T03:12:00Z"
       },
@@ -79,6 +87,10 @@
         "value": "publication"
       },
       {
+        "key": "resource_type",
+        "value": "publication"
+      },
+      {
         "key": "source_id",
         "value": "10.5194/egusphere-2023-1234"
       },
@@ -111,13 +123,13 @@
     "license_id": "cc-by",
     "name": "doi-10-5194-egusphere-2023-1234",
     "notes": "",
+    "owner_org": "unattributed",
     "private": false,
     "resources": [],
     "state": "active",
     "tags": [],
     "title": "Turbulence intensity in the wake of a floating offshore turbine",
-    "url": "https://doi.org/10.5194/egusphere-2023-1234",
-    "owner_org": "unattributed"
+    "url": "https://doi.org/10.5194/egusphere-2023-1234"
   },
   "expected_records": {
     "doi-10-5194-egusphere-2023-1234": {
@@ -149,6 +161,14 @@
         {
           "key": "identity_kind",
           "value": "doi"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",
@@ -260,6 +280,14 @@
         {
           "key": "identity_kind",
           "value": "doi"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",
@@ -395,6 +423,14 @@
           "value": "doi"
         },
         {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
+        },
+        {
           "key": "last_seen",
           "value": "2026-08-24T03:12:00Z"
         },
@@ -512,6 +548,14 @@
         {
           "key": "identity_kind",
           "value": "doi"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",

@@ -5,7 +5,7 @@ title: The concept DOI is the record; version DOIs merge into it and are retaine
 status: accepted
 date: 2026-09-08
 deciders: [project author (OST)]
-related: [adr-0026-change-detection-by-source-key, adr-0027-withdrawn-records-are-retained, adr-0037-events-are-the-source-of-truth, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus, correct-a-record, handle-a-withdrawn-record]
+related: [adr-0026-change-detection-by-source-key, adr-0027-withdrawn-records-are-retained, adr-0037-events-are-the-source-of-truth, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus, correct-a-record, handle-a-withdrawn-record, adr-0043-what-belongs-in-the-catalogue]
 tags: [identity, dedupe, doi, site]
 ---
 

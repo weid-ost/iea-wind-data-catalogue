@@ -39,6 +39,14 @@
         "value": "doi"
       },
       {
+        "key": "inclusion_basis",
+        "value": "direct"
+      },
+      {
+        "key": "inclusion_evidence",
+        "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+      },
+      {
         "key": "last_seen",
         "value": "2026-08-24T03:12:00Z"
       },
@@ -68,6 +76,10 @@
       },
       {
         "key": "resource_kind",
+        "value": "publication"
+      },
+      {
+        "key": "resource_type",
         "value": "publication"
       },
       {
@@ -103,13 +115,13 @@
     "license_id": "cc-by",
     "name": "doi-10-11583-dtu-6000007",
     "notes": "",
+    "owner_org": "dtu",
     "private": false,
     "resources": [],
     "state": "active",
     "tags": [],
     "title": "Probabilistic wake-loss estimation for large offshore arrays",
-    "url": "https://doi.org/10.11583/dtu.6000007",
-    "owner_org": "dtu"
+    "url": "https://doi.org/10.11583/dtu.6000007"
   },
   "expected_records": {
     "doi-10-11583-dtu-6000007": {
@@ -137,6 +149,14 @@
         {
           "key": "identity_kind",
           "value": "doi"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",
@@ -240,6 +260,14 @@
         {
           "key": "identity_kind",
           "value": "doi"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through community:iea_wind_task_43, which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",
@@ -362,6 +390,14 @@
           "value": "doi"
         },
         {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+        },
+        {
           "key": "last_seen",
           "value": "2026-08-24T03:12:00Z"
         },
@@ -463,6 +499,14 @@
         {
           "key": "identity_kind",
           "value": "doi"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through community:iea_wind_task_43, which is an IEA Wind attribution."
         },
         {
           "key": "last_seen",

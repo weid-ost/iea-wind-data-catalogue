@@ -71,6 +71,57 @@ const kinds = resourceKinds.map((kind) => ({ kind, types: typesOfKind(kind.name)
       </li>
     </ul>
 
+    <h2 id="inclusion">What belongs in this catalogue</h2>
+    <blockquote class="rule">
+      <p>
+        Things that belong in the catalogue must either be directly attributed
+        to IEA Wind (ie be tagged, or published in our communities or websites
+        in some way), or cited by work which is in the catalogue, or cite things
+        which are in the catalogue. And ideally we should record which of those
+        is the case.
+      </p>
+    </blockquote>
+
+    <p>
+      So every record says which. The three tests, in the order they are
+      applied:
+    </p>
+    <dl class="defs__list">
+      <dt>Directly attributed to IEA Wind</dt>
+      <dd>
+        It was found through an IEA Wind Zenodo community, an IEA Wind GitHub
+        organisation, an iea-wind.org Task page, or a search of DataCite,
+        Crossref or OSTI that names IEA Wind — or it carries an IEA Wind Task
+        attribution. The route a record arrived by is recorded when it is
+        harvested, because by the time you are holding the metadata there is
+        often nothing left in it to say why it is here.
+      </dd>
+      <dt>Cites something in the catalogue</dt>
+      <dd>
+        Taken from published reference lists. A paper using the IEA 15 MW
+        reference wind turbine belongs in a catalogue of IEA Wind output whether
+        or not anybody tagged it.
+      </dd>
+      <dt>Cited by something in the catalogue</dt>
+      <dd>The same edge, read from the other end.</dd>
+    </dl>
+
+    <p>
+      A record meeting none of the three is <strong>not listed</strong> — but it
+      is not deleted either. Its page and its URL stay, so anything already
+      pointing at it keeps working, and the test is re-applied every time the
+      catalogue is rebuilt: something that later gets cited by a Task report
+      appears in the listings on its own.
+    </p>
+    <p>
+      This matters because the catalogue casts a wide net on purpose. One of the
+      ways it looks for software is a GitHub topic search, and
+      <code>wind-energy</code> is a label anyone can put on anything — which is
+      how a company API directory, a wind-farm video game and a
+      nuclear-versus-wind comparison arrived here. They are all still at their
+      URLs. None of them is in the catalogue.
+    </p>
+
     <h2 id="definitions">Definitions</h2>
     <p>
       Three questions came back from IEA Wind about what the words on a record
@@ -245,6 +296,16 @@ const kinds = resourceKinds.map((kind) => ({ kind, types: typesOfKind(kind.name)
 
   li + li {
     margin-block-start: var(--space-3);
+  }
+
+  /* The scope rule, quoted rather than paraphrased: it is somebody's sentence
+     and the catalogue is answerable to it, not to our summary of it. */
+  .rule {
+    margin: var(--space-4) 0;
+    padding-inline-start: var(--space-4);
+    border-inline-start: var(--panel-bar-width) solid var(--panel-accent-bar);
+    max-width: var(--font-measure-prose);
+    font-size: var(--font-size-body);
   }
 
   /* A definition list, not a table: the terms are of very different lengths and

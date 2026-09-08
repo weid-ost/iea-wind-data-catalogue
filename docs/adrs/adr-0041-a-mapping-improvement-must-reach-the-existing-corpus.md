@@ -5,7 +5,7 @@ title: A mapping improvement must reach the records already harvested
 status: accepted
 date: 2026-09-08
 deciders: [project author (OST)]
-related: [adr-0026-change-detection-by-source-key, adr-0037-events-are-the-source-of-truth, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels, adr-0042-the-concept-doi-is-the-record, run-a-harvest-locally]
+related: [adr-0026-change-detection-by-source-key, adr-0037-events-are-the-source-of-truth, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0040-vocabulary-is-defined-once-and-shown-at-two-levels, adr-0042-the-concept-doi-is-the-record, run-a-harvest-locally, adr-0043-what-belongs-in-the-catalogue]
 tags: [harvest, adapters, change-detection, backfill]
 ---
 

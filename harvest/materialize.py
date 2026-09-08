@@ -26,7 +26,8 @@ from harvest.events import iter_identity_keys, log_problems, resolve
 from harvest.institutions import infer_owner_org
 from harvest.licenses import is_known_license, map_license
 from harvest.models import ResolvedRecord, json_extra
-from harvest.resource_types import derive as derive_resource_type
+from harvest.inclusion import citation_edges, decide as decide_inclusion, generic_routes
+from harvest.resource_types import derive_with_method as derive_resource_type
 
 __all__ = [
     "MaterializeResult",
@@ -63,6 +64,8 @@ EXTRA_KEYS = (
     "publisher",
     "related_identifiers",
     "report_number",
+    "inclusion_basis",
+    "inclusion_evidence",
     "resource_kind",
     "resource_type",
     "source_id",
@@ -105,7 +108,10 @@ def _string(value: Any) -> str:
     return str(value)
 
 
-def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
+def build_extras(
+    resolved: ResolvedRecord,
+    inclusion: tuple[str, str] | None = None,
+) -> list[dict[str, str]]:
     """The custom-field block, as CKAN string extras, sorted by key.
 
     Structured values (``iea_task``, ``source_urls``, ``provenance``,
@@ -124,18 +130,23 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
     if effective.get("url") and effective["url"] not in source_urls:
         source_urls = [effective["url"], *source_urls]
 
-    resource_kind, resource_type = derive_resource_type(
-        effective, resolved.source_systems or []
+    resource_kind, resource_type, resource_type_method = derive_resource_type(
+        effective, resolved.source_systems or [], (inclusion or ("none", ""))[0]
     )
 
     provenance = {
         key: value.model_dump(mode="json", exclude_none=True)
         for key, value in sorted(resolved.provenance.items())
     }
-    # `resource_type` is derived, so it carries the provenance of the field it
-    # was derived from rather than pretending an API stated it (ADR-0028).
-    if resource_type and "resource_kind" in provenance:
-        provenance.setdefault("resource_type", dict(provenance["resource_kind"]))
+    # `resource_type` is derived, so its provenance says how the TYPE was known,
+    # not how the kind was (ADR-0028). A type DataCite stated is `api` even when
+    # a model guessed the kind; a type that is merely the generic child of a
+    # model's guess inherits the kind's provenance, badge and all.
+    if resource_type:
+        if resource_type_method:
+            provenance["resource_type"] = {"extraction_method": resource_type_method}
+        elif "resource_kind" in provenance:
+            provenance["resource_type"] = dict(provenance["resource_kind"])
 
     candidates: dict[str, Any] = {
         "identity_key": resolved.identity_key,
@@ -159,6 +170,11 @@ def build_extras(resolved: ResolvedRecord) -> list[dict[str, str]]:
         # looking for grey literature will go.
         "resource_kind": resource_kind,
         "resource_type": resource_type,
+        # Why this record is in the catalogue at all, and the receipt for it
+        # (ADR-0043). Always present: "we looked and found no grounds" is a
+        # finding, not a missing field.
+        "inclusion_basis": (inclusion or ("none", ""))[0],
+        "inclusion_evidence": (inclusion or ("none", ""))[1] or None,
         "access_status": effective.get("access_status"),
         "embargo_date": effective.get("embargo_date"),
         "authors": effective.get("authors") or None,
@@ -206,13 +222,27 @@ def to_ckan_package(
     resolved: ResolvedRecord,
     root: Path | None = None,
     notices: list[dict] | None = None,
+    inclusion: tuple[str, str] | None = None,
 ) -> dict[str, Any]:
     """Shape a resolved record as a CKAN package dict, ready to POST.
 
     ``notices`` collects anything dropped on the way (an unknown task group),
     so the run report says what happened rather than the record quietly
     differing from the event log.
+
+    ``inclusion`` is the scope decision (ADR-0043). It is computed by
+    :func:`materialize_all`, which is the only caller that can: the citation
+    limbs are questions about the whole catalogue, not about one record. When it
+    is not supplied — a single-record ``replay()``, a fixture test — the
+    **direct** limb is still decided here from this record alone, because that
+    much needs no catalogue. What such a caller cannot know is whether a record
+    with no attribution is nevertheless cited by one that is, so it may report
+    ``none`` where the full pass would report ``cites`` or ``cited-by``.
     """
+    if inclusion is None:
+        inclusion = decide_inclusion(
+            resolved.identity_key, resolved, {}, {}, generic_routes(root)
+        )
     effective = resolved.effective
 
     license_id = effective.get("license_id")
@@ -265,7 +295,7 @@ def to_ckan_package(
         "notes": effective.get("notes") or "",
         "license_id": license_id,
         "tags": [{"name": tag} for tag in sorted(tags)],
-        "extras": build_extras(resolved),
+        "extras": build_extras(resolved, inclusion),
         "resources": resources,
         "groups": [{"name": group} for group in groups],
         "state": "active",
@@ -332,11 +362,25 @@ def materialize_all(
     )
     keys = list(dict.fromkeys(seen_keys))   # a key yielded twice is one record
 
+    # TWO PASSES, because the scope rule is not a fact about one record.
+    # "Does this cite something in the catalogue?" can only be answered once
+    # every identity has been resolved, so resolution and shaping are separate
+    # (ADR-0043). 344 resolved records is a few megabytes; this is not the
+    # place to be clever about memory.
+    resolved_by_key = {
+        identity_key: resolve(identity_key, events_dir=events_directory)
+        for identity_key in sorted(keys)
+    }
+    cites, cited_by = citation_edges(resolved_by_key)
+    generic = generic_routes(root)
+
     expected: set[str] = set()
     claimed: dict[str, str] = {}   # slug -> identity key, to catch collisions
-    for identity_key in sorted(keys):
-        resolved = resolve(identity_key, events_dir=events_directory)
-        package = to_ckan_package(resolved, root=root, notices=result.notices)
+    for identity_key, resolved in resolved_by_key.items():
+        inclusion = decide_inclusion(identity_key, resolved, cites, cited_by, generic)
+        package = to_ckan_package(
+            resolved, root=root, notices=result.notices, inclusion=inclusion
+        )
         slug = package["name"]
         if slug in claimed and claimed[slug] != identity_key:
             # Two identities rendering to one slug would silently overwrite each

@@ -51,6 +51,7 @@ __all__ = [
     "AdapterError",
     "SourceUnreachable",
     "SourceConfig",
+    "stamp",
     "SourceResult",
     "Adapter",
     "register",
@@ -84,6 +85,19 @@ def payload_hash(payload: Any) -> str:
     """
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"), default=str)
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:16]
+
+
+def stamp(key: str, mapping_version: int) -> str:
+    """``"<key>~m<n>"`` — the source key with the adapter's mapping version.
+
+    Change detection compares source keys (ADR-0026), so an adapter that starts
+    recording something new — a preserved field, a discovery route — would only
+    ever apply it to records harvested after the change; everything already in
+    the catalogue keeps the old mapping for as long as its upstream sits still.
+    Folding the mapping version into the key costs exactly one re-scrape per
+    record and closes that gap (ADR-0041).
+    """
+    return f"{key}~m{mapping_version}"
 
 
 @dataclass
@@ -285,6 +299,11 @@ def run_adapter(
                         source_key=mapped.source_key,
                         source=mapped.source.model_dump(mode="json", exclude_none=True),
                         provenance=mapped.provenance,
+                        # The route travels on the RAW observation, because
+                        # `harvest()` is what knows it and `map()` is pure — no
+                        # adapter's map() has to remember to copy it across, and
+                        # the one that did forget wrote 574 routeless events.
+                        discovered_via=mapped.discovered_via or raw.discovered_via,
                         events_dir=events_dir,
                     )
                 except ValueError as exc:

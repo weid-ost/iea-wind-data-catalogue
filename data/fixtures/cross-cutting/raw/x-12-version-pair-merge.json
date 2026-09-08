@@ -11,22 +11,34 @@
       "source_key": "2@10.5281/zenodo.9000022~m2",
       "actor": "harvest/zenodo",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "resource_kind": { "extraction_method": "api" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "resource_kind": {
+          "extraction_method": "api"
+        }
       },
       "source": {
         "title": "Perspectives on wind lidar digitalisation",
         "doi": "10.5281/zenodo.9000021",
         "url": "https://zenodo.org/records/9000022",
-        "source_urls": ["https://zenodo.org/records/9000022"],
-        "authors": [{ "name": "Steudel, D." }],
+        "source_urls": [
+          "https://zenodo.org/records/9000022"
+        ],
+        "authors": [
+          {
+            "name": "Steudel, D."
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2026-03-11",
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "resource_kind": "publication",
         "access_status": "open",
-        "iea_task": ["task-52"],
+        "iea_task": [
+          "task-52"
+        ],
         "withdrawn": false,
         "related_identifiers": [
           {
@@ -44,7 +56,10 @@
             "title": "Presentation"
           }
         }
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     },
     {
       "observed_at": "2026-09-02T06:00:00Z",
@@ -55,15 +70,25 @@
       "source_key": "2026-09-02T05:00:00Z",
       "actor": "harvest/datacite",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "resource_kind": { "extraction_method": "api" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "resource_kind": {
+          "extraction_method": "api"
+        }
       },
       "source": {
         "title": "Perspectives on wind lidar digitalisation",
         "doi": "10.5281/zenodo.9000022",
         "url": "https://zenodo.org/doi/10.5281/zenodo.9000022",
-        "source_urls": ["https://zenodo.org/doi/10.5281/zenodo.9000022"],
-        "authors": [{ "name": "Steudel, D." }],
+        "source_urls": [
+          "https://zenodo.org/doi/10.5281/zenodo.9000022"
+        ],
+        "authors": [
+          {
+            "name": "Steudel, D."
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2026-03-11",
         "license_raw": "cc-by-4.0",
@@ -86,7 +111,10 @@
             "resourceTypeGeneral": "Text"
           }
         }
-      }
+      },
+      "discovered_via": [
+        "query:\"IEA Wind Task\""
+      ]
     }
   ]
 }

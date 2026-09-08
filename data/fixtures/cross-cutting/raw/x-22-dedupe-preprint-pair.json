@@ -41,7 +41,10 @@
           }
         ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "query:wind-energy-science-iea-wind"
+      ]
     },
     {
       "observed_at": "2026-08-24T03:12:30Z",
@@ -76,7 +79,10 @@
         "resource_kind": "publication",
         "access_status": "open",
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "query:wind-energy-science-iea-wind"
+      ]
     }
   ],
   "expected_merges": [

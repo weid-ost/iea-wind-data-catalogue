@@ -246,6 +246,28 @@ fixture replay. An adapter must treat `None` as "I have not been told what the
 catalogue holds" and skip its backfill entirely, rather than reaching for the
 default directory and reading the live repository from inside a test.
 
+### The discovery route (ADR-0043)
+
+Every observation an adapter yields carries `discovered_via`: why this record
+was fetched, as `"<kind>:<value>"` — `community:iea_wind_task_43`,
+`org:IEAWindSystems`, `topic:wind-energy`, `query:iea-wind-task-by-title`,
+`task-page:task-43`, `backfill:doi`.
+
+It is set on the **raw** observation, in `harvest()`, which is the only place
+that knows it; `run_adapter` carries it onto the event, so `map()` stays pure
+and no adapter has to remember to copy it across. (The version that relied on
+`map()` copying it wrote 574 routeless events before anyone noticed.)
+
+The catalogue's scope rule runs on it. Most routes ARE an IEA Wind
+attribution — an IEA Wind community, organisation, Task page, or a query that
+names IEA Wind — and a record reached through one is in scope by that fact
+alone. `sources.yaml` lists the exceptions per source under `generic_routes`;
+today that is `topic:wind-energy`, and a record found only that way has to earn
+its place by citing, or being cited by, something already in the catalogue.
+
+**A new discovery route needs a decision, not just code.** If it is not an IEA
+Wind attribution, add it to `generic_routes` in the same change.
+
 A backfilled observation sets `RawObservation.identity_override`, and `map()`
 must honour it: the artifact is enriched under the identity the catalogue
 already lists it by, never re-keyed to the one this payload would produce.
@@ -548,7 +570,9 @@ run in which nothing changed produces no diff in `data/records/`.
     { "key": "publisher", "value": "Zenodo" },
     { "key": "related_identifiers", "value": "[{\"identifier\":\"10.5072/zenodo.1234566\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]" },
     { "key": "resource_kind", "value": "dataset" },              // the coarse facet
-    { "key": "resource_type", "value": "dataset" },              // the specific value under it (ADR-0040)
+    { "key": "resource_type", "value": "dataset" },              // the specific type (ADR-0040)
+    { "key": "inclusion_basis", "value": "direct" },             // why it is here (ADR-0043)
+    { "key": "inclusion_evidence", "value": "Found through community:iea_wind_task_43, which is an IEA Wind attribution." },
     { "key": "source_id", "value": "1234567" },
     { "key": "source_key", "value": "3" },
     { "key": "source_system", "value": "zenodo" },

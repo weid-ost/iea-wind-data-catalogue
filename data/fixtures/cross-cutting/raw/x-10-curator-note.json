@@ -10,25 +10,40 @@
       "source_key": "1",
       "actor": "harvest/zenodo",
       "provenance": {
-        "title": { "extraction_method": "api" },
-        "license_id": { "extraction_method": "pattern" }
+        "title": {
+          "extraction_method": "api"
+        },
+        "license_id": {
+          "extraction_method": "pattern"
+        }
       },
       "source": {
         "title": "Offshore turbine load measurements, Alpha Ventus",
         "notes": "<p>Strain-gauge load measurements from three turbines, 2019-2021.</p>",
         "doi": "10.5281/zenodo.5000005",
         "url": "https://zenodo.org/records/5000006",
-        "source_urls": ["https://zenodo.org/records/5000006"],
-        "authors": [{ "name": "Okafor, Chidi" }],
+        "source_urls": [
+          "https://zenodo.org/records/5000006"
+        ],
+        "authors": [
+          {
+            "name": "Okafor, Chidi"
+          }
+        ],
         "publisher": "Zenodo",
         "published_date": "2022-11-30",
         "license_raw": "cc-by-4.0",
         "license_id": "cc-by",
         "resource_kind": "dataset",
         "access_status": "open",
-        "keywords": ["loads"],
+        "keywords": [
+          "loads"
+        ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "community:iea_wind_task_43"
+      ]
     }
   ],
   "annotations_yaml": {

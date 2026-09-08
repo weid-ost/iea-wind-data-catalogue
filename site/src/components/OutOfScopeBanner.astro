@@ -1,0 +1,42 @@
+---
+/**
+ * This record meets none of the catalogue's three inclusion tests (ADR-0043).
+ *
+ * The rule, as the project owner stated it: a record belongs if it is directly
+ * attributed to IEA Wind — tagged, or published in an IEA Wind community or
+ * website — **or** it cites something in the catalogue, **or** something in the
+ * catalogue cites it. Almost everything that fails all three arrived through a
+ * generic GitHub topic search: `wind-energy` is a label anyone can apply to
+ * anything, and it is how a company API directory and a wind-farm video game
+ * got here.
+ *
+ * Not listed is not deleted (ADR-0027). The page and the URL stay, so anything
+ * already pointing here keeps working, and the decision is re-made from scratch
+ * every time the catalogue is rebuilt — a repository that later gets cited by a
+ * Task report walks back into the listings on its own, with no intervention.
+ */
+import Panel from './Panel.astro';
+import { withBase } from '../lib/url';
+
+interface Props {
+  /** The evidence line, which for an out-of-scope record says what was missing. */
+  evidence?: string;
+}
+const { evidence } = Astro.props;
+---
+
+<Panel tone="warning" icon="◇" role="status" heading="Not listed in the catalogue" headingLevel="p">
+  <p>
+    The catalogue lists work that is <strong>directly attributed to IEA Wind</strong>,
+    or that <strong>cites</strong> something in the catalogue, or that is
+    <strong>cited by</strong> something in the catalogue. This record meets none
+    of the three, so it is kept but not listed.
+    {evidence && <> <span class="secondary">{evidence}</span></>}
+  </p>
+  <p>
+    This is not a judgement about the work. It is a statement about scope, it is
+    re-decided every time the catalogue is rebuilt, and this page and its URL
+    stay either way. See <a href={withBase('/about/#inclusion')}>what belongs in
+    this catalogue</a>.
+  </p>
+</Panel>

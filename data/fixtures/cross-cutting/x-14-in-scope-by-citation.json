@@ -1,0 +1,357 @@
+{
+  "fixture_id": "x-14-in-scope-by-citation",
+  "fixture_kind": "record",
+  "case": "The same generic route, but the repository cites a record the catalogue holds — in scope under limb 2, with the cited record named",
+  "note": "The other half of the rule, and the reason it is not simply \"drop anything without a Task tag\". This repository was found ONLY through `topic:wind-energy`, which `sources.yaml` lists under `generic_routes` — the same route, and the same lack of attribution, as the excluded repository in x-13. What saves it is that its README cites the IEA Wind 15 MW reference turbine's Zenodo deposit, which the catalogue holds: limb 2, `cites`. The evidence names the record cited.\n\nNote the order the limbs are tried in. Limb 1 is checked first and is stronger, so a record with an attributing route never reports `cites` even when it also cites something — which is why this fixture's repository has no attributing route at all, and why the reference turbine beside it reports `direct` through its IEA Wind Zenodo community rather than `cited-by`.\n\nOne stated edge fills both directions: if A's references name B then A cites B and B is cited by A. That matters because Crossref publishes reference lists but not citing-work lists, so one side's metadata has to settle the question for both.",
+  "raw": "raw/x-14-in-scope-by-citation.json",
+  "identity_keys": [
+    "10.5281/zenodo.9100001",
+    "github|windlab/rwt-gust-tools"
+  ],
+  "expected_record_names": [
+    "doi-10-5281-zenodo-9100001",
+    "github-windlab-rwt-gust-tools"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-09-08T06:05:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "github|windlab/rwt-gust-tools"
+      },
+      {
+        "key": "identity_kind",
+        "value": "source"
+      },
+      {
+        "key": "inclusion_basis",
+        "value": "cites"
+      },
+      {
+        "key": "inclusion_evidence",
+        "value": "Cites 10.5281/zenodo.9100001, which the catalogue holds."
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-09-08T06:05:00Z"
+      },
+      {
+        "key": "license_mapped",
+        "value": "true"
+      },
+      {
+        "key": "license_raw",
+        "value": "MIT"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      },
+      {
+        "key": "publisher",
+        "value": "GitHub"
+      },
+      {
+        "key": "related_identifiers",
+        "value": "[{\"identifier\":\"10.5281/zenodo.9100001\",\"identifier_type\":\"DOI\",\"relation\":\"References\"}]"
+      },
+      {
+        "key": "resource_kind",
+        "value": "software"
+      },
+      {
+        "key": "resource_type",
+        "value": "other-software"
+      },
+      {
+        "key": "source_id",
+        "value": "windlab/rwt-gust-tools"
+      },
+      {
+        "key": "source_key",
+        "value": "d4e5f6:: 9a8b7c6d5e4f3a2b~m2"
+      },
+      {
+        "key": "source_system",
+        "value": "github"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"github\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://github.com/windlab/rwt-gust-tools"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://github.com/windlab/rwt-gust-tools\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [],
+    "license_id": "mit",
+    "name": "github-windlab-rwt-gust-tools",
+    "notes": "Extreme-gust post-processing for the IEA 15 MW reference rotor.",
+    "owner_org": "unattributed",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [
+      {
+        "name": "openfast"
+      },
+      {
+        "name": "wind-energy"
+      }
+    ],
+    "title": "windlab/rwt-gust-tools",
+    "url": "https://github.com/windlab/rwt-gust-tools"
+  },
+  "expected_records": {
+    "doi-10-5281-zenodo-9100001": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "authors",
+          "value": "[{\"name\":\"Gaertner, E.\"}]"
+        },
+        {
+          "key": "doi",
+          "value": "10.5281/zenodo.9100001"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-09-08T06:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "10.5281/zenodo.9100001"
+        },
+        {
+          "key": "identity_kind",
+          "value": "doi"
+        },
+        {
+          "key": "iea_task",
+          "value": "[\"task-37\"]"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "direct"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Found through community:iea_wind_task_43, which is an IEA Wind attribution."
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-09-08T06:00:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "cc-by-4.0"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+        },
+        {
+          "key": "published_date",
+          "value": "2024-02-01"
+        },
+        {
+          "key": "publisher",
+          "value": "Zenodo"
+        },
+        {
+          "key": "resource_kind",
+          "value": "model"
+        },
+        {
+          "key": "resource_type",
+          "value": "model"
+        },
+        {
+          "key": "source_id",
+          "value": "9100001"
+        },
+        {
+          "key": "source_key",
+          "value": "2@10.5281/zenodo.9100001~m3"
+        },
+        {
+          "key": "source_system",
+          "value": "zenodo"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"zenodo\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://zenodo.org/records/9100001"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://zenodo.org/records/9100001\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [
+        {
+          "name": "task-37"
+        }
+      ],
+      "license_id": "cc-by",
+      "name": "doi-10-5281-zenodo-9100001",
+      "notes": "",
+      "owner_org": "zenodo-community",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [],
+      "title": "IEA Wind 15 MW offshore reference wind turbine",
+      "url": "https://zenodo.org/records/9100001"
+    },
+    "github-windlab-rwt-gust-tools": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-09-08T06:05:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "github|windlab/rwt-gust-tools"
+        },
+        {
+          "key": "identity_kind",
+          "value": "source"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "cites"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "Cites 10.5281/zenodo.9100001, which the catalogue holds."
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-09-08T06:05:00Z"
+        },
+        {
+          "key": "license_mapped",
+          "value": "true"
+        },
+        {
+          "key": "license_raw",
+          "value": "MIT"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+        },
+        {
+          "key": "publisher",
+          "value": "GitHub"
+        },
+        {
+          "key": "related_identifiers",
+          "value": "[{\"identifier\":\"10.5281/zenodo.9100001\",\"identifier_type\":\"DOI\",\"relation\":\"References\"}]"
+        },
+        {
+          "key": "resource_kind",
+          "value": "software"
+        },
+        {
+          "key": "resource_type",
+          "value": "other-software"
+        },
+        {
+          "key": "source_id",
+          "value": "windlab/rwt-gust-tools"
+        },
+        {
+          "key": "source_key",
+          "value": "d4e5f6:: 9a8b7c6d5e4f3a2b~m2"
+        },
+        {
+          "key": "source_system",
+          "value": "github"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"github\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://github.com/windlab/rwt-gust-tools"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://github.com/windlab/rwt-gust-tools\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "mit",
+      "name": "github-windlab-rwt-gust-tools",
+      "notes": "Extreme-gust post-processing for the IEA 15 MW reference rotor.",
+      "owner_org": "unattributed",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [
+        {
+          "name": "openfast"
+        },
+        {
+          "name": "wind-energy"
+        }
+      ],
+      "title": "windlab/rwt-gust-tools",
+      "url": "https://github.com/windlab/rwt-gust-tools"
+    }
+  },
+  "expected_notices": []
+}

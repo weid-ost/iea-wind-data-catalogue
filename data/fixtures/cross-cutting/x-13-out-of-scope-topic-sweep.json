@@ -1,0 +1,218 @@
+{
+  "fixture_id": "x-13-out-of-scope-topic-sweep",
+  "fixture_kind": "record",
+  "case": "A repository found only through a generic GitHub topic, with no IEA Wind attribution and no citation link — kept, and not listed",
+  "note": "The record this rule exists to exclude. `api-evangelist/sunedison` is a third-party directory entry for a defunct solar company's API surface. It is in an IEA Wind catalogue for one reason: it carries the `wind-energy` GitHub topic, which anyone can apply to anything. It has no IEA Wind Task attribution, no DOI, no deposit, and nothing in the catalogue cites it or is cited by it. `sources.yaml` lists `topic:wind-energy` under `generic_routes`, so the route that found it is not an attribution, and the record fails all three limbs of the scope rule. It is kept, and its page and URL keep resolving — nothing here is ever deleted (ADR-0027) — but it is not listed, and the record says why. Note the second event: the SAME repository would be in scope if an IEA Wind organisation also published it, because the strongest route wins.",
+  "raw": "raw/x-13-out-of-scope-topic-sweep.json",
+  "identity_keys": [
+    "github|api-evangelist/sunedison"
+  ],
+  "expected_record_names": [
+    "github-api-evangelist-sunedison"
+  ],
+  "record": {
+    "extras": [
+      {
+        "key": "access_status",
+        "value": "open"
+      },
+      {
+        "key": "first_seen",
+        "value": "2026-09-08T06:00:00Z"
+      },
+      {
+        "key": "identity_key",
+        "value": "github|api-evangelist/sunedison"
+      },
+      {
+        "key": "identity_kind",
+        "value": "source"
+      },
+      {
+        "key": "inclusion_basis",
+        "value": "none"
+      },
+      {
+        "key": "inclusion_evidence",
+        "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+      },
+      {
+        "key": "last_seen",
+        "value": "2026-09-08T06:00:00Z"
+      },
+      {
+        "key": "lifecycle_state",
+        "value": "active"
+      },
+      {
+        "key": "provenance",
+        "value": "{\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+      },
+      {
+        "key": "publisher",
+        "value": "GitHub"
+      },
+      {
+        "key": "resource_kind",
+        "value": "software"
+      },
+      {
+        "key": "resource_type",
+        "value": "other-software"
+      },
+      {
+        "key": "source_id",
+        "value": "api-evangelist/sunedison"
+      },
+      {
+        "key": "source_key",
+        "value": "abc123:: 3f1c2d4e5a6b7c8d~m2"
+      },
+      {
+        "key": "source_system",
+        "value": "github"
+      },
+      {
+        "key": "source_systems",
+        "value": "[\"github\"]"
+      },
+      {
+        "key": "source_url",
+        "value": "https://github.com/api-evangelist/sunedison"
+      },
+      {
+        "key": "source_urls",
+        "value": "[\"https://github.com/api-evangelist/sunedison\"]"
+      },
+      {
+        "key": "withdrawn",
+        "value": "false"
+      }
+    ],
+    "groups": [],
+    "license_id": "notspecified",
+    "name": "github-api-evangelist-sunedison",
+    "notes": "SunEdison — independent third-party profile of a public API surface, by API Evangelist.",
+    "owner_org": "unattributed",
+    "private": false,
+    "resources": [],
+    "state": "active",
+    "tags": [
+      {
+        "name": "apis-json"
+      },
+      {
+        "name": "renewable-energy"
+      },
+      {
+        "name": "wind-energy"
+      }
+    ],
+    "title": "api-evangelist/sunedison",
+    "url": "https://github.com/api-evangelist/sunedison"
+  },
+  "expected_records": {
+    "github-api-evangelist-sunedison": {
+      "extras": [
+        {
+          "key": "access_status",
+          "value": "open"
+        },
+        {
+          "key": "first_seen",
+          "value": "2026-09-08T06:00:00Z"
+        },
+        {
+          "key": "identity_key",
+          "value": "github|api-evangelist/sunedison"
+        },
+        {
+          "key": "identity_kind",
+          "value": "source"
+        },
+        {
+          "key": "inclusion_basis",
+          "value": "none"
+        },
+        {
+          "key": "inclusion_evidence",
+          "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+        },
+        {
+          "key": "last_seen",
+          "value": "2026-09-08T06:00:00Z"
+        },
+        {
+          "key": "lifecycle_state",
+          "value": "active"
+        },
+        {
+          "key": "provenance",
+          "value": "{\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+        },
+        {
+          "key": "publisher",
+          "value": "GitHub"
+        },
+        {
+          "key": "resource_kind",
+          "value": "software"
+        },
+        {
+          "key": "resource_type",
+          "value": "other-software"
+        },
+        {
+          "key": "source_id",
+          "value": "api-evangelist/sunedison"
+        },
+        {
+          "key": "source_key",
+          "value": "abc123:: 3f1c2d4e5a6b7c8d~m2"
+        },
+        {
+          "key": "source_system",
+          "value": "github"
+        },
+        {
+          "key": "source_systems",
+          "value": "[\"github\"]"
+        },
+        {
+          "key": "source_url",
+          "value": "https://github.com/api-evangelist/sunedison"
+        },
+        {
+          "key": "source_urls",
+          "value": "[\"https://github.com/api-evangelist/sunedison\"]"
+        },
+        {
+          "key": "withdrawn",
+          "value": "false"
+        }
+      ],
+      "groups": [],
+      "license_id": "notspecified",
+      "name": "github-api-evangelist-sunedison",
+      "notes": "SunEdison — independent third-party profile of a public API surface, by API Evangelist.",
+      "owner_org": "unattributed",
+      "private": false,
+      "resources": [],
+      "state": "active",
+      "tags": [
+        {
+          "name": "apis-json"
+        },
+        {
+          "name": "renewable-energy"
+        },
+        {
+          "name": "wind-energy"
+        }
+      ],
+      "title": "api-evangelist/sunedison",
+      "url": "https://github.com/api-evangelist/sunedison"
+    }
+  },
+  "expected_notices": []
+}

@@ -80,7 +80,7 @@ from urllib.parse import quote
 
 from harvest import DEFAULT_MAX_RECORDS
 from harvest import config as _config
-from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
+from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register, stamp
 from harvest.doi import normalise_doi
 from harvest.http import HarvestClient
 from harvest.identity import identity_key
@@ -107,7 +107,8 @@ log = logging.getLogger(__name__)
 #: applies to records harvested after it shipped.
 #:
 #: 2 — preserve ``metadata.resource_type`` as ``extra.zenodo_resource_type``.
-MAPPING_VERSION = 2
+#: 3 — record the discovery route as ``discovered_via`` (ADR-0043).
+MAPPING_VERSION = 3
 
 #: A Zenodo DOI. The numeric suffix IS the record id, so a DOI another source
 #: gave us is enough to ask Zenodo about the record — no search, one GET.
@@ -366,7 +367,7 @@ class ZenodoAdapter(Adapter):
         if version_doi:
             parts.append(version_doi)
         key = payload_hash(metadata or payload) if not parts else "@".join(parts)
-        return f"{key}~m{MAPPING_VERSION}"
+        return stamp(key, MAPPING_VERSION)
 
     # -- withdrawal --------------------------------------------------------
     @staticmethod
@@ -522,7 +523,7 @@ class ZenodoAdapter(Adapter):
                 log.warning("zenodo community %s returned an unreadable body: %s", slug, exc)
                 continue
             reached = True
-            for observation in self._observations(hits, seen_ids):
+            for observation in self._observations(hits, seen_ids, f"community:{slug}"):
                 yield observation
                 yielded += 1
                 if yielded >= max_records:
@@ -628,10 +629,14 @@ class ZenodoAdapter(Adapter):
                 url=(payload.get("links") or {}).get("self_html"),
                 payload=payload,
                 identity_override=identity,
+                # The backfill is not a discovery: another source found this
+                # record and this run only enriched it. The route that put it in
+                # the catalogue is on that source's own event (ADR-0043).
+                discovered_via=["backfill:doi"],
             )
 
     def _observations(
-        self, hits: Iterable[dict[str, Any]], seen_ids: set[str]
+        self, hits: Iterable[dict[str, Any]], seen_ids: set[str], route: str
     ) -> Iterator[RawObservation]:
         for hit in hits:
             if not isinstance(hit, dict) or hit.get("id") is None:
@@ -649,6 +654,7 @@ class ZenodoAdapter(Adapter):
                 source_key=self.source_key_for(hit),
                 url=(hit.get("links") or {}).get("self_html"),
                 payload=hit,      # VERBATIM
+                discovered_via=[route],
             )
 
     # -- map ---------------------------------------------------------------

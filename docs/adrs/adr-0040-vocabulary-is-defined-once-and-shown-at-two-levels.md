@@ -5,7 +5,7 @@ title: The catalogue's vocabulary is defined once, and shown at two levels
 status: accepted
 date: 2026-09-08
 deciders: [project author (OST)]
-related: [adr-0021-canonical-record-is-a-ckan-package-dict, adr-0023-search-via-pagefind, adr-0028-provenance-is-displayed, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus, adr-0042-the-concept-doi-is-the-record, record-format, correct-a-record]
+related: [adr-0021-canonical-record-is-a-ckan-package-dict, adr-0023-search-via-pagefind, adr-0028-provenance-is-displayed, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus, adr-0042-the-concept-doi-is-the-record, record-format, correct-a-record, adr-0043-what-belongs-in-the-catalogue]
 tags: [vocabulary, classification, record-format, site, definitions]
 ---
 

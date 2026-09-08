@@ -7,7 +7,7 @@
   "identity_key": "10.5281/zenodo.18967947",
   "source_system": "zenodo",
   "source_id": "21037963",
-  "source_key": "3@10.5281/zenodo.21037963~m2",
+  "source_key": "3@10.5281/zenodo.21037963~m3",
   "source": {
     "title": "WINSENT complex terrain benchmark - Phase I",
     "notes": "<p>These files include the terrain data and measurement data that are released to the participants of the WINSENT complex terrain benchmark, which is one of the benchmarks of the IEA Wind Task 57 (JAM) activities. Within the benchmark the participants simulate in phase I the wind flow from the valley to the test site which is located on a forest-free plateau approx. 150m higher. The slope, known as the Albtrauf, is forested terrain, why different flow conditions with high and low leaf area index are taken into account. The detailed description of the benchmark is described here:  <a title=\"ReadTheDocs-WINSENT benchmark\" href=\"https://winsent-benchmark.readthedocs.io/en/latest/\" rel=\"nofollow noopener\">https://winsent-benchmark.readthedocs.io/en/latest/</a></p>",

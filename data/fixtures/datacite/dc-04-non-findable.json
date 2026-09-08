@@ -9,7 +9,7 @@
   "identity_key": "10.5072/example-iea-wind-registered-1",
   "source_system": "datacite",
   "source_id": "10.5072/example-iea-wind-registered-1",
-  "source_key": "2026-06-02T11:03:18Z",
+  "source_key": "2026-06-02T11:03:18Z~m2",
   "expected_slug": "doi-10-5072-example-iea-wind-registered-1",
   "findable": false,
   "expect_skipped": true,

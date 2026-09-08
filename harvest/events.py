@@ -350,6 +350,7 @@ def record_scrape(
     events_dir: Path | None = None,
     observed_at: str | None = None,
     actor: str | None = None,
+    discovered_via: list[str] | None = None,
 ) -> Event:
     """Append a ``scraped`` event. Caller must already have checked
     :func:`has_changed` — this function does not check for you.
@@ -368,6 +369,7 @@ def record_scrape(
         source_id=source_id,
         source=sanitise_payload(source),
         provenance=provenance or {},
+        discovered_via=list(discovered_via or []),
         actor=actor or f"harvest/{source_system}",
     )
     append_event(identity_key, event, events_dir)
@@ -555,6 +557,10 @@ def resolve(
     first_seen: str | None = None
     last_seen: str | None = None
     last_scrape: Event | None = None
+    # Union across every scrape: a record reachable through an IEA Wind org AND
+    # a generic topic search was, in fact, reachable both ways, and the scope
+    # rule should see the strongest claim available (ADR-0043).
+    discovered_via: list[str] = []
 
     for event in log_events:
         # "Seen" means seen UPSTREAM. A scrape is an observation of the
@@ -570,6 +576,9 @@ def resolve(
 
         if event.event_type == "scraped":
             system = event.source_system or "unknown"
+            for route in event.discovered_via:
+                if route not in discovered_via:
+                    discovered_via.append(route)
             by_system[system] = {
                 "source": dict(event.source),
                 "source_key": event.source_key,
@@ -681,6 +690,7 @@ def resolve(
         withdrawn_at=withdrawn_at,
         notices=notices,
         event_count=len(log_events),
+        discovered_via=discovered_via,
     )
 
 

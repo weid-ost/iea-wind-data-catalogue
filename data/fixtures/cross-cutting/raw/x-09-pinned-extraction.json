@@ -26,12 +26,19 @@
       "source": {
         "title": "Digital WRA Data Standard",
         "url": "https://iea-wind.org/task43/tools/",
-        "source_urls": ["https://iea-wind.org/task43/tools/"],
+        "source_urls": [
+          "https://iea-wind.org/task43/tools/"
+        ],
         "resource_kind": "report",
         "access_status": "open",
-        "iea_task": ["task-43"],
+        "iea_task": [
+          "task-43"
+        ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "task-page:task-43"
+      ]
     },
     {
       "observed_at": "2026-08-30T04:00:00Z",
@@ -59,12 +66,19 @@
       "source": {
         "title": "Digital WRA Data Standard",
         "url": "https://iea-wind.org/task43/tools/",
-        "source_urls": ["https://iea-wind.org/task43/tools/"],
+        "source_urls": [
+          "https://iea-wind.org/task43/tools/"
+        ],
         "resource_kind": "software",
         "access_status": "open",
-        "iea_task": ["task-43"],
+        "iea_task": [
+          "task-43"
+        ],
         "withdrawn": false
-      }
+      },
+      "discovered_via": [
+        "task-page:task-43"
+      ]
     }
   ],
   "annotations_yaml": {

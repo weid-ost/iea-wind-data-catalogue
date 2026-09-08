@@ -10,7 +10,7 @@ When making commits in git, NEVER attribute Claude (yourself) as a contributor. 
 
 ## Authoritative documents — read before proposing changes
 
-1. `docs/adrs/` — the twenty-three ADRs, 0020–0042. **Binding.** Don't relitigate one without saying you're doing so, in the commit message.
+1. `docs/adrs/` — the twenty-four ADRs, 0020–0043. **Binding.** Don't relitigate one without saying you're doing so, in the commit message.
 2. `docs/architecture.md` — the system end to end; `docs/record-format.md` — the shapes. Start from `docs/index.md`, the vault map.
 3. `harvest/CONTRACT.md` — the interface document the code is written against. Where it and the vault disagree about the code, CONTRACT and then the code win.
 4. `design/design-system.md` + `design/design-tokens.json` — visual system (DTCG). `design/gen.py` regenerates the palette and re-verifies WCAG contrast; run it after any colour change.
@@ -32,6 +32,7 @@ When making commits in git, NEVER attribute Claude (yourself) as a contributor. 
 - **Pinned everything, no auto-updates** (ADR-0034): `.python-version` + `uv.lock` (`uv sync --frozen`); pinned Node + `package-lock.json` (`npm ci`); pinned runner image (`ubuntu-24.04`, never `-latest`). Python direct deps capped at four: `httpx`, `trafilatura`, `pydantic`, `pyyaml`.
 - **Astro renders; it doesn't own the data.** Records load via glob; no framework fields in the record format. Astro components for content; vanilla custom elements only for interactivity; `/dev/components` gallery (real records + pathological fixtures) instead of Storybook.
 - **Design: colour never fills a surface.** Neutral backgrounds only; semantic colour appears as text, icons, outline badges, focus, and 3px square-cornered left accent bars. Components consume tokens with zero hardcoded values (CI grep enforces). WCAG 2.2 AA is a build gate: pa11y-ci over the gallery and key pages, both themes.
+- **A record must earn its place** (ADR-0043): directly attributed to IEA Wind, or citing/cited by something in the catalogue. `inclusion_basis` and `inclusion_evidence` say which, on every record; `none` means retained but not listed. Adapters record `discovered_via`; `sources.yaml` `generic_routes` names the routes that are not attributions.
 - **Withdrawn records are kept, never deleted.** So are merged-away duplicates: a Zenodo version DOI folded into its concept DOI is suppressed from the listings but keeps its page, its URL and its citation (ADR-0042). `catalogue()` lists; `allEntries()` builds.
 
 ## Working conventions

@@ -15,6 +15,7 @@ import CitationBlock from './CitationBlock.astro';
 import EventHistory from './EventHistory.astro';
 import LinkRotNote from './LinkRotNote.astro';
 import MergedBanner from './MergedBanner.astro';
+import OutOfScopeBanner from './OutOfScopeBanner.astro';
 import MetadataList from './MetadataList.astro';
 import Panel from './Panel.astro';
 import ProvenanceBadge from './ProvenanceBadge.astro';
@@ -30,6 +31,9 @@ import {
   extra,
   formatDate,
   inferredFields,
+  inclusionBasisOf,
+  inclusionEvidenceOf,
+  isOutOfScope,
   isSuppressed,
   isWithdrawn,
   licenseTitleOf,
@@ -106,6 +110,9 @@ const withdrawn = isWithdrawn(pkg);
 // (ADR-0041). The banner is how a visitor who arrives here finds the record the
 // catalogue actually lists.
 const merged = isSuppressed(pkg);
+// Out of scope: meets none of the three inclusion tests (ADR-0043). Kept and
+// citable, not listed — and the page has to say which, and why.
+const outOfScope = isOutOfScope(pkg);
 const inferred = inferredFields(pkg);
 const related = relatedIdentifiersOf(pkg).filter((r) => r !== retraction);
 // Curator links and source resources are both strings somebody else chose, and
@@ -149,6 +156,10 @@ const rows = [
   { field: 'doi', label: 'DOI', value: doi, mono: true },
   { field: 'resource_kind', label: 'Kind', value: kind && (RESOURCE_KIND_LABELS[kind] ?? kind) },
   { field: 'resource_type', label: 'Type', value: resourceType && typeLabel(resourceType) },
+  // Why this record is here at all (ADR-0043). Shown on every record, not just
+  // the excluded ones: a catalogue that can say why it holds something is a
+  // different proposition from one that cannot.
+  { label: 'In the catalogue because', value: inclusionEvidenceOf(pkg) },
   {
     field: 'published_date',
     label: 'Published',
@@ -193,6 +204,7 @@ const rows = [
   data-pagefind-body={indexable ? true : undefined}
   data-pagefind-meta={indexable ? `doi:${doi ?? ''}` : undefined}
 >
+  {outOfScope && <OutOfScopeBanner evidence={inclusionEvidenceOf(pkg)} />}
   {merged && <MergedBanner links={links} />}
   {withdrawn && (
     <WithdrawnBanner withdrawnAt={extra(pkg, 'withdrawn_at')} sourceUrl={extra(pkg, 'source_url')} />

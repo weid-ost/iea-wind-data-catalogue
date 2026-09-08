@@ -11,7 +11,7 @@
  * The fallback is all-or-nothing: one real record and the fixtures disappear.
  */
 import { getCollection } from 'astro:content';
-import { isSuppressed, type CkanPackage } from './record';
+import { isOutOfScope, isSuppressed, type CkanPackage } from './record';
 
 export interface CatalogueEntry {
   pkg: CkanPackage;
@@ -72,12 +72,19 @@ export async function allEntries(): Promise<CatalogueEntry[]> {
  * citable, and out of the listings" — harvest/dedupe.py); the site was the half
  * that never honoured it.
  *
+ * Out-of-scope records are excluded too. The catalogue's scope rule (ADR-0043)
+ * is that a record must be directly attributed to IEA Wind, cite something in
+ * the catalogue, or be cited by something in it; one that meets none of the
+ * three is not an IEA Wind record and does not belong in an IEA Wind listing.
+ *
  * "Out of the listings" and "deleted" are different things, and the difference
- * is the whole point: the record keeps its page, its URL and its citation, and
- * that page says what it was merged into and why.
+ * is the whole point in both cases: the record keeps its page, its URL and its
+ * citation, and that page says why it is not listed.
  */
 export async function catalogue(): Promise<CatalogueEntry[]> {
-  return (await allEntries()).filter((entry) => !isSuppressed(entry.pkg));
+  return (await allEntries()).filter(
+    (entry) => !isSuppressed(entry.pkg) && !isOutOfScope(entry.pkg)
+  );
 }
 
 /** The gallery's own data: always the fixtures, whether or not records exist. */

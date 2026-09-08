@@ -109,7 +109,7 @@ from typing import Any, Iterable, Iterator
 
 from harvest import DEFAULT_MAX_RECORDS
 from harvest import config as _config
-from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register
+from harvest.adapters.base import Adapter, SourceUnreachable, payload_hash, register, stamp
 from harvest.doi import DoiDropLog, extract_dois, normalise_doi, resolve_or_drop
 from harvest.http import HarvestClient, build_client
 from harvest.identity import identity_key
@@ -237,6 +237,14 @@ def concept_doi_of(datacite_payload: dict[str, Any] | None) -> str | None:
     return None
 
 
+#: Bumped when ``map()`` or ``harvest()`` starts recording something they did
+#: not record before, and folded into the change token so the improvement
+#: reaches records already harvested (ADR-0041). Without it a change here only
+#: ever applies to records harvested after it ships.
+#:
+#: 2 — record the discovery route as ``discovered_via`` (ADR-0043).
+MAPPING_VERSION = 2
+
 def source_key_for(payload: dict[str, Any]) -> str:
     """The composite change token (ADR-0026).
 
@@ -254,7 +262,7 @@ def source_key_for(payload: dict[str, Any]) -> str:
             "license": (repository.get("license") or {}).get("spdx_id"),
         }
     )
-    return f"{head_sha}:{tag}:{digest}"
+    return stamp(f"{head_sha}:{tag}:{digest}", MAPPING_VERSION)
 
 
 def content_bytes(repository: dict[str, Any]) -> int:
@@ -422,21 +430,36 @@ class GitHubAdapter(Adapter):
 
     # -- discovery ---------------------------------------------------------
 
-    def _candidate_paths(self) -> Iterator[tuple[str, list[str]]]:
-        """``("owner/repo", [iea tasks])`` from orgs, explicit repos, then topics.
+    def _candidate_paths(self) -> Iterator[tuple[str, list[str], list[str]]]:
+        """``("owner/repo", [iea tasks], [discovery route])``.
 
-        Yields lazily so a run at the five-record cap never issues the search
-        requests, and deduplicates by path so a repo reachable two ways is
-        harvested once.
+        From orgs, then explicit repos, then topics. Yields lazily so a run at
+        the five-record cap never issues the search requests, and deduplicates
+        by path so a repo reachable two ways is harvested once.
+
+        **The route matters here more than anywhere else in the harvest**
+        (ADR-0043). An IEA Wind GitHub organisation is an attribution: whatever
+        it publishes is IEA Wind's. A topic search is not — ``wind-energy`` is a
+        topic anyone can put on anything, and it is what put a company API
+        directory and a wind-farm video game in an IEA Wind catalogue. The
+        record has to carry which of the two found it, because nothing in a
+        repository's own metadata distinguishes them afterwards.
+
+        A repo reachable two ways keeps the FIRST route, and the order is
+        deliberate: orgs, then named repos, then topics. The strongest claim
+        wins, and a repo in an IEA Wind org that also carries the
+        ``wind-energy`` topic is in scope because of the org.
         """
         seen: set[str] = set()
 
-        def offer(path: str, tasks: Iterable[str]) -> Iterator[tuple[str, list[str]]]:
+        def offer(
+            path: str, tasks: Iterable[str], route: str
+        ) -> Iterator[tuple[str, list[str], list[str]]]:
             key = path.lower()
             if not path or key in seen:
                 return
             seen.add(key)
-            yield path, sorted({str(task) for task in tasks if task})
+            yield path, sorted({str(task) for task in tasks if task}), [route]
 
         for org in self.config.get("orgs") or []:
             login = str(org.get("login") or "").strip()
@@ -449,13 +472,14 @@ class GitHubAdapter(Adapter):
                 continue
             for repository in listing:
                 yield from offer(str(repository.get("full_name") or ""),
-                                 org.get("iea_task") or [])
+                                 org.get("iea_task") or [], f"org:{login}")
 
         for entry in self.config.get("repos") or []:
             if isinstance(entry, str):
-                yield from offer(entry, [])
+                yield from offer(entry, [], f"repo:{entry}")
             else:
-                yield from offer(str(entry.get("path") or ""), entry.get("iea_task") or [])
+                path = str(entry.get("path") or "")
+                yield from offer(path, entry.get("iea_task") or [], f"repo:{path}")
 
         for topic in self.config.get("topics") or []:
             found = self._get(
@@ -464,7 +488,7 @@ class GitHubAdapter(Adapter):
                 allow_missing=True,
             )
             for repository in (found or {}).get("items", []):
-                yield from offer(str(repository.get("full_name") or ""), [])
+                yield from offer(str(repository.get("full_name") or ""), [], f"topic:{topic}")
 
     # -- the two contract methods -----------------------------------------
 
@@ -475,7 +499,7 @@ class GitHubAdapter(Adapter):
         known_paths = known_repository_paths(self._events_directory)
         yielded = 0
 
-        for path, tasks in self._candidate_paths():
+        for path, tasks, routes in self._candidate_paths():
             # /repos/{owner}/{repo} follows the rename/transfer 301 (gh-07).
             repository = self._get(f"{api}/repos/{path}", allow_missing=True)
             if not repository:
@@ -521,6 +545,7 @@ class GitHubAdapter(Adapter):
                 source_key=source_key_for(envelope),
                 url=repository.get("html_url"),
                 payload=envelope,
+                discovered_via=routes,
             )
             if yielded >= max_records:
                 return

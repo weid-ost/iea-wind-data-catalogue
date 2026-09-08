@@ -7,7 +7,7 @@
   "identity_key": "10.5194/wes-11-2345-2026",
   "source_system": "crossref",
   "source_id": "10.5194/wes-11-2345-2026",
-  "source_key": "2026-07-08T04:10:22Z",
+  "source_key": "2026-07-08T04:10:22Z~m2",
   "source": {
     "title": "Large-eddy simulation of the IEA 15 MW wind turbine using a two-way coupled fluid–structure interaction model",
     "notes": "<p>Abstract. The aim of this work is to study the aeroelastic response of the IEA 15 MW Reference Wind Turbine (RWT)using a high-fidelity fluid–structure interaction solver that combines large-eddy simulation with a modal computational structural dynamics solver through a two-way coupling. The fluid solver employs the actuator line model to simulate the interaction between the turbine blades and the fluid and the immersed-boundary method to model the presence of the tower and nacelle. The results are compared with those obtained by the OpenFAST software, which is a well-known numerical tool for engineering predictions. A series of simulations have been performed with and without the presence of the tower and nacelle to better understand the effects of these components on flow structures and structural deformations. The largest discrepancies among the solvers have been observed in correspondence with the blade passage in front of the tower, which induces an abrupt alteration in the local incidence angle of the flow. Moreover, by comparing the outcomes of different structural approximations, it has been established that taking into account the torsional degree of freedom affects the deformations, aerodynamic loads, and power coefficient considerably. On the other hand, the non-linearity of the solver appears to have a weak effect on the same quantities.</p>",

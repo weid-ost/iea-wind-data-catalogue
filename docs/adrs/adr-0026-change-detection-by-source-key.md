@@ -6,7 +6,7 @@ status: accepted
 date: 2026-08-31
 deciders: [project author (OST)]
 supersedes: ["ADR-0026 (rev 1, turn 11: value-comparison event stream)"]
-related: [adr-0037-events-are-the-source-of-truth, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0025-the-extraction-cache-is-committed, add-a-source-adapter, adr-0042-the-concept-doi-is-the-record, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus]
+related: [adr-0037-events-are-the-source-of-truth, adr-0038-source-metadata-is-never-updated-only-annotated, adr-0025-the-extraction-cache-is-committed, add-a-source-adapter, adr-0042-the-concept-doi-is-the-record, adr-0041-a-mapping-improvement-must-reach-the-existing-corpus, adr-0043-what-belongs-in-the-catalogue]
 tags: [harvest, reconciliation, events]
 ---
 
