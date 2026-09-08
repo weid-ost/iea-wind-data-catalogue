@@ -96,8 +96,8 @@
       "reason": "did-not-resolve"
     }
   ],
-  "events_appended": 43,
-  "finished_at": "2026-09-03T10:02:56Z",
+  "events_appended": 28,
+  "finished_at": "2026-09-07T04:34:41Z",
   "harvest_version": "0.1.0",
   "max_records": 50,
   "notices": [
@@ -348,58 +348,58 @@
     }
   ],
   "ok": true,
-  "pending_extraction": 17,
+  "pending_extraction": 18,
   "records": {
     "pruned": 0,
-    "total": 325,
-    "unchanged": 283,
-    "written": 42
+    "total": 330,
+    "unchanged": 303,
+    "written": 27
   },
   "sources": {
     "crossref": {
-      "changed": 1,
-      "enabled": true,
-      "errors": [],
-      "implemented": true,
-      "reachable": true,
-      "seen": 40,
-      "skipped_unchanged": 39
-    },
-    "datacite": {
-      "changed": 3,
-      "enabled": true,
-      "errors": [],
-      "implemented": true,
-      "reachable": true,
-      "seen": 50,
-      "skipped_unchanged": 47
-    },
-    "github": {
-      "changed": 37,
-      "enabled": true,
-      "errors": [],
-      "implemented": true,
-      "reachable": true,
-      "seen": 50,
-      "skipped_unchanged": 13
-    },
-    "ieawind": {
-      "changed": 2,
-      "enabled": true,
-      "errors": [],
-      "implemented": true,
-      "reachable": true,
-      "seen": 33,
-      "skipped_unchanged": 31
-    },
-    "osti": {
       "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
+      "seen": 40,
+      "skipped_unchanged": 40
+    },
+    "datacite": {
+      "changed": 10,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 50,
+      "skipped_unchanged": 40
+    },
+    "github": {
+      "changed": 16,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 50,
+      "skipped_unchanged": 34
+    },
+    "ieawind": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 33,
+      "skipped_unchanged": 33
+    },
+    "osti": {
+      "changed": 2,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
       "seen": 37,
-      "skipped_unchanged": 37
+      "skipped_unchanged": 35
     },
     "wdh": {
       "changed": 0,
@@ -422,7 +422,7 @@
       "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-09-03T09:58:52Z",
+  "started_at": "2026-09-07T04:32:23Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",

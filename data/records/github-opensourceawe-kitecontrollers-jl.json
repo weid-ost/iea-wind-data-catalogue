@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:30Z"
+      "value": "2026-09-07T04:33:31Z"
     },
     {
       "key": "identity_key",
-      "value": "github|Energinet-SimTools/MTB"
+      "value": "github|OpenSourceAWE/KiteControllers.jl"
     },
     {
       "key": "identity_kind",
@@ -18,15 +18,15 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-07T04:33:23Z"
+      "value": "2026-09-07T04:33:31Z"
     },
     {
       "key": "license_mapped",
-      "value": "false"
+      "value": "true"
     },
     {
       "key": "license_raw",
-      "value": "NOASSERTION"
+      "value": "MIT"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +38,7 @@
     },
     {
       "key": "published_date",
-      "value": "2025-06-18"
+      "value": "2026-06-21"
     },
     {
       "key": "publisher",
@@ -50,11 +50,11 @@
     },
     {
       "key": "source_id",
-      "value": "Energinet-SimTools/MTB"
+      "value": "OpenSourceAWE/KiteControllers.jl"
     },
     {
       "key": "source_key",
-      "value": "c9514b965aa99b2e5b6a433d41651b351169a016:v1.1.2:ff5fed891489a49b"
+      "value": "5d3d43b40d1557d7ce845c3e765facae9fe0295b:v0.2.30:166fb754d25c4fe9"
     },
     {
       "key": "source_system",
@@ -66,11 +66,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/Energinet-SimTools/MTB"
+      "value": "https://github.com/OpenSourceAWE/KiteControllers.jl"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/Energinet-SimTools/MTB\"]"
+      "value": "[\"https://github.com/OpenSourceAWE/KiteControllers.jl\"]"
     },
     {
       "key": "withdrawn",
@@ -78,81 +78,45 @@
     }
   ],
   "groups": [],
-  "license_id": "notspecified",
-  "name": "github-energinet-simtools-mtb",
-  "notes": "Energinet's Model Testbench. Automate gridcompliance studies in PSCAD and Powerfactory.",
+  "license_id": "mit",
+  "name": "github-opensourceawe-kitecontrollers-jl",
+  "notes": "Controllers for airborne wind energy systems",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/Energinet-SimTools/MTB"
+      "url": "https://github.com/OpenSourceAWE/KiteControllers.jl"
     },
     {
       "format": "release",
-      "name": "Release v1.1.2",
-      "url": "https://github.com/Energinet-SimTools/MTB/releases/tag/v1.1.2"
+      "name": "Release v0.2.30",
+      "url": "https://github.com/OpenSourceAWE/KiteControllers.jl/releases/tag/v0.2.30"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "dcc"
+      "name": "airborne"
     },
     {
-      "name": "generator"
+      "name": "airborne-wind-energy"
     },
     {
-      "name": "green-transition"
+      "name": "control"
     },
     {
-      "name": "gridcompliance"
+      "name": "kite"
     },
     {
-      "name": "high-voltage"
-    },
-    {
-      "name": "hvdc"
-    },
-    {
-      "name": "power-electronics"
-    },
-    {
-      "name": "power2x"
-    },
-    {
-      "name": "powerfactory"
-    },
-    {
-      "name": "powergrid"
-    },
-    {
-      "name": "powersystem-simulation"
-    },
-    {
-      "name": "powersystems"
-    },
-    {
-      "name": "pscad"
-    },
-    {
-      "name": "ptx"
-    },
-    {
-      "name": "renewable-energy"
-    },
-    {
-      "name": "rfg"
-    },
-    {
-      "name": "solar-energy"
+      "name": "wind"
     },
     {
       "name": "wind-energy"
     }
   ],
-  "title": "Energinet-SimTools/MTB",
-  "url": "https://github.com/Energinet-SimTools/MTB",
-  "version": "v1.1.2"
+  "title": "OpenSourceAWE/KiteControllers.jl",
+  "url": "https://github.com/OpenSourceAWE/KiteControllers.jl",
+  "version": "v0.2.30"
 }

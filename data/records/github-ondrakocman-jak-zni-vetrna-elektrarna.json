@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:26Z"
+      "value": "2026-09-07T04:33:33Z"
     },
     {
       "key": "identity_key",
-      "value": "github|api-evangelist/sunedison"
+      "value": "github|ondrakocman/jak-zni-vetrna-elektrarna"
     },
     {
       "key": "identity_kind",
@@ -18,7 +18,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-07T04:33:24Z"
+      "value": "2026-09-07T04:33:33Z"
     },
     {
       "key": "lifecycle_state",
@@ -30,7 +30,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-03-24"
+      "value": "2026-09-03"
     },
     {
       "key": "publisher",
@@ -42,11 +42,11 @@
     },
     {
       "key": "source_id",
-      "value": "api-evangelist/sunedison"
+      "value": "ondrakocman/jak-zni-vetrna-elektrarna"
     },
     {
       "key": "source_key",
-      "value": "2059f20bfe602976c15c7de78ec3d8d1bf51c019::b3a03c281ada4230"
+      "value": "5d998c9b6341b92706e6f5963ce8e0115ba1921a::a92455766fff92e4"
     },
     {
       "key": "source_system",
@@ -58,11 +58,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/api-evangelist/sunedison"
+      "value": "https://github.com/ondrakocman/jak-zni-vetrna-elektrarna"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/api-evangelist/sunedison\"]"
+      "value": "[\"https://github.com/ondrakocman/jak-zni-vetrna-elektrarna\"]"
     },
     {
       "key": "withdrawn",
@@ -71,41 +71,26 @@
   ],
   "groups": [],
   "license_id": "notspecified",
-  "name": "github-api-evangelist-sunedison",
-  "notes": "SunEdison — independent third-party profile of a public API surface, by API Evangelist. SunEdison was a renewable energy company that developed, financed, installed, owned, and operated solar power plants and wind energy plants globally. Originally founded as MEMC Electronic Materials in 1959, SunEdison became the world's leading renewable energy d",
+  "name": "github-ondrakocman-jak-zni-vetrna-elektrarna",
+  "notes": "Interaktivní poslechová demonstrace hluku větrné elektrárny / wind turbine noise listening demo",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/api-evangelist/sunedison"
+      "url": "https://github.com/ondrakocman/jak-zni-vetrna-elektrarna"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "apis-json"
-    },
-    {
-      "name": "clean-energy"
-    },
-    {
-      "name": "energy"
-    },
-    {
-      "name": "fortune-1000"
-    },
-    {
-      "name": "renewable-energy"
-    },
-    {
-      "name": "solar-energy"
+      "name": "noise"
     },
     {
       "name": "wind-energy"
     }
   ],
-  "title": "api-evangelist/sunedison",
-  "url": "https://github.com/api-evangelist/sunedison"
+  "title": "ondrakocman/jak-zni-vetrna-elektrarna",
+  "url": "https://github.com/ondrakocman/jak-zni-vetrna-elektrarna"
 }

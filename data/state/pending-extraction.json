@@ -100,5 +100,11 @@
     "queued_at": "2026-09-03T10:02:35Z",
     "reason": "tier-3 page classification unavailable",
     "url": "https://iea-wind.org/task51/task51-publications/task51-articles-and-reports/"
+  },
+  {
+    "cache_key": "e26eb861a8c21c5df772c106f42371aa2931361dca162c3cffc97354a7cd8aa5",
+    "queued_at": "2026-09-07T04:33:44Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/annual-report-2025/"
   }
 ]

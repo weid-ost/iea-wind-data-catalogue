@@ -2,7 +2,7 @@
   "extras": [
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Lehmann\",\"given\":\"Felix\",\"name\":\"Lehmann, Felix\",\"orcid\":\"0009-0008-7434-2616\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"University of Warwick\",\"family\":\"ZHANG\",\"given\":\"Jincheng\",\"name\":\"ZHANG, Jincheng\",\"orcid\":\"0000-0003-3319-2478\"},{\"affiliation\":\"Universidad de la República\",\"family\":\"Correa\",\"given\":\"Santiago\",\"name\":\"Correa, Santiago\",\"orcid\":\"0000-0002-8520-3047\"},{\"affiliation\":\"sowento GmbH\",\"family\":\"Pérez Brovia\",\"given\":\"Santiago\",\"name\":\"Pérez Brovia, Santiago\",\"orcid\":\"0009-0003-6602-4419\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schedat\",\"given\":\"Marcel\",\"name\":\"Schedat, Marcel\",\"orcid\":\"0009-0009-0491-0187\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Weich\",\"given\":\"Simon\",\"name\":\"Weich, Simon\",\"orcid\":\"0009-0009-5300-6151\"}]"
+      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schlipf\",\"given\":\"David\",\"name\":\"Schlipf, David\",\"orcid\":\"0000-0002-0189-6422\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Lehmann\",\"given\":\"Felix\",\"name\":\"Lehmann, Felix\",\"orcid\":\"0009-0008-7434-2616\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"family\":\"Guo\",\"given\":\"Feng\",\"name\":\"Guo, Feng\",\"orcid\":\"0000-0003-3275-6243\"},{\"affiliation\":\"University of Warwick\",\"family\":\"ZHANG\",\"given\":\"Jincheng\",\"name\":\"ZHANG, Jincheng\",\"orcid\":\"0000-0003-3319-2478\"},{\"affiliation\":\"Universidad de la República de Uruguay\",\"family\":\"Correa\",\"given\":\"Santiago\",\"name\":\"Correa, Santiago\",\"orcid\":\"0000-0002-8520-3047\"},{\"affiliation\":\"sowento GmbH\",\"family\":\"Pérez Brovia\",\"given\":\"Santiago\",\"name\":\"Pérez Brovia, Santiago\",\"orcid\":\"0009-0003-6602-4419\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Schedat\",\"given\":\"Marcel\",\"name\":\"Schedat, Marcel\",\"orcid\":\"0009-0009-0491-0187\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Weich\",\"given\":\"Simon\",\"name\":\"Weich, Simon\",\"orcid\":\"0009-0009-5300-6151\"}]"
     },
     {
       "key": "doi",
@@ -22,7 +22,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-01T23:20:26Z"
+      "value": "2026-09-07T04:32:24Z"
     },
     {
       "key": "license_mapped",
@@ -62,7 +62,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-07-31T21:49:43Z"
+      "value": "2026-09-03T17:23:49Z"
     },
     {
       "key": "source_system",
