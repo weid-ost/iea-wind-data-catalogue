@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "restricted"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Wildmann\",\"given\":\"Norman\",\"name\":\"Wildmann, Norman\"},{\"affiliation\":\"Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)\",\"family\":\"Englberger\",\"given\":\"Antonia\",\"name\":\"Englberger, Antonia\"},{\"affiliation\":\"Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)\",\"family\":\"Thayer\",\"given\":\"Jeffrey D.\",\"name\":\"Thayer, Jeffrey D.\"},{\"affiliation\":\"Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)\",\"family\":\"Menken\",\"given\":\"Julia\",\"name\":\"Menken, Julia\"},{\"affiliation\":\"Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)\",\"family\":\"Bührend\",\"given\":\"Lukas\",\"name\":\"Bührend, Lukas\"},{\"name\":\"Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.22057575"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-14T09:53:19Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.22057575"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-57\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and community:jam, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-14T09:55:57Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-08-22"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.22057575\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.22057576\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "22057576"
+    },
+    {
+      "key": "source_key",
+      "value": "4@10.5281/zenodo.22057576~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/22057576"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/22057576\",\"https://zenodo.org/doi/10.5281/zenodo.22057575\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-57"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-22057575",
+  "notes": "This repository contains two meteorological datasets collected at the Krummendeich Research Wind Farm (WiValdi) by the Deutsches Zentrum für Luft- und Raumfahrt (DLR e.V.). The data includes interpolated vertical profiles from combined mast and remote sensing instruments, alongside surface meteorological observations from a microwave radiometer ground station. Both datasets use a unified time base.\n\nDataset 1: Interpolated Vertical Profiles of Wind, Temperature, and Turbulence\n\nThe dataset 20260405_1807_interpolated_profiles.nc provides interpolated vertical profiles of wind, temperature, and turbulence derived from a combination of meteorological mast measurements and remote sensing instruments.\n\n\n\n\n\nInstruments: IEC+ Mast, Windcube-200S, RPG-Hatpro-G5\n\n\n\n\nTime Period: 2026-04-05 18:07 to 2026-04-05 18:17\n\n\n\n\nFormat: NetCDF4 (HDF5), CF-1.8 Conventions\n\n\n\n\nDimensions: time (198), height (198)\n\n\n\n\nMissing Values: _FillValue: -9999.0\n\n\n\nVariables\n\n\n\n\n\ntime / seconds since 2001-01-01 00:00:00: Time (Gregorian calendar)\n\n\n\n\nheight / m: Height above ground level\n\n\n\n\nwind_speed / m s-1: Wind speed\n\n\n\n\nturbulence_intensity / %: Turbulence intensity\n\n\n\n\ntemperature / K: Air potential temperature\n\n\n\n\nwind_direction / degree: Wind direction\n\n\n\nDataset 2: Microwave Radiometer Surface Meteorological Data\n\nThe dataset 20260405_ground_met.nc contains ground station surface meteorological observations resampled to 10-minute intervals.\n\n\n\n\n\nStation Name: DLR HATPRO\n\n\n\n\nInstruments: HATPRO Microwave Radiometer (Surface Sensors)\n\n\n\n\nTime Period: 2024-03-22 00:00 to 2024-03-23 23:59\n\n\n\n\nFormat: NetCDF4 (HDF5), CF-1.8 Conventions\n\n\n\n\nDimensions: time (288)\n\n\n\n\nMissing Values: _FillValue: nan\n\n\n\nVariables\n\n\n\n\n\ntime / seconds since 2001-01-01: Time (Gregorian calendar)\n\n\n\n\ntemp / K: Air Temperature\n\n\n\n\nrhum / %: Relative Humidity\n\n\n\n\npres / hPa: Air Pressure\n\n\n\n\nwspd / m s-1: Wind Speed\n\n\n\n\nwdir / degree: Wind Direction\n\n\n\n\nrain / mm h-1: Rain Accumulation\n\n\n\n\nrainflag / 1: Rain Flag (0 = no rain, 1 = rain)\n\n\n\n\nmixing_ratio / kg kg-1: Humidity Mixing Ratio\n\n\n\n\ntheta / K: Potential Temperature\n\n\n\n\ntheta_v / K: Virtual Potential Temperature\n\n\n\n\nlat / degrees_north: Latitude\n\n\n\n\nlon / degrees_east: Longitude\n\n\n\n\nalt / m: Altitude\n\n\n\nDataset 3: Wind turbine data\n\nThe NREL 5MW wind turbine geometry and forces information is provided, scaled to the dimensions of the WiValdi wind turbines in the files NREL5MW.zip.\n\n\n\nNREL5MW.vel: velocity dependent information\n\nscaled_NREL5MW.geo: rotor geometry information\n\n\n\nNREL5MW.cl: lift information\n\n\n\n\n\n\nNREL5MW.cd: drag information\n\n \n\n\n\n\nDataset 4: Wake Model Input Configuration\n\nThe configuration file setup_input.json providing the site layout, ambient meteorological conditions, and turbine specifications intended as a baseline input for wake modeling software (e.g., FLORIS, PyWake).\n\n\n\n\n\nFormat: JSON\n\n\n\nKey Components\n\n\n\n\n\nlayout: Spatial coordinates of the wind turbines.\n\n\n\n\n\nx / m: Longitudinal coordinates\n\n\n\n\ny / m: Latitudinal coordinates\n\n\n\n\n\n\nambient_conditions: Environmental reference parameters.\n\n\n\n\n\nwd / degree: Wind direction\n\n\n\n\nws / m s-1: Wind speed\n\n\n\n\nti / 1: Turbulence intensity (expressed as a decimal fraction)\n\n\n\n\n\n\nturbine_specs: Technical specifications for the modeled turbines.\n\n\n\n\n\nname: Turbine identifier\n\n\n\n\ndiameter / m: Rotor diameter\n\n\n\n\nhub_height / m: Hub height\n\n\n\n\nyaw / degree: Nacelle yaw angle\n\n\n\n\nws_curve / m s-1: Reference wind speeds for performance curves\n\n\n\n\npower_curve_kw / kW: Power curve corresponding to ws_curve\n\n\n\n\nct_curve / 1: Thrust coefficient curve corresponding to ws_curve\n\n\n\n\n\nFurther Information\n\n\n\n\n\nInstitution: Deutsches Zentrum für Luft- und Raumfahrt (DLR e.V.)\n\n\n\n\nDetailed Documentation: Description of the benchmark — WiValdi Benchmark documentation",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "IEA Wind Task 57 JAM WiValdi Benchmark Test Dataset",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.22057575"
+}

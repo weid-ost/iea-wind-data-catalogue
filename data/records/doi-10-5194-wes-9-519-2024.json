@@ -1,0 +1,115 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Schliffke\",\"given\":\"Benyamin\",\"name\":\"Schliffke, Benyamin\"},{\"family\":\"Conan\",\"given\":\"Boris\",\"name\":\"Conan, Boris\",\"orcid\":\"0000-0001-8464-6551\"},{\"family\":\"Aubrun\",\"given\":\"Sandrine\",\"name\":\"Aubrun, Sandrine\",\"orcid\":\"0000-0002-0440-3005\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-9-519-2024"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-14T09:53:22Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-9-519-2024"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-14T09:53:22Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-03-04"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2023-105\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2023-105-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2023-105-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2023-105-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-9-519-2024"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-04-08T08:04:06Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-9-519-2024"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-9-519-2024\",\"https://wes.copernicus.org/articles/9/519/2024/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-9-519-2024",
+  "notes": "<p>Abstract. The growing interest in floating offshore wind turbines (FOWTs) is rooted in the potential source of increased offshore energy production. As the technology is still in a pre-industrial state, several questions remain to be addressed where little field data are available. This study uses physical modelling at a reduced scale to investigate the signature of the floating motions into the wake spectral content of a simplified FOWT model. A wind turbine model based on the actuator disc concept is placed in an atmospheric boundary layer wind tunnel and subjected to a range of surge, heave and pitch motions. The signatures of idealised sinusoidal motion and realistic broadband motion on the model’s wake at distances of 4.6 D (D being the disc diameter) and 8 D are measured through the use of a rake of single hot wires. The spectral analysis shows that harmonic motion leaves clear signatures in the far wake's energy spectra, mainly in the top tip region, while broadband motion does not leave easily detectable signatures.</p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Floating wind turbine motion signature in the far-wake spectral content – a wind tunnel experiment",
+  "url": "https://doi.org/10.5194/wes-9-519-2024"
+}

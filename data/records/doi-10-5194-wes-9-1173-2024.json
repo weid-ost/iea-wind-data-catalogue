@@ -2,7 +2,7 @@
   "extras": [
     {
       "key": "authors",
-      "value": "[{\"family\":\"Fritz\",\"given\":\"Erik\",\"name\":\"Fritz, Erik\",\"orcid\":\"0000-0003-1486-3643\"},{\"family\":\"Ribeiro\",\"given\":\"André\",\"name\":\"Ribeiro, André\"},{\"family\":\"Boorsma\",\"given\":\"Koen\",\"name\":\"Boorsma, Koen\"},{\"family\":\"Ferreira\",\"given\":\"Carlos\",\"name\":\"Ferreira, Carlos\",\"orcid\":\"0000-0003-0192-3651\"}]"
+      "value": "[{\"affiliation\":\"Delft University of Technology (Delft, Netherlands)\",\"family\":\"Fritz\",\"given\":\"Erik\",\"name\":\"Fritz, Erik\",\"orcid\":\"0000-0003-1486-3643\"},{\"family\":\"Ribeiro\",\"given\":\"André\",\"name\":\"Ribeiro, André\"},{\"family\":\"Boorsma\",\"given\":\"Koen\",\"name\":\"Boorsma, Koen\"},{\"family\":\"Ferreira\",\"given\":\"Carlos\",\"name\":\"Ferreira, Carlos\",\"orcid\":\"0000-0003-0192-3651\"}]"
     },
     {
       "key": "container",
@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:28:01Z"
+      "value": "2026-09-14T09:53:22Z"
     },
     {
       "key": "license_mapped",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2025-01-22T13:21:59Z~m2"
+      "value": "2026-09-11T10:41:07Z~m2"
     },
     {
       "key": "source_system",
@@ -104,7 +104,7 @@
   "groups": [],
   "license_id": "cc-by",
   "name": "doi-10-5194-wes-9-1173-2024",
-  "notes": "<p>Abstract. This study presents results from a wind tunnel experiment on a three-bladed horizontal axis wind turbine. The model turbine is a scaled-down version of the IEA 15 MW reference wind turbine, preserving the non-dimensional thrust distribution along the blade. Flow fields were captured around the blade at multiple radial locations using particle image velocimetry. In addition to these flow fields, this comprehensive dataset contains spanwise distributions of bound circulation, inflow conditions and blade forces derived from the velocity field. As such, the three blades' aerodynamics are fully characterised. It is demonstrated that the lift coefficient measured along the span agrees well with the lift polar of the airfoil used in the blade design, thereby validating the experimental approach. This research provides a valuable public experimental dataset for validating low- to high-fidelity numerical models simulating state-of-the-art wind turbines. Furthermore, this article establishes the aerodynamic properties of the newly developed model wind turbine, creating a baseline for future wind tunnel experiments using this model.</p>",
+  "notes": "<p>This study presents results from a wind tunnel experiment on a three-bladed horizontal axis wind turbine. The model turbine is a scaled-down version of the IEA 15 MW reference wind turbine, preserving the non-dimensional thrust distribution along the blade. Flow fields were captured around the blade at multiple radial locations using particle image velocimetry. In addition to these flow fields, this comprehensive dataset contains spanwise distributions of bound circulation, inflow conditions and blade forces derived from the velocity field. As such, the three blades' aerodynamics are fully characterised. It is demonstrated that the lift coefficient measured along the span agrees well with the lift polar of the airfoil used in the blade design, thereby validating the experimental approach. This research provides a valuable public experimental dataset for validating low- to high-fidelity numerical models simulating state-of-the-art wind turbines. Furthermore, this article establishes the aerodynamic properties of the newly developed model wind turbine, creating a baseline for future wind tunnel experiments using this model.</p>",
   "owner_org": "unattributed",
   "private": false,
   "resources": [],

@@ -2,7 +2,7 @@
   "extras": [
     {
       "key": "authors",
-      "value": "[{\"family\":\"Bernardi\",\"given\":\"Claudio\",\"name\":\"Bernardi, Claudio\",\"orcid\":\"0009-0002-4310-4136\"},{\"family\":\"Cherubini\",\"given\":\"Stefania\",\"name\":\"Cherubini, Stefania\"},{\"family\":\"Manganelli\",\"given\":\"Felice\",\"name\":\"Manganelli, Felice\"},{\"family\":\"Della Posta\",\"given\":\"Giacomo\",\"name\":\"Della Posta, Giacomo\",\"orcid\":\"0000-0001-5516-9338\"},{\"family\":\"Leonardi\",\"given\":\"Stefano\",\"name\":\"Leonardi, Stefano\"},{\"family\":\"De Palma\",\"given\":\"Pietro\",\"name\":\"De Palma, Pietro\"}]"
+      "value": "[{\"affiliation\":\"Polytechnic University of Bari (Bari, Italy)\",\"family\":\"Bernardi\",\"given\":\"Claudio\",\"name\":\"Bernardi, Claudio\",\"orcid\":\"0009-0002-4310-4136\"},{\"affiliation\":\"Polytechnic University of Bari (Bari, Italy)\",\"family\":\"Cherubini\",\"given\":\"Stefania\",\"name\":\"Cherubini, Stefania\"},{\"affiliation\":\"Polytechnic University of Bari (Bari, Italy)\",\"family\":\"Manganelli\",\"given\":\"Felice\",\"name\":\"Manganelli, Felice\"},{\"family\":\"Della Posta\",\"given\":\"Giacomo\",\"name\":\"Della Posta, Giacomo\",\"orcid\":\"0000-0001-5516-9338\"},{\"family\":\"Leonardi\",\"given\":\"Stefano\",\"name\":\"Leonardi, Stefano\"},{\"affiliation\":\"Polytechnic University of Bari (Bari, Italy)\",\"family\":\"De Palma\",\"given\":\"Pietro\",\"name\":\"De Palma, Pietro\"}]"
     },
     {
       "key": "container",
@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:28:01Z"
+      "value": "2026-09-14T09:53:22Z"
     },
     {
       "key": "license_mapped",
@@ -62,7 +62,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5194/wes-2025-120\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2025-120-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-120-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-120-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-120-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+      "value": "[{\"identifier\":\"10.5194/wes-2025-120\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.22541/au.173542765.58148137/v1\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2025-120-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-120-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-120-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2025-120-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
     },
     {
       "key": "resource_kind",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-07-08T04:10:22Z~m2"
+      "value": "2026-09-11T17:16:37Z~m2"
     },
     {
       "key": "source_system",
@@ -104,7 +104,7 @@
   "groups": [],
   "license_id": "cc-by",
   "name": "doi-10-5194-wes-11-2345-2026",
-  "notes": "<p>Abstract. The aim of this work is to study the aeroelastic response of the IEA 15 MW Reference Wind Turbine (RWT)using a high-fidelity fluid–structure interaction solver that combines large-eddy simulation with a modal computational structural dynamics solver through a two-way coupling. The fluid solver employs the actuator line model to simulate the interaction between the turbine blades and the fluid and the immersed-boundary method to model the presence of the tower and nacelle. The results are compared with those obtained by the OpenFAST software, which is a well-known numerical tool for engineering predictions. A series of simulations have been performed with and without the presence of the tower and nacelle to better understand the effects of these components on flow structures and structural deformations. The largest discrepancies among the solvers have been observed in correspondence with the blade passage in front of the tower, which induces an abrupt alteration in the local incidence angle of the flow. Moreover, by comparing the outcomes of different structural approximations, it has been established that taking into account the torsional degree of freedom affects the deformations, aerodynamic loads, and power coefficient considerably. On the other hand, the non-linearity of the solver appears to have a weak effect on the same quantities.</p>",
+  "notes": "<p>The aim of this work is to study the aeroelastic response of the IEA 15 MW Reference Wind Turbine (RWT)using a high-fidelity fluid–structure interaction solver that combines large-eddy simulation with a modal computational structural dynamics solver through a two-way coupling. The fluid solver employs the actuator line model to simulate the interaction between the turbine blades and the fluid and the immersed-boundary method to model the presence of the tower and nacelle. The results are compared with those obtained by the OpenFAST software, which is a well-known numerical tool for engineering predictions. A series of simulations have been performed with and without the presence of the tower and nacelle to better understand the effects of these components on flow structures and structural deformations. The largest discrepancies among the solvers have been observed in correspondence with the blade passage in front of the tower, which induces an abrupt alteration in the local incidence angle of the flow. Moreover, by comparing the outcomes of different structural approximations, it has been established that taking into account the torsional degree of freedom affects the deformations, aerodynamic loads, and power coefficient considerably. On the other hand, the non-linearity of the solver appears to have a weak effect on the same quantities.</p>",
   "owner_org": "unattributed",
   "private": false,
   "resources": [],

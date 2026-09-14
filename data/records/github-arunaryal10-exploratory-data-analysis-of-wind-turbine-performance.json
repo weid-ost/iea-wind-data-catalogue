@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:28Z"
+      "value": "2026-09-14T09:57:23Z"
     },
     {
       "key": "identity_key",
-      "value": "github|api-evangelist/radia"
+      "value": "github|ArunAryal10/Exploratory-Data-Analysis-of-Wind-Turbine-Performance"
     },
     {
       "key": "identity_kind",
@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-14T09:57:10Z"
+      "value": "2026-09-14T09:57:23Z"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +38,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-08-02"
+      "value": "2022-04-27"
     },
     {
       "key": "publisher",
@@ -54,11 +54,11 @@
     },
     {
       "key": "source_id",
-      "value": "api-evangelist/radia"
+      "value": "ArunAryal10/Exploratory-Data-Analysis-of-Wind-Turbine-Performance"
     },
     {
       "key": "source_key",
-      "value": "7e487ba92ade8b3ae961740e45470d6f790de3e7::b8b319b93dabbedf~m2"
+      "value": "99ca2b24619785c3710f4d871db1fbcc34eaa825::b2b0b05bc72cc789~m2"
     },
     {
       "key": "source_system",
@@ -70,11 +70,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/api-evangelist/radia"
+      "value": "https://github.com/ArunAryal10/Exploratory-Data-Analysis-of-Wind-Turbine-Performance"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/api-evangelist/radia\"]"
+      "value": "[\"https://github.com/ArunAryal10/Exploratory-Data-Analysis-of-Wind-Turbine-Performance\"]"
     },
     {
       "key": "withdrawn",
@@ -83,53 +83,38 @@
   ],
   "groups": [],
   "license_id": "notspecified",
-  "name": "github-api-evangelist-radia",
-  "notes": "Radia — independent third-party profile of a public API surface, by API Evangelist. Radia is a dual-use aerospace company founded in 2016 by MIT-trained aerospace engineer Mark Lundstrom, headquartered in Boulder, Colorado with a second operating base in Italy led by Giuseppe Giordo.",
+  "name": "github-arunaryal10-exploratory-data-analysis-of-wind-turbine-performance",
+  "notes": "EDA of a year of 10-minute wind-turbine telemetry (~50k records) relating wind conditions to power output.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/api-evangelist/radia"
+      "url": "https://github.com/ArunAryal10/Exploratory-Data-Analysis-of-Wind-Turbine-Performance"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "aerospace"
+      "name": "data-analysis"
     },
     {
-      "name": "air-cargo"
+      "name": "data-visualization"
     },
     {
-      "name": "apis-json"
+      "name": "exploratory-data-analysis"
     },
     {
-      "name": "aviation"
-    },
-    {
-      "name": "company"
-    },
-    {
-      "name": "defense"
-    },
-    {
-      "name": "logistics"
-    },
-    {
-      "name": "manufacturing"
+      "name": "pandas"
     },
     {
       "name": "renewable-energy"
     },
     {
-      "name": "united-states"
-    },
-    {
       "name": "wind-energy"
     }
   ],
-  "title": "api-evangelist/radia",
-  "url": "https://github.com/api-evangelist/radia"
+  "title": "ArunAryal10/Exploratory-Data-Analysis-of-Wind-Turbine-Performance",
+  "url": "https://github.com/ArunAryal10/Exploratory-Data-Analysis-of-Wind-Turbine-Performance"
 }

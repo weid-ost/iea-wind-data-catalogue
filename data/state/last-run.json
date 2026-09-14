@@ -2,35 +2,955 @@
   "cache": {
     "hit_rate": 0.0,
     "hits": 0,
-    "misses": 0
+    "misses": 16
   },
-  "dropped_dois": [],
-  "events_appended": 2,
-  "finished_at": "2026-09-08T15:50:44Z",
+  "dropped_dois": [
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.1016/j.egyr.2026.109072](https://doi.org/10.1016/j.egyr.2026.109072",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.1088/1742-6596/2767/6/062019](https://iopscience.iop.org/article/10.1088/1742-6596/2767/6/062019",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.1088/1742-6596/2875/1/012009](https://doi.org/10.1088/1742-6596/2875/1/012009",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.1088/1742-6596/2875/1/012039](https://iopscience.iop.org/article/10.1088/1742-6596/2875/1/012039",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.1088/1742-6596/2875/1/012048](https://doi.org/10.1088/1742-6596/2875/1/012048",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.1115/iowtc2025-165418](https://doi.org/10.1115/iowtc2025-165418",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.1115/omae2025-157008](https://doi.org/10.1115/omae2025-157008",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.3390/su16072899.](https://doi.org/10.3390/su16072899",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task43/t43-publications/",
+      "doi": "10.5281/zenodo.10176528",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.5281/zenodo.11073986](https://doi.org/10.5281/zenodo.11073986",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.5281/zenodo.19706901](https://doi.org/10.5281/zenodo.19706901",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.5281/zenodo.19707217](https://doi.org/10.5281/zenodo.19707217",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.5281/zenodo.19707443](https://doi.org/10.5281/zenodo.19707443",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.5281/zenodo.19707539](https://doi.org/10.5281/zenodo.19707539",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.5281/zenodo.20211172](https://doi.org/10.5281/zenodo.20211172",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.5281/zenodo.21211759](https://doi.org/10.5281/zenodo.21211759",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task49/",
+      "doi": "10.5281/zenodo.21347445](https://doi.org/10.5281/zenodo.21347445",
+      "reason": "did-not-resolve"
+    },
+    {
+      "context": "https://iea-wind.org/task43/t43-publications/",
+      "doi": "10.5281/zenodo.3524532",
+      "reason": "did-not-resolve"
+    }
+  ],
+  "events_appended": 34,
+  "finished_at": "2026-09-14T09:59:44Z",
   "harvest_version": "0.1.0",
-  "max_records": 60,
-  "notices": [],
+  "inclusion": {
+    "direct": 555,
+    "none": 28
+  },
+  "max_records": 50,
+  "notices": [
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/annual-report-2025/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-25",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/annual-report-2025/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-25",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task41/t41-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-41",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task41/t41-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task41/t41-publications/danish-iea-task-41-eudp-funded-project/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-41",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task41/t41-publications/danish-iea-task-41-eudp-funded-project/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task42/t42-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-42",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task42/t42-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-42",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task43/task-43-open-data/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-43",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task43/task-43-open-data/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task44/t44-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-44",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task44/t44-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task45/t45-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-45",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task45/t45-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task47/t47-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-47",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task47/t47-publications/"
+    },
+    {
+      "detail": "publication list appears to live in linked PDFs; PDF parsing is out of scope for v1 (fixture iea-11)",
+      "iea_task": "task-48",
+      "pdfs": [
+        "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf",
+        "https://iea-wind.org/wp-content/uploads/2025/12/Task-48-Final-Technical-Report-Phase-I_2025-11-03.pdf"
+      ],
+      "source": "ieawind",
+      "type": "coverage_gap_pdf_only",
+      "url": "https://iea-wind.org/task48/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task48/t48-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-48",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task48/t48-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-48",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task51/task51-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-51",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task51/task51-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task51/task51-publications/task51-articles-and-reports/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-51",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task51/task51-publications/task51-articles-and-reports/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task52/t52-workplan-deliverables/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-52",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task52/t52-workplan-deliverables/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task53/task-53-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-53",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task53/task-53-publications/"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 0.9934640522875817,
+      "evidence": "title similarity 0.99 with the same first author (honing) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.24406/publica-8751",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5194/wes-11-1531-2026",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.10931629",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.13235189",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (froidevaux) and year (2024); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.14439044",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.14447171",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (monnig) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.15380254",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.17333961",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 0.9552238805970149,
+      "evidence": "title similarity 0.96 with the same first author (bortolotti) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.15778456",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T14:06:27Z",
+      "other": "10.5281/zenodo.15784506",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schicker) and year (2025); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.17605819",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T14:06:27Z",
+      "other": "10.5281/zenodo.17627028",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schlipf) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.18988934",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T14:06:27Z",
+      "other": "10.5281/zenodo.19111787",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 0.9459459459459459,
+      "evidence": "title similarity 0.95 with the same first author (sirkis) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.19055043",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5194/wes-11-1429-2026",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 0.9459459459459459,
+      "evidence": "title similarity 0.95 with the same first author (sirkis) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.19055044",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5194/wes-11-1429-2026",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (lozon) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.20218022",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-01T01:11:28Z",
+      "other": "10.5281/zenodo.20218023",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (rettenmeier) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.21037963",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T14:06:27Z",
+      "other": "10.5281/zenodo.22301650",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (kobayashi) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.21224752",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.21986357",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (barber) and year (2026); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.21870982",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.21873268",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (domagalski) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.2531989",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.2541205",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (domagalski) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.2531989",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.2557500",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (domagalski) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.2541205",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.2557500",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (clifton) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3374355",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3515444",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3475599",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3475609",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3475599",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3475617",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3475599",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3476763",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3475609",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3475617",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3475609",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3476763",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (vasiljevic) and year (2019); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3475617",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3476763",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (clifton) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3727098",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4040546",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (simley) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3763079",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3764556",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (alcayaga) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.3908475",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.3909488",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 0.9027237354085603,
+      "evidence": "title similarity 0.90 with the same first author (barber) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4094623",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4094631",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 0.9027237354085603,
+      "evidence": "title similarity 0.90 with the same first author (barber) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4094623",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4094632",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 0.9027237354085603,
+      "evidence": "title similarity 0.90 with the same first author (barber) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4094624",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4094631",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 0.9027237354085603,
+      "evidence": "title similarity 0.90 with the same first author (barber) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4094624",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4094632",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (papetta) and year (2020); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4291936",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4291978",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4813068",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4817875",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4813068",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4925963",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4813068",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.5809137",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4817875",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.4925963",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4817875",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.5809137",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (schepers) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.4925963",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.5809137",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (clifton) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.5158571",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.5163487",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (eisenhartrothe) and year (2021); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.5713971",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T14:06:27Z",
+      "other": "10.5281/zenodo.5714037",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (gertjan) and year (2023); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.8007754",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.8034397",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (afanasieva) and year (2023); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.8116594",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.8335186",
+      "type": "merge_proposal"
+    },
+    {
+      "action": "review required — no merge was applied",
+      "confidence": 1.0,
+      "evidence": "title similarity 1.00 with the same first author (gottschall) and year (2023); no shared DOI — REVIEW REQUIRED",
+      "identity_key": "10.5281/zenodo.8145113",
+      "kind": "fuzzy-title",
+      "observed_at": "2026-09-08T15:35:46Z",
+      "other": "10.5281/zenodo.8241511",
+      "type": "merge_proposal"
+    }
+  ],
   "ok": true,
-  "pending_extraction": 18,
+  "pending_extraction": 20,
   "records": {
     "pruned": 0,
-    "total": 0,
-    "unchanged": 0,
-    "written": 0
+    "total": 583,
+    "unchanged": 551,
+    "written": 32
   },
   "sources": {
-    "osti": {
-      "changed": 2,
+    "crossref": {
+      "changed": 9,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 39,
+      "seen": 40,
+      "skipped_unchanged": 31
+    },
+    "datacite": {
+      "changed": 5,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 50,
+      "skipped_unchanged": 45
+    },
+    "github": {
+      "changed": 19,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 50,
+      "skipped_unchanged": 31
+    },
+    "ieawind": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 33,
+      "skipped_unchanged": 33
+    },
+    "osti": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 37,
       "skipped_unchanged": 37
+    },
+    "wdh": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "Wind Data Hub listing is not machine-readable without credentials (Spike 4, verified 2026-08-31, re-verified 2026-09-01): /api/info advertises an AWS API Gateway that answers 403 'Missing Authentication Token', and the site's /api/datasets/_search proxy rejects GET with 404 and unauthenticated POST with 419 (CSRF). Set $WDH_API_TOKEN if a credential is ever issued; the adapter is disabling itself for this run and existing records are untouched."
+      ],
+      "implemented": true,
+      "reachable": false,
+      "seen": 0,
+      "skipped_unchanged": 0
+    },
+    "zenodo": {
+      "changed": 1,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 50,
+      "skipped_unchanged": 49
     }
   },
-  "started_at": "2026-09-08T15:50:28Z",
-  "unmapped_licenses": [],
-  "unreachable_sources": [],
+  "started_at": "2026-09-14T09:53:17Z",
+  "unmapped_licenses": [
+    {
+      "identity_key": "10.1002/we.1588",
+      "license_raw": "http://onlinelibrary.wiley.com/termsAndConditions#vor",
+      "name": "doi-10-1002-we-1588"
+    },
+    {
+      "identity_key": "10.1260/0309-524x.36.1.1",
+      "license_raw": "https://journals.sagepub.com/page/policies/text-and-data-mining-license",
+      "name": "doi-10-1260-0309-524x-36-1-1"
+    },
+    {
+      "identity_key": "10.18419/opus-10424",
+      "license_raw": "info:eu-repo/semantics/openAccess",
+      "name": "doi-10-18419-opus-10424"
+    },
+    {
+      "identity_key": "10.18419/opus-11435",
+      "license_raw": "info:eu-repo/semantics/openAccess",
+      "name": "doi-10-18419-opus-11435"
+    },
+    {
+      "identity_key": "10.18419/opus-12169",
+      "license_raw": "info:eu-repo/semantics/openAccess",
+      "name": "doi-10-18419-opus-12169"
+    },
+    {
+      "identity_key": "10.2314/kxp:1790028361",
+      "license_raw": "Open Access",
+      "name": "doi-10-2314-kxp-1790028361"
+    },
+    {
+      "identity_key": "10.2314/kxp:1790034779",
+      "license_raw": "Open Access",
+      "name": "doi-10-2314-kxp-1790034779"
+    },
+    {
+      "identity_key": "10.34657/21046",
+      "license_raw": "Creative Commons Attribution-NonDerivs 3.0 Germany",
+      "name": "doi-10-34657-21046"
+    },
+    {
+      "identity_key": "10.34657/21591",
+      "license_raw": "Creative Commons Attribution-NonDerivs 3.0 Germany",
+      "name": "doi-10-34657-21591"
+    },
+    {
+      "identity_key": "10.48550/arxiv.2006.07598",
+      "license_raw": "arXiv.org perpetual, non-exclusive license",
+      "name": "doi-10-48550-arxiv-2006-07598"
+    },
+    {
+      "identity_key": "10.5281/zenodo.1284068",
+      "license_raw": "Open Access",
+      "name": "doi-10-5281-zenodo-1284068"
+    },
+    {
+      "identity_key": "10.5281/zenodo.1284069",
+      "license_raw": "Open Access",
+      "name": "doi-10-5281-zenodo-1284069"
+    },
+    {
+      "identity_key": "10.5281/zenodo.15191296",
+      "license_raw": "apache2.0",
+      "name": "doi-10-5281-zenodo-15191296"
+    },
+    {
+      "identity_key": "10.5281/zenodo.3763078",
+      "license_raw": "Open Access",
+      "name": "doi-10-5281-zenodo-3763078"
+    },
+    {
+      "identity_key": "10.5281/zenodo.3763079",
+      "license_raw": "Open Access",
+      "name": "doi-10-5281-zenodo-3763079"
+    },
+    {
+      "identity_key": "10.5281/zenodo.3764556",
+      "license_raw": "Open Access",
+      "name": "doi-10-5281-zenodo-3764556"
+    },
+    {
+      "identity_key": "10.5281/zenodo.5851605",
+      "license_raw": "Open Access",
+      "name": "doi-10-5281-zenodo-5851605"
+    },
+    {
+      "identity_key": "10.5281/zenodo.5851606",
+      "license_raw": "Open Access",
+      "name": "doi-10-5281-zenodo-5851606"
+    },
+    {
+      "identity_key": "10.5281/zenodo.6330754",
+      "license_raw": "Open Access",
+      "name": "doi-10-5281-zenodo-6330754"
+    },
+    {
+      "identity_key": "github|AayushAswal27/wind-turbine-predictive-maintenance",
+      "license_raw": "NOASSERTION",
+      "name": "github-aayushaswal27-wind-turbine-predictive-maintenance"
+    },
+    {
+      "identity_key": "github|Energinet-SimTools/MTB",
+      "license_raw": "NOASSERTION",
+      "name": "github-energinet-simtools-mtb"
+    },
+    {
+      "identity_key": "github|dofliu/windFarm-Go",
+      "license_raw": "NOASSERTION",
+      "name": "github-dofliu-windfarm-go"
+    }
+  ],
+  "unreachable_sources": [
+    "wdh"
+  ],
   "validation_violations": []
 }

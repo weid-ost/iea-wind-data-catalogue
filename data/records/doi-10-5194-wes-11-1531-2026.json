@@ -2,7 +2,7 @@
   "extras": [
     {
       "key": "authors",
-      "value": "[{\"family\":\"Höning\",\"given\":\"Leo\",\"name\":\"Höning, Leo\",\"orcid\":\"0009-0005-9935-0901\"},{\"family\":\"Herráez\",\"given\":\"Iván\",\"name\":\"Herráez, Iván\"},{\"family\":\"Stoevesandt\",\"given\":\"Bernhard\",\"name\":\"Stoevesandt, Bernhard\",\"orcid\":\"0000-0001-6626-1084\"},{\"family\":\"Peinke\",\"given\":\"Joachim\",\"name\":\"Peinke, Joachim\",\"orcid\":\"0000-0002-0775-7423\"}]"
+      "value": "[{\"affiliation\":\"Carl von Ossietzky Universität Oldenburg (Oldenburg, Germany); Fraunhofer Institute for Wind Energy Systems (Bremerhaven, Germany)\",\"family\":\"Höning\",\"given\":\"Leo\",\"name\":\"Höning, Leo\",\"orcid\":\"0009-0005-9935-0901\"},{\"family\":\"Herráez\",\"given\":\"Iván\",\"name\":\"Herráez, Iván\"},{\"family\":\"Stoevesandt\",\"given\":\"Bernhard\",\"name\":\"Stoevesandt, Bernhard\",\"orcid\":\"0000-0001-6626-1084\"},{\"family\":\"Peinke\",\"given\":\"Joachim\",\"name\":\"Peinke, Joachim\",\"orcid\":\"0000-0002-0775-7423\"}]"
     },
     {
       "key": "container",
@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:28:01Z"
+      "value": "2026-09-14T09:53:22Z"
     },
     {
       "key": "license_mapped",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-04-30T12:19:33Z~m2"
+      "value": "2026-09-12T11:22:33Z~m2"
     },
     {
       "key": "source_system",
@@ -104,7 +104,7 @@
   "groups": [],
   "license_id": "cc-by",
   "name": "doi-10-5194-wes-11-1531-2026",
-  "notes": "<p>Abstract. This study explores the aeroelastic behavior of the IEA 15 MW wind turbine rotor during dynamic yaw maneuvers under storm conditions through high-fidelity computational fluid dynamics (CFD) simulations. The focus is on blade vibration responses to a variety of yaw misalignments while maintaining constant pitch and azimuth settings. Utilizing the geometrically exact beam theory (GEBT) and the OpenFOAM framework, the study reveals that certain yaw angles lead to significant edgewise blade vibrations, with distinct responses being observed among the rotor's three blades. Detailed analysis of one blade at varying fixed yaw angles, employing Hilbert–Huang transformation, uncovers a lock-in effect where flow structures synchronize with the blade's eigenfrequencies, resulting in pronounced blade tip vibrations. Key findings indicate that the most substantial vibrations occur during specific yaw angles, suggesting that the rotor's structural integrity could be compromised under certain dynamic conditions. This work enhances the understanding of aeroelastic instabilities during off-design yaw maneuvers and highlights the need for operational strategies in managing rotor performance during extreme conditions.</p>",
+  "notes": "<p>This study explores the aeroelastic behavior of the IEA 15 MW wind turbine rotor during dynamic yaw maneuvers under storm conditions through high-fidelity computational fluid dynamics (CFD) simulations. The focus is on blade vibration responses to a variety of yaw misalignments while maintaining constant pitch and azimuth settings. Utilizing the geometrically exact beam theory (GEBT) and the OpenFOAM framework, the study reveals that certain yaw angles lead to significant edgewise blade vibrations, with distinct responses being observed among the rotor's three blades. Detailed analysis of one blade at varying fixed yaw angles, employing Hilbert–Huang transformation, uncovers a lock-in effect where flow structures synchronize with the blade's eigenfrequencies, resulting in pronounced blade tip vibrations. Key findings indicate that the most substantial vibrations occur during specific yaw angles, suggesting that the rotor's structural integrity could be compromised under certain dynamic conditions. This work enhances the understanding of aeroelastic instabilities during off-design yaw maneuvers and highlights the need for operational strategies in managing rotor performance during extreme conditions.</p>",
   "owner_org": "unattributed",
   "private": false,
   "resources": [],

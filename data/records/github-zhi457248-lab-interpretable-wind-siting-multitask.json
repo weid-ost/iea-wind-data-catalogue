@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:28Z"
+      "value": "2026-09-14T09:57:06Z"
     },
     {
       "key": "identity_key",
-      "value": "github|api-evangelist/radia"
+      "value": "github|zhi457248-lab/interpretable-wind-siting-multitask"
     },
     {
       "key": "identity_kind",
@@ -26,7 +26,15 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-14T09:57:10Z"
+      "value": "2026-09-14T09:57:06Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-08-02"
+      "value": "2026-09-10"
     },
     {
       "key": "publisher",
@@ -54,11 +62,11 @@
     },
     {
       "key": "source_id",
-      "value": "api-evangelist/radia"
+      "value": "zhi457248-lab/interpretable-wind-siting-multitask"
     },
     {
       "key": "source_key",
-      "value": "7e487ba92ade8b3ae961740e45470d6f790de3e7::b8b319b93dabbedf~m2"
+      "value": "31e21e6c3352947cc137fe568334c33e3b4bef3a::6858bc799936edd0~m2"
     },
     {
       "key": "source_system",
@@ -70,11 +78,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/api-evangelist/radia"
+      "value": "https://github.com/zhi457248-lab/interpretable-wind-siting-multitask"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/api-evangelist/radia\"]"
+      "value": "[\"https://github.com/zhi457248-lab/interpretable-wind-siting-multitask\"]"
     },
     {
       "key": "withdrawn",
@@ -82,54 +90,48 @@
     }
   ],
   "groups": [],
-  "license_id": "notspecified",
-  "name": "github-api-evangelist-radia",
-  "notes": "Radia — independent third-party profile of a public API surface, by API Evangelist. Radia is a dual-use aerospace company founded in 2016 by MIT-trained aerospace engineer Mark Lundstrom, headquartered in Boulder, Colorado with a second operating base in Italy led by Giuseppe Giordo.",
+  "license_id": "mit",
+  "name": "github-zhi457248-lab-interpretable-wind-siting-multitask",
+  "notes": "Companion repo: interpretable multi-task cross-modal fusion for hierarchical policy-aware wind farm siting (China-scale)",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/api-evangelist/radia"
+      "url": "https://github.com/zhi457248-lab/interpretable-wind-siting-multitask"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "aerospace"
+      "name": "china"
     },
     {
-      "name": "air-cargo"
+      "name": "cross-modal-fusion"
     },
     {
-      "name": "apis-json"
+      "name": "explainable-ai"
     },
     {
-      "name": "aviation"
+      "name": "lora"
     },
     {
-      "name": "company"
+      "name": "multi-task-learning"
     },
     {
-      "name": "defense"
-    },
-    {
-      "name": "logistics"
-    },
-    {
-      "name": "manufacturing"
+      "name": "policy-nlp"
     },
     {
       "name": "renewable-energy"
     },
     {
-      "name": "united-states"
+      "name": "tabular-learning"
     },
     {
       "name": "wind-energy"
     }
   ],
-  "title": "api-evangelist/radia",
-  "url": "https://github.com/api-evangelist/radia"
+  "title": "zhi457248-lab/interpretable-wind-siting-multitask",
+  "url": "https://github.com/zhi457248-lab/interpretable-wind-siting-multitask"
 }

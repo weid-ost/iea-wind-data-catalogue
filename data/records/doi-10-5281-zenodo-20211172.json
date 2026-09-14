@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"Danmarks Tekniske Universitetet\",\"family\":\"Yildirim\",\"given\":\"Busra\",\"name\":\"Yildirim, Busra\",\"orcid\":\"0000-0003-1204-9066\"},{\"affiliation\":\"University College Cork\",\"family\":\"Kamidelivand\",\"given\":\"Mitra\",\"name\":\"Kamidelivand, Mitra\",\"orcid\":\"0000-0002-3888-1769\"},{\"affiliation\":\"BlueFloat Energy\",\"family\":\"Nasr\",\"given\":\"Charbel\",\"name\":\"Nasr, Charbel\"},{\"affiliation\":\"IFP Energies Nouvelles\",\"family\":\"Persent\",\"given\":\"Emmanuel\",\"name\":\"Persent, Emmanuel\"},{\"affiliation\":\"The University of Texas at Arlington\",\"family\":\"Slack\",\"given\":\"Emma\",\"name\":\"Slack, Emma\"},{\"affiliation\":\"NORCE Norwegian Research Centre\",\"family\":\"Schlanbusch\",\"given\":\"Rune\",\"name\":\"Schlanbusch, Rune\"},{\"affiliation\":\"University of Agder\",\"family\":\"Zhiyu\",\"given\":\"Jiang\",\"name\":\"Zhiyu, Jiang\"},{\"affiliation\":\"Danmarks Tekniske Universitet - Riso Campus\",\"family\":\"Kolios\",\"given\":\"Athanasios\",\"name\":\"Kolios, Athanasios\",\"orcid\":\"0000-0001-6711-641X\"}]"
+      "value": "[{\"affiliation\":\"Danmarks Tekniske Universitetet\",\"family\":\"Yildirim\",\"given\":\"Busra\",\"name\":\"Yildirim, Busra\",\"orcid\":\"0000-0003-1204-9066\"},{\"affiliation\":\"University College Cork\",\"family\":\"Kamidelivand\",\"given\":\"Mitra\",\"name\":\"Kamidelivand, Mitra\",\"orcid\":\"0000-0002-3888-1769\"},{\"affiliation\":\"BlueFloat Energy\",\"family\":\"Nasr\",\"given\":\"Charbel\",\"name\":\"Nasr, Charbel\"},{\"affiliation\":\"IFP Energies Nouvelles\",\"family\":\"Persent\",\"given\":\"Emmanuel\",\"name\":\"Persent, Emmanuel\"},{\"affiliation\":\"The University of Texas at Arlington\",\"family\":\"Slack\",\"given\":\"Emma\",\"name\":\"Slack, Emma\"},{\"affiliation\":\"NORCE Research AS\",\"family\":\"Schlanbusch\",\"given\":\"Rune\",\"name\":\"Schlanbusch, Rune\"},{\"affiliation\":\"University of Agder\",\"family\":\"Zhiyu\",\"given\":\"Jiang\",\"name\":\"Zhiyu, Jiang\"},{\"affiliation\":\"Danmarks Tekniske Universitet - Riso Campus\",\"family\":\"Kolios\",\"given\":\"Athanasios\",\"name\":\"Kolios, Athanasios\",\"orcid\":\"0000-0001-6711-641X\"}]"
     },
     {
       "key": "doi",
@@ -38,7 +38,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:27:56Z"
+      "value": "2026-09-14T09:53:19Z"
     },
     {
       "key": "license_mapped",
@@ -70,7 +70,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.20211172\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.20211172\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"10.5281/zenodo.20211173\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
     },
     {
       "key": "resource_kind",
@@ -86,7 +86,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-05-18T08:00:46Z~m2"
+      "value": "2026-09-11T21:23:23Z~m2"
     },
     {
       "key": "source_system",

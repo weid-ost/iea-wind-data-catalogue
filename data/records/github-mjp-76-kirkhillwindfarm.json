@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:32:21Z"
+      "value": "2026-09-14T09:57:22Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-09-06"
+      "value": "2026-09-09"
     },
     {
       "key": "publisher",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "7b6f2624bd408e56c84eac4a8f44af333f4cefd1:v4.8.70:a7d1f6b664e82adc~m2"
+      "value": "997e1b891eefe27878f74a980e58565247914dff:v4.8.73:a7d1f6b664e82adc~m2"
     },
     {
       "key": "source_system",
@@ -103,8 +103,8 @@
     },
     {
       "format": "release",
-      "name": "Release v4.8.70",
-      "url": "https://github.com/MJP-76/KirkHillWindFarm/releases/tag/v4.8.70"
+      "name": "Release v4.8.73",
+      "url": "https://github.com/MJP-76/KirkHillWindFarm/releases/tag/v4.8.73"
     }
   ],
   "state": "active",
@@ -127,5 +127,5 @@
   ],
   "title": "MJP-76/KirkHillWindFarm",
   "url": "https://github.com/MJP-76/KirkHillWindFarm",
-  "version": "v4.8.70"
+  "version": "v4.8.73"
 }
