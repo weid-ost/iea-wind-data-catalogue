@@ -1,0 +1,115 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Sommerfeld\",\"given\":\"Markus\",\"name\":\"Sommerfeld, Markus\",\"orcid\":\"0000-0003-1116-5858\"},{\"family\":\"Dörenkämper\",\"given\":\"Martin\",\"name\":\"Dörenkämper, Martin\",\"orcid\":\"0000-0002-0210-5733\"},{\"family\":\"De Schutter\",\"given\":\"Jochem\",\"name\":\"De Schutter, Jochem\"},{\"family\":\"Crawford\",\"given\":\"Curran\",\"name\":\"Crawford, Curran\",\"orcid\":\"0000-0001-6047-728X\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-8-1153-2023"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-21T09:57:35Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-8-1153-2023"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-21T09:57:35Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-07-17"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2020-120\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2020-120-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2020-120-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2020-120-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2020-120-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5281/zenodo.4292507\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-8-1153-2023"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-15T08:53:35Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-8-1153-2023"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-8-1153-2023\",\"https://wes.copernicus.org/articles/8/1153/2023/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-8-1153-2023",
+  "notes": "<p> This study investigates the performance of pumping-mode ground-generation airborne wind energy systems (AWESs) by determining cyclical, feasible, power-optimal flight trajectories based on realistic vertical wind velocity profiles. These 10 min profiles, derived from mesoscale weather simulations at an offshore and an onshore site in Europe, are incorporated into an optimal control model that maximizes average cycle power by optimizing the trajectory. To reduce the computational cost, representative wind conditions are determined based on k -means clustering. The results describe the influence of wind speed magnitude and profile shape on the power, tether tension, tether reeling speed, and kite trajectory during a pumping cycle. The effect of mesoscale-simulated wind profiles on power curves is illustrated by comparing them to logarithmic wind profiles. Offshore, the results are in good agreement, while onshore power curves differ due to more frequent non-monotonic wind conditions. Results are references against a simplified quasi-steady-state model and wind turbine model. This study investigates how power curves based on mesoscale-simulated wind profiles are affected by the choice of reference height. Our data show that optimal operating heights are generally below 400 m with most AWESs operating at around 200 m. </p>",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Impact of wind profiles on ground-generation airborne wind energy system performance",
+  "url": "https://doi.org/10.5194/wes-8-1153-2023"
+}

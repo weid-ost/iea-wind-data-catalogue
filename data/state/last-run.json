@@ -96,12 +96,12 @@
       "reason": "did-not-resolve"
     }
   ],
-  "events_appended": 34,
-  "finished_at": "2026-09-14T09:59:44Z",
+  "events_appended": 43,
+  "finished_at": "2026-09-21T10:00:26Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 555,
-    "none": 28
+    "direct": 558,
+    "none": 34
   },
   "max_records": 50,
   "notices": [
@@ -765,37 +765,37 @@
   "pending_extraction": 20,
   "records": {
     "pruned": 0,
-    "total": 583,
-    "unchanged": 551,
-    "written": 32
+    "total": 592,
+    "unchanged": 550,
+    "written": 42
   },
   "sources": {
     "crossref": {
-      "changed": 9,
+      "changed": 11,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 40,
-      "skipped_unchanged": 31
+      "skipped_unchanged": 29
     },
     "datacite": {
-      "changed": 5,
+      "changed": 8,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 45
+      "skipped_unchanged": 42
     },
     "github": {
-      "changed": 19,
+      "changed": 24,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 31
+      "skipped_unchanged": 26
     },
     "ieawind": {
       "changed": 0,
@@ -827,16 +827,16 @@
       "skipped_unchanged": 0
     },
     "zenodo": {
-      "changed": 1,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 49
+      "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-09-14T09:53:17Z",
+  "started_at": "2026-09-21T09:57:30Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",

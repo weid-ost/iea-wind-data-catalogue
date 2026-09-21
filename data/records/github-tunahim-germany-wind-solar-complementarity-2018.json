@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-21T09:59:05Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|TunaHim/Germany-wind-solar-complementarity-2018"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-21T09:59:05Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-09-15"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "TunaHim/Germany-wind-solar-complementarity-2018"
+    },
+    {
+      "key": "source_key",
+      "value": "1d5efced7f7ca6da2b4ef4dadc8698a208f277fd::73a927c5ca26e629~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/TunaHim/Germany-wind-solar-complementarity-2018"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/TunaHim/Germany-wind-solar-complementarity-2018\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-tunahim-germany-wind-solar-complementarity-2018",
+  "notes": "Germany 2018 wind–solar complementarity analysis using COSMO-REA6 weather data, installed-capacity weighting, SMARD generation observations, and an interactive Streamlit app.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/TunaHim/Germany-wind-solar-complementarity-2018"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "capacity-factor"
+    },
+    {
+      "name": "climate-data"
+    },
+    {
+      "name": "cosmo-rea6"
+    },
+    {
+      "name": "energy-data"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "streamlit"
+    },
+    {
+      "name": "time-series-analysis"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "xarray"
+    }
+  ],
+  "title": "TunaHim/Germany-wind-solar-complementarity-2018",
+  "url": "https://github.com/TunaHim/Germany-wind-solar-complementarity-2018"
+}

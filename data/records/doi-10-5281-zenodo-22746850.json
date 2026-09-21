@@ -1,0 +1,142 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies\",\"family\":\"Bergua\",\"given\":\"Roger\",\"name\":\"Bergua, Roger\",\"orcid\":\"0000-0003-4703-4729\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.22746850"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-21T09:57:32Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.22746850"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-21T09:57:32Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc0-1.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.21947/1922900\",\"identifier_type\":\"DOI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"10.5194/wes-8-465-2023\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementTo\"},{\"identifier\":\"10.5281/zenodo.4740005\",\"identifier_type\":\"DOI\",\"relation\":\"References\"},{\"identifier\":\"10.5281/zenodo.22746849\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.22746850"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-14T11:12:45Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.22746850"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.22746850\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-zero",
+  "name": "doi-10-5281-zenodo-22746850",
+  "notes": "The objective of Phase III of the Offshore Code Comparison Collaboration, Continued, with Correlation and unCertainty (OC6) project was to validate the accuracy of aerodynamic load predictions by offshore wind modeling tools for a floating offshore wind turbine as it experiences large surge-translational and pitch-rotational motion, as would occur during normal operation. The test data considered were generated at Politecnico di Milano – a wind tunnel with a robotic excitation system to emulate wave loading on the wind turbine. Testing was performed using a scaled version of the DTU 10-MW reference model, and motion was prescribed as harmonic oscillations in the surge and pitch directions, independently. A variety of models were examined in the project, performing a three-way validation between engineering-level tools, higher-fidelity tools, and measurement data from two wind tunnel experimental campaigns. The Load Cases (LC) considered in this testing are as follows: LC 1.X - Steady Wind LC 2.X - Unsteady Wind - Surge Motion LC 3.X - Unsteady Wind - Pitch Motion Details on the results of the OC6 Phase III campaign can be found in the following reference: Bergua R., et al. OC6 project Phase III: validation of the aerodynamic loading on a wind turbine rotor undergoing large motion caused by a floating support structure, Wind Energ. Sci., 8, 465–485, https://doi.org/10.5194/wes-8-465-2023, 2023.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "aerodynamics"
+    },
+    {
+      "name": "aeronautical-engineering"
+    },
+    {
+      "name": "aerospace-engineering"
+    },
+    {
+      "name": "electric-energy"
+    },
+    {
+      "name": "iea-wind-task-30"
+    },
+    {
+      "name": "iea-wind-tcp"
+    },
+    {
+      "name": "offshore-wind-eneregy"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-power-station"
+    }
+  ],
+  "title": "OC6 Phase III: Validation of Wind Turbine Aerodynamic Loading During Surge/Pitch Motion",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.22746850"
+}

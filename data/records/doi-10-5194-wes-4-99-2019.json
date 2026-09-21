@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:28:01Z"
+      "value": "2026-09-21T09:57:35Z"
     },
     {
       "key": "license_mapped",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2025-02-01T08:21:18Z~m2"
+      "value": "2026-09-14T16:30:46Z~m2"
     },
     {
       "key": "source_system",
@@ -104,7 +104,7 @@
   "groups": [],
   "license_id": "cc-by",
   "name": "doi-10-5194-wes-4-99-2019",
-  "notes": "<p>Abstract. In this study, wind farms were optimized to show the benefit of coupling complete turbine design and layout optimization as well as including two different turbine designs in a fixed 1-to-1 ratio in a single wind farm. For our purposes, the variables in each turbine optimization include hub height, rotor diameter, rated power, tower diameter, tower shell thickness, and implicit blade chord-and-twist distributions. A 32-turbine wind farm and a 60-turbine wind farm were both considered, as well as a variety of turbine spacings and wind shear exponents. Structural constraints as well as turbine costs were considered in the optimization. Results indicate that coupled turbine design and layout optimization is superior to sequentially optimizing turbine design, then turbine layout. Coupled optimization results in an additional 2 %–5 % reduction in the cost of energy compared to optimizing sequentially for wind farms with turbine spacings of 8.5–11 rotor diameters. Smaller wind farms benefit even more from coupled optimization. Furthermore, wind farms with closely spaced wind turbines can greatly benefit from nonuniform turbine design throughout the farm. Some of these wind farms with heterogeneous turbine design have an additional 10 % cost-of-energy reduction compared to wind farms with identical turbines throughout the farm.</p>",
+  "notes": "<p>In this study, wind farms were optimized to show the benefit of coupling complete turbine design and layout optimization as well as including two different turbine designs in a fixed 1-to-1 ratio in a single wind farm. For our purposes, the variables in each turbine optimization include hub height, rotor diameter, rated power, tower diameter, tower shell thickness, and implicit blade chord-and-twist distributions. A 32-turbine wind farm and a 60-turbine wind farm were both considered, as well as a variety of turbine spacings and wind shear exponents. Structural constraints as well as turbine costs were considered in the optimization. Results indicate that coupled turbine design and layout optimization is superior to sequentially optimizing turbine design, then turbine layout. Coupled optimization results in an additional 2 %–5 % reduction in the cost of energy compared to optimizing sequentially for wind farms with turbine spacings of 8.5–11 rotor diameters. Smaller wind farms benefit even more from coupled optimization. Furthermore, wind farms with closely spaced wind turbines can greatly benefit from nonuniform turbine design throughout the farm. Some of these wind farms with heterogeneous turbine design have an additional 10 % cost-of-energy reduction compared to wind farms with identical turbines throughout the farm.</p>",
   "owner_org": "unattributed",
   "private": false,
   "resources": [],

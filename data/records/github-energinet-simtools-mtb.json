@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-14T09:57:20Z"
+      "value": "2026-09-21T09:59:01Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2025-06-18"
+      "value": "2026-09-17"
     },
     {
       "key": "publisher",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "b4a166a722d94544fe1224dfb1c21d5064214998:v1.1.2:ff5fed891489a49b~m2"
+      "value": "a8e6adcb237842d0834783ee2ccb42a93609e251:v2.0.0:ff5fed891489a49b~m2"
     },
     {
       "key": "source_system",
@@ -103,8 +103,8 @@
     },
     {
       "format": "release",
-      "name": "Release v1.1.2",
-      "url": "https://github.com/Energinet-SimTools/MTB/releases/tag/v1.1.2"
+      "name": "Release v2.0.0",
+      "url": "https://github.com/Energinet-SimTools/MTB/releases/tag/v2.0.0"
     }
   ],
   "state": "active",
@@ -166,5 +166,5 @@
   ],
   "title": "Energinet-SimTools/MTB",
   "url": "https://github.com/Energinet-SimTools/MTB",
-  "version": "v1.1.2"
+  "version": "v2.0.0"
 }

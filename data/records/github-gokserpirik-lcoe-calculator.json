@@ -1,0 +1,132 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-21T09:59:03Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|gokserpirik/lcoe-calculator"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-21T09:59:03Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-07"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "gokserpirik/lcoe-calculator"
+    },
+    {
+      "key": "source_key",
+      "value": "8fa6beed39ae8717b2ac7d2ba9b01eeb79bfaf9e::a72061520542c9f4~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/gokserpirik/lcoe-calculator"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/gokserpirik/lcoe-calculator\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-gokserpirik-lcoe-calculator",
+  "notes": "Interactive LCOE calculator for Solar PV, Solar + Battery, and onshore Wind. Live data from PVGIS and NASA POWER, calibrated for Turkey.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/gokserpirik/lcoe-calculator"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "battery-storage"
+    },
+    {
+      "name": "energy-economics"
+    },
+    {
+      "name": "lcoe"
+    },
+    {
+      "name": "nasa-power"
+    },
+    {
+      "name": "pvgis"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "solar"
+    },
+    {
+      "name": "streamlit"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "gokserpirik/lcoe-calculator",
+  "url": "https://github.com/gokserpirik/lcoe-calculator"
+}

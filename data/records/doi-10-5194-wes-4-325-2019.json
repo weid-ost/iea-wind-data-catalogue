@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:28:01Z"
+      "value": "2026-09-21T09:57:35Z"
     },
     {
       "key": "license_mapped",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2025-02-01T05:56:33Z~m2"
+      "value": "2026-09-14T17:13:38Z~m2"
     },
     {
       "key": "source_system",
@@ -104,7 +104,7 @@
   "groups": [],
   "license_id": "cc-by",
   "name": "doi-10-5194-wes-4-325-2019",
-  "notes": "<p>Abstract. For measurements taken over a decade at the coastal Danish site Høvsøre, we find the variance associated with wind speed events from the offshore direction to exceed the prescribed extreme turbulence model (ETM) of the International Electrotechnical Commission (IEC) 61400-1 Edition 3 standard for wind turbine safety. The variance of wind velocity fluctuations manifested during these events is not due to extreme turbulence; rather, it is primarily caused by ramp-like increases in wind speed associated with larger-scale meteorological processes. The measurements are both linearly detrended and high-pass filtered in order to investigate how these events – and such commonly used filtering – affect the estimated 50-year return period of turbulence levels. High-pass filtering the measurements with a cutoff frequency of 1∕300 Hz reduces the 50-year turbulence levels below that of IEC ETM class C, whereas linear detrending does not. This is seen as the high-pass filtering more effectively removes variance associated with the ramp-like events. The impact of the observed events on a wind turbine are investigated using aeroelastic simulations that are driven by constrained turbulence simulation fields. Relevant wind turbine component loads from the simulations are compared with the extreme turbulence load case prescribed by the IEC standard. The loads from the event simulations are on average lower for all considered load components, with one exception: ramp-like events at wind speeds between 8 and 16 m s−1, at which the wind speed rises to exceed rated wind speed, can lead to high thrust on the rotor, resulting in extreme tower-base fore–aft loads that exceed the extreme turbulence load case of the IEC standard.</p>",
+  "notes": "<p> For measurements taken over a decade at the coastal Danish site Høvsøre, we find the variance associated with wind speed events from the offshore direction to exceed the prescribed extreme turbulence model (ETM) of the International Electrotechnical Commission (IEC) 61400-1 Edition 3 standard for wind turbine safety. The variance of wind velocity fluctuations manifested during these events is not due to extreme turbulence; rather, it is primarily caused by ramp-like increases in wind speed associated with larger-scale meteorological processes. The measurements are both linearly detrended and high-pass filtered in order to investigate how these events – and such commonly used filtering – affect the estimated 50-year return period of turbulence levels. High-pass filtering the measurements with a cutoff frequency of 1∕300 Hz reduces the 50-year turbulence levels below that of IEC ETM class C, whereas linear detrending does not. This is seen as the high-pass filtering more effectively removes variance associated with the ramp-like events. The impact of the observed events on a wind turbine are investigated using aeroelastic simulations that are driven by constrained turbulence simulation fields. Relevant wind turbine component loads from the simulations are compared with the extreme turbulence load case prescribed by the IEC standard. The loads from the event simulations are on average lower for all considered load components, with one exception: ramp-like events at wind speeds between 8 and 16 m s <sup>−1</sup> , at which the wind speed rises to exceed rated wind speed, can lead to high thrust on the rotor, resulting in extreme tower-base fore–aft loads that exceed the extreme turbulence load case of the IEC standard. </p>",
   "owner_org": "unattributed",
   "private": false,
   "resources": [],

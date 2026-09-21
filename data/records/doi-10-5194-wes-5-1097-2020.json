@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:28:01Z"
+      "value": "2026-09-21T09:57:35Z"
     },
     {
       "key": "license_mapped",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2025-01-31T16:40:03Z~m2"
+      "value": "2026-09-14T19:27:20Z~m2"
     },
     {
       "key": "source_system",
@@ -104,7 +104,7 @@
   "groups": [],
   "license_id": "cc-by",
   "name": "doi-10-5194-wes-5-1097-2020",
-  "notes": "<p>Abstract. Airborne wind energy (AWE) systems harness energy at heights beyond the reach of tower-based wind turbines. To estimate the annual energy production (AEP), measured or modelled wind speed statistics close to the ground are commonly extrapolated to higher altitudes, introducing substantial uncertainties. This study proposes a clustering procedure for obtaining wind statistics for an extended height range from modelled datasets that include the variation in the wind speed and direction with height. K-means clustering is used to identify a set of wind profile shapes that characterise the wind resource. The methodology is demonstrated using the Dutch Offshore Wind Atlas for the locations of the met masts IJmuiden and Cabauw, 85 km off the Dutch coast in the North Sea and in the centre of the Netherlands, respectively. The cluster-mean wind profile shapes and the corresponding temporal cycles, wind properties, and atmospheric stability are in good agreement with the literature. Finally, it is demonstrated how a set of wind profile shapes is used to estimate the AEP of a small-scale pumping AWE system located at Cabauw, which requires the derivation of a separate power curve for each wind profile shape. Studying the relationship between the estimated AEP and the number of site-specific clusters used for the calculation shows that the difference in AEP relative to the converged value is less than 3 % for four or more clusters.</p>",
+  "notes": "<p> Airborne wind energy (AWE) systems harness energy at heights beyond the reach of tower-based wind turbines. To estimate the annual energy production (AEP), measured or modelled wind speed statistics close to the ground are commonly extrapolated to higher altitudes, introducing substantial uncertainties. This study proposes a clustering procedure for obtaining wind statistics for an extended height range from modelled datasets that include the variation in the wind speed and direction with height. K -means clustering is used to identify a set of wind profile shapes that characterise the wind resource. The methodology is demonstrated using the Dutch Offshore Wind Atlas for the locations of the met masts IJmuiden and Cabauw, 85 km off the Dutch coast in the North Sea and in the centre of the Netherlands, respectively. The cluster-mean wind profile shapes and the corresponding temporal cycles, wind properties, and atmospheric stability are in good agreement with the literature. Finally, it is demonstrated how a set of wind profile shapes is used to estimate the AEP of a small-scale pumping AWE system located at Cabauw, which requires the derivation of a separate power curve for each wind profile shape. Studying the relationship between the estimated AEP and the number of site-specific clusters used for the calculation shows that the difference in AEP relative to the converged value is less than 3 % for four or more clusters. </p>",
   "owner_org": "unattributed",
   "private": false,
   "resources": [],

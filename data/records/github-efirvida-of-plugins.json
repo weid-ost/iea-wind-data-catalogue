@@ -1,0 +1,135 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-21T09:58:59Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|efirvida/of-plugins"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-21T09:58:59Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-03-21"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "efirvida/of-plugins"
+    },
+    {
+      "key": "source_key",
+      "value": "93da69689ee20c00dc7d109bb5f7362059a65e70::40ede49483df9243~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/efirvida/of-plugins"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/efirvida/of-plugins\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-efirvida-of-plugins",
+  "notes": "OpenFOAM plugins for fluid-structure interaction (FSI) of rotating machinery: zonal rigid-body motion, Laplacian mesh deformation, overset meshes, preCICE coupling, and actuator-line turbines.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/efirvida/of-plugins"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "actuator-line"
+    },
+    {
+      "name": "cfd"
+    },
+    {
+      "name": "fluid-structure-interaction"
+    },
+    {
+      "name": "fsi"
+    },
+    {
+      "name": "hpc"
+    },
+    {
+      "name": "mesh-motion"
+    },
+    {
+      "name": "openfoam"
+    },
+    {
+      "name": "overset-mesh"
+    },
+    {
+      "name": "precice"
+    },
+    {
+      "name": "turbines"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "efirvida/of-plugins",
+  "url": "https://github.com/efirvida/of-plugins"
+}

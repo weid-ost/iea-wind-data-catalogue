@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-14T09:53:22Z"
+      "value": "2026-09-21T09:57:35Z"
     },
     {
       "key": "license_mapped",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-04-08T08:04:06Z~m2"
+      "value": "2026-09-15T10:09:11Z~m2"
     },
     {
       "key": "source_system",
@@ -104,7 +104,7 @@
   "groups": [],
   "license_id": "cc-by",
   "name": "doi-10-5194-wes-9-519-2024",
-  "notes": "<p>Abstract. The growing interest in floating offshore wind turbines (FOWTs) is rooted in the potential source of increased offshore energy production. As the technology is still in a pre-industrial state, several questions remain to be addressed where little field data are available. This study uses physical modelling at a reduced scale to investigate the signature of the floating motions into the wake spectral content of a simplified FOWT model. A wind turbine model based on the actuator disc concept is placed in an atmospheric boundary layer wind tunnel and subjected to a range of surge, heave and pitch motions. The signatures of idealised sinusoidal motion and realistic broadband motion on the model’s wake at distances of 4.6 D (D being the disc diameter) and 8 D are measured through the use of a rake of single hot wires. The spectral analysis shows that harmonic motion leaves clear signatures in the far wake's energy spectra, mainly in the top tip region, while broadband motion does not leave easily detectable signatures.</p>",
+  "notes": "<p> The growing interest in floating offshore wind turbines (FOWTs) is rooted in the potential source of increased offshore energy production. As the technology is still in a pre-industrial state, several questions remain to be addressed where little field data are available. This study uses physical modelling at a reduced scale to investigate the signature of the floating motions into the wake spectral content of a simplified FOWT model. A wind turbine model based on the actuator disc concept is placed in an atmospheric boundary layer wind tunnel and subjected to a range of surge, heave and pitch motions. The signatures of idealised sinusoidal motion and realistic broadband motion on the model’s wake at distances of 4.6 D ( D being the disc diameter) and 8 D are measured through the use of a rake of single hot wires. The spectral analysis shows that harmonic motion leaves clear signatures in the far wake's energy spectra, mainly in the top tip region, while broadband motion does not leave easily detectable signatures. </p>",
   "owner_org": "unattributed",
   "private": false,
   "resources": [],

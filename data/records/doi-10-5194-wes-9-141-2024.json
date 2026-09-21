@@ -2,7 +2,7 @@
   "extras": [
     {
       "key": "authors",
-      "value": "[{\"family\":\"Mehta\",\"given\":\"Mihir\",\"name\":\"Mehta, Mihir\",\"orcid\":\"0009-0000-5858-8722\"},{\"family\":\"Zaaijer\",\"given\":\"Michiel\",\"name\":\"Zaaijer, Michiel\",\"orcid\":\"0000-0002-9504-1029\"},{\"family\":\"von Terzi\",\"given\":\"Dominic\",\"name\":\"von Terzi, Dominic\"}]"
+      "value": "[{\"family\":\"Mehta\",\"given\":\"Mihir\",\"name\":\"Mehta, Mihir\",\"orcid\":\"0009-0000-5858-8722\"},{\"family\":\"Zaaijer\",\"given\":\"Michiel\",\"name\":\"Zaaijer, Michiel\",\"orcid\":\"0000-0002-9504-1029\"},{\"family\":\"von Terzi\",\"given\":\"Dominic\",\"name\":\"von Terzi, Dominic\",\"orcid\":\"0000-0001-9090-5089\"}]"
     },
     {
       "key": "container",
@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:28:01Z"
+      "value": "2026-09-21T09:57:35Z"
     },
     {
       "key": "license_mapped",
@@ -78,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2025-01-22T15:20:26Z~m2"
+      "value": "2026-09-15T09:50:43Z~m2"
     },
     {
       "key": "source_system",
@@ -104,7 +104,7 @@
   "groups": [],
   "license_id": "cc-by",
   "name": "doi-10-5194-wes-9-141-2024",
-  "notes": "<p>Abstract. Large-scale exploitation of offshore wind energy is deemed essential to provide its expected share to electricity needs of the future. To achieve the same, turbine and farm-level optimizations play a significant role. Over the past few years, the growth in the size of turbines has massively contributed to the reduction in costs. However, growing turbine sizes come with challenges in rotor design, turbine installation, supply chain, etc. It is, therefore, important to understand how to size wind turbines when minimizing the levelized cost of electricity (LCoE) of an offshore wind farm. Hence, this study looks at how the rated power and rotor diameter of a turbine affect various turbine and farm-level metrics and uses this information in order to identify the key design drivers and how their impact changes with setup. A multi-disciplinary design optimization and analysis (MDAO) framework is used to perform the analysis. The framework uses low-fidelity models that capture the core dependencies of the outputs on the design variables while also including the trade-offs between various disciplines of the offshore wind farm. The framework is used, not to estimate the LCoE or the optimum turbine size accurately, but to provide insights into various design drivers and trends. A baseline case, for a typical setup in the North Sea, is defined where LCoE is minimized for a given farm power and area constraint with the International Energy Agency 15 MW reference turbine as a starting point. It is found that the global optimum design, for this baseline case, is a turbine with a rated power of 16 MW and a rotor diameter of 236 m. This is already close to the state-of-the-art designs observed in the industry and close enough to the starting design to justify the applied scaling. A sensitivity study is also performed that identifies the design drivers and quantifies the impact of model uncertainties, technology/cost developments, varying farm design conditions, and different farm constraints on the optimum turbine design. To give an example, certain scenarios, like a change in the wind regime or the removal of farm power constraint, result in a significant shift in the scale of the optimum design and/or the specific power of the optimum design. Redesigning the turbine for these scenarios is found to result in an LCoE benefit of the order of 1 %–2 % over the already optimized baseline. The work presented shows how a simplified approach can be applied to a complex turbine sizing problem, which can also be extended to metrics beyond LCoE. It also gives insights into designers, project developers, and policy makers as to how their decision may impact the optimum turbine scale.</p>",
+  "notes": "<p>Large-scale exploitation of offshore wind energy is deemed essential to provide its expected share to electricity needs of the future. To achieve the same, turbine and farm-level optimizations play a significant role. Over the past few years, the growth in the size of turbines has massively contributed to the reduction in costs. However, growing turbine sizes come with challenges in rotor design, turbine installation, supply chain, etc. It is, therefore, important to understand how to size wind turbines when minimizing the levelized cost of electricity (LCoE) of an offshore wind farm. Hence, this study looks at how the rated power and rotor diameter of a turbine affect various turbine and farm-level metrics and uses this information in order to identify the key design drivers and how their impact changes with setup. A multi-disciplinary design optimization and analysis (MDAO) framework is used to perform the analysis. The framework uses low-fidelity models that capture the core dependencies of the outputs on the design variables while also including the trade-offs between various disciplines of the offshore wind farm. The framework is used, not to estimate the LCoE or the optimum turbine size accurately, but to provide insights into various design drivers and trends. A baseline case, for a typical setup in the North Sea, is defined where LCoE is minimized for a given farm power and area constraint with the International Energy Agency 15 MW reference turbine as a starting point. It is found that the global optimum design, for this baseline case, is a turbine with a rated power of 16 MW and a rotor diameter of 236 m. This is already close to the state-of-the-art designs observed in the industry and close enough to the starting design to justify the applied scaling. A sensitivity study is also performed that identifies the design drivers and quantifies the impact of model uncertainties, technology/cost developments, varying farm design conditions, and different farm constraints on the optimum turbine design. To give an example, certain scenarios, like a change in the wind regime or the removal of farm power constraint, result in a significant shift in the scale of the optimum design and/or the specific power of the optimum design. Redesigning the turbine for these scenarios is found to result in an LCoE benefit of the order of 1 %–2 % over the already optimized baseline. The work presented shows how a simplified approach can be applied to a complex turbine sizing problem, which can also be extended to metrics beyond LCoE. It also gives insights into designers, project developers, and policy makers as to how their decision may impact the optimum turbine scale.</p>",
   "owner_org": "unattributed",
   "private": false,
   "resources": [],
