@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:20Z"
+      "value": "2026-09-28T10:57:18Z"
     },
     {
       "key": "identity_key",
-      "value": "github|api-evangelist/linearlabsinc"
+      "value": "github|efirvida/AeroElast"
     },
     {
       "key": "identity_kind",
@@ -26,7 +26,15 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-28T10:57:16Z"
+      "value": "2026-09-28T10:57:18Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "NOASSERTION"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-07-30"
+      "value": "2025-03-20"
     },
     {
       "key": "publisher",
@@ -54,11 +62,11 @@
     },
     {
       "key": "source_id",
-      "value": "api-evangelist/linearlabsinc"
+      "value": "efirvida/AeroElast"
     },
     {
       "key": "source_key",
-      "value": "34fd4ed8222b3980f31d083a7a95e8d2064ff749::24cde6140faefb86~m2"
+      "value": "7a2196fe5436e5d34bc68eaa788bd5a70f0e3f8b::afe7b38576220f2d~m2"
     },
     {
       "key": "source_system",
@@ -70,11 +78,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/api-evangelist/linearlabsinc"
+      "value": "https://github.com/efirvida/AeroElast"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/api-evangelist/linearlabsinc\"]"
+      "value": "[\"https://github.com/efirvida/AeroElast\"]"
     },
     {
       "key": "withdrawn",
@@ -83,53 +91,56 @@
   ],
   "groups": [],
   "license_id": "notspecified",
-  "name": "github-api-evangelist-linearlabsinc",
-  "notes": "Linear Labs — independent third-party profile of a public API surface, by API Evangelist. Linear Labs is an industrial motor technology company headquartered in Fort Worth, Texas, building high-torque motor systems for wind, nuclear, pumps, actuators, mining, and defense applications.",
+  "name": "github-efirvida-aeroelast",
+  "notes": "AeroElast — high-performance FEM toolkit for shell/solid structural analysis and wind-turbine blade FSI, with a Rust core, PyO3 bindings, and preCICE coupling.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/api-evangelist/linearlabsinc"
+      "url": "https://github.com/efirvida/AeroElast"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "apis-json"
+      "name": "aerodynamics"
     },
     {
-      "name": "company"
+      "name": "fem"
     },
     {
-      "name": "defense"
+      "name": "finite-elements"
     },
     {
-      "name": "electric-motors"
+      "name": "fluid-structure-interaction"
     },
     {
-      "name": "energy"
+      "name": "fsi"
     },
     {
-      "name": "hardware"
+      "name": "precice"
     },
     {
-      "name": "industrial"
+      "name": "python"
     },
     {
-      "name": "manufacturing"
+      "name": "rotor-dynamics"
     },
     {
-      "name": "mining"
+      "name": "rust"
     },
     {
-      "name": "nuclear"
+      "name": "structural-analysis"
     },
     {
       "name": "wind-energy"
+    },
+    {
+      "name": "wind-turbine"
     }
   ],
-  "title": "api-evangelist/linearlabsinc",
-  "url": "https://github.com/api-evangelist/linearlabsinc"
+  "title": "efirvida/AeroElast",
+  "url": "https://github.com/efirvida/AeroElast"
 }

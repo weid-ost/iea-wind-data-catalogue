@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:20Z"
+      "value": "2026-09-28T10:57:04Z"
     },
     {
       "key": "identity_key",
-      "value": "github|api-evangelist/linearlabsinc"
+      "value": "github|AnandVekariya/Adaptive-Machine-Learning-for-Clean-Energy-Investment-in-New-York"
     },
     {
       "key": "identity_kind",
@@ -26,7 +26,15 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-28T10:57:16Z"
+      "value": "2026-09-28T10:57:04Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-07-30"
+      "value": "2026-02-09"
     },
     {
       "key": "publisher",
@@ -54,11 +62,11 @@
     },
     {
       "key": "source_id",
-      "value": "api-evangelist/linearlabsinc"
+      "value": "AnandVekariya/Adaptive-Machine-Learning-for-Clean-Energy-Investment-in-New-York"
     },
     {
       "key": "source_key",
-      "value": "34fd4ed8222b3980f31d083a7a95e8d2064ff749::24cde6140faefb86~m2"
+      "value": "9f076dbf0c859053cb3f6c8ddaaf92774a24df9c::25e3fbbb35df2adf~m2"
     },
     {
       "key": "source_system",
@@ -70,11 +78,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/api-evangelist/linearlabsinc"
+      "value": "https://github.com/AnandVekariya/Adaptive-Machine-Learning-for-Clean-Energy-Investment-in-New-York"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/api-evangelist/linearlabsinc\"]"
+      "value": "[\"https://github.com/AnandVekariya/Adaptive-Machine-Learning-for-Clean-Energy-Investment-in-New-York\"]"
     },
     {
       "key": "withdrawn",
@@ -82,54 +90,57 @@
     }
   ],
   "groups": [],
-  "license_id": "notspecified",
-  "name": "github-api-evangelist-linearlabsinc",
-  "notes": "Linear Labs — independent third-party profile of a public API surface, by API Evangelist. Linear Labs is an industrial motor technology company headquartered in Fort Worth, Texas, building high-torque motor systems for wind, nuclear, pumps, actuators, mining, and defense applications.",
+  "license_id": "mit",
+  "name": "github-anandvekariya-adaptive-machine-learning-for-clean-energy-investment-in-new-york",
+  "notes": "This project screens New York State for utility-scale solar and wind siting on a statewide ~10 km grid. It combines 2018–2025 hourly weather, land cover, transmission access, developability filters, machine-learning resource models, seasonal hybrid suitability, and risk into a composite score that ranks sites for clean-energy investment.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/api-evangelist/linearlabsinc"
+      "url": "https://github.com/AnandVekariya/Adaptive-Machine-Learning-for-Clean-Energy-Investment-in-New-York"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "apis-json"
+      "name": "clean-energy"
     },
     {
-      "name": "company"
+      "name": "climate-science"
     },
     {
-      "name": "defense"
+      "name": "energy-investment"
     },
     {
-      "name": "electric-motors"
+      "name": "geospatial"
     },
     {
-      "name": "energy"
+      "name": "land-cover-mapping"
     },
     {
-      "name": "hardware"
+      "name": "machine-learning-models"
     },
     {
-      "name": "industrial"
+      "name": "renewable-energy"
     },
     {
-      "name": "manufacturing"
+      "name": "risk-analysis-classification-model"
     },
     {
-      "name": "mining"
+      "name": "solar-energy"
     },
     {
-      "name": "nuclear"
+      "name": "spatial-analysis"
+    },
+    {
+      "name": "transmission"
     },
     {
       "name": "wind-energy"
     }
   ],
-  "title": "api-evangelist/linearlabsinc",
-  "url": "https://github.com/api-evangelist/linearlabsinc"
+  "title": "AnandVekariya/Adaptive-Machine-Learning-for-Clean-Energy-Investment-in-New-York",
+  "url": "https://github.com/AnandVekariya/Adaptive-Machine-Learning-for-Clean-Energy-Investment-in-New-York"
 }

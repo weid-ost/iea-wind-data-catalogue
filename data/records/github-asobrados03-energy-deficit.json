@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:20Z"
+      "value": "2026-09-28T10:57:06Z"
     },
     {
       "key": "identity_key",
-      "value": "github|api-evangelist/linearlabsinc"
+      "value": "github|asobrados03/energy-deficit"
     },
     {
       "key": "identity_kind",
@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-28T10:57:16Z"
+      "value": "2026-09-28T10:57:06Z"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +38,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-07-30"
+      "value": "2026-09-26"
     },
     {
       "key": "publisher",
@@ -54,11 +54,11 @@
     },
     {
       "key": "source_id",
-      "value": "api-evangelist/linearlabsinc"
+      "value": "asobrados03/energy-deficit"
     },
     {
       "key": "source_key",
-      "value": "34fd4ed8222b3980f31d083a7a95e8d2064ff749::24cde6140faefb86~m2"
+      "value": "b3b8c60e936f69673d21679c766f50fb604ac1ad::b14a151eca3c6876~m2"
     },
     {
       "key": "source_system",
@@ -70,11 +70,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/api-evangelist/linearlabsinc"
+      "value": "https://github.com/asobrados03/energy-deficit"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/api-evangelist/linearlabsinc\"]"
+      "value": "[\"https://github.com/asobrados03/energy-deficit\"]"
     },
     {
       "key": "withdrawn",
@@ -83,53 +83,62 @@
   ],
   "groups": [],
   "license_id": "notspecified",
-  "name": "github-api-evangelist-linearlabsinc",
-  "notes": "Linear Labs — independent third-party profile of a public API surface, by API Evangelist. Linear Labs is an industrial motor technology company headquartered in Fort Worth, Texas, building high-torque motor systems for wind, nuclear, pumps, actuators, mining, and defense applications.",
+  "name": "github-asobrados03-energy-deficit",
+  "notes": "Calcula el déficit energético de la demanda eléctrica española que no puede cubrirse con generación eólica, usando datos públicos de ESIOS/REE. Incluye tratamiento de series temporales, interpolación de huecos, manejo CET/CEST, exportación a CSV y tests.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/api-evangelist/linearlabsinc"
+      "url": "https://github.com/asobrados03/energy-deficit"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "apis-json"
+      "name": "cli"
     },
     {
-      "name": "company"
+      "name": "data-processing"
     },
     {
-      "name": "defense"
+      "name": "devops"
     },
     {
-      "name": "electric-motors"
+      "name": "electricity-demand"
     },
     {
       "name": "energy"
     },
     {
-      "name": "hardware"
+      "name": "energy-deficit"
     },
     {
-      "name": "industrial"
+      "name": "esios"
     },
     {
-      "name": "manufacturing"
+      "name": "linux"
     },
     {
-      "name": "mining"
+      "name": "python"
     },
     {
-      "name": "nuclear"
+      "name": "ree"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "testing"
+    },
+    {
+      "name": "time-series"
     },
     {
       "name": "wind-energy"
     }
   ],
-  "title": "api-evangelist/linearlabsinc",
-  "url": "https://github.com/api-evangelist/linearlabsinc"
+  "title": "asobrados03/energy-deficit",
+  "url": "https://github.com/asobrados03/energy-deficit"
 }

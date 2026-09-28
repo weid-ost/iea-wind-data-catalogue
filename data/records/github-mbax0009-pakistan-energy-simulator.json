@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:32:44Z"
+      "value": "2026-09-28T10:57:05Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-08-31"
+      "value": "2026-09-27"
     },
     {
       "key": "publisher",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "aecd966ea5223a91a003b5c22ca91c83bd3bf887:v1.0.1:1dae64a6890382e6~m2"
+      "value": "083b63621339b4b2e10435330fbdcae90d755e65:v1.1.1:1dae64a6890382e6~m2"
     },
     {
       "key": "source_system",
@@ -103,8 +103,8 @@
     },
     {
       "format": "release",
-      "name": "Release v1.0.1",
-      "url": "https://github.com/mbax0009/Pakistan-Energy-Simulator/releases/tag/v1.0.1"
+      "name": "Release v1.1.1",
+      "url": "https://github.com/mbax0009/Pakistan-Energy-Simulator/releases/tag/v1.1.1"
     }
   ],
   "state": "active",
@@ -172,5 +172,5 @@
   ],
   "title": "mbax0009/Pakistan-Energy-Simulator",
   "url": "https://github.com/mbax0009/Pakistan-Energy-Simulator",
-  "version": "v1.0.1"
+  "version": "v1.1.1"
 }

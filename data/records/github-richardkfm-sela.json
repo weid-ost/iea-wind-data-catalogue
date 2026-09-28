@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:20Z"
+      "value": "2026-09-28T10:57:00Z"
     },
     {
       "key": "identity_key",
-      "value": "github|api-evangelist/linearlabsinc"
+      "value": "github|richardkfm/sela"
     },
     {
       "key": "identity_kind",
@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-28T10:57:16Z"
+      "value": "2026-09-28T10:57:00Z"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +38,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-07-30"
+      "value": "2026-08-21"
     },
     {
       "key": "publisher",
@@ -54,11 +54,11 @@
     },
     {
       "key": "source_id",
-      "value": "api-evangelist/linearlabsinc"
+      "value": "richardkfm/sela"
     },
     {
       "key": "source_key",
-      "value": "34fd4ed8222b3980f31d083a7a95e8d2064ff749::24cde6140faefb86~m2"
+      "value": "9e930778b4a86aee3d87c4b38c33eceadcef7e9f::66af077067d56cc0~m2"
     },
     {
       "key": "source_system",
@@ -70,11 +70,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/api-evangelist/linearlabsinc"
+      "value": "https://github.com/richardkfm/sela"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/api-evangelist/linearlabsinc\"]"
+      "value": "[\"https://github.com/richardkfm/sela\"]"
     },
     {
       "key": "withdrawn",
@@ -83,53 +83,29 @@
   ],
   "groups": [],
   "license_id": "notspecified",
-  "name": "github-api-evangelist-linearlabsinc",
-  "notes": "Linear Labs — independent third-party profile of a public API surface, by API Evangelist. Linear Labs is an industrial motor technology company headquartered in Fort Worth, Texas, building high-torque motor systems for wind, nuclear, pumps, actuators, mining, and defense applications.",
+  "name": "github-richardkfm-sela",
+  "notes": "helps planers and investors to allocate land use: renewables, agriculture or renaturing.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/api-evangelist/linearlabsinc"
+      "url": "https://github.com/richardkfm/sela"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "apis-json"
+      "name": "planning"
     },
     {
-      "name": "company"
-    },
-    {
-      "name": "defense"
-    },
-    {
-      "name": "electric-motors"
-    },
-    {
-      "name": "energy"
-    },
-    {
-      "name": "hardware"
-    },
-    {
-      "name": "industrial"
-    },
-    {
-      "name": "manufacturing"
-    },
-    {
-      "name": "mining"
-    },
-    {
-      "name": "nuclear"
+      "name": "solar"
     },
     {
       "name": "wind-energy"
     }
   ],
-  "title": "api-evangelist/linearlabsinc",
-  "url": "https://github.com/api-evangelist/linearlabsinc"
+  "title": "richardkfm/sela",
+  "url": "https://github.com/richardkfm/sela"
 }

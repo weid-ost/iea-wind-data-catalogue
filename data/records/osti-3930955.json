@@ -1,0 +1,124 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Sethuraman, Latha\",\"orcid\":\"0000-0001-6270-0430\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Glaws, Andrew\"},{\"affiliation\":\"General Electric\",\"name\":\"Tsilifis, Panagiotis\"},{\"affiliation\":\"General Electric\",\"name\":\"Renedo Anglada, Jaime\"}]"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-09-28T10:56:11Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "osti|3930955"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-09-28T10:56:11Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-09-18"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"3930955\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/CP-5000-99005\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/CP-5000-99005"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "conference-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "3930955"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-25T10:36:25Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/3930955"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/3930955\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "osti-3930955",
+  "notes": "Achieving high-performance interior permanent magnet machines with reduced rare-earth content typically requires complex topology or shape optimization paired with costly finite element analysis simulations. Bitmap-based surrogate models accelerate the process, however, suffer from substantial data demands for training. To overcome this problem, we explored low-dimensional B'ezier curve-based magnet shaping along with surrogate modeling for a 22-MW generator. Several models including support vector regression, fully connected neural networks, and a novel two-stage surrogate that integrates a least-volume autoencoder with a feedforward neural network were evaluated. The two-stage surrogate framework is shown to achieve a normalized RMSE = 1.0 in prediction errors in several key performance metrics, including demagnetization, efficiency, power, and load torque. A Globol Sobol sensitivity analysis further identified dominant shape- and magnetic features in the design influencing machine performance.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/3930955"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "autoencoder"
+    },
+    {
+      "name": "bezier-curves"
+    },
+    {
+      "name": "parametric-shaping"
+    },
+    {
+      "name": "sobol-sensitivity"
+    }
+  ],
+  "title": "Surrogate-Based Sensitivity Analysis for Low-Dimensional Freeform Generator Designs: Preprint",
+  "url": "https://www.osti.gov/biblio/3930955"
+}

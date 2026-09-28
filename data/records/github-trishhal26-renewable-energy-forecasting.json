@@ -6,11 +6,11 @@
     },
     {
       "key": "first_seen",
-      "value": "2026-09-03T10:00:20Z"
+      "value": "2026-09-28T10:57:01Z"
     },
     {
       "key": "identity_key",
-      "value": "github|api-evangelist/linearlabsinc"
+      "value": "github|trishhal26/renewable-energy-forecasting"
     },
     {
       "key": "identity_kind",
@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-28T10:57:16Z"
+      "value": "2026-09-28T10:57:01Z"
     },
     {
       "key": "lifecycle_state",
@@ -38,7 +38,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-07-30"
+      "value": "2026-09-03"
     },
     {
       "key": "publisher",
@@ -54,11 +54,11 @@
     },
     {
       "key": "source_id",
-      "value": "api-evangelist/linearlabsinc"
+      "value": "trishhal26/renewable-energy-forecasting"
     },
     {
       "key": "source_key",
-      "value": "34fd4ed8222b3980f31d083a7a95e8d2064ff749::24cde6140faefb86~m2"
+      "value": "a55a4e1c52e1f85b98e607b179158ac352e94985::eebde34e1b5c6c00~m2"
     },
     {
       "key": "source_system",
@@ -70,11 +70,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/api-evangelist/linearlabsinc"
+      "value": "https://github.com/trishhal26/renewable-energy-forecasting"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/api-evangelist/linearlabsinc\"]"
+      "value": "[\"https://github.com/trishhal26/renewable-energy-forecasting\"]"
     },
     {
       "key": "withdrawn",
@@ -83,53 +83,50 @@
   ],
   "groups": [],
   "license_id": "notspecified",
-  "name": "github-api-evangelist-linearlabsinc",
-  "notes": "Linear Labs — independent third-party profile of a public API surface, by API Evangelist. Linear Labs is an industrial motor technology company headquartered in Fort Worth, Texas, building high-torque motor systems for wind, nuclear, pumps, actuators, mining, and defense applications.",
+  "name": "github-trishhal26-renewable-energy-forecasting",
+  "notes": "Wind power forecasting (XGBoost vs. LSTM) and solar inverter health check: predicting next-hour output and flagging underperforming equipment with estimated energy loss.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/api-evangelist/linearlabsinc"
+      "url": "https://github.com/trishhal26/renewable-energy-forecasting"
     }
   ],
   "state": "active",
   "tags": [
     {
-      "name": "apis-json"
+      "name": "anomaly-detection"
     },
     {
-      "name": "company"
+      "name": "lstm"
     },
     {
-      "name": "defense"
+      "name": "machine-learning"
     },
     {
-      "name": "electric-motors"
+      "name": "python"
     },
     {
-      "name": "energy"
+      "name": "pytorch"
     },
     {
-      "name": "hardware"
+      "name": "renewable-energy"
     },
     {
-      "name": "industrial"
+      "name": "solar-energy"
     },
     {
-      "name": "manufacturing"
-    },
-    {
-      "name": "mining"
-    },
-    {
-      "name": "nuclear"
+      "name": "time-series-forecasting"
     },
     {
       "name": "wind-energy"
+    },
+    {
+      "name": "xgboost"
     }
   ],
-  "title": "api-evangelist/linearlabsinc",
-  "url": "https://github.com/api-evangelist/linearlabsinc"
+  "title": "trishhal26/renewable-energy-forecasting",
+  "url": "https://github.com/trishhal26/renewable-energy-forecasting"
 }

@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Davies, Ryan\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Lekkala, Malakonda Reddy\"},{\"affiliation\":\"University of Illinois at Urbana Champaign\",\"name\":\"Michaloliakos, Anargyros\"},{\"affiliation\":\"University of Michigan-Ann Arbor\",\"name\":\"Wong, Wei-Ying\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"University of Illinois at Urbana Champaign\",\"name\":\"Vakakis, Alexander\"},{\"affiliation\":\"University of Michigan-Ann Arbor\",\"name\":\"Zuo, Lei\"}]"
+      "value": "[{\"affiliation\":\"Stanford University, CA (United States); National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"name\":\"Davies, Ryan\",\"orcid\":\"0000-0001-5864-4632\"},{\"affiliation\":\"University of Massachusetts, Amherst, MA (United States); National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"name\":\"Lekkala, Malakonda Reddy\",\"orcid\":\"0009-0001-1560-8815\"},{\"affiliation\":\"University of Illinois at Urbana-Champaign, IL (United States)\",\"name\":\"Michaloliakos, Anargyros\",\"orcid\":\"0000-0001-6626-594X\"},{\"affiliation\":\"University of Michigan, Ann Arbor, MI (United States)\",\"name\":\"Wong, Wei-Ying\",\"orcid\":\"0000-0003-4752-367X\"},{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"University of Illinois at Urbana-Champaign, IL (United States)\",\"name\":\"Vakakis, Alexander\",\"orcid\":\"0000-0002-3919-432X\"},{\"affiliation\":\"University of Michigan, Ann Arbor, MI (United States)\",\"name\":\"Zuo, Lei\",\"orcid\":\"0000-0001-6609-7907\"}]"
     },
     {
       "key": "container",
@@ -38,7 +38,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:31:09Z"
+      "value": "2026-09-28T10:56:11Z"
     },
     {
       "key": "lifecycle_state",
@@ -50,7 +50,11 @@
     },
     {
       "key": "published_date",
-      "value": "2026-07-16"
+      "value": "2026-09-01"
+    },
+    {
+      "key": "publisher",
+      "value": "Elsevier"
     },
     {
       "key": "related_identifiers",
@@ -74,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-08-15T05:00:19Z~m2"
+      "value": "2026-09-23T11:51:10Z~m2"
     },
     {
       "key": "source_system",
@@ -133,6 +137,6 @@
       "name": "vortex-induced-vibration"
     }
   ],
-  "title": "Time-Domain Vortex Induced Vibration Modeling of Reference Dynamic Power Cable for the Gulf of Maine",
+  "title": "Time-domain vortex induced vibration modeling of reference dynamic power cable for the gulf of maine",
   "url": "https://www.osti.gov/biblio/3412014"
 }

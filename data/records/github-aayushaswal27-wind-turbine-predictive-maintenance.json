@@ -26,15 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:32:47Z"
-    },
-    {
-      "key": "license_mapped",
-      "value": "false"
-    },
-    {
-      "key": "license_raw",
-      "value": "NOASSERTION"
+      "value": "2026-09-28T10:57:02Z"
     },
     {
       "key": "lifecycle_state",
@@ -66,7 +58,7 @@
     },
     {
       "key": "source_key",
-      "value": "6235f50e634555c0b7c99a73e48c6da45dcacc47::cd47f82a342cfb82~m2"
+      "value": "37530c071edae3fb5e03dee51d6aa420624a5967::6354b8c3ee1f2082~m2"
     },
     {
       "key": "source_system",

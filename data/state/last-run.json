@@ -2,7 +2,7 @@
   "cache": {
     "hit_rate": 0.0,
     "hits": 0,
-    "misses": 16
+    "misses": 1
   },
   "dropped_dois": [
     {
@@ -46,11 +46,6 @@
       "reason": "did-not-resolve"
     },
     {
-      "context": "https://iea-wind.org/task43/t43-publications/",
-      "doi": "10.5281/zenodo.10176528",
-      "reason": "did-not-resolve"
-    },
-    {
       "context": "https://iea-wind.org/task49/",
       "doi": "10.5281/zenodo.11073986](https://doi.org/10.5281/zenodo.11073986",
       "reason": "did-not-resolve"
@@ -89,111 +84,43 @@
       "context": "https://iea-wind.org/task49/",
       "doi": "10.5281/zenodo.21347445](https://doi.org/10.5281/zenodo.21347445",
       "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task43/t43-publications/",
-      "doi": "10.5281/zenodo.3524532",
-      "reason": "did-not-resolve"
     }
   ],
-  "events_appended": 43,
-  "finished_at": "2026-09-21T10:00:26Z",
+  "events_appended": 31,
+  "finished_at": "2026-09-28T10:57:48Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 558,
-    "none": 34
+    "direct": 559,
+    "none": 39
   },
   "max_records": 50,
   "notices": [
     {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/annual-report-2025/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
+      "detail": "HTTP 500",
       "iea_task": "task-25",
       "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/annual-report-2025/"
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task25-63/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-41",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task41/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-42",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task42/"
     },
     {
       "detail": "no cache entry and no model available",
       "source": "ieawind",
       "type": "extraction_queued",
       "url": "https://iea-wind.org/publications/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-25",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/publications/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task41/t41-publications/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-41",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task41/t41-publications/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task41/t41-publications/danish-iea-task-41-eudp-funded-project/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-41",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task41/t41-publications/danish-iea-task-41-eudp-funded-project/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task42/t42-publications/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-42",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task42/t42-publications/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-42",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/portfolio-item/task-42-publication-3/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task43/task-43-open-data/"
     },
     {
       "confidence": 0.0,
@@ -201,144 +128,35 @@
       "iea_task": "task-43",
       "source": "ieawind",
       "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task43/task-43-open-data/"
+      "url": "https://iea-wind.org/publications/"
     },
     {
-      "detail": "no cache entry and no model available",
+      "detail": "HTTP 500",
+      "iea_task": "task-43",
       "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task44/t44-publications/"
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/annual-report-2025/"
     },
     {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-44",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task44/t44-publications/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task45/t45-publications/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-45",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task45/t45-publications/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task47/t47-publications/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-47",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task47/t47-publications/"
-    },
-    {
-      "detail": "publication list appears to live in linked PDFs; PDF parsing is out of scope for v1 (fixture iea-11)",
+      "detail": "HTTP 500",
       "iea_task": "task-48",
-      "pdfs": [
-        "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf",
-        "https://iea-wind.org/wp-content/uploads/2025/12/Task-48-Final-Technical-Report-Phase-I_2025-11-03.pdf"
-      ],
       "source": "ieawind",
-      "type": "coverage_gap_pdf_only",
+      "type": "page_unreachable",
       "url": "https://iea-wind.org/task48/"
     },
     {
-      "detail": "no cache entry and no model available",
+      "detail": "HTTP 500",
+      "iea_task": "task-50",
       "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task48/t48-publications/"
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task50/"
     },
     {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-48",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task48/t48-publications/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-48",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task51/task51-publications/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
+      "detail": "HTTP 500",
       "iea_task": "task-51",
       "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task51/task51-publications/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task51/task51-publications/task51-articles-and-reports/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-51",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task51/task51-publications/task51-articles-and-reports/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task52/t52-workplan-deliverables/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-52",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task52/t52-workplan-deliverables/"
-    },
-    {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/task53/task-53-publications/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-53",
-      "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/task53/task-53-publications/"
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task51/"
     },
     {
       "action": "review required — no merge was applied",
@@ -765,55 +583,55 @@
   "pending_extraction": 20,
   "records": {
     "pruned": 0,
-    "total": 592,
-    "unchanged": 550,
-    "written": 42
+    "total": 598,
+    "unchanged": 568,
+    "written": 30
   },
   "sources": {
     "crossref": {
-      "changed": 11,
+      "changed": 1,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 40,
-      "skipped_unchanged": 29
+      "skipped_unchanged": 39
     },
     "datacite": {
-      "changed": 8,
+      "changed": 1,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 42
+      "skipped_unchanged": 49
     },
     "github": {
-      "changed": 24,
+      "changed": 22,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 26
+      "skipped_unchanged": 28
     },
     "ieawind": {
-      "changed": 0,
+      "changed": 4,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 33,
-      "skipped_unchanged": 33
+      "seen": 4,
+      "skipped_unchanged": 0
     },
     "osti": {
-      "changed": 0,
+      "changed": 3,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 37,
-      "skipped_unchanged": 37
+      "skipped_unchanged": 34
     },
     "wdh": {
       "changed": 0,
@@ -836,7 +654,7 @@
       "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-09-21T09:57:30Z",
+  "started_at": "2026-09-28T10:55:59Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",
@@ -934,11 +752,6 @@
       "name": "doi-10-5281-zenodo-6330754"
     },
     {
-      "identity_key": "github|AayushAswal27/wind-turbine-predictive-maintenance",
-      "license_raw": "NOASSERTION",
-      "name": "github-aayushaswal27-wind-turbine-predictive-maintenance"
-    },
-    {
       "identity_key": "github|Energinet-SimTools/MTB",
       "license_raw": "NOASSERTION",
       "name": "github-energinet-simtools-mtb"
@@ -947,6 +760,11 @@
       "identity_key": "github|dofliu/windFarm-Go",
       "license_raw": "NOASSERTION",
       "name": "github-dofliu-windfarm-go"
+    },
+    {
+      "identity_key": "github|efirvida/AeroElast",
+      "license_raw": "NOASSERTION",
+      "name": "github-efirvida-aeroelast"
     }
   ],
   "unreachable_sources": [
