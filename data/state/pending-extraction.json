@@ -118,5 +118,11 @@
     "queued_at": "2026-09-14T09:57:33Z",
     "reason": "tier-3 page classification unavailable",
     "url": "https://iea-wind.org/publications/"
+  },
+  {
+    "cache_key": "d0a8174c7c20dc739424f1f5c8ef7e2828ec38f1f0d2481a9d21aa48a0e8be9e",
+    "queued_at": "2026-10-05T11:32:23Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/publications/"
   }
 ]

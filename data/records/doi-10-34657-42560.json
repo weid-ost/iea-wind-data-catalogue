@@ -1,0 +1,126 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"name\":\"Hofsäß, Martin\"},{\"name\":\"Kühn, Paul\"},{\"name\":\"Bischoff, Oliver\"},{\"name\":\"Cheng, Po Wen\"},{\"name\":\"Gramitzky, Kira\"},{\"name\":\"Jäger, Florian\"},{\"name\":\"Rieß, Barbara\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.34657/42560"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-05T11:30:52Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.34657/42560"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-05T11:30:52Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "Creative Commons Attribution-NonDerivs 3.0 Germany"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-29"
+    },
+    {
+      "key": "publisher",
+      "value": "Hannover : Technische Informationsbibliothek"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "report"
+    },
+    {
+      "key": "source_id",
+      "value": "10.34657/42560"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-29T05:15:11Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://oa.tib.eu/renate/handle/123456789/43493"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://oa.tib.eu/renate/handle/123456789/43493\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-34657-42560",
+  "notes": "Das Forschungsvorhaben Lidardatenkorrektur für Standorte im komplexen Gelände (LoTar) verfolgte das Ziel, ein modulares Framework zur Korrektur von Lidarmessungen im komplexen Gelände zu entwickeln. Dabei sollten sowohl die mittlere horizontale Windgeschwindigkeit als auch die Turbulenzintensität (TI) berücksichtigt und korrigiert werden. Grundlage hierfür ist die Ableitung charakteristischer Kenngrößen aus Geländedaten, anhand derer mithilfe verschiedener Methoden geeignete Korrekturfaktoren bestimmt werden. Dieses Ziel konnte im Rahmen des Vorhabens erfolgreich erreicht werden. Es wurde ein plattformübergreifendes Tool mit grafischer Benutzeroberfläche entwickelt, das es ermöglicht, digitale Geländedaten automatisiert herunterzuladen und daraus strukturierte Ergebnisberichte zu generieren. Zur Abschätzung des Lidarfehlers wurden unterschiedliche Verfahren implementiert, die sich in statistische, analytische sowie Machine-Learning-basierte Ansätze unterteilen lassen. Insbesondere für die Korrektur der Turbulenzintensität wurden spezielle Machine-Learning-Modelle entwickelt und optimiert. Für die Entwicklung und Validierung dieser Verfahren war eine umfangreiche Datengrundlage erforderlich. Aus diesem Grund wurden im Rahmen des Vorhabens drei Messkampagnen durchgeführt, bei denen jeweils ein Messmast sowie mindestens zwei verschiedene Lidarsysteme parallel eingesetzt wurden - ein in dieser Kombination außergewöhnlicher Versuchsaufbau. Ergänzende Datensätze wurden über den IEA Wind TCP Task 52 bereitgestellt. Wegen der Einschränkungen bei der Weitergabe sensibler Standort- und Messdaten lagen nur begrenzte Informationen vor, darunter vor allem statistische Kennzahlen des Lidarfehlers sowie Geländeparameter nach Sektoren. Insgesamt konnten Datensätze von rund 80 Standorten untersucht werden. Auf Basis dieses Datenpools wurden zunächst relevante Geländeparameter anhand statistischer Kennzahlen identifiziert. Anschließend erfolgte die Parametrisierung und Validierung der statistischen Modelle. Parallel dazu wurden verschiedene Machine-Learning-Konfigurationen untersucht, bewertet und die leistungsfähigsten Modelle mit einem Teil der Daten trainiert und validiert. Die entwickelten Methoden wurden schließlich in das Framework integriert und systematisch mit den Ergebnissen eines im Projekt durchgeführten Ringversuchs verglichen. Dabei zeigte sich, dass die neu entwickelten Ansätze insgesamt vergleichbare Ergebnisse zu etablierten Verfahren liefern und somit eine valide Ergänzung darstellen. Das entwickelte TI-Modul basiert auf einem flexibel konfigurierbaren Machine-Learning-Framework (u.a. mit Random-Forest-Modellen). In den Trainings- und Validierungsdatensätzen konnte insbesondere die repräsentative Turbulenzintensität (IEC-90-Perzentil) der Windprofil-Lidarsysteme näher an die Referenzmessungen der Masten herangeführt und die typische Über- bzw. Unterschätzung reduziert werden. Gleichzeitig zeigte sich, dass die Übertragbarkeit auf bisher ungesehene Standorte stark von der Repräsentativität der Trainingsdaten abhängt und an einzelnen Teststandorten noch zu Überkorrekturen führt, sodass zusätzlicher Daten- und Methodenbedarf besteht. Im Rahmen des Vorhabens wurde außerdem ein umfangreicher Ringversuch im Fachausschuss Windpotenzial der FGW durchgeführt. Ziel war es, die Streuung und Qualität unterschiedlicher Expertenansätze zur Bestimmung von Lidarkorrekturfaktoren zu bewerten. Hierzu wurden zwei den Teilnehmenden unbekannte Standorte mit vorhandenen Messmast- und Lidardaten ausgewählt, für die jeweils Referenzkorrekturfaktoren bestimmt wurden. Den Teilnehmenden wurden anonymisierte Geländemodelle und Landnutzungsdaten bereitgestellt. Die von den Experten berechneten Korrekturfaktoren wiesen jedoch eine große Streuung auf und unterschieden sich teils erheblich von den Referenzwerten, was die Herausforderung einer zuverlässigen Korrektur im komplexen Gelände unterstreicht. Ergänzend wurde eine an die AEP-Berechnung angelehnte Analyse des Energieertrags durchgeführt. Dabei wurden für die Messperiode der Energieertrag auf Basis von Messmastdaten,unkorrigierten Lidardaten sowie korrigierten Lidardaten bestimmt. Die Ergebnisse zeigen, dass unkorrigierte Lidarmessungen den Energieertrag systematisch unterschätzen, während die angewendeten Korrekturfaktoren in vielen Fällen zu einer Überkompensation führen und den Energieertrag entsprechend überschätzen. Insgesamt verdeutlichen die Ergebnisse des Forschungsvorhabens sowohl die Potenziale als auch die bestehenden Unsicherheiten bei der Korrektur von Lidarmessungen im komplexen Gelände. Das entwickelte Framework stellt eine flexible und erweiterbare Grundlage dar, um zukünftige Methoden zu integrieren und die Genauigkeit weiter zu verbessern. Darüber hinaus liefern die gewonnenen Datensätze und Erkenntnisse eine wertvolle Basis für weiterführende Forschung und Standardisierung in diesem Bereich. Dieser Abschlussbericht fasst den Ablauf, die wesentlichen Ergebnisse und die öffentlich verfügbaren Publikationen des Projekts zusammen.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "500-naturwissenschaften"
+    },
+    {
+      "name": "600-technik"
+    },
+    {
+      "name": "komplexes-gelande"
+    },
+    {
+      "name": "lidar"
+    },
+    {
+      "name": "ti"
+    },
+    {
+      "name": "unsicherheiten"
+    }
+  ],
+  "title": "LoTar - Lidardatenkorrektur für Standorte im komplexen Gelände",
+  "url": "https://oa.tib.eu/renate/handle/123456789/43493"
+}

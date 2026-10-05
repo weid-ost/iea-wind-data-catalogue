@@ -26,7 +26,15 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-28T10:57:10Z"
+      "value": "2026-10-05T11:32:04Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Apache-2.0"
     },
     {
       "key": "lifecycle_state",
@@ -58,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "adcdd7a6ae577570cbb74489fda0629808618ab8::791544d5a6d923b1~m2"
+      "value": "0dbcd2861109084089d230d4328c5e93b46bea52::578a2c2f11f6a313~m2"
     },
     {
       "key": "source_system",
@@ -82,7 +90,7 @@
     }
   ],
   "groups": [],
-  "license_id": "notspecified",
+  "license_id": "apache",
   "name": "github-openfoundationrenewableoperationgrids-rada-backend",
   "notes": "RADA (Renewable Assets Data Analytics)",
   "owner_org": "unattributed",

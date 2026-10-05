@@ -1,0 +1,115 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Technical University of Denmark (Kongens Lyngby, Denmark)\",\"family\":\"Angelou\",\"given\":\"Nikolas\",\"name\":\"Angelou, Nikolas\",\"orcid\":\"0000-0002-9627-422X\"},{\"family\":\"Dubreuil-Boisclair\",\"given\":\"Camille\",\"name\":\"Dubreuil-Boisclair, Camille\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-11-3745-2026"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-05T11:30:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-11-3745-2026"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:wind-energy-science-iea-wind, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-05T11:30:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"container\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"crossref\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"crossref\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-09-29"
+    },
+    {
+      "key": "publisher",
+      "value": "Copernicus GmbH"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-2026-20\",\"identifier_type\":\"DOI\",\"relation\":\"HasPreprint\"},{\"identifier\":\"10.5194/wes-2026-20-rc1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2026-20-ac1\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2026-20-rc2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"},{\"identifier\":\"10.5194/wes-2026-20-ac2\",\"identifier_type\":\"DOI\",\"relation\":\"HasReview\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5194/wes-11-3745-2026"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-30T07:27:43Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "crossref"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"crossref\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://doi.org/10.5194/wes-11-3745-2026"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://doi.org/10.5194/wes-11-3745-2026\",\"https://wes.copernicus.org/articles/11/3745/2026/\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5194-wes-11-3745-2026",
+  "notes": "<p>In this study, we investigate the impact of vertical wind shear and wind speed inversions on the power production of a floating offshore wind turbine. Using nacelle-mounted wind lidar data from a 6 MW turbine at the Hywind Scotland wind farm, we analyse inflow conditions and turbine performance during summer and autumn. The wind climatology shows that 33 % of examined cases exhibit non-standard wind profiles within the rotor-swept area, including negative shear and wind speed inversions. These conditions can significantly affect power production. In particular, in the below-rated wind speed range, we find differences ranging from 5 % to 10 % between wind profile cases with negative and positive shear. Our findings demonstrate that deviations from the logarithmic wind profile at the operating height range of modern offshore wind turbines can introduce substantial bias in a power curve verification procedure, with differences up to 20 % compared to a reference power curve of a fixed-bottom wind turbine. Nacelle-mounted wind lidars provide critical insight into the inflow offshore characteristics, enabling improved performance assessment of floating offshore wind turbines. The results highlight the need for an implementation of measurement strategies that capture wind conditions across the full rotor-swept area.</p>",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "Offshore wind profile characteristics and their impact on floating wind turbine power production",
+  "url": "https://doi.org/10.5194/wes-11-3745-2026"
+}

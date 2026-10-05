@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-05T11:32:12Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|syulimo/wind-performance-analysis"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-05T11:32:12Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-02"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "syulimo/wind-performance-analysis"
+    },
+    {
+      "key": "source_key",
+      "value": "00d7921abcfe34839cd02e457248ce03d64ef2c8::08ddd7ec91dd2fe4~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/syulimo/wind-performance-analysis"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/syulimo/wind-performance-analysis\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-syulimo-wind-performance-analysis",
+  "notes": "Wind fleet performance analysis: SCADA data quality, IEC power curves, lost energy attribution, asset P&amp;L variance",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/syulimo/wind-performance-analysis"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "performance-analysis"
+    },
+    {
+      "name": "power-curve"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "sql"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "syulimo/wind-performance-analysis",
+  "url": "https://github.com/syulimo/wind-performance-analysis"
+}

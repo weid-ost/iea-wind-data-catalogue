@@ -2,7 +2,7 @@
   "cache": {
     "hit_rate": 0.0,
     "hits": 0,
-    "misses": 1
+    "misses": 2
   },
   "dropped_dois": [
     {
@@ -86,36 +86,15 @@
       "reason": "did-not-resolve"
     }
   ],
-  "events_appended": 31,
-  "finished_at": "2026-09-28T10:57:48Z",
+  "events_appended": 39,
+  "finished_at": "2026-10-05T11:32:57Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 559,
-    "none": 39
+    "direct": 573,
+    "none": 45
   },
   "max_records": 50,
   "notices": [
-    {
-      "detail": "HTTP 500",
-      "iea_task": "task-25",
-      "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task25-63/"
-    },
-    {
-      "detail": "HTTP 500",
-      "iea_task": "task-41",
-      "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task41/"
-    },
-    {
-      "detail": "HTTP 500",
-      "iea_task": "task-42",
-      "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task42/"
-    },
     {
       "detail": "no cache entry and no model available",
       "source": "ieawind",
@@ -125,38 +104,35 @@
     {
       "confidence": 0.0,
       "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-43",
+      "iea_task": "task-25",
       "source": "ieawind",
       "type": "page_not_record_bearing",
       "url": "https://iea-wind.org/publications/"
     },
     {
-      "detail": "HTTP 500",
-      "iea_task": "task-43",
+      "detail": "no cache entry and no model available",
       "source": "ieawind",
-      "type": "page_unreachable",
+      "type": "extraction_queued",
       "url": "https://iea-wind.org/annual-report-2025/"
     },
     {
-      "detail": "HTTP 500",
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-25",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/annual-report-2025/"
+    },
+    {
+      "detail": "publication list appears to live in linked PDFs; PDF parsing is out of scope for v1 (fixture iea-11)",
       "iea_task": "task-48",
+      "pdfs": [
+        "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf",
+        "https://iea-wind.org/wp-content/uploads/2025/12/Task-48-Final-Technical-Report-Phase-I_2025-11-03.pdf"
+      ],
       "source": "ieawind",
-      "type": "page_unreachable",
+      "type": "coverage_gap_pdf_only",
       "url": "https://iea-wind.org/task48/"
-    },
-    {
-      "detail": "HTTP 500",
-      "iea_task": "task-50",
-      "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task50/"
-    },
-    {
-      "detail": "HTTP 500",
-      "iea_task": "task-51",
-      "source": "ieawind",
-      "type": "page_unreachable",
-      "url": "https://iea-wind.org/task51/"
     },
     {
       "action": "review required — no merge was applied",
@@ -580,12 +556,12 @@
     }
   ],
   "ok": true,
-  "pending_extraction": 20,
+  "pending_extraction": 21,
   "records": {
     "pruned": 0,
-    "total": 598,
-    "unchanged": 568,
-    "written": 30
+    "total": 618,
+    "unchanged": 580,
+    "written": 38
   },
   "sources": {
     "crossref": {
@@ -598,13 +574,13 @@
       "skipped_unchanged": 39
     },
     "datacite": {
-      "changed": 1,
+      "changed": 13,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 49
+      "skipped_unchanged": 37
     },
     "github": {
       "changed": 22,
@@ -616,22 +592,22 @@
       "skipped_unchanged": 28
     },
     "ieawind": {
-      "changed": 4,
+      "changed": 2,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 4,
-      "skipped_unchanged": 0
+      "seen": 5,
+      "skipped_unchanged": 3
     },
     "osti": {
-      "changed": 3,
+      "changed": 1,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 37,
-      "skipped_unchanged": 34
+      "skipped_unchanged": 36
     },
     "wdh": {
       "changed": 0,
@@ -654,7 +630,7 @@
       "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-09-28T10:55:59Z",
+  "started_at": "2026-10-05T11:30:51Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",
@@ -700,6 +676,11 @@
       "identity_key": "10.34657/21591",
       "license_raw": "Creative Commons Attribution-NonDerivs 3.0 Germany",
       "name": "doi-10-34657-21591"
+    },
+    {
+      "identity_key": "10.34657/42560",
+      "license_raw": "Creative Commons Attribution-NonDerivs 3.0 Germany",
+      "name": "doi-10-34657-42560"
     },
     {
       "identity_key": "10.48550/arxiv.2006.07598",

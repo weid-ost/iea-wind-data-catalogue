@@ -1,0 +1,137 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Amaral\",\"given\":\"Ricardo\",\"name\":\"Ricardo Amaral\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.4121/eb05e4b2-989c-4508-b912-8145fd40b5b1.v1"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-05T11:30:52Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.4121/eb05e4b2-989c-4508-b912-8145fd40b5b1.v1"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-05T11:30:52Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-09-30"
+    },
+    {
+      "key": "publisher",
+      "value": "4TU.ResearchData"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5194/wes-11-3401-2026\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementTo\"},{\"identifier\":\"https://www.coria-cfd.fr/index.php/Main_Page\",\"identifier_type\":\"URL\",\"relation\":\"References\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.4121/eb05e4b2-989c-4508-b912-8145fd40b5b1.v1"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-09-30T14:00:57Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://data.4tu.nl/datasets/eb05e4b2-989c-4508-b912-8145fd40b5b1/1"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://data.4tu.nl/datasets/eb05e4b2-989c-4508-b912-8145fd40b5b1/1\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-4121-eb05e4b2-989c-4508-b912-8145fd40b5b1-v1",
+  "notes": "This dataset contains the simulation data, the post-processed results and the code underlying the paper \"Dynamics of floating-wind-turbine wakes in a wind tunnel setup\" (Amaral et al., Wind Energy Science, 11, 3401-3426, 2026) and Chapter 7 of the author's PhD thesis at Delft University of Technology. The study investigates how imposed platform motion shapes the wake of a floating wind turbine, using large-eddy simulations with the YALES2 solver coupled to an actuator-line model to reproduce the 1:75-scale DTU 10 MW rotor in the Politecnico di Milano wind tunnel, as tested in the UNAFLOW and IEA Wind Task 30 OC6 Phase III campaigns. Eleven load cases were simulated: a fixed-bottom reference case and two cases per degree of freedom (surge, sway, pitch, roll and yaw), one with a low Strouhal number and a high normalized amplitude, and one with a high Strouhal number and a low normalized amplitude. The dataset is organized as five sub-datasets, each in its own top-level folder: (1) WIND_TUNNEL_SIMULATIONS, the post-processed wake and rotor data with the YALES2 input files and job scripts; (2) POST_PROCESSING_WORKFLOW, the Python and Bash scripts used for post-processing and preparing the post-processing workflows; (3) PLOT, the scripts that turn the post-processed data into the figures of the wake analysis; (4) U_STD_THRESHOLD_DATA, flow-field snapshots on two slices of the domain with the vortex trail extraction and analysis scripts; and (5) Q_CRITERION_DATA, the Q-criterion iso-surfaces and the script that renders them. The raw probe outputs of the solver were too large to publish and are not included. Each folder carries its own README.txt with the full description of its content, the numerical and post-processing settings, the file formats and naming conventions, and the software requirements and script adaptations needed for reuse.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "actuator-line-model"
+    },
+    {
+      "name": "aerospace-engineering"
+    },
+    {
+      "name": "engineering"
+    },
+    {
+      "name": "floating-offshore-wind-turbine"
+    },
+    {
+      "name": "large-eddy-simulation"
+    },
+    {
+      "name": "mechanical-engineering"
+    },
+    {
+      "name": "wake-dynamics"
+    },
+    {
+      "name": "wind-tunnel-simulations"
+    }
+  ],
+  "title": "Data and code underlying the article: Dynamics of floating-wind-turbine wakes in a wind tunnel setup",
+  "url": "https://data.4tu.nl/datasets/eb05e4b2-989c-4508-b912-8145fd40b5b1/1",
+  "version": "1"
+}

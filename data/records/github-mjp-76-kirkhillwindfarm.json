@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-21T09:58:58Z"
+      "value": "2026-10-05T11:32:00Z"
     },
     {
       "key": "license_mapped",
@@ -34,7 +34,7 @@
     },
     {
       "key": "license_raw",
-      "value": "MIT"
+      "value": "GPL-3.0"
     },
     {
       "key": "lifecycle_state",
@@ -46,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-09-19"
+      "value": "2026-10-01"
     },
     {
       "key": "publisher",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "e674ad4313c906db79c7d177e221c7230fa4eb03:v4.10.0:a7d1f6b664e82adc~m2"
+      "value": "02446baa5017e2f76fba05ee0b854c11e0912592:v4.13.6:a38b132b101eb011~m2"
     },
     {
       "key": "source_system",
@@ -90,7 +90,7 @@
     }
   ],
   "groups": [],
-  "license_id": "mit",
+  "license_id": "gpl-3.0",
   "name": "github-mjp-76-kirkhillwindfarm",
   "notes": "Home Assistant integration for the Kirk Hill Community Wind Farm dashboard API",
   "owner_org": "unattributed",
@@ -103,8 +103,8 @@
     },
     {
       "format": "release",
-      "name": "Release v4.10.0",
-      "url": "https://github.com/MJP-76/KirkHillWindFarm/releases/tag/v4.10.0"
+      "name": "Release v4.13.6",
+      "url": "https://github.com/MJP-76/KirkHillWindFarm/releases/tag/v4.13.6"
     }
   ],
   "state": "active",
@@ -127,5 +127,5 @@
   ],
   "title": "MJP-76/KirkHillWindFarm",
   "url": "https://github.com/MJP-76/KirkHillWindFarm",
-  "version": "v4.10.0"
+  "version": "v4.13.6"
 }

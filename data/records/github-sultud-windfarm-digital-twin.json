@@ -1,0 +1,117 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-05T11:32:13Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|SulTud/windfarm-digital-twin"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-05T11:32:13Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-01"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "SulTud/windfarm-digital-twin"
+    },
+    {
+      "key": "source_key",
+      "value": "a5f57cf6bbfdc8845d2e0507701c458984b7245e::48e5cce659042455~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/SulTud/windfarm-digital-twin"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/SulTud/windfarm-digital-twin\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-sultud-windfarm-digital-twin",
+  "notes": "Browser-based digital twin of a 3 MW wind turbine: physics-based simulation, SCADA-style dashboard, fault scenario. Unity 6 WebGL.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/SulTud/windfarm-digital-twin"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "digital-twin"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "unity"
+    },
+    {
+      "name": "webgl"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "SulTud/windfarm-digital-twin",
+  "url": "https://github.com/SulTud/windfarm-digital-twin"
+}

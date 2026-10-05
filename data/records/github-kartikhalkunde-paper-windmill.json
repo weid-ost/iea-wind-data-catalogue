@@ -1,0 +1,120 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-05T11:32:18Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|KartikHalkunde/paper-windmill"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-05T11:32:18Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-02"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "KartikHalkunde/paper-windmill"
+    },
+    {
+      "key": "source_key",
+      "value": "a9c409d800a9aecc5d0940f9c5af3839a3ee2352::03bf4152525fe680~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/KartikHalkunde/paper-windmill"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/KartikHalkunde/paper-windmill\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-kartikhalkunde-paper-windmill",
+  "notes": "A lightweight interactive paper windmill simulator and experiment report showing how airflow becomes rotational motion.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/KartikHalkunde/paper-windmill"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "html-css-javascript"
+    },
+    {
+      "name": "interactive-simulator"
+    },
+    {
+      "name": "paper-windmill"
+    },
+    {
+      "name": "physics-education"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "KartikHalkunde/paper-windmill",
+  "url": "https://github.com/KartikHalkunde/paper-windmill"
+}

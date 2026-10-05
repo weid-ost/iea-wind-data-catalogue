@@ -1,0 +1,132 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Ramboll\",\"name\":\"Karch, Michael\"},{\"affiliation\":\"Ramboll\",\"name\":\"Borisade, Friedemann\"},{\"affiliation\":\"Ramboll\",\"name\":\"Wendt, Fabian\"},{\"affiliation\":\"Akselos\",\"name\":\"Pinguet, Romain\"},{\"affiliation\":\"Akselos\",\"name\":\"Do, Thang\"},{\"affiliation\":\"Bureau Veritas\",\"name\":\"de Lauzon, Jerome\"},{\"affiliation\":\"Bureau Veritas\",\"name\":\"Tessier, Lucas\"},{\"affiliation\":\"Centro Nacional de Energias Renovables\",\"name\":\"Cerrada-Garces, Jon\"},{\"affiliation\":\"Centro Nacional de Energias Renovables\",\"name\":\"Olcoz-Alonso, Alvaro\"},{\"affiliation\":\"Centro Nacional de Energias Renovables\",\"name\":\"Artal, Jesus\"},{\"affiliation\":\"International Center for Numerical Methods in Engineering\",\"name\":\"Servan-Camas, Borja\"},{\"affiliation\":\"Technical University of Madrid\",\"name\":\"Garcia-Espinosa, Julio\"},{\"affiliation\":\"DNV\",\"name\":\"Wei Sun, Cai\"},{\"affiliation\":\"Japan Marine United Corporation\",\"name\":\"Yoshimoto, Haruki\"},{\"affiliation\":\"Japan Marine United Corporation\",\"name\":\"Nagumo, Takaya\"},{\"affiliation\":\"Nihon Shipyard\",\"name\":\"Tsuneto, Go\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Bergua, Roger\",\"orcid\":\"0000-0003-4703-4729\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Wang, Lu\",\"orcid\":\"0000-0001-6739-8998\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Jonkman, Jason\",\"orcid\":\"0000-0003-2990-7362\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Robertson, Amy\",\"orcid\":\"0000-0001-7448-4632\"},{\"affiliation\":\"PRINCIPIA Group\",\"name\":\"Clement, Constance\"},{\"affiliation\":\"PRINCIPIA Group\",\"name\":\"Potier, Guillaume\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Energy Science"
+    },
+    {
+      "key": "doi",
+      "value": "10.5194/wes-11-2427-2026"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-05T11:31:02Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5194/wes-11-2427-2026"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-05T11:31:02Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-07-10"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17011005\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-100233\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/17011005\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-100233"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "17011005"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-03T05:00:08Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17011005"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17011005\",\"https://www.osti.gov/pages/biblio/17011005\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-5194-wes-11-2427-2026",
+  "notes": "Global-to-local load transfer remains a critical - yet largely unstandardized - step in the structural assessment of floating structures. This paper presents the results of package WP2.2 from the OC7 project Phase II, which establishes a cross-industry benchmark for the workflows connecting global performance analysis (based on integrated loads analysis, ILA) and the local structural assessment (based on finite-element analysis, FEA). The study evaluates a spectrum of industry practices, including sequential approaches with the FEA following the ILA, fully integrated time-domain approaches with hydro-structural coupling, and simplified ILA-only approaches. Using the VolturnUS-S reference semi-submersible, the models were first harmonized through mass and inertia, static, and modal verifications. Structural responses were then compared across three primary scenarios: topside-only excitation, irregular waves, and combined wind and wave loading. The results establish a structured comparison framework, highlighting how specific modelling choices and load transfer techniques directly influence confidence in design processes. The findings offer practical guidance to reduce uncertainty in “global-to-local” design workflows.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17011005"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "floating-structures"
+    },
+    {
+      "name": "global-to-local-load-mapping"
+    },
+    {
+      "name": "hydrodynamics"
+    },
+    {
+      "name": "structural-integrity"
+    }
+  ],
+  "title": "OC7 Project Phase II: Comparison of Global-To-Local Load Transfer Approaches in Floating Structures",
+  "url": "https://www.osti.gov/biblio/17011005"
+}
