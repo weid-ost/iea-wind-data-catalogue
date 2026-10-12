@@ -1,0 +1,130 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Housner, Stein\",\"orcid\":\"0000-0002-5427-9962\"},{\"affiliation\":\"Stanford University\",\"name\":\"Davies, Ryan\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Hall, Matthew\",\"orcid\":\"0000-0002-0398-8320\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Alkarem, Yuksel\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Moreno, Felipe\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Baca, Elena\"}]"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-12T12:21:07Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "osti|17134358"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-12T12:21:07Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-09-29"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17134358\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/CP-5000-98610\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/CP-5000-98610"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "conference-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "17134358"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-06T10:29:16Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17134358"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17134358\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "osti-17134358",
+  "notes": "The design and deployment planning of marine energy systems often overlooks the details and requirements of the operational procedures of the project - such as installation, maintenance, or decommissioning - which can lead to unexpected costs and delayed deployment schedules. The planning and scheduling of tasks and assets to perform these operational requirements can be challenging but can be designed for using various approaches, most notably mixed-integer linear programming (MILP), which optimizes the scheduling decisions through a combination of binary, integer, and continuous variables. However, most existing scheduling tools rely on proprietary solvers, limiting developers and researchers from using a standard and accessible framework for planning and decision-making. This paper presents a new, open-source schedule optimization tool for marine energy system operations to develop informative schedules to minimize process cost and duration for any type of individual or array of systems. We provide an overview of the tool’s methodology and constraints that form the mathematical framework, as well as a detailed case study to demonstrate its capabilities. The tool aims to provide marine energy developers and the broader community with a fast and reliable platform to generate and analyze operation schedules, enabling better planning of tasks and asset assignments, resulting in more efficient and cost-effective deployment strategies.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17134358"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "deployment"
+    },
+    {
+      "name": "floating"
+    },
+    {
+      "name": "marine-energy"
+    },
+    {
+      "name": "mixed-integer-linear-programming"
+    },
+    {
+      "name": "optimization"
+    },
+    {
+      "name": "scheduling"
+    }
+  ],
+  "title": "An Open-Source Scheduling Optimization Module for Marine Operations: Preprint",
+  "url": "https://www.osti.gov/biblio/17134358"
+}

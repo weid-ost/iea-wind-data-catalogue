@@ -2,137 +2,185 @@
   "cache": {
     "hit_rate": 0.0,
     "hits": 0,
-    "misses": 2
+    "misses": 0
   },
-  "dropped_dois": [
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1016/j.egyr.2026.109072](https://doi.org/10.1016/j.egyr.2026.109072",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1088/1742-6596/2767/6/062019](https://iopscience.iop.org/article/10.1088/1742-6596/2767/6/062019",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1088/1742-6596/2875/1/012009](https://doi.org/10.1088/1742-6596/2875/1/012009",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1088/1742-6596/2875/1/012039](https://iopscience.iop.org/article/10.1088/1742-6596/2875/1/012039",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1088/1742-6596/2875/1/012048](https://doi.org/10.1088/1742-6596/2875/1/012048",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1115/iowtc2025-165418](https://doi.org/10.1115/iowtc2025-165418",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1115/omae2025-157008](https://doi.org/10.1115/omae2025-157008",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.3390/su16072899.](https://doi.org/10.3390/su16072899",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.11073986](https://doi.org/10.5281/zenodo.11073986",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.19706901](https://doi.org/10.5281/zenodo.19706901",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.19707217](https://doi.org/10.5281/zenodo.19707217",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.19707443](https://doi.org/10.5281/zenodo.19707443",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.19707539](https://doi.org/10.5281/zenodo.19707539",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.20211172](https://doi.org/10.5281/zenodo.20211172",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.21211759](https://doi.org/10.5281/zenodo.21211759",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.21347445](https://doi.org/10.5281/zenodo.21347445",
-      "reason": "did-not-resolve"
-    }
-  ],
-  "events_appended": 39,
-  "finished_at": "2026-10-05T11:32:57Z",
+  "dropped_dois": [],
+  "events_appended": 17,
+  "finished_at": "2026-10-12T12:22:01Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 573,
+    "direct": 575,
     "none": 45
   },
   "max_records": 50,
   "notices": [
     {
-      "detail": "no cache entry and no model available",
-      "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/publications/"
-    },
-    {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
+      "detail": "HTTP 500",
       "iea_task": "task-25",
       "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/publications/"
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task25-63/"
     },
     {
-      "detail": "no cache entry and no model available",
+      "detail": "HTTP 500",
+      "iea_task": "task-41",
       "source": "ieawind",
-      "type": "extraction_queued",
-      "url": "https://iea-wind.org/annual-report-2025/"
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task41/"
     },
     {
-      "confidence": 0.0,
-      "detail": "classified other via pattern (unclassified: queued)",
-      "iea_task": "task-25",
+      "detail": "HTTP 500",
+      "iea_task": "task-42",
       "source": "ieawind",
-      "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/annual-report-2025/"
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task42/"
     },
     {
-      "detail": "publication list appears to live in linked PDFs; PDF parsing is out of scope for v1 (fixture iea-11)",
+      "detail": "HTTP 500",
+      "iea_task": "task-43",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task43/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-44",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task44/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-45",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task45/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-46",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task46/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-47",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task47/"
+    },
+    {
+      "detail": "HTTP 500",
       "iea_task": "task-48",
-      "pdfs": [
-        "https://iea-wind.org/wp-content/uploads/2025/10/Task48.Annual.Report.2024.Publish.pdf",
-        "https://iea-wind.org/wp-content/uploads/2025/12/Task-48-Final-Technical-Report-Phase-I_2025-11-03.pdf"
-      ],
       "source": "ieawind",
-      "type": "coverage_gap_pdf_only",
+      "type": "page_unreachable",
       "url": "https://iea-wind.org/task48/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-49",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task49/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-50",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task50/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-51",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task51/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-52",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task52/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-53",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task53/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-54",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task54/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-55",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task55/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-56",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task-56-oc7-project-offshore-code-comparison-collaboration-7/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-57",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task57/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-58",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task-58/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-59",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task59/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-60",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task-60-cyclewind-harmonised-life-cycle-assessment-for-wind-power/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-61",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task-61/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-62",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task-62/"
+    },
+    {
+      "detail": "HTTP 500",
+      "iea_task": "task-65",
+      "source": "ieawind",
+      "type": "page_unreachable",
+      "url": "https://iea-wind.org/task11/"
     },
     {
       "action": "review required — no merge was applied",
@@ -559,55 +607,59 @@
   "pending_extraction": 21,
   "records": {
     "pruned": 0,
-    "total": 618,
-    "unchanged": 580,
-    "written": 38
+    "total": 620,
+    "unchanged": 603,
+    "written": 17
   },
   "sources": {
     "crossref": {
-      "changed": 1,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 40,
-      "skipped_unchanged": 39
+      "skipped_unchanged": 40
     },
     "datacite": {
-      "changed": 13,
-      "enabled": true,
-      "errors": [],
-      "implemented": true,
-      "reachable": true,
-      "seen": 50,
-      "skipped_unchanged": 37
-    },
-    "github": {
-      "changed": 22,
-      "enabled": true,
-      "errors": [],
-      "implemented": true,
-      "reachable": true,
-      "seen": 50,
-      "skipped_unchanged": 28
-    },
-    "ieawind": {
-      "changed": 2,
-      "enabled": true,
-      "errors": [],
-      "implemented": true,
-      "reachable": true,
-      "seen": 5,
-      "skipped_unchanged": 3
-    },
-    "osti": {
       "changed": 1,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
+      "seen": 50,
+      "skipped_unchanged": 49
+    },
+    "github": {
+      "changed": 2,
+      "enabled": true,
+      "errors": [
+        "HTTP 500 from https://api.github.com/repos/IEA-Wind-Task-32/white-paper-Task32-lidar-digitalisation/releases/latest"
+      ],
+      "implemented": true,
+      "reachable": false,
+      "seen": 26,
+      "skipped_unchanged": 24
+    },
+    "ieawind": {
+      "changed": 0,
+      "enabled": true,
+      "errors": [
+        "none of the 24 configured iea-wind.org task pages could be read"
+      ],
+      "implemented": true,
+      "reachable": false,
+      "seen": 0,
+      "skipped_unchanged": 0
+    },
+    "osti": {
+      "changed": 3,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
       "seen": 37,
-      "skipped_unchanged": 36
+      "skipped_unchanged": 34
     },
     "wdh": {
       "changed": 0,
@@ -621,16 +673,16 @@
       "skipped_unchanged": 0
     },
     "zenodo": {
-      "changed": 0,
+      "changed": 11,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 50,
-      "skipped_unchanged": 50
+      "seen": 27,
+      "skipped_unchanged": 16
     }
   },
-  "started_at": "2026-10-05T11:30:51Z",
+  "started_at": "2026-10-12T12:01:06Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",
@@ -749,6 +801,8 @@
     }
   ],
   "unreachable_sources": [
+    "github",
+    "ieawind",
     "wdh"
   ],
   "validation_violations": []

@@ -1,0 +1,132 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Sanchez-Gomez, Miguel\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Carmo, Lucas\",\"orcid\":\"0000-0001-8744-1391\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Churchfield, Matthew\",\"orcid\":\"0000-0001-9906-7288\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Jonkman, Jason\",\"orcid\":\"0000-0003-2990-7362\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Lundquist, Julie\",\"orcid\":\"0000-0001-5490-2702\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics: Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/3224/2/022051"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-12T12:21:00Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/3224/2/022051"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-12T12:21:00Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-28"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17151976\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-99283\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/17151976\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-99283"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "17151976"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-10T05:00:18Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17151976"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17151976\",\"https://www.osti.gov/pages/biblio/17151976\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1088-1742-6596-3224-2-022051",
+  "notes": "Deploying wind turbines in regions prone to tropical cyclones presents engineering challenges from intense winds, turbulence, and rapidly evolving boundary-layer conditions in intense storms that may not be well captured in current design standards. Accurate characterization of these conditions at turbine-relevant heights is essential for improving turbine resilience. In this study, we apply high-resolution (...deltax = 10 m) large-eddy simulations (LES) of Hurricane Laura (2020) to resolve microscale wind fields and assess associated wind turbine loads throughout the storm's passage. The LES-generated wind fields are used as inflow for aeroelastic turbine simulations to examine structural responses under extreme conditions. Results reveal marked temporal and spatial variability in mean wind, turbulence intensity, and vertical structure at turbine heights, producing correspondingly large variations in structural loads. The most severe hub-height winds occur in the northeast quadrant relative to the storm center (r &gt; 0), thereby generating the largest loads on the turbine structure. Overall, this study demonstrates the value of LES for resolving hurricane wind fields during historical events, enabling wind turbine load estimation during extreme storm environments.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17151976"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "97-mathematics-and-computing"
+    },
+    {
+      "name": "hurricane"
+    },
+    {
+      "name": "loads"
+    },
+    {
+      "name": "turbulence"
+    }
+  ],
+  "title": "Long-Duration Large-Eddy Simulations of Historical Hurricanes for Structural Design Load Assessments",
+  "url": "https://www.osti.gov/biblio/17151976"
+}

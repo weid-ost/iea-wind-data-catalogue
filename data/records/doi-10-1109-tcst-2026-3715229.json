@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Frederik, Joeri\"}]"
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies (NLR), Golden, CO (United States)\",\"name\":\"Frederik, Joeri A.\",\"orcid\":\"0000-0002-4455-2777\"}]"
     },
     {
       "key": "container",
@@ -38,7 +38,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:31:06Z"
+      "value": "2026-10-12T12:21:01Z"
     },
     {
       "key": "lifecycle_state",
@@ -50,7 +50,11 @@
     },
     {
       "key": "published_date",
-      "value": "2026-07-27"
+      "value": "2026-09-01"
+    },
+    {
+      "key": "publisher",
+      "value": "IEEE"
     },
     {
       "key": "related_identifiers",
@@ -74,7 +78,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-08-29T05:00:10Z~m2"
+      "value": "2026-10-07T15:24:38Z~m2"
     },
     {
       "key": "source_system",
