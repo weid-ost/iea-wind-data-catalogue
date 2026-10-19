@@ -1,0 +1,140 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-19T09:57:22Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|AaronPrado/ventormenta"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-19T09:57:22Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "GPL-3.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-08"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "AaronPrado/ventormenta"
+    },
+    {
+      "key": "source_key",
+      "value": "77894f5d5b327a95ada149bff3df324bb8c6b89f::95f0a30d75d6e940~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/AaronPrado/ventormenta"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/AaronPrado/ventormenta\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "gpl-3.0",
+  "name": "github-aaronprado-ventormenta",
+  "notes": "Reconstructs and forecasts Galicia's hourly wind generation from public electricity-market data, with point-in-time correct ML on Databricks.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/AaronPrado/ventormenta"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data-engineering"
+    },
+    {
+      "name": "databricks"
+    },
+    {
+      "name": "forecasting"
+    },
+    {
+      "name": "galicia"
+    },
+    {
+      "name": "mlflow"
+    },
+    {
+      "name": "mlops"
+    },
+    {
+      "name": "pyspark"
+    },
+    {
+      "name": "time-series"
+    },
+    {
+      "name": "unity-catalog"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "AaronPrado/ventormenta",
+  "url": "https://github.com/AaronPrado/ventormenta"
+}

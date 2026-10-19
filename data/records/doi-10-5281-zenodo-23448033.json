@@ -1,0 +1,111 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Stewart\",\"given\":\"Jim\",\"name\":\"Stewart, Jim\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.23448033"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-19T09:55:27Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.23448033"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-19T09:55:27Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-18"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.23448032\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "publication"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.23448033"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-18T07:08:36Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.23448033"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.23448033\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-23448033",
+  "notes": "Jim Stewart, Independent researcher\n\nThis technical note presents an explicit 64-turbine layout for IEA Wind Task 37 case study 1. The unmodified official evaluator, with the official turbine and wind-rose inputs, returns an annual energy production of 1,539,447.11737 MWh. The coordinates satisfy the 3,000 m circular boundary and 260 m minimum spacing requirements in float64 without tolerance: maximum radius 2,999.999999000001 m; minimum spacing 567.6913085779892 m.\n\nThe score is 0.85% above the highest comparable published entry identified by the source research run (participant 12, 1,526,474.80248 MWh), and 1.73% above the reported 2019 winner. These comparator scores and the literature search have not been independently re-established during publication preparation. No global-optimality or exhaustive world-record claim is made.\n\nThe reported method combines ruin-and-recreate large-neighbourhood search, gradient-based SLSQP polishing, and annealed acceptance. The winning search was warm-started from participant 12's repaired layout.\n\nThis release contains the technical note, original full-precision coordinate data in JSON, a licence statement, and file checksums. Research code, internal AI reviews, benchmark YAML templates, and upstream evaluator/input files are not redistributed. The note links to the upstream tools and explains how to evaluate the coordinates using a local copy of the official template. That reproduction path was exercised during release preparation and returned 1,539,447.11737 MWh. The release supports verification of the final object, not reproduction of the full optimisation history.\n\nThis is a simplified-model benchmark result, not a site-ready design or a prediction of commercial energy gains. The source run reports substantial sensitivity to wind-direction perturbations. Full coordinate precision must be retained.\n\nThe research and original reviews were performed by AI sessions; publication-preparation checks were also tool-executed by an AI assistant. These are not independent human peer review. No endorsement by the benchmark authors is claimed. Current status: numerical score reproduced; float64 constraints checked; novelty and external scientific review pending.\n\nThe report and the author's original coordinate contributions are released under CC BY 4.0, to the extent the author holds rights in those contributions. No rights in linked third-party resources are granted. Credits include the IEA Wind Task 37 case-study authors and participants, the Bastankhah–Porté-Agel wake model, and the cited ruin-and-recreate search literature.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "An improved 64-turbine layout for IEA Wind Task 37 case study 1 using ruin-and-recreate search",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.23448033"
+}

@@ -1,0 +1,149 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-19T09:57:04Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|juroc58/sharp-vawt-lab"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-19T09:57:04Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-06"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "juroc58/sharp-vawt-lab"
+    },
+    {
+      "key": "source_key",
+      "value": "d3c56bc7444dd085cd654dc7215dd6876cf956e4::08f3c5eb07b226dc~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/juroc58/sharp-vawt-lab"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/juroc58/sharp-vawt-lab\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-juroc58-sharp-vawt-lab",
+  "notes": "A validated 2D BEM solver for the Sharp cycloturbine — passive variable-pitch VAWT with centrifugal-pendulum pitch control. Built with Python + Numba.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/juroc58/sharp-vawt-lab"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "aerodynamics"
+    },
+    {
+      "name": "bem"
+    },
+    {
+      "name": "blade-element-momentum"
+    },
+    {
+      "name": "cfd"
+    },
+    {
+      "name": "dynamic-stall"
+    },
+    {
+      "name": "numba"
+    },
+    {
+      "name": "open-source"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scientific-computing"
+    },
+    {
+      "name": "vawt"
+    },
+    {
+      "name": "vertical-axis-wind-turbine"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "juroc58/sharp-vawt-lab",
+  "url": "https://github.com/juroc58/sharp-vawt-lab"
+}

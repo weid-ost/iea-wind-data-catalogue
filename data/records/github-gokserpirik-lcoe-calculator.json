@@ -26,7 +26,15 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-21T09:59:03Z"
+      "value": "2026-10-19T09:57:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
     },
     {
       "key": "lifecycle_state",
@@ -58,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "8fa6beed39ae8717b2ac7d2ba9b01eeb79bfaf9e::a72061520542c9f4~m2"
+      "value": "e95c0966bb2af49a4870d585ea8a59db50ca3a0a::c37944837ed67b2a~m2"
     },
     {
       "key": "source_system",
@@ -82,7 +90,7 @@
     }
   ],
   "groups": [],
-  "license_id": "notspecified",
+  "license_id": "mit",
   "name": "github-gokserpirik-lcoe-calculator",
   "notes": "Interactive LCOE calculator for Solar PV, Solar + Battery, and onshore Wind. Live data from PVGIS and NASA POWER, calibrated for Turkey.",
   "owner_org": "unattributed",

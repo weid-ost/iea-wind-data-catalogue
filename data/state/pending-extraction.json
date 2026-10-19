@@ -124,5 +124,17 @@
     "queued_at": "2026-10-05T11:32:23Z",
     "reason": "tier-3 page classification unavailable",
     "url": "https://iea-wind.org/publications/"
+  },
+  {
+    "cache_key": "e75f1d62b1fbcc8e568ba7f21cfb784759717acf66fbc36277f73a311c26cf84",
+    "queued_at": "2026-10-19T09:57:31Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/publications/"
+  },
+  {
+    "cache_key": "b1c4d3b754d6ef53211973591c71594180d272b7a0a7fb8f8cd6298619cb307e",
+    "queued_at": "2026-10-19T09:57:32Z",
+    "reason": "tier-3 page classification unavailable",
+    "url": "https://iea-wind.org/annual-report-2025/"
   }
 ]

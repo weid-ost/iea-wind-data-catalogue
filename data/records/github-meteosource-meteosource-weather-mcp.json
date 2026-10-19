@@ -1,0 +1,164 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-19T09:57:24Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Meteosource/meteosource-weather-mcp"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-19T09:57:24Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-16"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Meteosource/meteosource-weather-mcp"
+    },
+    {
+      "key": "source_key",
+      "value": "6b3419a3a3147b063cfa2585f315b1b3ed88d985:v0.1.0:a895622e0ca2af48~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Meteosource/meteosource-weather-mcp"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Meteosource/meteosource-weather-mcp\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-meteosource-meteosource-weather-mcp",
+  "notes": "Weather MCP server for data analysis, app development and AI agents: forecasts, severe-weather alerts, air quality, 20-year weather history and solar/wind power production. Works with Claude, Codex, Cursor and any MCP client. Hosted by Meteosource, nothing to install.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Meteosource/meteosource-weather-mcp"
+    },
+    {
+      "format": "release",
+      "name": "Release v0.1.0",
+      "url": "https://github.com/Meteosource/meteosource-weather-mcp/releases/tag/v0.1.0"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "ai-agents"
+    },
+    {
+      "name": "air-quality"
+    },
+    {
+      "name": "claude"
+    },
+    {
+      "name": "data-analysis"
+    },
+    {
+      "name": "historical-weather"
+    },
+    {
+      "name": "llm-tools"
+    },
+    {
+      "name": "mcp"
+    },
+    {
+      "name": "mcp-server"
+    },
+    {
+      "name": "model-context-protocol"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "weather"
+    },
+    {
+      "name": "weather-api"
+    },
+    {
+      "name": "weather-data"
+    },
+    {
+      "name": "weather-forecast"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Meteosource/meteosource-weather-mcp",
+  "url": "https://github.com/Meteosource/meteosource-weather-mcp",
+  "version": "v0.1.0"
+}
