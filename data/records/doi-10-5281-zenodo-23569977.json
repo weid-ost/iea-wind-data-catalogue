@@ -1,0 +1,131 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.23569977"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:09:24Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.23569977"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-37\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through org:IEAWindSystems, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:09:24Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "Apache-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-22"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.23569978\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "IEAWindSystems/IEA-Wind-2200-22-ROWP"
+    },
+    {
+      "key": "source_key",
+      "value": "c9335a2730fd044af9ee84f150247ed5ed63ff78:v1.0:4b2446f55aa313c3~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/IEAWindSystems/IEA-Wind-2200-22-ROWP"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/IEAWindSystems/IEA-Wind-2200-22-ROWP\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-37"
+    }
+  ],
+  "license_id": "apache",
+  "name": "doi-10-5281-zenodo-23569977",
+  "notes": "",
+  "owner_org": "iea-wind",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/IEAWindSystems/IEA-Wind-2200-22-ROWP"
+    },
+    {
+      "format": "release",
+      "name": "Release v1.0",
+      "url": "https://github.com/IEAWindSystems/IEA-Wind-2200-22-ROWP/releases/tag/v1.0"
+    }
+  ],
+  "state": "active",
+  "tags": [],
+  "title": "IEAWindSystems/IEA-Wind-2200-22-ROWP",
+  "url": "https://github.com/IEAWindSystems/IEA-Wind-2200-22-ROWP",
+  "version": "v1.0"
+}

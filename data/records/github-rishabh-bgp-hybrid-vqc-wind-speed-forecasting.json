@@ -1,0 +1,155 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:10:19Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Rishabh-bgp/hybrid-vqc-wind-speed-forecasting"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:10:19Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-25"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Rishabh-bgp/hybrid-vqc-wind-speed-forecasting"
+    },
+    {
+      "key": "source_key",
+      "value": "cb53530ae3c33cef2909b78318188c52714d6d54::7229216d48c7a437~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Rishabh-bgp/hybrid-vqc-wind-speed-forecasting"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Rishabh-bgp/hybrid-vqc-wind-speed-forecasting\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-rishabh-bgp-hybrid-vqc-wind-speed-forecasting",
+  "notes": "Hybrid variational quantum circuit (Conv1D-LSTM + VQC) for wind speed forecasting on SCADA-style data. PyTorch + PennyLane, live browser demo.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Rishabh-bgp/hybrid-vqc-wind-speed-forecasting"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "deep-learning"
+    },
+    {
+      "name": "github-pages"
+    },
+    {
+      "name": "hybrid-quantum-classical"
+    },
+    {
+      "name": "lstm"
+    },
+    {
+      "name": "pennylane"
+    },
+    {
+      "name": "pytorch"
+    },
+    {
+      "name": "quantum-computing"
+    },
+    {
+      "name": "quantum-machine-learning"
+    },
+    {
+      "name": "reimplementation"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "time-series-forecasting"
+    },
+    {
+      "name": "variational-quantum-circuit"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-forecasting"
+    }
+  ],
+  "title": "Rishabh-bgp/hybrid-vqc-wind-speed-forecasting",
+  "url": "https://github.com/Rishabh-bgp/hybrid-vqc-wind-speed-forecasting"
+}

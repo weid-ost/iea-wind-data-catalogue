@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-10-19T09:57:24Z"
+      "value": "2026-10-26T10:10:03Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-10-16"
+      "value": "2026-10-26"
     },
     {
       "key": "publisher",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "6b3419a3a3147b063cfa2585f315b1b3ed88d985:v0.1.0:a895622e0ca2af48~m2"
+      "value": "89b6451649e574e994a97eafd2a278601745a70a:v0.1.2:a895622e0ca2af48~m2"
     },
     {
       "key": "source_system",
@@ -103,8 +103,8 @@
     },
     {
       "format": "release",
-      "name": "Release v0.1.0",
-      "url": "https://github.com/Meteosource/meteosource-weather-mcp/releases/tag/v0.1.0"
+      "name": "Release v0.1.2",
+      "url": "https://github.com/Meteosource/meteosource-weather-mcp/releases/tag/v0.1.2"
     }
   ],
   "state": "active",
@@ -160,5 +160,5 @@
   ],
   "title": "Meteosource/meteosource-weather-mcp",
   "url": "https://github.com/Meteosource/meteosource-weather-mcp",
-  "version": "v0.1.0"
+  "version": "v0.1.2"
 }

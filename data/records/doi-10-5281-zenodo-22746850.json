@@ -30,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-21T09:57:32Z"
+      "value": "2026-10-26T10:08:59Z"
     },
     {
       "key": "license_mapped",
@@ -58,7 +58,7 @@
     },
     {
       "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.21947/1922900\",\"identifier_type\":\"DOI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"10.5194/wes-8-465-2023\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementTo\"},{\"identifier\":\"10.5281/zenodo.4740005\",\"identifier_type\":\"DOI\",\"relation\":\"References\"},{\"identifier\":\"10.5281/zenodo.22746849\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+      "value": "[{\"identifier\":\"10.5281/zenodo.22746849\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
     },
     {
       "key": "resource_kind",
@@ -74,7 +74,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-09-14T11:12:45Z~m2"
+      "value": "2026-10-22T22:50:08Z~m2"
     },
     {
       "key": "source_system",

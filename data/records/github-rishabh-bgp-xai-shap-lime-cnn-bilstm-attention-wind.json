@@ -1,0 +1,152 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:10:20Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Rishabh-bgp/xai-shap-lime-cnn-bilstm-attention-wind"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:10:20Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-25"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Rishabh-bgp/xai-shap-lime-cnn-bilstm-attention-wind"
+    },
+    {
+      "key": "source_key",
+      "value": "b8b28cf0f9625d4d6697962d9e74f203a6a1f3b6::9772617844255d39~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Rishabh-bgp/xai-shap-lime-cnn-bilstm-attention-wind"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Rishabh-bgp/xai-shap-lime-cnn-bilstm-attention-wind\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-rishabh-bgp-xai-shap-lime-cnn-bilstm-attention-wind",
+  "notes": "Explainable AI wind speed forecasting: CNN-BiLSTM-Attention in PyTorch explained with SHAP, LIME and attention. Notebook, live demo, synthetic data.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Rishabh-bgp/xai-shap-lime-cnn-bilstm-attention-wind"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "attention-mechanism"
+    },
+    {
+      "name": "bilstm"
+    },
+    {
+      "name": "cnn-lstm"
+    },
+    {
+      "name": "deep-learning"
+    },
+    {
+      "name": "explainable-ai"
+    },
+    {
+      "name": "jupyter-notebook"
+    },
+    {
+      "name": "lime"
+    },
+    {
+      "name": "pytorch"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "shap"
+    },
+    {
+      "name": "time-series-forecasting"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-forecasting"
+    },
+    {
+      "name": "xai"
+    }
+  ],
+  "title": "Rishabh-bgp/xai-shap-lime-cnn-bilstm-attention-wind",
+  "url": "https://github.com/Rishabh-bgp/xai-shap-lime-cnn-bilstm-attention-wind"
+}

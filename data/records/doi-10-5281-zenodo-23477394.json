@@ -1,0 +1,111 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Lehmann\",\"given\":\"Felix\",\"name\":\"Lehmann, Felix\",\"orcid\":\"0009-0008-7434-2616\"},{\"affiliation\":\"Flensburg University of Applied Sciences\",\"family\":\"Weich\",\"given\":\"Simon\",\"name\":\"Weich, Simon\",\"orcid\":\"0009-0009-5300-6151\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.23477394"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:08:59Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.23477394"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:08:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-19"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.21728616\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"},{\"identifier\":\"10.5281/zenodo.23477393\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "presentation"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.23477394"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-19T15:51:33Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.23477394"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.23477394\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-23477394",
+  "notes": "This presentation summarizes the contribution of Team Photon-Confetti to the Ultra Marathon of the LAC Summer Games 2026 (IEA Wind Task 52). Based on 12 h of real nacelle lidar measurements, we developed a multi-distance lidar data processing (MD-LDP) that uses all 10 range gates and all 4 beams instead of a single gate.\n\nThe key ideas are:\n\n\n\nblade-ghost-free cross sections that always represent all beams\n\nprocessing in rotor time, where every measurement is stored with its arrival time at the rotor\n\na transport speed estimated from the measured volume rather than from a time average\n\none buffer with two outputs: an unfiltered signal for preview quality and a preview-shifted, adaptively filtered signal for feedforward control\n\n\nCompared to the baseline, the smallest detectable eddy size improves from 1.738 D to 1.155 D. With the simple feedforward controller of the example, the tower damage equivalent load drops from 94.96 % to 84.49 % of the feedback-only case, with all constraints fulfilled. The presentation also discusses lessons learned on the evaluation metric, the importance of punctuality for control, and tilted turbulent structures.\n\nThis shows the contribution to the task one of the SummerGames2026 challenge. The Team will also work on a control algorithm utilizing the processed lidar data\n\nAI use: Code, analyses and draft figures were created with the assistance of Claude Opus 5.5 (Claude Code, Anthropic); see the declaration on the last slide. The authors remain fully responsible for the code, the results and this presentation.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [],
+  "title": "How to Achieve a Wind Preview Quality with a Smallest Detectable Eddy Size Below 1.2 D - Team Photon-Confetti, LAC Summer Games 2026",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.23477394"
+}

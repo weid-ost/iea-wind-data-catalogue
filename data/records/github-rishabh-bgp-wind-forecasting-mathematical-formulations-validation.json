@@ -1,0 +1,164 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:10:15Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Rishabh-bgp/wind-forecasting-mathematical-formulations-validation"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:10:15Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-25"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Rishabh-bgp/wind-forecasting-mathematical-formulations-validation"
+    },
+    {
+      "key": "source_key",
+      "value": "08c86ab4d3b7c13e9f4684b5817e4e5448300120::327872ff343267ce~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Rishabh-bgp/wind-forecasting-mathematical-formulations-validation"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Rishabh-bgp/wind-forecasting-mathematical-formulations-validation\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-rishabh-bgp-wind-forecasting-mathematical-formulations-validation",
+  "notes": "Hybrid deep learning wind speed forecasting in PyTorch: LSTM, attention, Adam, plus Diebold-Mariano and Ljung-Box statistical validation and a live demo",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Rishabh-bgp/wind-forecasting-mathematical-formulations-validation"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "attention-mechanism"
+    },
+    {
+      "name": "bilstm"
+    },
+    {
+      "name": "cnn-bilstm"
+    },
+    {
+      "name": "deep-learning"
+    },
+    {
+      "name": "diebold-mariano"
+    },
+    {
+      "name": "github-pages"
+    },
+    {
+      "name": "iiit-bhagalpur"
+    },
+    {
+      "name": "jupyter-notebook"
+    },
+    {
+      "name": "lstm"
+    },
+    {
+      "name": "machine-learning"
+    },
+    {
+      "name": "mtech-thesis"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "pytorch"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "time-series-forecasting"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-speed-forecasting"
+    }
+  ],
+  "title": "Rishabh-bgp/wind-forecasting-mathematical-formulations-validation",
+  "url": "https://github.com/Rishabh-bgp/wind-forecasting-mathematical-formulations-validation"
+}

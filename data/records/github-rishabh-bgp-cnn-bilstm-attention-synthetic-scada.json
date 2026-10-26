@@ -1,0 +1,164 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:10:18Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Rishabh-bgp/cnn-bilstm-attention-synthetic-scada"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:10:18Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-25"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Rishabh-bgp/cnn-bilstm-attention-synthetic-scada"
+    },
+    {
+      "key": "source_key",
+      "value": "e40a74e1ca4d518e90a5dd5f89e8a1069df0ad4f::0465daadb73029e7~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Rishabh-bgp/cnn-bilstm-attention-synthetic-scada"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Rishabh-bgp/cnn-bilstm-attention-synthetic-scada\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-rishabh-bgp-cnn-bilstm-attention-synthetic-scada",
+  "notes": "CNN-BiLSTM-Attention short-term wind speed forecasting on synthetic SCADA data in PyTorch, with ARIMA, SVR, XGBoost and LSTM baselines and a live demo",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Rishabh-bgp/cnn-bilstm-attention-synthetic-scada"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "attention-mechanism"
+    },
+    {
+      "name": "bilstm"
+    },
+    {
+      "name": "cnn-bilstm"
+    },
+    {
+      "name": "deep-learning"
+    },
+    {
+      "name": "github-pages"
+    },
+    {
+      "name": "iiit-bhagalpur"
+    },
+    {
+      "name": "jupyter-notebook"
+    },
+    {
+      "name": "lstm"
+    },
+    {
+      "name": "machine-learning"
+    },
+    {
+      "name": "mtech-thesis"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "pytorch"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "synthetic-data"
+    },
+    {
+      "name": "time-series-forecasting"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-speed-forecasting"
+    }
+  ],
+  "title": "Rishabh-bgp/cnn-bilstm-attention-synthetic-scada",
+  "url": "https://github.com/Rishabh-bgp/cnn-bilstm-attention-synthetic-scada"
+}

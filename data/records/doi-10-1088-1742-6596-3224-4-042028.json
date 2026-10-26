@@ -1,0 +1,140 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Polytechnic University of Milan\",\"name\":\"Cacciola, S.\"},{\"affiliation\":\"Polytechnic University of Milan\",\"name\":\"Croce, A.\"},{\"affiliation\":\"DNV\",\"name\":\"Bangga, G.\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Pirrung, G.\"},{\"affiliation\":\"French Institute of Petroleum\",\"name\":\"Bonfils, N.\"},{\"affiliation\":\"Institute of Marine Engineering\",\"name\":\"Greco, L.\"},{\"affiliation\":\"Sapienza University of Rome\",\"name\":\"Aryan, N.\"},{\"affiliation\":\"Sapienza University of Rome\",\"name\":\"Castorrini, A.\"},{\"affiliation\":\"Sapienza University of Rome\",\"name\":\"Morici, V.\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Chetan, M.\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Jonkman, J.\",\"orcid\":\"0000-0003-2990-7362\"},{\"affiliation\":\"University of Massachusetts Amherst\",\"name\":\"Branlard, E.\"},{\"affiliation\":\"Polytechnic University of Bari\",\"name\":\"Cherubini, S.\"},{\"affiliation\":\"Polytechnic University of Bari\",\"name\":\"Bernardi, C.\"},{\"affiliation\":\"TNO\",\"name\":\"Boorsma, K.\"},{\"affiliation\":\"TNO\",\"name\":\"Schepers, J.\"},{\"affiliation\":\"TNO\",\"name\":\"Savenije, F.\"},{\"affiliation\":\"University of Florence\",\"name\":\"Bianchini, A.\"},{\"affiliation\":\"University of Florence\",\"name\":\"Pagamonci, L.\"},{\"affiliation\":\"University of Florence\",\"name\":\"Papi, F.\"},{\"affiliation\":\"German Aerospace Center\",\"name\":\"Hach, O.\"},{\"affiliation\":\"German Aerospace Center\",\"name\":\"Imiela, M.\"},{\"affiliation\":\"German Aerospace Center\",\"name\":\"Witt, D.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics: Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/3224/4/042028"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:09:07Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/3224/4/042028"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-47\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:09:07Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-28"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17273317\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-98811\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/17273317\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-98811"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "17273317"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-18T05:00:09Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17273317"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17273317\",\"https://www.osti.gov/pages/biblio/17273317\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-47"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-1088-1742-6596-3224-4-042028",
+  "notes": "Modern simulation and analysis tools rely on assumptions and numerical schemes that inevitably affect their outputs, leading to uncertainties and biases that must be quantified and bounded, especially when they influence critical aspects such as system stability. This paper presents recent results from an aeroelastic benchmark on a reference 15-MW wind turbine, conducted by multiple partners within the framework of the International Energy Agency (IEA) Wind TCP Task 47 TURBINIA, focusing on stability characteristics and aeroelastic responses. The agreement among the results is reasonably good, although some quantities exhibit a significant spread. This is particularly evident in the damping factors of the turbine modes and in the periodic loads observed under sheared conditions.",
+  "owner_org": "dtu",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17273317"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "aeroelastic-stability"
+    },
+    {
+      "name": "iea-15-mw-reference-wind-turbine"
+    },
+    {
+      "name": "iea-wind-task-47"
+    },
+    {
+      "name": "turbinia"
+    }
+  ],
+  "title": "A Comparative Study of Different Modeling Tools and Analysis Techniques for Aeroelastic Stability Assessment",
+  "url": "https://www.osti.gov/biblio/17273317"
+}

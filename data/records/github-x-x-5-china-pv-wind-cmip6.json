@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-10-05T11:31:57Z"
+      "value": "2026-10-26T10:10:05Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-10-05"
+      "value": "2026-10-08"
     },
     {
       "key": "publisher",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "ff9e87a8996d0e0730e0b84e05c2bb9b64ccd772:v1.1.0:e3f037d496184f9e~m2"
+      "value": "9ba98020c66a9502aebd93ac7dd6d37a083d4984:v1.1.2:e3f037d496184f9e~m2"
     },
     {
       "key": "source_system",
@@ -103,8 +103,8 @@
     },
     {
       "format": "release",
-      "name": "Release v1.1.0",
-      "url": "https://github.com/X-X-5/china-pv-wind-cmip6/releases/tag/v1.1.0"
+      "name": "Release v1.1.2",
+      "url": "https://github.com/X-X-5/china-pv-wind-cmip6/releases/tag/v1.1.2"
     }
   ],
   "state": "active",
@@ -139,5 +139,5 @@
   ],
   "title": "X-X-5/china-pv-wind-cmip6",
   "url": "https://github.com/X-X-5/china-pv-wind-cmip6",
-  "version": "v1.1.0"
+  "version": "v1.1.2"
 }

@@ -1,0 +1,155 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:10:14Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Rishabh-bgp/arima-sarima-wind-speed-chennai"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:10:14Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-25"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Rishabh-bgp/arima-sarima-wind-speed-chennai"
+    },
+    {
+      "key": "source_key",
+      "value": "9aadbdefa498cbf7a1fabeefa2dc723594ad3ea9::d36952089ed8bb6b~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Rishabh-bgp/arima-sarima-wind-speed-chennai"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Rishabh-bgp/arima-sarima-wind-speed-chennai\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-rishabh-bgp-arima-sarima-wind-speed-chennai",
+  "notes": "ARIMA and SARIMA daily wind speed forecasting for Chennai, India in Python statsmodels: ADF test, AIC order selection, MSE/RMSE and a live demo",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Rishabh-bgp/arima-sarima-wind-speed-chennai"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "arima"
+    },
+    {
+      "name": "chennai"
+    },
+    {
+      "name": "github-pages"
+    },
+    {
+      "name": "iiit-bhagalpur"
+    },
+    {
+      "name": "jupyter-notebook"
+    },
+    {
+      "name": "machine-learning"
+    },
+    {
+      "name": "mtech-thesis"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "sarima"
+    },
+    {
+      "name": "statistics"
+    },
+    {
+      "name": "statsmodels"
+    },
+    {
+      "name": "time-series-forecasting"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-speed-forecasting"
+    }
+  ],
+  "title": "Rishabh-bgp/arima-sarima-wind-speed-chennai",
+  "url": "https://github.com/Rishabh-bgp/arima-sarima-wind-speed-chennai"
+}

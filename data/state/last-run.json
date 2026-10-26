@@ -2,96 +2,15 @@
   "cache": {
     "hit_rate": 0.0,
     "hits": 0,
-    "misses": 2
+    "misses": 8
   },
-  "dropped_dois": [
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1016/j.egyr.2026.109072](https://doi.org/10.1016/j.egyr.2026.109072",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1088/1742-6596/2767/6/062019](https://iopscience.iop.org/article/10.1088/1742-6596/2767/6/062019",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1088/1742-6596/2875/1/012009](https://doi.org/10.1088/1742-6596/2875/1/012009",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1088/1742-6596/2875/1/012039](https://iopscience.iop.org/article/10.1088/1742-6596/2875/1/012039",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1088/1742-6596/2875/1/012048](https://doi.org/10.1088/1742-6596/2875/1/012048",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1115/iowtc2025-165418](https://doi.org/10.1115/iowtc2025-165418",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.1115/omae2025-157008](https://doi.org/10.1115/omae2025-157008",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.3390/su16072899.](https://doi.org/10.3390/su16072899",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.11073986](https://doi.org/10.5281/zenodo.11073986",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.19706901](https://doi.org/10.5281/zenodo.19706901",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.19707217](https://doi.org/10.5281/zenodo.19707217",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.19707443](https://doi.org/10.5281/zenodo.19707443",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.19707539](https://doi.org/10.5281/zenodo.19707539",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.20211172](https://doi.org/10.5281/zenodo.20211172",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.21211759](https://doi.org/10.5281/zenodo.21211759",
-      "reason": "did-not-resolve"
-    },
-    {
-      "context": "https://iea-wind.org/task49/",
-      "doi": "10.5281/zenodo.21347445](https://doi.org/10.5281/zenodo.21347445",
-      "reason": "did-not-resolve"
-    }
-  ],
-  "events_appended": 29,
-  "finished_at": "2026-10-19T09:58:08Z",
+  "dropped_dois": [],
+  "events_appended": 34,
+  "finished_at": "2026-10-26T10:10:56Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 580,
-    "none": 53
+    "direct": 587,
+    "none": 63
   },
   "max_records": 50,
   "notices": [
@@ -113,7 +32,7 @@
       "detail": "no cache entry and no model available",
       "source": "ieawind",
       "type": "extraction_queued",
-      "url": "https://iea-wind.org/annual-report-2025/"
+      "url": "https://iea-wind.org/task25-63/t25-63-publications/"
     },
     {
       "confidence": 0.0,
@@ -121,7 +40,77 @@
       "iea_task": "task-25",
       "source": "ieawind",
       "type": "page_not_record_bearing",
-      "url": "https://iea-wind.org/annual-report-2025/"
+      "url": "https://iea-wind.org/task25-63/t25-63-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task41/t41-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-41",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task41/t41-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task42/t42-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-42",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task42/t42-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task44/t44-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-44",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task44/t44-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task45/t45-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-45",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task45/t45-publications/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task47/t47-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-47",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task47/t47-publications/"
     },
     {
       "detail": "publication list appears to live in linked PDFs; PDF parsing is out of scope for v1 (fixture iea-11)",
@@ -133,6 +122,20 @@
       "source": "ieawind",
       "type": "coverage_gap_pdf_only",
       "url": "https://iea-wind.org/task48/"
+    },
+    {
+      "detail": "no cache entry and no model available",
+      "source": "ieawind",
+      "type": "extraction_queued",
+      "url": "https://iea-wind.org/task48/t48-publications/"
+    },
+    {
+      "confidence": 0.0,
+      "detail": "classified other via pattern (unclassified: queued)",
+      "iea_task": "task-48",
+      "source": "ieawind",
+      "type": "page_not_record_bearing",
+      "url": "https://iea-wind.org/task48/t48-publications/"
     },
     {
       "action": "review required — no merge was applied",
@@ -556,22 +559,22 @@
     }
   ],
   "ok": true,
-  "pending_extraction": 23,
+  "pending_extraction": 26,
   "records": {
     "pruned": 0,
-    "total": 633,
-    "unchanged": 604,
-    "written": 29
+    "total": 650,
+    "unchanged": 617,
+    "written": 33
   },
   "sources": {
     "crossref": {
-      "changed": 1,
+      "changed": 0,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 40,
-      "skipped_unchanged": 39
+      "skipped_unchanged": 40
     },
     "datacite": {
       "changed": 6,
@@ -583,33 +586,33 @@
       "skipped_unchanged": 44
     },
     "github": {
-      "changed": 22,
+      "changed": 24,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 28
+      "skipped_unchanged": 26
     },
     "ieawind": {
       "changed": 0,
       "enabled": true,
-      "errors": [],
-      "implemented": true,
-      "reachable": true,
-      "seen": 5,
-      "skipped_unchanged": 5
-    },
-    "osti": {
-      "changed": 0,
-      "enabled": true,
       "errors": [
-        "The read operation timed out"
+        "AssertionError: expected name token at '<![��\\x1c\\x10*r�\\x13(\\x15\\x10�T�ZJ�'"
       ],
       "implemented": true,
       "reachable": false,
       "seen": 0,
       "skipped_unchanged": 0
+    },
+    "osti": {
+      "changed": 4,
+      "enabled": true,
+      "errors": [],
+      "implemented": true,
+      "reachable": true,
+      "seen": 36,
+      "skipped_unchanged": 32
     },
     "wdh": {
       "changed": 0,
@@ -632,7 +635,7 @@
       "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-10-19T09:55:25Z",
+  "started_at": "2026-10-26T10:08:58Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",
@@ -751,7 +754,7 @@
     }
   ],
   "unreachable_sources": [
-    "osti",
+    "ieawind",
     "wdh"
   ],
   "validation_violations": []

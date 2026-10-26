@@ -1,0 +1,141 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"TNO\",\"name\":\"Boorsma, K.\"},{\"affiliation\":\"TNO\",\"name\":\"Schepers, J.\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Pirrung, G.\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Madsen, H.\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Sorensen, N.\"},{\"affiliation\":\"Technical University of Denmark\",\"name\":\"Grinderslev, C.\"},{\"affiliation\":\"German Aerospace Center\",\"name\":\"Imiela, M.\"},{\"affiliation\":\"German Aerospace Center\",\"name\":\"Krimm, F.\"},{\"affiliation\":\"DNV\",\"name\":\"Bangga, G.\"},{\"affiliation\":\"French Institute of Petroleum\",\"name\":\"Goncalves Pinto, W.\"},{\"affiliation\":\"Institute of Marine Engineering\",\"name\":\"Greco, L.\"},{\"affiliation\":\"Institute of Marine Engineering\",\"name\":\"Testa, C.\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Systems\",\"name\":\"Theron, J.\"},{\"affiliation\":\"Fraunhofer Institute for Wind Energy Systems\",\"name\":\"Honing, L.\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Jonkman, J.\",\"orcid\":\"0000-0003-2990-7362\"},{\"affiliation\":\"University of Massachusetts Amherst\",\"name\":\"Branlard, E.\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Chetan, M.\"},{\"affiliation\":\"Office National d'Etudes et de Recherches Aerospatiales\",\"name\":\"Boisard, R.\"},{\"affiliation\":\"Polytechnic University of Milan\",\"name\":\"Croce, A.\"},{\"affiliation\":\"Polytechnic University of Milan\",\"name\":\"Cacciola, S.\"},{\"affiliation\":\"Polytechnic University of Bari\",\"name\":\"Cherubini, S.\"},{\"affiliation\":\"Sapienza University of Rome\",\"name\":\"Aryan, N.\"},{\"affiliation\":\"Uppsala University\",\"name\":\"Asmuth, H.\"},{\"affiliation\":\"University of Florence\",\"name\":\"Pagamonci, L.\"},{\"affiliation\":\"University of Florence\",\"name\":\"Papi, F.\"},{\"affiliation\":\"University of Florence\",\"name\":\"Bianchini, A.\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Journal of Physics: Conference Series"
+    },
+    {
+      "key": "doi",
+      "value": "10.1088/1742-6596/3224/4/042046"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-10-26T10:09:06Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.1088/1742-6596/3224/4/042046"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-10-26T10:09:06Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-05-28"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17273318\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/JA-5000-98815\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/17273318\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/JA-5000-98815"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "17273318"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-18T05:00:10Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17273318"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17273318\",\"https://www.osti.gov/pages/biblio/17273318\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-1088-1742-6596-3224-4-042046",
+  "notes": "A large comparison exercise has been performed featuring aerodynamic and aero-elastic simulation cases on the IEA 15MW reference wind turbine in various conditions, containing results of 30 codes ranging from BEM to CFD. More than 10 different variable types ranging from lifting line variables to pressures, loads and velocities have been compared for the different conditions, resulting in many comparison plots. The result is a unique insight in the current status and accuracy of rotor aerodynamic modeling. Although there are no measurements on this turbine, mutual comparison of model results provided useful insights into the performance of rotor aerodynamic models. Preparatory simulations on the 15MW RWT at constant uniform conditions generally showed reasonable agreement in the aerodynamic response between engineering and higher-fidelity models, provided the turbine was considered rigid. However, including flexibility effects led to more discrepancies, largely due to differences in blade torsion, which in turn impacts the aerodynamics. Even at very moderate wind speeds the blade tip torsion angle could be in the order of 2 degrees where large differences were found between the partners results. Following the preparatory cases, simulations under turbulent conditions were performed. Several turbulent boxes were generated using high-fidelity CFD models and the results were compared mutually. Some differences appeared in the turbulent boxes, which could be expected from convection differences. At first sight the differences seemed small. However, when the boxes were fed into an aero-elastic code, the differences became significant enough to affect load response. When supplying the sampled wind speeds from the turbulent box as input to engineering-fidelity models, it was interesting to find that these models showed a much higher standard deviation in loads compared to higher-fidelity models. This confirms the finding from previous numerical studies that engineering models tend to overpredict fatigue loads, also for a large sized rotor.",
+  "owner_org": "tno",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17273318"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "aero-elastics"
+    },
+    {
+      "name": "benchmark"
+    },
+    {
+      "name": "iea-15-mw-reference-wind-turbine"
+    },
+    {
+      "name": "iea-wind-task-47"
+    },
+    {
+      "name": "torsion"
+    },
+    {
+      "name": "turbinia"
+    },
+    {
+      "name": "turbulence"
+    }
+  ],
+  "title": "Benchmark Simulations of Rotor Aerodynamics on the IEA Wind 15MW RWT and Associated Modeling Challenges",
+  "url": "https://www.osti.gov/biblio/17273318"
+}
