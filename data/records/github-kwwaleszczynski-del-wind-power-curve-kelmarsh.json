@@ -1,0 +1,131 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:27:26Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|kwwaleszczynski-del/wind-power-curve-kelmarsh"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:27:26Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-21"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "kwwaleszczynski-del/wind-power-curve-kelmarsh"
+    },
+    {
+      "key": "source_key",
+      "value": "de7a2c1c5e8a0a7f679c0434ff3a16e14a340e93::2159f48ecbd241ab~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/kwwaleszczynski-del/wind-power-curve-kelmarsh"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/kwwaleszczynski-del/wind-power-curve-kelmarsh\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-kwwaleszczynski-del-wind-power-curve-kelmarsh",
+  "notes": "Wind turbine power curve analysis on open Kelmarsh SCADA data (2016-2021): IEC 61400-12-1 binning, data cleaning, underperformance detection",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/kwwaleszczynski-del/wind-power-curve-kelmarsh"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "iec-61400"
+    },
+    {
+      "name": "power-curve"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-turbine"
+    }
+  ],
+  "title": "kwwaleszczynski-del/wind-power-curve-kelmarsh",
+  "url": "https://github.com/kwwaleszczynski-del/wind-power-curve-kelmarsh"
+}

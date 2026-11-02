@@ -1,0 +1,146 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:27:27Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|kwwaleszczynski-del/wind-om-reliability"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:27:27Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-28"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "kwwaleszczynski-del/wind-om-reliability"
+    },
+    {
+      "key": "source_key",
+      "value": "198fbe0670feb6abe935344169f16f7218622f89::3144d326361074bd~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/kwwaleszczynski-del/wind-om-reliability"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/kwwaleszczynski-del/wind-om-reliability\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-kwwaleszczynski-del-wind-om-reliability",
+  "notes": "Reliability and O&amp;M analytics from wind turbine status and alarm logs: Pareto of downtime by code and component, MTBF/MTTR, Weibull and Crow-AMSAA trends, bad actors, repeat failures, alarm cascades, resets vs interventions, lost energy, monthly KPI pack; three open wind farms",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/kwwaleszczynski-del/wind-om-reliability"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "alarm-logs"
+    },
+    {
+      "name": "asset-management"
+    },
+    {
+      "name": "crow-amsaa"
+    },
+    {
+      "name": "kpi-reporting"
+    },
+    {
+      "name": "mtbf"
+    },
+    {
+      "name": "o-and-m"
+    },
+    {
+      "name": "pareto"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "reliability"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "weibull"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "kwwaleszczynski-del/wind-om-reliability",
+  "url": "https://github.com/kwwaleszczynski-del/wind-om-reliability"
+}

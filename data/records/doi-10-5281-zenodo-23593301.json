@@ -1,0 +1,130 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Marykovskiy\",\"given\":\"Yuriy\",\"name\":\"Marykovskiy, Yuriy\",\"orcid\":\"0000-0002-6570-6966\"},{\"affiliation\":\"National Laboratory of the Rockies\",\"family\":\"Bergua\",\"given\":\"Roger\",\"name\":\"Bergua, Roger\",\"orcid\":\"0000-0003-4703-4729\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.23593301"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:26:15Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.23593301"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:26:15Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-01"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.23572116\",\"identifier_type\":\"DOI\",\"relation\":\"IsDerivedFrom\"},{\"identifier\":\"10.5194/wes-8-465-2023\",\"identifier_type\":\"DOI\",\"relation\":\"IsSupplementTo\"},{\"identifier\":\"10.5281/zenodo.4740006\",\"identifier_type\":\"DOI\",\"relation\":\"IsDerivedFrom\"},{\"identifier\":\"https://github.com/WeDoWind/IEA-Wind-Task-30-OC6-Phase-III\",\"identifier_type\":\"URL\",\"relation\":\"IsCompiledBy\"},{\"identifier\":\"10.21947/1922900\",\"identifier_type\":\"DOI\",\"relation\":\"IsDerivedFrom\"},{\"identifier\":\"10.2172/1957538\",\"identifier_type\":\"DOI\",\"relation\":\"IsDocumentedBy\"},{\"identifier\":\"10.5194/wes-6-1169-2021\",\"identifier_type\":\"DOI\",\"relation\":\"IsDocumentedBy\"},{\"identifier\":\"10.5194/wes-8-1659-2023\",\"identifier_type\":\"DOI\",\"relation\":\"References\"},{\"identifier\":\"https://github.com/WeDoWind/IEA-Wind-Task-30-OC6-Phase-III\",\"identifier_type\":\"URL\",\"relation\":\"IsSourceOf\"},{\"identifier\":\"10.5281/zenodo.23593300\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.23593301"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-26T18:01:19Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.23593301"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.23593301\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-23593301",
+  "notes": "A ready-to-use benchmark for wind turbine aerodynamics codes on a floating platform: wind tunnel measurements of a 1:75 scaled DTU 10 MW rotor in prescribed surge and platform-pitch motion, and the results of 56 numerical models (blade element momentum, dynamic inflow, free vortex wake and CFD) for the same 11 load cases of IEA Wind TCP Task 30, OC6 Phase III.\n\n Rotor loads, sectional blade loads, hot-wire wake velocities and PIV wake planes, simulated and measured.\n\nThe archive tables (oc6.phase3.archive.*) hold the source records with every value as submitted: the Wind Data Hub archive of the campaign (4,122 participant result files, the Experiment 2 measurements, the airfoil polars) and the UNAFLOW record of Experiment 1 (tower loads, hot-wire wake and PIV for every test); a source-files table gives the checksum, header and layout of each of the 4,730 source files. The airfoil polars of every blade station and the measured SD7032 polars are tables too. The small reference tables (models, load cases, blade geometry, the AeroDyn airfoil parameters, the test lists) are embedded in the sidecar mlcroissant file.\n\nThe derived tables (oc6.phase3.derived.*) hold the paper's load metrics, the phase-averaged Experiment 1 loads and the blade-tip vortex centres. Companion code: https://github.com/WeDoWind/IEA-Wind-Task-30.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "aerodynamics"
+    },
+    {
+      "name": "benchmark"
+    },
+    {
+      "name": "iea-wind-task-30"
+    },
+    {
+      "name": "iea-wind-tcp"
+    },
+    {
+      "name": "offshore-wind"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "Floating Wind Turbine Rotor Aerodynamics Benchmark (IEA Wind Task 30 OC6 Phase III)",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.23593301"
+}

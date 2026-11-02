@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-21T09:58:59Z"
+      "value": "2026-11-02T12:27:39Z"
     },
     {
       "key": "lifecycle_state",
@@ -58,7 +58,7 @@
     },
     {
       "key": "source_key",
-      "value": "93da69689ee20c00dc7d109bb5f7362059a65e70::40ede49483df9243~m2"
+      "value": "754463e65add9b00fbc15299501fb071d657ccfb::40ede49483df9243~m2"
     },
     {
       "key": "source_system",
@@ -70,11 +70,11 @@
     },
     {
       "key": "source_url",
-      "value": "https://github.com/efirvida/of-plugins"
+      "value": "https://github.com/efirvida/openfoam-fsi-plugins"
     },
     {
       "key": "source_urls",
-      "value": "[\"https://github.com/efirvida/of-plugins\"]"
+      "value": "[\"https://github.com/efirvida/openfoam-fsi-plugins\"]"
     },
     {
       "key": "withdrawn",
@@ -91,7 +91,7 @@
     {
       "format": "git",
       "name": "Source repository",
-      "url": "https://github.com/efirvida/of-plugins"
+      "url": "https://github.com/efirvida/openfoam-fsi-plugins"
     }
   ],
   "state": "active",
@@ -130,6 +130,6 @@
       "name": "wind-energy"
     }
   ],
-  "title": "efirvida/of-plugins",
-  "url": "https://github.com/efirvida/of-plugins"
+  "title": "efirvida/openfoam-fsi-plugins",
+  "url": "https://github.com/efirvida/openfoam-fsi-plugins"
 }

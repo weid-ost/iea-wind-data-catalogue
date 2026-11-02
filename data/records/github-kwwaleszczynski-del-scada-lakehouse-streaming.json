@@ -1,0 +1,146 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:27:33Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|kwwaleszczynski-del/scada-lakehouse-streaming"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:27:33Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-30"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "kwwaleszczynski-del/scada-lakehouse-streaming"
+    },
+    {
+      "key": "source_key",
+      "value": "ab8eb484da1ba73c416f8c1773bd3b03dc835ba0::a4e0622c1cb2597d~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/kwwaleszczynski-del/scada-lakehouse-streaming"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/kwwaleszczynski-del/scada-lakehouse-streaming\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-kwwaleszczynski-del-scada-lakehouse-streaming",
+  "notes": "Event-driven wind, PV and meter telemetry pipeline on a simulated 50 MW fleet: event-time watermarking and upserts for LTE router backfill bursts, QoS-1 duplicates, Europe/Warsaw DST days, rule-based SCADA sensor QC, and Bronze-Silver-Gold Parquet layers with generated TimescaleDB DDL.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/kwwaleszczynski-del/scada-lakehouse-streaming"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data-engineering"
+    },
+    {
+      "name": "data-quality"
+    },
+    {
+      "name": "event-time"
+    },
+    {
+      "name": "github-pages"
+    },
+    {
+      "name": "medallion-architecture"
+    },
+    {
+      "name": "parquet"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "stream-processing"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "kwwaleszczynski-del/scada-lakehouse-streaming",
+  "url": "https://github.com/kwwaleszczynski-del/scada-lakehouse-streaming"
+}

@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:27:38Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|kwwaleszczynski-del/grafana-fleet-as-code"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:27:38Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-21"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "kwwaleszczynski-del/grafana-fleet-as-code"
+    },
+    {
+      "key": "source_key",
+      "value": "f5c81d94824facf6f57f1a016982ce4645d74bc5::bbca59bad9516cbd~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/kwwaleszczynski-del/grafana-fleet-as-code"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/kwwaleszczynski-del/grafana-fleet-as-code\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-kwwaleszczynski-del-grafana-fleet-as-code",
+  "notes": "Renewable fleet monitoring in Grafana as code: dashboards, alert rules and datasource generated from Python, fed by a live replay of public wind (Kelmarsh) and PV (NREL PVDAQ) SCADA in InfluxDB 2.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/kwwaleszczynski-del/grafana-fleet-as-code"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "alerting"
+    },
+    {
+      "name": "dashboards-as-code"
+    },
+    {
+      "name": "flux"
+    },
+    {
+      "name": "grafana"
+    },
+    {
+      "name": "influxdb"
+    },
+    {
+      "name": "monitoring-as-code"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "kwwaleszczynski-del/grafana-fleet-as-code",
+  "url": "https://github.com/kwwaleszczynski-del/grafana-fleet-as-code"
+}

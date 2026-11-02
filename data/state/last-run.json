@@ -5,12 +5,12 @@
     "misses": 8
   },
   "dropped_dois": [],
-  "events_appended": 34,
-  "finished_at": "2026-10-26T10:10:56Z",
+  "events_appended": 40,
+  "finished_at": "2026-11-02T12:28:16Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 587,
-    "none": 63
+    "direct": 596,
+    "none": 80
   },
   "max_records": 50,
   "notices": [
@@ -562,9 +562,9 @@
   "pending_extraction": 26,
   "records": {
     "pruned": 0,
-    "total": 650,
-    "unchanged": 617,
-    "written": 33
+    "total": 676,
+    "unchanged": 637,
+    "written": 39
   },
   "sources": {
     "crossref": {
@@ -577,22 +577,22 @@
       "skipped_unchanged": 40
     },
     "datacite": {
-      "changed": 6,
+      "changed": 12,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 44
+      "skipped_unchanged": 38
     },
     "github": {
-      "changed": 24,
+      "changed": 27,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 50,
-      "skipped_unchanged": 26
+      "seen": 49,
+      "skipped_unchanged": 22
     },
     "ieawind": {
       "changed": 0,
@@ -606,13 +606,13 @@
       "skipped_unchanged": 0
     },
     "osti": {
-      "changed": 4,
+      "changed": 1,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 36,
-      "skipped_unchanged": 32
+      "skipped_unchanged": 35
     },
     "wdh": {
       "changed": 0,
@@ -635,7 +635,7 @@
       "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-10-26T10:08:58Z",
+  "started_at": "2026-11-02T12:26:14Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",

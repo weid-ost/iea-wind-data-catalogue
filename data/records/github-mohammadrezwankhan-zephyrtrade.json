@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-10-19T09:57:03Z"
+      "value": "2026-11-02T12:27:18Z"
     },
     {
       "key": "license_mapped",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "aff0c95122f8116b3e5fe2c1adcf3665bc36d9cc::6add9b17ea69bbe4~m2"
+      "value": "d4ac2455f52e36903215b3f4bb3fed9cf5326b21::591de706468e95cb~m2"
     },
     {
       "key": "source_system",
@@ -92,7 +92,7 @@
   "groups": [],
   "license_id": "mit",
   "name": "github-mohammadrezwankhan-zephyrtrade",
-  "notes": "Wind energy revenue backtesting workbench: probabilistic forecasting, asymmetric penalty optimization, and synthetic market offer simulator.",
+  "notes": "Study synthetic wind forecasts, asymmetric offer decisions &amp; reproducible revenue backtests through transparent lessons.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
@@ -108,28 +108,46 @@
       "name": "backtesting"
     },
     {
-      "name": "demo"
+      "name": "electricity-markets"
+    },
+    {
+      "name": "energy-trading"
     },
     {
       "name": "forecasting"
     },
     {
-      "name": "local-first"
+      "name": "interactive-dashboard"
+    },
+    {
+      "name": "interactive-learning"
     },
     {
       "name": "machine-learning"
     },
     {
-      "name": "open-source"
+      "name": "optimization"
+    },
+    {
+      "name": "probabilistic-forecasting"
     },
     {
       "name": "python"
     },
     {
-      "name": "research"
+      "name": "reproducible-research"
     },
     {
-      "name": "simulation"
+      "name": "scikit-learn"
+    },
+    {
+      "name": "scipy"
+    },
+    {
+      "name": "synthetic-data"
+    },
+    {
+      "name": "time-series"
     },
     {
       "name": "wind-energy"

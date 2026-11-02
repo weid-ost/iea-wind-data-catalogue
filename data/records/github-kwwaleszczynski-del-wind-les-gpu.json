@@ -1,0 +1,134 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:27:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|kwwaleszczynski-del/wind-les-gpu"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:27:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-28"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "kwwaleszczynski-del/wind-les-gpu"
+    },
+    {
+      "key": "source_key",
+      "value": "bbb4c126fbd6eb85c5c5a8ce8f8e50d1ab9e5fa3::54c664a4ffd5123a~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/kwwaleszczynski-del/wind-les-gpu"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/kwwaleszczynski-del/wind-les-gpu\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-kwwaleszczynski-del-wind-les-gpu",
+  "notes": "Home-made GPU lattice Boltzmann LES of the Kelmarsh wind farm (NVIDIA Warp): wake losses per sector vs SCADA and PyWake",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/kwwaleszczynski-del/wind-les-gpu"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "gpu"
+    },
+    {
+      "name": "large-eddy-simulation"
+    },
+    {
+      "name": "lattice-boltzmann"
+    },
+    {
+      "name": "nvidia-warp"
+    },
+    {
+      "name": "pywake"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "wake-modelling"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "kwwaleszczynski-del/wind-les-gpu",
+  "url": "https://github.com/kwwaleszczynski-del/wind-les-gpu"
+}

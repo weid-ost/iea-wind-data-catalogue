@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:27:30Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|kwwaleszczynski-del/wind-bayes-twin"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:27:30Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-27"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "kwwaleszczynski-del/wind-bayes-twin"
+    },
+    {
+      "key": "source_key",
+      "value": "1906a238d94305672c90477fa8f5961f1dc3223c::f644a96a77db06c3~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/kwwaleszczynski-del/wind-bayes-twin"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/kwwaleszczynski-del/wind-bayes-twin\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-kwwaleszczynski-del-wind-bayes-twin",
+  "notes": "Bayesian digital twin of a wind farm: online posteriors of turbine health, fault probabilities, loss attribution and value-of-information inspection ranking on open Kelmarsh SCADA",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/kwwaleszczynski-del/wind-bayes-twin"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "bayesian-inference"
+    },
+    {
+      "name": "changepoint-detection"
+    },
+    {
+      "name": "condition-monitoring"
+    },
+    {
+      "name": "digital-twin"
+    },
+    {
+      "name": "github-pages"
+    },
+    {
+      "name": "kalman-filter"
+    },
+    {
+      "name": "numpyro"
+    },
+    {
+      "name": "particle-filter"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "kwwaleszczynski-del/wind-bayes-twin",
+  "url": "https://github.com/kwwaleszczynski-del/wind-bayes-twin"
+}

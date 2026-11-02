@@ -1,0 +1,130 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"family\":\"Wang\",\"given\":\"Zhen-Fan\",\"name\":\"Wang, Zhen-Fan\"},{\"family\":\"Zhang\",\"given\":\"Kai\",\"name\":\"Zhang, Kai\"},{\"family\":\"Du\",\"given\":\"Xianping\",\"name\":\"Du, Xianping\"},{\"family\":\"Han\",\"given\":\"Zhaolong\",\"name\":\"Han, Zhaolong\"},{\"family\":\"Zhou\",\"given\":\"Dai\",\"name\":\"Zhou, Dai\"},{\"family\":\"Bilgen\",\"given\":\"Onur\",\"name\":\"Bilgen, Onur\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.48550/arxiv.2610.35975"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:26:15Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.48550/arxiv.2610.35975"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:26:15Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026"
+    },
+    {
+      "key": "publisher",
+      "value": "arXiv"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "journal-article"
+    },
+    {
+      "key": "source_id",
+      "value": "10.48550/arxiv.2610.35975"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-28T02:33:05Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://arxiv.org/abs/2610.35975"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://arxiv.org/abs/2610.35975\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-48550-arxiv-2610-35975",
+  "notes": "Wind farm layout optimization becomes increasingly difficult as turbine count grows, especially when high-fidelity aerodynamic models are used. Conventional Kriging-based Bayesian optimization often suffers from low sample efficiency in high-dimensional layout spaces because sparse training data provide limited domain coverage. We develop a Graph-informed Kriging framework that embeds reusable aerodynamic interaction information into the surrogate mean function. The wind farm is represented as a directed aerodynamic graph, where pairwise turbine interactions defined in a low-dimensional relative-coordinate space are assembled into a farm-scale mean. This structured mean captures the dominant variation in annual energy production (AEP), allowing the Gaussian process to model only the residual structure and uncertainty. Numerical experiments show that Graph-informed Kriging consistently improves AEP prediction accuracy over ordinary and generic-trend Kriging under sparse-data conditions, with increasing benefits as layout dimension and wake-interaction strength grow. Embedded in Bayesian optimization, it substantially improves sample efficiency and achieves competitive solutions for the IEA Wind Task 37 benchmark with about 280 AEP evaluations. In a controlled 16-turbine case, it also outperforms ordinary and multi-fidelity Kriging under the same high-fidelity evaluation budget. The framework is further extended to a 48-turbine wind farm, demonstrating applicability to large-scale CFD-based layout optimization. These results show that Graph-informed surrogate modeling can enable more efficient use of high-fidelity aerodynamic models for reliable large-scale wind farm layout design.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "fluid-dynamics-physics.flu-dyn"
+    },
+    {
+      "name": "fos-computer-and-information-sciences"
+    },
+    {
+      "name": "fos-mathematics"
+    },
+    {
+      "name": "fos-physical-sciences"
+    },
+    {
+      "name": "machine-learning-cs.lg"
+    },
+    {
+      "name": "machine-learning-stat.ml"
+    },
+    {
+      "name": "optimization-and-control-math.oc"
+    }
+  ],
+  "title": "A Graph-informed Kriging model for sample-efficient Bayesian optimization of wind farm layouts",
+  "url": "https://arxiv.org/abs/2610.35975",
+  "version": "1"
+}

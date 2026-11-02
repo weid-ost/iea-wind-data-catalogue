@@ -1,0 +1,131 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Wiley, Will\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Sanchez-Gomez, Miguel\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Jonkman, Jason\",\"orcid\":\"0000-0003-2990-7362\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.66816/pr6712967"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-02T12:26:27Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.66816/pr6712967"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-02T12:26:27Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-22"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17426515\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/PR-5000-102122\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/17426515\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/PR-5000-102122"
+    },
+    {
+      "key": "resource_kind",
+      "value": "publication"
+    },
+    {
+      "key": "resource_type",
+      "value": "conference-paper"
+    },
+    {
+      "key": "source_id",
+      "value": "17426515"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-10-29T11:35:53Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17426515"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17426515\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-66816-pr6712967",
+  "notes": "Hurricanes can impact infrastructure with extreme ultimate loads, and it is important to understand these loads well to enable safe and efficient design. High-fidelity large eddy simulations (LES) can provide accurate predictions of wind speed progression, but are highly computationally expensive. Synthetic turbulence generation models are efficient, are limited in how they can represent the wind field. It is important to understand what impact these limitations in wind field characterization have on predicted loads for infrastructure. It is also useful to understand which features of the flow are are most important for properly resolving loads. The current work directly compares blade and tower loads as predicted by OpenFAST with inflow directly from LES data of Hurricane Laura and with inflow generated with the synthetic turbulence tool, TurbSim (Kaimal model), calibrated to the LES data. This is first done matching all the available variables as closely as possible to the LES outputs. This provides a baseline that benchmarks the ability of synthetic turbulence to be used for predicting loads in extreme hurricane events. Next a sensitivity study is performed for input parameters of the turbulence generator to identify which flow features are most important for the resulting turbine loads.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17426515"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "42-engineering"
+    },
+    {
+      "name": "97-mathematics-and-computing"
+    },
+    {
+      "name": "structural-loads"
+    },
+    {
+      "name": "synthetic-turbulence"
+    },
+    {
+      "name": "tropic-cyclones"
+    }
+  ],
+  "title": "Hurricane Laura Induced Loads with Synthetic Turbulence",
+  "url": "https://www.osti.gov/biblio/17426515"
+}
