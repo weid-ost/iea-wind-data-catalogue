@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-10-26T10:10:13Z"
+      "value": "2026-11-09T12:55:04Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-10-25"
+      "value": "2026-11-08"
     },
     {
       "key": "publisher",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "0d1f526ab06afe15ee5b4977ac68320bbaa2a0f6:v0.5.9.3:5196060d8daaf846~m2"
+      "value": "c0c4cd9636a29b0812d17cff7dd86abaff3513bf:v0.7.7:5196060d8daaf846~m2"
     },
     {
       "key": "source_system",
@@ -103,8 +103,8 @@
     },
     {
       "format": "release",
-      "name": "Release v0.5.9.3",
-      "url": "https://github.com/nour1504/offshore-wind-studio/releases/tag/v0.5.9.3"
+      "name": "Release v0.7.7",
+      "url": "https://github.com/nour1504/offshore-wind-studio/releases/tag/v0.7.7"
     }
   ],
   "state": "active",
@@ -133,5 +133,5 @@
   ],
   "title": "nour1504/offshore-wind-studio",
   "url": "https://github.com/nour1504/offshore-wind-studio",
-  "version": "v0.5.9.3"
+  "version": "v0.7.7"
 }

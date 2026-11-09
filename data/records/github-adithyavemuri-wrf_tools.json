@@ -1,0 +1,146 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:55:08Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|adithyavemuri/WRF_tools"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:55:08Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-06"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "adithyavemuri/WRF_tools"
+    },
+    {
+      "key": "source_key",
+      "value": "80d988c167594e2282f2dd89d72615146665863d:v0.6.0:2d0858f5053e4d44~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/adithyavemuri/WRF_tools"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/adithyavemuri/WRF_tools\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-adithyavemuri-wrf_tools",
+  "notes": "Scientific Python toolkit for WRF/WRF-LES analysis, turbulence, wind-energy diagnostics and OpenFAST coupling.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/adithyavemuri/WRF_tools"
+    },
+    {
+      "format": "release",
+      "name": "Release v0.6.0",
+      "url": "https://github.com/adithyavemuri/WRF_tools/releases/tag/v0.6.0"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "atmospheric-science"
+    },
+    {
+      "name": "meteorology"
+    },
+    {
+      "name": "nwp"
+    },
+    {
+      "name": "openfast"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "scientific-computing"
+    },
+    {
+      "name": "turbulence"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wrf"
+    },
+    {
+      "name": "wrf-les"
+    }
+  ],
+  "title": "adithyavemuri/WRF_tools",
+  "url": "https://github.com/adithyavemuri/WRF_tools",
+  "version": "v0.6.0"
+}

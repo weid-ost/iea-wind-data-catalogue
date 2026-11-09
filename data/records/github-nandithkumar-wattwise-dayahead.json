@@ -1,0 +1,135 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:55:17Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|NandithKumar/WattWise-DayAhead"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:55:17Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-04"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "NandithKumar/WattWise-DayAhead"
+    },
+    {
+      "key": "source_key",
+      "value": "21d00c1c63e5b78a162f0da9d5d0a1428ef69532::54bb27afb7f2ac0a~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/NandithKumar/WattWise-DayAhead"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/NandithKumar/WattWise-DayAhead\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-nandithkumar-wattwise-dayahead",
+  "notes": "Day-Ahead Energy Market Intelligence Platform for wind forecasting, forecast accuracy analysis, vintage auditing and operational risk insights.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/NandithKumar/WattWise-DayAhead"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data-analytics"
+    },
+    {
+      "name": "day-ahead"
+    },
+    {
+      "name": "elexon"
+    },
+    {
+      "name": "energy-forecasting"
+    },
+    {
+      "name": "energy-market"
+    },
+    {
+      "name": "fastapi"
+    },
+    {
+      "name": "forecasting"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "react"
+    },
+    {
+      "name": "vite"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "NandithKumar/WattWise-DayAhead",
+  "url": "https://github.com/NandithKumar/WattWise-DayAhead"
+}

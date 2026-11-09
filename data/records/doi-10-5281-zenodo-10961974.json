@@ -1,0 +1,178 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.10961974"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:55:19Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.10961974"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:55:19Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "NOASSERTION"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-04"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10961975\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "octue/octue-sdk-python"
+    },
+    {
+      "key": "source_key",
+      "value": "cb7891f82636502074205cad5b606ea39e511ac5:0.69.2:c5eaa3d47f17cede~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/octue/octue-sdk-python"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/octue/octue-sdk-python\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-5281-zenodo-10961974",
+  "notes": "The python SDK for Twined data services and digital twins.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/octue/octue-sdk-python"
+    },
+    {
+      "format": "release",
+      "name": "Release 0.69.2",
+      "url": "https://github.com/octue/octue-sdk-python/releases/tag/0.69.2"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data"
+    },
+    {
+      "name": "data-service"
+    },
+    {
+      "name": "data-service-development-kit"
+    },
+    {
+      "name": "data-services"
+    },
+    {
+      "name": "digital-twin"
+    },
+    {
+      "name": "digital-twin-application"
+    },
+    {
+      "name": "digital-twin-web"
+    },
+    {
+      "name": "digital-twins"
+    },
+    {
+      "name": "microservice"
+    },
+    {
+      "name": "microservices"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "python3"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "renewables"
+    },
+    {
+      "name": "sdk"
+    },
+    {
+      "name": "sdk-python"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-energy-analytics"
+    }
+  ],
+  "title": "octue/octue-sdk-python",
+  "url": "https://github.com/octue/octue-sdk-python",
+  "version": "0.69.2"
+}

@@ -5,12 +5,12 @@
     "misses": 8
   },
   "dropped_dois": [],
-  "events_appended": 40,
-  "finished_at": "2026-11-02T12:28:16Z",
+  "events_appended": 30,
+  "finished_at": "2026-11-09T12:55:58Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 596,
-    "none": 80
+    "direct": 599,
+    "none": 97
   },
   "max_records": 50,
   "notices": [
@@ -562,9 +562,9 @@
   "pending_extraction": 26,
   "records": {
     "pruned": 0,
-    "total": 676,
-    "unchanged": 637,
-    "written": 39
+    "total": 696,
+    "unchanged": 667,
+    "written": 29
   },
   "sources": {
     "crossref": {
@@ -577,13 +577,13 @@
       "skipped_unchanged": 40
     },
     "datacite": {
-      "changed": 12,
+      "changed": 2,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 38
+      "skipped_unchanged": 48
     },
     "github": {
       "changed": 27,
@@ -635,7 +635,7 @@
       "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-11-02T12:26:14Z",
+  "started_at": "2026-11-09T12:53:58Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",
@@ -691,6 +691,11 @@
       "identity_key": "10.48550/arxiv.2006.07598",
       "license_raw": "arXiv.org perpetual, non-exclusive license",
       "name": "doi-10-48550-arxiv-2006-07598"
+    },
+    {
+      "identity_key": "10.5281/zenodo.10961974",
+      "license_raw": "NOASSERTION",
+      "name": "doi-10-5281-zenodo-10961974"
     },
     {
       "identity_key": "10.5281/zenodo.1284068",

@@ -1,0 +1,150 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:55:07Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|ConnorLava42/scottish-wind-curtailment"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:55:07Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-10-30"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "ConnorLava42/scottish-wind-curtailment"
+    },
+    {
+      "key": "source_key",
+      "value": "9457402e6295f9a27a8ffa2eca2d4024f6b8af8d::37fc1bfd90fa2d0c~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/ConnorLava42/scottish-wind-curtailment"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/ConnorLava42/scottish-wind-curtailment\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-connorlava42-scottish-wind-curtailment",
+  "notes": "Measuring how much Scottish wind farms are paid to switch off when the grid can’t carry their power south. Built from Elexon settlement data: £1.03bn for 28.9 TWh curtailed, Jan 2024 to Oct 2026.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/ConnorLava42/scottish-wind-curtailment"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "balancing-mechanism"
+    },
+    {
+      "name": "curtailment"
+    },
+    {
+      "name": "data-analysis"
+    },
+    {
+      "name": "electricity"
+    },
+    {
+      "name": "elexon"
+    },
+    {
+      "name": "energy"
+    },
+    {
+      "name": "energy-data"
+    },
+    {
+      "name": "grid-constraints"
+    },
+    {
+      "name": "matplotlib"
+    },
+    {
+      "name": "pandas"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "scotland"
+    },
+    {
+      "name": "time-series"
+    },
+    {
+      "name": "uk-energy"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "ConnorLava42/scottish-wind-curtailment",
+  "url": "https://github.com/ConnorLava42/scottish-wind-curtailment"
+}

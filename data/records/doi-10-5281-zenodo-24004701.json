@@ -1,0 +1,147 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.24004701"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:55:10Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.24004701"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:55:10Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-06"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "kwwaleszczynski-del/scada-schema"
+    },
+    {
+      "key": "source_key",
+      "value": "b4565a402cf9fdb4291097b7a2cbf8c657229bd9:v0.1.0:8dccd29c478634f3~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/kwwaleszczynski-del/scada-schema"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/kwwaleszczynski-del/scada-schema\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "doi-10-5281-zenodo-24004701",
+  "notes": "Open data standard for wind and PV SCADA: one schema, loaders for open datasets, QC with HTML report, IEC 61400-26 mapping, YAML importer, converters to wind-up, OpenOA and pvlib",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/kwwaleszczynski-del/scada-schema"
+    },
+    {
+      "format": "release",
+      "name": "Release v0.1.0",
+      "url": "https://github.com/kwwaleszczynski-del/scada-schema/releases/tag/v0.1.0"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data-quality"
+    },
+    {
+      "name": "iec-61400-26"
+    },
+    {
+      "name": "openoa"
+    },
+    {
+      "name": "photovoltaics"
+    },
+    {
+      "name": "pvlib"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-up"
+    }
+  ],
+  "title": "kwwaleszczynski-del/scada-schema",
+  "url": "https://github.com/kwwaleszczynski-del/scada-schema",
+  "version": "v0.1.0"
+}

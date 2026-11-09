@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:55:05Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Henryutd2021/wind-uq-surrogate"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:55:05Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-07"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Henryutd2021/wind-uq-surrogate"
+    },
+    {
+      "key": "source_key",
+      "value": "7431c282ff38de0074dd299e8c6c6a268f06a37c:v1.1.0:6f5b7ecfe72bcc1b~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Henryutd2021/wind-uq-surrogate"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Henryutd2021/wind-uq-surrogate\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-henryutd2021-wind-uq-surrogate",
+  "notes": "UQ metrics for wind time series and surrogate models that map them to calibrated plant-level wind power uncertainty, including at plants without measurements (framework, synthetic examples and a public-data case study)",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Henryutd2021/wind-uq-surrogate"
+    },
+    {
+      "format": "release",
+      "name": "Release v1.1.0",
+      "url": "https://github.com/Henryutd2021/wind-uq-surrogate/releases/tag/v1.1.0"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "ensemble-forecasting"
+    },
+    {
+      "name": "ercot"
+    },
+    {
+      "name": "gaussian-process"
+    },
+    {
+      "name": "pinball-loss"
+    },
+    {
+      "name": "probabilistic-forecasting"
+    },
+    {
+      "name": "scikit-learn"
+    },
+    {
+      "name": "surrogate-modeling"
+    },
+    {
+      "name": "uncertainty-quantification"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Henryutd2021/wind-uq-surrogate",
+  "url": "https://github.com/Henryutd2021/wind-uq-surrogate",
+  "version": "v1.1.0"
+}

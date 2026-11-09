@@ -1,0 +1,134 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:54:56Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|MehrdadFard/WindSiteSelect"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:54:56Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "GPL-2.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-09"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "MehrdadFard/WindSiteSelect"
+    },
+    {
+      "key": "source_key",
+      "value": "0ea5436637251e797f1e16747377762a9f16cfc6:v0.3.3:b8b77af5b30913fe~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/MehrdadFard/WindSiteSelect"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/MehrdadFard/WindSiteSelect\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "gpl-2.0",
+  "name": "github-mehrdadfard-windsiteselect",
+  "notes": "A QGIS plugin for GIS-based wind energy site selection, suitability assessment, spatial filtering and multi-criteria decision analysis.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/MehrdadFard/WindSiteSelect"
+    },
+    {
+      "format": "release",
+      "name": "Release v0.3.3",
+      "url": "https://github.com/MehrdadFard/WindSiteSelect/releases/tag/v0.3.3"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "gis"
+    },
+    {
+      "name": "qgis-plugin"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "site-selection"
+    },
+    {
+      "name": "spatial-analysis"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "MehrdadFard/WindSiteSelect",
+  "url": "https://github.com/MehrdadFard/WindSiteSelect",
+  "version": "v0.3.3"
+}

@@ -1,0 +1,134 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:54:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|ellyess/wind-generation-sources"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:54:57Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-08"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "ellyess/wind-generation-sources"
+    },
+    {
+      "key": "source_key",
+      "value": "c5650238c4020dcd65393d2c6b156710680223e0::42aa150d82f81879~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/ellyess/wind-generation-sources"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/ellyess/wind-generation-sources\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-ellyess-wind-generation-sources",
+  "notes": "Where to find observed wind power generation data, country by country: access, licence and known traps for each source.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/ellyess/wind-generation-sources"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data-catalogue"
+    },
+    {
+      "name": "electricity"
+    },
+    {
+      "name": "energy-data"
+    },
+    {
+      "name": "energy-system-modelling"
+    },
+    {
+      "name": "open-data"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "ellyess/wind-generation-sources",
+  "url": "https://github.com/ellyess/wind-generation-sources"
+}

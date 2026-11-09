@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-09T12:54:58Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Lvy-cyber/era5-wind-resource"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-09T12:54:58Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-09"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Lvy-cyber/era5-wind-resource"
+    },
+    {
+      "key": "source_key",
+      "value": "46447b497b38c45bb457409e2ca0e4a528912da1::8baed4e196597a7e~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Lvy-cyber/era5-wind-resource"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Lvy-cyber/era5-wind-resource\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-lvy-cyber-era5-wind-resource",
+  "notes": "用 ERA5 再分析资料跑通风资源评估：质控 → Weibull → 风切变 → 轮毂外推 → 风玫瑰 → AEP",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Lvy-cyber/era5-wind-resource"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "era5"
+    },
+    {
+      "name": "meteorology"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "weibull"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-resource-assessment"
+    }
+  ],
+  "title": "Lvy-cyber/era5-wind-resource",
+  "url": "https://github.com/Lvy-cyber/era5-wind-resource"
+}
