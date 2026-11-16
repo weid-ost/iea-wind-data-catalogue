@@ -1,0 +1,123 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-16T12:48:16Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|sarahgilmartin123-code/whitelee-wind-constraints-qgis"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-16T12:48:16Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-06"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "sarahgilmartin123-code/whitelee-wind-constraints-qgis"
+    },
+    {
+      "key": "source_key",
+      "value": "b449982ae9486cee0db73ac5b4a49a8018b6bef5::14d3369027f0c4b8~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/sarahgilmartin123-code/whitelee-wind-constraints-qgis"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/sarahgilmartin123-code/whitelee-wind-constraints-qgis\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-sarahgilmartin123-code-whitelee-wind-constraints-qgis",
+  "notes": "Constraint mapping for onshore wind at Whitelee, south of Glasgow. Used QGIS to identify constraint-free land and calculated summary statistics using PyQGIS.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/sarahgilmartin123-code/whitelee-wind-constraints-qgis"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "arcgis-online"
+    },
+    {
+      "name": "gis"
+    },
+    {
+      "name": "pyqgis"
+    },
+    {
+      "name": "qgis"
+    },
+    {
+      "name": "scotland"
+    },
+    {
+      "name": "spatial-analysis"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "sarahgilmartin123-code/whitelee-wind-constraints-qgis",
+  "url": "https://github.com/sarahgilmartin123-code/whitelee-wind-constraints-qgis"
+}

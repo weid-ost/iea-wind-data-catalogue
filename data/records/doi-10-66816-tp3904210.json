@@ -1,0 +1,149 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Blair, Nate\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Baring-Gould, Ian\",\"orcid\":\"0000-0002-5856-3370\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Olis, Dan\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Ovaitt, Silvana\",\"orcid\":\"0000-0003-0180-728X\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.66816/tp3904210"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-16T12:47:04Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.66816/tp3904210"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-16T12:47:04Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-02"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17427627\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/TP-7A40-92375\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/17427627\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/TP-7A40-92375"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "technical-report"
+    },
+    {
+      "key": "source_id",
+      "value": "17427627"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-11-09T10:41:34Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17427627"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17427627\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-66816-tp3904210",
+  "notes": "This report summarizes National Laboratory of the Rockies (NLR) activities to develop a conceptual design of a renewable energy system to meet part of the electrical load of the South Pole station. This report stems from ongoing work between NLR and Argonne National Laboratory (ANL) but only describes the NLR portion of this activity.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17427627"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "14-solar-energy"
+    },
+    {
+      "name": "25-energy-storage"
+    },
+    {
+      "name": "29-energy-planning-policy-and-economy"
+    },
+    {
+      "name": "battery"
+    },
+    {
+      "name": "bifacial"
+    },
+    {
+      "name": "mechanical-design"
+    },
+    {
+      "name": "modeling"
+    },
+    {
+      "name": "raytracing"
+    },
+    {
+      "name": "renewables"
+    },
+    {
+      "name": "reopt"
+    },
+    {
+      "name": "south-pole"
+    },
+    {
+      "name": "wind"
+    }
+  ],
+  "title": "Technical Analysis of Renewable Energy Generation at the South Pole",
+  "url": "https://www.osti.gov/biblio/17427627"
+}

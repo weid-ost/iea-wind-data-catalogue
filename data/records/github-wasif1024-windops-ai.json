@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-11-09T12:55:02Z"
+      "value": "2026-11-16T12:48:10Z"
     },
     {
       "key": "lifecycle_state",
@@ -58,7 +58,7 @@
     },
     {
       "key": "source_key",
-      "value": "1080032090c070dcf4d9a9f0262e431cb431de5c::51f79502d6f4b814~m2"
+      "value": "aaf1f3a1571a6adfcc275efc18d139f097fefe39::fdb8950058637db7~m2"
     },
     {
       "key": "source_system",
@@ -84,7 +84,7 @@
   "groups": [],
   "license_id": "notspecified",
   "name": "github-wasif1024-windops-ai",
-  "notes": "Agentic AI platform for wind farm operations and predictive maintenance, with deterministic safety rules and human approval for high-impact actions. Advisory only; runs on synthetic data.",
+  "notes": "Enterprise Agentic AI platform for wind farm operations and predictive maintenance, combining multi-agent orchestration, deterministic safety controls, auditable decision workflows, and human approval for high-impact actions. Advisory-only; synthetic data.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [

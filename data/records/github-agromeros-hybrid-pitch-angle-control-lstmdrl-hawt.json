@@ -1,0 +1,164 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-16T12:48:23Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Agromeros/Hybrid-Pitch-Angle-Control-LSTMDRL-HAWT"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-16T12:48:23Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-10-18"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Agromeros/Hybrid-Pitch-Angle-Control-LSTMDRL-HAWT"
+    },
+    {
+      "key": "source_key",
+      "value": "ebac1042f0b392926711eda4e258c1713de9caeb::7026c8f3b0111072~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Agromeros/Hybrid-Pitch-Angle-Control-LSTMDRL-HAWT"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Agromeros/Hybrid-Pitch-Angle-Control-LSTMDRL-HAWT\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-agromeros-hybrid-pitch-angle-control-lstmdrl-hawt",
+  "notes": "Trabajo de tesis de grado en el cual se diseña y desarrolla un controlador del ángulo de paso para turbinas eólicas. Este modelo consiste en estudiar la interacción entre la predicción del recurso eólico y el control del ángulo de paso con el fin de maximizar la generación de energía sin comprometer la salud del rotor ni la del controlador.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Agromeros/Hybrid-Pitch-Angle-Control-LSTMDRL-HAWT"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "data-driven-control"
+    },
+    {
+      "name": "data-driven-decision-making"
+    },
+    {
+      "name": "data-science"
+    },
+    {
+      "name": "ddpg-agent"
+    },
+    {
+      "name": "deep-learning"
+    },
+    {
+      "name": "deep-reinforcement-learning"
+    },
+    {
+      "name": "lstm"
+    },
+    {
+      "name": "multiobjective-optimization"
+    },
+    {
+      "name": "multiobjective-reinforcement-learning"
+    },
+    {
+      "name": "offline-reinforcement-learning"
+    },
+    {
+      "name": "pitch-control"
+    },
+    {
+      "name": "prediction"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-speed-prediction"
+    },
+    {
+      "name": "wind-turbine"
+    },
+    {
+      "name": "wind-turbine-blades"
+    },
+    {
+      "name": "wind-turbine-operational-optimization"
+    }
+  ],
+  "title": "Agromeros/Hybrid-Pitch-Angle-Control-LSTMDRL-HAWT",
+  "url": "https://github.com/Agromeros/Hybrid-Pitch-Angle-Control-LSTMDRL-HAWT"
+}

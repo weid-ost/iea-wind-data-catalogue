@@ -5,12 +5,12 @@
     "misses": 8
   },
   "dropped_dois": [],
-  "events_appended": 30,
-  "finished_at": "2026-11-09T12:55:58Z",
+  "events_appended": 32,
+  "finished_at": "2026-11-16T12:49:00Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 599,
-    "none": 97
+    "direct": 601,
+    "none": 105
   },
   "max_records": 50,
   "notices": [
@@ -562,9 +562,9 @@
   "pending_extraction": 26,
   "records": {
     "pruned": 0,
-    "total": 696,
-    "unchanged": 667,
-    "written": 29
+    "total": 706,
+    "unchanged": 675,
+    "written": 31
   },
   "sources": {
     "crossref": {
@@ -606,13 +606,13 @@
       "skipped_unchanged": 0
     },
     "osti": {
-      "changed": 1,
+      "changed": 3,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 36,
-      "skipped_unchanged": 35
+      "skipped_unchanged": 33
     },
     "wdh": {
       "changed": 0,
@@ -635,7 +635,7 @@
       "skipped_unchanged": 50
     }
   },
-  "started_at": "2026-11-09T12:53:58Z",
+  "started_at": "2026-11-16T12:46:48Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",

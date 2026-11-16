@@ -1,0 +1,156 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.23742958"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-16T12:48:03Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.23742958"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-16T12:48:03Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"doi\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-16"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "research-software"
+    },
+    {
+      "key": "source_id",
+      "value": "kwwaleszczynski-del/res-asset-kpi"
+    },
+    {
+      "key": "source_key",
+      "value": "6d372bc92d9809b4dbbde9052ca8cb68d9ec2d9d:v0.1.2:d5ddcb151ccc5972~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/kwwaleszczynski-del/res-asset-kpi"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/kwwaleszczynski-del/res-asset-kpi\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "doi-10-5281-zenodo-23742958",
+  "notes": "Key performance indicators for operating PV, wind and battery assets: PR, availability, energy bridge, power curves, reliability, RTE, cycles, capacity tests and contract damages",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/kwwaleszczynski-del/res-asset-kpi"
+    },
+    {
+      "format": "release",
+      "name": "Release v0.1.2",
+      "url": "https://github.com/kwwaleszczynski-del/res-asset-kpi/releases/tag/v0.1.2"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "asset-management"
+    },
+    {
+      "name": "availability"
+    },
+    {
+      "name": "battery-storage"
+    },
+    {
+      "name": "kpi"
+    },
+    {
+      "name": "performance-ratio"
+    },
+    {
+      "name": "photovoltaics"
+    },
+    {
+      "name": "power-curve"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "rainflow"
+    },
+    {
+      "name": "reliability"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "kwwaleszczynski-del/res-asset-kpi",
+  "url": "https://github.com/kwwaleszczynski-del/res-asset-kpi",
+  "version": "v0.1.2"
+}

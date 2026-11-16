@@ -1,0 +1,134 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Letizia, Stefano\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Hamilton, Nicholas\",\"orcid\":\"0000-0003-3462-341X\"},{\"affiliation\":\"Ecole Polytechnique Federale de Lausanne\",\"name\":\"Brugger, Peter\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Bodini, Nicola\",\"orcid\":\"0000-0002-2550-9853\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Scholbrock, Andy\",\"orcid\":\"0000-0003-1241-6356\"},{\"affiliation\":\"Ecole Polytechnique Federale de Lausanne\",\"name\":\"Porte-Agel, Fernando\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Moriarty, Patrick\",\"orcid\":\"0000-0001-7122-5993\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.66816/tp3003097"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-16T12:47:14Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.66816/tp3003097"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-16T12:47:14Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-04"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17427988\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/TP-5000-99273\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/17427988\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/TP-5000-99273"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "technical-report"
+    },
+    {
+      "key": "source_id",
+      "value": "17427988"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-11-11T10:54:46Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17427988"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17427988\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "doi-10-66816-tp3003097",
+  "notes": "During the American WAKE experimeNt (AWAKEN) field campaign, five 2.8-MW wind turbines at the King Plains wind farm in Oklahoma were equipped with nacelle-mounted scanning lidars. These instruments, which can measure line-of-sight wind velocities over several kilometers and have hemispherical scanning capabilities, are essential tools to characterize the incoming and wake flow of turbines. In this report, we document the experimental setup, the scanning strategy, and the methods used to standardize, quality-control, and carry out bulk statistical analysis of the nacelle lidar data from AWAKEN. The final dataset built through the steps discussed in this document represents the largest collection of nacelle-mounted lidar observations for a land-based wind farm to our knowledge.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17427988"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "42-engineering"
+    },
+    {
+      "name": "awaken"
+    },
+    {
+      "name": "lidar"
+    },
+    {
+      "name": "oklahoma"
+    },
+    {
+      "name": "wake-flow"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Collection, Processing, Quality Control, and Statistical Analysis of the Nacelle-Mounted Lidar Data at AWAKEN",
+  "url": "https://www.osti.gov/biblio/17427988"
+}

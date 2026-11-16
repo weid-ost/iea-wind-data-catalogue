@@ -1,0 +1,131 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-16T12:48:12Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|klshava/renewable-energy-anomaly-detection"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-16T12:48:12Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-15"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "klshava/renewable-energy-anomaly-detection"
+    },
+    {
+      "key": "source_key",
+      "value": "af856d8b64bfe0a051ec3e79a1afe0705f12955c::72cbc55d41e4a07d~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/klshava/renewable-energy-anomaly-detection"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/klshava/renewable-energy-anomaly-detection\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-klshava-renewable-energy-anomaly-detection",
+  "notes": "Unsupervised anomaly detection on public wind-turbine SCADA and solar-plant data (Isolation Forest, kNN distance score) with an audit of its limitations.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/klshava/renewable-energy-anomaly-detection"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "anomaly-detection"
+    },
+    {
+      "name": "isolation-forest"
+    },
+    {
+      "name": "jupyter-notebook"
+    },
+    {
+      "name": "scikit-learn"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "university-project"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "klshava/renewable-energy-anomaly-detection",
+  "url": "https://github.com/klshava/renewable-energy-anomaly-detection"
+}

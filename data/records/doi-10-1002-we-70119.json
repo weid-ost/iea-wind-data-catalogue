@@ -6,7 +6,7 @@
     },
     {
       "key": "authors",
-      "value": "[{\"affiliation\":\"ORNL\",\"name\":\"Hubbard, Amber\"},{\"affiliation\":\"ORNL\",\"name\":\"Korey, Matt\",\"orcid\":\"0000-0002-2285-5646\"},{\"affiliation\":\"ORNL\",\"name\":\"Lamm, Meghan\",\"orcid\":\"0000-0003-3485-4322\"},{\"affiliation\":\"ORNL\",\"name\":\"Copenhaver, Katie\",\"orcid\":\"0000-0003-2261-8760\"},{\"affiliation\":\"ORNL\",\"name\":\"Tobin, Jim\"},{\"affiliation\":\"ORNL\",\"name\":\"Kunc, Vlastimil\",\"orcid\":\"0000-0003-4405-7917\"}]"
+      "value": "[{\"affiliation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)\",\"name\":\"Hubbard, Amber M.\",\"orcid\":\"0009-0001-6127-7893\"},{\"affiliation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States); Univ. of Tennessee, Knoxville, TN (United States)\",\"name\":\"Korey, Matthew\",\"orcid\":\"0000-0002-2285-5646\"},{\"affiliation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)\",\"name\":\"Lamm, Meghan E.\",\"orcid\":\"0000-0003-3485-4322\"},{\"affiliation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)\",\"name\":\"Copenhaver, Katie\",\"orcid\":\"0000-0003-2261-8760\"},{\"affiliation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)\",\"name\":\"Tobin, Jim\",\"orcid\":\"0009-0001-7015-5257\"},{\"affiliation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)\",\"name\":\"Kunc, Vlastimil\",\"orcid\":\"0000-0003-4405-7917\"}]"
     },
     {
       "key": "container",
@@ -38,7 +38,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:31:05Z"
+      "value": "2026-11-16T12:47:08Z"
     },
     {
       "key": "lifecycle_state",
@@ -50,7 +50,11 @@
     },
     {
       "key": "published_date",
-      "value": "2026-04-01"
+      "value": "2026-04-07"
+    },
+    {
+      "key": "publisher",
+      "value": "Wiley"
     },
     {
       "key": "related_identifiers",
@@ -70,7 +74,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-09-05T02:13:29Z~m2"
+      "value": "2026-11-09T10:23:01Z~m2"
     },
     {
       "key": "source_system",
@@ -96,7 +100,7 @@
   "groups": [],
   "license_id": "notspecified",
   "name": "doi-10-1002-we-70119",
-  "notes": "Wind turbine blades are highly engineered structures designed to face temperature extremes and high winds. However, erosion of the blade's leading edge and subsequent repair remains a significant and costly challenge for the wind energy industry. Repair of these leading edges can lead to large amounts of downtime for the turbine and significant operational inefficiencies. In this work, the strength of adhesion and healing ability of a commercially available vitrimer (Mallinda's VITRIMAX) was compared to that of a thermoplastic resin, which has previously been demonstrated in wind energy applications (Arkema's Elium) to evaluate their efficacy as surface coatings for wind turbine blades, particularly their leading edges. Vitrimers are a class of inherently reprocessable thermosets, and it was theorized that vitrimer-based leading edge coatings could enable more robust and efficient wind turbine blades with decreased operational downtime and safer maintenance practices. It was found that the VITRIMAX adhered better to the wind blades' surfaces than both the manufacturer's paint and Elium, with increases in pull-off strength of adhesion ranging from 24% to 83% above that of the original paint. Furthermore, the VITRIMAX adhered strongly to the underlying composite of each blade with strength of adhesion values increasing in ranges from 42% to 97% above that of the original paint. Finally, the vitrimer coating showed an 88% decrease in surface roughness compared to end-of-life blade materials, and initial healing demonstrations in which coatings were manually scratched and subsequently healed exhibited an ~84.5% decrease in scratch depths.",
+  "notes": "Wind turbine blades are highly engineered structures designed to face temperature extremes and high winds. However, erosion of the blade's leading edge and subsequent repair remains a significant and costly challenge for the wind energy industry. Repair of these leading edges can lead to large amounts of downtime for the turbine and significant operational inefficiencies. In this work, the strength of adhesion and healing ability of a commercially available vitrimer (Mallinda's VITRIMAX) was compared to that of a thermoplastic resin, which has previously been demonstrated in wind energy applications (Arkema's Elium) to evaluate their efficacy as surface coatings for wind turbine blades, particularly their leading edges. Vitrimers are a class of inherently reprocessable thermosets, and it was theorized that vitrimer‐based leading edge coatings could enable more robust and efficient wind turbine blades with decreased operational downtime and safer maintenance practices. It was found that the VITRIMAX adhered better to the wind blades' surfaces than both the manufacturer's paint and Elium, with increases in pull‐off strength of adhesion ranging from 24% to 83% above that of the original paint. Furthermore, the VITRIMAX adhered strongly to the underlying composite of each blade with strength of adhesion values increasing in ranges from 42% to 97% above that of the original paint. Finally, the vitrimer coating showed an 88% decrease in surface roughness compared to end‐of‐life blade materials, and initial healing demonstrations in which coatings were manually scratched and subsequently healed exhibited an ~84.5% decrease in scratch depths.",
   "owner_org": "unattributed",
   "private": false,
   "resources": [
@@ -106,7 +110,26 @@
     }
   ],
   "state": "active",
-  "tags": [],
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "functional-coatings"
+    },
+    {
+      "name": "healable-resins"
+    },
+    {
+      "name": "leading-edges"
+    },
+    {
+      "name": "vitrimers"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
   "title": "Healable Coatings as a Mechanism to Repair Leading Edge Erosion in Wind Energy",
   "url": "https://www.osti.gov/biblio/3682557"
 }

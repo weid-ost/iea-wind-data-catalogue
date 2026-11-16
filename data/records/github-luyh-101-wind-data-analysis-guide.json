@@ -1,0 +1,132 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-16T12:48:05Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|luyh-101/wind-data-analysis-guide"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-16T12:48:05Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-15"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "luyh-101/wind-data-analysis-guide"
+    },
+    {
+      "key": "source_key",
+      "value": "fd1eb0eb7eb10354077de1f0635843e40f58404d::4920dedef65f0228~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/luyh-101/wind-data-analysis-guide"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/luyh-101/wind-data-analysis-guide\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-luyh-101-wind-data-analysis-guide",
+  "notes": "面向计算机团队的风电数据分析教程：运行工况、SCADA 筛选、变桨异常筛查、两路测风对照、同期功率与风场后评估",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/luyh-101/wind-data-analysis-guide"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "anomaly-detection"
+    },
+    {
+      "name": "data-analysis"
+    },
+    {
+      "name": "measurement"
+    },
+    {
+      "name": "pitch-control"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "tutorial"
+    },
+    {
+      "name": "vitepress"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-turbine"
+    }
+  ],
+  "title": "luyh-101/wind-data-analysis-guide",
+  "url": "https://github.com/luyh-101/wind-data-analysis-guide"
+}

@@ -1,0 +1,137 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-16T12:48:07Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Adz1DoubleD/turbine-troubleshooter-bot"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-16T12:48:07Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-16"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Adz1DoubleD/turbine-troubleshooter-bot"
+    },
+    {
+      "key": "source_key",
+      "value": "f866ed9c1da65195ed3daa41170d4318e2a4eb4d:v1.0.0:42ff16e92f7e3012~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Adz1DoubleD/turbine-troubleshooter-bot"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Adz1DoubleD/turbine-troubleshooter-bot\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-adz1doubled-turbine-troubleshooter-bot",
+  "notes": "Telegram bot for wind turbine technicians: fault codes, spare parts and reference content behind approval-based access.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Adz1DoubleD/turbine-troubleshooter-bot"
+    },
+    {
+      "format": "release",
+      "name": "Release v1.0.0",
+      "url": "https://github.com/Adz1DoubleD/turbine-troubleshooter-bot/releases/tag/v1.0.0"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "maintenance"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "python-telegram-bot"
+    },
+    {
+      "name": "telegram-bot"
+    },
+    {
+      "name": "troubleshooting"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-turbine"
+    }
+  ],
+  "title": "Adz1DoubleD/turbine-troubleshooter-bot",
+  "url": "https://github.com/Adz1DoubleD/turbine-troubleshooter-bot",
+  "version": "v1.0.0"
+}
