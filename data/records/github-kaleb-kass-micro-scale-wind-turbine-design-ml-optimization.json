@@ -1,0 +1,138 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:20Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Kaleb-kass/Micro-Scale-Wind-Turbine-Design-ML-Optimization"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:20Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-12-30"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Kaleb-kass/Micro-Scale-Wind-Turbine-Design-ML-Optimization"
+    },
+    {
+      "key": "source_key",
+      "value": "4d47ff73937720e741a3c69a8ea96a1938221195::192521b28381c71c~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Kaleb-kass/Micro-Scale-Wind-Turbine-Design-ML-Optimization"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Kaleb-kass/Micro-Scale-Wind-Turbine-Design-ML-Optimization\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-kaleb-kass-micro-scale-wind-turbine-design-ml-optimization",
+  "notes": "Design of a 1.17 m micro wind turbine (E176 airfoil): Weibull wind analysis, BEM blade design, Gaussian process optimization of rotor speed (Python) and 3D CFD verification in Ansys CFX.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Kaleb-kass/Micro-Scale-Wind-Turbine-Design-ML-Optimization"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "ansys-cfx"
+    },
+    {
+      "name": "blade-element-momentum"
+    },
+    {
+      "name": "cfd"
+    },
+    {
+      "name": "energy-engineering"
+    },
+    {
+      "name": "gaussian-process-regression"
+    },
+    {
+      "name": "machine-learning"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "scikit-learn"
+    },
+    {
+      "name": "surrogate-model"
+    },
+    {
+      "name": "weibull"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-turbine"
+    }
+  ],
+  "title": "Kaleb-kass/Micro-Scale-Wind-Turbine-Design-ML-Optimization",
+  "url": "https://github.com/Kaleb-kass/Micro-Scale-Wind-Turbine-Design-ML-Optimization"
+}

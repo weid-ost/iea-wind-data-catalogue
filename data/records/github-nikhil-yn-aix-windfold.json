@@ -1,0 +1,143 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:17Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|nikhil-yn-aix/windfold"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:17Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"version\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-22"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "nikhil-yn-aix/windfold"
+    },
+    {
+      "key": "source_key",
+      "value": "4346024a72b7628a736e703320745a57dd5e1a58:v0.1.1:71029b4788204f7a~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/nikhil-yn-aix/windfold"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/nikhil-yn-aix/windfold\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-nikhil-yn-aix-windfold",
+  "notes": "wind-farm wake interactions learned from SCADA and tested on wind directions held out from training",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/nikhil-yn-aix/windfold"
+    },
+    {
+      "format": "release",
+      "name": "Release v0.1.1",
+      "url": "https://github.com/nikhil-yn-aix/windfold/releases/tag/v0.1.1"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "benchmark"
+    },
+    {
+      "name": "cross-validation"
+    },
+    {
+      "name": "distribution-shift"
+    },
+    {
+      "name": "machine-learning"
+    },
+    {
+      "name": "pywake"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "wake-modeling"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-farm"
+    }
+  ],
+  "title": "nikhil-yn-aix/windfold",
+  "url": "https://github.com/nikhil-yn-aix/windfold",
+  "version": "v0.1.1"
+}

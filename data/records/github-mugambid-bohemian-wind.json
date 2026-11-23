@@ -1,0 +1,149 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:10Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|MugambiD/Bohemian-Wind"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:10Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-18"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "MugambiD/Bohemian-Wind"
+    },
+    {
+      "key": "source_key",
+      "value": "afed2f7d5683cd59c9e95aa12fa5d5c0f1fd69c6::6484d0c70b554a5a~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/MugambiD/Bohemian-Wind"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/MugambiD/Bohemian-Wind\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-mugambid-bohemian-wind",
+  "notes": "Open-source wind project development: met mast data checks, long-term correction, wind maps (linear model, Global Wind Atlas or CFD with OpenFOAM), layout and energy, noise and shadow flicker, permitting packs. Developer estimates, not bankable assessments.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/MugambiD/Bohemian-Wind"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "africa"
+    },
+    {
+      "name": "cfd"
+    },
+    {
+      "name": "energy-yield"
+    },
+    {
+      "name": "gis"
+    },
+    {
+      "name": "met-mast"
+    },
+    {
+      "name": "openfoam"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "pywake"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "shadow-flicker"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-farm"
+    },
+    {
+      "name": "wind-resource-assessment"
+    }
+  ],
+  "title": "MugambiD/Bohemian-Wind",
+  "url": "https://github.com/MugambiD/Bohemian-Wind"
+}

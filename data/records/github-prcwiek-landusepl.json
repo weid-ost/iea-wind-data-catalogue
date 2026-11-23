@@ -1,0 +1,131 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:32Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|prcwiek/landusepl"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:32Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "GPL-3.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-12-06"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "prcwiek/landusepl"
+    },
+    {
+      "key": "source_key",
+      "value": "a23b39ac0f9f44fc51b9ebcbace16a22bfe3d941::349862507596c091~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/prcwiek/landusepl"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/prcwiek/landusepl\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "gpl-3.0",
+  "name": "github-prcwiek-landusepl",
+  "notes": "CORINE landuse map to WAsP roughness",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/prcwiek/landusepl"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "corine-land-cover"
+    },
+    {
+      "name": "land-cover"
+    },
+    {
+      "name": "roughness-length"
+    },
+    {
+      "name": "wasp"
+    },
+    {
+      "name": "wasp-roughness"
+    },
+    {
+      "name": "wind"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "prcwiek/landusepl",
+  "url": "https://github.com/prcwiek/landusepl"
+}

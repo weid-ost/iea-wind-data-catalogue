@@ -34,7 +34,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-11-09T12:54:23Z"
+      "value": "2026-11-23T14:41:25Z"
     },
     {
       "key": "license_mapped",
@@ -54,15 +54,11 @@
     },
     {
       "key": "published_date",
-      "value": "2026-10-22"
+      "value": "2026-11-19"
     },
     {
       "key": "publisher",
       "value": "GitHub"
-    },
-    {
-      "key": "related_identifiers",
-      "value": "[{\"identifier\":\"10.5281/zenodo.23569978\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
     },
     {
       "key": "resource_kind",
@@ -78,7 +74,7 @@
     },
     {
       "key": "source_key",
-      "value": "cb343a57cbefdabd77000439bfd73210f63758cc:v1.0:4b2446f55aa313c3~m2"
+      "value": "1aa8678fdd909bf385046ecc93f075093ca958a9:v1.1:4b2446f55aa313c3~m2"
     },
     {
       "key": "source_system",
@@ -119,13 +115,13 @@
     },
     {
       "format": "release",
-      "name": "Release v1.0",
-      "url": "https://github.com/IEAWindSystems/IEA-Wind-2200-22-ROWP/releases/tag/v1.0"
+      "name": "Release v1.1",
+      "url": "https://github.com/IEAWindSystems/IEA-Wind-2200-22-ROWP/releases/tag/v1.1"
     }
   ],
   "state": "active",
   "tags": [],
   "title": "IEAWindSystems/IEA-Wind-2200-22-ROWP",
   "url": "https://github.com/IEAWindSystems/IEA-Wind-2200-22-ROWP",
-  "version": "v1.0"
+  "version": "v1.1"
 }

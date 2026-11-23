@@ -5,12 +5,12 @@
     "misses": 8
   },
   "dropped_dois": [],
-  "events_appended": 32,
-  "finished_at": "2026-11-16T12:49:00Z",
+  "events_appended": 40,
+  "finished_at": "2026-11-23T14:43:22Z",
   "harvest_version": "0.1.0",
   "inclusion": {
-    "direct": 601,
-    "none": 105
+    "direct": 606,
+    "none": 118
   },
   "max_records": 50,
   "notices": [
@@ -562,9 +562,9 @@
   "pending_extraction": 26,
   "records": {
     "pruned": 0,
-    "total": 706,
-    "unchanged": 675,
-    "written": 31
+    "total": 724,
+    "unchanged": 687,
+    "written": 37
   },
   "sources": {
     "crossref": {
@@ -577,13 +577,13 @@
       "skipped_unchanged": 40
     },
     "datacite": {
-      "changed": 2,
+      "changed": 10,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 48
+      "skipped_unchanged": 40
     },
     "github": {
       "changed": 27,
@@ -606,13 +606,13 @@
       "skipped_unchanged": 0
     },
     "osti": {
-      "changed": 3,
+      "changed": 1,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
-      "seen": 36,
-      "skipped_unchanged": 33
+      "seen": 35,
+      "skipped_unchanged": 34
     },
     "wdh": {
       "changed": 0,
@@ -626,16 +626,16 @@
       "skipped_unchanged": 0
     },
     "zenodo": {
-      "changed": 0,
+      "changed": 2,
       "enabled": true,
       "errors": [],
       "implemented": true,
       "reachable": true,
       "seen": 50,
-      "skipped_unchanged": 50
+      "skipped_unchanged": 48
     }
   },
-  "started_at": "2026-11-16T12:46:48Z",
+  "started_at": "2026-11-23T14:40:56Z",
   "unmapped_licenses": [
     {
       "identity_key": "10.1002/we.1588",
@@ -756,6 +756,11 @@
       "identity_key": "github|efirvida/AeroElast",
       "license_raw": "NOASSERTION",
       "name": "github-efirvida-aeroelast"
+    },
+    {
+      "identity_key": "github|seabilwe/wind-site-za",
+      "license_raw": "NOASSERTION",
+      "name": "github-seabilwe-wind-site-za"
     }
   ],
   "unreachable_sources": [

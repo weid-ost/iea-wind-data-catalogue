@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-11-16T12:48:07Z"
+      "value": "2026-11-23T14:42:24Z"
     },
     {
       "key": "license_mapped",
@@ -46,7 +46,7 @@
     },
     {
       "key": "published_date",
-      "value": "2026-11-16"
+      "value": "2026-11-21"
     },
     {
       "key": "publisher",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "f866ed9c1da65195ed3daa41170d4318e2a4eb4d:v1.0.0:42ff16e92f7e3012~m2"
+      "value": "0d5d7c0dd71b5db249b8efd8c6f5248220567e80:v3.0.0:42ff16e92f7e3012~m2"
     },
     {
       "key": "source_system",
@@ -103,8 +103,8 @@
     },
     {
       "format": "release",
-      "name": "Release v1.0.0",
-      "url": "https://github.com/Adz1DoubleD/turbine-troubleshooter-bot/releases/tag/v1.0.0"
+      "name": "Release v3.0.0",
+      "url": "https://github.com/Adz1DoubleD/turbine-troubleshooter-bot/releases/tag/v3.0.0"
     }
   ],
   "state": "active",
@@ -133,5 +133,5 @@
   ],
   "title": "Adz1DoubleD/turbine-troubleshooter-bot",
   "url": "https://github.com/Adz1DoubleD/turbine-troubleshooter-bot",
-  "version": "v1.0.0"
+  "version": "v3.0.0"
 }

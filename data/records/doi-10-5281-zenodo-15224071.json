@@ -1,0 +1,164 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"ETH Zurich\",\"family\":\"Marykovskiy\",\"given\":\"Yuriy\",\"name\":\"Marykovskiy, Yuriy\",\"orcid\":\"0000-0002-6570-6966\"},{\"affiliation\":\"Octue Ltd\",\"family\":\"Clark\",\"given\":\"Thomas\",\"name\":\"Clark, Thomas\"},{\"affiliation\":\"HES-SO Valais-Wallis\",\"family\":\"Aymon\",\"given\":\"Ekaterina\",\"name\":\"Aymon, Ekaterina\"},{\"affiliation\":\"HES-SO University of Applied Sciences and Arts Western Switzerland\",\"family\":\"Calbimonte\",\"given\":\"Jean-Paul\",\"name\":\"Calbimonte, Jean-Paul\",\"orcid\":\"0000-0002-0364-6945\"},{\"affiliation\":\"ETH Zurich\",\"family\":\"Chatzi\",\"given\":\"Eleni\",\"name\":\"Chatzi, Eleni\",\"orcid\":\"0000-0002-6870-240X\"},{\"affiliation\":\"OST - Ostschweizer Fachhochschule\",\"family\":\"Barber\",\"given\":\"Sarah\",\"name\":\"Barber, Sarah\",\"orcid\":\"0000-0002-7329-6434\"}]"
+    },
+    {
+      "key": "container",
+      "value": "Wind Europe Annual Event 2025"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.15224071"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:40:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.15224071"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-43\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\" and community:iea_wind_task_43, which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:40:59Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"zenodo\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"zenodo\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2025-04"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.15224071\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"},{\"identifier\":\"https://community.wedowind.ch/\",\"identifier_type\":\"URL\",\"relation\":\"references\"},{\"identifier\":\"https://technoportal.hevs.ch/\",\"identifier_type\":\"URL\",\"relation\":\"references\"},{\"identifier\":\"https://strands.octue.com/\",\"identifier_type\":\"URL\",\"relation\":\"references\"},{\"identifier\":\"https://community.wedowind.ch/\",\"identifier_type\":\"URL\",\"relation\":\"References\"},{\"identifier\":\"https://technoportal.hevs.ch/\",\"identifier_type\":\"URL\",\"relation\":\"References\"},{\"identifier\":\"https://strands.octue.com/\",\"identifier_type\":\"URL\",\"relation\":\"References\"},{\"identifier\":\"10.5281/zenodo.15224072\",\"identifier_type\":\"DOI\",\"relation\":\"HasVersion\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "other"
+    },
+    {
+      "key": "resource_type",
+      "value": "poster"
+    },
+    {
+      "key": "source_id",
+      "value": "15224072"
+    },
+    {
+      "key": "source_key",
+      "value": "8@10.5281/zenodo.15224072~m3"
+    },
+    {
+      "key": "source_system",
+      "value": "zenodo"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\",\"zenodo\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/records/15224072"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/records/15224072\",\"https://zenodo.org/doi/10.5281/zenodo.15224071\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-43"
+    }
+  ],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-15224071",
+  "notes": "The digitalisation of the wind energy sector is essential for improving interoperability and data sharing among stakeholders, supporting advancements in technologies like Intelligent Digital Twins. However, the lack of common, community-adopted information models hinders seamless information exchange and knowledge management. This work proposes a collaborative, community driven approach to developing wind energy domain information models, drawing on the Methontology and Ontology Development 101 methodologies and leveraging open-source practices for sustainable development and community engagement. Existing software tools are explored and new ones are created to streamline the modeling and publishing process, minimising overhead in terms of manual effort and technical complexity, while ensuring adherence to FAIR principles. The results include the formalisation and publication of several key information models, contributing to improved industry-wide data exchange and decision-making.",
+  "owner_org": "ost",
+  "private": false,
+  "resources": [
+    {
+      "format": "pdf",
+      "name": "PO017.pdf",
+      "url": "https://zenodo.org/records/15224072/files/PO017.pdf"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "artificial-intelligence"
+    },
+    {
+      "name": "conceptual-model"
+    },
+    {
+      "name": "digital-twin"
+    },
+    {
+      "name": "iea-wind-task-43"
+    },
+    {
+      "name": "iea-wind-tcp"
+    },
+    {
+      "name": "information-model"
+    },
+    {
+      "name": "knowledge-engineering"
+    },
+    {
+      "name": "knowledge-grounding"
+    },
+    {
+      "name": "retrieval-augmented-generation"
+    },
+    {
+      "name": "wind-power"
+    }
+  ],
+  "title": "Community-driven wind energy domain information models",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.15224071"
+}

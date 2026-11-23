@@ -1,0 +1,129 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:18Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|mrw-soumik/wakewise-nl"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:18Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-07"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "mrw-soumik/wakewise-nl"
+    },
+    {
+      "key": "source_key",
+      "value": "8d2643a15423a4f1ef502e3a0a7a215b271f8b47::3e85dbeaddfa8d54~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/mrw-soumik/wakewise-nl"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/mrw-soumik/wakewise-nl\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-mrw-soumik-wakewise-nl",
+  "notes": "WakeWise NL: wake-aware wind-turbine siting for Newfoundland's west coast as a QUBO solved with QAOA in Qiskit, tested on 19 years of real wind and on IBM quantum hardware up to 24 qubits (Qiskit Fall Fest 2026).",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/mrw-soumik/wakewise-nl"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "hackathon"
+    },
+    {
+      "name": "newfoundland-and-labrador"
+    },
+    {
+      "name": "optimization"
+    },
+    {
+      "name": "pywake"
+    },
+    {
+      "name": "qaoa"
+    },
+    {
+      "name": "qiskit"
+    },
+    {
+      "name": "quantum-computing"
+    },
+    {
+      "name": "qubo"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "mrw-soumik/wakewise-nl",
+  "url": "https://github.com/mrw-soumik/wakewise-nl"
+}

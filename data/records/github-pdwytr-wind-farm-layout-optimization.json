@@ -1,0 +1,120 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:35Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|pdwytr/wind-farm-layout-optimization"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:35Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2020-11-24"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "pdwytr/wind-farm-layout-optimization"
+    },
+    {
+      "key": "source_key",
+      "value": "678e0d456b2cdf9512199dd24569b7bee2b1a38e::0adfbb8da10918b5~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/pdwytr/wind-farm-layout-optimization"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/pdwytr/wind-farm-layout-optimization\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-pdwytr-wind-farm-layout-optimization",
+  "notes": "Genetic algorithm that places 50 offshore wind turbines to maximise annual energy production under wake losses (Shell.ai Hackathon 2020, 32nd place).",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/pdwytr/wind-farm-layout-optimization"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "genetic-algorithm"
+    },
+    {
+      "name": "optimization"
+    },
+    {
+      "name": "python"
+    },
+    {
+      "name": "shell-ai-hackathon"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-farm"
+    }
+  ],
+  "title": "pdwytr/wind-farm-layout-optimization",
+  "url": "https://github.com/pdwytr/wind-farm-layout-optimization"
+}

@@ -38,11 +38,11 @@
     },
     {
       "key": "inclusion_evidence",
-      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\" and community:iea_wind_task_43, which is an IEA Wind attribution."
+      "value": "Found through query:creators.affiliation.name:\"IEA Wind\" OR descriptions.description:\"IEA Wind\", community:iea_wind_task_43 and query:\"IEA Wind Task\", which is an IEA Wind attribution."
     },
     {
       "key": "last_seen",
-      "value": "2026-09-08T15:28:06Z"
+      "value": "2026-11-23T14:40:59Z"
     },
     {
       "key": "license_mapped",
@@ -90,7 +90,7 @@
     },
     {
       "key": "source_key",
-      "value": "4@10.5281/zenodo.20556735~m3"
+      "value": "6@10.5281/zenodo.20556735~m3"
     },
     {
       "key": "source_system",
@@ -132,6 +132,9 @@
   ],
   "state": "active",
   "tags": [
+    {
+      "name": "iea-wind-task-43"
+    },
     {
       "name": "wind-power"
     }

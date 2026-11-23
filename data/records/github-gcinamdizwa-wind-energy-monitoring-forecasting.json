@@ -1,0 +1,149 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:33Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|GcinaMdizwa/wind-energy-monitoring-forecasting"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:33Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "BSD-2-Clause"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-14"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "GcinaMdizwa/wind-energy-monitoring-forecasting"
+    },
+    {
+      "key": "source_key",
+      "value": "99d5724136ab124b1074e8c5494d190185df5221::d44153a4ebb34a32~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/GcinaMdizwa/wind-energy-monitoring-forecasting"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/GcinaMdizwa/wind-energy-monitoring-forecasting\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "bsd-2-clause",
+  "name": "github-gcinamdizwa-wind-energy-monitoring-forecasting",
+  "notes": "I built WindScope, a local dashboard where I monitor modelled 100 m wind for any place and estimate turbine power. I train RNN/LSTM models on ERA5 history to forecast 24 hours ahead and map wind-power potential by municipality or province. It grew out of a CHPC workshop I worked on with colleagues.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/GcinaMdizwa/wind-energy-monitoring-forecasting"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "era5"
+    },
+    {
+      "name": "fastapi"
+    },
+    {
+      "name": "geospatial"
+    },
+    {
+      "name": "gis"
+    },
+    {
+      "name": "leaflet"
+    },
+    {
+      "name": "lstm"
+    },
+    {
+      "name": "pytorch"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "rnn"
+    },
+    {
+      "name": "south-africa"
+    },
+    {
+      "name": "time-series-forecasting"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power-forecasting"
+    }
+  ],
+  "title": "GcinaMdizwa/wind-energy-monitoring-forecasting",
+  "url": "https://github.com/GcinaMdizwa/wind-energy-monitoring-forecasting"
+}

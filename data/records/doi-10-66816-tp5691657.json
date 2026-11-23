@@ -1,0 +1,157 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Wang, Lu\",\"orcid\":\"0000-0001-6739-8998\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Robertson, Amy\",\"orcid\":\"0000-0001-7448-4632\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Liao, Yingqian\"},{\"affiliation\":\"National Laboratory of the Rockies, Golden, CO (United States)\",\"name\":\"Jonkman, Jason\",\"orcid\":\"0000-0003-2990-7362\"},{\"affiliation\":\"SINTEF\",\"name\":\"Berthelsen, Petter Andreas\"},{\"affiliation\":\"SINTEF\",\"name\":\"Abdelmoteleb, Serag-Eldin\"},{\"affiliation\":\"University of Central Florida\",\"name\":\"Das, Tuhin\"},{\"affiliation\":\"University of Central Florida\",\"name\":\"Sarker, Doyal\"},{\"affiliation\":\"University of Central Florida\",\"name\":\"Ngo, Tri\"},{\"affiliation\":\"Norwegian University of Science & Technology\",\"name\":\"Rohrer, Peter\"},{\"affiliation\":\"Norwegian University of Science & Technology\",\"name\":\"Ramachandran Nair Rajasree, Vishnu\"},{\"affiliation\":\"Norwegian University of Science & Technology\",\"name\":\"Bachynski-Polic, Erin\"},{\"affiliation\":\"PRINCIPIA Group\",\"name\":\"Clement, Constance\"},{\"affiliation\":\"PRINCIPIA Group\",\"name\":\"Le Cunff, Cedric\"},{\"affiliation\":\"Electricite de France\",\"name\":\"Vlachogiannis, Prokopios\"},{\"affiliation\":\"Electricite de France\",\"name\":\"Peyrard, Christophe\"},{\"affiliation\":\"University College Cork\",\"name\":\"Pham, Dam Thanh\"},{\"affiliation\":\"University College Cork\",\"name\":\"Leahy, Paul\"},{\"affiliation\":\"Bureau Veritas\",\"name\":\"Bouysses, Valerie\"},{\"affiliation\":\"Bureau Veritas\",\"name\":\"Brun, Cedric\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"name\":\"Cheng, Zhengshun\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"name\":\"Chen, Peng\"},{\"affiliation\":\"Shanghai Jiao Tong University\",\"name\":\"Hu, Zhirong\"},{\"affiliation\":\"Norwegian University of Science & Technology; Ocean University of China\",\"name\":\"Bai, Haozhe\"},{\"affiliation\":\"Ocean University of China\",\"name\":\"Xu, Kun\"},{\"affiliation\":\"Polytechnic University of Turin\",\"name\":\"Niosi, Francesco\"},{\"affiliation\":\"Polytechnic University of Turin\",\"name\":\"Dell'Edera, Oronzo\"},{\"affiliation\":\"Polytechnic University of Turin\",\"name\":\"Paduano, Bruno\"},{\"affiliation\":\"Polytechnic University of Turin\",\"name\":\"Bertozzi, Andrea\"},{\"affiliation\":\"Polytechnic University of Turin\",\"name\":\"Bracco, Giovanni\"},{\"affiliation\":\"University of Salerno; Uppsala University\",\"name\":\"Tagliafierro, Bonaventura\"},{\"affiliation\":\"Dalian University of Technology\",\"name\":\"Shi, Wei\"},{\"affiliation\":\"Dalian University of Technology\",\"name\":\"Fu, Yushun\"},{\"affiliation\":\"Dalian University of Technology\",\"name\":\"Abid, Ali\"},{\"affiliation\":\"University of Tokyo\",\"name\":\"Goncalves, Rodolfo\"},{\"affiliation\":\"Technical University of Berlin\",\"name\":\"Marten, David\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.66816/tp5691657"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:41:04Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.66816/tp5691657"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "iea_task",
+      "value": "[\"task-56\"]"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:41:04Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"access_status\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"iea_task\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"osti\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"report_number\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"osti\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-13"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"17429414\",\"identifier_type\":\"OSTI\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"NLR/TP-5000-96936\",\"identifier_type\":\"Report-Number\",\"relation\":\"IsIdenticalTo\"},{\"identifier\":\"https://www.osti.gov/biblio/17429414\",\"identifier_type\":\"URL\",\"relation\":\"IsVariantFormOf\"}]"
+    },
+    {
+      "key": "report_number",
+      "value": "NLR/TP-5000-96936"
+    },
+    {
+      "key": "resource_kind",
+      "value": "report"
+    },
+    {
+      "key": "resource_type",
+      "value": "technical-report"
+    },
+    {
+      "key": "source_id",
+      "value": "17429414"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-11-20T10:43:45Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "osti"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"osti\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://www.osti.gov/biblio/17429414"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://www.osti.gov/biblio/17429414\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [
+    {
+      "name": "task-56"
+    }
+  ],
+  "license_id": "notspecified",
+  "name": "doi-10-66816-tp5691657",
+  "notes": "The Offshore Code Comparison (OC7) project is a collaborative research initiative under the International Energy Agency (IEA) Wind Technology Collaboration Programme Task 56, aimed at advancing and validating engineering-level design tools for floating energy platforms. This report presents a set of modeling recommendations developed through Work Package (WP) 1.1 of OC7 Phase I, which specifically addresses the challenge of accurately representing hydrodynamic viscous drag and damping. These effects are critical for predicting system-level loads - particularly low-frequency motions and resonances - that strongly influence platform behavior and mooring system performance. The overall strategy adopted for this work package is to investigate the dependence of optimal model drag and damping coefficients on floater geometry and environmental conditions, so that these dependencies can be incorporated in future modeling efforts in a more predictive manner. The validation focused on nonlinear low-frequency loads, mean and slow-drift motions, and heave and pitch resonance - all of which are highly sensitive to viscous effects and have a direct impact on structural and mooring loads. The recommendations provided in this document are intended to be applicable to different, but similar, semisubmersible designs as a step toward more accurate and predictive hydrodynamic modeling with engineering-level design tools.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "name": "Full text at OSTI",
+      "url": "https://www.osti.gov/servlets/purl/17429414"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "17-wind-energy"
+    },
+    {
+      "name": "drag"
+    },
+    {
+      "name": "hydrodynamics"
+    },
+    {
+      "name": "low-frequency"
+    },
+    {
+      "name": "modeling"
+    },
+    {
+      "name": "oc7"
+    },
+    {
+      "name": "recommendation"
+    },
+    {
+      "name": "resonance"
+    },
+    {
+      "name": "sea-state"
+    },
+    {
+      "name": "semisubmersible"
+    },
+    {
+      "name": "validation"
+    },
+    {
+      "name": "viscous"
+    }
+  ],
+  "title": "OC7 Phase I: Recommendations on More Refined Modeling of Hydrodynamic Viscous Loads",
+  "url": "https://www.osti.gov/biblio/17429414"
+}

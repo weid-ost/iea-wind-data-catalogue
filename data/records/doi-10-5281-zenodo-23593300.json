@@ -30,7 +30,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-11-02T12:26:15Z"
+      "value": "2026-11-23T14:40:57Z"
     },
     {
       "key": "license_mapped",
@@ -74,7 +74,7 @@
     },
     {
       "key": "source_key",
-      "value": "2026-10-26T18:01:19Z~m2"
+      "value": "2026-11-16T15:20:41Z~m2"
     },
     {
       "key": "source_system",
@@ -110,7 +110,16 @@
       "name": "aerodynamics"
     },
     {
+      "name": "aeronautical-engineering"
+    },
+    {
+      "name": "aerospace-engineering"
+    },
+    {
       "name": "benchmark"
+    },
+    {
+      "name": "electric-energy"
     },
     {
       "name": "iea-wind-task-30"
@@ -122,7 +131,13 @@
       "name": "offshore-wind"
     },
     {
+      "name": "renewable-energy"
+    },
+    {
       "name": "wind-power"
+    },
+    {
+      "name": "wind-power-station"
     }
   ],
   "title": "Floating Wind Turbine Rotor Aerodynamics Benchmark (IEA Wind Task 30 OC6 Phase III)",

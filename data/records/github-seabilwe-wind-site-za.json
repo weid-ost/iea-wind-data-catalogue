@@ -1,0 +1,128 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:28Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|seabilwe/wind-site-za"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:28Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "false"
+    },
+    {
+      "key": "license_raw",
+      "value": "NOASSERTION"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-20"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "seabilwe/wind-site-za"
+    },
+    {
+      "key": "source_key",
+      "value": "a9e8736f3b775fa00d621a5317ce5bd709060a9d::d4a127094dc26cc6~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/seabilwe/wind-site-za"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/seabilwe/wind-site-za\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-seabilwe-wind-site-za",
+  "notes": "Wind-farm siting workflow for the Cookhouse Wind REDZ, South Africa: one Python engine for QGIS and ArcGIS Pro, with a QField site-check form",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/seabilwe/wind-site-za"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "arcgis-pro"
+    },
+    {
+      "name": "qfield"
+    },
+    {
+      "name": "qgis"
+    },
+    {
+      "name": "site-suitability"
+    },
+    {
+      "name": "south-africa"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "seabilwe/wind-site-za",
+  "url": "https://github.com/seabilwe/wind-site-za"
+}

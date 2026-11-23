@@ -26,7 +26,7 @@
     },
     {
       "key": "last_seen",
-      "value": "2026-11-09T12:55:03Z"
+      "value": "2026-11-23T14:42:27Z"
     },
     {
       "key": "license_mapped",
@@ -66,7 +66,7 @@
     },
     {
       "key": "source_key",
-      "value": "fe81b7f0fcc6611a462c6f688ae738ab5e90cae8::bd95f4d3c8e0534e~m2"
+      "value": "6dafadf1fa7fc644697cfcad7daa9390d0821963::bd988c4bf842abe3~m2"
     },
     {
       "key": "source_system",
@@ -114,6 +114,9 @@
       "name": "hackathon"
     },
     {
+      "name": "hackathon-winner"
+    },
+    {
       "name": "ionq"
     },
     {
@@ -136,6 +139,12 @@
     },
     {
       "name": "qubo"
+    },
+    {
+      "name": "utn"
+    },
+    {
+      "name": "utn-frba"
     },
     {
       "name": "wake-model"

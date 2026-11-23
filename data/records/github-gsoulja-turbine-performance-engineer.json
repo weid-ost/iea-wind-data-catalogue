@@ -1,0 +1,117 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:09Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|Gsoulja/turbine-performance-engineer"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:09Z"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2026-11-22"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "Gsoulja/turbine-performance-engineer"
+    },
+    {
+      "key": "source_key",
+      "value": "9907a851be431530e1ac65ded39f2bc6d660a8f5::7fbc1b4b2b50e146~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/Gsoulja/turbine-performance-engineer"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/Gsoulja/turbine-performance-engineer\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "notspecified",
+  "name": "github-gsoulja-turbine-performance-engineer",
+  "notes": "Detect, explain, verify: a performance engineer for every wind turbine, on OpenTSLM and TimeNet. TimeNet Hackathon Round 1.",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/Gsoulja/turbine-performance-engineer"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "opentslm"
+    },
+    {
+      "name": "scada"
+    },
+    {
+      "name": "time-series"
+    },
+    {
+      "name": "timenet"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "Gsoulja/turbine-performance-engineer",
+  "url": "https://github.com/Gsoulja/turbine-performance-engineer"
+}

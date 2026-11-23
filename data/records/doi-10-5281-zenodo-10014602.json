@@ -1,0 +1,139 @@
+{
+  "extras": [
+    {
+      "key": "authors",
+      "value": "[{\"affiliation\":\"Netherlands Energy Research Foundation\",\"family\":\"Schepers\",\"given\":\"J.G.\",\"name\":\"Schepers, J.G.\"},{\"affiliation\":\"Netherlands Energy Research Foundation\",\"family\":\"Brand\",\"given\":\"A.J.\",\"name\":\"Brand, A.J.\"}]"
+    },
+    {
+      "key": "doi",
+      "value": "10.5281/zenodo.10014602"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:40:57Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "10.5281/zenodo.10014602"
+    },
+    {
+      "key": "identity_kind",
+      "value": "doi"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "direct"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "Found through query:\"IEA Wind Task\", which is an IEA Wind attribution."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:40:57Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "cc-by-4.0"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"authors\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"doi\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"datacite\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"publisher\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"related_identifiers\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_kind\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"},\"resource_type\":{\"extraction_method\":\"api\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"datacite\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2023-10-15"
+    },
+    {
+      "key": "publisher",
+      "value": "Zenodo"
+    },
+    {
+      "key": "related_identifiers",
+      "value": "[{\"identifier\":\"10.5281/zenodo.10619555\",\"identifier_type\":\"DOI\",\"relation\":\"IsPartOf\"},{\"identifier\":\"10.5281/zenodo.8218004\",\"identifier_type\":\"DOI\",\"relation\":\"IsVersionOf\"}]"
+    },
+    {
+      "key": "resource_kind",
+      "value": "dataset"
+    },
+    {
+      "key": "resource_type",
+      "value": "dataset"
+    },
+    {
+      "key": "source_id",
+      "value": "10.5281/zenodo.10014602"
+    },
+    {
+      "key": "source_key",
+      "value": "2026-11-18T21:00:52Z~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "datacite"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"datacite\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://zenodo.org/doi/10.5281/zenodo.10014602"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://zenodo.org/doi/10.5281/zenodo.10014602\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "cc-by",
+  "name": "doi-10-5281-zenodo-10014602",
+  "notes": "In these full scale aerodynamic test program local aerodynamic quantities (forces, inflow velocities, inflow angles) are measured at several radial positions along the blade.The aerodynamic experiments at ECN were performed in two different phases:\n\n\n\nThe non-rotating phase (1993-1994). In this phase the blade was mounted vertically on a non-rotating facility in the free stream. This test aimed at acquiring data at free stream conditions without rotational effects. Furthermore the instrumentation could be tested relatively easy in order to prepare for the next phase.\n\nThe rotating phase (1995-1997). In this phase the blade was mounted on the HAT-25 experimental wind turbine and data were acquired under rotation. Furthermore some non-rotating measurements have been repeated. In this report the measurements from the rotating phase are reported only.\n\n\nThe HAT-25 wind turbine is located at ECN near Petten in the Netherlands. The prevailing wind direction is from South-West, at which most of the measurements are taken. In this direction, the terrain upstream of the turbine is obscured by dunes over around 600 m. As a result, the turbulence intensities at the site may depend strongly on the conditions. Generally, the values of the turbulence intensities are between 5% and 20%.Time series measurements are supplied, in which the angle of attack ranges from negative values to deep stall values. Also measurements at yaw misalignment and at stand still have been supplied. Also sectional profile coefficients under rotating and 2D conditions are stored. \n\nThe SourceDatabase.zip archive contains original database with data file formats and conventions harmonized (across all IEA Wind Task 18: Enhanced Field Rotor Aerodynamics experiments) in order to make the full database easy accessible (see \"Related works\"). The rotating phase measurements have been merged into two files: \"rottim_prof_merged.csv\" (containing profile, SCADA and SHM data) and \"rottim_p_merged.csv\" (containing aerodynamic pressure measurements) to facilitate import of all the data.",
+  "owner_org": "zenodo-community",
+  "private": false,
+  "resources": [],
+  "state": "active",
+  "tags": [
+    {
+      "name": "aerodynamics"
+    },
+    {
+      "name": "aeronautical-engineering"
+    },
+    {
+      "name": "aerospace-engineering"
+    },
+    {
+      "name": "iea-wind-task-18"
+    },
+    {
+      "name": "iea-wind-tcp"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "wind-energy"
+    },
+    {
+      "name": "wind-power"
+    },
+    {
+      "name": "wind-power-station"
+    }
+  ],
+  "title": "Enhanced Field Rotor Aerodynamics - ECN",
+  "url": "https://zenodo.org/doi/10.5281/zenodo.10014602"
+}

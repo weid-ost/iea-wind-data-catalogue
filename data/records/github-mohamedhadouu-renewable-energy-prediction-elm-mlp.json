@@ -1,0 +1,128 @@
+{
+  "extras": [
+    {
+      "key": "access_status",
+      "value": "open"
+    },
+    {
+      "key": "first_seen",
+      "value": "2026-11-23T14:42:23Z"
+    },
+    {
+      "key": "identity_key",
+      "value": "github|mohamedhadouu/renewable-energy-prediction-elm-mlp"
+    },
+    {
+      "key": "identity_kind",
+      "value": "source"
+    },
+    {
+      "key": "inclusion_basis",
+      "value": "none"
+    },
+    {
+      "key": "inclusion_evidence",
+      "value": "No IEA Wind attribution, and no citation link to anything in the catalogue."
+    },
+    {
+      "key": "last_seen",
+      "value": "2026-11-23T14:42:23Z"
+    },
+    {
+      "key": "license_mapped",
+      "value": "true"
+    },
+    {
+      "key": "license_raw",
+      "value": "MIT"
+    },
+    {
+      "key": "lifecycle_state",
+      "value": "active"
+    },
+    {
+      "key": "provenance",
+      "value": "{\"keywords\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"license_id\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"notes\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"published_date\":{\"extraction_method\":\"api\",\"source_system\":\"github\"},\"resource_kind\":{\"extraction_method\":\"pattern\",\"source_system\":\"github\"},\"resource_type\":{\"extraction_method\":\"pattern\"},\"title\":{\"extraction_method\":\"api\",\"source_system\":\"github\"}}"
+    },
+    {
+      "key": "published_date",
+      "value": "2024-10-18"
+    },
+    {
+      "key": "publisher",
+      "value": "GitHub"
+    },
+    {
+      "key": "resource_kind",
+      "value": "software"
+    },
+    {
+      "key": "resource_type",
+      "value": "other-software"
+    },
+    {
+      "key": "source_id",
+      "value": "mohamedhadouu/renewable-energy-prediction-elm-mlp"
+    },
+    {
+      "key": "source_key",
+      "value": "36c105148d9cfb1cb7073a2794cd34eff01db9b0::c4d41826fe37def7~m2"
+    },
+    {
+      "key": "source_system",
+      "value": "github"
+    },
+    {
+      "key": "source_systems",
+      "value": "[\"github\"]"
+    },
+    {
+      "key": "source_url",
+      "value": "https://github.com/mohamedhadouu/renewable-energy-prediction-elm-mlp"
+    },
+    {
+      "key": "source_urls",
+      "value": "[\"https://github.com/mohamedhadouu/renewable-energy-prediction-elm-mlp\"]"
+    },
+    {
+      "key": "withdrawn",
+      "value": "false"
+    }
+  ],
+  "groups": [],
+  "license_id": "mit",
+  "name": "github-mohamedhadouu-renewable-energy-prediction-elm-mlp",
+  "notes": "Solar (PV) and wind power output prediction with Extreme Learning Machine (ELM) and backpropagation neural networks - R2 up to 0.99",
+  "owner_org": "unattributed",
+  "private": false,
+  "resources": [
+    {
+      "format": "git",
+      "name": "Source repository",
+      "url": "https://github.com/mohamedhadouu/renewable-energy-prediction-elm-mlp"
+    }
+  ],
+  "state": "active",
+  "tags": [
+    {
+      "name": "machine-learning"
+    },
+    {
+      "name": "neural-networks"
+    },
+    {
+      "name": "renewable-energy"
+    },
+    {
+      "name": "solar-energy"
+    },
+    {
+      "name": "time-series-forecasting"
+    },
+    {
+      "name": "wind-energy"
+    }
+  ],
+  "title": "mohamedhadouu/renewable-energy-prediction-elm-mlp",
+  "url": "https://github.com/mohamedhadouu/renewable-energy-prediction-elm-mlp"
+}
